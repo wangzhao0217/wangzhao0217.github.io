@@ -1,6 +1,5 @@
 ---
-title: "Zhao Wang - Curriculum Vitae"
-author: "Zhao Wang"
+title: "Curriculum Vitae - Zhao Wang"
 format: 
   html:
     toc: true
@@ -10,7 +9,7 @@ format:
 # TOC adds a table of contents.
 ---
 
-# Zhao Wang
+# Contact Information
 
 24 Askham Way, Waverley, Rotherham, S60 8DG  
 Mobile: +44 (0) 7410514867  
@@ -40,41 +39,59 @@ Shijiazhuang Railway University, Shijiazhuang, China
 
 ## Work Experience
 
-**Research Fellow** (07/2023 – Present)  
-University of Leeds, UK 
-* Joined the Institute for Transport Studies.
-* Primary focus on building high-impact transport planning tools including Propensity to Cycle Tool, Network Planning Tool for Scotland, etc.
-* Actively involved in the development of advanced geospatial data analysis R packages such as `stplanr`: Sustainable Transport Planning and `corenet`: 'core' route networks for transport planning.
+**Research Fellow** - Institute for Transport Studies, University of Leeds, UK (07/2023 – Present)  
+
+- Primary focus on building high-impact transport planning tools including Propensity to Cycle Tool, Network Planning Tool for Scotland, etc.
+
+- Actively involved in the development of advanced geospatial data analysis R packages such as `stplanr`: Sustainable Transport Planning and `corenet`: 'core' route networks for transport planning.
 
 **National Highways, UK** (Part-time) (10/2022 – Present)
-* Responsible for developing a series of ArcGIS Python toolboxes to help align two national drainage asset datasets (Confirm and HADDMS) on the Strategic Road Network. These toolboxes were initially designed for the Southeast region, now analysing regional data to make the tool applicable nationwide.
-* Responsible for planning and organising drainage asset inspections using GIS.
-* Developing a GIS-based flood event analysis tool and predictive model for flood-prone areas based on historical data.
+
+- Responsible for developing a series of ArcGIS Python toolboxes to help align two national drainage asset datasets (Confirm and HADDMS) on the Strategic Road Network. These toolboxes were initially designed for the Southeast region, now analysing regional data to make the tool applicable nationwide.
+
+- Responsible for planning and organising drainage asset inspections using GIS.
+
+- Developing a GIS-based flood event analysis tool and predictive model for flood-prone areas based on historical data.
 
 **Waterman Group Ltd, UK** (03/2022 – 10/2022)
-* **WIE17358-102 Drax FGD Unit 4 Steelwork Assessment:** Reviewed archival data to evaluate structural support and stability for demolition projects; assessed the independent stability of FGD supporting steelwork from adjacent absorber buildings.
-* **WIE18888-100 Ash Pit Gantry Modifications:** Assessed the structural stability of RC landing with the additional cut out; potentially provided advice for the design of a support frame.
-* **WIE18658-100 Grey Bridge CAT 2 check:** Conducted structural assessment of the Greys Bridge following CS454.
-* **WIE15564-MCC PBI – AI Crack Identification & Monitoring:** Selected and understood technology, planned and conducted surveys, analyzed results, presented at conferences, and prepared technical reports.
+
+- **WIE17358-102 Drax FGD Unit 4 Steelwork Assessment:** Reviewed archival data to evaluate structural support and stability for demolition projects; assessed the independent stability of FGD supporting steelwork from adjacent absorber buildings.
+ 
+- **WIE18888-100 Ash Pit Gantry Modifications:** Assessed the structural stability of RC landing with the additional cut out; potentially provided advice for the design of a support frame.
+  
+- **WIE18658-100 Grey Bridge CAT 2 check:** Conducted structural assessment of the Greys Bridge following CS454.
+
+- **WIE15564-MCC PBI – AI Crack Identification & Monitoring:** Selected and understood technology, planned and conducted surveys, analyzed results, presented at conferences, and prepared technical reports.
 
 **Transport Research Laboratory - TRL, UK** (02/2020 – 03/2022)
-* **Prediction of Unpaved Road Conditions Using High-Resolution Optical Satellite Imagery and Machine Learning:**
-    * Stage 1: Assessed unpaved road surface conditions in Tanzania using high-resolution satellite imagery combined with machine learning and deep learning techniques.
-    * Stage 2: Developed and tested a cost-effective solution using low-resolution satellite imagery.
-    * Stage 3: Applied the multimodal model and fine-tuned Large Language-and-Vision Assistant model in Madagascar to assess road conditions using medium and low-resolution satellite imagery. Developed a corresponding Python package: `unpaved-road-condition-analysis`.
-* **Potential Use of Alkali Activated Cementitious Materials for Concrete Barriers:** Established a high-level understanding of current low-carbon cement use in the UK by concrete barrier manufacturers; explored potential effects of introducing AACM requirements for SRN concrete barriers.
-* **Develop a guide to the structural design of bitumen-surfaced roads in tropical and sub-tropical countries:** Updated Road Note 31 based on latest research; compared various international road design methods (e.g., UK, Australia, USA, Brazil, South Africa, Tanzania).
-* **Updated maintenance inventory for the Area 14 strategic road network (SRN):** Developed a method to extract road features (traffic signs, safety barriers, etc.) using Lidar data.
-* **Development of performance metric for user perception of ride quality:** Developed a deep learning model to detect features (e.g., ironwork, joints) and defects (e.g., potholes, cracks).
-* **Investigation of the impacts of climatic conditions on skid resistance variation:** Developed a skid resistance predictive model based on seasonal and short-term climatic trends using machine learning.
-* **Review of Roller-Compacted Concrete Pavements and the Application of Reclaimed Materials in Concrete Pavements:** Led project to develop understanding of RCC characteristics/design and sustainable surface transportation techniques using reclaimed materials.
-* **DBFO Handback Requirements for Vehicle Restraint Systems:** Responsible for finding methods used to predict concrete residual life.
 
-**Research Associate** (05/2019 – 12/2019)  
-The University of Sheffield - Nuclear Advanced Manufacturing Research Centre, UK
-* Revised the prototype of decommissioning concrete container (DCC) based on shielding and mechanical properties of conventional and fibre reinforced concrete.
-* Examined the structural/impact performance of the DCC using static/dynamic FE methods.
-* Provided advice on concrete mix design, production method, total cost, and fabrication time.
+- **Prediction of Unpaved Road Conditions Using High-Resolution Optical Satellite Imagery and Machine Learning:**
+
+    - Stage 1: Assessed unpaved road surface conditions in Tanzania using high-resolution satellite imagery combined with machine learning and deep learning techniques.
+    - Stage 2: Developed and tested a cost-effective solution using low-resolution satellite imagery.
+    - Stage 3: Applied the multimodal model and fine-tuned Large Language-and-Vision Assistant model in Madagascar to assess road conditions using medium and low-resolution satellite imagery. Developed a corresponding Python package: `unpaved-road-condition-analysis`.
+
+- **Potential Use of Alkali Activated Cementitious Materials for Concrete Barriers:** Established a high-level understanding of current low-carbon cement use in the UK by concrete barrier manufacturers; explored potential effects of introducing AACM requirements for SRN concrete barriers.
+  
+- **Develop a guide to the structural design of bitumen-surfaced roads in tropical and sub-tropical countries:** Updated Road Note 31 based on latest research; compared various international road design methods (e.g., UK, Australia, USA, Brazil, South Africa, Tanzania).
+
+- **Updated maintenance inventory for the Area 14 strategic road network (SRN):** Developed a method to extract road features (traffic signs, safety barriers, etc.) using Lidar data.
+  
+- **Development of performance metric for user perception of ride quality:** Developed a deep learning model to detect features (e.g., ironwork, joints) and defects (e.g., potholes, cracks).
+  
+- **Investigation of the impacts of climatic conditions on skid resistance variation:** Developed a skid resistance predictive model based on seasonal and short-term climatic trends using machine learning.
+  
+- **Review of Roller-Compacted Concrete Pavements and the Application of Reclaimed Materials in Concrete Pavements:** Led project to develop understanding of RCC characteristics/design and sustainable surface transportation techniques using reclaimed materials.
+  
+- **DBFO Handback Requirements for Vehicle Restraint Systems:** Responsible for finding methods used to predict concrete residual life.
+
+**Research Associate** - Nuclear Advanced Manufacturing Research Centre, The University of Sheffield, UK (05/2019 – 12/2019)  
+
+- Revised the prototype of decommissioning concrete container (DCC) based on shielding and mechanical properties of conventional and fibre reinforced concrete.
+
+- Examined the structural/impact performance of the DCC using static/dynamic FE methods.
+
+- Provided advice on concrete mix design, production method, total cost, and fabrication time.
 
 ## Professional Expertise
 
@@ -87,9 +104,7 @@ The University of Sheffield - Nuclear Advanced Manufacturing Research Centre, UK
 
 ## Publications
 
-*(Note: Asterisk (*) indicates corresponding author)*
-
-### Journal Articles (J)
+### Journal Articles
 
 * **J1.** Hu, H., Wang, Z., Figueiredo, F.P., Papastergiou, P., Guadagnini, M. and Pilakoutas, K. (2018), "Post-cracking tensile behaviour of blended steel fibre reinforced concrete." *Structural Concrete*, DOI: 10.1002/suco.201800100.
 * **J2.** Wang, Z\*., Chen, L., Guadagnini, M. and Pilakoutas, K. (2019), "Shear Behaviour Model for Confined and Unconfined Rubberized Concrete." *Journal of Composites for Construction*, DOI: 10.1061/(ASCE)CC.1943-5614.0000962.
@@ -107,23 +122,23 @@ The University of Sheffield - Nuclear Advanced Manufacturing Research Centre, UK
 * **J14.** Xin, C.L., Li, W.H., Wang, Z\*., Feng, W.K., Yu, X., Hajirasouliha, I. "Seismic Stability Evaluation of Benched Bedding Rock Slopes with Varying Landforms". Accepted by *Engineering Geology* (under revision).
 * **J15.** Xin, C.L., Yang, L.J., Wang, Z\*., Yu, X., Feng, W.K. "Seismic Resilience Analysis of High-Speed Railway Tunnels Across Fault Zones Using Ensemble Learning Approach". Accepted by *Underground Space* (under revision).
 
-### Deliverables (D)
+### Deliverables
 
 * **D1.** Wang, Z. (2017), "Behaviour of Slurry Infiltrated Fibre Concrete (SIFCON) slabs under intense transient blast loading." WP3: New uses for RTSF concrete applications. *Innovative Reuse of all Tyre Components in Concrete*.
 
-### Technical Reports (T)
+### Technical Reports
 
 * **T3.** Wang, Z. (2019), "Impact performance of Decommissioning Concrete Containers Reinforced with Different Solutions." A technical consulting report for Nuclear AMRC.
 * **T4.** Erginbas, C and Wang, Z. (2020), "Examination of the Potential Use of Alkali Activated Cementitious Materials for Concrete Barriers".
 * **T5.** Andriejauskas, T. and Wang, Z. (2022), "Investigation of the impacts of climatic conditions on skid resistance variation", PPR2001. ISBN 978-1-915227-24-9.
 
-### Conference Papers (C)
+### Conference Papers
 
 * **C1.** Wang, Z., Margarit, D.E., Guadagnini, M. and Pilakoutas, K. (2017), "Shear Behaviour of Confined and Unconfined rubberised concrete." *Proceedings of the 1st International Conference on Construction Materials for Sustainable Future*, Zadar, Croatia.
 * **C2.** Margarit, D.E., Wang, Z., Guadagnini, M. and Pilakoutas, K. (2017), "Proof-of-concept Testing of FRP Confined Rubberised Concrete Coupling Beams." *Advanced Composites in Construction*, Sheffield, UK.
 * **C3.** Wang, Z., Workman, R. (2022), "Assessment of Unpaved Road Network Using Satellite Imagery and Machine Learning." *Intelligent Transport Systems Asia-Pacific*, Chengdu, China. (Best Paper Award)
 
-## Under Review (UR) / Under Preparation (UP)
+## Under Review / Under Preparation
 
 * **UR1.** Wang, Z\*., Chen, L., Hajirasouliha, I., Guadagnini, M. and Pilakoutas, K., "Axial Behaviour of FRP-Confined Concrete Columns: A Modelling Investigation." Submitted to *Journal of Composites for Construction*.
 * **UR2.** Xin, C.L., Yang, F., Wang, Z\*., Yu, X., Feng, W.K. "Time-frequency analysis of the seismic wave propagation mechanism in a bench rock slope" Submitted to *Acta Geotechnica* (under review).
