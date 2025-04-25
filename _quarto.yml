@@ -1,0 +1,21 @@
+project:
+  type: website
+  output-dir: docs # Standard for GitHub Pages source
+
+website:
+  title: "Zhao Wang"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+  page-footer: "Copyright 2024, Zhao Wang"
+
+format:
+  html:
+    theme: cosmo # A clean theme
+    css: styles.css # Optional custom CSS
+    toc: true
+
+# Optional: Add if you want custom CSS later
+# execute:
+#   freeze: auto # Recommended for caching computations if any 

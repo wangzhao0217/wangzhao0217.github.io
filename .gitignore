@@ -1,0 +1,14 @@
+# Quarto specific ignores
+/_freeze/
+/_publish/
+/docs/ # The output directory
+/.quarto/
+
+# General Python ignores (if applicable later)
+__pycache__/
+*.py[cod]
+*$py.class
+
+# OS specific ignores
+.DS_Store
+Thumbs.db 
