@@ -108,10 +108,22 @@ function Publications() {
           if (blogFile) {
             links.push({ label: t(S.ui.sections.rsNotesLabel), href: blogFile, icon: <Icon name="journal-text" /> });
           }
+          const isPrimary = p.role === "first" || p.role === "corr" || p.role === "first_corr";
+          const roleLabel = p.role === "first_corr"
+            ? (lang === "zh" ? "第一 & 通讯作者" : "1st & Corresponding Author")
+            : p.role === "first"
+            ? (lang === "zh" ? "第一作者" : "1st Author")
+            : p.role === "corr"
+            ? (lang === "zh" ? "通讯作者" : "Corresponding Author")
+            : (lang === "zh" ? "合作作者" : "Co-Author");
+
           const typeLabel = p.type === "Conference" ? t(S.ui.pubs.conference) : t(S.ui.pubs.journal);
+          const badgeLabel = p.best ? `${t(S.ui.pubs.best)} · ${roleLabel}` : `${typeLabel} · ${roleLabel}`;
+          const authorsFormatted = isPrimary ? p.authors.replace("Wang, Z", "Wang, Z.*") : p.authors;
+
           return (
-            <PublicationItem key={i} year={p.year} authors={p.authors} title={p.title} venue={p.venue}
-              badge={{ tone: p.best ? "clay" : (p.type === "Conference" ? "heather" : "slate"), label: p.best ? t(S.ui.pubs.best) : typeLabel }}
+            <PublicationItem key={i} year={p.year} authors={authorsFormatted} title={p.title} venue={p.venue}
+              badge={{ tone: p.best ? "clay" : (isPrimary ? "clay" : "slate"), label: badgeLabel }}
               links={links} />
           );
         })}

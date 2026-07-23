@@ -475,6 +475,29 @@ function KnowledgeMapSection() {
                         {paper.best ? (lang === "zh" ? "最佳论文奖" : "Best Paper") : (isJournal ? "Journal Article" : "Conference Paper")}
                       </span>
 
+                      {/* Authorship Badge */}
+                      {(() => {
+                        const isPrimary = paper.role === "first" || paper.role === "corr" || paper.role === "first_corr";
+                        const roleLabel = paper.role === "first_corr"
+                          ? (lang === "zh" ? "第一 & 通讯" : "1st & Corr. Author")
+                          : paper.role === "first"
+                          ? (lang === "zh" ? "第一作者" : "1st Author")
+                          : paper.role === "corr"
+                          ? (lang === "zh" ? "通讯作者" : "Corr. Author")
+                          : (lang === "zh" ? "合作" : "Co-Author");
+                        return (
+                          <span style={{
+                            fontFamily: "var(--font-mono)", fontSize: "var(--text-2xs)", fontWeight: 700,
+                            padding: "0.1rem 0.45rem", borderRadius: "var(--radius-pill)",
+                            background: isPrimary ? "var(--clay-100)" : "var(--surface-raised)",
+                            color: isPrimary ? "var(--clay-700)" : "var(--text-muted)",
+                            border: isPrimary ? "1px solid var(--clay)" : "1px solid var(--border-color)",
+                          }}>
+                            {roleLabel}
+                          </span>
+                        );
+                      })()}
+
                       {/* Cluster Tag */}
                       <span style={{
                         fontFamily: "var(--font-ui)", fontSize: "var(--text-2xs)", fontWeight: 600,
@@ -500,12 +523,25 @@ function KnowledgeMapSection() {
 
                     {/* Authors & Venue */}
                     <div style={{ fontSize: "var(--text-xs)", color: "var(--text-muted)", marginBottom: "0.4rem" }}>
-                      {paper.authors.split("Wang, Z").map((part, idx, arr) => (
-                        <React.Fragment key={idx}>
-                          {part}
-                          {idx < arr.length - 1 && <strong style={{ color: "var(--text-heading)", fontWeight: 700 }}>Wang, Z</strong>}
-                        </React.Fragment>
-                      ))}
+                      {(() => {
+                        const isPrimary = paper.role === "first" || paper.role === "corr" || paper.role === "first_corr";
+                        return paper.authors.split("Wang, Z").map((part, idx, arr) => (
+                          <React.Fragment key={idx}>
+                            {part}
+                            {idx < arr.length - 1 && (
+                              <strong style={{
+                                color: isPrimary ? "var(--clay-700)" : "var(--text-heading)",
+                                fontWeight: 700,
+                                background: isPrimary ? "var(--clay-100)" : "transparent",
+                                padding: isPrimary ? "0.05rem 0.3rem" : "0",
+                                borderRadius: "3px",
+                              }}>
+                                Wang, Z{isPrimary ? ".*" : ""}
+                              </strong>
+                            )}
+                          </React.Fragment>
+                        ));
+                      })()}
                     </div>
 
                     <div style={{ fontFamily: "var(--font-display)", fontStyle: "italic", fontSize: "var(--text-xs)", color: "var(--text-body)", marginBottom: "0.6rem" }}>
