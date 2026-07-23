@@ -572,7 +572,7 @@ function KnowledgeMapSection() {
         }} onClick={() => setActiveNote(null)}>
           <div style={{
             background: "var(--surface-card)", border: "1px solid var(--border-color)", borderRadius: "var(--radius-xl)",
-            width: "100%", maxWidth: "760px", maxHeight: "85vh", display: "flex", flexDirection: "column", boxShadow: "var(--shadow-xl)",
+            width: "min(1140px, 94vw)", maxHeight: "92vh", display: "flex", flexDirection: "column", boxShadow: "var(--shadow-xl)",
             overflow: "hidden",
           }} onClick={(e) => e.stopPropagation()}>
             <div style={{
@@ -588,7 +588,7 @@ function KnowledgeMapSection() {
               </button>
             </div>
 
-            <div style={{ padding: "1.5rem", overflowY: "auto", fontSize: "var(--text-sm)", lineHeight: "var(--leading-relaxed)", color: "var(--text-body)" }}>
+            <div style={{ padding: "1.8rem", overflowY: "auto", fontSize: "var(--text-sm)", lineHeight: "var(--leading-relaxed)", color: "var(--text-body)" }}>
               <pre style={{ whiteSpace: "pre-wrap", fontFamily: "var(--font-ui)", margin: 0 }}>
                 {activeNote.content}
               </pre>
@@ -615,7 +615,7 @@ function KnowledgeMapSection() {
         }} onClick={() => setActiveCite(null)}>
           <div style={{
             background: "var(--surface-card)", border: "1px solid var(--border-color)", borderRadius: "var(--radius-xl)",
-            width: "100%", maxWidth: "580px", padding: "1.4rem", boxShadow: "var(--shadow-xl)",
+            width: "min(780px, 90vw)", padding: "1.6rem", boxShadow: "var(--shadow-xl)",
           }} onClick={(e) => e.stopPropagation()}>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1rem" }}>
               <div style={{ fontFamily: "var(--font-display)", fontWeight: 600, fontSize: "var(--text-md)", color: "var(--text-heading)" }}>

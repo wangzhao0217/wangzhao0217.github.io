@@ -119,10 +119,10 @@ function ProjectModal({ pr, onClose }) {
     }}>
       <style>{`.zw-light{transition:filter .12s} .zw-light .zw-light-glyph{opacity:0;transition:opacity .1s} .zw-light-row:hover .zw-light-glyph{opacity:1} .zw-light:active{filter:brightness(0.85)}`}</style>
       <div onClick={(e) => e.stopPropagation()} className="zw-modal-panel" role="dialog" aria-modal="true" aria-label={t(pr.title)}
-        style={{ width: maxd ? "min(1080px, 100%)" : "min(760px, 100%)", maxHeight: maxd ? "96vh" : "92vh",
+        style={{ width: maxd ? "min(1400px, 98vw)" : "min(1140px, 94vw)", maxHeight: maxd ? "98vh" : "94vh",
           display: "flex", flexDirection: "column",
           background: "var(--surface-card)", border: "1px solid var(--border-strong)",
-          borderRadius: "var(--radius-lg)", overflow: "hidden", boxShadow: "var(--shadow-lg)",
+          borderRadius: "var(--radius-xl)", overflow: "hidden", boxShadow: "var(--shadow-xl)",
           transition: "width var(--dur-base) var(--ease-out), max-height var(--dur-base) var(--ease-out)" }}>
         {/* title bar */}
         <div style={{ display: "flex", alignItems: "center", gap: "0.6rem", padding: "0.62rem 0.85rem",
