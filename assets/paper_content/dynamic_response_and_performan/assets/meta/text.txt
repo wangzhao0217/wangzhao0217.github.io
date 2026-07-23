@@ -1,0 +1,1597 @@
+Dynamic response and performance enhancement mechanisms of tunnel 
+buffer layers under mainshock-aftershock sequences
+Yi Hu b, Chunlei Xin a,b,*, Zhao Wang c,*, Xinyuan Yu d, Wenkai Feng a, Iman Hajirasouliha d
+a State Key Laboratory of Geohazard Prevention and Geoenvironment Protection, Chengdu University of Technology, Chengdu, China
+b College of Environment and Civil Engineering, Chengdu University of Technology, Chengdu, China
+c Institute for Transport Studies, University of Leeds, Leeds, UK
+d School of Mechanical, Aerospace and Civil Engineering, The University of Sheffield, Sheffield, UK
+A R T I C L E I N F O
+Keywords:
+Buffer layer
+Mainshock-aftershock sequences
+Tunnel seismic response
+Cumulative damage
+Seismic performance
+A B S T R A C T
+Under mainshock-aftershock sequences, tunnel linings exhibit damage accumulation and delayed failure char­
+acteristics. Based on large-scale shaking table tests and numerical simulations, this study systematically in­
+vestigates the dynamic response and damage evolution of tunnel linings, with particular emphasis on the seismic 
+mitigation mechanism of a buffer layer. Results indicate that shear-dominated initial damage first develops at the 
+spandrel and arch springing during the mainshock, while subsequent aftershocks accelerate damage accumu­
+lation and promote delayed crack coalescence. The buffer layer reduces peak acceleration, alleviates local strain 
+concentration, and transforms the lining response from an inertia-dominated mode into a globally coordinated 
+deformation mode, thereby suppressing secondary stress amplification during the aftershock stage. Energy-based 
+analysis using Arias intensity further reveals a three-stage energy regulation behavior of the buffer layer. 
+Parametric numerical analyses identify the optimal stiffness ratio and thickness ratio for enhancing the seismic 
+performance and damage resistance of tunnel linings under mainshock-aftershock loading conditions.
+1. Introduction
+Southwestern China is strongly influenced by the Himalayan seismic 
+belt and is characterized by intense tectonic activity. The extensive 
+development of transportation infrastructure has rendered mountain 
+tunnels increasingly vulnerable to severe safety hazards under strong 
+seismic conditions (Yu et al. 2016; Yang et al., 2021; Xia et al., 2022; Xin 
+et al., 2024a; Song et al., 2025; Yang et al., 2025a). Although tunnels 
+were historically regarded as relatively safe during earthquakes, major 
+seismic events have demonstrated their non-negligible vulnerability. 
+Strong earthquake events are often followed by frequent aftershocks, 
+forming mainshock-aftershock (MS-AS) sequences that exert continuous 
+impacts on engineering structures. For example, the 2008 Wenchuan 
+earthquake (Mw 8.0) was followed by multiple aftershocks exceeding 
+Mw 6.0 within 20 days; more than one hundred aftershocks with mag­
+nitudes greater than Mw 6.0 were recorded within one month after the 
+2011 Tohoku earthquake (Mw 9.0) in Japan; the 2022 Menyuan 
+earthquake in Qinghai (Mw 6.9) consecutively triggered multiple 
+moderate-to-strong aftershocks within a short period (Hashash et al., 
+2001; Wang, 1993; Pitilakis and Tsinidis, 2014; Yu et al., 2016; Lei et al., 
+2023; Li et al., 2025a; Sun et al., 2020; Yue et al., 2021; Luo et al., 2024; 
+Yang et al., 2025b). These events demonstrate that tunnels in actual 
+service conditions are commonly subjected to a continuous seismic 
+process composed of both mainshocks and aftershocks. Nevertheless, 
+most existing seismic analyses and experimental studies on tunnels as­
+sume an undamaged structural state and consider only a single earth­
+quake event Table 1.
+Conventional seismic design approaches, such as Wang's (1993) free- 
+field deformation method and guidelines following JTG 2232-2019 or 
+Eurocode 8, largely assume a single earthquake event as the basis for 
+analysis, emphasizing strength and deformation checks for one “design 
+earthquake” while neglecting the scenario of sequential shaking. This 
+indicates that the realistic evolution of structural performance under 
+MS-AS sequences is not captured. In recent years, extensive studies have 
+been conducted on dynamic responses and damage evolution of engi­
+neering structures subjected to MS-AS sequences. Hatzigeorgiou and 
+Beskos (2009) pioneered the analysis of structural demand under 
+sequential earthquakes, demonstrating that inelastic displacement de­
+mands can significantly increase when a mainshock is followed by af­
+tershocks, especially for structures that have yielded in the first event. 
+* Corresponding authors.
+E-mail addresses: xinchunlei@cdut.edu.cn (C. Xin), z.wang13@leeds.ac.uk (Z. Wang). 
+Contents lists available at ScienceDirect
+Tunnelling and Underground Space Technology  
+incorporating Trenchless Technology Research
+journal homepage: www.elsevier.com/locate/tust
+https://doi.org/10.1016/j.tust.2026.107874
+Received 10 March 2026; Received in revised form 17 May 2026; Accepted 9 June 2026  
+Tunnelling and Underground Space Technology 176 (2026) 107874 
+Available online 15 June 2026 
+0886-7798/© 2026 The Authors. Published by Elsevier Ltd. This is an open access article under the CC BY license ( http://creativecommons.org/licenses/by/4.0/ ). 
+Ruiz-García and Negrete-Manriquez (2011) showed that aftershocks can 
+produce substantial additional damage in steel moment-resisting 
+frames, with significantly higher residual drifts and collapse ten­
+dencies. Similar effects have been observed in eccentrically braced steel 
+frames with energy-absorbing links and in tunnel-form concrete struc­
+tures subjected to earthquake sequences (Mohsenian et al., 2021a, 
+Mohsenian and Gharaei-Moghaddam 2021b). Goda and Taylor (2012)
+investigated SDOF system responses to real mainshock-aftershock pairs, 
+concluding that aftershocks typically cause incremental increases in 
+ductility demand, though in some cases an aftershock near the struc­
+ture's capacity can trigger collapse. In another study, Raghunandan et al. 
+(2015) quantified how the collapse fragility of RC frame buildings in­
+creases when accounting for aftershocks, showing that structures sur­
+viving a mainshock in a damaged state have a considerably higher 
+probability of collapse if subjected to even moderate aftershocks. Simi­
+larly, Li and Ellingwood (2007) developed a methodology to update 
+building fragility curves after a mainshock, showing that a structure's 
+damage history can critically alter its future performance. These studies 
+consistently demonstrate that MS-AS sequences represent a form of 
+seismic loading characterized by continuous damage evolution. More 
+recently, Lu et al. (2025) reported that ancient brick pagodas exhibited 
+pronounced cumulative damage characteristics under MS-AS loading, 
+with incremental damage strongly dependent on the post-mainshock 
+damage state. Similarly, a study by Cui et al. (2024) revealed the full 
+damage evolution process of subway stations under MS-AS sequences 
+through centrifuge shaking table tests.
+Nevertheless, despite these insights for buildings and bridges, the 
+response of tunnels to sequential earthquakes remains largely unex­
+plored. In general, tunnels damaged by a mainshock are more vulner­
+able to aftershocks. Several numerical case studies have reported that 
+aftershocks can accelerate tunnel lining deterioration even when their 
+amplitudes are smaller than the mainshock (Sun et al., 2020; Singh et al., 
+2018). However, systematic experimental or field investigations on MS- 
+AS effects for tunnels are scarce. This represents a critical gap, since 
+without understanding cumulative damage in tunnels, engineers cannot 
+fully assess seismic performance or safety margins for tunnel infra­
+structure under MS-AS sequences.
+In this context, delaying damage accumulation in tunnel linings and 
+regulating the degradation path of structural performance under MS-AS 
+sequences are key issues in enhancing tunnel seismic performance. As a 
+typical passive seismic mitigation measure, as illustrated in Fig. 1, the 
+buffer layer has been widely applied in tunnel seismic protection and 
+performance enhancement. The concept involves introducing a 
+compressible or low-stiffness layer (e.g., polymer foam, rubber, or other 
+material) between the tunnel lining and the surrounding ground to 
+absorb shock. Early implementations involved expanded polystyrene 
+(EPS) geofoam blocks, initially used to reduce seismic pressures behind 
+retaining walls (Bathurst and Zarnani, 2007). When applied to tunnels, 
+wrapping the lining with EPS or similar material can dissipate seismic 
+energy and reduce transmitted forces.
+Previous research has systematically evaluated the seismic mitiga­
+tion performance of the buffer layer under single-earthquake loading 
+through shaking table tests, centrifuge tests, and numerical simulations. 
+Lu et al. (2024) verified the engineering applicability of buffer layer in 
+large-diameter shield tunnels, confirming that isolation buffers can 
+significantly reduce dynamic earth pressure and lining distortion. 
+Similarly, Sun et al. (2024) study indicated that an EPS buffer layer with 
+a thickness of 10–20 cm can achieve a favorable balance between 
+seismic mitigation effectiveness and construction feasibility, with 
+buffers thicker than approximately 20 cm leading to a resurgence of 
+harmful deformation patterns. Xin et al. (2020) proposed a framework 
+for designing tunnel buffer layers by examining the rock-buffer-lining 
+interaction, and demonstrated that a circumferential buffer layer can 
+interrupt force transfer from the ground to the lining, thereby reducing 
+acceleration and pressure on the structure. They also identified optimal 
+buffer properties, and reported that overly thick buffers may induce 
+adverse effects like increased longitudinal accelerations. In a more 
+recent study, Zhou et al. (2023) analyzed perforated rubber isolation 
+layers around tunnels, demonstrating that a suitably perforated rubber 
+layer can reduce lining stress more effectively than a solid layer of equal 
+thickness by leveraging controlled flexibility.
+In general, previous studies indicate that a properly designed buffer 
+layer can redistribute seismic loads and interrupt direct stress transfer 
+from the ground to the lining, while efficiently absorbing a portion of the 
+seismic energy, thereby reducing acceleration and strain in the primary 
+lining. However, Existing studies have primarily concentrated on the 
+response characteristics of buffer layers under single earthquake events, 
+whereas their working mechanisms, damage mitigation capacity, and 
+contributions to structural performance under MS-AS sequences remain 
+poorly understood. To date, almost no published research has investi­
+gated the seismic performance of buffer-layered tunnels subjected to a 
+mainshock followed by an aftershock. It therefore remains unclear 
+whether the beneficial effects of a buffer layer, such as stress reduction 
+and damage delay, persist or even become more pronounced when an 
+aftershock occurs after the lining has already been damaged. On one 
+hand, the buffer layer may continue to protect the lining by decoupling it 
+from subsequent ground motion. Degradation of the buffer material or 
+changes in system stiffness following the mainshock may also reduce its 
+effectiveness.
+To address the research gaps outlined above, this study conducts 
+large–scale shaking table model tests to establish a tunnel-ground 
+interaction model under MS–AS sequences. By comparatively 
+analyzing the dynamic responses and damage evolution processes of 
+tunnel linings with and without a buffer layer, and by introducing 
+Table 1 
+Comparison of existing studies on tunnel buffer layers.
+Study
+Test Type
+Seismic 
+Loading
+Buffer 
+Material
+Key Finding
+Present 
+study 
+(2026)
+Shaking 
+table +
+Numerical
+MS-AS 
+sequence
+Rubber- 
+plastic
+Damage-state- 
+dependent mechanism 
+of buffer layer under 
+MS–AS sequences
+Lu et al. 
+(2024)
+Shaking table
+Single EQ
+Isolation 
+layer
+Significant reduction 
+in lining deformation
+Sun et al. 
+(2024)
+Numerical
+Single EQ
+EPS 
+geofoam
+Optimal thickness 
+identified; >20 cm 
+causes adverse effects
+Zhou 
+et al. 
+(2023)
+Numerical
+Single EQ
+Perforated 
+rubber
+Perforations improve 
+energy dissipation vs. 
+solid rubber
+Xin et al. 
+(2020)
+Numerical +
+Exp.
+Single EQ
+Various
+Buffer cuts off force 
+transfer; optimal 
+thickness ~ 0.2R
+Fig. 1. Schematic diagram of the buffer layer.
+Y. Hu et al.                                                                                                                                                                                                                                       
+Tunnelling and Underground Space Technology incorporating Trenchless Technology Research 176 (2026) 107874 
+2 
+energy–based indices, the staged working mechanisms of the buffer 
+layer and its contribution to structural performance enhancement are 
+revealed from an integrated “damage–response–energy” perspective. 
+Based on the model tests, this study analysed the damage characteristics 
+and strain response of the lining, evaluated the seismic behaviour of the 
+structure through acceleration response spectra and the overall dynamic 
+response of the lining, and employed an energy‑based framework using 
+Arias intensity to quantitatively track the process of seismic energy input 
+and dissipation in the tunnel system under MS-AS sequences. A nu­
+merical model was established and validated against the shaking table 
+test results. On this basis, parametric analyses were further conducted to 
+determine the optimal design intervals for the stiffness ratio and thick­
+ness ratio of the buffer layer.
+2. Prototype case and seismic damage phenomenon
+The Daliang Tunnel of the Lanzhou-Xinjiang High-Speed Railway is 
+located in Menyuan County, Haibei Tibetan Autonomous Prefecture, 
+Qinghai Province. The region is characterized by pronounced topo­
+graphic relief and intense tectonic activity. The tunnel has a total length 
+of 6,568 m, a maximum overburden depth of approximately 800 m, and 
+adopts a double-track layout. The geological environment along the 
+tunnel alignment is highly complex, with widespread development of 
+tectonically deformed rocks, making it a typical tunnel project that 
+crosses active faults in a high-altitude, earthquake prone region.
+The tunnel passes through interbedded Middle Ordovician lime­
+stone, sandstone, and slate, locally intercalated with fault breccia, fault 
+gouge, and cataclastic rocks. The surrounding rock is predominantly 
+classified as Grade V, characterized by intense weathering, extremely 
+fractured rock mass structures, and poor overall stability. The tunnel 
+crosses the Lenglongling Fault between chainages K1971 + 400 and 
+K1971 + 680. The fault strikes N60◦-80◦W, dips southward with a dip 
+angle of approximately 50◦-70◦, and has a fractured zone width of up to 
+100 m (Huang et al., 2024; Xin et al., 2024b; Xin et al., 2024c). The 
+hanging wall consists mainly of Ordovician crystalline limestone inter­
+bedded with banded slate, while the fault is dominated by fault breccia, 
+as shown in Fig. 2(a).
+On January 8, 2022, an Mw 6.9 earthquake struck Menyuan County 
+at a focal depth of 10 km. The seismogenic fault is a highly active Ho­
+locene active fault, representing a high-risk zone for regional strong 
+earthquakes. The epicenter was located 4.5 km from the Daliang Tunnel. 
+The event was a typical left-lateral strike-slip earthquake (Liu et al., 
+Fig. 2. Tunnel profiles: (a) longitudinal section; (b) transverse section.
+Y. Hu et al.                                                                                                                                                                                                                                       
+Tunnelling and Underground Space Technology incorporating Trenchless Technology Research 176 (2026) 107874 
+3 
+2024). As of January 14, 2022, a total of 7 aftershocks of M ≥4.0 were 
+recorded (as shown in Table 2).
+After the earthquake, to restore the structural function of the tunnel 
+and enhance its seismic performance in the active fault crossing section, 
+the segment from K1971 + 341 to K1971 + 691 was demolished and 
+reconstructed. Multiple seismic and vibration mitigation measures were 
+introduced, including the installation of a rubber buffer layer between 
+the arch-wall lining and the primary support, an asphalt concrete buffer 
+layer beneath the invert, and the placement of damping and energy- 
+dissipating materials along the inner side of the sidewall primary sup­
+port, as illustrated in Fig. 2(b).
+3. Shaking table testing program
+3.1. Testing facilities
+The shaking table test in this study was conducted using the seismic 
+simulation shaking table system at the State Key Laboratory of Geo­
+hazard Prevention and Geoenvironment Protection. The system is a 
+large-scale three-dimensional shaking table with six degrees of freedom 
+manufactured by Servotest. The table has a platform size of 4.0 m × 6.0 
+m. The operating procedure of the shaking table is shown in Fig. 3(a).
+The strike-slip active fault container is fabricated by welding Q345 
+structural steel. The overall dimensions of the model container are 3.7 
+m × 1.5 m × 1.9 m (length × width × height). To accurately simulate 
+seismic responses and prevent the reflection of seismic energy at rigid 
+boundaries, 20 cm thick foam plastic panels were installed on the inner 
+transverse sidewall of the container prior to testing, as shown in Fig. 3
+(b). Free-field tests by Feng et al. (2025a) were conducted to quantify 
+potential boundary effects. The near–identical acceleration waveforms 
+and less than 3 % amplitude difference between the centre and boundary 
+monitoring points indicate that spurious wave reflections were effec­
+tively suppressed.
+3.2. Scaling relationships
+Geometric dimension, density, and elastic modulus were selected as 
+the three fundamental control parameters. The density similarity ratio 
+was determined as 1:1.3, and the elastic modulus similarity ratio was set 
+to 1:39. In the experiment, because the gravitational conditions and 
+strain characteristics are consistent with those of the prototype tunnel, 
+the scaling ratios of gravitational acceleration and strain were both 
+taken as 1. The remaining physical quantities were derived based on 
+Buckingham’s π theorem and the MLT dimensional analysis criterion, as 
+summarized in Table 3.
+Based on the model test results reported by Xin et al. (2018), fly ash, 
+river sand, and engine oil were selected to prepare the surrounding rock 
+similarity material. Using orthogonal test results, the mass ratios of fly 
+ash, river sand, and engine oil were determined to be 67:25:8 for the 
+surrounding rock material and 65:22:13 for the fault material. For the 
+tunnel lining, a mixture composed of water, gypsum, diatomite, quartz 
+sand, and barite powder with a mass ratio of 10:6.5:1:1.5:1 was adopted. 
+The corresponding mechanical parameters of the prototype and the 
+scaled model are listed in Table 4.
+The fabrication process of the tunnel lining model is shown in Fig. 4
+(a). The tunnel-surrounding rock system was constructed using an in- 
+situ casting method. The similarity materials were placed and com­
+pacted layer by layer following the principle of volume control, with 
+layered sampling conducted during construction, as illustrated in Fig. 4
+(b).
+In the experiment, a rubber-plastic sponge with a thickness of 1 cm 
+was used to simulate the buffer layer. The buffer layer had an elastic 
+modulus of 1.38 MPa, a density of 0.06 g/cm3, and a Poisson’s ratio of 
+0.3. Fig. 4(c) illustrates the details of the buffer layer used in the tunnel 
+lining model.
+3.3. Experimental plan
+The sensors and auxiliary equipment used in this experiment are 
+shown in Fig. 5(a). Strain gauges, accelerometers, earth pressure cells, 
+and laser displacement transducers were employed to monitor the 
+circumferential strain of the tunnel lining, acceleration responses, 
+lining-surrounding rock interaction, and ground surface settlement, 
+respectively. Two action cameras and two tablet display units were used 
+to monitor the deformation and cracking of the tunnel lining during the 
+experiment.
+The tunnel linings used in the experiment were classified into three 
+types: conventional linings, plain gypsum lining (without reinforcing 
+mesh), and buffer-layer lining (externally wrapped with a buffer layer). 
+Segment B corresponds to the lining with a buffer layer, whereas 
+Segment G represents the plain gypsum lining, and the remaining seg­
+ments are conventional linings (Fig. 5(b)). The lining length at both 
+tunnel portals was 50 cm, with 10 cm embedded into the foam bound­
+ary, while all other lining segments had a length of 40 cm. In total, 31 
+accelerometers, 24 earth pressure cells, 4 laser displacement trans­
+ducers, and 72 strain gauges were used in this experiment. Eight 
+monitoring sections (monitoring sections 0-7) were selected along the 
+tunnel. At each monitoring section, earth pressure cells were installed on 
+the outer side of the lining, while accelerometers and strain gauges were 
+mounted on both the inner and outer surfaces. The layout of the sensors 
+is shown in Fig. 5(b).
+3.4. Earthquake motions
+The repetitive superposition method was adopted to construct the 
+MS‑AS loading sequence for the shaking table tests, owing to its inherent 
+compatibility with the stepwise loading strategy involving progressively 
+increasing peak ground acceleration. By scaling the recorded mainshock 
+wave with different amplitude coefficients, this method preserves the 
+waveform, frequency content, and duration between the mainshock and 
+aftershocks, while enabling independent control of the aftershock in­
+tensity. Based on the ground motion records during the Menyuan 
+earthquake, an MS-AS sequence was synthesized using the repetitive 
+superposition method (Hatzigeorgiou et al., 2009; Joyner and Boore 
+1982). The acceleration time history and Fourier spectrum of the re­
+cord are shown in Fig. 6(a) and Fig. 6(b), respectively. The synthesized 
+sequence was then used as the input excitation for the shaking-table 
+tests. The peak acceleration of the mainshock in the shaking table 
+tests was set to 0.5 g to be consistent with the peak ground acceleration 
+recorded during the Menyuan earthquake. The mainshock was applied 
+through stepwise and continuous loading with peak accelerations of 0.1 
+g, 0.2 g, 0.3 g, 0.4 g, and 0.5 g, as shown in Fig. 6(c). After the mainshock 
+Table 2 
+List of the mainshock and aftershocks of the 2022 Menyuan earthquake.
+No.
+Origin time
+Latitude 
+(◦N)
+Longitude 
+(◦E)
+Depth 
+(km)
+Magnitude 
+(Mw)
+Mainshock
+2022–01-08 
+01:45:27
+37.77
+101.26
+10
+6.9
+1
+2022–01-08 
+01:55:19
+37.75
+101.24
+10
+4.1
+2
+2022–01-08 
+02:09:05
+37.78
+101.24
+12
+5.1
+3
+2022–01-08 
+14:30:05
+37.77
+101.15
+10
+4.0
+4
+2022–01-12 
+18:20:40
+37.69
+101.49
+10
+5.2
+5
+2022–01-12 
+20:16:17
+37.75
+101.42
+10
+4.8
+6
+2022–01-12 
+21:01:53
+37.69
+101.49
+8
+4.5
+7
+2022–01-13 
+00:17:59
+37.76
+101.42
+8
+4.0
+Y. Hu et al.                                                                                                                                                                                                                                       
+Tunnelling and Underground Space Technology incorporating Trenchless Technology Research 176 (2026) 107874 
+4 
+loading, a relative displacement of 10 cm was imposed between the 
+surrounding rock and fault of the model container to simulate the 
+coseismic dislocation (Feng et al., 2025b), followed by a 5-min rest 
+period to allow the stresses in the tunnel and surrounding rock to 
+recover to a stable equilibrium state before applying the aftershocks. 
+The peak accelerations of the aftershocks were set to 0.1 g and 0.2 g and 
+were applied in a stepwise and continuous manner.
+4. Shaking table test results
+4.1. Post-earthquake event
+Post-earthquake cracking and damage of the tunnel lining provide 
+the most direct reflection of the structural response. To avoid secondary 
+damage to the lining caused by artificial disturbance during excavation 
+of the tunnel model, a photographing rod, as shown in Fig. 7(a), was 
+used after the test to enter the tunnel from both portals and capture 
+images of internal cracking, spalling, and relative dislocation between 
+lining segments, thereby recording the post-earthquake condition of the 
+tunnel.
+Fig. 7(b)-(d) illustrate the internal cracking patterns of the lining and 
+the relative locations of the sensors. In these figures, A denotes accel­
+erometers, S denotes strain gauges, and the green bands indicate 
+monitoring sections. The cracking patterns are marked by dashed lines, 
+where damage induced by the mainshock is indicated in red and in­
+cremental damage caused by aftershocks is shown in yellow. The 
+observed cracks can be mainly classified into longitudinal and inclined 
+cracks at the crown.
+The results show that the lining segment with a buffer layer (Segment 
+B) experienced significantly less damage than the conventional lining 
+(Segment F) and the plain gypsum lining (Segment G), as evidenced by 
+both the reduced number of cracks and their smaller widths. The spatial 
+Fig. 3. Test facilities: (a) shaking table and its workflow; (b) strike-slip active fault container.
+Table 3 
+Scaling relationships derived from dimensional analysis.
+Type
+Similarity 
+parameter
+Similarity 
+relation
+Dimensional 
+analysis
+Similarity 
+ratio
+Basic 
+physical 
+quantities
+Length/l
+Cl
+[L]
+1:30
+Density/ρ
+Cρ
+[M][L]-3
+1:1.3
+Elastic modulus/ 
+E
+CE
+[M][L]-1[T]-2
+1:39
+Derived 
+physical 
+quantities
+Poisson’s ratio/μ
+Cμ
+1
+Cohesion/c
+Cc = CECε
+[M][L]-1[T]-2
+1:39
+Internal friction 
+angle/φ
+Cφ
+\
+1
+Stress/σ
+Cσ = CECε
+[M][L]-1[T]-2
+1:39
+Velocity/v
+Cv =
+C−1/2
+ρ
+C1/2
+E
+[L] [T]-1
+1:5.48
+Displacement/d
+Cd = Cl
+[L]
+1:30
+Y. Hu et al.                                                                                                                                                                                                                                       
+Tunnelling and Underground Space Technology incorporating Trenchless Technology Research 176 (2026) 107874 
+5 
+distribution and locations of cracks in Segment B are generally 
+consistent with those in Segments F and G, with cracks predominantly 
+Table 4 
+Physical and mechanical parameters of the similarity materials.
+Name
+Density 
+ρ(g/cm3)
+Elastic Modulus 
+E(MPa)
+Poisson's Ratio 
+ν
+Internal Friction Angle φ(◦)
+Cohesion 
+c(kPa)
+Compressive Strength 
+fcu,k (MPa)
+Surrounding Rock
+prototype
+1.8–2.0
+1300–2000
+0.35–0.39
+22–27
+120–200
+\
+target
+1.4–1.5
+33.3–51.3
+0.35–0.39
+22–27
+3.1–5.1
+\
+measured
+1.44
+42.1
+0.33
+23.8
+3.2
+\
+Fault
+prototype
+1.7–1.8
+1000–1300
+0.39–0.45
+20–22
+50–120
+\
+target
+1.3–1.4
+25.6–33.3
+0.39–0.45
+20–22
+1.3–3.1
+\
+measured
+1.37
+31.3
+0.37
+19.6
+1.5
+\
+Tunnel Lining
+prototype
+2.5
+31,500
+0.2
+35
+\
+35
+target
+1.92
+807.7
+0.2
+\
+\
+0.897
+measured
+1.76
+730.3
+0.195
+\
+\
+0.925
+Fig. 4. Preparation of surrounding rock and tunnel lining models and buffer layer installation.
+Y. Hu et al.                                                                                                                                                                                                                                       
+Tunnelling and Underground Space Technology incorporating Trenchless Technology Research 176 (2026) 107874 
+6 
+concentrated in the region extending from the right sidewall to the 
+spandrel. Although distinct longitudinal cracks were also observed near 
+the spandrel side of the crown, these cracks did not propagate through 
+the lining, and no through-going cracks formed at the crown.
+The observed seismic damage indicates that the introduction of a 
+buffer layer significantly delays the damage development process of the 
+lining under seismic loading. The initiation and propagation of cracks 
+are delayed compared with those in lining segments without buffer 
+layers, resulting in an overall reduction in damage severity. However, 
+the buffer-layer lining segment still exhibits crack initiation locations 
+and development paths similar to those of conventional linings, sug­
+gesting that the buffer layer does not alter the fundamental load-bearing 
+characteristics or the dominant failure zones of the lining. Instead, it 
+primarily affects the rate and temporal sequence of damage progression. 
+Under sustained aftershocks, cracks formed during the mainshock stage 
+will continue to propagate along existing paths, and cracks near the 
+spandrel side of the crown may eventually become through-going, 
+causing the buffer-layer lining segment to exhibit failure patterns 
+similar to those of Segment G under extreme conditions.
+4.2. Lining strain response
+During an earthquake, the propagation of seismic waves induces 
+vibrations in both the tunnel structure and the surrounding rock mass. 
+When the induced strain exceeds the strain capacity of the lining ma­
+terial, cracking and structural damage occur. Strain measurements of the 
+tunnel lining provide direct insight into its stress state and damage 
+evolution. Under seismic excitation, the strain of the tunnel lining 
+dominated by tensile stress exhibits a clear stage-wise characteristic, 
+which can be classified into three typical stages, as illustrated in Fig. 8. 
+In the initial stage, the external dynamic loading is relatively weak, and 
+the lining responds elastically. The strain increases approximately lin­
+early with increasing seismic intensity and almost fully recovers upon 
+unloading. As the seismic excitation intensifies, the lining gradually 
+enters the damage accumulation stage. In this stage, only partial strain 
+recovery is observed after unloading, and residual strain accumulates 
+progressively. When the seismic action further increases and approaches 
+the tensile strength limit of the material, the lining enters the failure 
+stage, during which cracks rapidly propagate and coalesce, resulting in 
+pronounced local deformation. These three stages demonstrate that 
+seismic damage of the tunnel lining is not instantaneous but rather a 
+progressive dynamic failure process evolving from elastic response to 
+damage accumulation and finally to macroscopic cracking.
+In Case 1 (MS-PGA = 0.1 g), Fig. 9 shows the strain time histories at 
+the outer lining locations, including the crown, spandrel, sidewall, and 
+invert. At this low PGA level, both the buffer-layer lining and the plain 
+gypsum lining exhibit symmetric and similar peak strain responses at the 
+spandrel and arch springing, indicating that the lining remains in an 
+overall elastic deformation state. Due to the shear action of seismic 
+waves, strain responses along the spandrel-arch springing direction are 
+significantly larger than those at the invert, crown, and sidewall. 
+Moreover, the strain time histories along this direction vary synchro­
+nously with the input seismic waveform. As shown in Fig. 9(a), for 
+monitoring section 1 (abbreviated as Section 1), the peak strains at the 
+arch springing reach −26με (left) and 21.5με (right), which are sub­
+stantially larger than those at the spandrel (7.0με on the left and −9.3με 
+on the right). This indicates that greater deformation occurs at the arch 
+springing during dynamic loading, which is consistent with previous 
+experimental findings and observed seismic damage patterns in real 
+tunnels. As shown in Fig. 9(b), the peak strains at the spandrel of Section 
+1 (14.6με on the left and 17.2με on the right) are significantly larger than 
+those of Section 6, whereas the peak strains at the arch springing of 
+Section 1 (14.6με on the left and −13.4με on the right) are smaller than 
+those of Section 6. This suggests that the buffer layer redistributes the 
+interaction forces transmitted from the surrounding rock more uni­
+formly over the entire lining cross-section, thereby improving the stress 
+state and enhancing the structural enhancing the structural performance 
+of the lining.
+In Case 5 (MS-PGA = 0.5 g), as the amplitude of the input seismic 
+motion increases, the strain growth at the spandrel and arch springing 
+becomes significantly greater than that at other locations, as shown in 
+Fig. 9(c). At this stage, the peak strains at Section 6 reach −69.5με at the 
+left spandrel, −73.2με at the right arch springing, 118.5με at the left 
+arch springing, and 86.0με at the right spandrel. The strain magnitude at 
+the left arch springing is much larger than that at the right arch 
+springing, indicating pronounced non-uniform deformation. This sug­
+gests that damage may have developed along the direction from the 
+right arch springing to the left spandrel, resulting in a stress concen­
+tration and the onset of plastic deformation in the lining. As shown in 
+Fig. 9(d), the strain increase at the spandrel and arch springing of 
+Section 1 remains relatively uniform. The maximum strain occurs at the 
+left spandrel (−166.2με), followed by the right arch springing 
+Fig. 4. (continued).
+Y. Hu et al.                                                                                                                                                                                                                                       
+Tunnelling and Underground Space Technology incorporating Trenchless Technology Research 176 (2026) 107874 
+7 
+(−133.0με), the right spandrel (152.0με), and the left arch springing 
+(136.1με). The strain time histories indicate a stronger compressive 
+response along the left spandrel-right arch springing direction, implying 
+that seismic loading has already induced damage in the lining, pre­
+venting continuous transmission of tensile stress.
+In Case 6 (AS-PGA = 0.1 g), under aftershock excitation, lining 
+cracks continue to propagate along pre-existing damage paths, as shown 
+in Fig. 9(e)-(f). The results in Fig. 9(e) show that the peak strains at the 
+spandrel of Section 6 decrease to 43.4με (left) and −47.2με (right), while 
+those at the arch springing are −62.6με (left) and 16.7με (right). 
+Compared with Case 1, the overall strain level in Case 6 increases 
+significantly, while the peak strains on the left and right sides differ 
+markedly, indicating substantial irreversible deformation. In addition, 
+pronounced strain fluctuations are observed at the crown strain gauges, 
+suggesting possible damage development in the crown region. For 
+Section 1, the maximum strain occurs at the left spandrel (71.9με), 
+Fig. 5. Instrumentation and layout of the model test: (a) experimental setup; (b) schematic layout of sensors.
+Y. Hu et al.                                                                                                                                                                                                                                       
+Tunnelling and Underground Space Technology incorporating Trenchless Technology Research 176 (2026) 107874 
+8 
+followed by the right arch springing (27.8με), the right spandrel 
+(39.9με), and the left arch springing (–32.0με). The overall strain level is 
+lower than that of Section 6 but higher than that of Section 1 in Case 1. 
+The abnormally amplified strain peaks at the left spandrel and crown 
+indicate local failure in these regions, which is consistent with the 
+experimental observations shown in Fig. 7.
+As shown in Fig. 10, the lining deformation states at the peak strain 
+instant were reconstructed using strain data from the inner and outer 
+surfaces of the lining. Under low-amplitude excitation (Fig. 10(a)-(b)), 
+Section 1 exhibits a typical shear–wave–dominated response, charac­
+terized by diagonal tensile–compressive strain bands between the 
+spandrel and arch springing. The corresponding strain histories show 
+stable alternating tensile–compressive cycles with similar periods and 
+amplitudes, indicating globally coordinated shear deformation of the 
+lining. In contrast, Section 6 exhibits localized strain concentration 
+mainly in the invert–lower sidewall region, without clear shear sym­
+metry, suggesting a transition to inertia–dominated vibration accom­
+panied by local deformation amplification.
+During the aftershock stage (Fig. 10(c)-(d)), the strain amplitudes at 
+both sections increase significantly despite the identical peak ground 
+acceleration, demonstrating the cumulative damage effect induced by 
+the MS-AS sequences. The maximum strain at Section 1 occurs at the left 
+spandrel, corresponding to the propagation of existing cracks. Although 
+the buffer layer reduces the peak strain response, its primary effect lies 
+in 
+regulating 
+the 
+dynamic 
+force 
+transmission 
+within 
+the 
+lining–surrounding rock system. As illustrated in Fig. 10(e), the buffer 
+layer promotes a transition from localized inertia–dominated vibration 
+to a shear-wave-controlled, globally coordinated deformation mode.
+4.3. Acceleration response
+This subsection investigates the spatial and temporal distribution 
+characteristics of PGA to explain the dynamic regulation mechanisms of 
+the buffer layer under MS-AS sequences.
+Under low-intensity mainshock excitation (Case 1), the acceleration 
+responses of linings with and without a buffer layer are nearly syn­
+chronous, and the buffer layer does not significantly reduce peak ac­
+celerations at this stage, as shown in Fig. 11. As the amplitude of the 
+input mainshock motion increases progressively, the peak accelerations 
+at different lining locations exhibit pronounced nonlinear evolution. In 
+Case 5, the installation of a buffer layer considerably reduces the growth 
+rate of peak accelerations across the lining, with the overall PGA 
+decreasing by more than 30 % compared to the unprotected case. The 
+most significant improvement is observed at the invert, where the peak 
+acceleration is reduced by 38 %. Meanwhile, the spatial distribution of 
+acceleration along the lining section becomes more uniform. These re­
+sults indicate that under strong seismic excitation, the buffer layer acts 
+as a flexible transition interface that weakens the direct transmission of 
+seismic waves into the lining, alleviates local inertial force concentra­
+tion, and suppresses the amplification of inertia-dominated responses, 
+thereby improving the overall dynamic performance of the lining.
+During the aftershock stage (Case 6), although the input PGA is 
+identical to that in Case 1, the acceleration responses at both Sections 1 
+and 6 are noticeably higher than those observed during the low- 
+amplitude mainshock. This response amplification demonstrates that 
+the mainshock has already altered the dynamic characteristics of the 
+lining, leading to a pronounced state-dependent behavior during sub­
+sequent aftershocks. In contrast, when a buffer layer is present, the 
+amplification of acceleration responses during the aftershock stage is 
+effectively restrained, and the spatial variability of peak accelerations 
+Fig. 6. Earthquake motion used in the tests: (a) accelerogram; (b) Fourier spectrum; (c) Loadin.g scheme.
+Y. Hu et al.                                                                                                                                                                                                                                       
+Tunnelling and Underground Space Technology incorporating Trenchless Technology Research 176 (2026) 107874 
+9 
+among key lining locations is significantly reduced. This finding suggests 
+that the buffer layer exhibits a more pronounced regulatory effect on 
+dynamic responses during the aftershock stage than during the low- 
+amplitude mainshock, highlighting its distinct stage-dependent mitiga­
+tion behavior.
+It should be emphasized that the regulation of acceleration response 
+by the buffer layer is not merely reflected in the superficial reduction of 
+peak values. Its fundamental role lies in altering the dynamic force 
+transmission path between the lining and surrounding rock, thereby 
+mitigating the adverse effects caused by local inertial actions. This 
+modification helps alleviate strain concentration and delay damage 
+progression, ultimately contributing to the enhancement of the seismic 
+performance of the tunnel lining under MS-AS sequences.
+Based on the PGA responses recorded at the invert, the influence of 
+the buffer layer on the overall dynamic behavior of the lining is further 
+evaluated, as shown in Fig. 12. During the mainshock stage, the un­
+buffered side exhibits noticeably higher PGA levels, which increase 
+continuously with the input intensity. In contrast, the side equipped 
+with the buffer layer shows substantially lower PGA responses and a 
+much slower growth trend, indicating that the buffer layer effectively 
+weakens the transmission and amplification of seismic waves within the 
+lining-surrounding rock system.
+From the spatial distribution of PGA, the unbuffered side exhibits 
+pronounced response accumulation and non-uniformity along the 
+structure, reflecting localized dynamic amplification. With the buffer 
+layer, however, the differences among measurement points are 
+significantly reduced, and the PGA distribution becomes more uniform, 
+suggesting improved coordination and dynamic consistency of the 
+structural response. Similar response characteristics are also observed 
+during the aftershock stage, indicating that the buffer layer retains sta­
+ble energy dissipation and response regulation capacity even after the 
+structure has experienced mainshock-induced damage.
+Overall, the buffer layer not only reduces local dynamic responses at 
+different lining positions, but also improves the global vibration 
+behavior and stress distribution of the tunnel structure. It effectively 
+transforms the lining response from a locally amplified and non-uniform 
+vibration pattern into a more coordinated and stable deformation mode 
+under MS-AS sequences.
+Fig. 13 presents the acceleration response spectra of the tunnel 
+model under three representative loading cases: Case 1, Case 4, and Case 
+7. The spectra are plotted with frequency and damping ratio as the 
+horizontal and vertical axes, respectively, while the spectral accelera­
+tion is represented by the color scale. The left column (Fig. 13(a), (c), 
+and (e)) corresponds to measurement point A1-1 with the buffer layer, 
+whereas the right column (Fig. 13(b), (d), and (f)) corresponds to point 
+A6-1 without the buffer layer. In all cases, the dominant responses are 
+concentrated in the low-frequency range of approximately 5–15 Hz 
+under low damping ratios, which is consistent with the fundamental 
+dynamic characteristics of the tunnel–surrounding rock system. High- 
+frequency components above 30 Hz are generally weak, while the 
+mid-frequency range of 15–30 Hz exhibits varying degrees of secondary 
+amplification.
+Fig. 7. Comparison of seismic damage patterns in different tunnel lining segments.
+Y. Hu et al.                                                                                                                                                                                                                                       
+Tunnelling and Underground Space Technology incorporating Trenchless Technology Research 176 (2026) 107874 
+10 
+In Case 1, the buffer layer exhibits a pronounced isolation effect. At 
+A1-1, the high-frequency region is almost entirely suppressed to back­
+ground levels, whereas A6-1 still shows clear spectral amplification. In 
+the low-frequency dominant region, the peak spectral acceleration at 
+A1-1 is 0.414 m/s2, compared with 0.694 m/s2 at A6-1, corresponding 
+to a reduction of approximately 40.3 %. Moreover, the buffered spec­
+trum displays a narrower peak region and faster attenuation, while the 
+unbuffered case shows a broader response band with residual amplifi­
+cation in the mid-frequency range. These results indicate that the buffer 
+layer suppresses high-frequency transmission and low-frequency reso­
+nance amplification through interface energy dissipation and additional 
+equivalent damping.
+In Case 4, the overall spectral amplitudes increase with input in­
+tensity. The peak spectral acceleration reaches 1.585 m/s2 at A1-1 and 
+1.390 m/s2 at A6-1. Although the buffered case exhibits a slightly higher 
+local peak, its spectral distribution remains more concentrated, with 
+rapid attenuation toward higher frequencies and damping ratios. In 
+contrast, the unbuffered spectrum exhibits a wider high-response region 
+and more evident secondary peaks in the mid-frequency range. The 
+high-frequency response at A1-1 also remains effectively suppressed. 
+These observations suggest that the buffer layer continues to regulate 
+response distribution and dissipate seismic energy even under stronger 
+shaking conditions.
+In Case 7, the responses at the two measurement points differ 
+Fig. 7. (continued).
+Y. Hu et al.                                                                                                                                                                                                                                       
+Tunnelling and Underground Space Technology incorporating Trenchless Technology Research 176 (2026) 107874 
+11 
+significantly. The buffered point A1-1 retains a clear low-frequency 
+dominant response with a peak amplitude of 0.538 m/s2, whereas the 
+unbuffered point A6-1 exhibits an extremely weak response with a peak 
+value of only 0.041 m/s2. This sharp attenuation of the unbuffered 
+response during the aftershock stage is likely related to cumulative 
+stiffness degradation and altered energy dissipation pathways caused by 
+the preceding mainshock, further demonstrating the role of the buffer 
+layer in maintaining the dynamic stability of the tunnel system under 
+MS-AS sequences.
+4.4. Arias intensity
+Strain and acceleration analyses capture the local damage evolution 
+and global dynamic response of tunnel linings, respectively. However, 
+under MS-AS sequences, structural damage is not governed by instan­
+taneous peak responses, but by the cumulative seismic energy input and 
+its temporal distribution. Therefore, peak-based indices alone cannot 
+adequately represent damage accumulation and delayed failure. From 
+an energy perspective, seismic damage results from the transmission, 
+dissipation, and accumulation of input energy within the lining-rock 
+system. Arias intensity, which integrates the squared acceleration over 
+time, concisely measures cumulative seismic energy, accounting 
+simultaneously for ground-motion amplitude and duration (Xin et al., 
+2024b; Li et al., 2025b). The Arias intensity is defined as:
+Ia = π
+2g
+∫td
+0 [a(t) ]2dt
+where g is the gravitational acceleration, a(t) is the acceleration time 
+history, and td is the total duration of the ground motion.
+Accordingly, Arias intensity is introduced to compare the energy 
+input and its evolution in linings with and without buffer layers, 
+enabling the stage-dependent energy regulation mechanism and the 
+seismic performance enhancement effect of the buffer layer to be clearly 
+identified under MS-AS sequences. As shown in Fig. 14, the Arias in­
+tensity time histories of tunnel linings under different loading cases are 
+presented together with the corresponding acceleration time histories, 
+where the effective duration corresponding to the accumulation of 5 % 
+to 95 % of the total energy is highlighted in cyan. Overall, during both 
+the mainshock and aftershock stages, the Arias intensity of the lining 
+equipped with a buffer layer (A1-1) is significantly lower than that of the 
+plain gypsum lining, indicating that the buffer layer effectively reduces 
+the overall seismic energy input to the lining system. In terms of energy 
+growth rate, the Arias intensity curve of A1-1 exhibits a noticeably 
+smaller slope, indicating a more gradual energy input process. Mean­
+while, the curve is smoother and more continuous, suggesting that the 
+buffer layer attenuates pulse-type energy components in the seismic 
+motion, reduces abrupt energy jumps during energy input, and thereby 
+optimizes the energy input path of the lining system.
+With a further increase in the seismic energy level of the input mo­
+tion (Case 5), as shown in Fig. 14(e), although the total energy input to 
+A1-1 remains lower than that of the case without a buffer layer, the 
+growth slope of its Arias intensity curve during the 0–18 s interval 
+gradually approaches that of the reference case. This indicates that 
+under high-energy input conditions, the energy-filtering efficiency of the 
+buffer layer tends to become saturated. The primary differences between 
+the two cases are concentrated in the subsequent low- to moderate- 
+amplitude energy input stage after 18 s, indicating that the buffer 
+layer still maintains a sustained regulatory capacity for later-stage en­
+ergy input. Fig. 14(f) shows that under aftershock loading (Case 6), the 
+buffer layer effectively reduced the cumulative energy absorption of the 
+lining and regulated the energy input profile, even following mainshock- 
+induced damage. These results highlight the buffer layer’s robust energy 
+dissipation capability and its efficacy in controlling cumulative damage 
+under MS-AS sequences.
+To quantify the net regulating effect of the buffer layer on the energy 
+input to the lining throughout the seismic process, the Arias intensity 
+time histories from two locations were compared: point A1-1 and point 
+A6-1. The difference between these time histories was calculated, 
+yielding the evolution of the Arias intensity difference, as shown in 
+Fig. 15(a). Under identical seismic input conditions, this difference 
+curve directly reflects the cumulative energy reduction achieved by the 
+buffer layer relative to the conventional lining and its temporal evolu­
+tion, thereby effectively eliminating the influence of ground-motion 
+amplitude and duration differences on the energy metric and high­
+lighting the intrinsic energy regulation effect of the buffer layer.
+The evolution of the Arias intensity difference curve reveals distinct 
+stage-wise characteristics in the energy regulation performed by the 
+buffer layer. During the initial phase of seismic excitation, the difference 
+increases gradually, corresponding to a period of weak overall system 
+response, in which the buffer layer is not yet fully mobilized. As the 
+ground motion intensifies, the curve rises sharply, indicating an effec­
+tive energy dissipation stage. During this stage, the buffer layer sub­
+stantially reduces the seismic energy transmitted to the lining, acting as 
+the primary medium for filtering and dissipating input energy. 
+Following the main energy input, the difference curve gradually stabi­
+lizes, entering a performance convergence stage where the energy-input 
+gap no longer widens significantly. This reflects that the regulatory ef­
+ficiency of the buffer layer tends to stabilize under the prevailing energy 
+level and structural state.
+Based on the stage-dependent evolution characteristics of the Arias 
+intensity difference time history, the energy regulation mechanism of 
+the buffer layer during seismic excitation can be further abstracted into a 
+three-stage model consisting of energy initiation, effective energy 
+dissipation, and performance convergence, as summarized by the 
+mechanistic schematic in Fig. 15(b). This staged behavior indicates that 
+the buffer layer does not operate with constant efficiency throughout the 
+entire seismic process; instead, its energy regulation capability dynam­
+ically evolves with both the seismic energy input level and the structural 
+response state.
+5. Numerical simulation
+A two-dimensional dynamic interaction model of the surrounding 
+rock-tunnel system was established using finite element software ABA­
+QUS (ABAQUS, 2020), as shown in Fig. 16(a). A plane-strain assump­
+tion was adopted, which is appropriate for analyzing the transverse 
+seismic response of long tunnels with uniform cross-sections subjected to 
+vertically propagating shear waves. The model dimensions were kept 
+consistent with those of the prototype, with the surrounding rock 
+domain extending to 141 × 141 m. The geometry and dimensions of the 
+tunnel lining were determined based on Fig. 4. To effectively eliminate 
+spurious boundary effects in dynamic analysis, the distance from the 
+model boundaries to the tunnel centerline was set to five times the 
+tunnel diameter. The surrounding rock, tunnel lining, and buffer layer 
+were all discretized using CPE4R elements. The mesh of the surrounding 
+rock near the tunnel was refined, with a minimum element size of 0.5  m. 
+The tunnel itself was discretized with an element size of 0.25  m, and 
+four layers of elements were arranged radially around it.
+Fig. 8. Development and failure process of lining cracks.
+Y. Hu et al.                                                                                                                                                                                                                                       
+Tunnelling and Underground Space Technology incorporating Trenchless Technology Research 176 (2026) 107874 
+12 
+The physical and mechanical parameters of the buffer layer, tunnel 
+lining, and surrounding rock were consistent with those described in 
+Subsection 3.2. The buffer layer was modeled as a linear elastic material 
+with surface-to-surface contact conditions at both the lining-buffer and 
+buffer-rock interfaces with a friction coefficient of 0.5. The surrounding 
+rock was modeled using the Mohr-Coulomb constitutive model. The 
+tunnel lining was assumed to be made of C35 concrete, and its nonlinear 
+mechanical behavior was represented using the concrete damage plas­
+ticity (CDP) model. The tensile and compressive damage evolution 
+curves of the concrete are shown in Fig. 16(b)-(c). To more realistically 
+simulate the dynamic response and damage evolution of the surround­
+ing rock-tunnel system under seismic loading, viscoelastic boundaries 
+Fig. 9. Time histories of lining strain under seismic loading.
+Y. Hu et al.                                                                                                                                                                                                                                       
+Tunnelling and Underground Space Technology incorporating Trenchless Technology Research 176 (2026) 107874 
+13 
+were employed in the dynamic analysis. An implicit dynamic analysis 
+was performed with fixed time increments set to 0.005 s.
+After achieving the initial in-situ stress equilibrium of the 
+surrounding rock-tunnel system, seismic loading was applied. To 
+improve computational efficiency while maintaining accuracy, a 
+repeated synthesis method was adopted to generate the MS-AS sequence 
+Fig. 9. (continued).
+Y. Hu et al.                                                                                                                                                                                                                                       
+Tunnelling and Underground Space Technology incorporating Trenchless Technology Research 176 (2026) 107874 
+14 
+for validation of the numerical model. Following model validation, 
+parametric analyses were subsequently conducted using the real MS-AS 
+ground motions shown in Fig. 16.
+To validate the numerical model, the simulated acceleration re­
+sponses were compared with the shaking table test results. Fig. 17 shows 
+the comparison of peak acceleration at monitoring point A1-3. The nu­
+merical model captures the overall trend with a maximum deviation of 
+12.1 % at the time corresponding to the peak input acceleration, 
+demonstrating 
+reasonable 
+agreement 
+with 
+the 
+experimental 
+observations.
+To validate the numerical model, the simulated acceleration re­
+sponses were compared with the shaking table test results. Fig. 17 shows 
+the comparison of peak acceleration at monitoring point A1-3. The nu­
+merical model captures the overall trend with a maximum deviation of 
+Fig. 9. (continued).
+Y. Hu et al.                                                                                                                                                                                                                                       
+Tunnelling and Underground Space Technology incorporating Trenchless Technology Research 176 (2026) 107874 
+15 
+12.1 % at the time corresponding to the peak input acceleration, 
+demonstrating 
+reasonable 
+agreement 
+with 
+the 
+experimental 
+observations.
+To quantitatively validate the numerical model, the peak accelera­
+tion amplification factors (AAF) obtained from the FEM simulation were 
+compared with the experimental measurements, as summarized in 
+Table 5. The AAF is defined as the ratio of the peak acceleration response 
+at a measurement point to the peak value of the input signal. The root 
+mean square error (RMSE) between numerical and experimental was 
+0.047, with a correlation coefficient (R2) of 0.96. The percentage errors 
+at key locations ranged from 7.4 % to 12.1 %, indicating reasonable 
+agreement between the numerical predictions and experimental obser­
+vations for such complex non-linear structural system.
+Fig. 18 illustrates the spatial distribution of the cumulative tensile 
+damage factor, with values closer to 1 indicating more severe tensile 
+damage. To quantify the difference in damage progression between the 
+two lining configurations, Table 6 summarizes the percentage of ele­
+ments with damage factors exceeding specified thresholds under the 
+mainshock and MS-AS sequences. After the mainshock, the buffer-layer 
+lining exhibited a substantially lower overall damage level: the per­
+centage of elements with minor damage (damage factor > 0.1) was 8.50 
+%, approximately 29 % lower than that of the conventional lining 
+(12.01 %); the percentage of elements with severe damage (damage 
+factor > 0.9) was 7.09 %, slightly lower than the 7.22 % observed in the 
+conventional lining. During the aftershock stage, damage in the con­
+ventional lining accelerated markedly—the proportion of severely 
+damaged elements increased from 7.22 % to 8.74 % (an increase of 1.52 
+%)—whereas the buffer-layer lining showed only a modest rise from 
+7.09 % to 7.81 % (an increase of 0.72 %), with the percentage of minor 
+damage remaining unchanged. These quantitative comparisons 
+demonstrate that the buffer-layer lining not only could effectively sup­
+press damage initiation and propagation during the mainshock, but also 
+significantly delayed the cumulative evolution of existing damage dur­
+ing the subsequent aftershock.
+Under mainshock loading alone, tensile damage in the conventional 
+lining initiated at the arch springing. Due to geometric discontinuity and 
+variations in seismic wave propagation at this location, shear-dominated 
+stress concentration developed, gradually forming a continuous damage 
+band extending toward the spandrel and subsequently propagating to 
+the sidewall and invert, with noticeable damage also appearing at the 
+spandrel and crown. After the aftershock, no significant new damage 
+zones emerged; however, existing damage areas continued to develop, 
+accompanied by an overall increase in the damage factor and a marked 
+expansion of the darker shaded regions in the contour plot.
+In contrast, although the buffer-layer lining also exhibited damage 
+initiation at the arch springing during the mainshock, the damaged area 
+was smaller and the severity of damage at the arch springing was 
+noticeably reduced. The difference between the two lining types became 
+Fig. 10. Stress state contours and fundamental deformation modes of the tunnel lining.
+Y. Hu et al.                                                                                                                                                                                                                                       
+Tunnelling and Underground Space Technology incorporating Trenchless Technology Research 176 (2026) 107874 
+16 
+Fig. 11. Spatial distribution of peak acceleration along tunnel lining.
+Y. Hu et al.                                                                                                                                                                                                                                       
+Tunnelling and Underground Space Technology incorporating Trenchless Technology Research 176 (2026) 107874 
+17 
+more pronounced in the aftershock stage: damage in the conventional 
+lining intensified rapidly, whereas damage evolution in the buffer-layer 
+lining progressed more slowly, with significantly delayed expansion of 
+existing damage bands. This distinction was particularly evident at the 
+arch springing and the invert.
+Overall, the buffer-layer lining displayed a more stable damage 
+evolution path throughout both the mainshock and aftershock stages. It 
+effectively reduced the extent of damage in the lining during the 
+mainshock, especially at the arch springing and spandrel, and further 
+controlled damage progression during the aftershock.
+To further elucidate the influence of buffer layer parameters on the 
+seismic response of tunnel linings and to overcome the limited gen­
+eralisability of conclusions drawn from a single experimental configu­
+ration, this section presents a systematic parametric analysis of buffer 
+layer stiffness and thickness based on the validated numerical model. 
+The stiffness ratio EB/ET is defined as the ratio of the elastic modulus of 
+the buffer layer to that of the tunnel lining. Eleven discrete values 
+ranging from 0.1 % to 100 % (0.1 %, 1.0 %, 2.5 %, 5.0 %, 6.5 %, 10 %, 
+20 %, 40 %, 60 %, 80 %, 100 %) are selected for numerical simulation. 
+Fig. 19(a) shows the variation of lining damage area with the stiffness 
+ratio.
+The results demonstrate a strongly nonlinear relationship between 
+damage area and stiffness ratio. When EB/ET = 0.1 %, the damage area 
+reaches 16.87 %, which is slightly higher than that of the benchmark 
+case without a buffer layer. This is because an excessively low buffer 
+layer stiffness fails to provide effective lateral confinement, leading to 
+excessive relative displacement between the lining and the surrounding 
+rock. The energy of the seismically induced shear waves cannot be 
+adequately dissipated through the interface, and the structure exhibits a 
+near free–vibration state, which paradoxically intensifies local stress 
+concentrations.
+As the stiffness ratio increases into the range of 1.0 %-6.5 %, the 
+damage area decreases significantly. When EB/ET reaches 10 % and 
+further increases to 20 %, the damage area drops sharply and stabilises 
+at a low plateau of approximately 5 %-6 %, which persists up to EB/ET =
+100 %. This indicates that with an appropriate impedance matching 
+characteristic, the buffer layer enables effective reflection and trans­
+mission–induced attenuation of seismic waves at the lining–rock inter­
+face, while allowing compatible relative deformation between the lining 
+and the surrounding rock. Consequently, the typical ovaling deforma­
+tion and transverse squeezing modes are substantially suppressed, input 
+energy is largely dissipated, and the risk of concrete cracking is reduced. 
+Thus, the seismic mitigation efficiency of the buffer layer does not follow 
+a “softer is better” rule; rather, there exists a clearly defined optimal 
+stiffness range (in this study, EB/ET ≥10 %).
+It is worth noting that once the stiffness ratio enters the above stable 
+range, the residual damage is almost entirely concentrated in the 
+arch–foot region. This distribution characteristic is closely related to the 
+geometry of the horseshoe-shaped tri-centric circular tunnel: the crown 
+and sidewalls are connected by three arc segments with different centres 
+and radii, resulting in a pronounced curvature jump and geometric 
+discontinuity at the arch springing, where the structural stiffness 
+gradient changes dramatically. Under earthquake–induced transverse 
+squeezing deformation, the arch springing – being the critical transition 
+zone where the curvature of the arch turns towards the straight segment 
+of the sidewall – experiences highly concentrated bending moments and 
+shear stresses, with local peak stresses significantly higher than in other 
+regions. Therefore, although the flexible isolation of the buffer layer can 
+improve the overall tunnel-rock dynamic interaction, its ability to 
+directly mitigate the inherent stress concentration at the arch springing 
+is relatively limited. This finding suggests that in practical engineering, 
+the buffer layer should be used in combination with local reinforcement 
+measures at the arch springing to achieve more comprehensive seismic 
+protection.
+The buffer layer thickness TB is normalised as the thickness ratio TB/ 
+TT, where TT = 40 cm is the crown thickness of the tunnel lining. Seven 
+discrete values (0.5, 0.75, 1.0, 1.25, 1.50, 1.75, 2.0) are selected for 
+analysis. Fig. 19(b) presents the variation of damage area with the 
+thickness ratio.
+The results show a distinctly non–monotonic and nonlinear rela­
+tionship between damage area and thickness ratio. At TB/TT = 0.5, the 
+damage area is 5.0 %, a relatively low level. When the thickness ratio 
+increases to 0.75, the damage area rises sharply to a peak of 8.8 %. It 
+then drops to 7.6 % at TB/TT = 1.0. Within the range of 1.25–1.50, the 
+damage area reaches its lowest plateau (5.4 % for both values). When 
+further increased to 1.75 and 2.0, the damage area rises again to 6.5 % 
+and 7.2 %, respectively. This evolutionary pattern indicates that the 
+buffer layer thickness also has a well–defined optimal range (in this case, 
+TB/TT =
+1.25–1.50), rather than continuously improving with 
+increasing thickness.
+From a mechanistic perspective, when the thickness ratio is too 
+small, the buffer layer can still create some wave impedance mismatch 
+to reflect part of the shear waves, but the limited shear deformation 
+space within the layer restricts its energy dissipation capacity, resulting 
+in modest but not detrimental seismic performance. When the thickness 
+ratio increases to 0.75, the layer thickness approaches a quarter­
+–wavelength resonance match with the dominant frequency of the input 
+seismic wave, leading to a significant amplification of dynamic stresses 
+at the interface. Consequently, the peak bending moments and shear 
+forces in the lining −
+particularly at the arch springing −
+increase 
+Fig. 12. PGA spatial distribution with seismic intensity.
+Y. Hu et al.                                                                                                                                                                                                                                       
+Tunnelling and Underground Space Technology incorporating Trenchless Technology Research 176 (2026) 107874 
+18 
+dramatically, enlarging the damage area. Within the optimal thickness 
+ratio range of 1.25–1.50, the buffer layer possesses both sufficient shear 
+deformation capacity and appropriate flexible confinement, maximising 
+the absorption and dissipation of seismic input energy while effectively 
+coordinating the relative deformation between the lining and the sur­
+rounding rock. This significantly suppresses ovaling deformation and 
+transverse squeezing modes, achieving the best flexible isolation bene­
+fits. When the thickness ratio exceeds 1.5, the overall flexibility of the 
+Fig. 13. Acceleration response spectra under different cases.
+Y. Hu et al.                                                                                                                                                                                                                                       
+Tunnelling and Underground Space Technology incorporating Trenchless Technology Research 176 (2026) 107874 
+19 
+Fig. 14. Arias intensity in linings with and without buffer layers.
+Y. Hu et al.                                                                                                                                                                                                                                       
+Tunnelling and Underground Space Technology incorporating Trenchless Technology Research 176 (2026) 107874 
+20 
+buffer layer becomes excessive, further weakening the lining-rock 
+confinement and increasing relative displacements. The inherent stress 
+concentration at the arch springing reappears, and material nonlinearity 
+or local interface instability may be induced within the layer, ultimately 
+Fig. 15. Schematic diagram of staged energy dissipation behavior based on Arias intensity.
+Fig. 16. Finite element model schematic and CDP model parameters. (a) Finite element model; (b) CDP compression; (c) CDP tension.
+Y. Hu et al.                                                                                                                                                                                                                                       
+Tunnelling and Underground Space Technology incorporating Trenchless Technology Research 176 (2026) 107874 
+21 
+causing the damage area to rise again.
+The above parametric analysis demonstrates that the seismic miti­
+gation efficiency of the buffer layer is highly sensitive to both the stiff­
+ness ratio and the thickness ratio; these two parameters must be 
+co–optimised to avoid extreme values in either direction.
+6. Concluding remarks
+6.1. Mainshock stage: Buffer layer control of initial damage and energy
+The mainshock stage represents the first strong seismic action 
+experienced 
+by 
+a 
+tunnel 
+lining, 
+characterised 
+primarily 
+by 
+shear–dominated initial damage at critical locations such as the span­
+drels and arch springing. During the mainshock, the buffer layer does 
+not merely reduce peak acceleration; rather, it improves the overall 
+stress state of the lining by regulating the dynamic interaction between 
+the lining and the surrounding rock, thereby effectively suppressing 
+damage.
+From the perspective of strain response, under strong mainshock 
+excitation, the lining without a buffer layer exhibits significant tensi­
+le–compressive strain concentrations along the spandrel–arch springing 
+direction, accompanied by left–right asymmetry, indicating the onset of 
+local plastic deformation and damage. With the buffer layer installed, 
+the strain distribution becomes more uniform, symmetry improves, and 
+the peak strain level is generally reduced. This change demonstrates 
+Fig. 17. Comparison of acceleration time histories (a) A1-1; (b) A1-3.
+Table 5 
+Comparison of AAF Responses from Shaking Table Test and Numerical 
+Simulation.
+Case
+Location
+Monitoring section 1
+Experimental AAF
+Numerical AAF
+Error (%)
+Case 3
+Crown
+1.067
+1.196
+12.1 %
+Invert
+0.990
+1.063
+7.4 %
+Sidewalls(left)
+1.023
+1.106
+8.1 %
+Sidewalls(right)
+1.023
+1.126
+10.8 %
+Fig. 18. Cumulative tensile damage factors of tunnel linings under mainshock-aftershock loading (a) Conventional lining; (b) Buffer-layer lining.
+Table 6 
+Statistical summary of damage factors.
+Type
+Percentage of elements 
+with damage factor
+Mainshock 
+only
+MS-AS
+Increase
+Conventional 
+lining
+> 0.1
+12.01 %
+12.11 %
+0.10 %
+> 0.9
+7.22 %
+8.74 %
+1.52 %
+Buffer-layer 
+lining
+> 0.1
+8.50 %
+8.50 %
+0
+> 0.9
+7.09 %
+7.81 %
+0.72 %
+Y. Hu et al.                                                                                                                                                                                                                                       
+Tunnelling and Underground Space Technology incorporating Trenchless Technology Research 176 (2026) 107874 
+22 
+that, through its flexible deformation capacity, the buffer layer alleviates 
+the shear deformation concentration transmitted from the surrounding 
+rock, promoting a transition of the lining from an “inertia–dominated 
+non–coordinated vibration” mode to a “shear–wave–controlled globally 
+coordinated deformation” mode.
+In terms of acceleration response, the mitigation effect of the buffer 
+layer exhibits a clear intensity dependence: the reduction is insignificant 
+under low–amplitude mainshock excitation, but under strong main­
+shock the overall peak acceleration is reduced by more than 30 %, with a 
+reduction of up to 38 % at the invert. This indicates that the buffer layer 
+is not fully mobilised at low energy input levels; its primary contribution 
+lies not in directly reducing inertial forces, but in modifying the force 
+transmission path at the rock–lining interface.
+Energy analysis further reveals the essential role of the buffer layer 
+during the mainshock. The Arias intensity curve of the buffered lining is 
+consistently lower than that of the unbuffered lining, and the energy 
+accumulation is gentler and more continuous, indicating that the buffer 
+layer can filter out impulsive energy components and prevent concen­
+trated energy input over a short period. The stage–wise characteristics of 
+the difference curve demonstrate that the regulation efficiency of the 
+buffer layer is not constant but evolves dynamically with the seismic 
+energy level and the structural response state.
+The core function of the buffer layer during the mainshock stage is to 
+delay the initiation and propagation of initial damage. By altering the 
+dynamic force transmission path through a flexible interface, it sup­
+presses shear strain concentration, enabling the lining to maintain a 
+lower level of cumulative damage under the same input energy, thus 
+providing a “low–damage, non–penetrated” initial state for the subse­
+quent aftershock stage.
+6.2. Aftershock stage: Buffer layer suppression of cumulative damage and 
+performance
+The distinctive feature of the aftershock stage is that the lining has 
+already sustained mainshock–induced damage, and its dynamic char­
+acteristics have been altered. Consequently, even if the peak ground 
+acceleration of the aftershock is comparable to that of a low–amplitude 
+mainshock, the structural response is significantly amplified. The buffer 
+layer exhibits a unique capability to suppress cumulative damage during 
+the aftershock stage.
+In terms of crack evolution, existing cracks in the unbuffered lining 
+propagate rapidly under aftershock loading, become through–going, 
+and even extend to the crown. In contrast, cracks in the buffered lining 
+extend only slowly along pre–existing paths, and no new penetrating 
+cracks appear. This indicates that the buffer layer effectively inhibits 
+accelerated crack propagation, delaying the transition from local dam­
+age to global failure.
+Strain response shows that the unbuffered lining exhibits signifi­
+cantly elevated strain levels under aftershock excitation, with further 
+enlargement of left–right asymmetry, reflecting cumulative plastic 
+deformation and aggravated local failure. The buffered lining, however, 
+shows much lower strain levels and better strain symmetry, indicating 
+that even if the buffer layer has undergone some deformation during the 
+mainshock, it can still maintain its regulation capacity and avoid sec­
+ondary stress concentration.
+Energy analysis provides the strongest evidence. The Arias intensity 
+of the unbuffered lining continues to increase noticeably during the 
+aftershock stage, indicating that mainshock–induced damage has 
+altered the lining’s dynamic properties, allowing it to absorb additional 
+energy even under low energy input. In contrast, the energy curve of the 
+buffered lining remains at a low level with slow cumulative growth. The 
+difference curve still shows an effective energy dissipation interval 
+during the aftershock stage, indicating that the energy regulation 
+function of the buffer layer persists.
+Damage factor statistics from numerical simulations further quantify 
+this trend: after the aftershock, the proportion of severely damaged el­
+ements in the unbuffered lining increases by 1.52 %, while that in the 
+buffered lining increases by only 0.72 %, and the proportion of slightly 
+damaged elements does not increase at all. This fully demonstrates that 
+the buffer layer not only inhibits damage initiation during the main­
+shock, but more importantly, significantly delays the cumulative evo­
+lution of existing damage during the aftershock stage.
+The performance enhancement mechanism of the buffer layer in the 
+aftershock stage lies in the following: even after the lining has sustained 
+mainshock–induced damage, the buffer layer continues to dissipate 
+seismic energy and redistribute stresses, suppressing secondary stress 
+concentration and accelerated crack propagation, and allowing damage 
+to develop in a progressive, controllable manner, thereby avoiding 
+sudden through–going failure. This characteristic enables the tunnel 
+structure to maintain a longer repairable period and a lower risk of 
+collapse under a complete mainshock–aftershock sequence, which is the 
+core value of the buffer layer in improving the seismic performance of 
+tunnels.
+Fig. 19. Parametric analysis of buffer layer effects on tunnel lining damage evolution under MS-AS sequences. (a) Influence of stiffness ratio EB/ET; (b) Influence of 
+thickness ratio TB/TT.
+Y. Hu et al.                                                                                                                                                                                                                                       
+Tunnelling and Underground Space Technology incorporating Trenchless Technology Research 176 (2026) 107874 
+23 
+7. Conclusions
+Based on a series of large-scale shaking table model tests, this study 
+systematically investigated the dynamic response and damage evolution 
+of tunnel linings subjected to MS-AS sequences, with particular 
+emphasis on the contribution of a buffer layer to the enhancement of 
+structural seismic performance. The main conclusions are summarized 
+as follows: 
+(1) During a strong earthquake event, the mainshock can induce 
+initial damage in critical regions of the tunnel lining, such as the 
+spandrels and arch springing, characterized predominantly by 
+shear-dominated failure. Under subsequent aftershocks, the pre- 
+existing damaged zones continue to propagate and gradually 
+extend toward the crown, sidewall, and invert, exhibiting pro­
+nounced cumulative degradation and delayed coalescence.
+(2) During the mainshock stage, the buffer layer considerably re­
+duces the global peak acceleration response (by up to 38 %), 
+while effectively mitigating local strain concentrations and 
+enhancing stress redistribution at critical locations. In the after­
+shock stage, it suppresses secondary stress concentrations and 
+slows crack propagation, leading to enhanced structural resil­
+ience and controlled damage accumulation.
+(3) Compared with the case without a buffer layer, the cumulative 
+seismic energy input absorbed by the lining system during both 
+the mainshock and aftershock stages is significantly reduced 
+when a buffer layer is installed, through energy redistribution 
+and localized dissipation mechanisms, thereby limiting progres­
+sive damage accumulation.
+(4) By performing differential analysis of the Arias intensity time 
+histories between linings with and without a buffer layer, the 
+energy-regulation behavior of the buffer layer can be clearly 
+divided into three representative stages: an energy activation 
+stage, an effective energy dissipation stage, and an efficiency 
+convergence stage. In the early phase of seismic excitation, the 
+buffer layer participates only marginally in energy regulation; 
+during the dominant energy-input phase, its energy-reduction 
+effect rapidly intensifies and becomes the primary factor con­
+trolling cumulative damage; and as the seismic energy input di­
+minishes, the regulation efficiency gradually converges. This 
+stage-dependent behavior demonstrates that the buffer layer 
+does not operate with constant efficiency, but rather evolves 
+dynamically with the seismic energy level and the structural 
+response state.
+(5) Parametric analysis identifies the optimal stiffness ratio (≥10 %) 
+and thickness ratio (1.25–1.50) of the buffer layer, effectively 
+reducing the damage area. Residual damage remains concen­
+trated at the arch springing, indicating that the intuitive principle 
+of “softer and thicker is always better” should be avoided.
+CRediT authorship contribution statement
+Yi Hu: Writing – original draft. Chunlei Xin: Writing – review & 
+editing, Supervision, Project administration, Methodology, Investiga­
+tion, Funding acquisition. Zhao Wang: Writing – original draft, Meth­
+odology, Formal analysis, Data curation. Xinyuan Yu: Methodology, 
+Formal analysis. Wenkai Feng: Project administration, Funding acqui­
+sition. Iman Hajirasouliha: Writing – review & editing, Validation, 
+Supervision.
+Declaration of competing interest
+The authors declare that they have no known competing financial 
+interests or personal relationships that could have appeared to influence 
+the work reported in this paper.
+Acknowledgements
+This research was supported by the Sichuan Science and Technology 
+Program of China (Grant Nos. 26QNJJA0311 and 25CXCY0063), 
+Chengdu University of Technology Postgraduate Innovative Cultivation 
+Program (Grant No. 2025BJCX-LS010), and the National Natural Sci­
+ence Foundation of China (Grant No. 52108361). All the authors 
+acknowledge the anonymous reviewers for their comments.
+Data availability
+Data will be made available on request.
+References
+ABAQUS, 2020. Abaqus/CAE User’s Manual. USA.
+Bathurst, R.J., Zarnani, S., 2007. Experimental investigation of EPS geofoam seismic 
+buffers using shaking table tests[J]. Geosynth. Int. 14 (3), 165–177.
+Cui, Z.D., Sui, T.Y., Wang, S.Y., et al., 2024. Seismic response of subway station subjected 
+to mainshock-aftershock sequences by centrifuge shaking table tests[J]. Soil Dyn. 
+Earthq. Eng. 176, 108327.
+Feng, W.K., Yang, L.J., Xin, C.L., et al., 2025a. Design of a type of strike-slip active fault 
+container for shaking table tests[J]. J. Rock Mech. Geotech. Eng. https://doi.org/ 
+10.1016/j.jrmge.2025.03.001.
+Feng, J., Zhao, B., Wang, Z., 2025b. Seismic dynamic response analysis method of tunnel 
+considering coseismic dislocation[J]. Rock Mech. Rock Eng. 1–17.
+Goda, K., Taylor, C.A., 2012. Effects of aftershocks on peak ductility demand due to 
+strong ground motion records from shallow crustal earthquakes[J]. Earthquake Eng. 
+Structural Dynamics 41 (15), 2311–2330.
+Hashash Y M A, Hook J J, Schmidt B, et al. Seismic design and analysis of underground 
+structures[J]. Tunnelling and Underground Space Technology, 2001, 16(4): 247- 
+293.Hatzigeorgiou G D, Beskos D E. Inelastic displacement ratios for SDOF structures 
+subjected to repeated earthquakes[J]. Engineering structures, 2009, 31(11): 2744- 
+2755.
+Hatzigeorgiou, G.D., Beskos, D.E., 2009. Inelastic displacement ratios for SDOF 
+structures subjected to repeated earthquakes[J]. Eng. Struct. 31 (11), 2744–2755.
+Huang, S., Xin, C.L., Song, D., et al., 2024. Resilience assessment of the seismic damage 
+mechanism of the Daliang high-speed railway tunnel in the 2022 Menyuan 
+earthquake (Mw 6.7) in China[J]. Transp. Geotech. 49, 101417.
+Joyner, W.B., Boore, D.M., 1982. Prediction of earthquake response spectra[R]. US 
+Geological Survey.
+Lei, H., Qian, J., Wu, H., 2023. Dynamic response and failure mode of the twin tunnel- 
+landslide using shaking table tests[J]. Acta Geotech. 18 (8), 4329–4351.
+Li, Q., Ellingwood, B.R., 2007. Performance evaluation and damage assessment of steel 
+frame buildings under main shock–aftershock earthquake sequences[J]. Earthquake 
+Engineering & Structural Dynamics 36 (3), 405–427.
+Li, S., Yuan, Y., Cudmani, R., et al., 2025a. Segmental tunnel with isolation layer in soil- 
+rock transition under longitudinal excitation: experimental and numerical 
+investigation[J]. Transp. Geotech. 101760.
+Li, W., Xin, C., Wang, Z., et al., 2025b. Seismic stability evaluation of benched bedding 
+rock slopes with varying landforms[J]. Eng. Geol. 355, 108216.
+Liu, Q., Xiong, J., Zhang, P., et al., 2024. The bend on the haiyuan strike-slip fault leads 
+to segmented activity of the minle-damaying thrust fault in the qilian shan, the 
+northeastern tibetan plateau[J]. Tectonics 43 (8).
+Luo, H., Du, L., Zheng, C., et al., 2024. Study on the performance of mountain tunnel 
+against mainshock-aftershock based on resilience evaluation framework[J]. Iranian 
+J. Sci. Technol., Trans. Civil Eng. 48 (4), 2215–2234.
+Lu, J., Luo, J., Huang, X., et al., 2024. Study on deformation patterns of tunnel isolation 
+layers and seismic response of a shield tunnel[J]. Soil Dyn. Earthq. Eng. 187, 
+108998.
+Lu, J., Zhang, J., Wu, X., et al., 2025. Analysis of the dynamic response and incremental 
+damage of the ancient masonry pagoda under the mainshock-aftershock sequence 
+[C]. Structures 78, 109259.
+Mohsenian, V., Filizadeh, R., Hajirasouliha, I., et al., 2021 (a),. Seismic performance 
+assessment of eccentrically braced steel frames with energy-absorbing links under 
+sequential earthquakes. J. Build. Eng. 33, 101576.
+Mohsenian, V., Gharaei-Moghaddam, N., 2021 (b),. Hajirasouliha I Seismic performance 
+assessment of tunnel form concrete structures under earthquake sequences using 
+endurance time analysis. J. Build. Eng. 40, 102327.
+Pitilakis, K., Tsinidis, G., 2014. Performance and seismic design of underground 
+structures[M]//Earthquake Geotechnical Engineering Design. Springer, Cham, 
+pp. 279–340.
+Raghunandan, M., Liel, A.B., Luco, N., 2015. Aftershock collapse vulnerability 
+assessment of reinforced concrete frame structures[J]. Earthquake Eng. Structural 
+Dynamics 44 (3), 419–439.
+Ruiz-García, J., Negrete-Manriquez, J.C., 2011. Evaluation of drift demands in existing 
+steel frames under as-recorded far-field and near-fault mainshock–aftershock seismic 
+sequences[J]. Eng. Struct. 33 (2), 621–634.
+Singh, D.K., Mandal, A., Karumanchi, S.R., et al., 2018. Seismic behaviour of damaged 
+tunnel during aftershock[J]. Eng. Fail. Anal. 93, 44–54.
+Song, D.Q., Shi, W.P., Huang, K., et al., 2025. Dynamic response characteristics and 
+failure mechanisms of a high-steep bedding rock slope under successive earthquakes 
+Y. Hu et al.                                                                                                                                                                                                                                       
+Tunnelling and Underground Space Technology incorporating Trenchless Technology Research 176 (2026) 107874 
+24 
+in a high-seismic-intensity zone via discrete element method and shaking table tests 
+[J]. J. Cent. South Univ. 32 (11), 4574–4592.
+Sun, R., Xu, H., Yan, Q., et al., 2024. Effects of seismic buffer thickness on a circular rock 
+tunnel considering seismic damage form and failure state[J]. Int. J. Rock Mech. Min. 
+Sci. 183, 105892.
+Sun, B.B., Zhang, S., Deng, M., et al., 2020. Nonlinear dynamic analysis and damage 
+evaluation of hydraulic arched tunnels under mainshock-aftershock ground motion 
+sequences[J]. Tunn. Undergr. Space Technol. 98, 103321.
+Wang, J.N., 1993. Seismic design of tunnels: a simple state-of-the-art design approach. 
+Parsons Brinckerhoff.
+Xia, C., Sun, F., Zhou, Z., et al., 2022. Quantitative design method for anti-dislocation 
+joints for tunnels passing through active faults[J]. Tunn. Undergr. Space Technol. 
+124, 104489.
+Xin, C.L., Shuai, Y.X., Song, D., et al., 2024a. Dynamic interaction and failure mechanism 
+in tunnel-slope systems: Mitigation insights from shaking table tests and numerical 
+analysis[J]. Tunn. Undergr. Space Technol. 152, 105940.
+Xin, C.L., Feng, W.K., Song, D., 2024b. Seismic damage to non-fault-crossing and fault- 
+crossing tunnels: Comparative study of the 2008 Wenchuan earthquake (Mw 7.9) 
+and the 2022 Menyuan earthquake (Mw 6.7)[J]. Eng. Fail. Anal. 166, 108843.
+Xin, C., Li, W., Wang, Z., et al., 2024c. Shaking table tests on the stability of dip and anti- 
+dip rock slopes with structural planes induced by seismic motions[J]. Eng. Geol. 341, 
+107707.
+Xin, C.L., Wang, Z.Z., Yu, J., 2020. The evaluation on shock absorption performance of 
+buffer layer around the cross section of tunnel lining[J]. Soil Dyn. Earthq. Eng. 131, 
+106032.
+Xin, C.L., Wang, Z.Z., Gao, B., 2018. Shaking table tests on seismic response and damage 
+mode of tunnel linings in diverse tunnel-void interaction states[J]. Tunn. Undergr. 
+Space Technol. 77, 295–304.
+Yue, F., Liu, B., Zhu, B., et al., 2021. Shaking table test and numerical simulation on 
+seismic performance of prefabricated corrugated steel utility tunnels on liquefiable 
+ground[J]. Soil Dyn. Earthq. Eng. 141, 106527.
+Yu, H.T., Chen, J., Bobet, A., et al., 2016. Damage observation and assessment of the 
+Longxi tunnel during the Wenchuan earthquake[J]. Tunn. Undergr. Space Technol. 
+54, 102–116.
+Yang, F., Xin, C.L., Wang, Z., et al., 2025a. Investigating deformation and failure 
+mechanisms of discontinuous anti-dip bench rock slopes through shaking table tests 
+and numerical simulations[J]. Rock Mech. Rock Eng. 58 (5), 5329–5361.
+Yang, L.J., Xin, C.L., Wang, Z., et al., 2025b. Seismic resilience analysis of high-speed 
+railway tunnels across fault zones using ensemble learning approach[J]. 
+Underground Space.
+Yang, Y., Yu, H., Yuan, Y., et al., 2021. 1 g Shaking table test of segmental tunnel in sand 
+under near-fault motions[J]. Tunn. Undergr. Space Technol. 115, 104080.
+Zhou, T., He, T., Wei, Y., et al., 2023. Seismic design and performance analysis of 
+perforated rubber buffer layer in tunnel[C]. Structures 57, 105069.
+Y. Hu et al.                                                                                                                                                                                                                                       
+Tunnelling and Underground Space Technology incorporating Trenchless Technology Research 176 (2026) 107874 
+25 

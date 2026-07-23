@@ -1,0 +1,202 @@
+[
+  {
+    "slug": "advancing_unpaved_road_assessment_i",
+    "title": "Advancing unpaved road assessment in Africa Leveraging multimodal machine learning and large language-and-vision assistants across satellite imagery resolutions",
+    "doi": "10.1016/j.jtrangeo.2025.104525",
+    "pages": 22,
+    "captions_count": 14,
+    "spec": "assets/paper_content/advancing_unpaved_road_assessment_i/paper_spec.md",
+    "blog_en": "assets/paper_content/advancing_unpaved_road_assessment_i/blog_en.md",
+    "blog_zh": "assets/paper_content/advancing_unpaved_road_assessment_i/blog_zh.md"
+  },
+  {
+    "slug": "axial_behaviour_of_frp_confined_rub",
+    "title": "Axial behaviour of FRP-confined rubberised concrete An experimental investigation",
+    "doi": "10.1016/j.conbuildmat.2020.121023",
+    "pages": 17,
+    "captions_count": 20,
+    "spec": "assets/paper_content/axial_behaviour_of_frp_confined_rub/paper_spec.md",
+    "blog_en": "assets/paper_content/axial_behaviour_of_frp_confined_rub/blog_en.md",
+    "blog_zh": "assets/paper_content/axial_behaviour_of_frp_confined_rub/blog_zh.md"
+  },
+  {
+    "slug": "characterizing_dynamic_responses_of",
+    "title": "Characterizing Dynamic Responses of Rock Slopes to Near-Fault Pulse-Like Ground Motions",
+    "doi": "10.1007/s00603-025-04798-w",
+    "pages": 41,
+    "captions_count": 6,
+    "spec": "assets/paper_content/characterizing_dynamic_responses_of/paper_spec.md",
+    "blog_en": "assets/paper_content/characterizing_dynamic_responses_of/blog_en.md",
+    "blog_zh": "assets/paper_content/characterizing_dynamic_responses_of/blog_zh.md"
+  },
+  {
+    "slug": "computation_of_the_crack_opening_di",
+    "title": "Computation of the crack opening displacement in the phase-field model",
+    "doi": "10.1016/j.ijsolstr.2023.112496",
+    "pages": 11,
+    "captions_count": 13,
+    "spec": "assets/paper_content/computation_of_the_crack_opening_di/paper_spec.md",
+    "blog_en": "assets/paper_content/computation_of_the_crack_opening_di/blog_en.md",
+    "blog_zh": "assets/paper_content/computation_of_the_crack_opening_di/blog_zh.md"
+  },
+  {
+    "slug": "corenet_a_flexible_framework_for_ge",
+    "title": "Corenet A flexible framework for generating and prioritising core cycle network designs",
+    "doi": "10.1016/j.jtrangeo.2026.104549",
+    "pages": 21,
+    "captions_count": 10,
+    "spec": "assets/paper_content/corenet_a_flexible_framework_for_ge/paper_spec.md",
+    "blog_en": "assets/paper_content/corenet_a_flexible_framework_for_ge/blog_en.md",
+    "blog_zh": "assets/paper_content/corenet_a_flexible_framework_for_ge/blog_zh.md"
+  },
+  {
+    "slug": "design_of_a_type_of_strike_slip_act",
+    "title": "Design of a type of strike-slip active fault container for shaking table tests",
+    "doi": "10.1016/j.jrmge.2025.03.001",
+    "pages": 25,
+    "captions_count": 40,
+    "spec": "assets/paper_content/design_of_a_type_of_strike_slip_act/paper_spec.md",
+    "blog_en": "assets/paper_content/design_of_a_type_of_strike_slip_act/blog_en.md",
+    "blog_zh": "assets/paper_content/design_of_a_type_of_strike_slip_act/blog_zh.md"
+  },
+  {
+    "slug": "dynamic_response_and_performance_en",
+    "title": "Dynamic response and performance enhancement mechanisms of tunnel buffer layers under mainshock-aftershock sequences",
+    "doi": "10.1016/j.tust.2026.107874",
+    "pages": 25,
+    "captions_count": 28,
+    "spec": "assets/paper_content/dynamic_response_and_performance_en/paper_spec.md",
+    "blog_en": "assets/paper_content/dynamic_response_and_performance_en/blog_en.md",
+    "blog_zh": "assets/paper_content/dynamic_response_and_performance_en/blog_zh.md"
+  },
+  {
+    "slug": "effect_of_fibre_length_on_the_mecha",
+    "title": "Effect of fibre length on the mechanical properties of SFRC using recycled Steel fibres",
+    "doi": "10.1016/j.conbuildmat.2024.134890",
+    "pages": 12,
+    "captions_count": 20,
+    "spec": "assets/paper_content/effect_of_fibre_length_on_the_mecha/paper_spec.md",
+    "blog_en": "assets/paper_content/effect_of_fibre_length_on_the_mecha/blog_en.md",
+    "blog_zh": "assets/paper_content/effect_of_fibre_length_on_the_mecha/blog_zh.md"
+  },
+  {
+    "slug": "investigating_deformation_and_failu",
+    "title": "Investigating Deformation and Failure Mechanisms of Discontinuous Anti-dip Bench Rock Slopes Through Shaking Table Tests and Numerical Simulations",
+    "doi": "10.1007/s00603-024-04346-y",
+    "pages": 33,
+    "captions_count": 6,
+    "spec": "assets/paper_content/investigating_deformation_and_failu/paper_spec.md",
+    "blog_en": "assets/paper_content/investigating_deformation_and_failu/blog_en.md",
+    "blog_zh": "assets/paper_content/investigating_deformation_and_failu/blog_zh.md"
+  },
+  {
+    "slug": "post_cracking_tensile_behaviour_of",
+    "title": "Post-cracking tensile behaviour of blended steel fibre reinforced concrete",
+    "doi": "10.1002/suco.201800100",
+    "pages": 13,
+    "captions_count": 2,
+    "spec": "assets/paper_content/post_cracking_tensile_behaviour_of/paper_spec.md",
+    "blog_en": "assets/paper_content/post_cracking_tensile_behaviour_of/blog_en.md",
+    "blog_zh": "assets/paper_content/post_cracking_tensile_behaviour_of/blog_zh.md"
+  },
+  {
+    "slug": "prediction_of_unpaved_road_conditio",
+    "title": "Prediction of Unpaved Road Conditions Using High-Resolution Optical Satellite Imagery and Machine Learning",
+    "doi": "10.3390/rs15163985",
+    "pages": 20,
+    "captions_count": 28,
+    "spec": "assets/paper_content/prediction_of_unpaved_road_conditio/paper_spec.md",
+    "blog_en": "assets/paper_content/prediction_of_unpaved_road_conditio/blog_en.md",
+    "blog_zh": "assets/paper_content/prediction_of_unpaved_road_conditio/blog_zh.md"
+  },
+  {
+    "slug": "route_network_simplification_for_tr",
+    "title": "Route network simplification for transport planning",
+    "doi": "10.1177/23998083251387986",
+    "pages": 13,
+    "captions_count": 4,
+    "spec": "assets/paper_content/route_network_simplification_for_tr/paper_spec.md",
+    "blog_en": "assets/paper_content/route_network_simplification_for_tr/blog_en.md",
+    "blog_zh": "assets/paper_content/route_network_simplification_for_tr/blog_zh.md"
+  },
+  {
+    "slug": "seismic_resilience_analysis_of_high",
+    "title": "Seismic resilience analysis of high-speed railway tunnels across fault zones using ensemble learning approach",
+    "doi": "10.1016/j.undsp.2025.04.011",
+    "pages": 33,
+    "captions_count": 37,
+    "spec": "assets/paper_content/seismic_resilience_analysis_of_high/paper_spec.md",
+    "blog_en": "assets/paper_content/seismic_resilience_analysis_of_high/blog_en.md",
+    "blog_zh": "assets/paper_content/seismic_resilience_analysis_of_high/blog_zh.md"
+  },
+  {
+    "slug": "seismic_response_mechanisms_of_casi",
+    "title": "Seismic response mechanisms of casing-shape composite tunnel lining Theoretical analysis and shaking table test verification",
+    "doi": "10.1016/j.soildyn.2022.107440",
+    "pages": 18,
+    "captions_count": 20,
+    "spec": "assets/paper_content/seismic_response_mechanisms_of_casi/paper_spec.md",
+    "blog_en": "assets/paper_content/seismic_response_mechanisms_of_casi/blog_en.md",
+    "blog_zh": "assets/paper_content/seismic_response_mechanisms_of_casi/blog_zh.md"
+  },
+  {
+    "slug": "seismic_responses_and_shattering_cu",
+    "title": "Seismic responses and shattering cumulative effects of bedding parallel stepped rock slope Model test and numerical simulation",
+    "doi": "10.1016/j.jrmge.2024.03.031",
+    "pages": 22,
+    "captions_count": 22,
+    "spec": "assets/paper_content/seismic_responses_and_shattering_cu/paper_spec.md",
+    "blog_en": "assets/paper_content/seismic_responses_and_shattering_cu/blog_en.md",
+    "blog_zh": "assets/paper_content/seismic_responses_and_shattering_cu/blog_zh.md"
+  },
+  {
+    "slug": "seismic_stability_evaluation_of_ben",
+    "title": "Seismic stability evaluation of benched bedding rock slopes with varying landforms",
+    "doi": "10.1016/j.enggeo.2025.108216",
+    "pages": 20,
+    "captions_count": 27,
+    "spec": "assets/paper_content/seismic_stability_evaluation_of_ben/paper_spec.md",
+    "blog_en": "assets/paper_content/seismic_stability_evaluation_of_ben/blog_en.md",
+    "blog_zh": "assets/paper_content/seismic_stability_evaluation_of_ben/blog_zh.md"
+  },
+  {
+    "slug": "shaking_table_tests_on_the_stabilit",
+    "title": "Shaking table tests on the stability of dip and anti-dip rock slopes with structural planes induced by seismic motions",
+    "doi": "10.1016/j.enggeo.2024.107707",
+    "pages": 21,
+    "captions_count": 24,
+    "spec": "assets/paper_content/shaking_table_tests_on_the_stabilit/paper_spec.md",
+    "blog_en": "assets/paper_content/shaking_table_tests_on_the_stabilit/blog_en.md",
+    "blog_zh": "assets/paper_content/shaking_table_tests_on_the_stabilit/blog_zh.md"
+  },
+  {
+    "slug": "shear_behaviour_model_for_confined",
+    "title": "Shear Behaviour Model for Confined and Unconfined Rubberized Concrete",
+    "doi": "10.1061/(ASCE)CC.1943-5614.0000962",
+    "pages": 16,
+    "captions_count": 27,
+    "spec": "assets/paper_content/shear_behaviour_model_for_confined/paper_spec.md",
+    "blog_en": "assets/paper_content/shear_behaviour_model_for_confined/blog_en.md",
+    "blog_zh": "assets/paper_content/shear_behaviour_model_for_confined/blog_zh.md"
+  },
+  {
+    "slug": "tensile_stress_strain_characteristi",
+    "title": "Tensile stress-strain characteristics of rubberised concrete from flexural tests",
+    "doi": "10.1016/j.conbuildmat.2019.117591",
+    "pages": 13,
+    "captions_count": 29,
+    "spec": "assets/paper_content/tensile_stress_strain_characteristi/paper_spec.md",
+    "blog_en": "assets/paper_content/tensile_stress_strain_characteristi/blog_en.md",
+    "blog_zh": "assets/paper_content/tensile_stress_strain_characteristi/blog_zh.md"
+  },
+  {
+    "slug": "understanding_electric_vehicle_refu",
+    "title": "Understanding Electric Vehicle Refueling Demand and Parking Patterns A Literature Review",
+    "doi": "10.1109/TITS.2026.3652333",
+    "pages": 22,
+    "captions_count": 0,
+    "spec": "assets/paper_content/understanding_electric_vehicle_refu/paper_spec.md",
+    "blog_en": "assets/paper_content/understanding_electric_vehicle_refu/blog_en.md",
+    "blog_zh": "assets/paper_content/understanding_electric_vehicle_refu/blog_zh.md"
+  }
+]

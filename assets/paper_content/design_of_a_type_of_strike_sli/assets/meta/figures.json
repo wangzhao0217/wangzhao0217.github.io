@@ -1,0 +1,560 @@
+[
+  {
+    "file": "assets/figures/page2_figure1.png",
+    "page": 2,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 2990,
+    "height": 2397,
+    "column": "full",
+    "num_columns": 1,
+    "caption_label": "Figure. 1",
+    "caption": "Tunnel failure under different coupling effects: (a) Inverted arch uplift, (b) Lining deformation, (c) Arch collapse, and (d) Side-wall cracking. W. Feng, L. Yang, C. Xin et al. Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 7711e7735 7712",
+    "caption_candidates": [
+      {
+        "label": "Figure. 1",
+        "text": "Tunnel failure under different coupling effects: (a) Inverted arch uplift, (b) Lining deformation, (c) Arch collapse, and (d) Side-wall cracking. W. Feng, L. Yang, C. Xin et al. Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 7711e7735 7712"
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page3_figure2.png",
+    "page": 3,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 2479,
+    "height": 1569,
+    "column": "full",
+    "num_columns": 1,
+    "caption_label": "Figure. 2",
+    "caption": "Comparison of mechanisms of different coupling effects: (a) Active fault dislocations initiate seismic actions, and (b) Seismic motions induce fault dislocations. W. Feng, L. Yang, C. Xin et al. Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 7711e7735 7713",
+    "caption_candidates": [
+      {
+        "label": "Figure. 2",
+        "text": "Comparison of mechanisms of different coupling effects: (a) Active fault dislocations initiate seismic actions, and (b) Seismic motions induce fault dislocations. W. Feng, L. Yang, C. Xin et al. Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 7711e7735 7713"
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page4_figure3.png",
+    "page": 4,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 2820,
+    "height": 2207,
+    "column": "full",
+    "num_columns": 1,
+    "caption_label": "Figure. 3",
+    "caption": "Rigid fault container: (a) 3D schematic diagram of rigid fault container; (b) Physical fault container; (c) Detailed diagram of the footwall frame; and (d) Detailed diagram of the angle adjustment disk. W. Feng, L. Yang, C. Xin et al. Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 7711e7735 7714",
+    "caption_candidates": [
+      {
+        "label": "Figure. 3",
+        "text": "Rigid fault container: (a) 3D schematic diagram of rigid fault container; (b) Physical fault container; (c) Detailed diagram of the footwall frame; and (d) Detailed diagram of the angle adjustment disk. W. Feng, L. Yang, C. Xin et al. Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 7711e7735 7714"
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page6_figure4.png",
+    "page": 6,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 3572,
+    "height": 3611,
+    "column": "full",
+    "num_columns": 1,
+    "caption_label": "Figure. 4",
+    "caption": "Input seismic motion acceleration time history and Fourier spectrum of shaking table model tests: (a) 0.4 g MY acceleration time history curve; (b) 0.4 g MY Fourier spectrum; (c) 0.4 g WL acceleration time history curve; and (d) 0.4 g WL Fourier spectrum. W. Feng, L. Yang, C. Xin et al. Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 7711e7735 7716",
+    "caption_candidates": [
+      {
+        "label": "Figure. 4",
+        "text": "Input seismic motion acceleration time history and Fourier spectrum of shaking table model tests: (a) 0.4 g MY acceleration time history curve; (b) 0.4 g MY Fourier spectrum; (c) 0.4 g WL acceleration time history curve; and (d) 0.4 g WL Fourier spectrum. W. Feng, L. Yang, C. Xin et al. Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 7711e7735 7716"
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page7_figure5.png",
+    "page": 7,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 2006,
+    "height": 2532,
+    "column": "col-0",
+    "num_columns": 2,
+    "caption_label": "Figure. 5",
+    "caption": "Accelerometer arrangement for test group 1: (a) 3D view of accelerometer arrangement; and (b) Plan view of accelerometer arrangement.",
+    "caption_candidates": [
+      {
+        "label": "Figure. 5",
+        "text": "Accelerometer arrangement for test group 1: (a) 3D view of accelerometer arrangement; and (b) Plan view of accelerometer arrangement."
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page7_figure6.png",
+    "page": 7,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 2990,
+    "height": 1928,
+    "column": "full",
+    "num_columns": 1,
+    "caption_label": "Figure. 6",
+    "caption": "Monitoring scheme for test group 2: (a) Schematic diagram of sensor arrangement; and (b) Side view of sensor arrangement. W. Feng, L. Yang, C. Xin et al. Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 7711e7735 7717",
+    "caption_candidates": [
+      {
+        "label": "Figure. 6",
+        "text": "Monitoring scheme for test group 2: (a) Schematic diagram of sensor arrangement; and (b) Side view of sensor arrangement. W. Feng, L. Yang, C. Xin et al. Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 7711e7735 7717"
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page8_figure7.png",
+    "page": 8,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 2903,
+    "height": 1559,
+    "column": "full",
+    "num_columns": 1,
+    "caption_label": "Figure. 7",
+    "caption": "The speci\ufb01c construction process for test group 2.",
+    "caption_candidates": [
+      {
+        "label": "Figure. 7",
+        "text": "The speci\ufb01c construction process for test group 2."
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page8_figure8.png",
+    "page": 8,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 2027,
+    "height": 1704,
+    "column": "col-0",
+    "num_columns": 2,
+    "caption_label": "Figure. 8",
+    "caption": "Measuring point acceleration spectrum diagram. Table 2 Natural frequency of common model soil. Research object Similarity ratio Prototype material Molding material Natural frequency of model soil (Hz) Mountain tunnel Cl \u00bc 1:30 Class V surrounding",
+    "caption_candidates": [
+      {
+        "label": "Figure. 8",
+        "text": "Measuring point acceleration spectrum diagram. Table 2 Natural frequency of common model soil. Research object Similarity ratio Prototype material Molding material Natural frequency of model soil (Hz) Mountain tunnel Cl \u00bc 1:30 Class V surrounding"
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page9_figure9.png",
+    "page": 9,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 2990,
+    "height": 4239,
+    "column": "full",
+    "num_columns": 1,
+    "caption_label": "Figure. 9",
+    "caption": "Comparison of Fourier spectra under different cases and positions: (a) Before fault dislocation A31; (b) Before fault dislocation A34; (c) After fault dislocation A31; and (d) After fault dislocation A34. W. Feng, L. Yang, C. Xin et al. Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 7711e7735 7719",
+    "caption_candidates": [
+      {
+        "label": "Figure. 9",
+        "text": "Comparison of Fourier spectra under different cases and positions: (a) Before fault dislocation A31; (b) Before fault dislocation A34; (c) After fault dislocation A31; and (d) After fault dislocation A34. W. Feng, L. Yang, C. Xin et al. Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 7711e7735 7719"
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page10_figure10.png",
+    "page": 10,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 3244,
+    "height": 1757,
+    "column": "full",
+    "num_columns": 1,
+    "caption_label": "Figure. 10",
+    "caption": "Comparison of Fourier spectra for different seismic motions: (a) 0.4 g MY seismic motion; and (b) 0.4 g WL seismic motion.",
+    "caption_candidates": [
+      {
+        "label": "Figure. 10",
+        "text": "Comparison of Fourier spectra for different seismic motions: (a) 0.4 g MY seismic motion; and (b) 0.4 g WL seismic motion."
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page10_figure11.png",
+    "page": 10,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 3572,
+    "height": 2555,
+    "column": "full",
+    "num_columns": 1,
+    "caption_label": "Figure. 11",
+    "caption": "Acceleration time history and Fourier spectrum at different dislocation: (a) Acceleration time history curve; and (b) Fourier spectrum. W. Feng, L. Yang, C. Xin et al. Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 7711e7735 7720",
+    "caption_candidates": [
+      {
+        "label": "Figure. 11",
+        "text": "Acceleration time history and Fourier spectrum at different dislocation: (a) Acceleration time history curve; and (b) Fourier spectrum. W. Feng, L. Yang, C. Xin et al. Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 7711e7735 7720"
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page11_figure12.png",
+    "page": 11,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 3398,
+    "height": 2061,
+    "column": "full",
+    "num_columns": 1,
+    "caption_label": "Figure. 12",
+    "caption": "The acceleration time history curves of each measuring point under different excitation amplitude values and seismic motions: (a) 0.4 g MY Acceleration time history curve; (b) 1.0 g MY Acceleration time history curve; (c) 0.4 g WL Acceleration time history curve; and (d) 1.0 g WL Acceleration time history curve. W. Feng, L. Yang, C. Xin et al. Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 7711e7735 7721",
+    "caption_candidates": [
+      {
+        "label": "Figure. 12",
+        "text": "The acceleration time history curves of each measuring point under different excitation amplitude values and seismic motions: (a) 0.4 g MY Acceleration time history curve; (b) 1.0 g MY Acceleration time history curve; (c) 0.4 g WL Acceleration time history curve; and (d) 1.0 g WL Acceleration time history curve. W. Feng, L. Yang, C. Xin et al. Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 7711e7735 7721"
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page12_figure13.png",
+    "page": 12,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 2990,
+    "height": 1664,
+    "column": "full",
+    "num_columns": 1,
+    "caption_label": "Figure. 13",
+    "caption": "Comparison of acceleration ampli\ufb01cation coef\ufb01cients under different peak acceleration conditions.",
+    "caption_candidates": [
+      {
+        "label": "Figure. 13",
+        "text": "Comparison of acceleration ampli\ufb01cation coef\ufb01cients under different peak acceleration conditions."
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page12_figure14.png",
+    "page": 12,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 3572,
+    "height": 1581,
+    "column": "full",
+    "num_columns": 1,
+    "caption_label": "Figure. 14",
+    "caption": "Fourier spectrum under different seismic motion: (a) 0.4 g Fourier spectrum; and (b) 1.0 g Fourier spectrum. W. Feng, L. Yang, C. Xin et al. Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 7711e7735 7722",
+    "caption_candidates": [
+      {
+        "label": "Figure. 14",
+        "text": "Fourier spectrum under different seismic motion: (a) 0.4 g Fourier spectrum; and (b) 1.0 g Fourier spectrum. W. Feng, L. Yang, C. Xin et al. Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 7711e7735 7722"
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page14_figure15.png",
+    "page": 14,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 3362,
+    "height": 4350,
+    "column": "full",
+    "num_columns": 1,
+    "caption_label": "Figure. 15",
+    "caption": "Comparison chart of acceleration time history curves at measurement points: (a) Lateral boundary; (b) Longitudinal boundary; (c) Central boundary; (d) Top boundary; (e) Hanging wall boundary; and (f) Footwall boundary. W. Feng, L. Yang, C. Xin et al. Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 7711e7735 7724",
+    "caption_candidates": [
+      {
+        "label": "Figure. 15",
+        "text": "Comparison chart of acceleration time history curves at measurement points: (a) Lateral boundary; (b) Longitudinal boundary; (c) Central boundary; (d) Top boundary; (e) Hanging wall boundary; and (f) Footwall boundary. W. Feng, L. Yang, C. Xin et al. Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 7711e7735 7724"
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page15_figure16.png",
+    "page": 15,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 2990,
+    "height": 2939,
+    "column": "full",
+    "num_columns": 1,
+    "caption_label": "Figure. 16",
+    "caption": "Comparison chart of ampli\ufb01cation factors for different peak accelerations and fault dislocation: (a) 0.2 g Comparison of ampli\ufb01cation factors; (b) 0.4 g Comparison of ampli\ufb01cation factors; (c) 1.0 g Comparison of ampli\ufb01cation factors; and (d) Comparison of ampli\ufb01cation factors for a 10 cm fault dislocation at 0.4 g acceleration. W. Feng, L. Yang, C. Xin et al. Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 7711e7735 7725",
+    "caption_candidates": [
+      {
+        "label": "Figure. 16",
+        "text": "Comparison chart of ampli\ufb01cation factors for different peak accelerations and fault dislocation: (a) 0.2 g Comparison of ampli\ufb01cation factors; (b) 0.4 g Comparison of ampli\ufb01cation factors; (c) 1.0 g Comparison of ampli\ufb01cation factors; and (d) Comparison of ampli\ufb01cation factors for a 10 cm fault dislocation at 0.4 g acceleration. W. Feng, L. Yang, C. Xin et al. Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 7711e7735 7725"
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page16_figure17.png",
+    "page": 16,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 3572,
+    "height": 2800,
+    "column": "full",
+    "num_columns": 1,
+    "caption_label": "Figure. 17",
+    "caption": "Comparison chart of Fourier spectra at different locations: (a) Fourier spectrum at A11; (b) Fourier spectrum at A14; (c) Fourier spectrum at A31; (d) Fourier spectrum at A34; (e) Fourier spectrum at A51; and (f) Fourier spectrum at A54. W. Feng, L. Yang, C. Xin et al. Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 7711e7735 7726",
+    "caption_candidates": [
+      {
+        "label": "Figure. 17",
+        "text": "Comparison chart of Fourier spectra at different locations: (a) Fourier spectrum at A11; (b) Fourier spectrum at A14; (c) Fourier spectrum at A31; (d) Fourier spectrum at A34; (e) Fourier spectrum at A51; and (f) Fourier spectrum at A54. W. Feng, L. Yang, C. Xin et al. Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 7711e7735 7726"
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page17_figure18.png",
+    "page": 17,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 3288,
+    "height": 4350,
+    "column": "full",
+    "num_columns": 1,
+    "caption_label": "Figure. 18",
+    "caption": "Acceleration time history curve at the fault before and after the dislocation at the same measuring point: (a) no dislocation for bottom; (b) 10 cm dislocation for bottom; (c) no dislocation for central; (d) 10 cm dislocation for central; (e) no dislocation for top; and (f) 10 cm dislocation for top. W. Feng, L. Yang, C. Xin et al. Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 7711e7735 7727",
+    "caption_candidates": [
+      {
+        "label": "Figure. 18",
+        "text": "Acceleration time history curve at the fault before and after the dislocation at the same measuring point: (a) no dislocation for bottom; (b) 10 cm dislocation for bottom; (c) no dislocation for central; (d) 10 cm dislocation for central; (e) no dislocation for top; and (f) 10 cm dislocation for top. W. Feng, L. Yang, C. Xin et al. Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 7711e7735 7727"
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page18_figure19.png",
+    "page": 18,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 3160,
+    "height": 1809,
+    "column": "full",
+    "num_columns": 1,
+    "caption_label": "Figure. 19",
+    "caption": "Comparison of hanging wall and footwall seismic damage phenomena before and after 0.4 g MY seismic motion dislocation.",
+    "caption_candidates": [
+      {
+        "label": "Figure. 19",
+        "text": "Comparison of hanging wall and footwall seismic damage phenomena before and after 0.4 g MY seismic motion dislocation."
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page19_figure21.png",
+    "page": 19,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 1799,
+    "height": 1422,
+    "column": "col-0",
+    "num_columns": 2,
+    "caption_label": "Figure. 21",
+    "caption": "Elastic-plastic constitutive model of steel. Table 6 Physical and mechanical parameters of materials. Material Density (kg/m3) Young's modulus (GPa) Poisson's ratio Steel 7850 206 0.3",
+    "caption_candidates": [
+      {
+        "label": "Figure. 21",
+        "text": "Elastic-plastic constitutive model of steel. Table 6 Physical and mechanical parameters of materials. Material Density (kg/m3) Young's modulus (GPa) Poisson's ratio Steel 7850 206 0.3"
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page19_figure22.png",
+    "page": 19,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 1963,
+    "height": 1555,
+    "column": "col-0",
+    "num_columns": 2,
+    "caption_label": "Figure. 22",
+    "caption": "The \ufb01rst-order natural frequency and vibration mode diagram of the container. W. Feng, L. Yang, C. Xin et al. Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 7711e7735 7729",
+    "caption_candidates": [
+      {
+        "label": "Figure. 22",
+        "text": "The \ufb01rst-order natural frequency and vibration mode diagram of the container. W. Feng, L. Yang, C. Xin et al. Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 7711e7735 7729"
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page20_figure23.png",
+    "page": 20,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 3158,
+    "height": 2628,
+    "column": "full",
+    "num_columns": 1,
+    "caption_label": "Figure. 23",
+    "caption": "The \ufb01rst-order natural frequency and vibration mode diagram of the container under different stagger distances: (a) 10 cm horizontal dislocation; (b) 10 cm vertical dislocation; and (c) 10 cm horizontal and vertical dislocation.",
+    "caption_candidates": [
+      {
+        "label": "Figure. 23",
+        "text": "The \ufb01rst-order natural frequency and vibration mode diagram of the container under different stagger distances: (a) 10 cm horizontal dislocation; (b) 10 cm vertical dislocation; and (c) 10 cm horizontal and vertical dislocation."
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page20_figure24.png",
+    "page": 20,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 3244,
+    "height": 1611,
+    "column": "full",
+    "num_columns": 1,
+    "caption_label": "Figure. 24",
+    "caption": "Harmonic response analysis modal characteristics: (a) Harmonic response displacement cloud diagram; and (b) Harmonic response frequency-displacement curve. W. Feng, L. Yang, C. Xin et al. Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 7711e7735 7730",
+    "caption_candidates": [
+      {
+        "label": "Figure. 24",
+        "text": "Harmonic response analysis modal characteristics: (a) Harmonic response displacement cloud diagram; and (b) Harmonic response frequency-displacement curve. W. Feng, L. Yang, C. Xin et al. Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 7711e7735 7730"
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page21_figure26.png",
+    "page": 21,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 1882,
+    "height": 1508,
+    "column": "col-1",
+    "num_columns": 2,
+    "caption_label": "Figure. 26",
+    "caption": "Random response \ufb01rst-order natural frequency and vibration mode diagram.",
+    "caption_candidates": [
+      {
+        "label": "Figure. 26",
+        "text": "Random response \ufb01rst-order natural frequency and vibration mode diagram."
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page21_figure27.png",
+    "page": 21,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 2021,
+    "height": 1448,
+    "column": "col-1",
+    "num_columns": 2,
+    "caption_label": "Figure. 27",
+    "caption": "Random response frequency-acceleration curve. W. Feng, L. Yang, C. Xin et al. Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 7711e7735 7731",
+    "caption_candidates": [
+      {
+        "label": "Figure. 27",
+        "text": "Random response frequency-acceleration curve. W. Feng, L. Yang, C. Xin et al. Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 7711e7735 7731"
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page21_figure25.png",
+    "page": 21,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 2027,
+    "height": 1486,
+    "column": "col-0",
+    "num_columns": 2,
+    "caption_label": "Figure. 25",
+    "caption": "The power spectrum curve.",
+    "caption_candidates": [
+      {
+        "label": "Figure. 25",
+        "text": "The power spectrum curve."
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page22_figure28.png",
+    "page": 22,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 2479,
+    "height": 2066,
+    "column": "full",
+    "num_columns": 1,
+    "caption_label": "Figure. 28",
+    "caption": "Accelerometer arrangement of hammer test.",
+    "caption_candidates": [
+      {
+        "label": "Figure. 28",
+        "text": "Accelerometer arrangement of hammer test."
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page22_figure29.png",
+    "page": 22,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 2027,
+    "height": 1222,
+    "column": "col-0",
+    "num_columns": 2,
+    "caption_label": "Figure. 29",
+    "caption": "Least square error diagram.",
+    "caption_candidates": [
+      {
+        "label": "Figure. 29",
+        "text": "Least square error diagram."
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page22_figure30.png",
+    "page": 22,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 2820,
+    "height": 1983,
+    "column": "full",
+    "num_columns": 1,
+    "caption_label": "Figure. 30",
+    "caption": "Container steady state diagram. W. Feng, L. Yang, C. Xin et al. Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 7711e7735 7732",
+    "caption_candidates": [
+      {
+        "label": "Figure. 30",
+        "text": "Container steady state diagram. W. Feng, L. Yang, C. Xin et al. Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 7711e7735 7732"
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page23_figure32.png",
+    "page": 23,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 1951,
+    "height": 1219,
+    "column": "col-1",
+    "num_columns": 2,
+    "caption_label": "Figure. 32",
+    "caption": "The \ufb01rst-order natural frequency and vibration mode diagram of hammer test. W. Feng, L. Yang, C. Xin et al. Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 7711e7735 7733",
+    "caption_candidates": [
+      {
+        "label": "Figure. 32",
+        "text": "The \ufb01rst-order natural frequency and vibration mode diagram of hammer test. W. Feng, L. Yang, C. Xin et al. Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 7711e7735 7733"
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page23_figure31.png",
+    "page": 23,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 1832,
+    "height": 1489,
+    "column": "col-0",
+    "num_columns": 2,
+    "caption_label": "Figure. 31",
+    "caption": "Force hammer sensor. Table 7 Main parameters of force hammer sensor. Axial sensitivity ((23 \u00b1 5) \u0005C) Measuring range Maximum lateral sensitivity Maximum output signal Installation resonance frequency",
+    "caption_candidates": [
+      {
+        "label": "Figure. 31",
+        "text": "Force hammer sensor. Table 7 Main parameters of force hammer sensor. Axial sensitivity ((23 \u00b1 5) \u0005C) Measuring range Maximum lateral sensitivity Maximum output signal Installation resonance frequency"
+      }
+    ]
+  }
+]

@@ -1,0 +1,254 @@
+[
+  {
+    "file": "assets/figures/page4_figure1.png",
+    "page": 4,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 2645,
+    "height": 1204,
+    "column": "full",
+    "num_columns": 1,
+    "caption_label": "Figure. 1",
+    "caption": "Different spatial resolutions of imagery for the AoI in Madagascar.",
+    "caption_candidates": [
+      {
+        "label": "Figure. 1",
+        "text": "Different spatial resolutions of imagery for the AoI in Madagascar."
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page4_figure2.png",
+    "page": 4,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 3329,
+    "height": 1682,
+    "column": "full",
+    "num_columns": 1,
+    "caption_label": "Figure. 2",
+    "caption": "Ground-truth equipment setup in survey vehicle (a); Interface of dashcam assessment software (b).",
+    "caption_candidates": [
+      {
+        "label": "Figure. 2",
+        "text": "Ground-truth equipment setup in survey vehicle (a); Interface of dashcam assessment software (b)."
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page4_figure3.png",
+    "page": 4,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 2995,
+    "height": 1939,
+    "column": "full",
+    "num_columns": 1,
+    "caption_label": "Figure. 3",
+    "caption": "Ground-truth road conditions by category. Z. Wang et al.",
+    "caption_candidates": [
+      {
+        "label": "Figure. 3",
+        "text": "Ground-truth road conditions by category. Z. Wang et al."
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page5_figure4.png",
+    "page": 5,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 2642,
+    "height": 1314,
+    "column": "full",
+    "num_columns": 1,
+    "caption_label": "Figure. 4",
+    "caption": "Example of road tiles collection. Table 1 Distribution of Image Samples by Resolution and Condition for Madagascar Road Network. Condition Madagascar (training/validation dataset \u00fe testing dataset) Low-Res Mid-Res High-Res Bad 881 + 221 753 + 194",
+    "caption_candidates": [
+      {
+        "label": "Figure. 4",
+        "text": "Example of road tiles collection. Table 1 Distribution of Image Samples by Resolution and Condition for Madagascar Road Network. Condition Madagascar (training/validation dataset \u00fe testing dataset) Low-Res Mid-Res High-Res Bad 881 + 221 753 + 194"
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page6_figure5.png",
+    "page": 6,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 3331,
+    "height": 3219,
+    "column": "full",
+    "num_columns": 1,
+    "caption_label": "Figure. 5",
+    "caption": "PCA and Mahalanobis distance outlier detection in high-resolution road condition analysis. Z. Wang et al.",
+    "caption_candidates": [
+      {
+        "label": "Figure. 5",
+        "text": "PCA and Mahalanobis distance outlier detection in high-resolution road condition analysis. Z. Wang et al."
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page7_figure6.png",
+    "page": 7,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 2957,
+    "height": 3640,
+    "column": "full",
+    "num_columns": 1,
+    "caption_label": "Figure. 6",
+    "caption": "Examples of identified outliers (incorrectly labelled) in road condition data. Table 2 Distribution of cleaned image samples by resolution and road condition in the Madagascar Road Network. Condition Madagascar: Cleaned (training/validation dataset \u00fe testing dataset) Low-Res Med-Res High-Res Bad 845 + 192 733 + 179",
+    "caption_candidates": [
+      {
+        "label": "Figure. 6",
+        "text": "Examples of identified outliers (incorrectly labelled) in road condition data. Table 2 Distribution of cleaned image samples by resolution and road condition in the Madagascar Road Network. Condition Madagascar: Cleaned (training/validation dataset \u00fe testing dataset) Low-Res Med-Res High-Res Bad 845 + 192 733 + 179"
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page9_figure7.png",
+    "page": 9,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 3572,
+    "height": 2868,
+    "column": "full",
+    "num_columns": 1,
+    "caption_label": "Figure. 7",
+    "caption": "Confusion matrices collection of predictive models across varying resolutions.",
+    "caption_candidates": [
+      {
+        "label": "Figure. 7",
+        "text": "Confusion matrices collection of predictive models across varying resolutions."
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page9_figure8.png",
+    "page": 9,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 3572,
+    "height": 1821,
+    "column": "full",
+    "num_columns": 1,
+    "caption_label": "Figure. 8",
+    "caption": "Examples of misclassified road tiles illustrating ambiguous Poor/Fair boundary cases. Z. Wang et al.",
+    "caption_candidates": [
+      {
+        "label": "Figure. 8",
+        "text": "Examples of misclassified road tiles illustrating ambiguous Poor/Fair boundary cases. Z. Wang et al."
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page10_figure9.png",
+    "page": 10,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 3572,
+    "height": 2611,
+    "column": "full",
+    "num_columns": 1,
+    "caption_label": "Figure. 9",
+    "caption": "Accuracy-coverage trade-off for confidence-based prediction filtering. Z. Wang et al.",
+    "caption_candidates": [
+      {
+        "label": "Figure. 9",
+        "text": "Accuracy-coverage trade-off for confidence-based prediction filtering. Z. Wang et al."
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page11_figure10.png",
+    "page": 11,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 2995,
+    "height": 2989,
+    "column": "full",
+    "num_columns": 1,
+    "caption_label": "Figure. 10",
+    "caption": "Confusion matrices for simplified classification schemes at low resolution.",
+    "caption_candidates": [
+      {
+        "label": "Figure. 10",
+        "text": "Confusion matrices for simplified classification schemes at low resolution."
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page11_figure11.png",
+    "page": 11,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 3572,
+    "height": 1246,
+    "column": "full",
+    "num_columns": 1,
+    "caption_label": "Figure. 11",
+    "caption": "Comparative performance of high-res Extended Model on lower resolution data. Z. Wang et al.",
+    "caption_candidates": [
+      {
+        "label": "Figure. 11",
+        "text": "Comparative performance of high-res Extended Model on lower resolution data. Z. Wang et al."
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page13_figure12.png",
+    "page": 13,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 2736,
+    "height": 4347,
+    "column": "full",
+    "num_columns": 1,
+    "caption_label": "Figure. 12",
+    "caption": "Multimodal ML model architecture for integrated image and numerical data processing. Z. Wang et al.",
+    "caption_candidates": [
+      {
+        "label": "Figure. 12",
+        "text": "Multimodal ML model architecture for integrated image and numerical data processing. Z. Wang et al."
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page14_figure13.png",
+    "page": 14,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 3572,
+    "height": 1304,
+    "column": "full",
+    "num_columns": 1,
+    "caption_label": "Figure. 13",
+    "caption": "Confusion matrices collection of multimodal ML models across varying resolutions. Table 5 Comparison of multimodal ML and traditional ML Models. Feature Multimodal ML Model Traditional ML Model Accuracy High accuracy across all resolutions, with slight decreases at lower resolutions. High accuracy in high- resolution, but drops at lower",
+    "caption_candidates": [
+      {
+        "label": "Figure. 13",
+        "text": "Confusion matrices collection of multimodal ML models across varying resolutions. Table 5 Comparison of multimodal ML and traditional ML Models. Feature Multimodal ML Model Traditional ML Model Accuracy High accuracy across all resolutions, with slight decreases at lower resolutions. High accuracy in high- resolution, but drops at lower"
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page19_figure14.png",
+    "page": 19,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 3044,
+    "height": 2385,
+    "column": "full",
+    "num_columns": 1,
+    "caption_label": "Figure. 14",
+    "caption": "Confusion matrix for the UnpaveAssess-LLaVA model across different data types. Table 11 Example to demonstrate task-specific instruction-following data. Context Type 1: Segmentation Annotations Pixel-level identification of surface defects (e.g., potholes, rutting) using labelled colours to facilitate precise localisation. Context Type 2: Colour and Texture metrics Quantitative descriptors derived from RGB/HSV colour spaces and texture analysis methods. Example: \u201cmean_R = 208.66, mean_G = 146.33, mean_B = 91.57, mean_H = 0.077, mean_S = 0.565, mean_V = 0.818, contrast = 271.1, energy = 0.0778, dissimilarity = 10.770, \u2026 < omitted>\u201c",
+    "caption_candidates": [
+      {
+        "label": "Figure. 14",
+        "text": "Confusion matrix for the UnpaveAssess-LLaVA model across different data types. Table 11 Example to demonstrate task-specific instruction-following data. Context Type 1: Segmentation Annotations Pixel-level identification of surface defects (e.g., potholes, rutting) using labelled colours to facilitate precise localisation. Context Type 2: Colour and Texture metrics Quantitative descriptors derived from RGB/HSV colour spaces and texture analysis methods. Example: \u201cmean_R = 208.66, mean_G = 146.33, mean_B = 91.57, mean_H = 0.077, mean_S = 0.565, mean_V = 0.818, contrast = 271.1, energy = 0.0778, dissimilarity = 10.770, \u2026 < omitted>\u201c"
+      }
+    ]
+  }
+]

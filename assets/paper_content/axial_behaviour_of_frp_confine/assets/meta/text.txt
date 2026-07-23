@@ -1,0 +1,1713 @@
+Axial behaviour of FRP-conﬁned rubberised concrete: An experimental
+investigation
+Zhao Wang ⇑, Iman Hajirasouliha, Maurizio Guadagnini, Kypros Pilakoutas
+Dept. of Civil and Structural Engineering, The University of Shefﬁeld, Sir Frederick Mappin Building, Mappin Street, Shefﬁeld S1 3JD, UK
+h i g h l i g h t s
+ The axial behaviours of FRP-conﬁned regular and rubberised concrete are investigated.
+ Effects of rubber content, section shape, FRP type and number of layers are assessed.
+ Conﬁnement effectiveness enhances by increasing rubber content Efﬁciency of conﬁnement models for rubberised square and circular concrete
+examined.
+ Existing models fail to predict the behaviour of conﬁned square rubberised concrete.
+a r t i c l e
+i n f o
+Article history:
+Received 8 January 2020
+Received in revised form 4 August 2020
+Accepted 16 September 2020
+Available online 10 October 2020
+Keywords:
+Rubberised concrete
+Conﬁnement effectiveness
+FRP conﬁnement
+Square and circular cross-sections
+a b s t r a c t
+This paper investigates the axial behaviour of square and circular concrete specimens conﬁned by exter-
+nally bonded Fibre Reinforced Polymer (FRP) jackets. Axial compression tests were performed on 96 reg-
+ular and rubberised concrete specimens. The parameters considered were rubber content (0% and 60%),
+section shape (circular and square), FRP type (Carbon or Aramid) and the number of FRP layer (1, 2 and 3).
+The behaviour of the specimens in both axial and lateral directions, as well as their dilation characteris-
+tics, were investigated. The test results indicate that the conﬁnement effectiveness of Aramid-FRP is bet-
+ter than that of Carbon-FRP. It is also shown that the detrimental effect of sharp corner on conﬁnement
+effectiveness is less critical when using high rubber content as the element can develop large lateral
+expansion at unprecedented axial deformation. Large axial deformations can enable the development
+of highly ductile concrete elements. Existing design-oriented models fail to predict the behaviour of con-
+ﬁned rubberised concrete with rectangular cross-section, indicating the need for developing more reﬁned
+conﬁnement models.
+ 2020 Elsevier Ltd. All rights reserved.
+1. Introduction
+Enhancing the deformation capacity of reinforced concrete
+structures can provide sufﬁcient resilience to sustain extreme
+actions such as seismic ground motions and blast/impact loads.
+The deformation characteristics of reinforced concrete elements
+depend profoundly on the concrete compressive characteristics
+[1]. The use of Fibre Reinforced Polymer (FRP) jackets to strengthen
+and retroﬁt concrete specimens is increasingly practised world-
+wide as it can enhance concrete compressive strength and
+deformability. Extensive studies examined the behaviour of FRP-
+conﬁned regular concrete (CRC) in both circular and rectangular
+sections and evaluated the effectiveness of the conﬁnement [2-
+7]. It is well known that for the same amount of conﬁnement, cir-
+cular specimens perform better than rectangular specimens in
+terms of ultimate stress and strain. This due to:
+1) Conﬁning stress distribution; While a uniform conﬁnement
+action develops in circular cross-section, in rectangular cross-
+section, the conﬁnement action is non-uniform, with higher con-
+ﬁning pressure at the corners and practically no conﬁning pressure
+along the central part of the ﬂat sides. As a result, the conﬁnement
+effectiveness is signiﬁcantly reduced in rectangular cross-section;
+2) Stress in the conﬁning material; the average tensile rupture
+strain of FRP in rectangular cross-section is much lower than that
+of circular cross-section and is directly affected by the ratio of cor-
+ner radius to the breadth of the cross-section. Tests show that a
+very sharp corner (i.e. as the corner radius tends to zero) can even
+severely reduce the conﬁnement [8-10] as the FRP jacket is sub-
+jected to high stress concentrations at the corner. Rounding the
+https://doi.org/10.1016/j.conbuildmat.2020.121023
+0950-0618/ 2020 Elsevier Ltd. All rights reserved.
+⇑Corresponding author.
+E-mail
+addresses:
+wangzhao0217@gmail.com
+(Z.
+Wang),
+i.hajirasouliha@
+shefﬁeld.ac.uk (I. Hajirasouliha), m.guadagnini@shefﬁeld.ac.uk (M. Guadagnini),
+k.pilakoutas@shefﬁeld.ac.uk (K. Pilakoutas).
+Construction and Building Materials 267 (2021) 121023
+Contents lists available at ScienceDirect
+Construction and Building Materials
+journal homepage: www.elsevier.com/locate/conbuildmat
+corners is typically used to improve the conﬁnement effectiveness
+and reduce the unfavourable effects of the sharp corner on the rup-
+ture strength of FRP jacket [3]. As the rupture strain of FRP deter-
+mines the ultimate state of FRP-conﬁned concrete, FRP composites
+with high rupture strain (i.e. Aramid FRP) should be utilised to
+develop highly deformable elements. However, the potential defor-
+mation capacity of CRC elements is still limited. For example, to
+achieve an ultimate axial strain around 3.8%, regular concrete
+cylinders (Ø150mm  305 mm) need to be conﬁned with 14 layers
+of Glass FRP [9].
+Recent research undertaken at The University of Shefﬁeld
+within the EU funded Anagennisi project [11] assessed the feasibil-
+ity of using rubber aggregates from end-of-life tyres to improve
+concrete deformability and develop highly deformable elements.
+Rubber is a highly durable material with good strength and
+deformability, and can maintain its initial volume under stress.
+This makes it an ideal candidate to replace mineral aggregates to
+obtain highly deformable concrete. The use of rubber in concrete,
+has received extensive attention from researchers [12-14]. It was
+found that the deformability and post-peak behaviour of concrete
+is positively enhanced by substituting mineral aggregates with
+rubber particles [15-17]. However, it is also known that rubber at
+large contents can dramatically decrease the strength of concrete
+(by up to 90%). Consequently, rubberised concrete (RuC) has not
+been used in structural applications.
+In order to recover the lost strength, a number of investigations
+have been conducted to use different types of lateral conﬁnement
+to develop highly deformable conﬁned RuC (CRuC) elements, such
+as cold-formed steel tubes [18] and Carbon FRP (CFRP) tubes
+[14,19]. Although these conﬁnement methods led to an enhance-
+ment in strength, the improvement in axial deformability was still
+limited. Moreover, the use of steel tubes was proven to be less
+effective for RuC than regular concrete due to local buckling, and
+CFRP conﬁnement was was found to be less efﬁcient when com-
+pared to other types of FRP, like aramid or glass [4,20]. Raffoul
+et al. [4] found that RuC cylinders (with up to 60% total aggregates
+replacement) conﬁned with four-layer Aramid FRP (AFRP) are able
+to withstand high levels of stress (up to 90 MPa) at large levels of
+deformation (axial strain up to 6%), while the ultimate stress and
+axial strain of corresponding cylinders conﬁned with CFRP develop
+only up to 60 MPa and 3.5% respectively. The test results also indi-
+cated that for CRuC specimens, the conﬁnement provided by the
+FRP jacket is activated earlier and with a more uniform FRP strain
+distribution [21,22]. As a result, the conﬁnement effectiveness in
+CRuC cylindrical specimens has been observed to be higher than
+in CRC. Therefore, it is expected that the effectiveness of conﬁne-
+ment in CRuC elements with rectangular cross-section would also
+be enhanced. However, this has not been assessed experimentally.
+The study aims to investigate experimentally the axial com-
+pressive behaviour of FRP-conﬁned square and circular specimens
+manufactured using regular and rubberised concrete. This paper
+ﬁrst introduces the details of the comprehensive experimental pro-
+gramme. Next, a discussion is carried out on the experimental
+behaviour in terms of stress–strain and dilation. The inﬂuence of
+various parameters on the conﬁnement effectiveness is then exam-
+ined. Finally, the ability of selected design-oriented stress–strain
+models to capture the behaviour of for rubberised concrete square
+specimens is subsequently assessed.
+2. Experimental program
+Ninety-six samples, including 48 round (Ø100mm  200 mm)
+and 48 square (100  100 mm in cross-section by 200 mm in
+height) specimens, were manufactured using regular and rub-
+berised concrete to assess their compressive characteristics. Three
+replicates were tested for each of the examined parameters. The
+main parameters investigated were the: 1) radius of the corner
+(12 mm and 50 mm) (see Fig. 1); 2) rubber contents (qvr = 0 and
+60%); and 3) type of FRP ﬁbre (Aramid or Carbon FRP) and number
+of FRP layers (1, 2 and 3).
+2.1. Rubber particles and mix designs
+A reference regular concrete mix (qvr = 0) with the target 28-
+day compressive strength of 60 MPa was modiﬁed to design the
+rubberised concrete mix in this study. An optimised rubberised
+concrete mix developed by Raffoul et al. [17] with 60% rubber
+replacement by volume of mineral aggregates was used [17]. The
+rubber particles were obtained from the recycling of end-of-life
+tyres and were supplied in different size ranges (Fig. 2) [16]. The
+speciﬁc gravities of mineral aggregates and rubber were measured
+to be 2.65 and 0.8, respectively [17]. The quantity of rubber used in
+the mixes was 330 kg/m3. The mix proportions used in this study
+are summarised in Table 1.
+2.2. Fibre reinforced polymer jacket
+Before applying the FRP conﬁnement, the corners of the square
+specimens were ground to ensure a smooth transition with the ﬂat
+sides and to improve adherence with the FRP jacket. One, two or
+three layers of AFRP or CFRP sheets were externally bonded to
+the specimens using the wet lay-up technique. The unidirectional
+fabrics were oriented in the hoop direction and overlapped by a
+length of 100 mm to ensure the full transfer of the forces and pre-
+vent premature debonding [4]. The mean mechanical properties of
+the unidirectional FRP sheets were obtained using direct tensile
+tests on 12 FRP coupons (see Table 2).
+2.3. Test setup and instrumentation
+All samples were subjected to axial compressive load using a
+servo-controlled universal testing machine and tested in displace-
+ment control at a rate of 0.2 mm/min up to failure [23]. Two alu-
+minium rings (see Fig. 3) were used to mount the measurement
+sensors (i.e. Laser Sensors (LS) and Linear Variable Differential
+Transformers (LVDTs)). Three LS (an accuracy of 0.005 mm) located
+radially at 120 with a 100 mm gauge length were used to measure
+global axial displacement. Lateral deformations of the cylindrical
+specimens were measured using three LVDTs, placed radially
+around the specimens (120 apart, see Fig. 3 (b)), while lateral
+expansions of the square specimens were measured using two
+LVDTs (LVDT1 and LVDT3) located at the centre of two opposite
+faces and another two LVDTs (LVDT2 and LVDT4) located at the
+centre of two opposite corners (see Fig. 3 (d)). Local axial strains
+(V1 and V2) and local lateral strains (H1, H2 and H3) of the cylin-
+drical specimens were recorded using strain gauges placed at the
+mid-height along the specimen circumference avoiding the overlap
+region (see Fig. 3 (b)). Local axial strains (V1 and V2), local ﬂat side
+lateral strains (H1, H2, H3 and H4) and local corner lateral strains
+(CH1, CH2 and CH3) of the square specimens were measured using
+Fig. 1. Cross-sections of square (Rc
+b ¼ 0.12) and round (Rc
+b ¼0.5) specimens.
+Z. Wang, I. Hajirasouliha, M. Guadagnini et al.
+Construction and Building Materials 267 (2021) 121023
+2
+strain gauges placed at mid-height of the specimen, again avoiding
+the overlap region (see Fig. 3 (d)). The two ends of the specimen
+were strengthened with pre-tensioned metal straps with a width
+of 25 mm and a thickness of 0.8 mm to avoid possible local failure
+[24].
+3. Experimental results
+The mean values of the compressive test results of the FRP-
+conﬁned specimens are summarised in Table 3. In this study, the
+specimen ID indicates the rubber volumetric replacement ratios
+(qvr = 0% - R0 and qvr = 60% - R60), the number of FRP layers (1L,
+2L or 3L), the conﬁnement material (A = AFRP or C = CFRP) and
+the shape of the cross-section (C = circular or S = square). For
+example, R60-2LA-S stands for rubberised concrete square column
+wrapped with two layers of AFRP. Table 3 lists the conﬁnement
+material properties (i.e. fabric thickness (tf), elastic modulus (Ef)
+and average hoop rupture strain (eh,rup)), conﬁning stiffness (Kj)
+(Eq. (1)), critical stress (fcr), ultimate compressive strength (fcc),
+ultimate axial strain (ecu), ultimate area strains (eau), conﬁnement
+effectiveness (fcc/fco), ductility (ecu/eco) and crushing energy (gc).
+Kj ¼
+2ntf Ef
+Df co
+for circular cross - section
+2ntf Ef
+Deqf co
+for square cross - section
+8
+<
+:
+ð1Þ
+where
+D
+is
+the
+diameter
+of
+the
+circular
+cross-section
+and
+Deq =
+ﬃﬃﬃ
+2
+p
+a  ð
+ﬃﬃﬃ
+2
+p
+ 1Þ2Rcis the equivalent circular diameter for the
+square cross-section (a is the side length of square cross-section
+and Rc is the corner radius). The critical stress (fcr) is the stress at
+which the secant modulus (Esec) decreases to around 70% of the
+initial stiffness (Ec). The ratios of the ultimate stress and strain of
+the FRP-conﬁned specimens to the average peak stress and peak
+strain of the unconﬁned counterpart (fcc/fco and ecu/eco) are used to
+deﬁne the effectiveness of conﬁnement and ductility, respectively.
+The average peak stress (fco) and peak strain (eco) of the unconﬁned
+regular concrete (RC) specimen were 74.5 MPa and 0.225%, respec-
+tively; while the fco and eco of the unconﬁned RuC specimen were
+7.9 MPa and 0.133%, respectively. gc represents the area under the
+uniaxial compressive stress–strain curves.
+Figure 4 indicates the aforementioned parameters schemati-
+cally, in which the axial strains within the elastic region (O-A) were
+determined using the vertical strain gauge readings (V1 and V2),
+while the readings from the laser sensors (LS1-LS3) were used
+for the region beyond the critical stress (fcr) (A-C). This was to avoid
+the spurious strain gauge readings caused by the excessive loca-
+lised bulging of the FRP jacket, after fcr (point A). In order to directly
+compare the stress–strain behaviour of FRP-conﬁned round and
+square specimens, the area strain was used. Area strain (ea) can
+be calculated by dividing the expansion area of the cross-section
+(DA) over the original area (A) (Eqs. (2–4)).
+For circular cross-section, the area strain within region O-A and
+A-C can be determined by Eq. (2).
+eA ¼ DA
+A ¼
+2er
+using strain gauge reading
+2Dr
+r
+using LVDTs reading
+(
+ð2Þ
+For square cross-section, the expansion history of the square
+cross-section can be separated into two stages: Stage-1 was the
+expansion of the perimeter. During this stage, the LVDT measure-
+ments obtained from the ﬂat side and corner were almost identical.
+Stage-2 was the bulging of the ﬂat side. At this stage, the expansion
+of the corner was stopped, while the expansion of the ﬂat side was
+continuing. A similar observation can be found in [10]. The expan-
+sion area DA, therefore, is divided into two parts: Ac and Af. Ac
+stands for the expansion of the perimeter, and Af indicates the
+additional expansion along the ﬂat sides (see Fig. 5). Thereby, the
+total area expansion of a square cross-section can be expressed
+as Ac + 4Af. The value of ea in O-A and A-C can be determined using
+the measurements recorded by strain gauges (Eq. (3)) and mea-
+surements recorded by LVDTs (Eq. (4)), respectively. Eq. (5) can
+be used to calculate the value of Af.
+Using strain gauge measurements
+ea ¼ DA
+A ¼
+Acþ4Af
+A
+¼
+a2 1þea
+ð
+Þ2þ4ar 1þea
+ð
+Þ 1þer
+ð
+Þþpr 1þer
+ð
+Þ2
+½
+ a2þ4arþpr2
+ð
+Þþ4Af
+a2þ4arþpr2
+
+2a2eaþ4ar eaþer
+ð
+Þþ2prer
+½
+þ4Af
+a2þ4arþpr2
+ð3Þ
+Using LVDT measurements
+ea ¼ DA
+A ¼
+Acþ4Af
+A
+¼
+aþDa
+ð
+Þ2þ4 aþDa
+ð
+Þ rþDr
+ð
+Þþp rþDr
+ð
+Þ2
+½
+þ4Af  a2þ4arþpr2
+ð
+Þ
+a2þ4arþpr2
+ð4Þ
+where the additional expansion area Af can be determined as
+follows:
+Af ¼ 1
+2 R2h  1
+2 b
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+R2 
+an
+2
+ 2
+q
+ðh in radÞ
+an ¼ a þ Da; R ¼ a2
+nþ4h2
+8h
+and h ¼ arctan 2h
+an
+ð5Þ
+3.1. Failure mode and ultimate condition
+All FRP-conﬁned specimens failed abruptly due to the tensile
+rupture of the FRP jackets (see Fig. 6). In the case of CRC, the rup-
+ture of both Aramid and Carbon FRP always occurred in the corner
+Fig. 2. Rubber particles used to replace sand (size:0–4 mm) and gravel (sizes: 4–
+10 mm and 10–20 mm) in the concrete mix.
+Table 1
+Mix proportions for optimised RuC mix used in this study.
+qvr
+CEM II 52.5
+Silica
+fume
+Pulverised
+fuel ash
+Aggregates
+Rubber Particles
+Plasticiser
+Superplasticiser
+Water
+Designed
+density
+0/5mm
+5/10mm
+10/20mm
+0/4mm
+4/10mm
+10/20mm
+kg/m3
+l/m3
+kg/m3
+0
+340
+42.5
+42.5
+820
+364
+637
+–
+–
+–
+2.5
+5.1
+150
+2396
+60%
+340
+42.5
+42.5
+328
+146
+255
+149
+33
+148
+2.5
+5.1
+150
+1634
+Z. Wang, I. Hajirasouliha, M. Guadagnini et al.
+Construction and Building Materials 267 (2021) 121023
+3
+Fig. 3. Set-up of compressive tests: front view (a) and top view (b) of cylinders; front view (c) and top view (d) of square specimens.
+Table 3
+Mean-values of compressive tests.
+qvr
+Specimen
+D or Deq
+tf
+Ef
+eh,rup
+Kj
+fcr
+fcc
+ecu
+eau
+fcc/fco
+ecu/eco
+gc
+mm
+mm
+GPa
+%
+MPa
+MPa
+%
+%
+N/mm2
+R0
+1LA-C
+100
+0.185
+122
+1.515
+6.06
+69.5
+85
+1.48
+3.03
+1.14
+6.58
+1.07
+2LA-C
+100
+0.37
+122
+1.505
+12.12
+69.8
+114
+1.66
+3.01
+1.53
+7.38
+1.45
+3LA-C
+100
+0.555
+122
+1.575
+18.18
+70.2
+140.2
+2.07
+3.15
+1.88
+9.2
+2.15
+1LA-S
+129
+0.185
+122
+0.772
+4.7
+68.6
+62.25
+0.76
+1.83
+1
+3.38
+0.46
+2LA-S
+129
+0.37
+122
+0.896
+9.39
+67.9
+75
+1.26
+2.52
+1.06
+5.6
+0.96
+3LA-S
+129
+0.555
+122
+1.007
+14.09
+69.79
+99.7
+1.73
+3.03
+1.34
+7.69
+1.42
+1LC-C
+100
+0.15
+225
+0.69
+9.06
+66.7
+81
+0.8
+1.32
+1.09
+3.56
+0.62
+2LC-C
+100
+0.3
+225
+0.72
+18.12
+67
+110
+1.1
+1.44
+1.48
+4.89
+0.92
+3LC-C
+100
+0.45
+225
+0.74
+27.18
+61
+130
+1.29
+1.52
+1.74
+5.73
+1.27
+1LC-S
+129
+0.15
+225
+0.382
+7.02
+66.65
+69.5
+0.5
+0.91
+1
+2.22
+0.31
+2LC-S
+129
+0.3
+225
+0.414
+14.05
+68.8
+84
+0.67
+1
+1.13
+2.98
+0.46
+3LC-S
+129
+0.45
+225
+0.483
+21.07
+67.2
+96
+0.79
+1.2
+1.29
+3.51
+0.52
+R60
+1LA-C
+100
+0.185
+122
+1.68
+50.72
+10.4
+27.4
+3.12
+3.03
+3.08
+23.46
+0.85
+2LA-C
+100
+0.37
+122
+1.785
+101.44
+12.8
+42
+3.81
+3.31
+4.72
+28.65
+1.04
+3LA-C
+100
+0.555
+122
+1.798
+152.16
+14.67
+60.5
+4.89
+3.38
+6.8
+36.77
+1.59
+1LA-S
+129
+0.185
+122
+1.281
+39.32
+8.68
+20.6
+3.76
+3.61
+2.58
+27.14
+0.71
+2LA-S
+129
+0.37
+122
+1.496
+78.63
+10.1
+32.2
+4.95
+4.45
+4.03
+33.46
+1.26
+3LA-S
+129
+0.555
+122
+1.632
+117.95
+10.88
+47
+5.71
+5.06
+5.88
+38.05
+2.14
+1LC-C
+100
+0.15
+225
+0.78
+75.84
+10.61
+23.7
+1.52
+1.43
+2.66
+11.43
+0.26
+2LC-C
+100
+0.3
+225
+0.805
+151.69
+13.7
+35.9
+1.84
+1.63
+4.03
+13.83
+0.44
+3LC-C
+100
+0.45
+225
+0.795
+227.53
+14.32
+47.3
+2.05
+1.59
+5.31
+15.41
+0.6
+1LC-S
+129
+0.15
+225
+0.619
+58.79
+9.15
+14.5
+1.32
+1.08
+1.63
+8.35
+0.12
+2LC-S
+129
+0.3
+225
+0.741
+117.59
+11.27
+20.5
+1.67
+1.45
+2.3
+12.56
+0.26
+3LC-S
+129
+0.45
+225
+0.811
+176.38
+11.55
+28.5
+2.1
+1.63
+3.2
+15.79
+0.41
+Table 2
+Material properties of FRP sheets.
+Thickness (tf)
+Tensile strength (ff)
+Ultimate strain (efu)
+Modulus of Elasticity (Ef)
+mm
+MPa
+%
+GPa
+Aramid-FRP
+0.185
+2400 (24)
+2.06 (0.07)
+122 (25)
+Carbon-FRP
+0.15
+2040 (39)
+0.90 (0.05)
+225 (17)
+Note: Standard Deviation is presented in brackets.
+Z. Wang, I. Hajirasouliha, M. Guadagnini et al.
+Construction and Building Materials 267 (2021) 121023
+4
+region. However, in the case of CRuC, the Carbon-FRP rupture was
+observed either at the corner or within the ﬂat region, while the
+rupture of the Aramid-FRP always occurred within the ﬂat side.
+This will be discussed in more detail in the following sections.
+Fig. 7 shows the average FRP hoop rupture strain (eh,rup) for both
+CRC and CRuC specimens, which was always lower than the failure
+tensile strain of the FRP coupons (efu) (i.e. efu = 2.06% and 0.9% for
+aramid and carbon, respectively). This premature rupture failure
+was also reported in many other studies [2,4,25-28] and can be
+attributed to several factors such as non-homogeneous deforma-
+tions of the cracked concrete that lead to stress concentrations in
+the FRP, triaxial stress states of FRP during loading, geometrical
+imperfections, and non-uniform supports in test setup, as well as
+ﬁbre misalignment and overlap length. A detailed discussion can
+be found in [27]. Nevertheless, these factors may interact with each
+other and lead to a more complicated mechanism. It should be
+mentioned that there is still no available rational model that can
+be used to predict this phenomenon.
+It can be seen that the eh,rup of CRuC specimens was higher than
+that of CRC specimens. More speciﬁcally, CFRP CRC and CRuC cylin-
+ders failed at around 75–80% and 80–90% of efu, respectively. AFRP
+CRC and CRuC cylinders failed at around 70–80% and 85–90% of efu,
+respectively. The higher eh,rup developed in CRuC was more pro-
+nounced in square specimens, which reached up to 1.8 times
+higher values than CRC specimens. This conﬁrms that replacing
+mineral aggregates with rubber particles can lead to an enhance-
+ment in FRP efﬁciency. It is worth noticing that the eh,rup of the
+three-layer CRuC square specimens was nearly equivalent to the
+value developed in cylinders. Furthermore, the eh,rup was found to
+be independent of the number of FRP layers in circular specimens,
+while in square specimens it was found to increase by increasing
+the number of FRP layers.
+3.2. Hoop strain at corner vs ﬂat side
+Figure 8 shows the mean value of the FRP hoop strain along the
+ﬂat side (eh_F) and in the corner region (eh_C), as determined by the
+strain gauge readings H1-H4 and CH1-CH3, respectively. The sig-
+Fig. 4. Schematic representation of typical stress–strain behaviour of FRP-conﬁned concrete.
+Fig. 5. Schematic representation of deformation for the square cross-section.
+Fig. 6. Failure modes of square specimens.
+Z. Wang, I. Hajirasouliha, M. Guadagnini et al.
+Construction and Building Materials 267 (2021) 121023
+5
+niﬁcant difference between these two hoop strains indicates the
+high variability in strain distribution along the circumference of
+the jacket. The strain distribution in CRC shows higher values of
+eh_C, while higher values of eh_F are typically seen in CRuC. This con-
+ﬁrms that the FRP hoop strain is considerably inﬂuenced by loca-
+tion and concrete type. The development of higher eh_C in CRC
+can be attributed to the arch effect in the conﬁned section and is
+evidence that the concrete in the diagonal direction is under signif-
+icantly higher conﬁnement pressure than the concrete close to the
+ﬂat side. The difference between eh,rup_F and eh,rup_C decreases with
+increasing the number of FRP layers and is evidence that a higher
+expansion of the ﬂat side is developed. In the CFRP CRuC speci-
+mens, the difference between eh,rup_F and eh,rup_C is smaller when
+compared to CFRP CRC. This indicates that CFRP CRuC deformed
+more uniformly than CFRP CRC. However, a more non-uniform
+strain distribution was unexpectedly observed in AFRP CRuC spec-
+imens. In these specimens, the eh_C is signiﬁcantly lower than eh_F,
+and slightly decreases with increasing the number of FRP layers.
+This may be the result of considerable lateral expansion of the ﬂat
+side of AFRP CRuC specimens (up to 6 mm), which creates opposite
+curvature and reduces the relative bending strain at the corner. It is
+worth noting that the value of maximum average strain recorded
+along the ﬂat sides was close to the failure strain, efu, while the
+strain values measured in the corners were only approximately
+48% of efu.
+In most existing stress–strain models, failure is controlled by eh,
+rup, which is normally related to efu through a strain reduction
+factor (kef). For CRC, the value of kef should be determined from
+the hoop rupture strain at the round corner, rather than the strain
+measured on the ﬂat side [29]. However, in CRuC, this will lead to a
+signiﬁcant underestimation of strength and ultimate strain capac-
+ity. Hence, a more rational way to calculate the value of kef is
+needed.
+4. Key response parameters
+4.1. Stress–strain behaviour
+Figs. 9 and 10 present the average experimental stress–strain
+behaviour of CRC and CRuC in circular and square cross-section,
+respectively. Yellow lines and black lines indicate AFRP-conﬁned
+and CFRP-conﬁned specimens, respectively. Solid lines and dashed
+lines are also used to represent cylinders and square specimens,
+respectively. The axial compressive stress fcc was determined by
+normalising the compressive force with respect to the cross-
+sectional area of the specimen. The axial strain (ec) is shown on
+the right of the ﬁgure (positive side), and the area strain (ea) is
+shown on the left (negative side). A detailed discussion of these
+results is presented in the following sections.
+4.2. CRC vs CRuC
+In Figs. 9 and 10, three types of behaviour can be identiﬁed.
+One-layer (1L) conﬁned round and square CRC specimens showed
+Fig. 7. Average FRP hoop rupture strains of round and square specimens.
+Z. Wang, I. Hajirasouliha, M. Guadagnini et al.
+Construction and Building Materials 267 (2021) 121023
+6
+Fig. 8. Comparison between the average FRP hoop rupture strains at the ﬂat side and the corner of square specimens.
+Fig. 9. Stress–strain curves of CRC in circular and square sections.
+Z. Wang, I. Hajirasouliha, M. Guadagnini et al.
+Construction and Building Materials 267 (2021) 121023
+7
+a strain-softening behaviour, which indicates that insufﬁcient con-
+ﬁning pressure was provided to the concrete. Two-layer (2L) con-
+ﬁned
+square
+CRC
+specimens
+exhibited
+transience
+softening
+behaviour after reaching the peak stress of unconﬁned specimens,
+followed by a strain-hardening behaviour until failure. The remain-
+ing CRC specimens and all CRuC specimens presented strain-
+hardening behaviour throughout the loading history, while the
+hardening stiffness of CRuC specimens was much higher than that
+of CRC counterpart. Although the CRuC cylinders have similar area
+strain as CRC cylinders, the axial strain developed in CRuC was up
+to 2.5 times than the corresponding CRC specimens. The CRuC
+square specimens demonstrated even more superior deformability
+than the CRC square specimens in both axial and area strain. Fur-
+thermore, the strength of unconﬁned RuC was only 10% of that of
+the unconﬁned regular concrete, the use of the FRP conﬁnement
+led to an increase in strength up to 48% of the strength of the cor-
+responding CRC specimens.
+Table 3 indicates that the inﬂuence of conﬁnement stiffness on
+the behaviour of CRuC was more pronounced than for CRC. For
+example, compared with the 3-layer AFRP CRC square specimens,
+the corresponding CRuC specimens showed 250% and 170%
+increase in axial and area strain, respectively. The maximum ratio
+for fcc/fco of CRC was 1.88, while this ratio reached 6.8 for CRuC.
+More importantly, the maximum ratio of ecu/eco for CRC was 9.2,
+while it reached 38 for CRuC. These improvements resulted in
+greater crushing energy for CRuC specimens as measured by the
+area under the axial stress–strain curve. For instance, the energy
+developed of 3-layer AFRP CRC square column is 1.42  10-3 J,
+while the corresponding CRuC column dissipates a total of
+2.14  10-3 J. This greater energy requirement can be exploited,
+for example, in seismic applications.
+4.3. CFRP vs AFRP conﬁnement
+Figs. 9 and 10 indicate that using the same number of FRP lay-
+ers, CFRP specimens demonstrated a stiffer hardening response
+than AFRP specimens. This can be attributed to the fact that the
+stiffness of the CFRP jacket is about 1.5 times higher than that of
+the AFRP jacket (see Table 3). However, due to the higher rupture
+strain of aramid, the AFRP specimens developed higher ultimate
+compressive stress and strain. As a result, the conﬁnement effec-
+tiveness of AFRP was signiﬁcantly higher than that of CFRP.
+In the case of CRC, the strength (fcc) of AFRP specimens was
+slightly higher than that of corresponding CFRP specimens, while
+much higher deformability in terms of axial strain (ecu) and area
+strain (ea) was observed. In the case of CRuC, the CRuC specimens
+conﬁned with AFRP were considerably stronger and substantially
+more deformable than CFRP-conﬁned specimens, especially in
+the case of square specimens. For example, the fcc/fco of 3-layer
+AFRP CRuC square specimens was almost 2 times that of the corre-
+sponding CFRP specimens. The conﬁnement effectiveness (ecu/eco)
+of AFRP being superior to that of CFRP has also been reported in
+the literature [19,25,26], but the improvement in both ecu/eco and
+fcc/fco was only observed before in CRuC [4]. This may be attributed
+to the very high axial deformability of CRuC, which results in large
+axial loads being transferred to the FRP jacket. This can cause the
+FRP jacket to lose its strength under the biaxial stress-state
+(compression-tension). According to the Tsai–Wu failure criterion
+for FRP [30], higher tensile strength can contribute to higher
+strength under compression-tension stress state. Therefore, the
+aramid is more suitable when developing high-strength high-
+deformability elements for structural applications.
+4.4. Circular vs square section
+In the case of CRC, as expected, the conﬁnement effectiveness
+(ecu/eco and fcc/fco) of FRP on square cross-section was less than
+on circular cross-section (see Figs. 9 and 10). The increasing con-
+ﬁnement stiffness produced a smaller increase in the strength
+and deformability of square specimens than the corresponding
+cylinders. The reduction of conﬁnement effectiveness in terms of
+fcc/fco was also observed in CRuC specimens. However, unlike CRC
+specimens, the deformability of CFRP CRuC was much less affected
+by the section shape, and the AFRP CRuC specimens with a square
+section even developed larger area strain than those with circular
+section, hence exhibited better overall deformability. In Fig. 10,
+the slope of the stress–strain curve of AFRP CRuC square specimens
+was gradually increased at large deformation levels, which indi-
+cates that the conﬁned shape was becoming more efﬁcient, result-
+ing in higher conﬁnement effectiveness.
+4.5. Area strain vs axial strain
+As shown in Fig. 11, in general, the curves of area strain-to-axial
+strain can be characterised by three different phases: I) an initial
+Fig. 10. Stress–strain curves of CRuC in circular and square sections.
+Z. Wang, I. Hajirasouliha, M. Guadagnini et al.
+Construction and Building Materials 267 (2021) 121023
+8
+elastic phase up to an axial compressive strain of around 60%-80%
+of the peak strain of unconﬁned concrete; II) a transition phase
+during which the stiffness decreases due to crack initiation and
+development; and III) an active conﬁnement phase, which is gov-
+erned by the conﬁnement stiffness until the hoop rupture strain
+is reached. In Phase I, the initial slope coincides with elastic Pois-
+son’s ratio of concrete, which was found to be higher for RuC than
+for RC. At the axial strain of 0.001, the area strain of RuC
+(6.4  104) was higher than that of RC (3.5  104), conﬁrming
+that the use of high rubber content in concrete can effectively
+increase lateral expansion. Phase II is affected by the unstable
+propagation of microcracks, which eventually leads to a rapid
+increase in the lateral strain and results in the loss of cohesion
+within the concrete. The FRP jackets begin to counteract the stiff-
+ness degradation of the concrete core in this regime. The response
+in Phase III is affected by the conﬁnement stiffness, the geometry of
+the cross-section, as well as concrete type. The trend of the curve in
+this regime is more linear for cylinders, while the more exponen-
+tial form is observed for square specimens, especially for AFRP con-
+ﬁned specimens. Based on the results shown in Fig. 12 (a-d), the
+ultimate area strain of FRP-conﬁned cylinders does not appear to
+be greatly affected by the number of FRP layers and the strength
+of the concrete. However, the ultimate area strain of FRP-
+conﬁned square specimens increases with increasing conﬁnement
+level (see Fig. 12 (e-h)).
+4.6. Volumetric behaviour and secant dilation ratio
+The volumetric behaviour and secant dilation ratio of the tested
+specimens is examined in this section to provide further insight
+into the mechanical behaviour of regular and rubberised concrete
+under passive FRP conﬁnement. Fig. 13 shows the average axial
+stress (fcc)-volumetric strain (ev) curves of CRuC and CRC. The vol-
+umetric strain (ev) is calculated as:
+ev ¼ ea  ec
+ð6Þ
+where ea and ec are the absolute value of area and axial strains,
+respectively. In Eq. (6), the negative value of ev indicates volumetric
+contraction, whilst positive values denote volumetric expansion.
+Figure 13 indicates that all FRP-conﬁned specimens exhibit vol-
+umetric contraction during the initial elastic stage up to the critical
+stress fcr. While the critical stress (fcr) of CRC is equal to approxi-
+mately 90% of the strength of the unconﬁned regular concrete, this
+increases with increasing the conﬁnement levels for CRuC (be-
+tween 70% and 85%). Within the elastic domain, the Poisson’s ratio
+remains in the range of 0.15–0.25 for regular concrete and 0.22–
+0.35 for RuC. In the inelastic range, the volumetric strain of CRC
+starts to increase and net volumetric expansion is observed at val-
+ues of axial stress proportional to the conﬁnement levels. This dila-
+tancy phenomenon appears to be affected by the level of conﬁning
+pressure, thus the higher FRP conﬁnement levels result in a slower
+volumetric expansion. On the contrary, CRuC specimens show an
+entirely different behaviour, primarily characterised by volumetric
+contraction until failure. This unique behaviour may be attributed
+to the ‘‘ﬂuidity” of the rubber particles, which possibly ﬁll the voids
+left by the crushed concrete. Similar behaviour was observed by
+others [12]. The volumetric behaviour of AFRP CRuC square speci-
+mens was characterised by an initial contraction followed by a
+temporary expansion and eventually ended in contraction. This
+double volumetric reversal has also been also reported in the liter-
+ature [31,32], for regular concrete cylinders conﬁned by very large
+amounts of FRP (e.g. 10 layers and 14 layers FRP). This observation
+indicates that volumetric behaviour is also strongly inﬂuenced by
+the conﬁnement stiffness (Kj). However, due to the limited test
+data, the critical conﬁnement stiffness (Kj) that leads to zero vol-
+ume change and could potentially contribute to establishing a uni-
+ﬁed dilation model cannot be determined accurately.
+Fig. 14 compares the secant dilation ratio of CRuC and CRC
+against with axial strain. The secant dilation ratio is calculated as:
+l ¼ eh
+ec
+ð7Þ
+Fig. 14a shows that the secant dilation ratio of CRC starts at 0.18
+at low axial strain and increases rapidly beyond 1.0 with increasing
+the axial strain. This indicates that the concrete experiences signif-
+icant volume expansion due to unstable crack propagation. The
+secant dilation ratio then tends to stabilise once the FRP jacket is
+fully activated. In the case of CRuC, the secant dilation ratio which
+starts at around 0.2, increases to around 0.4 and stabilises at an
+asymptotic value in the range of 0.35 to 0.4 (see Fig. 14b). This
+unique behaviour indicates that CRuC stops dilating due to crack-
+ing and behaves almost like a hydrostatic material. The high and
+constant value of secant dilation ratio results in a low and constant
+shear modulus, which can lead to high shear deformability. This
+was investigated in a previous numerical and experimental study
+by Wang et al. [33].
+5. Assessment of existing design-oriented models for CRC
+rectangular specimens
+In the literature, many models have been developed for CRC
+[6,9,31,34-41,43-47], including some special cases such as FRP-
+conﬁned predamaged concrete columns [48], FRP strengthened
+concrete columns using recycled aggregate [49], FRP strengthened
+sulfate-corroded
+concrete
+columns
+[50],
+FRP-conﬁned
+ultra-
+lightweight cement composites [51], as well as CRuC [21,22]. These
+models can be classiﬁed into two main categories: 1) analysis-
+oriented
+models
+[21,29]
+and
+2)
+design-oriented
+models
+[3,22,25,41,43-50]. Analysis-oriented models are generally more
+versatile as they consider the interaction between concrete and
+conﬁning system. The accuracy of the predictions highly relies on
+the implementation of an accurate dilation behaviour of the FRP-
+conﬁned concrete (i.e. lateral strain to axial strain relationship).
+However, current models cannot account for the non-uniform
+strain distribution around the perimeter of rectangular cross-
+section. Design-oriented models generally consider the FRP-
+conﬁned concrete as a uniform material and only require basic
+FRP parameters (e.g. thickness (tf), tensile stress (ff) and elastic
+modulus (Ef)) and concrete properties (e.g. compressive strength
+(fco) and corresponding strain (eco)). The majority of the design-
+oriented
+models
+relate
+the
+compressive
+behaviour
+of
+FRP-
+conﬁned rectangular specimens to that of circular specimens by
+Fig. 11. Schematic representation of a typical curve of area strain-to-axial strain.
+Z. Wang, I. Hajirasouliha, M. Guadagnini et al.
+Construction and Building Materials 267 (2021) 121023
+9
+deﬁning a geometry related efﬁciency factor. This allows the use of
+a uniﬁed approach based on simple and robust formulations of r-e
+developed for circular sections. The selected designed-oriented
+stress–strain models for rectangular specimens are summarised
+in
+Appendix
+[3,25,41,43-47].
+The
+main
+difference
+between
+those models revolves around the deﬁnitions of the diameter
+Fig. 12. Axial strain vs area strain of FRP-conﬁned concrete.
+Z. Wang, I. Hajirasouliha, M. Guadagnini et al.
+Construction and Building Materials 267 (2021) 121023
+10
+Fig. 13. Volumetric strain (ev) vs Axial stress (fcc): (a) CRC cylinders; (b) CRC square specimens; (c) CRuC cylinders and (d) CRuC square specimens.
+Fig. 14. Secant dilation ratio of CRC (a) and CRuC (b).
+Z. Wang, I. Hajirasouliha, M. Guadagnini et al.
+Construction and Building Materials 267 (2021) 121023
+11
+(Deq) of an equivalent circular column and an FRP strain reduc-
+tion factor (kef). For example, according to ACI 440 [41] and
+Youssef et al. [25], Deq can be calculated as 2bh/(b + h), while
+Lam and Teng [3] use Deq ¼
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+b2 þ h2
+p
+. In this study, the accu-
+racy of the selected models was evaluated using three statisti-
+cal
+indicators:
+(1)
+Mean
+Square
+Error
+(MSE);
+(2)
+Average
+Absolute Error (AAE); and (3) Standard Deviation (SD)), as
+determined by Eqs. (8)-(10) [47].
+MSE ¼
+PN
+i¼1½preiexpi
+expi
+
+2
+N
+ð8Þ
+AAE ¼
+PN
+i¼1
+preiexpi
+expi
+
+
+N
+ð9Þ
+SD ¼
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+P
+N
+i¼1
+prei
+expi 
+preavg
+expavg
+
+2
+N
+v
+u
+u
+u
+t
+ð10Þ
+where pre and exp represent the predicted and experimental values
+of fcc/fco or ecu/eco, respectively; the subscript avg indicates the aver-
+age value and N is the total number of the test data.
+Figures 15 and 16 show the performance of the selected con-
+ﬁnement models in predicting the test results (fcc/fco and ecu/eco)
+of CRC and CRuC square specimens (Table 3), respectively; while
+the error indicators of the models are presented in Figs. 17 and 18.
+In general, all the selected models successfully predict an
+increase in the strength with increasing the conﬁnement level.
+The selected models provide better predictions for the ultimate
+strength and strain of CRC compared to that of CRuC specimens,
+while better performance is observed for CFRP conﬁned specimens
+rather than AFRP conﬁned specimens. As can be seen in Figs. 15
+and 16, the ACI 440.2R [41] signiﬁcantly underestimates the con-
+ﬁnement effectiveness of CRuC (up to 2 times in strength and 16
+times in strain). Due to the limitation of k (0  k  0.8%), the model
+proposed by Chaallal et al. [42] cannot be applied to CRuC, but a
+good correlation has been found for one layer conﬁned CRC. The
+model of Youssef et al. [25] shows a close prediction with the ulti-
+Fig. 15. Experimental results vs existing model predictions in terms of fcc/fco.
+Z. Wang, I. Hajirasouliha, M. Guadagnini et al.
+Construction and Building Materials 267 (2021) 121023
+12
+mate strain of CFRP CRC and tends to underestimate the ultimate
+strength of CRC and CRuC. Lam and Teng [3], Wang and Restrepo
+[43], Wei and Wu [45] and Wu and Zhou [46] offer the desirable
+agreement with the test results for CFRP CRC and can predict the
+fcc/fco ratio for CFRP CRuC with acceptable accuracy. However,
+except Wu and Wei [44], all models dramatically underestimate
+the ultimate strength and strain of AFRP conﬁned specimens, espe-
+cially for AFRP CRuC. Wu and Wei [44] is the only model that over-
+estimate the ultimate strength and strain of CRuC. By evaluating
+the error indicators (MSE, AAE and SD) of each model (see Figs. 17
+and 18), it is shown that Lam and Teng’ model [3] produces the
+most accurate predictions among these selected models. Therefore,
+its performance in terms of stress–strain history will be evaluated
+in the next section.
+Fig. 16. Experimental results vs existing model predictions in terms of ecu/eco.
+Fig. 17. Error indicators of the selected models for CRC.
+Z. Wang, I. Hajirasouliha, M. Guadagnini et al.
+Construction and Building Materials 267 (2021) 121023
+13
+Fig. 18. Error indicators of the selected models for CRuC.
+Fig. 19. Performance of Lam and Teng’s model for FRP-conﬁned square specimens.
+Z. Wang, I. Hajirasouliha, M. Guadagnini et al.
+Construction and Building Materials 267 (2021) 121023
+14
+6. Performance of Lam and Teng’s stress–strain model in
+predicting the response of FRP-conﬁned rectangular concrete
+specimens
+Based on the results presented in the previous section, the Lam
+and Teng’s model [3] offers the best prediction capacity among the
+selected models. Thus, its ability to reproduce the stress–strain
+responses of CRC and CRuC with rectangular cross-section will be
+evaluated in this section.
+The stress–strain curve of Lam and Teng’s model consists of two
+smoothly connected parts: 1) a parabolic ascending part and a lin-
+ear ascending part up to failure (ecu and fcc) [3]. The initial slope of
+the parabolic part is determined by the modulus of elasticity of
+unconﬁned concrete (Ec). The slope of the linear part (E2) is used
+to reﬂect different FRP conﬁnement levels. The stress (ftr) is deﬁned
+as the stress at which the linear hardening branch intercepts the
+stress axis, and its value is considered independent from the con-
+ﬁnement ratios and equal to fco for simplicity. The details of this
+model can be found in [3].
+As can be seen in Fig. 18 (a and b), the Lam and Teng’s model [3]
+provides an excellent prediction for CFRP CRC, while much less
+accuracy is observed for AFRP CRC. For CRuC, Fig. 19 (c and d)
+shows that the model underestimates the ultimate stress and
+strain, particularly in the case of AFRP CRuC. This can be explained
+by the fact that the employed FRP rupture strain efﬁciency factors
+(ke) cannot reﬂect the increasing rupture strain exhibited in CRuC.
+Furthermore, the use of a constant value of ftr means that the
+model cannot capture adequately the behaviour of the element
+beyond the point at which the conﬁnement is activated. It should
+be noted that the experimental results show that the inclusion of
+rubber particles can enhance the lateral strain ability of concrete
+under axial loading [4,52]. This enhancement is able to activate
+the FRP conﬁnement at an early stage and provide a more substan-
+tial conﬁning pressure in CRuC than in CRC. Therefore, the use of
+critical stress (fcr) that is a function of the conﬁnement stiffness
+as proposed by Raffoul et al. [21] and evidenced by the experimen-
+tal results presented herein, appears to be more rational when
+modelling CRuC. These results, highlight the need for the develop-
+ment
+of
+reﬁned
+conﬁnement
+models
+for
+CRuC
+rectangular
+specimens.
+7. Conclusion
+This paper examined the axial behaviour of FRP-conﬁned con-
+crete specimens with circular and square cross-sections. In total,
+96 uniaxial compression tests were conducted to investigate the
+effects of a range of parameters, including rubber contents, section
+shape, FRP type and the number of FRP layers. The experimental
+results were then used to assess the efﬁciency of existing conﬁne-
+ment models. On the basis of the discussion presented above, the
+following conclusions can be drawn:
+ The use of rubber aggregates signiﬁcantly reduces concrete
+strength, but this can be effectively recovered through FRP-
+conﬁnement.
+CRuC
+specimens
+exhibit
+signiﬁcantly
+higher
+deformability (ultimate axial strains up to 5.7%) and absorb
+more energy than CRC specimens.
+ The ultimate conﬁnement condition of CRC square elements is
+governed by the corner hoop rupture strain, while the ﬂat side
+hoop rupture strain dominates the performance of CRuC square
+elements.
+ The conﬁnement effectiveness of CRuC is higher than that of
+CRC in both circular and square sections. The effect of the corner
+geometry on the effectiveness of conﬁnement in CRuC is less
+severe than in CRC.
+ The conﬁnement effectiveness of CFRP is lower than that of
+AFRP. Furthermore, for the same FRP conﬁnement level, the
+AFRP CRuC square sections show higher deformability (up to
+19%) than the circular sections with an acceptable reduction
+in strength (less than 20%).
+ Unlike CRC, CRuC exhibits volumetric contraction throughout
+the loading history. The secant dilation ratio of CRuC stabilises
+at around 0.4, which makes this material suitable for the devel-
+opment of high-strength highly-deformability elements under
+shear.
+ Existing FRP conﬁnement models for conventional concrete are
+highly inaccurate in predicting the behaviour of CRuC, thus
+indicating the need for further model development.
+CRediT authorship contribution statement
+Zhao Wang: Conceptualization, Methodology, Formal analysis,
+Investigation, Visualization, Writing - original draft. Iman Hajira-
+souliha: Validation. Maurizio Guadagnini: Supervision, Valida-
+tion,
+Resources.
+Kypros
+Pilakoutas:
+Supervision,
+Validation,
+Resources, Funding acquisition, Project administration.
+Declaration of Competing Interest
+The authors declare that they have no known competing ﬁnan-
+cial interests or personal relationships that could have appeared
+to inﬂuence the work reported in this paper.
+Acknowledgements
+The research leading to these results was received funding from
+the European Union Seventh Framework Programme [FP7/2007-
+2013] under grant agreement n 603722. The ﬁrst author was sup-
+ported by the scholarship from China Scholarship Council (CSC)
+under Grant CSC n 201608060059.
+Z. Wang, I. Hajirasouliha, M. Guadagnini et al.
+Construction and Building Materials 267 (2021) 121023
+15
+Appendix
+Design-oriented formulas for the prediction of axial strength and strain.
+Youssef et al. [25]
+f cc
+f co ¼ 0:5 þ 1:225
+f l;a
+f co
+
+0:6ecu
+eco ¼ 0:004325 þ 0:2625
+f l;a
+f co
+
+ eh;rup
+Ef
+
+0:5
+ke ¼ 1 
+h2Rc
+ð
+Þ2þ h2Rc
+ð
+Þ2
+½
+
+3hb
+Lam and Teng [3]
+f cc
+f co ¼ 1 þ 3:3 
+b
+h
+ 2 Ae
+Ac
+f l;a
+f co
+ecu
+eco ¼ 1:75 þ 12
+b
+h
+ 0:5
+Ae
+Ac
+ 
+f l;a
+f co
+
+ eh;rup
+eco
+
+0:45Ae
+Ac ¼ 1 
+b
+hð Þ h2Rc
+ð
+Þ2þ h
+bð Þ h2Rc
+ð
+Þ2
+½
+
+3Ag
+Wang and Restrepo [43]
+f cc
+f co ¼ kc ¼ a1a2a1 ¼ 1:25 1:8
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+1 þ 7:94
+f l;j1
+f co
+q
+ 1:6
+f l;j1
+f co  1
+
+	
+a2 ¼ 1:4
+f l;j2
+f l;j1
+h
+0:6
+f l;j2
+f l;j1
+
+2
+ 0:8
+ﬃﬃﬃﬃﬃ
+f l;j1
+f co
+q
+þ 1ecu
+eco ¼ 1 þ 5
+f cc
+f cu  1
+
+
+f l;j1 ¼ 2nt
+b ksf j; f l;j2 ¼ 2nt
+h ksf jks ¼ 1  b2r
+ð
+Þ2þ h2r
+ð
+Þ2
+3bh 1As
+ð
+Þ
+Chaallal et al. [42]
+f cc
+f co ¼ 1 þ 4:12105
+f co
+kecu
+eco ¼ 1 þ
+103 3k150k2
+ð
+Þ
+f coeco
+k ¼ Ef Af
+EcAc
+0 6 k 6 0:8%
+ð
+Þ
+ACI 440.2R [41]
+f cc
+f co ¼ 2:25
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+1 þ 7:9 f l
+f co
+q
+ 2 f l
+f co  1:25ecu
+eco ¼ 1:71 5f cc4f co
+ð
+Þ
+Ececo
+ks ¼ 1  b2r
+ð
+Þ2þ h2r
+ð
+Þ2
+3bh 1As
+ð
+Þ
+Wu and Wei [41]
+f cc
+f co ¼ 1 þ 3:66 2r
+b
+ 0:72
+f l
+f co
+
+1:87 h
+b
+ 2:5f l ¼
+2f frpt
+b
+¼ 2Efrpefrpt
+b
+Wei and Wu [42]
+f cc
+f co ¼ 0:5 þ 2:7 2r
+b
+ 0:4
+f l
+f co
+
+0:73 h
+b
+ 1eco ¼ 0 : 000937
+ﬃﬃﬃﬃﬃﬃ
+f co
+4p
+ecc
+eco ¼ 1:75 þ 12
+f l
+f co
+
+0:75
+30
+f co
+
+0:62
+0:36 2r
+b þ 0:64
+
+ h
+b
+ 0:3
+Wu and Zhou [43]
+f cc
+f co ¼ f l
+f co q0:85 þ
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+16:7
+f 0:42
+co
+ f 0:42
+co
+16:7
+
+	
+f l
+f co q0:85 þ 1
+s
+q ¼ 2r
+b
+Zhou and Wu [44]
+f cc
+f co ¼ 1 þ 2:2 2r
+b
+ 0:72
+f l
+f co
+
+0:94 h
+b
+ 1:9f l ¼ 2Ef efut
+b
+References
+[1] M. Priestley, T. Paulay, Seismic Design of Reinforced Concrete and Masonry
+Buildings. New York: John Wiley & Sons, Inc, 1992.
+[2] V. Alecci, S.B. Bati, G. Ranocchiai, Concrete columns conﬁned with CFRP wraps,
+Mater. Struct. 47 (3) (2014) 397–410.
+[3] L. Lam, J. Teng, Design-oriented stress-strain model for FRP-conﬁned concrete
+in rectangular columns, J. Reinf. Plast. Compos. 22 (13) (2003) 1149–1186.
+[4] S. Raffoul et al., behaviour of unconﬁned and FRP-conﬁned rubberised concrete
+in axial compression, Constr. Build. Mater. 147 (2017) 388–397.
+[5] T.C. Rousakis et al., Analytical modelling of plastic behaviour of uniformly FRP
+conﬁned concrete members, Compos. B Eng. 39 (7–8) (2008) 1104–1113.
+[6] J. Teng et al., Theoretical model for ﬁber-reinforced polymer-conﬁned
+concrete, J. Compos. Constr. 11 (2) (2007) 201–210.
+[7] T. Yu et al., Finite element modeling of conﬁned concrete-I: Drucker-Prager
+type plasticity model, Eng. Struct. 32 (3) (2010) 665–679.
+[8] L.-M. Wang, Y.-F. Wu, Effect of corner radius on the performance of CFRP-
+conﬁned square concrete columns: Test, Eng. Struct. 30 (2) (2008) 493–505.
+[9] A. Mirmiran et al., Effect of column parameters on FRP-conﬁned concrete, J.
+Compos. Constr. 2 (4) (1998) 175–185.
+[10] P. Rochette, P. Labossiere, Axial testing of rectangular column models conﬁned
+with composites, J. Compos. Constr. 4 (3) (2000) 129–136.
+[11] K. Pilakoutas et al. Innovative reuse of all tyre components in concrete: the
+Anagennisi project. in Proc. of the International Conference on Sustainable
+Structural Concrete. 2015.
+[12] P.K. Freakley, A.R. Payne, Theory and practice of engineering with rubber.
+1978: Applied Science Publishers.
+[13] M. Sienkiewicz et al., Progress in used tyres management in the European
+Union: a review, Waste Manage. 32 (10) (2012) 1742–1751.
+[14] O. Youssf et al., An experimental investigation of crumb rubber concrete
+conﬁned by ﬁbre reinforced polymer tubes, Constr. Build. Mater. 53 (2014)
+522–532.
+[15] K.S. Son, I. Hajirasouliha, K. Pilakoutas, Strength and deformability of waste
+tyre rubber-ﬁlled reinforced concrete columns, Constr. Build. Mater. 25 (1)
+(2011) 218–226.
+[16] N.F. Medina et al., Composites with recycled rubber aggregates: properties and
+opportunities in construction, Constr. Build. Mater. 188 (2018) 884–897.
+[17] S. Raffoul et al., Optimisation of rubberised concrete with high rubber content:
+An experimental investigation, Constr. Build. Mater. 124 (2016) 391–404.
+[18] A. Duarte et al., Tests and design of short steel tubes ﬁlled with rubberised
+concrete, Eng. Struct. 112 (2016) 274–286.
+[19] G. Li, S.-S. Pang, S.I. Ibekwe, FRP tube encased rubberised concrete cylinders,
+Mater. Struct. 44 (1) (2011) 233–243.
+[20] J.-G. Dai, Y.-L. Bai, J. Teng, Behavior and modeling of concrete conﬁned with
+FRP composites of large deformability, J. Compos. Constr. 15 (6) (2011) 963–
+973.
+[21] S. Raffoul et al., Constitutive Model for Rubberized Concrete Passively Conﬁned
+with FRP Laminates, J. Compos. Constr. 23 (6) (2019) 04019044.
+[22] D.
+Bompa,
+A.
+Elghazouli,
+Stress–strain
+response
+and
+practical
+design
+expressions for FRP-conﬁned recycled tyre rubber concrete, Constr. Build.
+Mater. 237 (2020) 117633.
+[23] A. International, C39/C39M - 15 Standard Test Method for Compressive
+Strength of Cylindrical Concrete Specimens. 2015, West Conshohocken
+(USA).
+[24] R. Garcia et al., Seismic retroﬁtting of RC buildings using CFRP and post-
+tensioned metal straps: shake table tests, Bull. Earthq. Eng. 15 (8) (2017)
+3321–3347.
+[25] M.N.
+Youssef,
+M.Q.
+Feng,
+A.S.
+Mosallam,
+Stress–strain
+model
+for
+concrete conﬁned by FRP composites, Compos. B Eng. 38 (5–6) (2007) 614–
+628.
+[26] T. Ozbakkaloglu, J.C. Lim, T. Vincent, FRP-conﬁned concrete in circular
+sections: Review and assessment of stress–strain models, Eng. Struct. 49
+(2013) 1068–1088.
+[27] J. Chen, S. Li, L. Bisby, Factors affecting the ultimate condition of FRP-wrapped
+concrete columns, J. Compos. Constr. 17 (1) (2012) 67–78.
+[28] L. Lam, J. Teng, Ultimate condition of ﬁber reinforced polymer-conﬁned
+concrete, J. Compos. Constr. 8 (6) (2004) 539–548.
+[29] G. Lin, J. Teng. FRP-conﬁned concrete in square columns: an advanced stress-
+strain model based on a new approach. in Fourth Asia-Paciﬁc Conference on
+FRP in Structures (APFIS 2013). 2013.
+[30] S.W. Tsai, E.M. Wu, A general theory of strength for anisotropic materials, J.
+Compos. Mater. 5 (1) (1971) 58–80.
+[31] L. Lam, J. Teng, Design-oriented stress–strain model for FRP-conﬁned concrete,
+Constr. Build. Mater. 17 (6–7) (2003) 471–489.
+[32] A. Mirmiran, M. Shahawy, Dilation characteristics of conﬁned concrete, Mech.
+Cohes.-Frict. Mat. 2 (3) (1997) 237–249.
+[33] Z. Wang et al., Shear behavior model for FRP-conﬁned and unconﬁned
+rubberised concrete, J. Compos. Constr. 23 (5) (2019) 04019039.
+[34] T. Jiang, J. Teng, Analysis-oriented stress–strain models for FRP–conﬁned
+concrete, Eng. Struct. 29 (11) (2007) 2968–2986.
+[35] J.C. Lim, T. Ozbakkaloglu, Conﬁnement model for FRP-conﬁned high-strength
+concrete, J. Compos. Constr. 18 (4) (2013) 04013058.
+[36] L. Lam, J. Teng, Stress–strain model for FRP-conﬁned concrete under cyclic
+axial compression, Eng. Struct. 31 (2) (2009) 308–321.
+[37] J.C. Lim, T. Ozbakkaloglu, Lateral strain-to-axial strain relationship of conﬁned
+concrete, J. Struct. Eng. 141 (5) (2014) 04014141.
+[38] M. Samaan, A. Mirmiran, M. Shahawy, Model of concrete conﬁned by ﬁber
+composites, J. Struct. Eng. 124 (9) (1998) 1025–1031.
+[39] J. Teng et al., Reﬁnement of a design-oriented stress–strain model for FRP-
+conﬁned concrete, J. Compos. Constr. 13 (4) (2009) 269–278.
+[40] Q. Xiao, J. Teng, T. Yu, Behavior and modeling of conﬁned high-strength
+concrete, J. Compos. Constr. 14 (3) (2010) 249–259.
+[41] 440, A.C. Guide for the design and construction of externally bonded FRP
+systems for strengthening concrete structures. 2008. American Concrete
+Institute.
+[42] O. Chaallal, M. Hassan, M. Shahawy, Conﬁnement model for axially loaded
+short
+rectangular
+columns
+strengthened
+with
+ﬁber-reinforced
+polymer
+wrapping, Struct. J. 100 (2) (2003) 215–221.
+[43] Y.C. Wang, J.I. Restrepo, Investigation of concentrically loaded reinforced
+concrete columns conﬁned with glass ﬁber-reinforced polymer jackets, Struct.
+J. 98 (3) (2001) 377–385.
+[44] Y.F. Wu, Y.Y. Wei, Effect of cross-sectional aspect ratio on the strength of CFRP-
+conﬁned rectangular concrete columns, Eng. Struct. 32 (1) (2010) 32–45.
+Z. Wang, I. Hajirasouliha, M. Guadagnini et al.
+Construction and Building Materials 267 (2021) 121023
+16
+[45] Y.Y. Wei, Y.F. Wu, Uniﬁed stress–strain model of concrete for FRP-conﬁned
+columns, Constr. Build. Mater. 26 (1) (2012) p381–p392.
+[46] Y.F. Wu, Y.W. Zhou, Uniﬁed strength model based on Hoek-Brown failure
+criterion for circular and square concrete columns conﬁned by FRP, J. Compos.
+Constr. 14 (2) (2010) 175–184.
+[47] G.E. Thermou, I. Hajirasouliha, Design-oriented models for concrete columns
+conﬁned by steel-reinforced grout jackets, Constr. Build. Mater. 178 (2018)
+313–326.
+[48] P. Li, L. Sui, F. Xing, M. Li, Y. Zhou, Y.F. Wu, Stress–strain relation of FRP-
+conﬁned predamaged concrete prisms with square sections of different corner
+radii subjected to monotonic axial compression, J. Compos. Constr. 23 (2)
+(2019) 04019001.
+[49] Y. Zhou, J. Hu, M. Li, L. Sui, F. Xing, FRP-conﬁned recycled coarse aggregate
+concrete: Experimental investigation and model comparison, Polymers 8 (10)
+(2016) 375.
+[50] Y. Zhou, M. Li, L. Sui, F. Xing. Effect of sulfate attack on the stress–strain
+relationship of FRP-conﬁned concrete. Constr. Build. Mater., 2016. 110:p.235-
+250.
+[51] Y. Zhou, Y. Zheng, L. Sui, F. Xing, J. Hu, P. Li. Behavior and modeling of FRP-
+conﬁned
+ultra-lightweight
+cement
+composites
+under
+monotonic
+axial
+compression. Compos. Part B: Eng., 2019. 162:p.289-302.
+[52] Bompa, D., et al., Experimental assessment and constitutive modelling of
+rubberised concrete materials. Constr. Build. Mater., 2017. 137: p. 246-260.
+Z. Wang, I. Hajirasouliha, M. Guadagnini et al.
+Construction and Building Materials 267 (2021) 121023
+17

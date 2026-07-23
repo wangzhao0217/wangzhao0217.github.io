@@ -1,0 +1,344 @@
+[
+  {
+    "file": "assets/figures/page2_figure1.png",
+    "page": 2,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 2033,
+    "height": 1080,
+    "column": "col-1",
+    "num_columns": 2,
+    "caption_label": "Figure. 1",
+    "caption": "Cross-sections of square (Rc b \u00bc 0.12) and round (Rc b \u00bc0.5) specimens. Z. Wang, I. Hajirasouliha, M. Guadagnini et al. Construction and Building Materials 267 (2021) 121023 2",
+    "caption_candidates": [
+      {
+        "label": "Figure. 1",
+        "text": "Cross-sections of square (Rc b \u00bc 0.12) and round (Rc b \u00bc0.5) specimens. Z. Wang, I. Hajirasouliha, M. Guadagnini et al. Construction and Building Materials 267 (2021) 121023 2"
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page3_figure2.png",
+    "page": 3,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 2032,
+    "height": 1450,
+    "column": "col-0",
+    "num_columns": 2,
+    "caption_label": "Figure. 2",
+    "caption": "Rubber particles used to replace sand (size:0\u20134 mm) and gravel (sizes: 4\u2013 10 mm and 10\u201320 mm) in the concrete mix. Table 1 Mix proportions for optimised RuC mix used in this study. qvr CEM II 52.5 Silica fume Pulverised fuel ash Aggregates Rubber Particles Plasticiser",
+    "caption_candidates": [
+      {
+        "label": "Figure. 2",
+        "text": "Rubber particles used to replace sand (size:0\u20134 mm) and gravel (sizes: 4\u2013 10 mm and 10\u201320 mm) in the concrete mix. Table 1 Mix proportions for optimised RuC mix used in this study. qvr CEM II 52.5 Silica fume Pulverised fuel ash Aggregates Rubber Particles Plasticiser"
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page4_figure3.png",
+    "page": 4,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 2813,
+    "height": 2272,
+    "column": "full",
+    "num_columns": 1,
+    "caption_label": "Figure. 3",
+    "caption": "Set-up of compressive tests: front view (a) and top view (b) of cylinders; front view (c) and top view (d) of square specimens. Table 3 Mean-values of compressive tests. qvr Specimen D or Deq tf Ef eh,rup Kj fcr fcc ecu",
+    "caption_candidates": [
+      {
+        "label": "Figure. 3",
+        "text": "Set-up of compressive tests: front view (a) and top view (b) of cylinders; front view (c) and top view (d) of square specimens. Table 3 Mean-values of compressive tests. qvr Specimen D or Deq tf Ef eh,rup Kj fcr fcc ecu"
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page5_figure4.png",
+    "page": 5,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 2813,
+    "height": 1423,
+    "column": "full",
+    "num_columns": 1,
+    "caption_label": "Figure. 4",
+    "caption": "Schematic representation of typical stress\u2013strain behaviour of FRP-con\ufb01ned concrete.",
+    "caption_candidates": [
+      {
+        "label": "Figure. 4",
+        "text": "Schematic representation of typical stress\u2013strain behaviour of FRP-con\ufb01ned concrete."
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page5_figure5.png",
+    "page": 5,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 2032,
+    "height": 1165,
+    "column": "col-0",
+    "num_columns": 2,
+    "caption_label": "Figure. 5",
+    "caption": "Schematic representation of deformation for the square cross-section.",
+    "caption_candidates": [
+      {
+        "label": "Figure. 5",
+        "text": "Schematic representation of deformation for the square cross-section."
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page5_figure6.png",
+    "page": 5,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 3170,
+    "height": 1931,
+    "column": "full",
+    "num_columns": 1,
+    "caption_label": "Figure. 6",
+    "caption": "Failure modes of square specimens. Z. Wang, I. Hajirasouliha, M. Guadagnini et al. Construction and Building Materials 267 (2021) 121023 5",
+    "caption_candidates": [
+      {
+        "label": "Figure. 6",
+        "text": "Failure modes of square specimens. Z. Wang, I. Hajirasouliha, M. Guadagnini et al. Construction and Building Materials 267 (2021) 121023 5"
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page6_figure7.png",
+    "page": 6,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 2983,
+    "height": 2849,
+    "column": "full",
+    "num_columns": 1,
+    "caption_label": "Figure. 7",
+    "caption": "Average FRP hoop rupture strains of round and square specimens. Z. Wang, I. Hajirasouliha, M. Guadagnini et al. Construction and Building Materials 267 (2021) 121023 6",
+    "caption_candidates": [
+      {
+        "label": "Figure. 7",
+        "text": "Average FRP hoop rupture strains of round and square specimens. Z. Wang, I. Hajirasouliha, M. Guadagnini et al. Construction and Building Materials 267 (2021) 121023 6"
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page7_figure8.png",
+    "page": 7,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 3068,
+    "height": 3121,
+    "column": "full",
+    "num_columns": 1,
+    "caption_label": "Figure. 8",
+    "caption": "Comparison between the average FRP hoop rupture strains at the \ufb02at side and the corner of square specimens.",
+    "caption_candidates": [
+      {
+        "label": "Figure. 8",
+        "text": "Comparison between the average FRP hoop rupture strains at the \ufb02at side and the corner of square specimens."
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page7_figure9.png",
+    "page": 7,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 3153,
+    "height": 1794,
+    "column": "full",
+    "num_columns": 1,
+    "caption_label": "Figure. 9",
+    "caption": "Stress\u2013strain curves of CRC in circular and square sections. Z. Wang, I. Hajirasouliha, M. Guadagnini et al. Construction and Building Materials 267 (2021) 121023 7",
+    "caption_candidates": [
+      {
+        "label": "Figure. 9",
+        "text": "Stress\u2013strain curves of CRC in circular and square sections. Z. Wang, I. Hajirasouliha, M. Guadagnini et al. Construction and Building Materials 267 (2021) 121023 7"
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page8_figure10.png",
+    "page": 8,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 3170,
+    "height": 1803,
+    "column": "full",
+    "num_columns": 1,
+    "caption_label": "Figure. 10",
+    "caption": "Stress\u2013strain curves of CRuC in circular and square sections. Z. Wang, I. Hajirasouliha, M. Guadagnini et al. Construction and Building Materials 267 (2021) 121023 8",
+    "caption_candidates": [
+      {
+        "label": "Figure. 10",
+        "text": "Stress\u2013strain curves of CRuC in circular and square sections. Z. Wang, I. Hajirasouliha, M. Guadagnini et al. Construction and Building Materials 267 (2021) 121023 8"
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page9_figure11.png",
+    "page": 9,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 2032,
+    "height": 1638,
+    "column": "col-0",
+    "num_columns": 2,
+    "caption_label": "Figure. 11",
+    "caption": "Schematic representation of a typical curve of area strain-to-axial strain. Z. Wang, I. Hajirasouliha, M. Guadagnini et al. Construction and Building Materials 267 (2021) 121023 9",
+    "caption_candidates": [
+      {
+        "label": "Figure. 11",
+        "text": "Schematic representation of a typical curve of area strain-to-axial strain. Z. Wang, I. Hajirasouliha, M. Guadagnini et al. Construction and Building Materials 267 (2021) 121023 9"
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page10_figure12.png",
+    "page": 10,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 2539,
+    "height": 4343,
+    "column": "full",
+    "num_columns": 1,
+    "caption_label": "Figure. 12",
+    "caption": "Axial strain vs area strain of FRP-con\ufb01ned concrete. Z. Wang, I. Hajirasouliha, M. Guadagnini et al. Construction and Building Materials 267 (2021) 121023 10",
+    "caption_candidates": [
+      {
+        "label": "Figure. 12",
+        "text": "Axial strain vs area strain of FRP-con\ufb01ned concrete. Z. Wang, I. Hajirasouliha, M. Guadagnini et al. Construction and Building Materials 267 (2021) 121023 10"
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page11_figure13.png",
+    "page": 11,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 2984,
+    "height": 2937,
+    "column": "full",
+    "num_columns": 1,
+    "caption_label": "Figure. 13",
+    "caption": "Volumetric strain (ev) vs Axial stress (fcc): (a) CRC cylinders; (b) CRC square specimens; (c) CRuC cylinders and (d) CRuC square specimens.",
+    "caption_candidates": [
+      {
+        "label": "Figure. 13",
+        "text": "Volumetric strain (ev) vs Axial stress (fcc): (a) CRC cylinders; (b) CRC square specimens; (c) CRuC cylinders and (d) CRuC square specimens."
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page11_figure14.png",
+    "page": 11,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 2983,
+    "height": 1727,
+    "column": "full",
+    "num_columns": 1,
+    "caption_label": "Figure. 14",
+    "caption": "Secant dilation ratio of CRC (a) and CRuC (b). Z. Wang, I. Hajirasouliha, M. Guadagnini et al. Construction and Building Materials 267 (2021) 121023 11",
+    "caption_candidates": [
+      {
+        "label": "Figure. 14",
+        "text": "Secant dilation ratio of CRC (a) and CRuC (b). Z. Wang, I. Hajirasouliha, M. Guadagnini et al. Construction and Building Materials 267 (2021) 121023 11"
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page12_figure15.png",
+    "page": 12,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 3238,
+    "height": 3243,
+    "column": "full",
+    "num_columns": 1,
+    "caption_label": "Figure. 15",
+    "caption": "Experimental results vs existing model predictions in terms of fcc/fco. Z. Wang, I. Hajirasouliha, M. Guadagnini et al. Construction and Building Materials 267 (2021) 121023 12",
+    "caption_candidates": [
+      {
+        "label": "Figure. 15",
+        "text": "Experimental results vs existing model predictions in terms of fcc/fco. Z. Wang, I. Hajirasouliha, M. Guadagnini et al. Construction and Building Materials 267 (2021) 121023 12"
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page13_figure16.png",
+    "page": 13,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 3238,
+    "height": 2377,
+    "column": "full",
+    "num_columns": 1,
+    "caption_label": "Figure. 16",
+    "caption": "Experimental results vs existing model predictions in terms of ecu/eco.",
+    "caption_candidates": [
+      {
+        "label": "Figure. 16",
+        "text": "Experimental results vs existing model predictions in terms of ecu/eco."
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page13_figure17.png",
+    "page": 13,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 2989,
+    "height": 1883,
+    "column": "full",
+    "num_columns": 1,
+    "caption_label": "Figure. 17",
+    "caption": "Error indicators of the selected models for CRC. Z. Wang, I. Hajirasouliha, M. Guadagnini et al. Construction and Building Materials 267 (2021) 121023 13",
+    "caption_candidates": [
+      {
+        "label": "Figure. 17",
+        "text": "Error indicators of the selected models for CRC. Z. Wang, I. Hajirasouliha, M. Guadagnini et al. Construction and Building Materials 267 (2021) 121023 13"
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page14_figure18.png",
+    "page": 14,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 2983,
+    "height": 1871,
+    "column": "full",
+    "num_columns": 1,
+    "caption_label": "Figure. 18",
+    "caption": "Error indicators of the selected models for CRuC.",
+    "caption_candidates": [
+      {
+        "label": "Figure. 18",
+        "text": "Error indicators of the selected models for CRuC."
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page14_figure19.png",
+    "page": 14,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 3068,
+    "height": 3107,
+    "column": "full",
+    "num_columns": 1,
+    "caption_label": "Figure. 19",
+    "caption": "Performance of Lam and Teng\u2019s model for FRP-con\ufb01ned square specimens. Z. Wang, I. Hajirasouliha, M. Guadagnini et al. Construction and Building Materials 267 (2021) 121023 14",
+    "caption_candidates": [
+      {
+        "label": "Figure. 19",
+        "text": "Performance of Lam and Teng\u2019s model for FRP-con\ufb01ned square specimens. Z. Wang, I. Hajirasouliha, M. Guadagnini et al. Construction and Building Materials 267 (2021) 121023 14"
+      }
+    ]
+  }
+]

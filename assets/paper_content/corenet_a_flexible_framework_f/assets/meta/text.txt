@@ -1,0 +1,2267 @@
+Corenet: A flexible framework for generating and prioritising core cycle 
+network designs
+Zhao Wang a,*, Hang Hu b, Hussein Mahfouz a, Juan Pablo Fonseca-Zamora a,  
+Martin Lucas-Smith c, Dustin Carlino d, Angus Calder e, Congying Hu e, Matthew Davis e,  
+Joseph Talbot a, Robin Lovelace a
+a Leeds Institute for Transport Studies, University of Leeds, UK
+b Department of Engineering, Chengdu Communication Investment Corporation, China
+c CycleStreets Ltd, Cambridge, UK
+d A/B Street Ltd, London, UK
+e Sustrans, Scotland, UK
+A R T I C L E I N F O
+Keywords:
+Cycling infrastructure
+Network planning
+Active travel
+Spatial analysis
+Route prioritisation
+A B S T R A C T
+Mode shift to cycling is a policy objective in many countries. However, cycling infrastructure designs often fail to 
+produce the joined-up, direct, and safe networks needed for trips to switch. Planned interventions rarely align 
+with demand, creating disjointed networks and ineffective investment. This paper introduces a new ‘corenet’ 
+method for developing core cycling networks that provides complete and connected infrastructure designs for 
+places with or without existing cycling networks. The method demonstrates its application in the Network 
+Planning Tool for Scotland (NPT) to support city-wide network designs and serves as the foundation for the 
+Network Planning Workspace (NPW) tool, enabling local authorities to plan cycle networks through a structured, 
+tiered approach. The method integrates multiple datasets, including estimates of current and future demand and 
+network geometries from multiple sources. It enables users to generate designs suited to local needs by balancing 
+network cohesion, coverage, and directness metrics. The ‘corenet’ method also simulates network growth, 
+supporting strategic expansion of cycling infrastructure in a prioritised sequence. Furthermore, a set of network 
+evaluation metrics has been developed, enabling rigorous assessment of both proposed and existing cycling 
+networks. We conclude by discussing how the method can be extended in future research and integrated with 
+established processes for strategic network planning.
+1. Introduction
+Modal shift away from private cars is key to tackling environmental, 
+economic, and social challenges in modern cities. While public transport 
+and demand response transit (DRT) receive attention, active travel 
+modes offer relatively low costs and high potential to reduce external­
+ities while improving public health. Though ‘active travel’ often means 
+walking and cycling, it includes various human-powered modes like 
+wheeling, scooting, and e-bikes (Cook et al., 2022). This paper focuses 
+on cycling, which best replaces short car trips due to its speed, range, 
+and capacity to carry goods and passengers. Recognising cycling's ben­
+efits, many countries, including the UK and its devolved nations, have 
+set ambitious targets to increase cycling trips (Wardman et al., 1997; 
+Aldred et al., 2017).
+Driven by national and regional policies, many local governments 
+have set targets and implemented interventions to enable cycling up­
+take. Edinburgh's Active Travel Action Plan aims to make cycling a 
+“realistic choice for all” (City of Edinburgh Council, 2023). This plan 
+forms part of the broader City Mobility Plan, evaluated against key in­
+dicators including increasing dedicated cycling space beyond the 215 
+km recorded in 2019 (City of Edinburgh Council, 2024). These initia­
+tives align with Scottish government objectives to promote sustainable 
+transport, with the Cycling Action Plan targeting 10% of everyday 
+journeys by bike (Transport Scotland, 2017). Cities worldwide have 
+* Corresponding author.
+E-mail addresses: z.wang13@leeds.ac.uk (Z. Wang), tshma@leeds.ac.uk (H. Mahfouz), ts18jpf@leeds.ac.uk (J.P. Fonseca-Zamora), info@cyclestreets.net
+(M. Lucas-Smith), Angus.Calder@sustrans.org.uk (A. Calder), Congying.Hu@sustrans.org.uk (C. Hu), Matthew.Davis@sustrans.org.uk (M. Davis), J.D.Talbot@ 
+leeds.ac.uk (J. Talbot), r.lovelace@leeds.ac.uk (R. Lovelace). 
+Contents lists available at ScienceDirect
+Journal of Transport Geography
+journal homepage: www.elsevier.com/locate/jtrangeo
+https://doi.org/10.1016/j.jtrangeo.2026.104549
+Received 20 June 2025; Received in revised form 9 December 2025; Accepted 5 January 2026  
+Journal of Transport Geography 131 (2026) 104549 
+Available online 16 January 2026 
+0966-6923/© 2026 The Authors. Published by Elsevier Ltd. This is an open access article under the CC BY license ( http://creativecommons.org/licenses/by/4.0/ ). 
+adopted similar targets, reflecting the global shift towards sustainable 
+urban mobility and highlighting the need for evidence-based investment 
+in cycling infrastructure.
+In addition to the length of cycling infrastructure, its quality is also 
+important, with wide cycle tracks separated from motor traffic more 
+likely to get people cycling than other types of infrastructure (Delcl`os- 
+Ali´o and den Hoed, 2024). Transport Scotland published design stan­
+dards in Cycling by Design (CbD) (Transport Scotland, 2021), building 
+on guidance from the English Department for Transport (Department for 
+Transport, 2020).
+With few exceptions (e.g., cities in the Netherlands, Denmark, and 
+parts of Germany), low cycling mode shares suggest that investment has 
+not been sufficiently large, cost-effective, or both. Despite policy support 
+and investment, systemic barriers prevent cycling from becoming the 
+main choice for short (1–5 km) urban journeys (Aldred et al., 2017). 
+Poor cycling networks remain a critical barrier (Pucher and Buehler, 
+2008; Buehler and Dill, 2016b). Practitioners identify several factors 
+causing disjointed networks: ‘stop-start’ funding, local opposition, and 
+inadequate maintenance (Reynolds, 2025). Limited evidence on effec­
+tive network design is also problematic, with many local authorities 
+lacking tools and skills to design and evaluate cycling networks.
+To address these challenges, transport authorities are developing 
+more structured approaches to network planning. Transport Scotland's 
+CbD guidance, for instance, emphasises a user-centred approach to 
+cycling network development that meets diverse needs, especially for 
+new and less confident cyclists. These guidelines seek to overcome the 
+limitations of piecemeal infrastructure by requiring networks to align 
+with wider policy objectives, employ data-driven planning methods, 
+implement strategic network expansion connecting key destinations, 
+engage with local communities, and undergo rigorous design reviews. 
+However, translating these requirements into actionable network de­
+signs remains difficult without specialised methodological support.
+This paper introduces ‘corenet’, a method for developing complete 
+and connected cycling networks by integrating cycling potential data 
+with existing transport networks and local needs. The method was 
+developed for the Network Planning Tool for Scotland (NPT), a planning 
+support system and web application for strategic cycle network plan­
+ning. The NPT provides street-level cycling potential estimates to 
+identify high-demand corridors and inform network design. However, 
+these detailed network-level results are difficult to convert into action­
+able plans. The application presents planners with overwhelming data, 
+making it challenging to create prioritised investment plans from 
+thousands of map lines. In response to user feedback, primarily from 
+transport planners using the Network Planning Tool for Scotland (NPT) 
+who highlighted the need for more directly usable outputs, the corenet 
+method provides focused, actionable output: a core cycling network to 
+guide investment and planning decisions.
+To support our NPT project work, the method is provided as an open- 
+source package (see ‘Data and Software development’). Though origi­
+nally designed for Scotland, the method works in diverse urban contexts 
+across the UK and beyond. The corenet methodology has been imple­
+mented as the foundation for the Network Planning Workspace (NPW) 
+tool, which enables local authorities to plan cycle networks through a 
+structured, tiered approach. This implementation demonstrates how the 
+framework translates algorithmic network generation into practical 
+planning support, allowing practitioners to develop infrastructure de­
+signs that balance connectivity, demand, and local constraints. This 
+research has four primary objectives: (1) establish a comprehensive 
+methodology for designing core cycling networks, (2) demonstrate its 
+practical application in Scottish urban areas, (3) evaluate the effec­
+tiveness of proposed and existing networks, and (4) offer actionable 
+insights and recommendations.
+The paper is structured as follows: Section 2 reviews cycling 
+network design literature, highlighting challenges and gaps. Section 3 
+describes the input datasets, identifies key barriers to complete network 
+generation, and presents the hybrid approach adopted to address data 
+challenges. Section 4 details the corenet method, providing a compre­
+hensive explanation of the network generation process, parameter se­
+lection, and growth strategies. Section 5 presents a structured approach 
+to network evaluation, applying metrics for cohesion, connectivity, de­
+mand alignment, and efficiency to assess networks generated for Scot­
+tish cities. Section 6 examines implications for active travel planning, 
+addresses challenges and limitations, and proposes future research 
+directions.
+2. Literature review
+Methods for developing and prioritising cycle network plans can be 
+divided into four main themes: data-driven approaches in network 
+planning, network growth strategies, network-evaluation tools, and 
+economic optimisation.
+2.1. Data-driven approaches in network planning
+Large datasets have enhanced our understanding of cycling behav­
+iour patterns. Origin-destination matrices from ‘call detail records’ 
+(CDR) are anonymised mobile network data capturing device connec­
+tions to cellular towers, which offer valuable empirical evidence of in­
+dividual movement patterns. Unlike census-based OD datasets, which 
+are aggregated zone-to-zone and spatially ‘jittered’ to approximate 
+point-to-point flows, CDR provide observed, time-stamped traces that 
+complement traditional travel survey methods by revealing finer spatio- 
+temporal travel dynamics (Alexander et al., 2015). Combined with new 
+methods, these OD datasets generate cycling potential estimates (Xu 
+et al., 2016) and detailed activity schedules (Ballis and Dimitriou, 2020) 
+for network planning. GPS devices, cycle counters, bike hire schemes, 
+and social media provide insights into cycling preferences, routes, 
+speeds, and popular destinations (Romanillos et al., 2016).
+Network planning tools use various datasets to prioritise cycling 
+infrastructure investment (Larsen et al., 2013). The Propensity to Cycle 
+Tool (PCT) uses national origin-destination datasets with cycling- 
+specific routing profiles to identify latent demand and potential health 
+and environmental benefits (Lovelace et al., 2017). Methodological 
+advances have improved the estimates of cycling potential of this 
+approach, including: 
+• New network processing and visualisation techniques (Morgan and 
+Lovelace, 2020).
+• Probabilistic “jittering” of OD data (Lovelace et al., 2022).
+• Methods to estimate combined public transport and cycling poten­
+tial, with cycling used as the first or last stage of multimodal trips 
+(F´elix et al., 2025).
+These route and network-based approaches often rely on Open­
+StreetMap (OSM) datasets, which have data quality challenges. Sch¨on 
+et al. (2024) notes that despite increased OSM usage since 2019, 
+inconsistent labeling and quality issues persist. Problems include 
+inconsistent road and cycleway classifications, varying data quality, 
+update frequencies, and contributor engagement across regions.
+Recent algorithms focus on equity and demand sensitivity. 
+(Steinacker et al., 2022) showed demand-driven algorithms outperform 
+traditional approaches by keeping bike paths on frequently used smaller 
+streets and increasing density in high-demand areas. Their adaptive 
+inverse percolation framework iteratively removes bike paths based on 
+usage patterns, creating networks that better reflect cyclist demand. 
+(Hwang et al., 2024) developed methods to prioritise connections to 
+marginalised neighbourhoods and transit hubs, showing how connect­
+ing bike infrastructure to transit reduces car dependency. Their algo­
+rithm prioritises links based on transit access, population density, 
+bikeability, and equity to create inclusive mobility solutions. (Mahfouz 
+et al., 2023)’s road segment prioritisation model balances direct routes 
+with safety and comfort using weighted shortest paths that account for 
+Z. Wang et al.                                                                                                                                                                                                                                   
+Journal of Transport Geography 131 (2026) 104549 
+2 
+stress levels and existing infrastructure. (Lonardi et al., 2025)’s multi­
+layer network analysis examines cyclist flows across roads and dedicated 
+paths, identifying bottlenecks and access disparities using metrics like 
+Detour and Overlap. Cycle network investment can be viewed as a space 
+utilisation problem with limited space and competing uses, requiring 
+flexible optimisation approaches (Wiedemann et al., 2025).
+2.2. Street classification and network hierarchy
+Street classification is crucial in urban and transportation planning, 
+serving as a vital element for organising the movement of various 
+transport modes cohesively and establishing effective road network 
+management (Tsigdinos et al., 2024a; Tsigdinos et al., 2024). Tradi­
+tional or conventional approaches to street classification typically 
+categorise roads based on their emphasis on either movement or local 
+access, including fundamental categories such as arterials, collectors, 
+and local roads (Marshall, 2004). However, these conventional ap­
+proaches have historically prioritised car circulation, often resulting in 
+dysfunctional urban areas with significant barriers to active travel 
+modes (Appleyard, 1981; Mehaffy et al., 2010). A worldwide review of 
+128 national street classification systems found that car-centric hierar­
+chies remain globally prevalent, with major arterial roads frequently 
+acting as formidable barriers to walking and cycling, particularly when 
+they bisect city centres or residential areas (Tsigdinos et al., 2024). This 
+fragmentation undermines the continuity and accessibility of active 
+travel networks, as users must navigate around high-speed traffic cor­
+ridors rather than following direct routes to key destinations (Mehaffy 
+et al., 2010).
+In response to these limitations, contemporary approaches adopt 
+multi-dimensional street classification frameworks balancing movement 
+and place functions. The Link and Place paradigm, pioneered by Jones 
+and colleagues, assigns each street both a ‘Link’ status (movement 
+function) and ‘Place’ status (destination importance), creating matrix- 
+based classifications that acknowledge streets as multifunctional 
+spaces serving both mobility and social activities (Jones et al., 2007; 
+Tsigdinos et al., 2023). This framework has influenced planning in the 
+UK, Australia, and Europe. The Netherlands' Sustainable Safety 
+approach similarly redefined road categories with explicit cycling ac­
+commodations, demonstrating how hierarchical networks can prioritise 
+active travel safety (Wegman et al., 2008).
+For cycling network design, street classification profoundly affects 
+route selection and infrastructure feasibility. Effective networks blend 
+low-traffic residential streets for local trips with protected facilities on 
+main corridors for cross-town journeys (Furth, 2012). The Level of 
+Traffic Stress (LTS) framework categorises roads from LTS 1 (low-stress, 
+suitable for children) to LTS 4 (high-speed traffic, experienced riders 
+only), enabling planners to develop continuous low-stress networks by 
+routing along calm streets or upgrading higher-order roads with pro­
+tected facilities, ensuring major corridors do not fragment the cycling 
+network (Furth, 2012; Tsigdinos et al., 2023). Recent advances 
+demonstrate how multi-dimensional classification can formally elevate 
+walking and cycling within street hierarchies, reducing car dominance 
+(Tsigdinos et al., 2024b), and provide a foundation for approaches that 
+explicitly prioritise sustainable modes while recognising that hierar­
+chical networks can still create barriers along major corridors (Mehaffy 
+et al., 2010).
+Building on these advances, recent approaches emphasise sustain­
+able modes like walking, cycling, and public transport, adopting matrix- 
+based classification systems that consider both the ‘Link’ function 
+(transportation purpose) and the ‘Place’ function (social and cultural 
+activities). The hierarchical classification of streets, while organising 
+network connectivity, can create challenges for cycling infrastructure 
+when major traffic corridors running through central areas become 
+significant barriers to movement and disrupt the urban fabric (Mehaffy 
+et al., 2010). Understanding this tension is essential for developing 
+cycling networks that work within established urban frameworks while 
+addressing the needs of cyclists.
+For cycling infrastructure planning, street classification influences 
+both route selection and design standards, as different road types pre­
+sent varying opportunities and constraints for cycling provision. Suc­
+cessful cycling networks often utilise a combination of street types, with 
+quiet residential streets providing comfortable local access and appro­
+priately designed main corridors offering direct connections between 
+key destinations. The integration of cycling networks with existing street 
+hierarchies therefore requires careful consideration of competing de­
+mands for road space and varying levels of motor traffic stress. Recent 
+work on sustainable street classification methods that incorporate fac­
+tors such as street width, land uses, public transport and cycling routes, 
+and street continuity provides valuable frameworks for reformulating 
+street networks to prioritise active travel (Tsigdinos et al., 2024a; 
+Mehaffy et al., 2010).
+2.3. Methodological approaches to cycling network design
+Strategic cycling network development ensures sustainable and 
+efficient infrastructure investments, with various methodological ap­
+proaches emerging to address different aspects of network design.
+2.3.1. Percolation and topological approaches
+Szell et al. (2022) examined topological constraints and strategic 
+planning for cycling network optimisation using percolation theory. 
+Their synthetic approach modelled cycling network growth in 62 cities 
+including Edinburgh, Leeds, and London, testing three growth strate­
+gies: random addition, greedy demand-based expansion, and between­
+ness centrality prioritisation. Their findings reveal challenges in creating 
+cohesive networks and demonstrate diminishing returns on cycling 
+infrastructure investment until reaching critical mass, highlighting the 
+need for strategic, persistent investment. Whilst their network expansion 
+models show significant overlaps with well-developed cycling networks 
+in cities, the synthetic approach using theoretical node placement and 
+uniform grid topologies does not directly represent real urban street 
+patterns or empirical demand distributions.
+2.3.2. Demand-driven and route choice approaches
+Steinacker et al. (2022) advanced the field by developing calibrated 
+cyclist route choice models using bike-sharing trip data to predict 
+ridership potential. Their methodology employs penalty factors for 
+different street types reflecting cyclist preferences, with iterative 
+network expansion prioritising segments based on demand-weighted 
+routing. Applied across multiple cities using OpenStreetMap topology 
+and empirical bike-share demand patterns, this approach demonstrates 
+how networks can be optimised for actual usage patterns. However, 
+reliance on bike-sharing data introduces context-specific limitations, as 
+these usage patterns may not generalise to broader cycling populations 
+and require data infrastructure available only in select cities.
+2.3.3. Equity-aware and complete streets methods
+Hwang et al. (2024) focused on connecting fragmented existing 
+cycling infrastructure using three distinct path-finding methods: short­
+est path (geometric optimisation), least cost path (multi-criteria 
+including traffic, slope, infrastructure quality), and demand-weighted 
+routing. Their approach integrates equity metrics and transit connec­
+tivity analysis, emphasising Complete Streets principles and multi- 
+modal integration whilst targeting schools, transit stations, employ­
+ment centres, and parks as priority destinations.
+Mahfouz et al. (2023)
+implemented a multi-stage approach 
+combining gravity-based demand modelling, Level of Traffic Stress 
+(LTS) routing, and community detection for equitable infrastructure 
+allocation. Comparing utilitarian expansion (maximising total ridership) 
+with egalitarian expansion (proportional distribution across commu­
+nities), their framework explicitly addresses trade-offs between effi­
+ciency and spatial equity in network development.
+Z. Wang et al.                                                                                                                                                                                                                                   
+Journal of Transport Geography 131 (2026) 104549 
+3 
+2.4. Network evaluation tools
+To address the lack of standardised evaluation metrics, Grisiute et al. 
+(2024) introduced the VeloNEMO ontology. This framework harmonises 
+diverse bike network evaluation metrics by defining relationships be­
+tween metrics and evaluation components. VeloNEMO classifies 176 
+distinct metric types across 28 evaluation criteria, capturing attributes 
+like metrics, criteria, methods, and data sources. Common metrics 
+include Slope, IntersectionDensity, DestinationDensity, and BikeLane­
+Type, often associated with Accessibility and Attractiveness. However, 
+current frameworks struggle with Space Syntax metrics and dis­
+tinguishing between objective and subjective evaluations.
+User behaviour studies emphasise designing cycling networks that 
+meet user needs and preferences. Pikora et al. (2003) created a frame­
+work to assess environmental determinants of active travel, highlighting 
+objective factors (road width, traffic speeds) and subjective perceptions 
+(safety, aesthetics) affecting cycling willingness. They found street­
+scapes, trees, maintenance, cleanliness, parks, and path continuity 
+contribute to route attractiveness. Similarly, Buehler and Dill (2016b)
+showed connected, low-stress bikeway networks significantly influence 
+uptake by reducing perceived danger and inconvenience.
+Context-sensitive planning and stakeholder engagement are 
+increasingly recognised in network design. Portuguese case studies by 
+Fonseca et al. (2023) show how factors like population density, age, 
+slopes, street hierarchy, and proximity to community facilities should 
+inform network design, especially in cities beginning to develop cycling 
+infrastructure. These considerations are crucial for “starter cities” with 
+low cycling rates.
+2.5. Economic efficiency and optimisation
+Economic analysis of cycling infrastructure investment provides a 
+crucial dimension to network planning. Paulsen and Rich (2024) and 
+Paulsen and Rich (2023) developed frameworks for evaluating the cost- 
+effectiveness of cycling infrastructure interventions, showing how stra­
+tegic network investments can yield substantial economic returns 
+through health benefits, reduced congestion, and lower emissions. 
+Similarly, Bonsma-Fisher et al. (2024) demonstrated optimisation 
+techniques that maximise network utility while respecting budgetary 
+constraints, helping planners identify the most efficient allocation of 
+limited resources across competing infrastructure needs.
+2.6. Research gaps and future directions
+Despite progress in cycling infrastructure development, several 
+critical gaps remain: 
+• Integration of multiple data sources: Methods for systematically 
+combining authoritative base maps with crowdsourced data and 
+demand estimates remain underdeveloped, limiting network gener­
+ation quality and coverage.
+• Stakeholder engagement: Current approaches treat stakeholder 
+input as post-hoc consultation rather than integrated throughout the 
+design process, neglecting practitioner knowledge and user prefer­
+ences essential for deliverable infrastructure.
+• Policy and implementation alignment: Tools rarely account for 
+policy compliance requirements, jurisdictional constraints, or 
+phased funding realities, producing networks that are theoretically 
+optimal but practically undeliverable.
+• Demand-driven network generation: Existing methods either rely 
+on synthetic demand assumptions or require specialised data (e.g., 
+bike-sharing records) unavailable in most contexts, limiting appli­
+cability for evidence-based planning.
+These gaps highlight the need for integrated methodology combining 
+diverse data sources with stakeholder requirements while adapting to 
+local policy contexts and implementation constraints. Our corenet 
+methodology directly addresses these gaps by: (1) systematically inte­
+grating multiple data sources (OS, OSM, and cycling potential estimates) 
+to overcome data quality limitations, (2) incorporating stakeholder 
+engagement at multiple decision points throughout the process, (3) 
+aligning with established policy frameworks through parameter selec­
+tion based on design guidelines, and (4) employing demand-driven 
+network generation using widely-available census-based cycling po­
+tential data rather than specialised datasets.
+Table 1 provides a systematic comparison demonstrating how cor­
+enet addresses these identified gaps through integrated design. The 
+comparison reveals that whilst existing methods advance specific as­
+pects of cycling network planning, including percolation theory for 
+understanding connectivity thresholds (Szell et al., 2022), calibrated 
+route choice models for ridership prediction (Steinacker et al., 2022), 
+and equity-aware prioritisation frameworks (Mahfouz et al., 2023), 
+persistent gaps remain in integrating diverse data sources, embedding 
+stakeholder engagement, ensuring policy compliance, and employing 
+accessible demand-driven approaches.
+3. Data
+Development of a core cycling network requires accurate and 
+comprehensive input data. This section describes the datasets employed, 
+identifies key barriers to complete network generation, and presents the 
+hybrid approach adopted to address these challenges.
+3.1. Input data
+The corenet workflow synthesises four complementary datasets: 
+• Ordnance Survey Open Roads (OS) provides a reliable represen­
+tation of Great Britain's road network with standardised road clas­
+sification, high positional accuracy, and simplified geometry suited 
+to transportation planning. Limitations include restricted geographic 
+coverage (UK-only), quarterly update frequency, and minimal 
+cycling-specific infrastructure information.
+• OpenStreetMap (OSM) offers detailed, versatile geographic data 
+with rich attributes including cycling infrastructure, global coverage, 
+and frequent community updates. However, OSM presents chal­
+lenges with inconsistent quality across regions, complex geometry 
+requiring substantial processing, and non-standardised road 
+classifications.
+• Propensity to Cycle Tool (PCT) provides cycling demand estimates 
+derived from census-based origin-destination matrices that explicitly 
+account for infrastructure-induced demand through scenario 
+modelling (Lovelace et al., 2017). The influence network Ginfluence is 
+populated using PCT outputs for the Go Dutch scenario, which 
+models cycling uptake rates equivalent to those observed in the 
+Netherlands, a country with comprehensive cycling infrastructure 
+and high cycling participation, for trips of equivalent distance and 
+hilliness (Lovelace et al., 2017; Goodman et al., 2019). This scenario- 
+based approach addresses the infrastructure-demand feedback loop 
+by estimating cycling potential under conditions of high-quality 
+infrastructure provision, rather than extrapolating from current 
+(often infrastructure-limited) cycling levels in the UK (Buehler and 
+Dill, 2016a). The Go Dutch scenario incorporates distance decay 
+functions calibrated on Dutch cycling behaviour, effectively model­
+ling how comprehensive cycling infrastructure influences trip mode 
+choice across different journey lengths (Lovelace et al., 2017). PCT 
+combines these scenario-adjusted origin-destination flows with 
+routing profiles accounting for distance, hilliness, and route direct­
+ness, producing link-level demand estimates f(e) that represent po­
+tential rather than current demand. These estimates are then 
+projected onto the OS base network to identify corridors with highest 
+cycling potential under improved infrastructure conditions.
+Z. Wang et al.                                                                                                                                                                                                                                   
+Journal of Transport Geography 131 (2026) 104549 
+4 
+• Scottish Intermediate Zone (IZ) boundaries delineate official 
+Scottish Government geographies from 2011. These boundaries 
+define the study area and ensure coverage is evaluated at consistent 
+geographical resolution. When integrated with population density 
+statistics from the National Records of Scotland, these boundaries 
+provide contextual surfaces for calibrating mesh-density parameters 
+and assessing spatial representativeness of network coverage.
+3.2. Barriers to complete cycling network generation
+Whilst each dataset provides valuable information, analysis reveals 
+three critical barriers when using either OS or OSM data alone for 
+cycling network generation: 
+1. Connectivity Issues: OSM data contains topological errors, partic­
+ularly at junctions between different network types (e.g., footways or 
+cycleways not properly connected to roads). Whilst OS data provides 
+superior network integrity with consistently connected segments, 
+relying solely on OS data excludes crucial off-road cycling 
+infrastructure.
+2. Road Classification Inconsistency: OSM applies multiple classifi­
+cation schemes to the same road segment (e.g., Princes Street is 
+variably classified as “tertiary,” “unclassified,” and “primary”). 
+Although intended to provide detailed information, this complicates 
+network planning based on road type. OS data offers consistent and 
+standardised classifications aligned with official transport planning 
+categories, but lacks the rich attribute detail needed to identify 
+cycling-friendly routes.
+3. Off-Road Path Coverage: OSM provides comprehensive mapping of 
+cycling infrastructure including park trails and off-street paths, 
+whereas OS data focuses primarily on road networks with minimal 
+cycling-specific features. A complete cycling network requires both 
+on-road and off-road infrastructure.
+Appendix A provides comprehensive examination of these differ­
+ences with supporting figures and examples.
+3.3. Hybrid approach to address data barriers
+Given these complementary strengths and limitations, the method­
+ology addresses these three barriers by integrating data sources strate­
+gically. OS data serves as the base network (Gbase) due to its topological 
+reliability and standardised road classification, resolving the connec­
+tivity and classification inconsistency issues. OSM contributes detailed 
+cycling infrastructure information, particularly off-road paths, 
+addressing the coverage barrier. This hybrid approach combines the rich 
+infrastructure detail of OSM with the structural integrity of OS data, 
+enabling complete cycling network generation that includes both on- 
+road and off-road infrastructure (Fig. 1).
+3.4. Data integration in workflow
+Table 2 summarises how each dataset feeds into the corenet work­
+flow, showing their specific roles in network generation.
+4. Methodology of Core cycling network generation
+This section outlines our systematic approach to generating core 
+cycling networks that integrate transport agency requirements with 
+empirical cycling potential data, origin-destination travel patterns, and 
+network topology. While the method uses graph theory concepts for 
+network analysis, it is fundamentally driven by travel demand data and 
+policy objectives rather than network structure alone. A critical meth­
+odological consideration concerns the nature of the demand data 
+employed: the cycling potential estimates represent modelled future 
+demand under improved cycling conditions, not current cycling vol­
+umes. This approach specifically addresses the circular causality chal­
+lenge in cycling infrastructure planning, whereby low cycling levels can 
+result from inadequate infrastructure whilst infrastructure investment 
+typically responds to observed demand. Rather than basing networks on 
+existing (often limited) cycling activity, we identify routes with the 
+highest potential for cycling uptake if appropriate infrastructure were 
+provided. This forward-looking approach enables the identification of 
+strategic corridors where cycling should ideally occur, supporting the 
+Table 1 
+Comparison of cycling network planning methodological frameworks.
+Method / 
+Tool
+Data Integration
+Demand Modelling
+Policy Alignment
+Stakeholder Input
+Analytical Framework
+Open 
+Source
+Key Limitation
+Corenet
+OS Open Roads + PCT 
+cycling potential +
+CbD compliance
+PCT-derived OD 
+flows with distance 
+decay
+Explicit CbD 
+alignment; targets 
+A/B roads under 
+local authority 
+control
+Multi-touchpoint 
+engagement with 
+Transport Scotland, 
+Sustrans Scotland, 
+local authorities
+Weighted graph 
+(arterialness + road 
+hierarchy) + DBSCAN 
+clustering + shortest 
+path
+Yes (R 
+package)
+Requires PCT data 
+infrastructure
+Szell et al. 
+(2022)
+Synthetic network 
+topology (no real 
+demand data)
+Theoretical flows 
+based on node 
+placement; no 
+empirical OD 
+integration
+Generic 
+connectivity 
+principles; no 
+jurisdiction- 
+specific alignment
+Not specified
+Percolation theory +
+three growth 
+strategies (random, 
+greedy, betweenness 
+centrality)
+Yes 
+(Python)
+Synthetic networks 
+lack realism; uniform 
+grid assumptions; no 
+policy constraints
+Steinacker 
+et al. 
+(2022)
+OpenStreetMap +
+bike-sharing trip 
+records
+Calibrated route 
+choice model with 
+empirical bike-share 
+data
+General cycling 
+preferences; no 
+explicit policy 
+framework
+Not specified
+Iterative expansion 
+with demand- 
+weighted routing costs
+Yes 
+(Python)
+Requires bike-sharing 
+data (limited 
+availability); 
+transferability 
+uncertain across 
+contexts
+Hwang et al. 
+(2024)
+Existing infrastructure 
++ transit stations +
+demographics
+Trip generation 
+estimates from 
+population density 
+and destination 
+attractiveness
+Equity-oriented; 
+Complete Streets 
+framework
+Community focus 
+groups
+Three path-finding 
+methods (shortest, 
+least cost, demand- 
+weighted) + equity 
+metrics
+No
+Focuses on connecting 
+existing infrastructure 
+gaps; not de novo 
+network design
+Mahfouz et 
+al. (2023)
+Gravity model inputs 
+(population, 
+employment, services) 
++ traffic data for LTS
+Spatial interaction 
+model segmented by 
+trip purpose
+Safety-focused via 
+LTS integration
+Expert input for LTS 
+calibration
+Multi-stage: demand 
+→ LTS routing → 
+community detection 
+→ utilitarian/ 
+egalitarian 
+prioritisation
+Yes (R)
+Computational 
+complexity; requires 
+detailed traffic data for 
+LTS scoring
+Z. Wang et al.                                                                                                                                                                                                                                   
+Journal of Transport Geography 131 (2026) 104549 
+5 
+development of networks that can generate new cycling trips rather than 
+merely accommodating existing ones.
+A key aspect of this approach is the integration of stakeholder input 
+and user requirements through multiple interaction points. While the 
+core algorithmic process is data-driven, stakeholder engagement, 
+particularly with transport agencies and planners, informs several 
+crucial stages. Users can interact with the tool through: (1) initial defi­
+nition of the study area and policy priorities, (2) selection and weighting 
+of preferred road types (parameter sroad(e)), (3) setting of demand 
+thresholds (θthres) to control network density, (4) specification of 
+acceptable criteria for network cohesion and directness (e.g., Wmax
+path, 
+ndangles), and (5) iterative review and refinement of outputs through 
+workshops or consultation processes. Furthermore, the outputs are often 
+iteratively refined based on qualitative feedback from local experts and 
+planners to ensure practical applicability and alignment with on-the- 
+ground realities and evolving policy objectives. The “Parameter Selec­
+tion Aligned with CbD Best Practice” subsection further details how 
+specific policy requirements shape parameter choices.
+For the Scottish case studies presented in this paper, stakeholder 
+engagement was conducted through structured consultation with 
+transport planning professionals from Transport Scotland and Sustrans 
+Scotland during method development. The consultation process 
+involved 4–6 professionals (including Principal Transport Planner, Se­
+nior Mobility Planner, and Active Travel Analytics) over a 6-month 
+period from December, 2023 to May 2024. Engagement took multiple 
+forms, including: (1) an initial workshop to establish methodology re­
+quirements and policy alignment needs, (2) iterative technical demon­
+strations of network outputs with parameter adjustments, (3) written 
+feedback rounds on preliminary network designs for Edinburgh, Glas­
+gow, Aberdeen, and Dundee, and (4) a final validation workshop to 
+review evaluation metrics and confirm alignment with Cycling by 
+Design standards. This professional engagement ensured that parameter 
+selection (particularly road type preferences, demand thresholds, and 
+connectivity criteria), network evaluation metrics, and output inter­
+pretation aligned with policy requirements and planning practice. Full 
+participatory workshops with local communities were not conducted as 
+part of this research phase. However, following the development of this 
+methodology, the core cycling network generated by the corenet method 
+has been implemented as the foundation layer in the Network Planning 
+Workspace (NPW) tool (https://npw.scot), which enables local author­
+ities to plan cycle networks using segregated infrastructure on key routes 
+while ensuring local places are properly connected without severance. 
+The NPW demonstrates how the corenet framework serves not merely as 
+data manipulation but as the basis for interactive network planning, 
+allowing planners to build upon the algorithmically-generated core 
+network through a step-by-step approach covering primary routes (Tier 
+1), secondary routes (Tier 2), local access to points of interest (POI) (Tier 
+3), and long-distance connections (Tier 4). The tool automatically de­
+termines the most appropriate achievable infrastructure within avail­
+able street space and calculates network performance metrics as the 
+Fig. 1. Integration of Off-Road Cycling Paths (red) to OS data (blue) in Edinburgh. (For interpretation of the references to colour in this figure legend, the reader is 
+referred to the web version of this article.)
+Table 2 
+Summary of input datasets and their role in the corenet workflow.
+Dataset
+Provider
+Resolution
+Role in corenet
+Ordnance Survey 
+Open Roads
+Ordnance Survey
+Great Britain; 
+quarterly 
+updates (2024)
+Defines Gbase for 
+routing and final 
+visualisation
+OpenStreetMap
+OpenStreetMap 
+contributors
+Global; 
+continuously 
+updated
+Supplements Gbase 
+with off-road 
+paths, access 
+restrictions, and 
+detailed attributes
+Propensity to Cycle 
+Tool All Fastest 
+Go Dutch
+Department for 
+Transport & 
+partners
+Great Britain; 
+scenario based 
+on 2011 Census 
+OD flows
+Supplies Ginfluence 
+and edge weights 
+f(e), plus OD 
+desire lines for 
+clustering
+Scottish 
+Intermediate 
+Zone boundaries 
+(2011) and 
+population 
+statistics (2021)
+Scottish 
+Government; 
+National Records 
+of Scotland
+Scotland; IZ 
+boundaries 
+2011; 
+population 
+2021 mid-year
+Defines study area 
+and consistent 
+reporting zones; 
+provides 
+contextual 
+surfaces for mesh- 
+density 
+calibration and 
+coverage 
+assessment
+Z. Wang et al.                                                                                                                                                                                                                                   
+Journal of Transport Geography 131 (2026) 104549 
+6 
+design develops, providing immediate feedback on completeness and 
+connectivity. This implementation pathway illustrates how the corenet 
+methodology identifies the best possible routes for complete and con­
+nected cycling networks, subsequently enabling planners to refine these 
+designs based on local knowledge and implementation constraints.
+4.1. Network generation workflow
+The methodology has two main stages: (1) preparing the base layer 
+for network development and (2) generating the core cycling network. 
+Table 3 summarises key variables and parameters used.
+The methodology employs graph theory terminology that corre­
+sponds directly to standard planning concepts: ‘edges’ represent road 
+segments or links in the network, ‘nodes’ represent junctions or in­
+tersections, ‘dangles’ represent dead-end segments that terminate 
+without connecting to other parts of the network, ‘clustering’ represents 
+grouping nearby locations into coherent areas or corridors, and ‘shortest 
+paths’ represent the most direct routes between destinations.
+5. Network preparation and data integration
+In this step, cycling potential attribute fe from the influence network 
+Ginfluence is joined to each edge of the base network Gbase. Two functions 
+can achieve this: stplanr::rnet_merge and corenet::anime_join (which 
+relies on the anime package). After merging, the base network is filtered 
+to include only specified road-type classes troad. This ensures the core 
+network contains roads that align with policy preferences. At this stage 
+the OS Open Roads geometry (defining Gbase) is combined with PCT- 
+derived demand values f(e), ensuring that subsequent filtering retains 
+the road classes that Scottish local authorities are empowered to 
+reconfigure.
+6. High-potential segment selection
+To identify high cycling potential road segments, key attribute f(e) is 
+evaluated for each edge. Edges exceeding threshold θthres are selected as 
+high-potential segments: 
+Ehigh = {e ∈E|f(e) > θthres }
+(1) 
+Only these high-potential segments become candidates for core 
+network inclusion.
+The corenet methodology strategically focuses on A and B roads, 
+which are under local authority jurisdiction and typically possess suf­
+ficient carriageway width for cycling infrastructure implementation. 
+This focus was informed by consultation with transport planning pro­
+fessionals from Transport Scotland and Sustrans Scotland, who 
+emphasised the importance of targeting routes where authorities have 
+implementation powers and where space constraints are more 
+manageable. Street width analysis conducted using the NPT ‘street­
+space’ layer, which classifies roads based on their capacity to accom­
+modate four segregated cycling infrastructure scenarios: (1) 2 × 1-way 
+tracks within road width, (2) 2 × 1-way tracks using edge-to-edge, (3) 2- 
+way track within road width, and (4) 2-way track using edge-to-edge, 
+under three categories: ‘Not enough space,’ ‘Absolute minimum,’ and 
+‘Desirable minimum’, confirms that A and B roads generally possess 
+adequate space for high-quality cycling provision. This strategic tar­
+geting ensures that generated networks prioritise routes that are both 
+high-demand and physically feasible for infrastructure delivery, 
+addressing implementation constraints at the network selection stage 
+rather than as a post-processing filter.
+7. Clustering of candidate points
+A density-based spatial clustering algorithm (DBSCAN) with prox­
+imity threshold ϵ merges nearby points along corridors or intersections 
+into clusters (Ester et al., 1996). This approach is well-suited for iden­
+tifying coherent cycling corridors as it can handle irregular spatial dis­
+tributions and does not require pre-specification of cluster numbers 
+(Birant and Kut, 2007). This produces clusters C1, C2, …, CK representing 
+potential core network nodes. To capture each corridor's full extent, 
+clusters are grouped by road name or other identifier. For each group, 
+key representative points (endpoints and geometric centroid) are 
+selected as core network nodes. These points P = {p1, p2, …, pM} serve as 
+anchors along high-potential routes for network connection. Because 
+these segments inherit OD-informed demand from the PCT network, the 
+resulting anchor set P explicitly tracks corridors with strong observed 
+commuting flows.
+8. Weighted graph construction
+A weighted graph Gweighted = (V, E, W) prioritises important seg­
+ments while penalising low-quality links. The corenet::prepare_network 
+function converts the base network to an undirected graph and com­
+putes composite weight we for each edge. Lower weights correspond to 
+preferable routes (higher cycling potential and road category), guiding 
+shortest-path searches towards likely core corridors. The weight calcu­
+lation includes: 
+• Arterialness: For edge e, cycling potential value f(e) (with missing/ 
+low values replaced by constant f0 > 0) determines arterialness score 
+αe: 
+αe =
+(
+Fmax
+max
+(
+f(e) , f0
+)
+)3
+(2) 
+where Fmax is the maximum f(e) across all edges.
+This score is normalised to (0, 1] by 
+Table 3 
+Variables and Parameters in Core Cycling Network Generation.
+Variable/ 
+Parameter
+Definition and Role in Corenet
+Gbase
+Base road network for route calculation and visualisation (e.g. OS 
+data).
+Ginfluence
+Road network data with cycling-specific metrics (e.g. NPT data 
+derived from Propensity to Cycle Tool), used to identify high- 
+potential routes.
+V
+Geographic polygon defining the study area.
+f(e)
+Influencing attribute used to identify high-potential routes (e.g. 
+all_fastest_bicycle_go_dutch values).
+θthres
+Threshold value to filter out high-potential segments (e.g. 
+segments with f(e) ≥θthres are considered “significant”).
+troad
+Base-network road-type categories (e.g. A Road, B Road, Minor 
+Road).
+sroad(e)
+Numeric score that penalises or favours certain road types. Higher 
+scores correspond to roads considered less desirable for the core 
+cycling network.
+vpenalty
+Penalty value applied to edges with very low cycling potential.
+ndangles
+Number of iterations to remove “dangling” edges (degree-1 leaf 
+segments) from the final network.
+dmax
+Pts , dmin
+Pts
+Maximum and minimum distances to consider between 
+representative points when searching for connecting paths.
+αe
+“Arterialness” metric for each edge e.
+we
+Composite weight assigned to edge e, combining αe, road-type 
+scores, and an additional penalty term.
+Wmax
+path
+Maximum path weight allowed during shortest-path filtering. 
+Any route exceeding this total weight is discarded.
+Ec
+Final core cycling network edges, a cohesive, well-connected 
+subgraph that covers high-demand corridors.
+Z. Wang et al.                                                                                                                                                                                                                                   
+Journal of Transport Geography 131 (2026) 104549 
+7 
+αʹe =
+αe
+max
+eʹ∈E αeʹ
+:=
+(
+Fmax
+max(f(e) ,f0)
+)3
+(
+Fmax
+Fmin
+)3
+(3) 
+where Fmin = min
+e:f(e)>0f(e) (smallest nonzero value). Thus, αʹe is low (closer 
+to 0) for high-quality segments with large f(e), and approaches 1 for low- 
+potential segments where f(e) is small or missing. 
+• Road Type Score: Each road type t(e) receives score sroad via pre­
+defined mapping. Higher scores penalise less desirable road types for 
+cycling networks.
+• Composite Weight: These factors combine to form weight we for each 
+edge: 
+we = (λαʹe + (1 −λ)̃s(e) ) × p(e)
+(4) 
+where ̃s(e) is normalised road score, p(e) penalises low potential values, 
+and λ balances arterialness and road type. The penalty function is: 
+p(e) =
+{
+penalty value,
+f(e) ≤δ,
+1,
+f(e) > δ,
+(5) 
+9. Shortest-path based Core extraction
+Using representative high-potential points P = {p1, p2, …, pM} and 
+weighted graph Gweighted, the core network is extracted by finding paths 
+connecting points while minimising total weight: 
+• For each point pi ∈P, identify nearby points within a reasonable 
+distance: 
+Pnear
+i
+=
+{
+pj ∈P\{pi} : Dmin ≤d
+(
+pi, pj
+)
+≤Dmax
+}
+(6) 
+where d
+(
+pi, pj
+)
+is Euclidean distance, Dmin prevents trivial zero-length 
+paths, and Dmax is the maximum connection distance. 
+• For each origin-destination pair, find the shortest path using Dijks­
+tra's algorithm. The path P(i, j) = [e1, e2, …, ek] is accepted if its total 
+weight meets: 
+W(i, j) =
+∑
+e∈P(i,j)
+we ≤Wmax
+(7) 
+This process repeats for all points, with paths aggregated. Since the 
+network is undirected, paths are collected without duplication.
+The set of retained paths is: 
+P core =
+{
+P(i, j) : W(i, j) ≤Wmax , ∀i, ∀j ∈Pnear
+i
+}
+(8) 
+The union of all edges in accepted paths forms: 
+E* =
+⋃
+P(i,j)∈P core
+{e : e ∈P(i, j) }
+(9) 
+These segments along high-demand corridors become initial candi­
+dates for the core network.
+10. Cohesive network formation
+The edge set E* may contain disconnected clusters. To create a 
+cohesive network: 
+1. Identify the largest connected component of subgraph (V, E*)
+2. Let G* = (V*, E*) be the subgraph from selected edges
+3. Define G*
+L as the component with the most edges
+This component forms the primary network structure. To enhance 
+cohesion: 
+4. Remove dangling segments (dead-end roads that don't connect high- 
+demand areas)
+5. Eliminate edges terminating at degree-1 nodes
+6. Repeat iteratively until no dangles remain
+The final result is a refined edge set Ec ⊆E* where every node has 
+degree ≥2 (except boundary nodes). This creates a single connected, 
+high-quality network linking key cycling corridors.
+Below is the high-level pseudocode algorithm of corenet.
+Algorithm: Core Cycling Network Generation.
+Input: Influence network Ginfluence, base network Gbase, study area V 
+Parameters: f(e), θthres, sroad(e), vpenalty, ndangles, dmax
+Pts , dmin
+Pts , Wmax.
+path
+Step
+Descriptions
+1. Preprocess Influence 
+Network
+if f(e) exists in Ginfluence then 
+Segment Ginfluence into line segments 
+Filter segments where f(e) ≥θthres 
+Compute centroids of the filtered segments 
+Apply DBSCAN clustering 
+Select a representative centroid from each cluster 
+Buffer Gbase by 10 m and intersect with centroids 
+If grouping is required, compute representative points 
+accordingly
+2. Prepare Weighted 
+Network
+Transform Gbase to the specified CRS and cast to 
+LINESTRING 
+Convert the network into an sfnetwork 
+Compute arterialness αe from f(e)
+Assign road-type scores sroad(e) based on troad 
+Calculate composite weights we by combining αe, road 
+scores, and vpenalty
+3. Path Calculation
+For each unique centroid, compute the shortest path to 
+other centroids using we 
+Filter paths by distance ([dmin
+Pts , dmax
+Pts ]) 
+Retain only those whose total weight ≤Wmax
+path
+4. Network Assembly
+Merge all valid paths into a single network 
+Remove duplicate geometries 
+Extract the largest connected component
+5. Network Cleaning
+For i = 1 to ndangles do 
+Remove dangling edges (segments terminating at 
+degree-1 nodes) iteratively
+6. Output
+Return the final core cycling network Ec
+10.1. Parameter selection aligned with CbD best practice
+CbD set core cycling network standards to promote active travel, 
+building on UK DfT guidance, particularly Cycle Infrastructure Design 
+(LTN 1/20) (Department for Transport, 2020). Our methodology meets 
+these requirements through careful parameter selection and user feed­
+back. By focusing on directness, accessibility, and route cohesion, we 
+refine parameters like road classification scoring, arterial weighting, and 
+mesh density to address practical needs and stakeholder insights as 
+specified in these policy documents. This creates networks aligned with 
+CbD & other network planning best practice. The following subsections 
+show how these refinements ensure connectivity, accommodate varying 
+population densities, and maintain cohesive structure in accordance 
+with established policy frameworks.
+10.2. Network quality criteria and methodological focus
+CbD establishes several key network quality criteria: directness 
+(minimising detours), safety and comfort (appropriate segregation and 
+design), coherence and connectivity (joined-up networks), attractive­
+ness (pleasant environment), accessibility (serving diverse users and 
+Z. Wang et al.                                                                                                                                                                                                                                   
+Journal of Transport Geography 131 (2026) 104549 
+8 
+destinations), and integration with other transport modes. Additional 
+considerations include gradient management, surface quality, lighting, 
+maintenance standards, and equitable provision across different 
+communities.
+Our corenet methodology prioritises a focused subset of these criteria 
+based on data availability and computational feasibility: directness 
+(through arterial weighting and shortest-path algorithms), connectivity 
+and coherence (via network growth strategies and systematic removal 
+of disconnected segments), coverage and accessibility (through spatial 
+analysis and buffer zone evaluation), and demand alignment (by 
+integrating cycling potential data to focus on high-usage corridors). 
+These criteria align with the core design principles established in 
+Cycling by Design (Transport Scotland, 2021), which emphasises that 
+cycling infrastructure should be direct (offering the most direct route, 
+minimising detours), coherent (forming continuous networks linking 
+origins and destinations), and accessible (serving diverse communities 
+and destinations).
+This focused approach reflects the limitations of automated network 
+generation using available datasets, which cannot directly capture 
+subjective factors like perceived safety, environmental attractiveness, or 
+comfort levels without extensive field surveys or user research. How­
+ever, by establishing a robust foundation addressing the quantifiable 
+core criteria, the methodology provides a starting point for further 
+refinement incorporating local knowledge and qualitative assessments 
+during stakeholder engagement phases. Future iterations could integrate 
+additional data sources (e.g., safety records, environmental quality 
+indices, accessibility audits) to expand the range of criteria addressed 
+algorithmically.
+10.3. Hierarchical road prioritisation and arterial weighting
+CbD prioritises that route selection should be both intuitive and 
+direct, with an emphasis on high usage potential. To achieve these ob­
+jectives, a hierarchical decision framework is implemented to refine 
+route selection when multiple segments exhibit comparable cycling 
+potential or similar classification scores. Specifically: 
+1. Routes with higher cycling potential are prioritised.
+2. When cycling potential is comparable, “A Road” segments are chosen 
+over “B Road” segments, which in turn are chosen over “Minor Road” 
+segments.
+3. When cycling potential values are identical, the network favours 
+routes associated with higher-ranked road types.
+4. If both cycling potential values and road classifications are equiva­
+lent, the shortest route is selected.
+This framework is operationalised through the parameters road_­
+function, road_scores, and Arterialness. Preferred road types are desig­
+nated with scores (e.g. “A Road” = 1, “B Road” = 10, and “Minor Road” 
+= 100) where lower scores indicate higher priority. The value of 
+Arterialness quantifies the significance of each route segment by 
+emphasising those with greater cycling potential and directness. A cubic 
+power formula employed to accentuate high-value segments, and a 
+balanced weighting scheme integrates arterial importance with road 
+classification. This systematic approach ensures that, among parallel 
+routes with similar cycling potential, “A Road” segments are preferen­
+tially selected, thereby enhancing both network effectiveness and 
+directness.
+10.4. Adaptive mesh density calibration via DBSCAN clustering
+To address population density considerations and meet guidelines, 
+we employ DBSCAN clustering. By adjusting the maximum neighbour­
+hood radius (ϵ) and minimum points required for clusters (MinPts), we 
+precisely control network mesh density. In urban centres, a smaller 
+radius (250 m) creates higher route density, meeting the 250-m mesh 
+target in dense areas. In suburban areas, a larger radius (400 m) creates 
+lower route density, meeting the 400-m target in less populated regions. 
+This tailored approach ensures appropriate network density based on 
+population concentration.
+10.5. Enhancing network cohesion and connectivity
+Establishing a cohesive network depends on robust connectivity and 
+the systematic removal of fragmented segments. We conduct compre­
+hensive connectivity analysis to identify and remove isolated segments, 
+ensuring seamless route integration. Furthermore, the iterative removal 
+of edges terminating at degree-one nodes (dangling edges) can be cus­
+tomised, allowing users to specify the desired level of network refine­
+ment. This flexibility enables the network to be pruned according to user 
+preferences, resulting in a final configuration that is both well- 
+connected and accessible, thereby effectively promoting active travel.
+10.6. Network growth
+Network growth can be controlled by adjusting the npt_threshold 
+parameter in corenet::corenet(), which influences road selection based 
+on cycling potential. Higher thresholds select only highest-demand 
+segments, while lower thresholds include more roads, expanding 
+coverage. Examining network evolution across threshold levels provides 
+insights into potential expansion areas.
+Fig. 2 shows Edinburgh's core cycling network at four cycling po­
+tential thresholds (99th to 94th percentiles). Higher thresholds isolate 
+critical corridors, forming the network's backbone by connecting major 
+employment, transport, and residential hubs; routes offering maximum 
+utility with minimal investment. In Edinburgh, this core comprises 
+central arterial routes and key district connections, typical of radial 
+urban demand.
+This visualisation reveals several important strategic planning in­
+sights that extend beyond simple network expansion. The highest 
+threshold (99th percentile) identifies the fundamental network skeleton: 
+the absolutely critical corridors that form the backbone of any effective 
+cycling network. As thresholds decrease to the 97th and 95th percen­
+tiles, the network exhibits strategic densification around this core, with 
+new segments extending existing corridors and creating parallel route 
+options in high-demand areas. The transition to the 94th percentile 
+shows the network beginning to extend into moderate-density residen­
+tial areas, creating a more comprehensive system that serves diverse trip 
+purposes beyond commuting. This stage represents the point where the 
+network evolves from serving primarily high-demand commuter routes 
+to providing a more equitable system that accommodates leisure 
+cycling, school journeys, and local access needs.
+10.7. Comparative network Generation from OS and OSM data
+OS data offers extensive coverage across the United Kingdom, 
+whereas OSM data facilitates the application of this methodology on a 
+global scale. Fig. 3 compares Edinburgh's core network generated from 
+OS data (left) and OSM data (right).
+To generate analogous networks from these disparate data sources, it 
+is imperative to adjust the parameters governing road classification. For 
+OS data, the parameter key_attribute is assigned the value “road_­
+function”, with attribute_values defined to include “A Road,” “B Road,” 
+and “Minor Road.” In contrast, for OSM data, the parameter key_­
+attribute is set to “highway”, and attribute_values is expanded to 
+incorporate a broader spectrum of classifications, including “primary,” 
+“primary_link,” “secondary,” “secondary_link,” “tertiary,” “tertiar­
+y_link,” “unclassified,” “pedestrian,” “footway,” “cycleway,” and “path,” 
+thereby reflecting its more intricate categorisation system.
+By calibrating these parameters to the specific characteristics of each 
+dataset, comparable networks can be generated despite inherent dif­
+ferences in data structure and geographic scope.
+Z. Wang et al.                                                                                                                                                                                                                                   
+Journal of Transport Geography 131 (2026) 104549 
+9 
+11. Network evaluation
+This section presents a structured approach for evaluating core 
+cycling network effectiveness. Key performance metrics assess Network 
+Cohesion and Connectivity, Demand Alignment, Origin-Destination 
+Accessibility, Directness and Efficiency.
+Three primary datasets are used to evaluate network connectivity, 
+coverage, and alignment with population and travel demand: 
+Fig. 2. Edinburgh Core Network Growth.
+Fig. 3. Core Network Generation Using Different Data Sources: City of Edinburgh.
+Z. Wang et al.                                                                                                                                                                                                                                   
+Journal of Transport Geography 131 (2026) 104549 
+10 
+• Core Cycling Network: Road network dataset representing cycling 
+infrastructure, including “Cycling Potential” attributes indicating 
+potential cycling trips along each link.
+• O–D Data: Points representing origins and destinations, each with 
+associated trip volumes or types. These correspond to the census- 
+derived OD matrices introduced in the Input data section and 
+retain trip weights for accessibility calculations.
+• Intermediate Zone Boundaries: Polygon data representing 
+administrative zones with population density information. These 
+polygons and density estimates originate from the National Records 
+of Scotland dataset summarised in Table 2.
+11.1. KPI selection
+The evaluation metrics presented in this section were chosen to 
+address fundamental requirements: alignment with established network 
+quality criteria from cycling infrastructure guidance, operational feasi­
+bility given available data sources, and comprehensive assessment of 
+network performance across multiple dimensions critical to cycling 
+uptake.
+11.2. Alignment with established network quality criteria
+Our metric selection builds directly on the core network quality 
+criteria established in CbD, which consistently identify coherence and 
+connectivity, directness, accessibility, safety and comfort, and 
+attractiveness as fundamental network qualities that determine cycling 
+infrastructure effectiveness.
+Four of our metric categories directly operationalise these estab­
+lished criteria. Network Cohesion and Connectivity directly measures 
+the coherence criterion, evaluating whether infrastructure forms joined- 
+up networks rather than isolated segments. Directness and Efficiency 
+translates the directness criterion into quantifiable measures that assess 
+route circuity and network-level efficiency. Origin-Destination 
+Accessibility operationalises the accessibility criterion by measuring 
+how well networks serve actual and potential cycling trips between 
+specific locations. Demand-Aligned Coverage complements this by 
+evaluating whether the network is positioned in areas with high cycling 
+potential and population density, ensuring infrastructure investment 
+targets the areas of greatest need.
+The remaining two criteria: safety/comfort and attractiveness, pose 
+significant challenges for automated assessment using available data­
+sets. These subjective qualities require detailed infrastructure audits, 
+perception surveys, or environmental assessments that extend beyond 
+the scope of automated network generation. Our approach acknowl­
+edges this limitation while focusing on the quantifiable criteria that can 
+be systematically evaluated across different urban contexts and network 
+designs.
+11.3. Integration with planning practice and decision-making
+The metric framework is designed to support iterative network 
+design and strategic decision-making rather than simply providing ac­
+ademic assessment tools. Each metric addresses specific questions that 
+planners and transport authorities regularly face: 
+• Network Cohesion metrics answer “Are we creating joined-up 
+infrastructure or isolated segments?” and support decisions about 
+connection priorities and phasing strategies.
+• Demand-Aligned Coverage metrics answer “Are we investing in 
+the right places?” and guide prioritisation decisions when funding is 
+limited.
+• O–D Accessibility metrics answer “Who does this network serve?” 
+and support equity analysis and stakeholder engagement.
+• Directness and Efficiency metrics answer “How circuitous are 
+network routes and can users travel efficiently between destina­
+tions?” and inform design decisions about route selection and 
+network connectivity.
+This decision-focused approach ensures that evaluation serves 
+planning rather than purely academic purposes, supporting the meth­
+odology's objective of producing actionable rather than merely 
+descriptive network assessments.
+11.4. Network cohesion and connectivity
+11.4.1. Spatial coverage
+Spatial coverage measures the city area proportion within defined 
+proximity (e.g., 500 m) of the cycling network: 
+Spatial Coverage = Area
+(
+Bunion ∩Acity
+)
+Area
+(
+Acity
+)
+(10) 
+where Acity is the city boundary polygon and Bunion is the union of all 
+500 m buffer polygons around the network.
+11.4.2. Connectivity
+Beyond spatial coverage, we assess whether the buffered area pro­
+vides continuous corridors connecting administrative zones Z =
+{z1, z2, …, zm}.
+The covered area within city boundaries is: 
+W = Bunion ∩Acity
+(11) 
+For each zone zi, the covered portion is: 
+Wi = W ∩zi
+(12) 
+The zone-level connectivity indicator for each zone pair 
+(
+zi, zj
+)
+is: 
+C
+(
+zi, zj
+)
+=
+{
+1
+if a continuous path exists within W from Wi to Wj
+0
+otherwise
+(13) 
+The Zone Connectivity Fraction α is: 
+α =
+∑
+(zi,zj)
+C
+(
+zi, zj
+)
+(
+m
+2
+)
+(14) 
+where α = 1.0 indicates all zones are connected via continuous corri­
+dors, 0 < α < 1 indicates some zones remain disconnected (infrastruc­
+ture gaps exist), and α = 0 indicates no zone pairs are connected, 
+suggesting a complete lack of corridor continuity.
+11.5. Demand-aligned coverage
+Assessing network alignment with demand is crucial for effective 
+infrastructure investment. We use two metrics: Cycling Potential 
+Coverage and Population Coverage.
+11.5.1. Cycling potential coverage
+This measures what fraction of total cycling potential is accessible 
+within the buffer distance: 
+Z. Wang et al.                                                                                                                                                                                                                                   
+Journal of Transport Geography 131 (2026) 104549 
+11 
+Cycling Potential Coverage = P
+(
+Ucity
+)
+Ptotal
+(15) 
+where Ptotal is total cycling potential and P
+(
+Ucity
+)
+is potential within the 
+buffered network area. Coverage >70% typically indicates strong 
+alignment with high-demand areas.
+The Density Ratio compares cycling potential density within the 
+buffered area to citywide average: 
+Density Ratio = Density within buffered area
+City −wide density
+=
+P(Ucity)
+Lbuffer
+Ptotal
+Lcity
+(16) 
+where Lbuffer is segment length within the buffer and Lcity is total length 
+of all segments. 
+• Ratio > 1: Buffered segments concentrate on higher-demand 
+corridors
+• Ratio < 1: Network may not fully capture highest-demand corridors
+11.6. Population coverage
+Population coverage measures the proportion of residents within a 
+specified distance (e.g., 500 m) of the core network.
+The coverage area is: 
+W = Buffer(N, dist) ∩Acity
+(17) 
+For each zone zi, covered population is calculated by multiplying 
+population density by the area intersecting with W: 
+P =
+∑
+zi
+pop(zi)
+A(zi) × Area(W ∩zi)
+∑
+zi
+pop(zi)
+(18) 
+where pop(zi) is the total population of zone zi; A(zi) is the area of zone 
+zi; Area(W ∩zi) is the area of zone zi within the coverage area W.
+11.7. Origin-destination (O–D) accessibility
+O–D accessibility evaluates how easily trips originating or ending at 
+certain points (i.e., O–D points) can reach the cycling network. 
+Consider a set of O–D points O = {(o1, d1), (o2, d2), …, (ok, dk)}, where 
+each pair 
+(
+oj, dj
+)
+represents a trip from origin oj to destination dj. To 
+quantify accessibility, the midpoint of the line segment connecting each 
+oj and dj is identified, and the shortest distance from this midpoint to the 
+network N is measured.
+11.8. OD accessibility
+To determine how close trips, on average, are to the cycling network, 
+the average distance to the network is calculated by taking the mean of 
+the midpoint-to-network distances across all O–D pairs: 
+d(O, N) = 1
+|O|
+∑
+(oj,dj)∈O
+d
+(
+midpoint
+(
+oj, dj
+)
+, N
+)
+(19) 
+This average distance is then transformed to create an accessibility 
+metric where higher values represent better performance: 
+OD Accessibility = 1 −min
+(d(O, N)
+1000 , 1
+)
+(20) 
+where |O| is the total number of O–D pairs; d
+(
+midpoint
+(
+oj, dj
+)
+, N
+)
+is the 
+shortest distance from the midpoint of O–D pair 
+(
+oj, dj
+)
+to the network 
+N; the distance is scaled to kilometres and inverted so that values closer 
+to 1 indicate better accessibility (shorter average distances to the 
+network).
+11.9. Count-based O–D coverage
+To represent the proportion of all O–D pairs located within a 
+convenient distance, the count-based O–D coverage measures the share 
+of O–D midpoints falling within a specified distance threshold (e.g., 
+500 m) of the network. This metric is calculated as: 
+O −D Coveragecount(dist) =
+∑
+(oj,dj)∈O
+I
+(
+d
+(
+midpoint
+(
+oj, dj
+)
+, N
+)
+≤dist
+)
+|O|
+(21) 
+where I(⋅) is 1 if the midpoint is within dist, and 0 otherwise; dist is the 
+distance threshold.
+11.10. Demand-weighted O–D coverage
+To capture the proportion of actual trip volume effectively served by 
+the network, trips
+(
+oj, dj
+)
+represents the number of trips associated with 
+the O–D pair 
+(
+oj, dj
+)
+. The demand-weighted coverage is expressed as:  
+where trips
+(
+oj, dj
+)
+is the trip volume associated with O–D point; all 
+other symbols are as previously defined.
+11.11. Directness and efficiency
+Cycling network performance evaluation requires assessment of 
+route directness and efficiency for actual travel patterns using Origin- 
+Destination data reflecting real travel demand. These metrics provide 
+complementary perspectives on network performance: routing success 
+rate identifies connectivity gaps, directness measures route quality, 
+global efficiency assesses system-wide detour requirements, and local 
+efficiency evaluates neighbourhood-level connectivity.
+Four key metrics evaluate directness and efficiency: 
+• Routing Success Rate (R)
+• OD-Based Directness (DOD)
+• OD-Based Global Efficiency (Eglob,OD)
+• OD-Based Local Efficiency (Eloc,OD)
+11.12. Routing success rate
+The routing success rate measures network connectivity by deter­
+O −D Coveragedemand(dist) =
+∑
+(oj,dj)∈O
+trips
+(
+oj, dj
+)
+I
+(
+d
+(
+midpoint
+(
+oj, dj
+)
+, N
+)
+≤dist
+)
+∑
+(oj,dj)∈O
+trips
+(
+oj, dj
+)
+(22) 
+Z. Wang et al.                                                                                                                                                                                                                                   
+Journal of Transport Geography 131 (2026) 104549 
+12 
+mining what proportion of origin-destination pairs can be successfully 
+connected via network routes: 
+Routing Success Rate = |R|
+|O|
+(23) 
+where |R| is the number of successfully routable OD pairs and |O| is the 
+total number of OD pairs in the dataset. Low routing success rates sug­
+gest network fragmentation preventing cyclists from completing inten­
+ded journeys.
+11.13. OD-based directness
+OD-based directness measures how direct network routes are 
+compared to straight-line distances between origin-destination pairs. 
+Higher values indicate more direct routes with minimal detours.
+For OD points with associated trip weights wij, directness is calcu­
+lated as: 
+DOD =
+∑
+(i,j)∈R
+wij • dE(i,j)
+dG(i,j)
+∑
+(i,j)∈R
+wij
+(24) 
+where dG(i, j) is the shortest-path distance in the network between OD 
+points i and j; dE(i, j) is the Euclidean distance between OD points i and j; 
+wij is the trip weight representing travel demand between points i and j; 
+R is the set of successfully routable OD pairs (where dG(i, j) < ∞).
+11.14. OD-based global efficiency
+Global efficiency measures the relative detour factor imposed by the 
+network compared to direct travel. This metric quantifies how much 
+longer network routes are compared to straight-line distances: 
+Eglob,OD =
+∑
+(i,j)∈R
+wij • dG(i,j)
+dE(i,j)
+∑
+(i,j)∈R
+wij
+(25) 
+where wij, dE(i, j), dG(i, j), and R are as defined for Eq. (24).
+11.15. OD-based local efficiency
+Local efficiency measures network resilience by evaluating connec­
+tivity within local neighbourhoods around each OD point. For each OD 
+point i, other OD points within a specified radius (typically 2000 m, 
+representing local cycling trip distances) are identified to calculate 
+connection efficiency within this local area.
+For OD point i with local neighbourhood Nr(i) containing points 
+within radius r: 
+Eloc(i) =
+∑
+(u,v)∈Li
+wuv⋅1/dG(u,v)
+1/dE(u,v)
+∑
+(u,v)∈Li
+wuv
+=
+∑
+(u,v)∈Li
+wuv⋅dE(u,v)
+dG(u,v)
+∑
+(u,v)∈Li
+wuv
+(26) 
+where Li represents all routable OD pairs (u, v) within the local neigh­
+bourhood Nr(i); wuv is the travel demand weight for pair (u, v); and 
+dE(u, v) and dG(u, v) are the Euclidean and network distances, respec­
+tively.
+Overall local efficiency is the average across all OD points: 
+Eloc,OD = 1
+|O|
+∑
+i∈O
+Eloc(i)
+(27) 
+where O is the set of all OD points.
+High Eloc,OD values indicate the network provides good local con­
+nectivity around key origins and destinations, supporting direct trips 
+and alternative routing during disruptions.
+11.16. Examples of network evaluation and comparison
+Fig. 4 shows the core and existing cycling networks for four Scottish 
+cities. Fig. 5 illustrates key metrics for these cities, with each chart 
+presenting performance indicators that compare the generated core 
+cycling network to the existing cycling infrastructure. Higher values 
+indicate better performance.
+The radar charts display seven key performance metrics: Spatial 
+Coverage, Zone Connectivity, Cycling Potential Coverage, Density Ratio, 
+Population Coverage, OD Accessibility, and OD Coverage (both count- 
+based and demand-weighted). Four additional metrics: Directness, 
+Global Efficiency, Local Efficiency, and Routing Success Rate, are pre­
+sented separately in Table 4 rather than on the radar chart axes.
+This design choice addresses two limitations. First, efficiency values 
+vary substantially between cities, making them unsuitable for radar 
+visualisation where consistent scaling is essential. Second, whilst most 
+radar chart metrics are standardised so that values approaching 1.0 
+represent optimal performance, the directness and efficiency metrics use 
+different scaling interpretations. Including them on the same axes would 
+distort the comparative presentation and make the charts difficult to 
+interpret.
+Comparative analysis of both radar chart metrics (Fig. 5) and effi­
+ciency measures (Table 4) reveals substantial differences between pro­
+posed core networks and existing infrastructure across all four cities.
+As shown in Fig. 5, the core networks (highlighted in red on the radar 
+charts) exhibit stronger performance in Cycling Potential Coverage and 
+Density Ratio, suggesting better alignment with travel demand and more 
+comprehensive spatial coverage. Similarly, the metrics in Table 4
+demonstrate substantial gains in network efficiency: directness im­
+proves by a factor of 4 to 25, global efficiency increases by 13 to 188 
+times, local efficiency improves 5- to 6-fold, and routing success rates 
+rise from below 1% in existing networks to between 3.6% and 59.6% in 
+core networks. These results underscore the fragmented nature of cur­
+rent cycling infrastructure, where the most dramatic improvements are 
+observed. Core networks overcome this limitation by establishing 
+cohesive, well-connected systems that support practical, continuous 
+cycling journeys across urban areas.
+12. Discussion
+The methods presented in this paper generate data-driven and scal­
+able networks to support investment in the joined-up networks that are 
+needed for cost-effective investment in cycling infrastructure. An 
+important aspect is its flexibility: parameters determining the nature of 
+the networks generated were adjusted following consultation with 
+planners and the approach can be used in other contexts. This approach 
+allows the results to reflect the preferences of diverse user groups, 
+enhancing public acceptance and shared ownership of cycling initia­
+tives, opening up the possibility of citizen-led design (Lovelace et al., 
+2020). The approach adds value to methods for current and future po­
+tential demand estimation (Paulsen and Rich, 2024; 2023; F´elix et al., 
+2025; Lovelace et al., 2017) by highlighting core networks. Incorpo­
+rating diverse datasets (in this case from official Ordnance Survey and 
+crowd-sourced OpenStreetMap sources) enables a ‘best of both worlds’ 
+approach that tackles the challenges related to data quality and 
+completeness. Aligning the methodology with overarching transport 
+policies, including those advocated by Transport Scotland, ensures it 
+contributes to broader social, health, environmental, and economic 
+goals. The methods are available in an open-source package, providing a 
+new tool for planners and researchers to create policy-aligned networks.
+While the methodology has many strengths, it faces notable chal­
+lenges, particularly in ensuring data quality. OpenStreetMap provides 
+detailed and frequently updated information, but its open tagging sys­
+tem introduces complexities that can compromise data reliability. The 
+flexibility of this system, while advantageous, often results in inconsis­
+tent or incorrect tagging, leading to errors of omission and commission 
+Z. Wang et al.                                                                                                                                                                                                                                   
+Journal of Transport Geography 131 (2026) 104549 
+13 
+Fig. 4. Core and Existing Networks in Four Scottish Cities.
+Z. Wang et al.                                                                                                                                                                                                                                   
+Journal of Transport Geography 131 (2026) 104549 
+14 
+that affect data completeness. Moreover, classification inconsistencies 
+and the incomplete integration of newly developed cycling infrastruc­
+ture further hinder the accuracy of network coverage. Adding to these 
+issues is the complexity of OSM's data model and the absence of enforced 
+standards, which produce varying data quality across regions. These 
+challenges highlight the need for thorough pre-processing and data 
+validation to ensure an accurate and comprehensive representation of 
+cycling networks (Fleischmann et al., 2025).
+Incorporating qualitative data, such as perceived safety or comfort, 
+remains a further area for improvement. While stakeholder feedback can 
+be included by changing parameters following feedback or during 
+workshops with stakeholders, developing systematic approaches to 
+capture these subjective dimensions could refine network designs and 
+improve uptake. Generalisability is similarly a concern. Although the 
+methodology was developed with a Scottish context in mind, its broader 
+applicability to regions with differing policy, demographic, or 
+geographical features has yet to be tested. Finally, merging multiple data 
+sources to obtain richer detail increases the complexity of filtering and 
+validation, highlighting the need for established workflows that main­
+tain data accuracy.
+An additional consideration concerns the relationship between 
+infrastructure provision, demand, and the wider built-environment 
+context. Cycling infrastructure induces additional trips whilst inade­
+quate infrastructure suppresses demand (Buehler and Dill, 2016a; 
+Goodman et al., 2019). The methodology addresses this through two 
+mechanisms: (1) PCT's Go Dutch scenario models potential under high- 
+quality infrastructure rather than current infrastructure-constrained 
+conditions, providing a vision-led basis for strategic planning, and (2) 
+existing cycling infrastructure from OSM influences routing and demand 
+estimates, allowing networks to be regenerated as infrastructure evolves 
+and is mapped. However, the current implementation does not include 
+automated iterative feedback where demand is re-estimated after each 
+hypothetical network addition during the planning phase, nor does it 
+capture ‘network effects’ where each link disproportionately increases 
+utility by creating new connections (Szell et al., 2022). This represents a 
+practical simplification for computational tractability in strategic plan­
+ning contexts with long timescales.
+Beyond infrastructure, built environment attributes also influence 
+cycling uptake. PCT estimates inherently incorporate population den­
+sity, employment centres, and topography (Lovelace et al., 2017), but do 
+not explicitly model street permeability (Handy et al., 2002), land use 
+mix (Cervero and Kockelman, 1997), traffic volumes (Winters et al., 
+Fig. 5. Radar Chart Comparing Core and Existing Networks for Four Scottish Cities.
+Z. Wang et al.                                                                                                                                                                                                                                   
+Journal of Transport Geography 131 (2026) 104549 
+15 
+2011), streetscape quality (Aldred and Jungnickel, 2014), or trip-end 
+facilities (Heinen et al., 2010).
+Future research directions include: (1) developing dynamic network 
+growth models that iteratively re-estimate demand after each addition 
+(Creutzig et al., 2020); (2) integrating additional built environment data 
+including traffic stress indices (Mekuria et al., 2012) and proximity to 
+attractors; (3) calibrating behavioural models for heterogeneous re­
+sponses across demographic groups (Heinen et al., 2010); and (4) 
+establishing monitoring frameworks for ‘plan-build-monitor-adapt’ cy­
+cles using observed uptake (Aldred et al., 2019). These enhancements 
+would strengthen infrastructure-demand-environment interactions 
+whilst maintaining practical applicability for strategic planning.
+In addition to these research avenues, practical, implementation- 
+oriented development priorities include:
+12.1. Network customisation
+Currently, the automated network generation process limits direct 
+user alterations. An interactive editing feature would be beneficial, 
+allowing stakeholders to tailor the final network to specific local con­
+ditions and integrate unique needs and preferences into the design.
+12.2. Generation speed
+While core network generation speed has been optimised signifi­
+cantly, producing a city-scale network for a large urban area like Edin­
+burgh still takes approximately 15 min. Further improvements in 
+processing time are desirable to facilitate faster iteration cycles for 
+planners, enabling more rapid scenario testing and agile decision- 
+making.
+12.3. Additional factors
+Integrating more information on road safety, rider comfort, road 
+width, the availability of local amenities, and the type and quality of 
+cycle infrastructure could better align networks with user preferences, 
+ultimately supporting more effective and user-centric infrastructure 
+planning. Advanced data collection techniques, such as crowdsourcing 
+and real-time sensors, could provide timely behavioural insights. 
+Interdisciplinary collaboration with experts in health, urban design, and 
+social sciences would also ensure a more comprehensive understanding 
+of cycling's impacts on diverse populations.
+12.4. Implementation constraints
+The current methodology does not directly operationalise physical 
+implementation constraints such as street width, available space for 
+cycling infrastructure, or engineering feasibility. These factors are 
+crucial for determining whether proposed routes can be practically 
+delivered; in NPT, a ‘streetspace’ layer classifies corridors by ability to 
+accommodate segregated provision. Future versions will integrate this 
+layer and related datasets (street width measurements, land use con­
+straints, and infrastructure cost estimates) into the generation pipeline. 
+For now, feasibility is screened with streetspace during parameter se­
+lection and addressed at detailed design or through local knowledge in 
+stakeholder engagement.
+12.5. Land use integration
+Our current methodology focuses primarily on travel demand pat­
+terns and network connectivity on road types where local authorities 
+have implementation rights (A roads, B roads, and minor roads), rather 
+than residential streets. This strategic focus ensures the resulting net­
+works prioritise routes that can be realistically implemented by trans­
+port authorities. While our approach does not explicitly incorporate land 
+use data or POI, integrating such information could enhance network 
+planning by ensuring connections to key destinations such as schools, 
+employment centres, retail areas, and recreational facilities. This could 
+be achieved by: (1) weighting cycling potential estimates based on 
+proximity to important land uses, (2) incorporating POI data as addi­
+tional anchor points in the clustering process, (3) using land use density 
+as a factor in determining appropriate network mesh density, and (4) 
+considering mixed-use development patterns when setting connectivity 
+requirements. However, our current focus on higher-order roads (those 
+under local authority jurisdiction) already tends to connect major ac­
+tivity centres and employment hubs, as these roads typically serve as the 
+primary corridors linking key destinations within urban areas. Such 
+integration of explicit land use data would support more holistic trans­
+port and urban planning approaches, ensuring that cycling networks 
+serve the full range of urban activities and support sustainable devel­
+opment patterns.
+12.6. Multiple network scenarios
+While this paper demonstrates the generation of a single core 
+network per study area, the methodology supports the creation of 
+multiple planning alternatives through parameter variation. Different 
+threshold levels (θthres) naturally generate networks of varying density 
+and coverage, as shown in Fig. 2 for Edinburgh. Additionally, alternative 
+scenarios could be created by: (1) varying road type preferences to 
+explore different design philosophies, (2) adjusting clustering parame­
+ters to test different mesh densities, (3) incorporating different policy 
+priorities through modified weighting schemes, and (4) examining 
+budget-constrained scenarios by limiting network extent. Such multi- 
+scenario analysis would enable planners to evaluate trade-offs be­
+tween coverage, connectivity, and implementation feasibility, support­
+ing more robust decision-making processes.
+Table 4 
+Directness, Global efficiency, local efficiency, and routable Pairs for four Scot­
+tish cities.
+City
+Metric
+Core 
+Network
+Existing 
+Network
+Improvement 
+Factor
+Glasgow 
+City
+Directness
+0.0296
+0.0056
+5.29 ×
+Global 
+Efficiency
+0.0634
+0.0014
+45.29 ×
+Local 
+Efficiency
+0.2637
+0.0380
+6.94 ×
+Routable 
+Pairs
+3.2%
+0.2%
+16.00 ×
+Edinburgh
+Directness
+0.1259
+0.0049
+25.71 ×
+Global 
+Efficiency
+0.4068
+0.0040
+101.70 ×
+Local 
+Efficiency
+0.2374
+0.0418
+5.68 ×
+Routable 
+Pairs
+18.2%
+0.3%
+60.67 ×
+Aberdeen 
+City
+Directness
+0.4894
+0.0218
+22.45 ×
+Global 
+Efficiency
+0.7914
+0.0042
+188.43 ×
+Local 
+Efficiency
+0.6284
+0.2356
+2.67 ×
+Routable 
+Pairs
+59.6%
+0.4%
+149.00 ×
+Dundee City
+Directness
+0.0937
+0.0217
+4.32 ×
+Global 
+Efficiency
+0.0583
+0.0043
+13.56 ×
+Local 
+Efficiency
+0.3575
+0.0695
+5.14 ×
+Routable 
+Pairs
+3.6%
+0.6%
+6.00 ×
+Z. Wang et al.                                                                                                                                                                                                                                   
+Journal of Transport Geography 131 (2026) 104549 
+16 
+12.7. Equity and accessibility
+Ensuring equitable resource distribution and access for all commu­
+nity segments remains essential. A city's network requirements may 
+evolve with changes in population density, urban development, and 
+emerging technologies like e-bikes and smart infrastructure. Enabling 
+dynamic network adaptation in response to these shifts would enhance 
+long-term resilience. Future research could also focus on qualitative 
+metrics, such as perceived safety or convenience, to refine current 
+evaluation standards and capture the nuanced factors influencing 
+cycling uptake.
+Overall, advancing the approach through increased flexibility, more 
+efficient processing, and expanded functionality could accelerate its 
+adoption by practitioners. Comparative studies with other network 
+design methods could illuminate best practices and guide iterative re­
+finements, further improving cycling infrastructure and bolstering its 
+role in sustainable urban transport systems.
+13. Conclusion
+This paper introduces the corenet method, a flexible and data-driven 
+approach to address key challenges in active travel planning. By inte­
+grating predictive analytics, infrastructure evaluation, and stakeholder 
+feedback, our methodology offers significant contributions to sustain­
+able transport planning. Key contributions include: 
+1. Methodological Innovation: The corenet framework merges mul­
+tiple data sources (NPT cycling data, Ordnance Survey Open Roads, 
+and OpenStreetMap) and analytical techniques to create cohesive, 
+policy-compliant cycling networks, effectively tackling connectivity 
+and classification challenges.
+2. Practical Implementation: The open-source package makes this 
+methodology accessible to transport planners and researchers. Its 
+application in Scotland demonstrates real-world effectiveness, pro­
+ducing networks with improved connectivity, coverage, and policy 
+alignment.
+3. Stakeholder Integration: Emphasising local knowledge and user 
+feedback throughout the planning process ensures that networks 
+meet community needs and expectations, fostering greater accep­
+tance and promoting sustainable travel behaviour.
+4. Comprehensive Evaluation: We have developed a robust set of 
+metrics for assessing network performance across multiple di­
+mensions, equipping planners with tools to identify strengths and 
+weaknesses in proposed or existing cycling infrastructure.
+Findings from our Scottish case studies demonstrate that targeted 
+data preprocessing, calibrated parameters, and prioritisation of high- 
+demand corridors can produce networks finely tuned to local condi­
+tions, effectively balancing objectives such as cohesion, coverage, and 
+directness. By offering more direct and convenient routes, the corenet 
+approach can encourage a shift from motorised travel towards cycling. 
+Ultimately, by combining empirical evidence, policy guidance, and 
+ongoing collaboration with local communities, this methodology 
+bridges the gap between theoretical best practices and on-the-ground 
+implementation. As cities worldwide increasingly prioritise active 
+travel, the corenet framework offers an evidence-based, adaptable 
+method for developing cycling infrastructure that is both practical and 
+responsive to local needs. This contributes to building healthier, more 
+resilient, and sustainable urban transport systems globally.
+Data and software development
+The code developed in this study is available at the GitHub re­
+pository: https://github.com/nptscot/corenet. The datasets used in this 
+research can be downloaded from the monthly releases of https://gith 
+ub.com/nptscot/npt (e.g., version v2025-05-01). All data are provided 
+under the Open Data Commons Attribution License.
+Generative AI usage statement
+Generative AI tools were used solely for grammar and spelling checks 
+in this manuscript. All research design, methodology development, data 
+analysis, result interpretation, and manuscript writing were performed 
+by the authors without AI assistance.
+CRediT authorship contribution statement
+Zhao Wang: Writing – review & editing, Writing – original draft, 
+Visualization, Validation, Software, Resources, Methodology, Concep­
+tualization. Hang Hu: Writing – review & editing, Validation, Meth­
+odology. Hussein Mahfouz: Writing – review & editing. Juan Pablo 
+Fonseca-Zamora: Writing – review & editing. Martin Lucas-Smith: 
+Software, Methodology. Dustin Carlino: Software, Methodology. 
+Angus Calder: Writing – review & editing, Project administration, 
+Investigation. Congying Hu: Methodology. Matthew Davis: Writing – 
+review & editing, Project administration, Methodology. Joseph Talbot: 
+Writing – review & editing, Conceptualization. Robin Lovelace: 
+Writing – review & editing, Supervision, Project administration, 
+Conceptualization.
+Declaration of competing interest
+The authors declare that they have no known competing financial 
+interests or personal relationships that could have appeared to influence 
+the work reported in this paper.
+Acknowledgements
+This research was supported by Transport Scotland. RL was sup­
+ported to work on this project by the Economic and Social Research 
+Council (ESRC) & ADR UK as part of the ESRC-ADR UK No.10 Data 
+Science (10DS) fellowship in collaboration with 10DS and ONS (grant 
+number ES/W004305/1).
+Appendix A. Appendices
+Appendix A: Input data
+The development of a core cycling network relies on accurate and comprehensive data sources that capture urban transport system complexity. 
+This section details the primary data sources used: Ordnance Survey Open Roads (OS) and OpenStreetMap (OSM). We discuss their strengths and 
+limitations and explain how they influence cycling network creation.
+A.1. Ordnance Survey Open Roads (OS)
+OS provides a reliable, detailed representation of Great Britain's road network with several key advantages: 
+Z. Wang et al.                                                                                                                                                                                                                                   
+Journal of Transport Geography 131 (2026) 104549 
+17 
+• Comprehensive Coverage: Includes all road types from highways to minor rural roads, ensuring no potential cycling route is overlooked.
+• High Accuracy and Consistency: Maintained by professional surveyors, providing a reliable foundation for transport network analysis.
+• Standardised Road Classification: Roads classified by national standards, simplifying integration with other government planning tools.
+• Simplified Representation: Uses single central lines for road carriageways, simplifying network visualisation and analysis.
+Despite these benefits, OS Open Roads have limitations: 
+• Restricted Geographic Coverage: Focuses exclusively on Great Britain.
+• Limited Update Frequency: May not capture rapid changes in road configurations or new infrastructure quickly.
+• Lack of Cycling Path Information: Often lacks detailed information on dedicated cycling paths.
+A.2. OpenStreetMap (OSM)
+OpenStreetMap provides detailed, versatile geographic data valuable for cycling network planning: 
+• Rich Detail: Offers lane-level detail with extensive attributes including cycle lanes, barriers, and surface types essential for effective network 
+planning.
+• Community Updates: As a crowdsourced dataset, OSM updates continuously, often providing more current data than traditional sources. New 
+infrastructure appears quickly - for example, active travel bridges at Methilhill and Cameron Bridge completed in September 2024 were in OSM by 
+November 2024.
+• Global Coverage: Worldwide scope enables international comparisons and cross-border studies.
+However, OSM presents challenges: 
+• Inconsistent Quality: Data quality varies by region and contributor expertise, requiring careful validation.
+• Complex Processing: The data richness requires sophisticated filtering to extract relevant information for network planning.
+A.3. Data richness comparison between OS and OSM
+As shown in Fig. 6, OSM data has significantly higher geometric complexity than OS data. This complexity comes from OSM's inclusion of detailed 
+information on roads, railways, waterways, paths, cycleways, and various attributes (road surface, speed limits, pedestrian facilities). For example, at 
+Princes Street, OSM shows lane-level information and intricate intersections, while OS data offers a more generalised representation.
+While OSM's detail allows for flexible use cases, it increases processing complexity. In contrast, OS data provides a structured, simplified dataset 
+focused on roads, making it ideal for transportation planning. As a government dataset, it ensures uniform road representation with official classi­
+fications. Transport agencies often prefer this simplicity when focusing on network structure rather than detailed attributes.
+Fig. 6. Geometry Complexity Comparison between OSM and OS data in Edinburgh.
+A.4. Connectivity comparison between OS and OSM
+Our research identified connectivity issues in OSM data that affect network planning.
+Fig. 7 shows connectivity issues at the road level. We examined road A1140 by filtering OS data using OS$road_classification_number == “A1140” 
+Z. Wang et al.                                                                                                                                                                                                                                   
+Journal of Transport Geography 131 (2026) 104549 
+18 
+and OSM data using OSM$ref. == “A1140”.
+Black points represent breaking or ending points in the network. Ideally, a connected line should have black points only at endpoints; middle black 
+points indicate breaks. The OS extract shows a well-connected network with black points only at endpoints. In contrast, OSM data shows several breaks 
+(black points in the middle). These disconnected segments don't represent actual road breaks but result from road type misclassification. Such issues 
+affect network planning, especially for important cycling routes.
+Fig. 7. Connectivity in Road Levels: A1140.
+A subtler connectivity issue in OSM affects coherent route creation. In Fig. 8, the footway isn't actually connected to the street, identifiable by 
+checking node degrees. The red-circled node has degree 1, when degree 3 is expected at this three-line junction. This issue stems from improper 
+tagging, common with pavement infrastructure where contributors may not understand junction implications.
+Fig. 8. Hidden Connectivity in OSM.
+These connectivity issues indicate OSM data requires cautious use and pre-processing. This can be achieved using GRASS or QGIS to snap nodes to 
+the nearest line, ensuring footways connect to the road network. We developed a fix_rnet_connectivity function to address this issue, enhancing OSM 
+data usability. The right side of Fig. 8 shows the corrected connection with proper node degrees.
+A.5. Road classification comparison between OS and OSM
+Princes Street demonstrates road classification differences between data sources.
+In OS data, Princes Street is an “A Road.” In OSM, it has three classifications: “tertiary,” “unclassified,” and “primary.” This inconsistency creates 
+preprocessing challenges. Filtering an arterial network from OS data is straightforward using OS$road_function %in% c(“A Road”, “B Road”, “Minor 
+Road”). With OSM, avoiding missed routes requires including more classifications: OSM$highway %in% c(“primary”, “primary_link”, “secondary”, 
+“secondary_link”, “tertiary”, “tertiary_link”, “unclassified”).
+As Fig. 9 shows, the filtered OS network is concise, while the OSM network contains scattered, disconnected lines. Some streets are missing in OSM, 
+like Inverleith Place (classified as “residential”). Such misclassifications can cause popular cycling routes to be overlooked. The abundance of un­
+classified OSM roads further complicates network interpretation. 
+Z. Wang et al.                                                                                                                                                                                                                                   
+Journal of Transport Geography 131 (2026) 104549 
+19 
+Fig. 9. Road Classification of Princes Street.
+A.6. Off-Road Path Coverage Comparison between OS and OSM
+Fig. 10 highlights another major difference: off-road path coverage. OS data doesn't consistently include cycling infrastructure like park connectors 
+or off-street trails, while OSM often maps these in detail. These routes are vital for complete cycling networks, particularly in urban areas where 
+segregated cycleways and park trails provide pleasant, direct connections.
+Fig. 10. Off-Road Cycling Paths.
+Data availability
+Data will be publicly available on the GitHub release page upon 
+publication.
+References
+Aldred, Rachel, Jungnickel, Katrina, 2014. Why culture matters for transport policy: the 
+case of cycling in the UK. J. Transp. Geogr. 34, 78–87. https://doi.org/10.1016/j. 
+jtrangeo.2013.12.004.
+Aldred, Rachel, Watson, Tom, Lovelace, Robin, Woodcock, James, 2017. Barriers to 
+investing in cycling: stakeholder views from England. Transp. Res. A Policy Pract. 
+https://doi.org/10.1016/j.tra.2017.11.003.
+Aldred, Rachel, Goodman, Anna, Gulliver, John, Woodcock, James, 2019. Cycling 
+provision separated from motor traffic: a systematic review exploring whether stated 
+preferences vary by gender and age. Transp. Rev. 38 (5), 535–553. https://doi.org/ 
+10.1080/01441647.2018.1450494.
+Alexander, Lauren, Jiang, Shan, Murga, Mikel, Gonz, Marta C., 2015. Validation of 
+origin-destination trips by purpose and time of day inferred from Mobile phone data. 
+Transp. Res. B Methodol. 120. https://doi.org/10.1016/j.trc.2015.02.018.
+Appleyard, Donald, 1981. Livable Streets. University of California Press, Berkeley, CA. 
+Ballis, Haris, Dimitriou, Loukas, 2020. Revealing personal activities schedules from 
+synthesizing multi-period origin-destination matrices. Transp. Res. B Methodol. 139 
+(September), 224–258. https://doi.org/10.1016/j.trb.2020.06.007.
+Birant, Derya, Kut, Alp, 2007. ST-DBSCAN: an algorithm for clustering spatial–temporal 
+data. Data Knowl. Eng. 60 (1), 208–221. https://doi.org/10.1016/j. 
+datak.2006.01.013.
+Bonsma-Fisher, Madeleine, Lin, Bo, Chan, Timothy C.Y., Saxe, Shoshanna, 2024. 
+Exploring the geographical equity-efficiency Tradeoff in cycling infrastructure 
+planning. J. Transp. Geogr. 121 (December), 104010. https://doi.org/10.1016/j. 
+jtrangeo.2024.104010.
+Buehler, Ralph, Dill, Jennifer, 2016a. Bikeway networks: a review of effects on cycling. 
+Transp. Rev. 36 (1), 9–27. https://doi.org/10.1080/01441647.2015.1069908.
+Buehler, Ralph, Dill, Jennifer, 2016b. Bikeway networks: a review of effects on cycling. 
+Transp. Rev. 36 (1), 9–27. https://doi.org/10.1080/01441647.2015.1069908.
+Cervero, Robert, Kockelman, Kara, 1997. Travel demand and the 3Ds: density, diversity, 
+and design. Transp. Res. Part D: Transp. Environ. 2 (3), 199–219. https://doi.org/ 
+10.1016/S1361-9209(97)00009-6.
+City of Edinburgh Council, 2023. Active Travel Action Plan 2023 – Delivering the City 
+Mobility Plan. https://democracy.edinburgh.gov.uk/documents/s53899/7.3% 
+20-%20Active%20Travel%20Action%20Plan%20Committee%20report% 
+20with%20appendices.pdf.
+City of Edinburgh Council. 2024. “City mobility plan 2021-2030.” https://www.edinbur 
+gh.gov.uk/downloads/file/29320/city-mobility-plan-2021-2030-updated-februar 
+y-2024.
+Z. Wang et al.                                                                                                                                                                                                                                   
+Journal of Transport Geography 131 (2026) 104549 
+20 
+Cook, Simon, Stevenson, Lorna, Aldred, Rachel, Kendall, Matt, Cohen, Tom, 2022. More 
+than walking and cycling: what is ‘active travel’? Transp. Policy 126 (September), 
+151–161. https://doi.org/10.1016/j.tranpol.2022.07.015.
+Creutzig, Felix, Franzen, Mareike, Moeckel, Rolf, Heinrichs, Dirk, Tepe, Florian, 
+Friesenecker, Christoph, Niemeier, Debbie, Seto, Karen C., Wiedmann, Thomas O., 
+2020. Leveraging digitalization for sustainability in urban transport. Glob. Sustain. 
+3, e14. https://doi.org/10.1017/sus.2020.13.
+Delcl`os-Ali´o, Xavier, den Hoed, Wilbert, 2024. Perceptions of potential cycling 
+infrastructure in a low-cycling context: evidence from a medium-sized urban area. 
+Int. J. Sustain. Transp. 18 (12), 999–1011. https://doi.org/10.1080/ 
+15568318.2024.2424420.
+Department for Transport, 2020. “Cycle Infrastructure Design (LTN 1/20).” 1/20. 
+London.
+Ester, Martin, Kriegel, Hans-Peter, Sander, J¨org, Xiaowei, Xu., 1996. A density-based 
+algorithm for discovering clusters in large spatial databases with noise. In: 
+Proceedings of the Second International Conference on Knowledge Discovery and 
+Data Mining (KDD’96). AAAI Press, Portland, OR, pp. 226–231.
+F´elix, Rosa, Moura, Filipe, Lovelace, Robin, 2025. Reproducible methods for Modeling 
+combined public transport and cycling trips and associated benefits: evidence from 
+the biclaR tool. Comput. Environ. Urban. Syst. 117 (April), 102230. https://doi.org/ 
+10.1016/j.compenvurbsys.2024.102230.
+Fleischmann, Martin, Vybornova, Anastassia, Gaboardi, James D., 2025. Anna Br ‘azdov 
+‘a, and Daniela Dan vcejov ‘a. 2025. “Adaptive Continuity-Preserving Simplification 
+of Street Networks” https://doi.org/10.48550/ARXIV.2504.16198.
+Fonseca, Fernando, Ribeiro, Paulo, Neiva, Carolina, 2023. A planning practice method to 
+assess the potential for cycling and to design a bicycle network in a starter Cycling 
+City in Portugal. Sustainability 15 (5), 4534.
+Furth, Peter G., 2012. “Level of Traffic Stress Criteria,” no. 12-19.
+Goodman, Anna, Rojas, Ignacio F., Woodcock, James, Aldred, Rachel, Berkoff, Nikolai, 
+Morgan, Malcolm, Harris, Mark, Ciccarelli, Nicoletta, 2019. Scenarios of cycling to 
+School in England, and associated health and carbon impacts: application of the 
+’propensity to cycle tool’. J. Transp. Health 12, 263–278. https://doi.org/10.1016/j. 
+jth.2019.02.002.
+Grisiute, Ayda, Wiedemann, Nina, Herthogs, Pieter, Raubal, Martin, 2024. An ontology- 
+based approach for harmonizing metrics in bike network evaluations. Comput. 
+Environ. Urban. Syst. 113, 102178.
+Handy, Susan L., Boarnet, Marlon G., Ewing, Reid, Killingsworth, Richard E., 2002. How 
+the built environment affects physical activity: views from urban planning. Am. J. 
+Prev. Med. 23 (2), 64–73. https://doi.org/10.1016/S0749-3797(02)00476-2.
+Heinen, Eva, van Wee, Bert, Maat, Kees, 2010. Commuting by bicycle: an overview of the 
+literature. Transp. Rev. 30 (1), 59–96. https://doi.org/10.1080/ 
+01441640903187001.
+Hwang, Uijeong, Kim, Ilsu, Guhathakurta, Subhrajit, Van Hentenryck, Pascal, 2024. 
+Comparing different methods for connecting bike lanes to generate a complete bike 
+network and identify potential complete streets in Atlanta. J. Cycl. Micromob. Res. 2, 
+100015.
+Jones, Peter, Marshall, Stephen, Boujenko, Natalia, 2007. Designing walkable urban 
+thoroughfares. Urban Des. Int. 12 (2–3), 169–179. https://doi.org/10.1057/ 
+udi.2007.14.
+Larsen, Jacob, Patterson, Zachary, El-Geneidy, Ahmed, 2013. Build it. But where? The 
+use of geographic information Systems in Identifying Locations for new cycling 
+infrastructure. Int. J. Sustain. Transp. 7 (4). https://doi.org/10.1080/ 
+15568318.2011.631098, 299317. 
+Lovelace, Robin, Goodman, Anna, Aldred, Rachel, Berkoff, Nikolai, Abbas, Ali, 
+Woodcock, James, 2017. The propensity to cycle tool: an open source online system 
+for sustainable transport planning. J. Transp. Land Use 10 (1). https://doi.org/ 
+10.5198/jtlu.2016.862.
+Lovelace, Robin, Parkin, John, Cohen, Tom, 2020. Open access transport models: a 
+leverage point in sustainable transport planning. Transp. Policy 97, 47–54.
+Lonardi, Alessandro, Szell, Michael, De Bacco, Caterina, 2025. Cohesive urban bicycle 
+infrastructure design through optimal transport routing in multilayer networks. J. R. 
+Soc. Interface 22 (223), 20240532.
+Lovelace, Robin, F´elix, Rosa, Carlino, Dustin, 2022. Jittering: A Computationally 
+Efficient Method for Generating Realistic Route Networks from Origin-Destination 
+Data. Findings, April. 
+Mahfouz, Hussein, Lovelace, Robin, Arcaute, Elsa, 2023. A road segment prioritization 
+approach for cycling infrastructure. J. Transp. Geogr. 113, 103715.
+Marshall, Stephen, 2004. Streets and Patterns. Routledge, London. https://doi.org/ 
+10.4324/9780203589397. 
+Mehaffy, Michael, Porta, Sergio, Rof, Yodan, e, and Nikos Salingaros., 2010. Urban 
+nuclei and the geometry of streets: the ‘emergent Neighborhoods’ model. Urban Des. 
+Int. 15 (1), 22–46. https://doi.org/10.1057/udi.2009.26.
+Mekuria, Maaza C., Furth, Peter G., Nixon, Hilary, 2012. Low-Stress Bicycling and 
+Network Connectivity, no. 11-19.
+Morgan, Malcolm, Lovelace, Robin, 2020. Travel flow aggregation: nationally scalable 
+methods for interactive and online visualisation of transport behaviour at the road 
+network level. Environ. & Plann. B: Plann. Des., July. https://doi.org/10.1177/ 
+2399808320942779.
+Paulsen, Mads, Rich, Jeppe, 2023. Societally optimal expansion of bicycle networks. 
+Transp. Res. B Methodol. 174, 102778 https://www.sciencedirect.com/science/ 
+article/pii/S0191261523000954. 
+Paulsen, Mads, Rich, Jeppe, 2024. Welfare optimal bicycle network expansions with 
+induced demand. Transp. Res. B Methodol. 190, 103095. https://doi.org/10.1016/j. 
+trb.2024.103095.
+Pikora, Terri, Giles-Corti, Billie, Bull, Fiona, Jamrozik, Konrad, Donovan, Rob, 2003. 
+Developing a framework for assessment of the environmental determinants of 
+walking and cycling. Soc. Sci. Med. 56 (8), 1693–1703.
+Pucher, John, Buehler, Ralph, 2008. Making cycling irresistible: lessons from the 
+Netherlands, Denmark and Germany. Transp. Rev. 28, 495–528 http://www.vtpi. 
+org/irresistible.pdf. 
+Reynolds, Hannah, 2025. “Cycle lanes that Don’t join up just make everyone look a bit 
+stupid: why do so many bike lanes just end?” 2025 https://www.cyclingweekly. 
+com/fitness/cycle-lanes-that-dont-join-up-just-make-everyone-look-a-bit-stupid- 
+why-do-so-many-bike-lanes-just-end. 
+Romanillos, Gustavo, Austwick, Martin Zaltz, Ettema, Dick, De Kruijf, Joost, 2016. Big 
+data and cycling. Transp. Rev. 36 (1), 114–133.
+Sch¨on, Peter, Heinen, Eva, Manum, Bendik, 2024. A scoping review on cycling network 
+connectivity and its effects on cycling. Transp. Rev. 44 (4), 912–936.
+Steinacker, Christoph, Storch, David-Maximilian, Timme, Marc, Schr¨oder, Malte, 2022. 
+Demand-driven Design of Bicycle Infrastructure Networks for improved urban 
+Bikeability. Nat. Comput. Sci. 2 (10), 655–664.
+Szell, Michael, Mimar, Sayat, Perlman, Tyler, Ghoshal, Gourab, Sinatra, Roberta, 2022. 
+Growing urban bicycle networks. Sci. Rep. 12 (1), 6765.
+Transport Scotland, 2017. Cycling Action Plan for Scotland 2017–2020.
+Transport Scotland, 2021. Cycling by Design. https://www.transport.gov.scot/publicat 
+ion/cycling-by-design/.
+Tsigdinos, Stefanos, Paraskevopoulos, Yannis, Tzouras, Panagiotis, 
+Bakogiannis, Emmanouil, Vlastos, Theodoros, 2023. Rethinking road network 
+hierarchy towards new accessibility perspectives. Transp. Res. Proced. 69, 195–202. 
+https://doi.org/10.1016/j.trpro.2023.02.093.
+Tsigdinos, Stefanos, Salamouras, Georgios, Chatziioannou, Ioanna, 
+Bakogiannis, Emmanouil, Nikitas, Alexandros, 2024. A worldwide review of formal 
+National Street Classification Plans Enhanced via an analytical hierarchy process: 
+street classification as a tool for more sustainable cities. Cities 154, 105371. https:// 
+doi.org/10.1016/j.cities.2024.105371.
+Tsigdinos, Stefanos, Paraskevopoulos, Yannis, Tzouras, Panagiotis G., 
+Kepaptsoglou, Konstantinos, 2024a. Development of a complete method for re- 
+conceptualizing street classification in an urban municipality. J. Transp. Geogr. 121, 
+104025. https://doi.org/10.1016/j.jtrangeo.2024.104025.
+Tsigdinos, Stefanos, Paraskevopoulos, Yannis, Tzouras, Panagiotis G., 
+Kepaptsoglou, Konstantinos, 2024b. Development of a complete method for re- 
+conceptualizing street classification in an urban municipality. J. Transp. Geogr. 121, 
+104025. https://doi.org/10.1016/j.jtrangeo.2024.104025.
+Wardman, Mark, Hatfield, Richard, Page, Matthew, 1997. The UK National Cycling 
+Strategy: can improved facilities meet the targets? Transp. Policy 4 (2), 123–133. 
+https://doi.org/10.1016/S0967-070X(97)00011-5.
+Wegman, Fred, Aarts, Letty, Bax, Cees, 2008. Advancing sustainable safety: National 
+Road Safety Outlook for the Netherlands for 2005–2020. Saf. Sci. 46 (2), 323–343. 
+https://doi.org/10.1016/j.ssci.2007.06.011.
+Wiedemann, Nina, N¨obel, Christian, Ballo, Lukas, Martin, Henry, Raubal, Martin, 2025. 
+Bike network planning in limited urban space. Transp. Res. B Methodol. 192 
+(February), 103135. https://doi.org/10.1016/j.trb.2024.103135.
+Winters, Meghan, Davidson, Gavin, Kao, David, Teschke, Kay, 2011. Motivators and 
+deterrents of bicycling: comparing influences on decisions to ride. Transportation 38 
+(1), 153–168. https://doi.org/10.1007/s11116-010-9284-y.
+Xu, Yang, Shaw, Shih-Lung, Fang, Zhixiang, Yin, Ling, 2016. Estimating potential 
+demand of bicycle trips from Mobile phone DataAn anchor-point based approach. 
+ISPRS Int. J. Geo Inf. 5 (8), 131. https://doi.org/10.3390/ijgi5080131.
+Z. Wang et al.                                                                                                                                                                                                                                   
+Journal of Transport Geography 131 (2026) 104549 
+21 

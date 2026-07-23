@@ -1,0 +1,164 @@
+[
+  {
+    "file": "assets/figures/page2_figure1.png",
+    "page": 2,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 1262,
+    "height": 1344,
+    "column": "col-1",
+    "num_columns": 2,
+    "caption_label": "Figure. 1",
+    "caption": "(a) a solid body \ud835\udec0with an internal crack \ud835\udee4\ud835\udc50. \ud835\udee4\ud835\udc50is an interface boundary with positive and negative sides, \ud835\udee4+ \ud835\udc50 and \ud835\udee4\u2212 \ud835\udc50, respectively. Tractions \ud835\udc91are prescribed along \ud835\udee4\ud835\udc50. Boundary \ud835\udee4\ud835\udc62is prescribed with a displacement\u0304 \ud835\udc2e; \ud835\udee4\ud835\udc61with a prescribed traction\u0302 \ud835\udc2d; (b) a solid body \ud835\udec0with a smeared crack \ud835\udee4\ud835\udf09(blue area). cohesive phase field model and proposed different forms of phase- field models. From their analysis, it appears that the auxiliary field should be prescribed in the whole domain, reducing the computational efficiency. Nguyen et al. (2016) avoided an auxiliary field by computing the displacement jump at two points near the interface. However, the choice of the location of these points seems arbitrary and problem- dependent. Lee et al. (2017) and Yoshioka et al. (2020) employed a level-set approach to compute the normal vector of the crack, which is",
+    "caption_candidates": [
+      {
+        "label": "Figure. 1",
+        "text": "(a) a solid body \ud835\udec0with an internal crack \ud835\udee4\ud835\udc50. \ud835\udee4\ud835\udc50is an interface boundary with positive and negative sides, \ud835\udee4+ \ud835\udc50 and \ud835\udee4\u2212 \ud835\udc50, respectively. Tractions \ud835\udc91are prescribed along \ud835\udee4\ud835\udc50. Boundary \ud835\udee4\ud835\udc62is prescribed with a displacement\u0304 \ud835\udc2e; \ud835\udee4\ud835\udc61with a prescribed traction\u0302 \ud835\udc2d; (b) a solid body \ud835\udec0with a smeared crack \ud835\udee4\ud835\udf09(blue area). cohesive phase field model and proposed different forms of phase- field models. From their analysis, it appears that the auxiliary field should be prescribed in the whole domain, reducing the computational efficiency. Nguyen et al. (2016) avoided an auxiliary field by computing the displacement jump at two points near the interface. However, the choice of the location of these points seems arbitrary and problem- dependent. Lee et al. (2017) and Yoshioka et al. (2020) employed a level-set approach to compute the normal vector of the crack, which is"
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page4_figure2.png",
+    "page": 4,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 3082,
+    "height": 1385,
+    "column": "full",
+    "num_columns": 1,
+    "caption_label": "Figure. 2",
+    "caption": "One-dimensional analytical phase field \ud835\udc51(\ud835\udc31), crack density function \ud835\udefe\ud835\udc50, and Dirac-delta function \ud835\udeff\ud835\udc50for a uniaxial bar (length 1) with a crack \ud835\udee4\ud835\udc50in the middle. The regularisation length is \ud835\udcc1= 0.1. in which the fraction 1 2 stems from the constraint on the Dirac-delta function, \u222b\u221e \u2212\u221e\ud835\udeff\ud835\udc50 (\ud835\udc65\ud835\udc5b ) d\ud835\udc65\ud835\udc5b= 1. In Fig. 2 we plot the phase field \ud835\udc51(\ud835\udc65\ud835\udc5b ), the crack density function \ud835\udefe\ud835\udc51(\ud835\udc51) and the Dirac-delta function \ud835\udeff\ud835\udc50 (\ud835\udc65\ud835\udc5b ). In the figure the distribution",
+    "caption_candidates": [
+      {
+        "label": "Figure. 2",
+        "text": "One-dimensional analytical phase field \ud835\udc51(\ud835\udc31), crack density function \ud835\udefe\ud835\udc50, and Dirac-delta function \ud835\udeff\ud835\udc50for a uniaxial bar (length 1) with a crack \ud835\udee4\ud835\udc50in the middle. The regularisation length is \ud835\udcc1= 0.1. in which the fraction 1 2 stems from the constraint on the Dirac-delta function, \u222b\u221e \u2212\u221e\ud835\udeff\ud835\udc50 (\ud835\udc65\ud835\udc5b ) d\ud835\udc65\ud835\udc5b= 1. In Fig. 2 we plot the phase field \ud835\udc51(\ud835\udc65\ud835\udc5b ), the crack density function \ud835\udefe\ud835\udc51(\ud835\udc51) and the Dirac-delta function \ud835\udeff\ud835\udc50 (\ud835\udc65\ud835\udc5b ). In the figure the distribution"
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page5_figure3.png",
+    "page": 5,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 3151,
+    "height": 1053,
+    "column": "full",
+    "num_columns": 1,
+    "caption_label": "Figure. 3",
+    "caption": "(a) uniaxial compression of a bar with a crack \ud835\udee4\ud835\udc50; (b) smeared crack \ud835\udee4\ud835\udf09(blue area). Here a constant pressure \ud835\udc5dis applied in the crack \ud835\udee4\ud835\udc50, exerted on positive and negative sides, \ud835\udee4+ \ud835\udc50 and \ud835\udee4\u2212 \ud835\udc50, respectively. Employing the phase-field model in Eq. (14), we obtain the follow- ing form of the Heaviside function \u210b \u210b(\ud835\udc99) = 1 2 \u23a7 \u23aa \u23a8 \u23aa\u23a9",
+    "caption_candidates": [
+      {
+        "label": "Figure. 3",
+        "text": "(a) uniaxial compression of a bar with a crack \ud835\udee4\ud835\udc50; (b) smeared crack \ud835\udee4\ud835\udf09(blue area). Here a constant pressure \ud835\udc5dis applied in the crack \ud835\udee4\ud835\udc50, exerted on positive and negative sides, \ud835\udee4+ \ud835\udc50 and \ud835\udee4\u2212 \ud835\udc50, respectively. Employing the phase-field model in Eq. (14), we obtain the follow- ing form of the Heaviside function \u210b \u210b(\ud835\udc99) = 1 2 \u23a7 \u23aa \u23a8 \u23aa\u23a9"
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page6_figure4.png",
+    "page": 6,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 3171,
+    "height": 1428,
+    "column": "full",
+    "num_columns": 1,
+    "caption_label": "Figure. 4",
+    "caption": "Displacement \ud835\udc621 and stress \ud835\udf0e1 for the uniaxial bar in Fig. 3(a). The length of the bar is \ud835\udc3f= 1 and the regularisation length is \ud835\udcc1= 0.1. which yields the stress \ud835\udf0e1 (\ud835\udc651, \ud835\udc652 ): \ud835\udf0e1 (\ud835\udc651, \ud835\udc652 ) = \u23a7 \u23aa \u23aa \u23a8 \u23aa \u23aa\u23a9",
+    "caption_candidates": [
+      {
+        "label": "Figure. 4",
+        "text": "Displacement \ud835\udc621 and stress \ud835\udf0e1 for the uniaxial bar in Fig. 3(a). The length of the bar is \ud835\udc3f= 1 and the regularisation length is \ud835\udcc1= 0.1. which yields the stress \ud835\udf0e1 (\ud835\udc651, \ud835\udc652 ): \ud835\udf0e1 (\ud835\udc651, \ud835\udc652 ) = \u23a7 \u23aa \u23aa \u23a8 \u23aa \u23aa\u23a9"
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page7_figure5.png",
+    "page": 7,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 2639,
+    "height": 1329,
+    "column": "full",
+    "num_columns": 1,
+    "caption_label": "Figure. 5",
+    "caption": "(a) 2D inclined line crack (\ud835\udc65\ud835\udc60= \u2212\ud835\udc4eto \ud835\udc65\ud835\udc60= \ud835\udc4e) with \ud835\udc4ethe half length under a constant pressure \ud835\udc5d. The crack is represented by the red line. The inclination angle of the crack is \ud835\udf03. (\ud835\udc651, \ud835\udc652 ) is the global coordinate with the origin \ud835\udc42, while (\ud835\udc65\ud835\udc60, \ud835\udc65\ud835\udc61 ) is the local coordinate along the crack; (b) normalised crack opening displacement for different values of the inclination angle \ud835\udf03. The normalised crack opening displacement is defined as CODnor = COD\u2215CODm ana, where CODm ana is the exact solution of the maximum crack opening displacement (Eq. (49)), being at the origin \ud835\udc42\ud835\udc59in the current study. For brevity, we only present the results of Verhoosel and de Borst\u2019s approach for \ud835\udf03= 0\u25e6. Fig. 4 presents the comparison between phase-field solutions and the analytical solution. For the cohesive fracture model, the displace- ment shows some discrepancies in the range of the smeared crack \ud835\udee4\ud835\udf09(as illustrated in Fig. 3(b)), due to the regularised interface. The displacement is continuous along the bar due to the continuous Dirac-",
+    "caption_candidates": [
+      {
+        "label": "Figure. 5",
+        "text": "(a) 2D inclined line crack (\ud835\udc65\ud835\udc60= \u2212\ud835\udc4eto \ud835\udc65\ud835\udc60= \ud835\udc4e) with \ud835\udc4ethe half length under a constant pressure \ud835\udc5d. The crack is represented by the red line. The inclination angle of the crack is \ud835\udf03. (\ud835\udc651, \ud835\udc652 ) is the global coordinate with the origin \ud835\udc42, while (\ud835\udc65\ud835\udc60, \ud835\udc65\ud835\udc61 ) is the local coordinate along the crack; (b) normalised crack opening displacement for different values of the inclination angle \ud835\udf03. The normalised crack opening displacement is defined as CODnor = COD\u2215CODm ana, where CODm ana is the exact solution of the maximum crack opening displacement (Eq. (49)), being at the origin \ud835\udc42\ud835\udc59in the current study. For brevity, we only present the results of Verhoosel and de Borst\u2019s approach for \ud835\udf03= 0\u25e6. Fig. 4 presents the comparison between phase-field solutions and the analytical solution. For the cohesive fracture model, the displace- ment shows some discrepancies in the range of the smeared crack \ud835\udee4\ud835\udf09(as illustrated in Fig. 3(b)), due to the regularised interface. The displacement is continuous along the bar due to the continuous Dirac-"
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page8_figure6.png",
+    "page": 8,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 2703,
+    "height": 3166,
+    "column": "full",
+    "num_columns": 1,
+    "caption_label": "Figure. 6",
+    "caption": "Plot of the phase field \ud835\udc51and \ud835\udc2e\u22c5\u2207\ud835\udc51for different values of the inclination angle \ud835\udf03. The figures in the left column represent the phase field \ud835\udc51, while the figures in the right column denote \ud835\udc2e\u22c5\u2207\ud835\udc51. of the geometry is possible, such as remeshing using any standard package for triangular elements (Geuzaine and Remacle, 2009), while the \ue22f1-continuity assures an improved stress prediction (Chen et al., 2019). The plate has been discretised by the triangulation presented in Fig. 5(b). Powell\u2013Sabin B-splines describe the geometry and inter- polate the displacement field \ud835\udc2eand the displacement jump \ud835\udf10in an isoparametric sense (Chen and de Borst, 2019): \ud835\udc99= \ud835\udc41\ud835\udc63 \u2211 \ud835\udc58=1",
+    "caption_candidates": [
+      {
+        "label": "Figure. 6",
+        "text": "Plot of the phase field \ud835\udc51and \ud835\udc2e\u22c5\u2207\ud835\udc51for different values of the inclination angle \ud835\udf03. The figures in the left column represent the phase field \ud835\udc51, while the figures in the right column denote \ud835\udc2e\u22c5\u2207\ud835\udc51. of the geometry is possible, such as remeshing using any standard package for triangular elements (Geuzaine and Remacle, 2009), while the \ue22f1-continuity assures an improved stress prediction (Chen et al., 2019). The plate has been discretised by the triangulation presented in Fig. 5(b). Powell\u2013Sabin B-splines describe the geometry and inter- polate the displacement field \ud835\udc2eand the displacement jump \ud835\udf10in an isoparametric sense (Chen and de Borst, 2019): \ud835\udc99= \ud835\udc41\ud835\udc63 \u2211 \ud835\udc58=1"
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page9_figure7.png",
+    "page": 9,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 2249,
+    "height": 1349,
+    "column": "full",
+    "num_columns": 1,
+    "caption_label": "Figure. 7",
+    "caption": "(a) geometry and boundary conditions of one quarter of the fibre (Chen and de Borst, 2022), where the blue area indicates the smeared interface \ud835\udee4\ud835\udf09; (b) domain triangulation with the smallest element size \ud835\udc52= 0.10; (c) domain triangulation with the smallest element size \ud835\udc52= 0.04. In the figure, the blue area represents the smeared interface \ud835\udee4\ud835\udf09. To well describe \ud835\udee4\ud835\udf09, the mesh around the interface \ud835\udee4\ud835\udc50is refined with the smallest element size \ud835\udc52. A discrete interface model is employed to provide the reference solution. crack. The origin is set at the centre of the crack \ud835\udc42\ud835\udc59. In addition to the analytical solution, the numerical solution of Verhoosel and de Borst (2013) has been used for validation of the present method. In the simulation the size of the domain has been chosen such that the influence of boundary condition \ud835\udf15\ud835\udefaon the displacement field near the crack almost vanishes. A square domain \ud835\udefa= [\u22121, 1] \u00d7 [\u22121, 1] has been used to this end. The centre of the crack is at (\ud835\udc651, \ud835\udc652 ) = (0, 0). The half crack length \ud835\udc4e= 0.1. With a suitable re-scaling of the loading the material properties can be chosen as: Young\u2019s modulus \ud835\udc38= 1 and",
+    "caption_candidates": [
+      {
+        "label": "Figure. 7",
+        "text": "(a) geometry and boundary conditions of one quarter of the fibre (Chen and de Borst, 2022), where the blue area indicates the smeared interface \ud835\udee4\ud835\udf09; (b) domain triangulation with the smallest element size \ud835\udc52= 0.10; (c) domain triangulation with the smallest element size \ud835\udc52= 0.04. In the figure, the blue area represents the smeared interface \ud835\udee4\ud835\udf09. To well describe \ud835\udee4\ud835\udf09, the mesh around the interface \ud835\udee4\ud835\udc50is refined with the smallest element size \ud835\udc52. A discrete interface model is employed to provide the reference solution. crack. The origin is set at the centre of the crack \ud835\udc42\ud835\udc59. In addition to the analytical solution, the numerical solution of Verhoosel and de Borst (2013) has been used for validation of the present method. In the simulation the size of the domain has been chosen such that the influence of boundary condition \ud835\udf15\ud835\udefaon the displacement field near the crack almost vanishes. A square domain \ud835\udefa= [\u22121, 1] \u00d7 [\u22121, 1] has been used to this end. The centre of the crack is at (\ud835\udc651, \ud835\udc652 ) = (0, 0). The half crack length \ud835\udc4e= 0.1. With a suitable re-scaling of the loading the material properties can be chosen as: Young\u2019s modulus \ud835\udc38= 1 and"
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page10_figure8.png",
+    "page": 10,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 3260,
+    "height": 1570,
+    "column": "full",
+    "num_columns": 1,
+    "caption_label": "Figure. 8",
+    "caption": "Plot of the phase field \ud835\udc51and \ud835\udc2e\u22c5\u2207\ud835\udc51(\u03bcm) along the interface \ud835\udee4\ud835\udc50at the loading step\u0304 \ud835\udc62= 0.25 \u03bcm.",
+    "caption_candidates": [
+      {
+        "label": "Figure. 8",
+        "text": "Plot of the phase field \ud835\udc51and \ud835\udc2e\u22c5\u2207\ud835\udc51(\u03bcm) along the interface \ud835\udee4\ud835\udc50at the loading step\u0304 \ud835\udc62= 0.25 \u03bcm."
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page10_figure9.png",
+    "page": 10,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 1577,
+    "height": 1262,
+    "column": "col-1",
+    "num_columns": 2,
+    "caption_label": "Figure. 9",
+    "caption": "Crack opening displacement (COD, \u03bcm) along the interface \ud835\udee4\ud835\udc50at different loading steps. In the figure, the results of the domain triangulation in Fig. 7(b) and (c) are shown. The smallest element size \ud835\udc52in Fig. 7(b) and (c) is \ud835\udc52= 0.10 and \ud835\udc52= 0.04 respectively. The discrete interface model is employed to provide the reference solution (Chen et al., 2017). method. Herein, we have employed the gradient of the phase-field variable to define \ud835\udeff\ud835\udc50. A factor \u20182\u2019 is obtained in the form of \ud835\udeff\ud835\udc50, due to the identity constraint of the Dirac-delta function. This factor leads to a change in the form of the crack opening displacement [[\ud835\udc2e\u22c5\ud835\udc8f]]. It is given as a line integral of 2\ud835\udc2e\u22c5\u2207\ud835\udc51in the direction normal to the crack. We have validated the proposed forms of the crack opening displacement analytically in a one-dimensional setting and numerically in two multi-dimensional problems, featuring straight crack and curved cracks. Declaration of competing interest",
+    "caption_candidates": [
+      {
+        "label": "Figure. 9",
+        "text": "Crack opening displacement (COD, \u03bcm) along the interface \ud835\udee4\ud835\udc50at different loading steps. In the figure, the results of the domain triangulation in Fig. 7(b) and (c) are shown. The smallest element size \ud835\udc52in Fig. 7(b) and (c) is \ud835\udc52= 0.10 and \ud835\udc52= 0.04 respectively. The discrete interface model is employed to provide the reference solution (Chen et al., 2017). method. Herein, we have employed the gradient of the phase-field variable to define \ud835\udeff\ud835\udc50. A factor \u20182\u2019 is obtained in the form of \ud835\udeff\ud835\udc50, due to the identity constraint of the Dirac-delta function. This factor leads to a change in the form of the crack opening displacement [[\ud835\udc2e\u22c5\ud835\udc8f]]. It is given as a line integral of 2\ud835\udc2e\u22c5\u2207\ud835\udc51in the direction normal to the crack. We have validated the proposed forms of the crack opening displacement analytically in a one-dimensional setting and numerically in two multi-dimensional problems, featuring straight crack and curved cracks. Declaration of competing interest"
+      }
+    ]
+  }
+]

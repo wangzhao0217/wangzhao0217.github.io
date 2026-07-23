@@ -1,0 +1,2823 @@
+Vol.:(0123456789)
+Rock Mechanics and Rock Engineering (2025) 58:13393–13433 
+https://doi.org/10.1007/s00603-025-04798-w
+ORIGINAL PAPER
+Characterizing Dynamic Responses of Rock Slopes to Near‑Fault 
+Pulse‑Like Ground Motions
+Chunlei Xin1,2 · Lei Zeng2 · Zhao Wang3   · Wenkai Feng1,2 · Fei Yang4 · Iman Hajirasouliha5 · Xinyuan Yu5
+Received: 17 November 2024 / Accepted: 17 July 2025 / Published online: 26 July 2025 
+© The Author(s), under exclusive licence to Springer-Verlag GmbH Austria, part of Springer Nature 2025
+Abstract
+This research examines the dynamic response and failure mechanisms of slopes in near-fault regions subjected to pulse-like ground 
+motions (PLGM). Utilizing shaking table tests and numerical simulations, a categorization method is developed using the analytic 
+hierarchy process (AHP) to assess the effects of PLGM quantitatively. An energy-based approach, incorporating the ratio of seismic 
+energy release (RSER), quantifies dynamic response variations more accurately. Results indicate that the acceleration amplifica-
+tion factor (AAF) values for PLGM (QP, MY, and LD seismic motions) are 114.22%, 62.22%, and 31.11% higher than those for 
+NPLGM (WL seismic motion) at the slope shoulder (A8), and 131.1%, 73.33%, and 44.44% higher at the trailing edge of slope top 
+(A9). Additionally, the Arias intensity amplification factor (AlAF) values for PLGM are 397.26%, 195.33%, and 64.32% stronger 
+than those for NPLGM at A8, demonstrating that PLGM amplifies the dynamic response compared to NPLGM at increased eleva-
+tions. Disaggregated average amplification factors (DAAF) analysis shows that PLGM triggers diverse responses based on their 
+characteristics, with pronounced nonlinear amplification effects as elevation increases. Peak Fourier spectrum amplitude (PFSA) 
+analysis shows that high rock masses are particularly sensitive to the high-frequency components of PLGM, while wavelet pack-
+age transform analysis confirms that energy release is concentrated in the velocity pulse segment, significantly influencing the 
+frequency domain response at various elevations. Seismic motions with different pulse characteristics induce varied behaviors, 
+with higher frequency components causing stronger responses. These insights enhance understanding of rock slope responses in 
+near-fault earthquakes and support seismic slope design in such regions.
+ *	 Zhao Wang 
+	
+z.wang13@leeds.ac.uk
+ *	 Wenkai Feng 
+	
+fengwenkai@cdut.cn
+1	
+State Key Laboratory of Geohazard Prevention 
+and Geoenvironment Protection, Chengdu University 
+of Technology, Chengdu, China
+2	
+College of Environment and Civil Engineering, Chengdu 
+University of Technology, Chengdu, China
+3	
+Institute for Transport Studies, University of Leeds, Leeds, 
+UK
+4	
+Institute of Mountain Hazards and Environment, Chinese 
+Academy of Sciences, Chengdu 610299, China
+5	
+School of Mechanical, Aerospace and Civil Engineering, The 
+University of Sheffield, Sheffield, UK
+Highlights
+•	 Quantitatively analyzed differences in pulse-like ground motions using DAAF.
+•	 Observed shifts in high-frequency components of PLGM along slope elevation.
+•	 Demonstrated a strong correlation between pulse energy and time-frequency domain responses.
+•	 Explained the destructiveness of NPLGM and PLGM through AIAF and RSER.
+Keywords  Rock slopes · Shaking table test · Pulse-like ground motions · Dynamic response analysis · Numerical 
+simulation
+13394
+	
+C. Xin et al.
+List of Symbols
+E 	
+Elastic modulus
+휇 	
+Poisson’s ratio
+c 	
+Cohesion
+휑 	
+Internal friction angle
+휎 	
+Stress
+휀 	
+Strain
+t 	
+Time
+d 	
+Displacement
+v 	
+Velocity
+휉 	
+Damping ratio
+L 	
+Geometric dimension
+휌 	
+Density
+a 	
+Acceleration
+ci 	
+The i th IMF ranked form high frequency to low 
+frequency
+Etot 	
+The integral of the squared velocity time his-
+tory from 0 to the total duration.
+PGV 	
+Peak ground velocity
+V(휏) 	
+The velocity time history of original ground 
+motion record
+SVHC 	
+The criterion for classification according to 
+energy ratio thresholds
+ΔVi 	
+The velocity increment
+te 	
+The pulse-ending points
+a(t) 	
+Acceleration time-histories
+Δta 	
+The time interval from the beginning to the end 
+of the release.
+kn 	
+Normal stiffness
+T 	
+Tension strength
+휎s 	
+Normal stress of SV wave
+Cp 	
+Speed of the P wave
+A 	
+The original scale matrix
+Aij 	
+Denotes the element in the i-th row and j-th 
+column of A
+A′
+ij 	
+The normalized matrix
+S 	
+The vector of row sums
+n∑
+i=1
+Si 	
+The total sum of all row sums
+w 	
+The weight ratio of each method
+wk 	
+The normalized weight ratio for the k-th
+CI 	
+The category indicator
+훼 	
+1 × 7 Vector containing only -1 or 1
+PI 	
+Pulse-like indicator
+t17%,orgin 	
+Attains 17% of the total of the original signal
+t5%,pulse 	
+Attains 5% of the extracted pulse
+휌i 	
+Ratio of PGV(ci) to PGA(ci)
+PPV 	
+The difference of the peak velocity
+Ecn 	
+The cumulative energy, starting from the high-
+frequency component to the low-frequency 
+component
+Ek 	
+Ratio of the energy of the k-th half-cycle to 
+the total energy in the velocity time history of 
+ground motion
+Δt 	
+The time lapse of the time history between two 
+successive points
+ts 	
+The pulse-starting points
+Score 	
+A score criterion
+Ia 	
+Arias intensity
+ΔIa 	
+Difference of the ground motion from the 
+beginning to the end of the release of energy
+훽L 	
+Local damping coefficient
+ks 	
+Shear stiffness
+휎n 	
+Normal stress of P wave
+Cs 	
+Speed of the SV wave
+G 	
+Shear modulus
+1  Introduction
+The southwestern region of China is predominantly charac-
+terized by mountainous terrain, resulting in the widespread 
+presence of natural slopes. With population growth and 
+economic development, many important projects, such as 
+highways, hydropower stations, railways, and airports, are 
+being constructed on these natural slopes. The unique terrain 
+conditions have resulted in the formation of numerous cut 
+slopes due to extensive highway construction, with bedding 
+rock slopes being particularly prevalent in this region (Miao 
+et al. 2024). The region straddles two major seismic zones, 
+the Circum-Pacific seismic zone to the east and the Hima-
+layan seismic belt to the west, making it one of the most 
+seismic-prone areas globally. Southwest China, encompass-
+ing Sichuan, Yunnan, and Guizhou, lies at the intersection 
+of China’s north–south seismic belt and the southeastern 
+margin of the Qinghai-Tibet Plateau. This unique geological 
+position, shaped by the ongoing collision between the Indian 
+and Eurasian plates, renders the region highly susceptible to 
+seismic activity, with active fault zones such as the Long-
+menshan, Xianshuihe, and Xiaojiang faults inducing major 
+earthquakes (Cui et al. 2024). Historical records indicate 
+that the region is capable of producing earthquakes with 
+magnitudes as high as 8.0, as evidenced by seismic events 
+such as the 2008 Wenchuan (Mw 8.0), 2013 Ya’an (Mw 
+7.0), and 2014 Ludian (Mw 6.5). While such large earth-
+quakes are infrequent, the area’s complex geological struc-
+ture and active fault zones maintain a consistently elevated 
+seismic risk (Fan et al. 2016). Furthermore, the vast land 
+area has numerous active faults. During a major earthquake, 
+the stress released by fault rupture generates strong ground 
+motion that propagates in the surrounding regions (Zou et al. 
+2017). However, these strong earthquakes exhibit variable 
+intensity and impact along fault lines. A notable exam-
+ple is the Mw 6.5 earthquake that struck Ludian County, 
+13395
+Characterizing Dynamic Responses of Rock Slopes to Near‑Fault Pulse‑Like Ground Motions﻿	
+Zhaotong City, Yunnan Province, on 3rd August 2014. The 
+China Seismic Network Center reported the epicenter to be 
+located at 27.10º N, 103.34º E, with a focal depth of 12 km. 
+The earthquake was caused by the Baogunao-Xiaohe fault, 
+a branch of the Zhaotong-Ludian fault (Zhou et al. 2024). 
+This medium-strong earthquake occurred in the boundary 
+tectonic zone between the Sichuan-Yunnan rhombic block 
+and the South China block on the southeastern edge of the 
+Qinghai-Tibet Plateau, triggering numerous landslide geo-
+logical disasters. The earthquake caused a significant land-
+slide at Ganjiazhai, with an estimated volume of about 5 
+million ­m3 (Fu et al. 2020). Additionally, it triggered a large 
+landslide at Wangjiapo, with a volume of 1.2 million ­m3 
+(Luo et al. 2020), as illustrated in Fig. 1a, and a massive 
+landslide at Hongshiyan, with a volume of up to 12.24 mil-
+lion ­m3 (Luo et al. 2019), as illustrated in Fig. 1b. It is highly 
+unusual for a Mw 6.5 moderate earthquake to induce such 
+large-scale landslide disasters, emphasizing the particularly 
+severe dynamic response of slopes to near-fault ground 
+motion, leading to more significant damage. Consequently, 
+there is an urgent need to study the dynamic response char-
+acteristics of slopes under near-fault ground motion. In gen-
+eral, near-fault ground motions, occurring within 20 km of 
+a fault, can have significant impacts, particularly for PLGM 
+generated by earthquakes with magnitudes exceeding 6.5. 
+These events often result in more extensive damage over a 
+broader area. For instance, the 1999 Chi-Chi earthquake in 
+Taiwan (Mw 7.6), the Loma Prieta earthquake (Mw 6.9), 
+the Northridge earthquake (Mw 6.9), and the Hector Mine 
+earthquake (Mw 7.1) all produced strong ground motions 
+with magnitudes above 6.5. As a result, their effects typi-
+cally extended beyond a 20 km radius and influenced even 
+larger regions (Chen et al. 2019). These earthquakes are 
+particularly dangerous due to velocity pulse effects and 
+Fig. 1   Typical landslide hazards triggered by the Ludian earthquake: a Hongshiyan giant landslide; b Wangjiapo landslide
+13396
+	
+C. Xin et al.
+forward directivity effects (Zhang et al. 2024). The velocity 
+pulse effect is characterized by short-duration, high-energy 
+pulses in the ground motion velocity time history, causing 
+significant structural impacts, displacements, and deforma-
+tions (Zeng et al. 2024). The forward directivity effect can 
+be explained by the Doppler effect.
+Based on the direction of fault rupture and the site loca-
+tion, the effects of seismic waves can be classified as for-
+ward directivity and backward directivity, as illustrated in 
+Fig. 2. When the rupture propagation velocity of the fault 
+plane approaches the shear wave velocity and the rupture 
+moves toward the observation station, most of the fault 
+plane’s energy arrives at the station nearly simultaneously. 
+The accumulation of energy over a short period creates 
+PLGM, resulting in a prominent pulse at the start of the sta-
+tion record, known as the forward directivity effect (Li et al. 
+2024a, b). PLGM can transmit substantial seismic energy to 
+the structure within a short period, significantly enhancing 
+its dynamic response.
+Currently, three primary methods are employed to ana-
+lyze the dynamic response of slopes under strong near-fault 
+ground motions: field investigations (on-site monitoring), 
+shaking table model tests, and numerical simulations (Zhou 
+et al. 2022; Pai et al. 2011). However, on-site monitoring 
+alone often lacks the comprehensive insight required to fully 
+understand the dynamic behavior of actual slopes during 
+earthquakes (Song et al. 2021). The shaking table tests are 
+regarded as one of the most effective methods for studying 
+rock slopes (Xin et al. 2022). This method allows for precise 
+control of model size, input seismic motions, and boundary 
+conditions to mirror actual conditions closely and provides 
+an intuitive reflection of the dynamic response characteris-
+tics and damage instability process of slopes under seismic 
+excitations (Xin et al. 2019). For instance, Xin et al. (2024a) 
+employed large-scale shaking table tests to clarify the seis-
+mic failure mechanism of a bedding parallel stepped rock 
+slope, focusing on acceleration, displacement, and earth 
+pressure responses, along with shattering failure phenomena. 
+In another study, Xin et al. (2024b) investigated the dynamic 
+interactions and failure mechanisms within the tunnel-slope 
+system. They evaluated the effectiveness of the frame-anchor 
+support method by analyzing the acceleration responses of 
+the slope and the peak strain of the tunnel and assessing 
+damage to both the slope and the tunnel using damage iden-
+tification techniques based on the Marginal Hilbert Spectrum 
+(MHS) obtained through the Hilbert-Huang transform. Simi-
+larly, Bao et al. (2023) investigated the influence of ground 
+motion intensity and pulse characteristics on the dynamic 
+response of slopes under near-fault conditions, conducting 
+analyses in both time and frequency domains. Wei et al. 
+(2024a, b) used shaking table tests to examine the effects of 
+near-fault pulses on the seismic responses and pile-soil inter-
+actions in a soil-cable-stayed-bridge system model, while 
+Bao et al. (2021) compared the dynamic responses of slopes 
+subjected to PLGM versus non-pulse-like ground motion 
+(NPLGM). In another study, Fan et al. (2016) explored the 
+dynamic response differences between bedding slopes and 
+anti-dip slopes. Wang et al. (2024) also established two slope 
+models, bedding rock and debris slopes, and investigated 
+their dynamic response characteristics and instability mech-
+anisms using shaking table tests. Compared to NPLGMs, 
+PLGMs exhibit significantly stronger seismic effects, with 
+Fig. 2   The rupture directivity effect
+13397
+Characterizing Dynamic Responses of Rock Slopes to Near‑Fault Pulse‑Like Ground Motions﻿	
+studies indicating that PLGMs induce approximately 7% 
+greater seismic responses, thereby increasing slope instabil-
+ity risks (Antwi et al. 2024). Song et al. (2013) demonstrated 
+that waves containing velocity pulses significantly amplify 
+PGA, particularly in middle and upper slope sections, due 
+to increased horizontal inertial forces. Furthermore, Li et al. 
+(2024a, b) established a direct correlation between high-
+energy velocity pulses and landslide initiation, empha-
+sizing their critical role in slope instability mechanisms. 
+Quantitative analyses using the Newmark method by Gao 
+et al. (2014) revealed that near-fault velocity pulse ground 
+motions induce larger sliding displacements and stronger 
+destructive forces. Similarly, Song et al. (2014) found that 
+slope slip characteristics are closely linked to velocity pulse 
+properties, with slippage typically occurring early in seismic 
+activity and exhibiting higher velocity and energy, thereby 
+amplifying destructive impacts. In summary, while previ-
+ous research has demonstrated that PLGMs significantly 
+influence energy release patterns—particularly due to the 
+distinct characteristics of the velocity pulse segments—and 
+induce stronger dynamic responses compared to NPLGMs, 
+the underlying mechanisms driving these phenomena remain 
+to be further explored. Additionally, a more comprehensive 
+investigation is required to quantify the differences in seis-
+mic dynamic responses between PLGMs and NPLGMs.
+Numerical methods can be also used as effective means 
+to analyze the seismic performance and failure mechanisms 
+of slopes (Li et al. 2018). Commonly used approaches 
+employed to address practical problems in earthquake engi-
+neering include continuum-based methods such as finite ele-
+ment method, finite difference method, and boundary ele-
+ment method, as well as discontinuous medium approaches 
+like discrete element method, particle method, and meshless 
+method (Lin et al. 2018). For instance, Yang et al. (2012) 
+applied discrete element method to investigate the dynamic 
+response and failure modes of slopes with weak interlay-
+ers subjected to near-fault ground motions. Similarly, Song 
+et al. (2024) used FLAC finite difference software (Itasca 
+2014) to examine the dynamic response of slopes under 
+near-fault ground motion, taking into account factors such 
+as forward directivity effect, slip effect, and the presence 
+or absence of velocity pulses. Li et al. (2018) conducted 
+studies using UDEC discrete element numerical simulations 
+to examine the failure process of anti-dip rock slopes with 
+varying joint spacing and inclination under seismic loading. 
+In another relevant study, Ning et al. (2019) investigated the 
+dynamic behavior, failure evolution, and failure plane loca-
+tion of three typical toppling slopes in a basin under seismic 
+waves using universal distinct element code (UDEC) simu-
+lations (Itasca 2014). However, few studies have employed 
+the UDEC discrete element method to explore the dynamic 
+response characteristics and instability mechanisms of rock 
+slopes under near-fault ground motion. Additionally, very 
+limited research has compared the instability characteristics 
+and failure processes of slopes subjected to PLGM versus 
+NPLGM.
+Current research has yet to fully investigate the dynamic 
+response and failure mechanisms of rock slopes under near-
+fault PLGM, despite their substantial impact on slope stabil-
+ity. Specifically, the fundamental mechanisms responsible 
+for the enhanced dynamic responses induced by PLGMs, 
+as opposed to NPLGMs, are not yet fully understood. Fur-
+thermore, quantitative analyses are still lacking regarding 
+how velocity pulse segments contribute to the amplification 
+of dynamic responses in PLGMs and their correlation with 
+seismic energy release. To address this research gap, this 
+study proposes the RSER as a quantitative indicator to reveal 
+the mechanisms behind dynamic response variations. The 
+RSER serves two purposes: distinguishing between PLGM 
+and NPLGM, and analyzing response differences among 
+various PLGMs. Furthermore, the AIAF is introduced to 
+quantify the positive correlation between RSER values and 
+amplification effects, showing that higher RSER values lead 
+to proportionally greater AIAF magnitudes. Additionally, 
+wavelet packet transform further clarifies the relationship 
+between ground motion energy release and velocity pulses, 
+improving the interpretation of shaking table tests and 
+dynamic UDEC numerical results. It begins by outlining 
+the instrumentation, the shaking table test setup, and the 
+development of the numerical model. The study then pre-
+sents a detailed analysis of the differences in slope dynamic 
+responses under PLGM versus NPLGM, examining the 
+shaking table test results through time-domain, frequency-
+domain, and time–frequency domain analyses. These find-
+ings are compared with the results from UDEC simulation. 
+The study establishes a solid foundation for the designing 
+of earthquake-resistant slopes in seismically active areas.
+2  Prototype Case
+The prototype of the shaking table tests is based on a cut 
+slope along the Sanbao–Qingshui Expressway, located 
+between Qujing City and Kunming City. This area lies in 
+the northern part of the Yiliang Basin, within the collapsed 
+section of the Xiaojiang fault zone, an active fault zone 
+from the Holocene epoch, as illustrated in Fig. 3a. The fault 
+zone is an NNE-trending Holocene active fault, exhibiting 
+overall characteristics of high-angle, left-lateral strike-slip 
+faults that dip primarily toward the northwest or west, with 
+a width of approximately 20 km. Due to the strong seismic 
+activity in this region, the cut slope of the expressway is 
+particularly vulnerable to the effects of PLGM generated by 
+the fault. Furthermore, the study area is located within the 
+seismically active Sichuan-Yunnan block, a high-risk tec-
+tonic region. Data from the National Scientific Seismic Data 
+13398
+	
+C. Xin et al.
+(a)
+(b)
+Fig. 3   Topographical characteristics and geological section of the study area: a The topographical characteristics; b The geological section of 
+the road cut slope engineering
+13399
+Characterizing Dynamic Responses of Rock Slopes to Near‑Fault Pulse‑Like Ground Motions﻿	
+Center show that between 2010 and 2023, Yunnan Province 
+experienced over 30 earthquakes with magnitudes ≥ 5.0. 
+These events caused substantial economic losses, casual-
+ties, and severe geological hazards, highlighting the region’s 
+ongoing seismic activity. A significant event was the Mw 
+6.5 Ludian earthquake in August 2014, which occurred at 
+the southeastern edge of the Tibetan Plateau, within the tec-
+tonic boundary between the Sichuan-Yunnan rhombic block 
+and the South China block. The Ludian region, located at 
+the intersection of the Xiaojiang and Zhaotong-Ludian fault 
+zones, experiences strong tectonic activity and frequent 
+earthquakes (Tang et al. 2020). The earthquake triggered 
+numerous landslides, notable for their large numbers, con-
+centrated distribution, and extensive coverage. Significant 
+landslides included the Ganjiazhai landslide (5 million ­m3), 
+the Wangjiapo landslide (1.2 million ­m3), and the Hong-
+shiyan mega-landslide (12.24 million ­m3) (Fu et al. 2020; 
+Luo et al. 2019, 2020). Additionally, according to the Seis-
+mic Ground Motion Parameter Zonation Map of China 
+(GB18305-2015), the seismic fortification intensity is rated 
+as Grade VIII, which corresponds to considerable damage to 
+ordinary buildings, including partial collapse. Field drilling 
+and sampling results indicate that the slope predominantly 
+consists of siltstone and sandstone, characterized by lami-
+nated bedding structures. The rock mass exhibits well-devel-
+oped joints and fractures, with a loose structure and low 
+cementation, making it particularly vulnerable to seismic 
+impacts. The strata display a monocline structure, with the 
+rock layers at an orientation of 138º and a dip angle of 35º. 
+The joint spacing ranges from 20 to 25 cm. These joints are 
+unfilled and extend approximately 10–20 cm. According to 
+geological survey results and the Code for Geological Inves-
+tigation of Water Conservancy and Hydropower Engineering 
+(GB 50487-2022), the cut slope is classified as a bedding 
+parallel rock slope (Xin et al. 2024a), where the orienta-
+tion of the rock layer adversely affects slope stability. Under 
+strong external forces, such as high-intensity earthquakes, 
+the slope becomes highly prone to instability. To mitigate 
+this risk, the slope has been excavated in three stepped lev-
+els, with excavation slopes of 1:1. The lowest slope of the 
+last level is 1:1.25, as illustrated in Fig. 3b.
+To determine the physical and mechanical parameters of 
+the rock mass and its structural surfaces, extensive geotech-
+nical and structural tests were conducted, including labora-
+tory direct shear tests and in-situ shear tests, as shown in 
+Fig. 4. Standard samples were prepared, and in-situ shear 
+tests were performed under normal stress conditions of 
+0.5 MPa, 1.0 MPa, 1.5 MPa, and 2.0 MPa. These tests aimed 
+to evaluate shear strength parameters, including cohesion 
+and internal friction angle, under varying stress conditions, 
+as illustrated in Fig. 4a, b. Additionally, to accurately assess 
+the physical and mechanical properties of the model slope 
+rock-soil mass, laboratory direct shear tests and uniaxial 
+compressive strength tests were conducted on the prepared 
+standard specimens, as shown in Fig. 4c–e. The stress–strain 
+curves and test results are detailed in Fig. 4f, g. The resulting 
+physical and mechanical properties of both the prototype and 
+model materials used for the slopes are presented in Table 1.
+3  Methodology
+3.1  Shaking Table System
+To explore the dynamic response characteristics and fail-
+ure mechanisms of slopes under near-fault PLGM, com-
+prehensive large-scale shaking table tests were conducted. 
+The experiments were conducted in the Seismic Simulation 
+Shaking Table Laboratory at the State Key Laboratory of 
+Geohazard Prevention and Geoenvironmental Protection, 
+Chengdu University of Technology, as illustrated in Fig. 5. 
+The shaking table system comprises several key compo-
+nents, including the shaking table, a computer control center, 
+a hydraulic power supply, an accumulator, servo valves, 
+actuators, and a multi-channel data acquisition system. The 
+shaking table is designed to securely hold and mount test 
+specimens. Input waveforms are transmitted as signal com-
+mands from the control center to the servo valves, which 
+convert electrical signals into analog signals. By regulating 
+hydraulic flow, the actuators control the platform’s motion, 
+effectively simulating seismic waveforms. The system is 
+equipped with a multi-channel, real-time data acquisition 
+system to monitor and record the dynamic response of the 
+slope model during the experiments. This setup enables 
+real-time data recording and preliminary analysis, pro-
+viding essential support for subsequent research and data 
+processing.
+The shaking table platform measures 4 m in width and 
+6 m in length and is supported by eight hydraulic actuators 
+that enable six degrees of freedom motion along the X, Y, 
+and Z axes. Specifically, four horizontal actuators and four 
+vertical actuators support the platform. Motion along the 
+X and Y axes is controlled by two actuators each, while 
+motion along the Z axis is controlled by four actuators. The 
+arrangement of the actuators and the six degrees of freedom 
+motion capabilities are depicted in Fig. 5. The system uti-
+lizes a Pulsar digital control system, capable of generating 
+various types of excitation waves, including periodic waves, 
+random waves, and real seismic waves. The actuators can 
+achieve maximum horizontal and vertical accelerations of 
+15 m/s2 and 10 m/s2, respectively, with corresponding maxi-
+mum displacements of 300 mm (horizontal) and 150 mm 
+(vertical).
+13400
+	
+C. Xin et al.
+Additionally, a large, rigid model container was used to 
+house the slope model, measuring 2.2 m × 0.7 m × 1.2 m 
+(length × width × height). The container was securely 
+attached to the shaking table with high-strength bolts, and 
+the slope model was placed inside the rigid container.
+(a)                                                                                   (b)
+(c)                                                                       (d)                                             (e)
+(f)                                                                      (g)
+Fig. 4   The determination of the physical and mechanical proper-
+ties of both the prototype and model materials used for the slopes: 
+a drilling core diagram; b in-situ shear tests; c specimens for phys-
+ico-mechanical tests; d direct shear test; e uniaxial compression test; 
+f shear stress–normal stress fitting curve for the direct shear test; g 
+stress–strain curves under uniaxial compression
+13401
+Characterizing Dynamic Responses of Rock Slopes to Near‑Fault Pulse‑Like Ground Motions﻿	
+3.2  Similarity Relationships and Model Fabrication
+In this study, the cut slope between sections K86 + 380 and 
+K86 + 740 of the Yunnan-Kunming Expressway was used as 
+the prototype slope. In existing shaking table test research, 
+scaled model testing has been extensively employed by 
+researchers owing to physical constraints in testing equip-
+ment dimensions and load-bearing capacities (Shi et al. 
+2023; Yang et al. 2023; Xin et al. 2024a, 2024c; Fan et al. 
+2016). Consequently, the real dynamic response character-
+istics of this slope were simulated using a scaled model test 
+incorporating geometric, kinematic, and dynamic similarity 
+principles. To accurately replicate the prototype’s dynamic 
+behavior in the shaking table tests, similitude relations were 
+applied. These relations ensure appropriate scaling of key 
+parameters including geometric dimensions [L], time [T], 
+mass [M], as well as boundary and initial conditions. Based 
+on the Buckingham-π theorem and dimensional analysis, 
+physical quantities must satisfy constraint equations derived 
+from base quantities. These equations establish a rigorous 
+similarity relationship system between the scaled model 
+and the prototype slope, ensuring the scaled model closely 
+represents the full-scale prototype’s behavior (Miao et al. 
+2024; Wei et al. 2024a, b). By adopting a geometric scaling 
+ratio of 1:25 and carefully controlling other key similarity 
+parameters (including displacement, velocity, accelera-
+tion, frequency, and stress), the scaled model ensures close 
+alignment with the prototype in dynamic response charac-
+teristics, enabling accurate representation of the prototype’s 
+key dynamic behaviors and providing reliable simulations 
+of structural responses under dynamic loading conditions. 
+Previous research has demonstrated that scaled models can 
+effectively replicate the dynamic response of practical engi-
+neering structures when primary similarity criteria are satis-
+fied (Yang et al. 2023, 2025a; Shi et al. 2023). In this study, a 
+total of 13 parameters were considered, and these parameters 
+satisfy the physical function described by Eq. (1). [M], [L], 
+and [T] are regarded as fundamental dimensions, and based 
+on dimensional consistency, each parameter can be repre-
+sented by Eq. (2) and Eq. (3). Furthermore, the similarity 
+criterion function can be expressed as Eq. (4), where 휋i rep-
+resents the dimensionless similarity criterion. Consequently, 
+the general similarity criterion can be written as Eq. (5). The 
+similarity criterion and the similarity ratios of all 13 param-
+eters can be determined using the matrix method (Fan et al. 
+2016; Pai et al. 2011), as listed in Table 2.
+Additionally, orthogonal experimental results from previ-
+ous shaking table tests on rock slopes with similar material 
+compositions were utilized (Song et al. 2021, 2020; Xin et al. 
+2024a). The selected proportions of the similarity material 
+used to replicate the prototype rock mass were 65:13:5: 13:3 
+for barite powder, bentonite, gypsum, paraffin oil, and water, 
+respectively (see Fig. 6).
+In this study, 15 cm × 10 cm polyethylene film units were 
+utilized to simulate structural surface in the bedding rock slope 
+model, with their mechanical parameters derived from exist-
+ing research (Xin et al. 2024c). The connectivity rate was cal-
+culated based on field observations of vertical spacing, rock 
+internal friction angle, and average structural plane length, 
+following Eqs. (6) and (7)
+(1)
+f(l, 휌, a, E, 휇, c, 휑, 휎, 휀, t, d, v, 휁) = 0
+(2)
+F(휋1, 휋2, … 휋10)
+(3)
+M0L0T0 = La1 ⋅(ML−3)a2 ⋅(LT−2)a3 ⋅(ML−1T−2)a4
+⋅(1)a5 ⋅(ML−1T−2)a6 ⋅(1)a7 ⋅(ML−1T−2)a8 ⋅(1)a9
+⋅(T)a10 ⋅(L)a11 ⋅(LT−1)a12 ⋅(1)a13
+(4)
+a1 −3a2 −2a3 −a4 −a6 −a8 + a11+a12= 0
+−2a3 −2a4 −2a6 −2a8 + a10 −a12= 0
+a2+a4+a6+a8= 0
+a5+a7+a9+a13=cons tan t
+⎫
+⎪
+⎪
+⎪
+⎪
+⎬
+⎪
+⎪
+⎪
+⎪⎭
+(5)
+휋i = [l]a1 ⋅[휌]a2 ⋅[a]a3 ⋅[E]a4 ⋅[휇]a5 ⋅[c]a6
+⋅[휑]a7 ⋅[휎]a8 ⋅[휀]a9 ⋅[t]a10 ⋅[d]a11 ⋅[v]a12 ⋅[휁]a13
+(6)
+kl =
+Lcp
+Lk + Lcp
+Table 1   The physical 
+mechanical parameters of 
+prototype materials and model 
+materials
+Parameters
+Density ρ(kg/m3)
+Elastic 
+modulus 
+E(MPa)
+Cohesion 
+force c(kPa)
+Internal fric-
+tion angle 
+φ(°)
+Poisson’s 
+ratio (μ)
+Prototype rock mass
+2250
+780
+493
+36
+0.32
+Model rock mass
+2200
+50
+20
+36
+0.34
+Prototype structural surfaces
+1950
+94
+77
+25
+0.36
+Model structural surfaces
+1950
+3.42
+3
+23
+0.36
+13402
+	
+C. Xin et al.
+where, kl  represents the connectivity rate, Lcp represents the 
+average length of a single structural surface, and Lk denotes 
+the modified value derived from the average spacing of the 
+structural surfaces in accordance with the rock failure crite-
+rion, calculated using the following equation:
+The structural surfaces in the shaking table tests were 
+assigned a 60% connectivity rate, consistent with the meth-
+odology employed in comparable experimental studies (Cui 
+et al. 2024; Yang et al. 2023; Xin et al. 2024c).
+(7)
+Lk =
+a
+sin(45◦−휑
+2 )
+Fig. 5   Shaking table facilities
+Table 2   The similarity criterion based on the matrix method and similarity ratios
+E
+휇
+c
+휑
+휎
+휀
+t
+d
+v
+휉
+l
+휌
+a
+Equation
+Similarity criterion
+Similarity ratios
+a4
+a5
+a6
+a7
+a8
+a9
+a10
+a11
+a12
+a13
+a1
+a3
+a2
+휋1
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+−1
+−1
+−1
+휋1 = E∕(l휌a)
+CE = ClC휌Ca
+CE = 25
+휋2
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+휋2 = 휇
+1
+C휇= 1
+휋3
+1
+0
+0
+0
+0
+0
+0
+0
+−1
+−1
+−1
+휋3 = c∕(l휌a)
+Cc = ClC휌Ca
+Cc = 25
+휋4
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+휋4 = 휑
+1
+C휑= 1
+휋5
+1
+0
+0
+0
+0
+0
+−1
+−1
+−1
+휋5 = 휎∕(l휌a)
+C휎= ClC휌Ca
+C휎= 25
+휋6
+1
+0
+0
+0
+0
+0
+0
+0
+휋6 = 휀
+1
+C휀= 1
+휋7
+1
+0
+0
+0
+−1/2
+0
+1/2
+휋7 = t∕(a∕l)1∕2
+Ct = C1∕2
+l
+C−1∕2
+a
+Ct = 5
+휋8
+1
+0
+0
+−1
+0
+0
+휋8 = d∕l
+Cd = Cl
+Cd = 25
+휋9
+1
+0
+−1/2
+0
+−1/2
+휋9 = v∕(al)1∕2
+Cv = C1∕2
+l
+C1∕2
+a
+Cv = 5
+휋10
+1
+0
+0
+0
+휋10 = 휉
+1
+C휉= 1
+13403
+Characterizing Dynamic Responses of Rock Slopes to Near‑Fault Pulse‑Like Ground Motions﻿	
+During the fabrication of the slope model, the process 
+was divided into three sequential parts (serial numbers 1–3). 
+Step 1 (Serial Number 1): The model materials were pre-
+pared by mixing materials according to similarity material 
+proportions for slope modeling. Step 2 (Serial Number 2): 
+The preparation of similar materials for slope modeling was 
+carried out. The similar materials were thoroughly mixed 
+and sifted according to the specified similarity ratio to 
+ensure precise preparation. At the same time, physical and 
+mechanical property tests were conducted to verify the suit-
+ability of the materials for accurate slope modeling. Step 3 
+(Serial Number 3): The construction process of the slope 
+model was carried out. To minimize boundary effects and 
+ensure the model accurately simulates the seismic response, 
+10 cm thick polystyrene foam plates were placed on both 
+the front and rear sides of the slope model. A 20 cm thick 
+base was then fabricated and compacted to provide a sta-
+ble foundation. The slope was gradually constructed using 
+a layered compaction method, with each layer carefully 
+smoothed to ensure uniformity. After each layer was com-
+pleted, 15 × 10 cm polyethylene films were applied to simu-
+late structural surfaces. Sensors were embedded at speci-
+fied locations to monitor the dynamic response of the slope 
+model in real time during the experiment. Once construction 
+was completed, the surface was smoothed with a wooden 
+board, and reference points were marked to facilitate the 
+subsequent analysis of the slope’s shattered process. The 
+detailed steps of the entire construction process are illus-
+trated in Fig. 6.
+3.3  The Scheme of Tests and Loading
+This series of experiments aimed to investigate how rock 
+slopes dynamically respond to various seismic excita-
+tions. Accelerometers were installed at various elevations 
+within the model, as well as at the internal and external 
+corners of the slope, to monitor the dynamic response. 
+The monitoring cross-section of the slope model, which 
+represents the central section of the slope, is marked with 
+a red dashed line, as shown in Fig. 7a. The accelerometer 
+used is a three-axis piezoelectric sensor with a sensitiv-
+ity of 10 mV/m·s⁻2 and a frequency response range of 0.5 
+Hz to 2000.0 Hz. Each sensor measures 10 mm in length, 
+width, and height. A reference accelerometer (A0) was 
+fixed on the shaking table to monitor the input waveform. 
+All sensors were set to a sampling frequency of 512 Hz. 
+Additionally, the high-speed cameras with a resolution of 
+2048 × 1024 pixels were positioned on the side of the slope 
+to capture and record the asymptotic damage evolution in 
+real time. The data acquisition system collected real-time 
+Fig. 6   Manufacturing processes 
+of rock slope model
+13404
+	
+C. Xin et al.
+acceleration data based on the input ground motion from 
+the control system, allowing for detailed analysis of the 
+dynamic response characteristics of the slope.
+This study utilizes four representative ground motion 
+recordings from destructive earthquakes in Southwest 
+China, selected for their engineering seismology signifi-
+cance: the Wolong (WL), Ludian (LD), Menyuan (MY), 
+and Qingping (QP) seismic motions (Cui et al. 2023; 
+Wang et al. 2023; Zhang et al. 2016). Characterized by 
+pronounced velocity pulse effects and broadband spectral 
+components, these records have been extensively adopted 
+as input motions in shaking table tests for slope dynamic 
+response investigations (Yang et al. 2025a; Xin et al. 
+2024a, 2024c; Feng et al. 2025; Liu et al. 2024). Recent 
+(a)
+(b)
+Fig. 7   Conditions of test cases: a experimental setup; b monitoring plan and input scheme
+13405
+Characterizing Dynamic Responses of Rock Slopes to Near‑Fault Pulse‑Like Ground Motions﻿	
+studies have demonstrated that employing 3–4 representa-
+tive seismic motions meets the requirements for shaking 
+table test investigations (Liu et al. 2024; Shi et al. 2023; 
+Yang et al. 2025b). Accordingly, this study adopts these 
+four records as seismic inputs for the investigation. To spe-
+cifically investigate the effects of PLGM on rock slopes, 
+three PLGM and one NPLGM were considered. The four 
+seismic motions analyzed in this study were recorded at 
+four distinct locations: Ludian, Qingping, Menyuan, and 
+Wolong. Specifically, two of the recordings were obtained 
+during separate earthquake events: (1) The LD record was 
+obtained during the 2014 Ludian earthquake (Mw 6.5) at 
+the Ludian Strong Motion Station (Station Code: 53LLT) 
+in Zhaotong City, Yunnan Province. The estimated hypo-
+central distances for the event range between 10 and 15 km 
+(Fu et al. 2020). (2) The MY record was captured during 
+the 2022 Menyuan earthquake (Mw 6.9) at the Menyuan 
+Integrated Seismic Station (Station Code: E63MHY) in 
+Qinghai Province, with hypocentral distances of approxi-
+mately 15 to 20 km (Wang et al. 2023). In contrast, the 
+other two records represent near-field observations from 
+the 2008 Wenchuan earthquake (Mw 8.0): (1) The QP 
+seismic motion was recorded at the Mianzhu Qingping 
+Station (Station Code: 51QP), with a hypocentral distance 
+of 10–20 km. (2) The WL seismic motion was obtained 
+at the Wolong Valley Station (Station Code: 51WL), with 
+an estimated hypocentral distance of 30–40 km (Guo 
+et al. 2015; Fan et al. 2018).The LD seismic motion was 
+selected for its near-fault pulse characteristics, influenced 
+by the Xiaojiang fault zone, while QP and MY seismic 
+motions, which also display near-fault pulse characteris-
+tics, were used to examine the effects of different PLGM. 
+The WL seismic motion, in contrast to the other three, 
+serves to differentiate between PLGM and NPLGM. The 
+loading sequence starts with NPLGMs, followed by tran-
+sitions to PLGMs. The detailed input scheme is presented 
+in Fig. 7b, with input acceleration peak values gradually 
+increasing from 0.1 g to 0.8 g. Prior to each excitation, white 
+noise (WN) was used to scan the slope model to assess 
+changes in natural frequency and damping ratio.
+The acceleration time histories and Normalized Fast Fou-
+rier transform (NFFT) spectrum plots for the four different 
+seismic motions are shown in Fig. 8. Baseline correction and 
+0.5-50Hz band-pass filtering were applied using Seismosig-
+nal software (SeismoSoft 2023). The results show that the 
+frequency components of QP and MY seismic motions are 
+relatively more complex, followed by LD and WL seismic 
+motions. Similarly, the LD seismic motion, characterized as 
+a shallow-focus earthquake with a relatively shallow focal 
+depth, is heavily influenced by the Xiaojiang fault zones 
+(Zhou et al. 2016). This seismic event exhibits distinct near-
+fault pulse characteristics, as evidenced by the velocity pulse 
+segment in its velocity time-history curve. The seismic 
+motion is primarily governed by low-frequency components 
+in the range of 0.5 to 3 Hz, with a concentrated spectral 
+composition, classifying it as a narrow-band seismic motion. 
+In contrast, the MY seismic motion, another shallow-focus 
+earthquake, concentrates seismic energy predominantly in 
+the north–south direction (Cheng et al. 2024). Its frequency 
+components largely fall within the mid-to-high-frequency 
+range (1–5 Hz), displaying a relatively rich frequency spec-
+trum, which classifies it as a broad-band seismic motion. 
+The QP seismic motion, which is also a shallow-focus earth-
+quake, exhibits a pronounced site amplification effect near 
+the epicenter. Its ground motion frequencies cover a wide 
+range, from 0.5 to 20 Hz, placing it firmly within the broad-
+band category. This broad frequency spectrum leads to a 
+more complex dynamic response compared to other seismic 
+motions. On the other hand, the WL seismic motion, asso-
+ciated with a deep-focus earthquake at an epicentral depth 
+of approximately 25 km, exhibits significant attenuation, 
+particularly in the high-frequency range (Li et al. 2008; Fan 
+et al. 2018). The motion is primarily governed by low-fre-
+quency components ranging from 0 to 3 Hz, with a concen-
+trated spectral distribution, classifying it as a narrow-band 
+seismic motion. When compared to the WL seismic motion, 
+the LD seismic motion exhibits a slightly broader frequency 
+range. From a frequency-domain perspective, the broader 
+frequency content of the QP and MY seismic motions 
+indicates a higher potential for inducing stronger dynamic 
+responses in slopes. Although the LD seismic motion shows 
+less frequency complexity, it still exerts a significant impact. 
+In contrast, the WL seismic motion generates the weakest 
+dynamic response among the four types analyzed.
+3.4  Identification of Pulse‑like Seismic Ground 
+Motion
+A wide range of quantitative methods have emerged for iden-
+tifying PLGM, each demonstrating good accuracy within 
+specific research contexts. However, due to the inherent limi-
+tations of individual methods, they often produce inconsist-
+ent results for certain ground motion records, posing it chal-
+lenging to establish a reliable classification criterion based 
+solely on a single identification approach. To address this 
+issue, Peng and Han (2024) adopted a multifaceted strategy 
+for identifying pulse-like records. Instead of focusing on 
+improving a single time–frequency analysis-based identifi-
+cation method, they conducted a systematic review to select 
+seven baseline methods. The near-fault ground motion data-
+base used by their research reveals significant discrepancies 
+in the identification reliability of the seven baseline methods. 
+Based on the consistency of their determinations, ground 
+motions are classified into four categories:
+Category A: 6–7 methods identify the motion as 
+pulse-like;
+13406
+	
+C. Xin et al.
+Category B: 4–5 methods identify the motion as 
+pulse-like;
+Category C: 2–3 methods identify the motion as 
+pulse-like;
+Category D: 0–1 methods identify the motion as 
+pulse-like.
+Analysis indicates that if a method classifies too many 
+ground motions as pulse-like in Category D, it may be 
+considered unreliable. To address this issue, this study 
+employs the Analytic Hierarchy Process (AHP) to deter-
+mine the weight ratios of the seven baseline methods. AHP 
+is a structured decision-making technique that decomposes 
+complex judgments into pairwise comparisons, synthe-
+sizes the results, and derives priority rankings to support 
+optimal decision-making. By leveraging AHP, a compre-
+hensive categorization method was developed to integrate 
+the strengths of each approach, resulting in a more robust 
+and credible classification criterion. The specific steps for 
+applying AHP to assign weights to the baseline methods 
+are as follows:
+(1)	 For each method, based on the classification data and 
+pre-categorized results, quantify the number of pulse-
+like ground motions and their distribution across Cat-
+egories A–D. Similarly, determine the count and dis-
+tribution of non-pulse-like ground motions among the 
+same four categories.
+(2)	 Based on the results obtained from Step (1), design 
+scoring guidelines to score each method.
+(3)	 Using the scores of each method, apply the AHP to 
+determine the weight ratio of each method.
+If a method categorizes a significant number of ground 
+motions as pulse-like but assigns them to Category D, this 
+indicates a tendency for false positive identification (mis-
+classifying non-pulse motions as pulse-like). Conversely, if 
+a method classifies numerous motions as non-pulse-like yet 
+    (a)                                                                                (b)
+(c)                                                                              (d)
+Fig. 8   Time history curves and Fourier spectra of the input waveforms: a LD seismic motion; b WL seismic motion; c MY seismic motion; d 
+QP seismic motion
+13407
+Characterizing Dynamic Responses of Rock Slopes to Near‑Fault Pulse‑Like Ground Motions﻿	
+distributes them in Categories A or B, this reveals a false 
+negative tendency. To quantitatively evaluate each method’s 
+reliability, establish the following scoring framework in Step 
+(2): For classified pulse-like ground motions, assign 1 point 
+if placed in Category A, 0.5 points if placed in Category B, 
+0 points if placed in Category C, and −1 point if placed in 
+Category D. For classified non-pulse-like ground motions, 
+assign −1 point if placed in Category A, −0.5 points if placed 
+in Category B, 0 points if placed in Category C, and 1 point 
+if placed in Category D. To calculate the composite score for 
+each method, sum the scores from the aforementioned two 
+scoring categories to obtain the raw score. The total raw score 
+is computed as NA + 0.5NB + ND, where NA, NB, and ND 
+denote the respective counts of ground motions classified into 
+Categories A, B, and D. Each method’s scaled score is then 
+derived by dividing its raw score by the total raw score and 
+multiplying by the standardized maximum score of 100 points. 
+In Step (3), Saaty’s 1–9 scale method is used to evaluate the 
+relative importance of each pair of methods (Saaty et al. 1983). 
+Specifically, the values from 1 to 9 represent levels of impor-
+tance from equally important to extremely more important.
+For instance, if the scaled score difference between two 
+methods falls within the range of 0 to 3, it is assigned a scale 
+value of 1, indicating equal importance. As the score differ-
+ence increases, the assigned scale value increases accordingly, 
+reflecting greater importance. Finally, the weight ratio of each 
+method is calculated based on the final importance result of 
+each method. This comprehensive categorization method is 
+fully established, with the category indicator (CI) and the 
+weight ratio for each method calculated using Eqs. (8)–(12):
+where, A is the original scale matrix, Aij denotes the element 
+in the i-th row and j-th column of A, and 
+n∑
+i=1
+Aij is the sum of 
+the j-th column, A′
+ij represents the normalized matrix, S is 
+the vector of row sums, 
+n∑
+i=1
+Si is the total sum of all row sums, 
+wk is the normalized weight ratio for the k-th, and w is the 
+(8)
+A
+ij =
+Aij
+n∑
+i=1
+Aij
+(9)
+Si =
+n
+∑
+j=1
+A
+ij
+(10)
+wk =
+Si
+n∑
+i=1
+Si
+(11)
+w = [0.066, 0.018, 0.279, 0.050, 0.178, 0.284, 0.125]T.
+(12)
+CI=훼⋅w
+Table 3   Classification results of QP seismic motion using the selected seven baseline methods
+M1: Wavelet transform (WT) method; M2: Hilbert-Huang Transform (HHT) method; M3: Intrinsic time-scale decomposition technique (ITD) 
+method; M4: Peak-to-peak velocity (PPV) method; M5: Pulse period (PP) method; M6: Significant velocity half-cycles. (SVHC) method; M7: 
+Development length of velocity time history (DLVTH) method
+(M1)PI: Pulse indicator, ­txorgin: attains x% of the total of the original signal, ­tx%,pulse: attains x% of the extracted pulse; (M2) ρi:PGV(ci)/PGA(ci), 
+c(i) is the ith IMF ranked form high frequency to low frequency; ΔEci,max: = ­Max[REci-REci-1], the ­REci = ­Ecn/Etot, ­Ecn is the cumulative energy, 
+starting from the high-frequency component to the low-frequency component, ­Etot is the integral of the squared velocity time history from 0 to 
+the total duration. (M3) PI: Pulse-like, indicator; (M4) PPV: The difference of the peak velocity, Score: A score criterion; (M5) PGV: Peak 
+ground velocity, Ep: E(p) = ∫te
+ts dE(t) = E(te)−E(ts) , E(t) =
+∫t
+0 V2(휏)d휏
+∫∞
+0
+V2(휏)d휏 , where V(휏) is the velocity time history of original ground motion record, ts 
+and te represent the pulse-starting and pulse-ending points, respectively. PI(M6) Ek: ratio of the energy of the k-th half-cycle to the total energy 
+in the velocity time history of ground motion., Number of SVHC: the criterion for classification according to energy ratio thresholds (M7) ­IPR: 
+IPR=
+1
+1 + e5−0.45PGV+0.01LDV  , LDV =
+n∑
+i=1
+(
+√
+(Δt)2 + (ΔVi)2) where Δt is the time lapse of the time history between two successive points, ΔVi is the 
+velocity increment, PGV: Peak ground velocity
+Method
+Key parameters
+Criterion for classification
+Identification results
+M 1
+PI = 3.66, ­t17%,orgin = 4.75s, ­t5%,pulse = 4.66s
+PI > 0, ­t17%,orgin > ­t5%,pulse
+pulse-like
+M 2
+ρ2 = 0.12, ΔEc2,max = 0.45
+ρi > 0.12, ΔEci,max > 0.32
+no-pulse-like
+M 3
+PI = 0.88
+PI ≥ 0.65
+pulse-like
+M 4
+PPV = 62.2cm/s, Score = 1.0
+PPV ≥ 25 cm/s, Score ≥ 0.6
+pulse-like
+M 5
+PGV = 32.2cm/s, Ep = 0.35
+PGV ≥ 30 cm/s, Ep > 0.3
+pulse-like
+M 6
+Ek = 0.48, Number of SVHC = 2
+Ek ≥ 0.42, Number of SVHC = 2
+pulse-like
+M 7
+IPR = 0.98, PGV = 32.2cm/s
+IPR ≥ 0.7, PGV ≥ 30 cm/s
+pulse-like
+13408
+	
+C. Xin et al.
+weight ratio of each method, a 7 × 1 vector. All the weight 
+ratios in the vector add up to 1, while 훼 is a 1 × 7 vector 
+containing only −1 or 1 to indicate the classification result 
+using the selected seven baseline methods. It is marked 1 if 
+a ground motion record is classified as pulse-like by a base-
+line method, and −1 if classified as non-pulse-like; therefore 
+−1 ≤ CI ≤ 1. For example, Table 3 shows the classification 
+results of QP seismic motion, using the selected seven base-
+line methods. If a ground motion record is classified as 
+pulse-like by all baseline methods except for Method 2, 
+then  = [1, −1, 1, 1, 1, 1, 1].
+According to this new categorization system, ground 
+motions are classified into four categories: Category A com-
+prises definitively PLGM; Category B includes apparently 
+PLGM; Category C consists of probably PLGM; and Cat-
+egory D covers ground motions unlikely to exhibit pulse-like 
+characteristics. In general, the following four categories are 
+defined: (i) Category A: CI ≥ 0.8, which are classified as 
+pulse-like by 6–7 methods; (ii) Category B: 0 ≤ CI < 0.8, 
+which are classified as pulse-like by 4–5 methods; (iii) Cat-
+egory C: −0.8 ≤ CI < 0, which are classified as pulse-like 
+by 2–3 methods; and (iv) Category D: CI < −0.8, which are 
+classified as pulse-like by 0–1 method. Methods 1–7 are the 
+WT, HHT, ITD, PPV, PP, SVHC, DLVTH based methods, 
+respectively (Baker et al. 2007; Chen et al. 2019; Geng and 
+Pu, (2023); ; ; ; ; ; ; ; ; Hayden et al. 2014; Panella et al. 
+2017; Zhai et al. 2013; Zhai et al. 2018). Figure 9 illustrates 
+the flowchart of the proposed categorization method.
+Using the velocity time history curves for the QP, MY, 
+LD, and WL seismic motions (see Fig. 10), the AHP com-
+prehensive categorization method was applied to determine 
+four key ground motion parameters. This analysis was per-
+formed using Methods 1 to 7, in accordance with the pre-
+scribed classification criteria. The calculation results are 
+presented in Fig. 11a, b. In these figures, colors shifting 
+towards red signify a higher likelihood of being classified 
+as PLGM, while colors shifting towards blue indicate a ten-
+dency towards NPLGM. For example, in the case of QP 
+seismic motion, Method 1 predominantly shows red hues, 
+indicating that it is classified as PLGM, whereas Method 2 
+displays blue hues, suggesting it is categorized as NPLGM. 
+Similarly, Methods 3 through 7 classify the QP motion as 
+Fig. 9   The flowchart of the proposed categorization method (Peng and Han 2024)
+13409
+Characterizing Dynamic Responses of Rock Slopes to Near‑Fault Pulse‑Like Ground Motions﻿	
+PLGM. Therefore, for 훼QP , the value is [1, −1, 1, 1, 1, 1, 1]. 
+Similarly, 훼MY,훼LD , and 훼WL are [1, 1, 1, −1, 1, −1, 1], [1, 
+1, 1, 1, 1, −1, 1], and [−1, −1, −1, 1, −1, −1, −1], respec-
+tively. Substituting these into Eq. (5) results in 0.982, 0.697, 
+0.538, and −0.95, respectively. As illustrated in Fig. 11c, QP 
+seismic motion is classified as Category A, whereas MY and 
+LD seismic motions are classified as Category B, and WL 
+seismic motion falls into Category D. Consequently, QP, 
+MY, and LD seismic motions are identified as PLGM, while 
+WL seismic motion is categorized as NPLGM.
+4  Results and Analysis
+4.1  Acceleration Response Analysis
+Different seismic motions, influenced by various source 
+effects, can exhibit notable characteristic differences, such 
+as the presence of velocity pulses and a broad spectrum of 
+frequency domain components. These variations result in 
+differing dynamic responses in slopes. In the time domain, 
+acceleration serves as the key indicator of the magnitude 
+of seismic inertial forces, with larger inertial forces gener-
+ally leading to more intense dynamic responses in slopes. 
+To quantitatively assess the differential dynamic responses 
+of slopes under varying seismic motions, the acceleration 
+amplification factor (AAF) is employed. The AAF is defined 
+as the ratio of the peak acceleration at each measurement 
+point to the peak value of the input signal, as shown in 
+Eq. (13):
+where, PGAi represents the peak acceleration at various 
+monitoring positions on the slope, and PGAo represents the 
+peak acceleration on the shaking table.
+As shown in Fig. 12a, b, when the input acceleration peak 
+value is 0.4 g, the AAF at both the external and internal 
+corners of the slope increases with increasing elevation, 
+reaching its maximum at the top of the slope. This indicates 
+a clear acceleration amplification effect influenced by the 
+elevation. Among the seismic motions, QP seismic motions 
+show the most pronounced amplification effect, followed 
+(13)
+AAF = PGAi
+PGAo
+     (a)                                                                                  (b)
+     (c)                                                                                   (d)
+Fig. 10   The velocity of time history of representative ground motions from the four categories: a QP seismic motion; b MY seismic motion; c 
+LD seismic motion; d WL seismic motion
+13410
+	
+C. Xin et al.
+by MY and LD seismic motions, with WL seismic motion 
+showing the weakest effect. This result demonstrates that 
+PLGMs produce significantly stronger amplification effects 
+than NPLGMs. Notably, the AAF values at the internal cor-
+ners are higher than those at the external corners. This may 
+be attributed to the different degrees of freedom at these 
+two types of corners. As illustrated in Fig. 12c, d, when 
+the input acceleration peak value increases to 0.6 g, the 
+AAF at both the external and internal corners of the slope 
+decreases significantly. The QP seismic motion still demon-
+strates the strongest acceleration amplification effect, with 
+AAF reductions of 21% at internal corners and 30% at exter-
+nal corners. The AAF for the MY seismic motion shows a 
+slight decrease of 4.03%, 8.46%, 7.38%, and 5.29% at the 
+external corners from A2 to A8, respectively, remaining 
+relatively stable. In contrast, the AAF for the WL seismic 
+motion increased by 3.03%, 5.42%, 14.07%, and 18.51% 
+at the same external corners, while the LD seismic motion 
+shows a smaller increase of 3.8%, 4.5%, 2.46%, and 2.8%. 
+Both cases show a slight increasing trend. The stronger 
+amplification effect of QP seismic motion can be attrib-
+uted to its high-amplitude, short-duration seismic motion 
+velocity pulse segment (SMVPS), which can introduce a 
+substantial amount of energy into the slope in a very short 
+period. This rapid energy input does not allow the slope suf-
+ficient time to recover elastically, causing a quick transition 
+from the elastic phase to plastic failure. Under QP seismic 
+motion, the increased amplitude intensifies seismic inertia 
+forces, leading to cracking and the progressive expansion 
+of secondary joints. These joints can obstruct seismic wave 
+(a)                                                                                   (b)
+(c)
+Fig. 11   Velocity pulse identification results: a Identification results of method 1–3; b Identification results of method 4–7; c Identification results 
+based on the CI index
+13411
+Characterizing Dynamic Responses of Rock Slopes to Near‑Fault Pulse‑Like Ground Motions﻿	
+propagation, partially blocking some of the seismic energy, 
+which ultimately reduces the energy reaching the measure-
+ment points. Despite the reduced amplification effect of QP 
+seismic motion, it remains stronger than the other three types 
+of seismic motion. As illustrated in Fig. 12e, f, when the 
+input acceleration peak value increased to 0.8 g, a marginal 
+rise in AAF is observed across all measurement points. Spe-
+cifically, under the input of QP seismic motion, the AAF at 
+A8 shows a modest increase of approximately 9.9%, while 
+the AAF values at points A2, A4, and A6 increase by 6.05%, 
+Fig. 12   The AAF values at the 
+measurement points: a external 
+corners of slope with 0.4 g 
+input peak ground accelera-
+tion; b internal corners of slope 
+with 0.4 g input peak ground 
+acceleration; c external corners 
+of slope with 0.6 g input peak 
+ground acceleration; d internal 
+corners of slope with 0.6 g 
+input peak ground accelera-
+tion; e external corners of slope 
+with 0.8 g input peak ground 
+acceleration; f internal corners 
+of slope with 0.8 g input peak 
+ground acceleration
+13412
+	
+C. Xin et al.
+12.60%, and 8.08%, respectively. This phenomenon indicates 
+that the input ground motion energy is not fully transmit-
+ted to the measurement points, with energy losses primar-
+ily attributed to two factors: first, the attenuation of seismic 
+waves due to reflection, refraction, and medium absorption 
+during propagation; and second, the partial utilization of 
+energy to induce slope instability (Shi et al. 2023). Based on 
+the results of the analysis, it is evident that PLGM produces 
+significantly stronger amplification effects and cause more 
+damage compared to NPLGM.
+Although both QP and MY seismic motions are classified 
+as PLGM, their dynamic response characteristics show rela-
+tive differences. Analyzing AAF alone does not effectively 
+highlight the differences between their dynamic responses. 
+To further quantify how different PLGMs affect the dynamic 
+response of the slope, the difference in AAF (DAAF) is 
+introduced. DAAF quantifies the amplification difference 
+between QP and MY seismic motions, with DAAF defined 
+as the difference between ­AAFQP and ­AAFMY. If DAAF is 
+greater than 0, it indicates that the amplification effect of QP 
+seismic motion is stronger than that of MY seismic motion. 
+Conversely, if DAAF is less than 0, MY seismic motion has 
+a stronger amplification effect than QP seismic motion.
+The DAAF results shown in Fig. 13a reveal that at meas-
+urement points A2, A6, and A8, both AAF and DAAF 
+increase sharply as relative elevation and peak ground accel-
+eration (PGA) rise. However, the AAF increases nonlinearly 
+with elevation, highlighting a pronounced “elevation ampli-
+fication effect” where energy amplification effect shows sig-
+nificant nonlinear characteristics with increasing elevation. 
+Specifically, when PGA is 0.2 g, the DAAF values follow 
+the order A6 > A8 > A2. As the PGA increases to 0.6 g, the 
+DAAF at A8 becomes approximately equal to A6, and both 
+are greater than A2. When PGA reaches 0.8 g, A8 surpasses 
+A6. These observations indicate that as PGA increases, the 
+DAAF at higher elevations rises progressively, highlight-
+ing significant variations in dynamic response due to the 
+varying characteristics of PLGM. It is worth noting that the 
+(a)                                                                                 (b)
+(c)                                                                                  (d)      
+Fig. 13   The AAF and DAAF measurements at various points along the slope under different peak accelerations: a external corners of slope; b 
+internal corners of slope; c A13 ~ A8; d A11 ~ A9
+13413
+Characterizing Dynamic Responses of Rock Slopes to Near‑Fault Pulse‑Like Ground Motions﻿	
+growth rate of DAAF at A8 and A2 is significantly greater 
+than at A6, indicating that these points are more sensitive 
+to PLGM excitation. This phenomenon may be due to the 
+amplification of specific energy components as they reach 
+the top of the slope. The mechanism behind this effect will 
+be discussed in further detail in the following sections.
+Under low amplitude PGA excitation, there is a signifi-
+cant difference in DAAF. However, as the peak acceleration 
+increases, this difference diminishes. This behavior suggests 
+that the velocity pulse characteristics of PLGM introduce 
+large amounts of energy into the slope. The repeated tensile 
+and shear forces of the high-intensity ground motion cause 
+numerous cracks within the slope, dividing the rock mass 
+into loose blocks. This fragmentation enhances the isolation 
+and damping effects of the slope, resulting in a decrease 
+in DAAF as PGA increases. The variation of DAAF at the 
+internal corners is generally similar to that observed at the 
+external corners, as shown in Fig. 13b. However, it is note-
+worthy that the DAAF at A9 surpasses that at A8, indicating 
+a more intense and sensitive dynamic response at the inter-
+nal corners under PLGM with varying characteristics. This 
+is due to the fact that the external corners are close to the 
+free surface, resulting in a higher degree of freedom. Con-
+sequently, deformation is more likely to occur under seismic 
+tension and shear, leading to weaker energy transfer effects 
+compared to internal corners. As a result, both the AAF 
+and DAAF are smaller at the external corners than at the 
+internal corners. 
+As shown in Fig. 13c, the DAAF results at measure-
+ment points A13, A12, and A8 reveal that DAAF increases 
+sharply with rising both elevation and PGA. The energy 
+amplification effect shows significant nonlinear character-
+istics with increasing elevation. By comparing the results for 
+the internal and external corners, the following observations 
+can be made:
+Under the influence of two different types of PLGM, 
+the difference in dynamic response at the top of the slope 
+becomes more pronounced with increasing elevation. 
+This indicates that higher elevations experience a stronger 
+dynamic response and are more sensitive to PLGM, thereby 
+increasing the risk of cracking at the top of the slope.
+Under different PGA amplitudes, the overall DAAF val-
+ues for A12 and A13 are significantly smaller than that for 
+A8, indicating less variation in the dynamic response within 
+the slope. As elevation increases, the difference in dynamic 
+response at the top of the slope becomes more pronounced. 
+This phenomenon can be explained by the stress state within 
+the slope. Inside the slope, the overlying soil layer provides a 
+more stable stress condition compared to the slope surface. 
+When seismic waves act as external loads on the slope, the 
+internal stress state remains relatively stable. In contrast, 
+the top of the slope lacks the constraint of an overlying soil 
+layer, and hence is more vulnerable to disturbances, resulting 
+in a stronger dynamic response. This phenomenon, known as 
+the “surface effect”, highlights the more pronounced differ-
+ences in dynamic response at the top of the slope.
+With increasing elevation, the DAAF results shown in 
+Fig. 13d indicate that at A11, A10, and A9, the variation in 
+DAAF near the trailing edge follows a similar pattern to that 
+observed in Fig. 13c. Notably, the DAAF of A9, located at 
+the top of the slope, is larger than at A11 and A10, which 
+are situated inside the slope. This suggests that the stress 
+state becomes more stable closer to the interior of the slope, 
+enhancing its resistance to seismic inertia forces. Conse-
+quently, the DAAF at the top of the slope (A9) is signifi-
+cantly greater than at A11 and A10.
+Under the PLGM, the seismic disturbance is most pro-
+nounced at the top of the slope. Additionally, due to the 
+elevation amplification effect of seismic waves, the dynamic 
+response differences between QP and MY seismic motions 
+are greatest at the top. Consequently, the DAAF values at the 
+measuring points inside the slope are significantly smaller 
+compared to those at the surface and the top of the slope. 
+The degree of decrease in DAAF can be used to character-
+ize the progressive damage in different parts of the slope as 
+PGA increases.
+4.2  FFT Spectrum Analysis
+By applying the Fourier Transform, the acceleration signals 
+in the time domain are converted into frequency domain 
+representations, showing the distribution of seismic energy 
+at different frequencies. Examining the spectrum plots is 
+crucial for identifying the primary frequency components 
+of seismic motion and understanding their impact on the 
+slope, which is essential for designing earthquake-resistant 
+structures and assessing seismic risks. Figure 14 shows the 
+Fourier spectra of MY, LD, QP, and WL seismic motions at 
+the A8, with an input peak acceleration of 0.4 g. It is evident 
+that, except for the WL seismic motion, the high-frequency 
+components of the other three seismic motions are amplified 
+to varying degrees, with QP seismic motion exhibiting the 
+largest range of high-frequency amplification. This indicates 
+that the amplification effect on high-frequency components 
+of PLGM is stronger than for NPLGM. The order of ampli-
+fication is as follows: QP seismic motion > MY seismic 
+motion > LD seismic motion > WL seismic motion.
+To better examine the variation patterns of the fre-
+quency spectrum at different measurement points on 
+the slope under various seismic motions, the Peak Fou-
+rier Spectrum Amplitude (PFSA) is introduced. PFSA is 
+defined as the ratio of the FFT peak value of the response 
+waveform to that of the input waveform. As illustrated in 
+Fig. 15a, b, for LD and WL seismic motions from A2 to 
+A8, the PFSA increases gradually. On the contrary, for 
+QP and MY seismic motions, the PFSA increases slowly 
+13414
+	
+C. Xin et al.
+from A2 to A4, but from A6 to A8, the PFSA continues to 
+increase with a larger growth rate. The growth rate for QP 
+seismic motion is stronger than for MY seismic motion.
+This indicates that under the effect of PLGM with dif-
+ferent characteristics, higher elevations are more sensitive 
+to seismic motions, resulting in a more intense dynamic 
+response. This observation explains why the DAAF 
+increases with elevation, as the difference in dynamic 
+response becomes more pronounced at higher elevations, 
+with PFSA amplification being greatest for QP seismic 
+motion, followed by MY and LD seismic motions, and 
+weakest for WL seismic motion. This phenomenon can 
+be attributed to the concentrated energy of PLGM in the 
+SMVPS. As the seismic motion ascends, the concentrated 
+energy intensifies reflection and refraction effects at higher 
+elevations. At the top of the slope, where terrain or geo-
+logical conditions frequently undergo significant changes, 
+seismic waves are more prone to pronounced refraction 
+and reflection. This can result in significant amplification 
+of seismic motion energy. Therefore, the PFSA values of 
+PLGM at the top of the slope are typically higher than 
+those of NPLGM.
+As illustrated in Fig. 15c, d, when the peak input accel-
+eration reaches 0.6 g, the pattern resembles that observed 
+at 0.4 g. However, it is worth noting that the PFSA values 
+for A6 to A8 show a certain degree of reduction, and it can 
+be seen that the growth rate of the PFSA decreases. This 
+phenomenon can be explained by the increased excitation 
+amplitude and persistent influence of a repeated sequence of 
+strong earthquakes, which cause numerous cracks within the 
+slope. These cracks obstruct seismic wave propagation and 
+reduce the effectiveness of energy transfer, thereby decreas-
+ing the growth rate of the PFSA.
+The Fourier spectrum of MY and QP seismic motions at 
+various measurement points on the slope surface is illus-
+trated in Fig. 16, with an input peak acceleration of 0.4 g. 
+From the results of Fig. 16a, b at A1 to A3, the dominant 
+frequency range for MY seismic motion is between 3 and 
+5 Hz, whereas for QP seismic motion, it is between 15 
+and 20 Hz. As elevation increases beyond A3, the low-
+frequency energy of both MY and QP seismic motions 
+progressively shifts to higher frequencies, concentrating 
+in the ranges of 23 to 25 Hz for MY seismic motion and 47 
+to 53 Hz for QP seismic motion. This observation suggests 
+that the predominant frequency band of PLGMs exhibits 
+a transition from lower to higher frequencies as elevation 
+increases. The results show that the rock mass at the higher 
+elevation is more sensitive to the high-frequency energy 
+(a)                                                                                (b)
+(c)                                                                              (d)                                         
+Fig. 14   The spectrum for a peak acceleration of 0.4 g: a QP seismic motion; b MY seismic motion; c LD seismic motion; d WL seismic motion
+13415
+Characterizing Dynamic Responses of Rock Slopes to Near‑Fault Pulse‑Like Ground Motions﻿	
+of PLGM, potentially due to the influence of SMVPS, 
+as will be discussed in the next section. Furthermore, as 
+elevation increases, the PFSA amplification effect of QP 
+seismic motion exceeds that of MY seismic motion, high-
+lighting that the energy transfer in the frequency domain 
+of PLGM varies with its characteristics. In general, 
+higher frequency domain components lead to more severe 
+dynamic responses.
+Fig. 15   PFSA variation curves: 
+a the measurement points of 
+external corners with 0.4 g 
+input peak ground acceleration; 
+b the measurement points of 
+internal corners with 0.4 g input 
+peak ground acceleration; c the 
+measurement points of external 
+corners with 0.6 g input peak 
+ground acceleration; d the 
+measurement points of internal 
+corners with 0.6 g input peak 
+ground acceleration
+(a)                                                                                   (b)
+(c)                                                                              (d)
+(a)                                                                                       (b)                                         
+Fig. 16   The Fourier spectrum at A1-A9 on the slope surface: a) MY seismic motion; b QP seismic motion
+13416
+	
+C. Xin et al.
+4.3  Time–Frequency Domain Energy Analysis Using 
+Wavelet Package Transform
+Real earthquake waves possess complex frequency com-
+ponents with varied and uneven energy distribution across 
+different frequency bands. These frequency components 
+can induce distinct dynamic responses, leading to unique 
+time–frequency characteristics. While the FFT converts 
+time-domain information of seismic waves into frequency-
+domain by decomposing signals into sinusoidal or cosine 
+functions, it does not capture how frequencies change over 
+time. To address this limitation, this research employs wave-
+let package transforms to explore the time–frequency char-
+acteristics of different seismic motions. Wavelet analysis 
+is a signal processing method that utilizes a fixed window 
+area with a variable shape, enabling precise localization 
+in both time and frequency domains. This method is espe-
+cially effective for analyzing seismic signals, which often 
+include relatively low-frequency components (Rasheed et al. 
+2023). The decomposition spectrum of the wavelet package 
+transform is illustrated in Fig. 17. In this experiment, the 
+accelerometer sampling frequency is set to 512 Hz, provid-
+ing an analysis frequency range of 0–256 Hz. Selecting an 
+appropriate decomposition level is essential. If the level is 
+too low, the frequency bands will be too broad, whereas 
+excessive decomposition can reduce frequency resolution. 
+To balance resolution and accuracy, a 6-level wavelet packet 
+decomposition is selected, resulting in 64 distinct wavelets 
+(Wu and Lin 2009). Various wavelet basis functions, includ-
+ing Haar, Daubechies, Symlets, Morlet, and Mexican Hat 
+wavelets, each exhibit distinct advantages and are suited for 
+specific applications in signal processing. The optimal selec-
+tion depends on key characteristics such as orthogonality, 
+support length, regularity, and symmetry (Yaghmaei et al. 
+2010). For this analysis, Daubechies wavelets are selected 
+due to their excellent orthogonality and smooth decomposi-
+tion properties. Specifically, Daubechies (db4) is used as the 
+wavelet basis for data analysis in these experiments (Yagh-
+maei et al. 2013).
+Figure 18a shows the time–frequency distribution char-
+acteristics of the QP seismic motion at various measurement 
+points on the slope, with an input peak acceleration of 0.4 g. 
+The distribution shows that seismic energy is predominantly 
+concentrated between 4 and 6s in the time domain, which 
+corresponds to a decrease in velocity pulse duration. In the 
+frequency domain, the energy is primarily concentrated 
+across a broad band: from A2 to A4, the dominant frequen-
+cies span 15 Hz to 20 Hz, while from A6 to A8, the energy 
+progressively shifts to higher frequencies, concentrating 
+between 47 and 53 Hz.
+Similarly, Fig. 18b illustrates the time–frequency dis-
+tribution characteristics of the MY seismic motion at vari-
+ous measurement points on the slope with the same input 
+peak acceleration of 0.4 g. The time–frequency distribution 
+shows that seismic energy is concentrated between 3 and 
+6 s in the time domain, corresponding to the duration of 
+the velocity pulse  In the frequency domain, the energy is 
+distributed across a broad band: from A2 to A4, it spans 
+3 Hz to 5 Hz, while from A6 to A8, it shifts from lower 
+frequencies to between 23 and 25 Hz. A strong correlation 
+is observed between the SMVPS and the energy release 
+segment in PLGM. Additionally, the response of rock mass 
+materials to the frequency domain components of seismic 
+motions varies with elevation and is closely related to the 
+SMVPS. This demonstrates that the characteristics of the 
+velocity pulse are the primary factors influencing the dif-
+ferences in the dynamic response of rock mass materials 
+at various elevations in the frequency domain. Different 
+pulse characteristics lead to varied response behaviors, with 
+higher frequency domain components causing more intense 
+dynamic responses.
+The above discussed results provide additional validation 
+for both the time domain and frequency domain analyses. 
+Additionally, the wavelet energy amplitude analysis indi-
+cates that the time–frequency domain energy of QP seis-
+mic motion is considerably higher than that of MY seismic 
+motion, with energy ratios of 4.57, 5.07, 6.50, and 7.50 from 
+A2 to A8. This finding aligns with the DAAF analysis, con-
+firming a greater disparity in dynamic response as elevation 
+increases.
+4.4  Verification of Ground Motion Energy Effect 
+Based on Energy Analysis
+Arias intensity (Ia) offers a clear physical interpretation by 
+quantifying the total energy imparted by seismic motion. It 
+integrates factors such as amplitude, duration, and frequency 
+of ground movement, thereby providing a more precise rep-
+resentation of the energy released by a seismic event as 
+recorded by the instrument. By incorporating these aspects, 
+Fig. 17   The decomposition spectrum of the wavelet package trans-
+form
+13417
+Characterizing Dynamic Responses of Rock Slopes to Near‑Fault Pulse‑Like Ground Motions﻿	
+Ia gives a comprehensive measure of energy experienced 
+during an earthquake and enhances the understanding of its 
+impact (Wei et al. 2024a, b). In this research, an evaluation 
+index based on Ia is introduced to characterize the energy 
+amplification effect of ground motion on slopes. Ia quanti-
+fies the energy intensity of seismic motions by integrating 
+the squared acceleration time history data over the event’s 
+duration (Liu et al. 2024). To assess the dynamic response 
+of the slope under different seismic motions, this study pro-
+poses the Arias Intensity Amplification Factor (AIAF) as a 
+parameter. AIAF is defined as the ratio of the ­Ia at any meas-
+urement point on the slope to that at the reference shaking 
+table, effectively reflecting the energy released by ground 
+motion. It can be calculated using Eq. (14).
+where,t is the duration of each excitation, g is the gravity 
+acceleration, and a(t) is the seismic motion acceleration time 
+history.
+(14)
+Ia= 휋
+2g ∫
+t
+0
+a2(t)dt
+The results depicted in Fig. 19a, b demonstrate that AIAF 
+values consistently increase with elevation, whether meas-
+ured at the internal or external corners of the slope. These 
+findings are consistent with the notion that the slope exhib-
+its an elevation amplification effect. Among the seismic 
+motions, QP seismic motion exhibits the most pronounced 
+increase, particularly at the crest of the slope, signifying 
+that QP seismic motion delivers the greatest amount of seis-
+mic energy. The peak AIAF value at the top of the slope 
+underscores this region as the most vulnerable to damage 
+during seismic activity. This observation aligns with the 
+previously discussed DAAF analysis results, confirming 
+that the ground motion energy is concentrated at the top of 
+the slope. Under QP seismic motion, as the peak accelera-
+tion increases, the AAF value at the top of the slope gradu-
+ally decreases, demonstrating a distinct nonlinear dynamic 
+response. The dynamic response order is observed to be: 
+QP seismic motion > MY seismic motion > LD seismic 
+motion > WL seismic motion. This is due to the prominent 
+SMVPS in the velocity time history of QP seismic motion, 
+resulting in a concentrated release of energy and pronounced 
+(a)                                                                                      (b)
+Fig. 18   Time–frequency characteristics of different measurement points of slope: a QP seismic motion; b MY seismic motion
+13418
+	
+C. Xin et al.
+acceleration during propagation. This, in turn, enhances the 
+wave field superposition effect at the top of the slope, mak-
+ing QP seismic motion induce the most intense dynamic 
+response. It is also worth noting that the AIAF values at 
+the internal corners are significantly higher than those at 
+the external corners. This discrepancy occurs because the 
+external corners are more prone to displacement toward 
+the free surface due to the repeated tensile and shear forces 
+exerted by the ground motion, which increases the likelihood 
+of cracking and energy absorption. Consequently, the AIAF 
+values at the external corners tend to be lower compared to 
+the internal corners.
+Further analysis of the AIAF values under varying peak 
+acceleration levels reveals the following trends, as illus-
+trated in Fig. 19c, d (measurement points A6 and A8). 
+When the peak acceleration increases from 0.1 g to 0.4 g, 
+the AIAF values at A6 and A8 show a gradual upward 
+trend. This suggests that the slope remains in the elastic 
+deformation stage during this phase, allowing seismic 
+energy to propagate to the measurement points with mini-
+mal dissipation, thereby increasing the AIAF values con-
+tinuously. However, when the peak acceleration reaches 
+0.6 g, the AIAF values at A6 and A8 begin to decline. This 
+indicates that the slope has transitioned from the elastic 
+stage to plastic failure. During this phase, seismic energy 
+is significantly dissipated during propagation, reducing 
+its transmission efficiency to the measurement points. As 
+the peak acceleration further increases to 0.8 g, the AIAF 
+values exhibit only a marginal rise despite the higher input 
+ground motion amplitude. This demonstrates a pronounced 
+weakening of the slope’s dynamic response, accompanied 
+by substantial energy dissipation. The energy loss pri-
+marily results from plastic deformation and slope failure, 
+which absorb a portion of the ground motion energy. These 
+observations align well with the AAF analysis results, 
+(a)                                                                             (b)                                                          
+(c)                                                                             (d)
+Fig. 19   The value of AIAF under the various peak accelerations: a 
+the external corners with 0.4 g input peak ground acceleration; b the 
+internal corners with 0.4 g input peak ground acceleration; c meas-
+urement point of A8 under various peak ground accelerations; d 
+measurement point of A6 under various peak ground accelerations
+13419
+Characterizing Dynamic Responses of Rock Slopes to Near‑Fault Pulse‑Like Ground Motions﻿	
+further confirming the slope’s dynamic evolution from 
+elastic deformation to plastic failure.
+4.5  Analysis of the Influence of Velocity Pulse 
+on the Energy Release Rate of Ground Motion
+From the previous analysis, it is evident that the short-term 
+velocity pulse in ground motion significantly influences 
+slope dynamic response by briefly releasing intense energy. 
+Although QP, MY, and LD seismic motions all exhibit 
+PLGM with distinct SMVPS, their dynamic response char-
+acteristics differ significantly. For instance, the dynamic 
+response induced by QP seismic motion is notably more 
+intense than that caused by MY or LD seismic motions, 
+particularly at the top of the slope. The AIAF of QP seis-
+mic motion exceeds that of MY and LD seismic motions. 
+However, the precise mechanisms driving these differences 
+in dynamic response are not yet fully understood. To investi-
+gate the reasons behind these discrepancies, further research 
+is needed, especially considering the limited studies on the 
+contribution of SMVPS to ground motion energy. There-
+fore, as one of its key objectives, this study aims to explore 
+the differences in dynamic response between PLGM and 
+NPLGM affecting slopes. By integrating SMVPS, energy 
+release time interval, and energy release magnitude, this 
+research seeks to quantitatively assess the influence of the 
+velocity pulse section on energy release rate. To this end, 
+the ratio of seismic energy release (RSER) is introduced as 
+a key metric for analysis:
+where, ΔIa is the ­Ia difference of the ground motion from the 
+beginning to the end of the release of energy, and Δta is the 
+time interval from the beginning to the end of the release.
+Figure 20 illustrates the time-varying ­Ia curves for PLGM 
+and NPLGM at measurement points A1, A6, and A8. The 
+curves show that the ­Ia progressively increases with eleva-
+tion from A1 to A8, with QP seismic motion exhibiting the 
+(15)
+RSER = ΔIa
+Δta
+            (a)                                                                               (b)                                      
+             (c)                                                                              (d)                                     
+Fig. 20   The impact of SMVPS on energy release rate: a energy releases section of QP seismic motion; b energy releases section of MY seismic 
+motion; c energy releases section of LD seismic motion; d energy releases section of WL seismic motion
+13420
+	
+C. Xin et al.
+most significant energy release, followed by MY, LD, and 
+WL seismic motions. Furthermore, the energy release effect 
+of QP seismic motion intensifies with increasing elevation, 
+resulting in a more pronounced dynamic response at higher 
+points on the slope. Substituting the time-varying ­Ia curve at 
+A8 into Eq. (8) yields RSER values of 1.30E-4 for QP seis-
+mic motion, 1.02E-4 for MY seismic motion, and 0.80E-4 
+for LD seismic motion. For NPLGM, the RSER values are 
+0.28E-4 for the first energy release section and 0.07E-4 for 
+the second section. The lower RSER value and the extended 
+interval between the two energy release sections for NPLGM 
+indicate a weaker overall effect. These results indicate that 
+the QP seismic motion has the highest RSER value, dem-
+onstrating that under QP seismic motion, the energy input 
+per unit time is maximized, resulting in the most intense 
+dynamic response of the slope. In summary, PLGM leads to 
+notably higher RSER values compared to NPLGM, confirm-
+ing that the slope’s dynamic response is more pronounced 
+under PLGM. This highlights the importance of consider-
+ing the energy release rate in evaluating seismic effects on 
+slopes.
+5  Numerical Analyses and Verification
+5.1  Model Establishment and Parameters Selection
+To investigate the dynamic response of the slope to different 
+seismic motion characteristics, numerical simulation mod-
+els were created based on shaking table tests. By rigorously 
+applying geometric similarity principles and utilizing the 
+Buckingham-π theorem for dimensional analysis, the geo-
+metric scaling ratio between the model and the prototype was 
+established. Based on this scaling ratio and the dimensions of 
+the model slope, the size of the numerical model was deter-
+mined. The numerical model was subsequently designed with 
+dimensions of 165 cm in length and 80 cm in height, ensuring 
+precise alignment with the height of the shaking table slope 
+model. This dimensional consistency guarantees the accuracy 
+and reliability of the simulation results. The width and height 
+of the model’s extended area were chosen following the rec-
+ommendations of Bouckovalas and Papadimitriou (2005) to 
+minimize boundary effects and reduce wave reflections. The 
+mesh generation of the model adhered strictly to the recom-
+mendations of Kuhlemeyer and Lysmer (1973). The bound-
+ary conditions for the slope model were set with free-field 
+boundaries on the sides and a viscous boundary at the bottom. 
+According to Eq. (16), the local damping coefficient was cal-
+culated to be 0.157, assuming a 5% critical damping ratio (Xu 
+et al. 2024). The monitoring scheme and the dynamic bound-
+ary setup for the numerical modeling are illustrated in Fig. 21.
+where, 훽L is the local damping coefficient, 휉 is the critical 
+damping ratio and 휋 is a constant. The value of 휉 for rock and 
+soil material is generally 2% ~ 5%. Moreover, Kuhlemeyer 
+and Lysmer, (1973) demonstrated that to accurately repre-
+sent wave transmission through a model, the element size Δl 
+should be less than approximately 1/10 to 1/8 of the wave-
+length corresponding to the highest-frequency component 
+of the input wave, which can be determined Eqs. (17)–(21):
+(16)
+훽L = 휋휉
+(17)
+휆min = CsTmin
+(18)
+Cs =
+√
+E
+2휌(1 + 휇) =
+√
+G
+휌
+(19)
+Tmin = 1∕fmax
+(20)
+휆min =
+
+E
+2휌(1+휇)
+fmax
+=
+√
+G∕휌
+fmax
+Fig. 21   UDEC numerical 
+modeling
+13421
+Characterizing Dynamic Responses of Rock Slopes to Near‑Fault Pulse‑Like Ground Motions﻿	
+where, ­Cs is wave velocity and Tmin is the minimum period, 
+E is the elastic modulus, 휌 is the rock density, 휇 is the Pois-
+son’s ratio, G is the shear modulus, and fmax is the maximum 
+frequency of the input wave. So, the maximum frequency of 
+the input wave fmax in the shake table test is 40 Hz, and sub-
+stituting it with the parameters in Table 4 gives λmin ≈ 20 cm 
+(Li et al. 2018; Ning et al. 2019; Liu et al. 2023). Ultimately, 
+the mesh size is appropriately set at 2 cm.
+In the numerical simulation, the seismic motion is intro-
+duced from the base, which must first be converted into 
+stress before being applied to the model boundary. The 
+conversion equations of velocity and stress are as follows:
+where, σs is the applied shear stress of SV wave, ρ is the 
+rock density, Cs is the speed of the SV wave propagation 
+through the medium, 휎n is the applied normal stress of P 
+wave, Cp is the speed of the P wave, and Vn and Vs are the 
+normal and shear velocity components of the input seismic 
+motion, respectively.
+5.2  Numerical Results Verification
+To verify the accuracy and reliability of the numerical 
+simulation, the time-history accelerations from the shak-
+ing table tests are compared with the numerical analysis 
+results. Specifically, Fig. 22a, b show the acceleration 
+time history curves at A0 for peak accelerations of 0.4 g 
+and 0.6 g under MY seismic motion. The amplitudes of 
+the numerical simulations and shaking table tests are 
+nearly identical, though minor discrepancies are observed 
+at the beginning of the time-history. Additionally, the 
+results indicate that the time-history accelerations from 
+the numerical simulation are smoother and more sta-
+ble compared to those from the shaking table tests. To 
+quantitatively assess the consistency between numerical 
+(21)
+Δl ≤
+( 1
+10 ∼1
+8
+)
+휆
+(22)
+휎n = 2(휌Cp)Vn
+(23)
+휎s = 2(휌Cs)Vs
+simulations and experimental results, the following com-
+putational formulations were applied, based on Eq. (24) 
+in this study:
+the 훿 represents the errors, PGAN denotes the PGA from the 
+numerical simulation results, and PGAS refers to the PGA 
+from the shaking table tests.
+The errors calculated from the peak acceleration data 
+of the two methods are 8.4% and 2.9%, respectively, which 
+fall within an acceptable range, confirming that the ground 
+motion input in the numerical simulation aligns well with 
+that of the shaking table tests. In order to further verify the 
+validity of the numerical analysis, measurement points A2, 
+A4, and A6 on the slope surface were selected. The numeri-
+cal analysis results presented in Fig. 22c–h, obtained under 
+MY seismic motion, show that the PGA at these points 
+increases with elevation, demonstrating a clear elevation 
+amplification effect. The numerical simulation results align 
+well with the shaking table test data. When the input accel-
+eration peak is 0.4 g, the PGA errors for A2, A4, and A6 are 
+8.4%, 7.8%, and 8.6%, respectively. When the input accel-
+eration peak reaches 0.6 g, the PGA errors for A2, A4, and 
+A6 are 2.1%, 24.1%, and 14.1%, respectively. These results 
+confirm that the input waveforms of MY seismic motions in 
+the numerical calculations match those used in the shaking 
+table tests.
+To explore the differences in slope dynamic responses 
+under various characteristic ground motions, the QP seis-
+mic motions were selected for detailed comparison. The 
+comparison results for the input waveform at the A0 are 
+shown in Fig. 23a, b. The errors calculated from the peak 
+acceleration data are 5.6% and 0.97%, respectively. When 
+the input acceleration peak is 0.4 g, the PGA errors for A2, 
+A4, and A6 are 2.0%, 4.8%, and 0.57%, respectively. For 
+an input acceleration peak of 0.6 g, the PGA errors at these 
+points are 8.0%, 2.8%, and 5.4%, respectively, as presented 
+in Fig. 23c–h. Additionally, the QP seismic motion inducing 
+the strongest dynamic response was extracted from numeri-
+cal simulations, and its displacement time-history at meas-
+urement point A8 was analyzed under various peak ground 
+accelerations (0.1 g, 0.4 g, 0.6 g, and 0.8 g), with particu-
+lar focus on peak ground displacement (PGD) and residual 
+displacement (RD) variations. As shown in Fig. 23i–l, the 
+PGD at A8 exhibits a progressive increase with higher peak 
+ground accelerations. Under lower accelerations (0.1 g and 
+0.4 g), the displacement time-history curves show RD = 0, 
+confirming the slope maintains structural integrity within the 
+elastic deformation range while preserving full load-bearing 
+capacity (Yang et al. 2025a). A critical transition occurs at 
+0.6 g input peak ground acceleration, where RD first appears 
+(24)
+훿=
+||PGAN −PGAS||
+PGAN
+Table 4   the parameters of numerical simulation
+Rock parameters
+Joint parameters
+Elastic modulus E(Mpa)
+50.0
+Normal stiffness kn (Gpa/m)
+2.0
+Density 휌(kg/m3)
+2200
+Shear stiffness ks (Gpa/m)
+2.0
+Friction angle 휑(°)
+36.0
+Cohesion C (kPa)
+3.0
+Cohesion c (kPa)
+20.0
+Tension strength T(kPa)
+10.0
+–
+–
+Friction angle 휑(°)
+23.0
+13422
+	
+C. Xin et al.
+     (a)                                                                       (b)
+   (c)                                                                        (d)
+   (e)                                                                           (f)
+   (g)                                                                          (h)
+Fig. 22   Comparison of acceleration response under the MY seismic motion with acceleration peak of: a 0.4 g, A0; b 0.6 g, A0; c 0.4 g, A2; d 
+0.6 g, A2; e 0.4 g, A4; f 0.6 g, A4; g 0.4 g, A6; h 0.6 g, A6
+13423
+Characterizing Dynamic Responses of Rock Slopes to Near‑Fault Pulse‑Like Ground Motions﻿	
+    (a)                                                                    (b)
+       (c)                                                                    (d)
+    (e)                                                                   (f)
+       (g)                                                                       (h)
+Fig. 23   Comparison of acceleration and displacement response under 
+the QP seismic motion with acceleration peak of: a 0.4 g, A0; b 0.6 
+g, A0; c 0.4 g, A2; d 0.6 g, A2; e 0.4 g, A4; f 0.6 g, A4; g 0.4 g, A6; 
+h 0.6 g, A6; i 0.1g, A8 (displacement); j 0.4g, A8 (displacement); k 
+0.6g, A8 (displacement); l 0.8g, A8 (displacement)
+13424
+	
+C. Xin et al.
+(RD = 3.21 mm) in the time-history curve, indicating the 
+slope’s transition to plastic deformation. When the input 
+peak ground acceleration increases to 0.8 g, both PGD and 
+RD show continuous growth, with RD reaching 9.175 mm, 
+indicating the progressive development of slope failure.
+These results, which clearly illustrate the slope’s dynamic 
+evolution from elastic deformation to plastic failure (con-
+sistent with time-domain analyses indicating a rapid transi-
+tion at 0.6 g input peak ground acceleration), also demon-
+strate that the numerical simulation agrees with the shaking 
+table test results, further validating the numerical analysis 
+accuracy.
+To ensure alignment between numerical simulations 
+and shaking table test results, and to further explore failure 
+modes associated with PLGM and NPLGM, the MY and 
+QP seismic motions at 0.1 g, 0.4 g, and 0.8 g, along with 
+WL seismic motion, were selected for analysis. The results 
+confirm consistent dynamic response strength for PLGM 
+across varying characteristics. At a peak acceleration of 
+0.1 g, numerical simulation results depicted in Figs. 24a and 
+25a show slightly greater slope settlement induced by QP 
+seismic motion compared to MY seismic motion, with QP 
+causing 1.1 times greater displacement. As the acceleration 
+reaches 0.4 g, as shown in Figs. 24c and 25b, settlement 
+under QP seismic motion intensifies, causing local uplift 
+and parallel cracks, particularly at the third step of the slope. 
+In contrast, MY seismic motion results in minor settlement 
+and less overall damage. The peak displacement under QP 
+seismic motion is 1.36 times that of MY seismic motion. At 
+a peak acceleration of 0.8 g, shown in Figs. 24e and 25c, 
+settlement under QP seismic motion becomes significantly 
+more intense than under MY seismic motion, leading to 
+more severe damage at the top of the slope, exacerbated 
+existing cracks, and significant fragment accumulation at 
+the third step. In this case, a noticeable reduction is observed 
+in the slope’s overall integrity. Conversely, the MY seismic 
+  (i)                                                                  (j)
+  (k)                                                             (l)
+Fig. 23   (continued)
+13425
+Characterizing Dynamic Responses of Rock Slopes to Near‑Fault Pulse‑Like Ground Motions﻿	
+motion only causes a few vertical cracks at the top of the 
+slope and some bulging at the toe of the slope. It is notewor-
+thy that the peak displacement from QP seismic motion is 
+1.6 times greater than that from MY seismic motion. These 
+results align with the shaking table tests analysis, showing 
+that QP seismic motion causes more severe damage and a 
+stronger dynamic response than MY seismic motion. Fur-
+thermore, the numerical simulation results shown in Fig. 24 
+confirm the consistency of the dynamic response strength 
+between PLGM and NPLGM, in agreement with the shaking 
+table tests. As shown in Fig. 24a, b, at the peak acceleration 
+of 0.1 g, the integrity of the slope is better preserved under 
+WL seismic motion, resulting in less settlement compared to 
+MY seismic motion. Displacement data reveal that the peak 
+displacement under MY seismic motion is 1.2 times greater 
+than that under WL seismic motion. As shown in Fig. 24c, 
+d, by increasing the peak acceleration, MY seismic motion 
+causes significantly greater damage on the slope compared 
+to WL seismic motion. Specifically, settlement at the top 
+is much more pronounced under MY seismic motion, with 
+ (a)                                                                                    (b)
+  (c)                                                                                   (d)
+(e)                                                                                   (f)
+Fig. 24   Comparison of asymptotic damage evolution process of the 
+slope at different peak accelerations: a at 0.1g under MY seismic 
+motion; b at 0.1g under WL seismic motion; c at 0.4g under MY seis-
+mic motion; d at 0.4g under WL seismic motion; e at 0.8g under MY 
+seismic motion; f at 0.8g under WL seismic motion
+13426
+	
+C. Xin et al.
+more evident cracks, local uplift, and fragment accumula-
+tion. However, WL seismic motion only causes minor paral-
+lel cracks at the top of the slope and some initial cracks at 
+the first step, with the slope maintaining overall integrity. 
+The MY seismic motion produces approximately 1.5 times 
+more displacement than WL seismic motion, resulting in 
+stronger dynamic response and more damage. Furthermore, 
+as shown in Fig. 24e, f, when the peak acceleration reaches 
+Fig. 25   Comparison of slope damage phenomena: a 0.1g; b 0.4g; c 0.8g
+13427
+Characterizing Dynamic Responses of Rock Slopes to Near‑Fault Pulse‑Like Ground Motions﻿	
+0.8 g, the slope experiences more severe settlement under 
+MY seismic motion compared to WL seismic motion. In 
+this case, existing cracks worsen, with new vertical frac-
+tures appearing at the third step and noticeable bulging at 
+the toe of the slope. Displacement at the third step is more 
+pronounced than at other locations. Under the WL seismic 
+motion, cracks at the top of the slope undergo minor expan-
+sion, with slight increases in settlement. At the first step, 
+cracks widen further and some local uplift occurs. Overall, 
+the displacement is less significant compared to MY seis-
+mic motion, with MY seismic motion producing roughly 
+1.53 times more displacement than WL seismic motion. 
+These findings confirm that PLGM produces a significantly 
+stronger dynamic response and hence greater damage to the 
+slope compared to NPLGM, which aligns with the findings 
+from the shaking table test analysis.
+In summary, the slope experiences the most intense 
+dynamic response and seismic damage under QP seismic 
+motion, followed by MY seismic motion, both of which 
+exhibit PLGM and have significant impacts. In contrast, WL 
+seismic motion, characterized by NPLGM, leads to the least 
+severe effects. These findings are consistent with previous 
+shaking table tests, which validated the numerical simula-
+tions, including failure observations and analyses across 
+time, frequency, and time–frequency domains. The amplifi-
+cation effect of PLGM is shown to be significantly stronger 
+than NPLGM, as indicated by AAF results, becoming more 
+pronounced at higher levels. Moreover, based on AIAF, the 
+energy amplification effect of PLGM is more significant than 
+NPLGM, particularly at higher elevations. This is reflected 
+in the RSER, where PLGM consistently exceeds NPLGM 
+and intensifies with increasing elevation. These analysis 
+indicators are interconnected and mutually explanatory, 
+providing deeper insight into the failure mechanisms under 
+QP seismic motion. By examining the internal relationships 
+among these indexes, a more comprehensive understanding 
+of the slope failure mechanism under QP seismic motion 
+can be achieved.
+For analyzing the failure mechanism, the QP seismic 
+motion and the final failure phenomena observed in the 
+shaking table test were selected. As shown in Fig. 25a, 
+when the input acceleration peak is 0.1 g, the slope remains 
+largely undeformed, demonstrating considerable stiffness 
+under low peak acceleration levels. However, minor set-
+tlement occurs at the top of the slope, with displacement 
+at the slope shoulder being greater than in other areas. At 
+low peak acceleration, ground motion amplitude is not the 
+main factor in causing deformation. Instead, local dam-
+age is primarily caused by high-frequency components of 
+the motion. As elevation increases, the energy of PLGM 
+shifts toward higher frequencies, resulting in cyclic ten-
+sion and shear at the top of the slope, leading to local 
+settlement without sliding between layers. As shown in 
+Fig. 25b, when the input acceleration peak is increased to 
+0.4 g, the amplification of the high-frequency components 
+in higher-intensity PLGM amplifies settlement at the slope 
+crest and induces significant local uplift. The increased 
+intensity of seismic motion leads to a larger AIAF, in turn, 
+amplifying the repeated transverse shear from the seismic 
+waves. This gradually reduces the shear strength of the 
+structural surfaces, leading to the development of paral-
+lel cracks between the layers. Under the combined influ-
+ence of seismic forces and gravity, fragment ejection is 
+observed. In Fig. 25c, when the input acceleration peak 
+reaches 0.8 g, the AIAF is significantly amplified, intensi-
+fying the transformation of high-frequency components in 
+the rock mass and resulting in a stronger dynamic response 
+due to the higher RSER. Consequently, the top of the slope 
+experiences a stronger seismic inertial force, resulting in 
+increased seismic energy. This causes a sharp rise in set-
+tlement and the formation of parallel cracks, primarily 
+in the upper region of the slope. The SMVPS of PLGM 
+further amplifies the effect. The seismic motion, with its 
+higher RSER, causes the structural surfaces to repeatedly 
+open and close, continuously deteriorating the physical 
+and mechanical properties of the rock mass in contact with 
+the structural surfaces. This cumulative damage reduces 
+the slope stability, leading to an increase in horizontal 
+displacement between the layers. As the fragmented body 
+at the top of the slope begins to protrude outward, debris 
+accumulates, and cracks develop at the slope shoulder. 
+Existing vertical cracks continue to expand, and new ten-
+sile cracks gradually form. Simultaneously, bulging occurs 
+at the toe of the slope leading to slope instability.
+Under PLGM, slopes typically undergo progressive 
+failure initiated by tensile crack formation at the trailing 
+edge. As seismic forces persist, the slope exhibits distinct 
+deformation patterns: the fragmented body at the top of 
+the slope protrudes outward, leading to debris accumula-
+tion and crack development at the slope shoulder. Exist-
+ing vertical cracks continue to expand, while new tensile 
+cracks gradually form. Simultaneously, bulging occurs at 
+the toe of the slope, contributing to instability. Ultimately, 
+this leads to global slope instability. This typical dam-
+age pattern was fully observed during the Qingping and 
+Ludian earthquakes, as evidenced by case studies includ-
+ingthe Zengjiashan landslide in Pingxi Township, Han-
+wang Town, Mianzhu City, and the Zhaojiagou landslide 
+in Gaopu Village, Guozhu Township, Zhenxiong County 
+(Fig. 26b, d). Notably, shaking table tests successfully 
+reproduced the failure mechanisms involvingcollapse at 
+the slope top, tensile crack development at the rear fracture 
+edge (Fig. 26a, c). These experimental results not only 
+confirm the reliability of this failure mode but also dem-
+onstrate its repeatability—a critical feature for validation.
+13428
+	
+C. Xin et al.
+6  Discussion
+The dynamic response differences of slopes subjected to 
+PLGM and NPLGM remain a key scientific issue to be 
+solved in geotechnical earthquake engineering. Previous 
+research has mainly focused on qualitative PGA-based com-
+parisons, while quantitative investigations into the underly-
+ing mechanisms—such as frequency-domain energy trans-
+fer in PLGM and the relationship between velocity pulse 
+segments and energy release—remain rarely investigated. 
+These limitations hinder a comprehensive understanding of 
+the seismic performance of slopes under near-fault PLGM. 
+Therefore, in this study, the aforementioned issues are con-
+sidered while offering novel insights from an energy-based 
+perspective. The ratio of seismic energy release is proposed 
+as a critical parameter fulfilling two analytical functions: 
+effectively discriminating between PLGM and NPLGM, 
+while simultaneously providing a quantitative metric to 
+interpret the underlying mechanisms of dynamic response 
+among variations characteristics PLGM. Notably, the ratio 
+of seismic energy release of PLGM is 319.54% higher than 
+that of NPLGM, as evidenced in the cases of QP and WL 
+seismic motions. This significant difference stems primar-
+ily from the characteristic velocity pulse segment unique 
+to PLGM; the energy of PLGM is highly concentrated and 
+released over an exceptionally brief duration, typically 
+lasting between 1 and 3 s. In this study, the concentrated 
+energy release period for QP seismic motion was measured 
+at 2.3 s, with the velocity pulse segment occurring between 
+3.97 s and 6.27 s. This rapid release of energy generates 
+high-amplitude velocity pulses, significantly increasing the 
+energy density per unit time. This fundamental characteristic 
+explains the notably larger Arias intensity amplification fac-
+tor observed in PLGM compared to NPLGM. The accelera-
+tion time-history of PLGM displays distinct characteristics, 
+with its waveform featuring several extremely high-ampli-
+tude peak pulses. For example, as shown in Fig. 8, the QP 
+seismic motion exhibits a pulse with a peak acceleration of 
+0.98 g at 6.13 s. These sudden, intense pulses impose enor-
+mous impact inertial forces on the slope in a very short time 
+(a)                                                                              (b)
+(c)                                                                              (d)
+Fig. 26   Comparison between experimental results and post-earth-
+quake field investigations: a the fragmented body at the top of the 
+slope begins to protrude outward in shaking table test; b the frag-
+mented body at the top of the slope begins to protrude outward of the 
+Zengjiashan landslide in Pingxi Township, Hanwang Town, Mianzhu 
+City; c the tension cracks at the slope top in shaking table test; d the 
+tension cracks at the slope top of the Zhaojiagou landslide in Gaopu 
+Village, Guozhu Township, Zhenxiong County
+13429
+Characterizing Dynamic Responses of Rock Slopes to Near‑Fault Pulse‑Like Ground Motions﻿	
+frame, making it difficult for the slope to effectively adjust 
+and recover its stress within such a brief period. As a result, 
+when subjected to high-intensity PLGM, the slope enters 
+the plastic deformation stage much sooner, thus accelerating 
+its instability process. In contrast, the energy release pro-
+cess of NPLGM is relatively uniform and does not generate 
+instantaneous, strong impact inertial forces. Consequently, 
+PLGM produces more pronounced acceleration amplifica-
+tion effects and induces stronger dynamic responses than 
+NPLGM. The risk of slope instability induced by PLGM 
+is also significantly higher than that caused by NPLGM. 
+This fundamental distinction directly explains the larger 
+Arias intensity amplification factor observed in PLGM, 
+which consequently leads to more pronounced acceleration 
+amplification effects and stronger dynamic response than 
+those observed in NPLGM. Furthermore, the investigation 
+reveals a distinct energy transfer mechanism characterized 
+by progressive high-frequency shifting with increasing ele-
+vation, according to the Peak Fourier spectrum amplitude. 
+This highlights the enhanced sensitivity of the rock mass 
+at higher elevations to high-frequency energy components 
+in PLGM. Simultaneously, energy transfer varies signifi-
+cantly among various PLGM, resulting in distinct dynamic 
+response behaviors.
+To investigate the energy transfer mechanisms of dif-
+ferent PLGM, this study employs wavelet packet trans-
+form to reveal critical insights into PLGM characteristics. 
+It extends the understanding of the relationship between 
+velocity pulse segments and energy release, demonstrating 
+a strong correlation between the seismic motion veloc-
+ity pulse segment and energy release segments in PLGM. 
+The results indicate that velocity pulse characteristics are 
+the predominant controlling factor in progressive high-
+frequency energy transfer with increasing elevation, where 
+higher frequency components consistently trigger more 
+intense responses under varying PLGM characteristics. 
+For example, when comparing the QP and MY seismic 
+motions, the ratio of seismic energy release of the QP seis-
+mic motion is 27.45% higher than that of the MY seismic 
+motion, along with a greater Arias intensity amplification 
+factor. From the frequency perspective, the Peak Fourier 
+spectrum amplitude of the QP seismic motion is 36.36% 
+higher than that of the MY seismic motion at higher ele-
+vations. This indicates that the high-frequency energy 
+transfer effect at elevation is stronger for the QP seismic 
+motion than for the MY seismic motion. Consequently, 
+the dynamic response induced by the QP seismic motion 
+is stronger than that induced by the MY motion. Specifi-
+cally, this correlation manifests through distinct features: 
+the velocity pulse segment exhibits the maximum ratio 
+of seismic energy release, leading to a larger Arias inten-
+sity amplification factor. The progressive high-frequency 
+shifting with increasing elevation—directly governed by 
+seismic motion velocity pulse segment characteristics—
+enhances energy concentration in upper slope regions, 
+thereby intensifying PLGM-induced dynamic responses 
+through amplified seismic energy transfer. Consequently, 
+this mechanism results in significant PGA amplification at 
+higher elevations, which also explains the differences in 
+dynamic response mechanisms between seismic motions 
+with different pulse characteristics.
+While the findings of this study enhance our comprehen-
+sion of rock slope dynamics subjected to PLGM, certain 
+factors should be considered. Although the selected PLGM 
+records in this research demonstrate to a certain extent 
+representativeness, they exhibit specific characteristics 
+that warrant further investigation, particularly regarding 
+varying pulse features. This consideration underscores the 
+necessity to extend the scope of ground motion analysis to 
+incorporate a more comprehensive range of seismic char-
+acteristics, including unilateral pulses and bidirectional 
+pulses. Consequently, future research should focus on con-
+ducting in-depth quantitative analyses to systematically 
+evaluate the influence of pulse characteristics on dynamic 
+response variations (Chen et al. 2019). Additionally, this 
+study investigates a representative high-steep cut slope in a 
+high-intensity seismic zone through scaled model testing. 
+The selected prototype site, situated within an active fault 
+zone, exhibits regionally characteristic geological struc-
+tures and demonstrates susceptibility to PLGM, thereby 
+ensuring its engineering representativeness. Nevertheless, 
+it is crucial to recognize that slope behavior is governed by 
+site-specific characteristics, particularly three key control-
+ling factors: (1) geometric configuration of the slope sur-
+face, (2) spatial distribution and mechanical properties of 
+structural surfaces, and (3) spatial variability of geotech-
+nical material properties. These factors collectively influ-
+ence the slope’s dynamic response characteristics under 
+seismic loading conditions, highlighting several critical 
+areas that warrant further investigation (Liu et al. 2023; 
+Chen et al. 2022). Future research should systematically 
+explore the combined effects of slope surface morphology 
+and structural surfaces, particularly focusing on varying 
+joint angles and their interaction, as well as the different 
+reinforcement measures in higher elevations of the slope. 
+Furthermore, the investigations of this study not only 
+align with previous research outcomes but also demon-
+strate some advancements in understanding the elevation 
+amplification effect in PLGMs and the energy concentra-
+tion characteristics within velocity pulse segments. These 
+results provide a robust theoretical framework for subse-
+quent research in related domains, while offering practical 
+theoretical foundations and technical guidance for seismic 
+fortification strategies in near-fault engineering structures.
+13430
+	
+C. Xin et al.
+7  Conclusions
+This paper investigates the dynamic response characteris-
+tics of rock slopes subjected to near-fault pulse-like earth-
+quakes through large-scale shaking table tests and comple-
+mentary numerical simulations. Using different response 
+parameters, it is shown that the results from shaking table 
+tests and numerical simulations are in good agreement. 
+By examining the time domain, frequency domain, and 
+time–frequency domain, the study explores the differences 
+in dynamic responses between PLGM and NPLGM. The 
+dynamic response and instability mechanisms of rock 
+slopes subjected to near-fault PLGM are then investigated, 
+with the introduction of the RSER to quantify the differ-
+ences. Based on the presented results, the following con-
+clusions can be drawn:
+(1)	 Under both PLGM and NPLGM, the slope shows sig-
+nificant elevation amplification and surface effects, 
+with QP seismic motion causing the strongest amplifi-
+cation, followed by MY, LD, and WL, where the AAF 
+values for QP, MY, and LD are 114.22%, 62.22%, and 
+31.11% higher than for NPLGM (WL seismic motion) 
+at the slope shoulder (A8) when PGA = 0.4 g. As PGA 
+increases to 0.6 g, the AAF for QP decreases by 30% 
+at A8, while MY decreases by only 5.29%, and AAF 
+values for LD and WL continue to rise. This indicates 
+that QP seismic motion poses the greatest risk of severe 
+structural damage.
+(2)	 The analysis of DAAF also reveals that it progres-
+sively increases as elevation increases, exhibiting non-
+linear energy amplification effects. The amplification 
+effect of QP seismic motion at the top of the slope is 
+32.50% stronger than that of MY seismic motion when 
+PGA = 0.4 g. With the increase of PGA, DAAF gradu-
+ally decreases, further characterizing the cumulative 
+damage effect of the slope.
+(3)	 Compared to NPLGM, PLGM significantly amplifies 
+high-frequency energy with increasing elevation, which 
+can induce localized damage. This damage accumu-
+lates, leading to substantial collapse in the slope’s crest 
+region, highlighting the heightened sensitivity of high 
+rock masses to PLGM’s high-frequency energy. Addi-
+tionally, PLGM shows a shift in frequency bands with 
+elevation, revealing notable differences in dynamic 
+responses at varying heights. These phenomena are 
+closely linked to SMVPS, offering valuable insights 
+into PLGM’s impact on higher rock masses.
+(4)	 The wavelet packet transform analysis reveals that the 
+energy of PLGM is primarily concentrated during the 
+SMVPS, resulting in increased energy release during 
+seismic events. Time–frequency energy analysis, sup-
+ported by both frequency-domain and time-domain 
+methods, confirms that the energy spectra of PLGM 
+shift toward higher frequencies with increasing eleva-
+tion, further underscoring the impact of elevation on 
+the spectral composition of PLGM. These findings pro-
+vide a robust theoretical foundation for understanding 
+elevation-dependent spectral characteristics of PLGM 
+and offer valuable insights for seismic design and per-
+formance assessment of high-steep slope structures in 
+near-fault areas.
+(5)	 The AIAF values for PLGM (QP, MY, and LD seismic 
+motions) are significantly higher by 397.26%, 195.33%, 
+and 64.32%, respectively, compared to NPLGM (WL 
+seismic motion) at A8 when PGA = 0.4 g, indicating 
+that the energy release of PLGM is notably greater 
+compared to NPLGM, with has a high energy release 
+capacity, with rapid energy release generating high-
+amplitude velocity pulses, particularly as elevation 
+increases, highlighting the distinct elevation amplifi-
+cation effects between PLGM and NPLGM. This differ-
+ence is especially evident when comparing PLGM with 
+varying characteristics. These findings are consistent 
+with DAAF analysis, confirming the reliability of the 
+results.
+(6)	 The RSER quantitatively explains the differences in 
+dynamic response, with PLGM showing a 319.35% 
+and 229.03% higher energy release rate per unit time 
+compared to NPLGM, based on PLGM (QP, MY seis-
+mic motion), and NPLGM (WL seismic motion). This 
+pattern highlights the distinct energy release character-
+istics of PLGM, which consistently enhance its energy 
+release compared to NPLGM. Additionally, PLGM 
+induces enhanced dynamic responses compared to 
+NPLGM. These findings not only provide a deeper 
+quantitative understanding of the mechanisms behind 
+the dynamic response differences but also clarify the 
+causes of varying dynamics among the varying charac-
+teristics of PLGM. These findings are consistent with 
+the UDEC numerical simulation results, which show 
+that QP seismic motion causes severe slope damage, 
+with the greatest impact occurring at the top part of the 
+slope. The shaking table test results further confirm that 
+the QP seismic motion has the highest RSER, resulting 
+in the highest AIAF, the most severe dynamic response, 
+and hence, the greatest slope damage.    
+Acknowledgements  This research was supported by the National Natu-
+ral Science Foundation of China (Grant Nos. 52108361 and 41977252), 
+the Sichuan Science and Technology Support Program (Grant Nos. 
+2024ZYD0154 and 2024NSFSC0159), and the State Key Laboratory 
+of Geohazard Prevention and Geoenvironment Protection (Grant Nos. 
+SKLGP2022Z015 and SKLGP2020Z001). All the authors acknowl-
+edge the anonymous reviewers for their comments.
+13431
+Characterizing Dynamic Responses of Rock Slopes to Near‑Fault Pulse‑Like Ground Motions﻿	
+Author contributions  Chunlei Xin: methodology, supervision, fund-
+ing acquisition, investigation, project administration, writing—original 
+draft. Lei Zeng: methodology, data curation, formal analysis, writing—
+original draft. Zhao Wang: formal analysis, writing—review and edit-
+ing; Wenkai Feng: writing—review and editing, funding acquisition; 
+Fei Yang: review and editing, investigation, resources; Iman Hajira-
+souliha: writing—review and editing, validation, conceptualization; 
+Xinyuan Yu: software.
+Funding  This work was supported by the National Natural Science 
+Foundation of China, 52108361, Chunlei Xin, 41977252, Wenkai 
+Feng, the Sichuan Province Science and Technology Support Pro-
+gram, 2024ZYD0154, Chunlei Xin, 2024NSFSC0159, Wenkai Feng, 
+the State Key Laboratory of Geohazard Prevention and Geoenviron-
+ment Protection, SKLGP2022Z015, Chunlei Xin, SKLGP2020Z001, 
+Wenkai Feng.
+Data availability  The data that support the findings of this study are 
+available from the corresponding author upon reasonable request.
+Declarations 
+Conflict of interest  The authors declare that they have no known com-
+peting financial interests or personal relationships that could have ap-
+peared to influence the work reported in this paper.
+References
+Antwi BP, Zhang YB, Abdulrazig M, Xiao Y (2024) Effect of geometry 
+on the natural frequency and seismic response characteristics of 
+slopes subjected to pulse-like ground motions. Comput Geotech. 
+https://​doi.​org/​10.​1016/j.​compg​eo.​2024.​106777
+Baker JW (2007) Quantitative classification of near-fault ground 
+motions using wavelet analysis. Bull Seismol Soc Am 97(5):1486–
+1501. https://​doi.​org/​10.​1785/​01200​60255
+Bao YJ, Huang Y, Zhu CQ (2021) Effects of near-fault ground motions 
+on dynamic response of slopes based on shaking table model tests. 
+Soil Dyn Earthq Eng 2021(149):106869. https://​doi.​org/​10.​1016/j.​
+soild​yn.​2021.​106869
+Bao YJ, Hu HQ, Gan G (2023) Seismic response analysis of slope 
+reinforced by pile-anchor structures under near-fault pulse-like 
+ground motions. Soil Dyn Earthq Eng 2023(164):107576. https://​
+doi.​org/​10.​1016/j.​soild​yn.​2022.​107576
+Bouckovalas GD, Papadimitriou AG (2005) Numerical evaluation of 
+slope topography effects on seismic ground motion. Soil Dyn 
+Earthq Eng 25(7–10):547–558. https://​doi.​org/​10.​1016/j.​soild​
+yn.​2004.​11.​008
+Chen XY, Wang DS, Zhang R (2019) Identification of pulse periods in 
+near-fault ground motions using the HHT method. Bull Seismol 
+Soc Am 109(6):2384–2398. https://​doi.​org/​10.​1785/​01201​90046
+Chen JC, Wang LM, Wang P, Che AL (2022) Failure mechanism inves-
+tigation on loess–mudstone landslides based on the Hilbert-Huang 
+transform method using a large-scale shaking table test. Eng Geol 
+302:106630. https://​doi.​org/​10.​1016/j.​enggeo.​2022.​106630
+Cheng Y, Jiang YN, Hou ZJ, Zeng R, Luo HY (2024) InSAR deforma-
+tion observation and regional severe earthquake hazard analysis 
+of the 2016 and 2022 strong earthquake activities in Menyuan, 
+Qinghai. J Geomech 30(6):965–977. https://​doi.​org/​10.​2090/.​issn.​
+1006-​6616.​20231​97
+Cui SH, Pei XJ, Yang HL, Zhu L, Jiang Y, Zhu C, Jiang T, Huang RQ 
+(2023) Bedding slope damage accumulation induced by multiple 
+earthquakes. Soil Dyn Earthq Eng 2023(173):108157. https://​doi.​
+org/​10.​1016/j.​soild​yn.​2023.​108157
+Cui SH, Pei XJ, Huang RQ, Zhu L, Yang HL, Liang YF, Zhu C (2024) 
+The analysis of seismic induced progressive instability and failure 
+mechanisms: a case study. Int J Rock Mech Min Sci 174:105646. 
+https://​doi.​org/​10.​1016/j.​ijrmms.​2024.​105646
+Fan G, Zhang JJ, Wu JB, Yan KM (2016) Dynamic response and 
+dynamic failure mode of a weak intercalated rock slope using a 
+shaking table. Rock Mech Rock Eng 49(8):3243–3256. https://​
+doi.​org/​10.​1007/​s00603-​016-​0971-7
+Fan XM, Juang CH, Wasowski J, Huang RQ, Xu Q, Scaringi G, van 
+Westen CJ, Havenith HB (2018) What we have learned from 
+the 2008 Wenchuan Earthquake and its aftermath: a decade of 
+research and challenges. Eng Geol 2018(241):25–32. https://​doi.​
+org/​10.​1016/j.​enggeo.​2018.​05.​004
+Feng WK, Yang LJ, Xin CL, Wang Z, Yu XY, Shuai YX, Tian YX 
+(2025) Design of a type of strike-slip active fault container for 
+shaking table tests. J Rock Mech Geotech Eng 2025(1674):7755. 
+https://​doi.​org/​10.​1016/j.​jrmge.​2025.​03.​001
+Fu XD, Sheng Q, Li G, Zhang ZP, Zhou YQ, Du YX (2020) Analysis 
+of landslide stability under seismic action and subsequent rainfall: 
+a case study on the Ganjiazhai giant landslide along the Zhaotong-
+Qiaojia road during the 2014 Ludian earthquake, Yunnan, China. 
+Bull Eng Geol Environ 79(10):5229–5248. https://​doi.​org/​10.​
+1007/​s10064-​020-​01890-z
+Gao GY, Song J (2014) Predictive models for permanent displace-
+ment of slopes induced by near-fault pulse-like ground motions. 
+Rock Soil Mech 35(05):1340–1347. https://​doi.​org/​10.​16285/j.​
+rsm.​2014.​05.​010
+Geng YL, Pu WC (2023) Quantitative identification of pulse-like 
+ground motions based on intrinsic time-scale decomposition tech-
+nique. Soil Dyn Earthq Eng 2023:171. https://​doi.​org/​10.​1016/j.​
+soild​yn.​2023.​107977
+Guo DP, He C, Xu C, Hamada M (2015) Analysis of the relations 
+between slope failure distribution and seismic ground motion 
+during the 2008 Wenchuan earthquake. Soil Dyn Earthq Eng 
+72:99–107. https://​doi.​org/​10.​1016/j.​soild​yn.​2015.​02.​001
+Hayden CP, Bray JD, Abrahamson NA (2014) Selection of near-fault 
+pulse motions. J Geotech Geoenviron Eng. https://​doi.​org/​10.​
+1061/​(asce)​gt.​1943-​5606.​00011​29
+Itasca (2014) Software manual of FLAC3D, Universal Distinct Element 
+Code (UDEC) User's Guide, Version 7.0. Itasca, Minneapolis, 
+Minnesota, USA.
+Kuhlemeyer RL, Lysmer J (1973) Finite element method accuracy for 
+wave propagation problems. J Soil Mech Found Div 99(5):421–
+427. https://​doi.​org/​10.​1061/​JSFEAQ.​000188
+Li XJ, Zhou ZH, Yu HY, Wen RZ, Lu DW, Huang M, Zhou YN, Cu JW 
+(2008) Strong motion observations and recordings from the great 
+Wenchuan earthquake. Earthquake Eng Eng Vib 7(3):235–246. 
+https://​doi.​org/​10.​1007/​s11803-​008-​0892-x
+Li LQ, Ju NP, Zhang S, Deng XX, Sheng DC (2018) Seismic wave 
+propagation characteristic and its effects on the failure of steep 
+jointed anti-dip rock slope. Landslides 16(1):105–123. https://​doi.​
+org/​10.​1007/​s10346-​018-​1071-4
+Li DJ, Li HK, Fu JW, Yu QS, Zhang YB, Cheng X (2024a) Permanent 
+displacement limit analysis of jointed rock slope under the near-
+fault pulse-like ground motion based on the rotational—transla-
+tional combined failure model and tensile strength cutoff. Comput 
+Geotech 2024(173):106564. https://​doi.​org/​10.​1016/j.​compg​eo.​
+2024.​106564
+Li ZY, Chen GQ, Han ZS, Hazarika H, Xia MY, Feng CF (2024b) The 
+influence of pulse-like ground motion caused by the directivity 
+effect on landslide triggering. Bull Eng Geol Environ 83(1):48. 
+https://​doi.​org/​10.​1007/​s10064-​023-​03514-8
+Lin CH, Li HH, Weng MC (2018) Discrete element simulation of 
+the dynamic response of a dip slope under shaking table tests. 
+13432
+	
+C. Xin et al.
+Eng Geol 2018(243):168–180. https://​doi.​org/​10.​1016/j.​enggeo.​
+2018.​07.​005
+Liu XR, Wang Y, Xu B, Zhou XH, Guo XY, Miao LL (2023) 2023 
+dynamic damage evolution of bank slopes with serrated struc-
+tural planes considering the deteriorated rock mass and fre-
+quent reservoir-induced earthquakes. Int J Min Sci Technol 
+33(9):1131–1145. https://​doi.​org/​10.​1016/j.​ijmst.​2023.​07.​004
+Liu H, Luo Y, Wang YS, Wang WP, Zhu X, Li JY, Zhou Z, Jing 
+JJ (2024) Influence of surface wave impedance ratios on the 
+dynamic response and damage characteristics of slopes based 
+on shaking table tests. Eng Geol 332:107452. https://​doi.​org/​
+10.​1016/j.​enggeo.​2024.​107452
+Luo J, Pei XJ, Evans S (2019) Mechanics of the earthquake-induced 
+Hongshiyan landslide in the 2014 Mw 6.2 Ludian earthquake, 
+Yunnan, China. Eng Geol 251:197–213. https://​doi.​org/​10.​
+1016/j.​enggeo.​2018.​11.​011
+Luo J, Evans SG, Pei XJ, Huang RQ, Liu M, Dong XJ (2020) 
+Anomalous co-seismic surface effects produced by the 2014 
+Mw 6.2 Ludian earthquake, Yunnan, China: an example of 
+complex faulting related to Riedel shear structures. Eng Geol 
+266:105476. https://​doi.​org/​10.​1016/j.​enggeo.​2020.​105476
+Miao SS, Su LJ, Zhang CL, Liu ZY, Wang B, Dong ZB (2024) 
+Dynamic response characteristics and damage failure process of 
+bedding rock slope in shaking table test. Bull Eng Geol Environ 
+83(9):358. https://​doi.​org/​10.​1007/​s10064-​024-​03843-2
+Ning YB, Zhang GC, Tang HM, Shen WC, Shen PW (2019) Process 
+analysis of toppling failure on anti-dip rock slopes under seismic 
+load in Southwest China. Rock Mech Rock Eng 52(11):4439–
+4455. https://​doi.​org/​10.​1007/​s00603-​019-​01855-z
+Pai S, Kaynia AM, Bhasin RK, Paul DK (2011) Earthquake stabil-
+ity analysis of rock slopes: a case study. Rock Mech Rock Eng 
+45(2):205–215. https://​doi.​org/​10.​1007/​s00603-​011-​0145-6
+Panella DS, Tornello ME, Frau CD (2017) A simple and intuitive 
+procedure to identify pulse-like ground motions. Soil Dyn 
+Earthq Eng 94:234–243. https://​doi.​org/​10.​1016/j.​soild​yn.​2017.​
+01.​020
+Peng YB, Han RJ (2024) A comprehensive categorization method 
+for identifying near-fault pulse-like ground motions. Earthq Eng 
+Struct Dyn. https://​doi.​org/​10.​1002/​eqe.​4225
+Rasheed A, Osama M, Rafique M, Tareen ADK, Lone KJ, Qureshi 
+SA, Kearfott KJ, Alam A, Nikolopoulos D (2023) Time-fre-
+quency analysis of radon and thoron data using continuous 
+wavelet transform. Phys Scripta 98(10):105008. https://​doi.​org/​
+10.​1088/​1402-​4896/​acf694
+Saaty TL (1983) Priority setting in complex problems. IEEE Trans 
+Eng Manag 30(3):140–155. https://​doi.​org/​10.​1109/​TEM.​1983.​
+64486​06
+SeismoSoft (2023) SeismoSignal user manual (Version 5.1.0). 
+https://​seism​osoft.​com/​produ​cts/​seism​osign​al/
+Shi WP, Zhang JW, Song DQ, Liu XL, Wang EZ, Zhao JJ (2023) 
+2023 Dynamic Response Characteristics and Instability Mecha-
+nism of High-Steep Bedding Rock Slope at the Tunnel Por-
+tal in High-Intensity Seismic Region. Rock Mech Rock Eng 
+57(2):827–849. https://​doi.​org/​10.​1007/​s00603-​023-​03629-0
+Song J, Gao GY (2014) Sliding displacement of slopes under 
+near-fault pulse-like ground motions. Chin J Rock Mech Eng 
+33(02):317–326. https://​doi.​org/​10.​3722/j.​cnki.​jrme.​2014.​02.​
+007
+Song J, Gao GY, Chen QS, Zhao H (2013) Dynamie response of 
+soil slope under near-fault gound motions. China Earthq Eng J 
+35(01):62–90. https://​doi.​org/​10.​3969/i.​issn.​1000-​0844.​2013.​
+01.​0062
+Song DQ, Liu XL, Huang J, Zhang JM (2020) Energy-based analysis 
+of seismic failure mechanism of a rock slope with discontinui-
+ties using Hilbert-Huang transform and marginal spectrum in 
+the time-frequency domain. Landslides 18(1):105–123. https://​
+doi.​org/​10.​1007/​s10346-​020-​01491-7
+Song DQ, Liu XL, Huang J, Zhang JM, Nkwenti BN (2021) Seismic 
+cumulative failure effects on a reservoir bank slope with a com-
+plex geological structure considering plastic deformation charac-
+teristics using shaking table tests. Eng Geol 286:106085. https://​
+doi.​org/​10.​1016/j.​enggeo.​2021.​106085
+Song J, Xue YL, Zhang S, Ji J, Gao YF (2024) Directionality of earth-
+quake-induced slope displacements from numerical analysis and 
+sliding block approaches. Eng Geol 2024(339):107638. https://​
+doi.​org/​10.​1016/j.​enggeo.​2024.​107638
+Tang Y, Che AL, Cao YB, Zhang FH (2020) Risk assessment of seis-
+mic landslides based on analysis of historical earthquake disaster 
+characteristics. Bull En Geol Environ 79(5):2271–2284. https://​
+doi.​org/​10.​1007/​s10064-​019-​01716-7
+Wang XW, Wu SQ, Cai JX, Liu GX (2023) Optimal pair selection 
+applied to Sentinel-2 images for mapping ground deformation 
+using pixel offset tracking: a case study of the 2022 Menyuan 
+earthquake (Mw 6.9), China. Remote Sens 15(19):4735. https://​
+doi.​org/​10.​3390/​rs151​94735
+Wang C, Guo MZ, Chen XL, Gu KH, Gong YF, Qi YP, Yuan DD, Zhu 
+C, Chen BB (2024) Damage evolution of the bedding rock land-
+slide and debris landslide under earthquakes in the Three-rivers 
+Basin. Eng Geol 2024(339):107631. https://​doi.​org/​10.​1016/j.​
+enggeo.​2024.​107631
+Wei B, Tan H, Wan KC, Sun ZC, Li SS (2024a) Seismic performance 
+of railway bridges with novel ductile piers under near-fault earth-
+quakes. Transp Geotech 2024(46):101241. https://​doi.​org/​10.​
+1016/j.​trgeo.​2024.​101241
+Wei H, Tao ZG, He MC, Wu HG, Lv XQ, Yu HJ, Weng HQ (2024b) 
+The cumulative damage evolution law of multi-anchor circu-
+lar piles reinforced landslide under earthquake action. Rock 
+Mech Rock Eng 57(8):6321–6336. https://​doi.​org/​10.​1007/​
+s00603-​024-​03857-y
+Wu JD, Lin BF (2009) Speaker identification using discrete wavelet 
+packet transform technique with irregular decomposition. Expert 
+Syst Appl 36(2):3136–3143. https://​doi.​org/​10.​1016/j.​eswa.​2008.​
+01.​038
+Xin CL, Wang ZZ, Zhou JM, Gao B (2019) Shaking table tests on 
+seismic behavior of polypropylene fiber reinforced concrete tunnel 
+lining. Tunn Undergr Space Technol 2019(88):1–15. https://​doi.​
+org/​10.​1016/j.​tust.​2019.​02.​019
+Xin CL, Wang Z, Hajirasouliha I, Yang F, Li WH, Chen T, Gao B 
+(2022) Seismic response mechanisms of casing-shape composite 
+tunnel lining: theoretical analysis and shaking table test verifica-
+tion. Soil Dyn Earthq Eng 2022(162):107440. https://​doi.​org/​10.​
+1016/j.​soild​yn.​2022.​107440
+Xin CL, Shuai YX, Song DQ, Liu XL (2024a) Dynamic interaction and 
+failure mechanism in tunnel-slope systems: mitigation insights 
+from shaking table tests and numerical analysis. Tunn Undergr 
+Space Technol 2024(152):105940. https://​doi.​org/​10.​1016/j.​tust.​
+2024.​105940
+Xin CL, Yang F, Feng WK, Wang Z, Li WH (2024b) Seismic responses 
+and shattering cumulative effects of bedding parallel stepped rock 
+slope: Model test and numerical simulation. J Rock Mech Geotech 
+Eng. https://​doi.​org/​10.​1016/j.​jrmge.​2024.​03.​031
+Xin C, Li WH, Wang Z, Feng WK, Hajirasouliha I, Yu XY (2024c) 
+Shaking table tests on the stability of dip and anti-dip rock 
+slopes with discontinuitys induced by seismic motions. Eng Geol 
+2024(341):107707. https://​doi.​org/​10.​1016/j.​enggeo.​2024.​107707
+Xu B, Liu XR, Liang Y, Zhou XH, Zhong ZL (2024) Stability of bed-
+ded rock slopes subjected to hydro-fluctuation and associated 
+strength deterioration. J Rock Mech Geotech Eng 16(8):3233–
+3257. https://​doi.​org/​10.​1016/j.​jrmge.​2023.​09.​043
+13433
+Characterizing Dynamic Responses of Rock Slopes to Near‑Fault Pulse‑Like Ground Motions﻿	
+Yaghmaei-Sabegh S (2010) Detection of pulse-like ground motions 
+based on continues wavelet transform. J Seismol 14(4):715–726. 
+https://​doi.​org/​10.​1007/​s10950-​010-​9193-8
+Yaghmaei-Sabegh S (2013) wavelet-based analysis for pulse period 
+of earthquake ground-motions. Int J Eng 26(10A):1135–1144. 
+https://​doi.​org/​10.​5829/​idosi.​ije.​2013.​26.​10a.​04
+Yang DX, Wang W (2012) Nonlocal period parameters of frequency 
+content characterization for near-fault ground motions. Earthq 
+Eng Struct Dyn 41(13):1793–1811. https://​doi.​org/​10.​1002/​eqe.​
+2157
+Yang HL, Cui SH, Pei XJ, Fan XM, Lei J (2023) Multiple earthquake-
+induced progressive failure of bedding slopes with a saturated 
+weak layer: shaking table model tests. Soil Dyn Earthq Eng 
+2023(170):107906. https://​doi.​org/​10.​1016/j.​soild​yn.​2023.​107906
+Yang F, Xin CL, Wang Z, Feng WK, Hu YP (2025a) Investigating 
+deformation and failure mechanisms of discontinuous anti-
+dip bench rock slopes through shaking table tests and numeri-
+cal simulations. Rock Mech Rock Eng. https://​doi.​org/​10.​1007/​
+s00603-​024-​04346-y
+Yang CW, Fan J, He YF, Xu XQ, Wang L, Su K (2025b) Mechanisms 
+of earthquake-induced unstable rock masses initiation and rock-
+falls impact on open-cut tunnels: insights from shaking table tests. 
+Acta Geotech. https://​doi.​org/​10.​1007/​s11440-​025-​02615-w
+Zeng C, Jiang H, Song GS, Li C, Zhao XY, Ren Y, Xue ZW (2024) 
+Quantitative classification of velocity pulse-like ground motions 
+based on an adaptive response spectrum-based decomposition 
+method. Soil Dyn Earthq Eng 2024(177):108419. https://​doi.​org/​
+10.​1016/j.​soild​yn.​2023.​108419
+Zhai CH, Chang ZW, Li S, Chen ZQ, Xie LL (2013) Quantitative 
+identification of near-fault pulse-like ground motions based on 
+energy. Bull Seismol Soc Am 103(5):2591–2603. https://​doi.​org/​
+10.​1785/​01201​20320
+Zhai CH, Li CH, Kunnath S, Wen WP (2018) An efficient algorithm for 
+identifying pulse-like ground motions based on significant veloc-
+ity half-cycles. Earthq Eng Struct Dyn 47(3):757–771. https://​doi.​
+org/​10.​1002/​eqe.​2989
+Zhang M, Yin YP, McSaveney M (2016) Dynamics of the 2008 earth-
+quake-triggered Wenjiagou Creek rock avalanche, Qingping, 
+Sichuan, China. Eng Geol 2016(200):75–87. https://​doi.​org/​10.​
+1016/j.​enggeo.​2015.​12.​008
+Zhang YB, Xiao Y, Wang BR, Tang WY, Yu PC, Wang W, Xu PY, 
+Antwi Buah P (2024) Directivity effect of the spatial distribution 
+of co-seismic landslides affected by near-fault ground motions. 
+Comput Geotech 2024(170):106263. https://​doi.​org/​10.​1016/j.​
+compg​eo.​2024.​106263
+Zhou SH, Chen GQ, Fang LG (2016) Distribution pattern of landslides 
+triggered by the 2014 Ludian earthquake of china: implications for 
+regional threshold topography and the seismogenic fault identifi-
+cation. ISPRS Int J Geo-Inf 5(4):46–68. https://​doi.​org/​10.​3390/​
+ijgi5​040046
+Zhou HX, Che AL, Zhu RJ (2022) Damage evolution of rock 
+slopes under seismic motions using shaking table test. Rock 
+Mech Rock Eng 55(8):4979–4997. https://​doi.​org/​10.​1007/​
+s00603-​022-​02921-9
+Zhou HX, Che AL, Shuai XH, Cao YB (2024) Seismic vulnerabil-
+ity assessment model of civil structure using machine learning 
+algorithms: a case study of the 2014 Ms6.5 Ludian earth-
+quake. Nat Hazards 120(7):6481–6508. https://​doi.​org/​10.​1007/​
+s11069-​024-​06465-9
+Zou DG, Han HC, Liu JM, Yang DX, Kong XJ (2017) Seismic fail-
+ure analysis for a high concrete face rockfill dam subjected to 
+near-fault pulse-like ground motions. Soil Dyn Earthq Eng 
+2027(98):235–243. https://​doi.​org/​10.​1016/j.​soild​yn.​2017.​03.​031
+Publisher's Note  Springer Nature remains neutral with regard to 
+jurisdictional claims in published maps and institutional affiliations.
+Springer Nature or its licensor (e.g. a society or other partner) holds 
+exclusive rights to this article under a publishing agreement with the 
+author(s) or other rightsholder(s); author self-archiving of the accepted 
+manuscript version of this article is solely governed by the terms of 
+such publishing agreement and applicable law.

@@ -1,0 +1,1944 @@
+Full Length Article
+Design of a type of strike-slip active fault container for shaking table
+tests
+Wenkai Feng a, b, Lianjie Yang b, Chunlei Xin a, b, *, Zhao Wang c, **, Xinyuan Yu d,
+Yixin Shuai b, Yuxin Tian b
+a State Key Laboratory of Geohazard Prevention and Geoenvironment Protection, Chengdu University of Technology, 610059, Chengdu, China
+b College of Environment and Civil Engineering, Chengdu University of Technology, 610059, Chengdu, China
+c Institute for Transport Studies, University of Leeds, LS2 9JT, Leeds, UK
+d School of Mechanical, Aerospace and Civil Engineering, The University of Shefﬁeld, S10 2TN, Shefﬁeld, UK
+a r t i c l e
+i n f o
+Article history:
+Received 29 August 2024
+Received in revised form
+6 January 2025
+Accepted 4 March 2025
+Available online 8 March 2025
+Keywords:
+Shaking table tests
+Fault container
+Modal analysis
+Hammer test
+Strike-slip fault
+a b s t r a c t
+Fault container and shaking table tests are crucial for studying co-seismic dislocation in cross-fault
+tunnels, with the design and functionality of the container signiﬁcantly affecting the accuracy of dy-
+namic response analyses of tunnel linings. This research introduces a fault container developed as part of
+a signiﬁcant active fault-crossing tunnel project in the high-intensity seismic zone of western China. The
+container is designed to simulate both strike-slip and dip-slip fault characteristics with adjustable fault
+angles. Extensive testing, including shaking table tests under strong seismic conditions, three-
+dimensional (3D) ﬁnite element numerical simulations, and hammer tests, were conducted to eval-
+uate the modal characteristics of the container under various conditions. The study highlights the
+resonance characteristics of the soil-container system, the signal consistency across different disloca-
+tions, and the dynamic response patterns both with and without pulse-like seismic motions and varying
+intensities. The results indicate that the natural frequencies of the container and the model soil, deter-
+mined through white noise scanning, are 23.74 Hz and 6.355 Hz, respectively, suggesting no resonance in
+the model soil-container structure. The dynamic response characteristics of the empty container show
+good integrity and versatility under various seismic excitations. The consistency of the free-ﬁeld time
+history curve conﬁrms that the newly developed fault container effectively simulates the continuity and
+boundary conditions of the free-ﬁeld. Time domain analysis conducted before and after fault dislocation
+demonstrates the capability of the container to accurately replicate the coupling effects of fault and
+seismic motions.
+© 2025 Institute of Rock and Soil Mechanics, Chinese Academy of Sciences. Published by Elsevier B.V. This
+is an open access article under the CC BY-NC-ND license (http://creativecommons.org/licenses/by-nc-nd/
+4.0/).
+1. Introduction
+Transportation tunnel projects in the high-intensity seismic
+zones of western China are advancing towards high-quality
+development. The construction of new, long, and large tunnels
+frequently necessitates navigating complex and challenging sec-
+tions, often approaching or intersecting seismic active faults. This
+proximity to faults poses a signiﬁcant risk of fault dislocation to
+tunnels during strong earthquakes, making strike-slip active faults
+a critical concern for the construction and maintenance of these
+infrastructures (Meng et al., 2024). Recent decades have witnessed
+severe structural damage to tunnels caused by major earthquakes.
+Notably, the 1995 Kobe earthquake in Japan inﬂicted substantial
+damage on 16 crossing-fault tunnels (Toda et al., 1996), while the
+1999 Chi-Chi earthquake in Taiwan compromised 18 such tunnels
+(Yang et al., 2002). Furthermore, there were about 130 cases of
+crossing-fault tunnel damage as a result of the 2008 Wenchuan
+earthquake in China, with the Longxi Tunnel close to the Long-
+menshan fault zone suffering the most damage (Shen et al., 2014).
+* Corresponding author. State Key Laboratory of Geohazard Prevention and
+Geoenvironment Protection, Chengdu University of Technology, 610059, Chengdu,
+China.
+** Corresponding author.
+E-mail
+addresses:
+xinchunlei@cdut.edu.cn
+(C.
+Xin),
+z.wang13@leeds.ac.uk
+(Z. Wang).
+Peer review under responsibility of Institute of Rock and Soil Mechanics, Chi-
+nese Academy of Sciences.
+Contents lists available at ScienceDirect
+Journal of Rock Mechanics and
+Geotechnical Engineering
+journal homepage: www.jrmge.cn
+https://doi.org/10.1016/j.jrmge.2025.03.001
+1674-7755/© 2025 Institute of Rock and Soil Mechanics, Chinese Academy of Sciences. Published by Elsevier B.V. This is an open access article under the CC BY-NC-ND license
+(http://creativecommons.org/licenses/by-nc-nd/4.0/).
+Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 7711e7735
+More recently, the 2022 Menyuan earthquake in China caused
+thrust-type damage to the Daliang Tunnel due to the Lenglongling
+fault zone (Chen et al., 2023), and the 2023 Turkey earthquake
+caused signiﬁcant damage to both crossing-fault highway and
+railway tunnels (Zhao et al., 2023). These incidents demonstrate the
+ongoing vulnerability of crossing-fault tunnels to seismic activities
+and highlight the importance of innovative construction and
+operational strategies to enhance their resilience.
+The interaction between seismic motions and fault dislocation
+can be categorized into two types: one where active fault disloca-
+tions initiate seismic actions and another where seismic motions
+induce fault dislocations. Both scenarios signiﬁcantly impact tunnel
+structures, inﬂuencing the spatial and temporal distribution of
+damage. Fig. 1a and b illustrates the damage resulting from the
+active fault dislocations initiating seismic actions affecting the
+Daliang tunnel during the 2022 Menyuan earthquake, which cor-
+responds to the ﬁrst type of coupling effect. This type of damage has
+resulted in tunnel invert uplift, lining dislocation, severe defor-
+mation, and falling blocks. Conversely, Fig. 1c and d depicts the
+seismic motions inducing fault dislocations that affected the Longxi
+tunnel during the 2008 Wenchuan earthquake, representing the
+second type of coupling effect. This dislocation has resulted in the
+collapse of the arch lining, cracking of the side walls, and falling
+blocks. Notably, the damage sustained by the Daliang tunnel is
+signiﬁcantly greater than that of the Longxi tunnel. This observa-
+tion suggests that the damage caused by active fault dislocation
+during an earthquake is more severe than that resulting from fault
+dislocation induced by seismic motion. This discrepancy can be
+attributed to the characteristics of failures caused by direct fault
+dislocation, which involve high energy release, high frequency, and
+large amplitude.
+In addition, seismogenic faults result from the energy release
+associated with the rupture of the rock mass itself. This energy
+accumulation and subsequent release cause deformation in the
+displacement ﬁeld, while the rock mass rupture leads to forced
+displacements. In contrast, non-seismogenic faults undergo passive
+displacements due to the propagation of seismic waves. The dis-
+tinctions between forced and passive displacements are quite
+pronounced, as illustrated in Fig. 2a and b. The energy released
+from spontaneous fault rupture is signiﬁcantly greater than that
+generated by far-ﬁeld earthquakes. Secondly, most seismic motions
+associated with fault activity are classiﬁed as near-fault pulse
+seismic motions, which typically result in more severe damage
+compared to far-ﬁeld earthquakes. To delve deeper into the dy-
+namic response mechanisms of tunnel engineering under these
+conditions, the primary research method currently employed is
+shaking table tests. This approach has been widely adopted by re-
+searchers globally, prompting the design and development of
+specialized fault containers. These containers are instrumental in
+studying the coupling mechanisms between earthquakes and fault
+dislocations, as well as the seismic response patterns of tunnels
+(Xin et al., 2018).
+The fault container is a critical piece of equipment in shaking
+table model tests of tunnel structures. Its effectiveness largely
+hinges on three key factors: the suitability of the dimensions of the
+container, the resonance issue between the model soil and
+container, and the boundary effects induced by the rigid material of
+the container (Lei et al., 2020). An important aspect to consider is
+the length-to-diameter ratio of the container, as an optimal ratio
+can effectively mitigate boundary effects (Cengiz et al., 2020).
+Experimental and numerical studies suggest that the dimensions of
+the container should generally be at least eight times the span of
+the tunnel to minimize the boundary effects of the soil (Xin et al.,
+2019). To avoid resonance, employing a generalized model based
+Fig. 1. Tunnel failure under different coupling effects: (a) Inverted arch uplift, (b) Lining deformation, (c) Arch collapse, and (d) Side-wall cracking.
+W. Feng, L. Yang, C. Xin et al.
+Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 7711e7735
+7712
+on the shear beam method provides a theoretical framework for
+preventing resonance between the container and the geotechnical
+structure (Wang et al., 2022). Numerical research by Fishman et al.
+(1995) and Lombardi et al. (2015) has demonstrated that the in-
+ﬂuence of rigid boundaries can extend signiﬁcantly, up to 1.5e2.0
+times the depth of the soil layer. To enlarge the volume of soil
+experiencing free-ﬁeld conditions, soft materials can be applied to
+the inner surfaces of the container. This approach reduces the
+reﬂection of body waves from the boundaries and also mitigates the
+generation
+of
+seismic
+waves.
+Additionally,
+ﬂexible
+materials
+applied to the rigid boundary of the container have proven effective
+in diminishing boundary effects, with theoretical formulas avail-
+able to guide the selection of materials for minimizing these effects
+in geotechnical shaking table tests (Vivek et al., 2019).
+Currently, achieving fault strike-slip dislocation under static
+conditions is primarily done using jacks in large-scale equipment.
+However, this equipment is not compatible with the shaking tables,
+which are necessary to evaluate structural dynamic responses un-
+der dynamic conditions (Zhang et al., 2023). The use of dynamic
+containers in shaking table tests for tunnels crossing adverse
+geological sections has resolved issues such as soil-container
+resonance and load-bearing capacity, and validated boundary
+condition assumptions, while also meeting dynamic testing re-
+quirements.
+However,
+achieving
+multi-directional
+strike-slip
+dislocation remains a challenge (Yan et al., 2020). Hybrid tests that
+integrate dislocation-type rigid containers with shaking tables have
+further conﬁrmed the effectiveness of fault containers in simulating
+the lateral deformation boundary conditions of the prototype
+foundation. However, these tests did not account for the effect of
+fault dip angle, thus failing to meet the requirements for multi-
+angle fault dynamic testing (Zhang et al., 2024). Additionally,
+model tests on the damage mechanism of hinged tunnels crossing
+active faults have provided detailed insights into the damage forms
+and mechanisms under strike-slip fault dislocation. Nonetheless,
+due to the limited scale of the model equipment, these tests do not
+accurately reﬂect the full-section damage of the tunnel (Cui et al.,
+2022b).
+Shaking table tests investigating the dynamic response of tunnel
+lining structures to strong seismic actions triggered by strike-slip
+faults have revealed limitations in existing containers used to
+analyze the coupling effects of fault dislocation and seismic mo-
+tions. To address these issues, this study introduces a novel fault
+container designed to simulate both strike-slip and dip-slip dislo-
+cation characteristics, with adjustable fault plane angles and
+dislocation
+velocities.
+Modal
+analysis
+of
+the
+container
+was
+conducted using shaking table tests and three-dimensional (3D)
+ﬁnite element simulations to evaluate its integrity and adaptability
+under various dislocations and seismic excitations. The modal
+properties of the container were further validated through hammer
+tests. Additionally, free-ﬁeld shaking table tests were conducted to
+examine the dynamic response of the soil and validate the struc-
+tural boundary conditions. The development of this testing equip-
+ment establishes a robust experimental foundation for further
+research. This enables a better understanding of the dynamic
+response characteristics of tunnel lining structures under intense
+seismic actions from strike-slip faults. It also aids in exploring the
+seismic damage mechanisms of tunnels crossing active faults,
+particularly in high-intensity seismic areas where earthquakes and
+dislocations occur simultaneously.
+2. Fault container design
+2.1. Detailing requirements
+To accurately simulate the propagation of one-dimensional (1D)
+shear waves in soil samples with ﬁnite thickness, the container
+must incorporate speciﬁc key modeling attributes. Han et al. (2020)
+identiﬁed several critical standards necessary for an ideal container
+to accurately simulate the boundary conditions of soil in an inﬁnite
+lower layer:
+(1) Size and Structural Integrity: The frame must be appropriately
+sized and structurally robust to prevent any lateral expansion
+or contraction during vibrations.
+(2) Structural Stiffness and Weight: Within the constraints of its
+dimensions, the container should maximize structural stiff-
+ness while minimizing its weight as much as possible.
+(3) Inertial Forces: The inertial forces from the container's mass
+should not affect the vibration response of the model soil.
+(4) Seismic Response Simulation: During dislocation, the inter-
+action between the model soil and the container should
+closely replicate actual seismic response conditions.
+(5) Lateral Boundary Simulation: The container must accurately
+simulate the lateral boundary conditions of the model soil.
+(6) Resonance Prevention: The design should avoid resonance by
+ensuring the container's natural frequencies do not align
+with those of the model soil.
+(7) Load-Bearing Capacity: The container must be designed with
+sufﬁcient load-bearing capacity to prevent damage during
+Fig. 2. Comparison of mechanisms of different coupling effects: (a) Active fault dislocations initiate seismic actions, and (b) Seismic motions induce fault dislocations.
+W. Feng, L. Yang, C. Xin et al.
+Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 7711e7735
+7713
+experiments, ensuring durability and stability throughout
+testing.
+These criteria will ensure that the container provides a reliable
+and realistic simulation environment for studying soil behavior
+under seismic conditions.
+2.2. Design and manufacture of container
+The selection of material for the fault container is crucial for
+ensuring its reliability. Consequently, Q345 steel was selected for its
+construction. This custom-designed fault container consists of
+three primary structural components: the hanging wall cabinet, the
+footwall cabinet, and the power device. To accurately simulate
+seismic responses, it is essential that the boundary conditions of
+the model soil replicate the deformation mode of actual soil,
+thereby preventing seismic energy reﬂection from rigid bound-
+aries. To achieve this, a 10 cm thick foam plastic panels are installed
+along the interior transverse sidewalls of the container (Xin et al.,
+2020).
+The design of the container can directly affect the reliability of
+dynamic response data for tunnel structures. Therefore, a fault
+container was engineered to emulate both strike-slip and dip-slip
+characteristics of faults, featuring adjustable fault plane angles.
+The container consists of a hanging wall cabinet, a footwall cabinet,
+a fault angle adjustment disk, a system control panel, crossbars, and
+a bottom plate, with overall dimensions of 3.7 m  1.5 m  1.9 m
+(length  width  height), as shown in Fig. 3a and b. Constructed
+from a steel frame, the container integrates the hanging wall and
+footwall sections, connected via a bottom plate as illustrated in
+Fig. 3c. These sections are supported by side panels and transverse
+beams, which deﬁne the container space. The hanging wall and
+footwall sections are designed to slide horizontally or at an incline
+in one or both directions along the fault plane through a dynamic
+dislocation
+device.
+Furthermore,
+the
+rotating
+disk
+on
+the
+adjustment structure (Fig. 3d) is connected to the hanging wall and
+footwall sections via high-strength bolts, facilitating the adjust-
+ment of fault plane angles. This conﬁguration, aligned with actual
+geological conditions, allows for the exploration of how variations
+in dip-slip fault angles inﬂuence the structural dynamic response of
+tunnels crossing faults.
+3. Shaking table test preparation
+3.1. Input seismic excitation scheme
+This study was organized into two groups of tests. The ﬁrst
+group involved tests with an empty container to assess the con-
+sistency of various modal characteristics and the dynamic re-
+sponses of the fault container. The second group, a free-ﬁeld test,
+utilized model soil within the container to validate its boundary
+conditions and to examine the effectiveness of the coupling effects
+between different types of fault dislocation and seismic motions.
+Notably, the coupling effects of actual seismic motion and fault
+dislocation exhibit distinct characteristics. Two types of coupling
+effects were considered for the selection of seismic motions: the
+ﬁrst type involves seismic coupling effects initiated by active fault
+dislocation, while the second type relates to fault dislocation
+induced by seismic motion. For the former, seismic motions char-
+acterized by pulse effects were chosen, such as the Menyuan (MY)
+seismic motion. This motion is known for its pulse and narrow
+frequency characteristics, which were instrumental in the damage
+to the Daliang tunnel due to strong seismic actions triggered by the
+transient dislocation of the seismogenic fault (Chen and Liu, 2019).
+The test setup for this type involved simultaneous fault dislocation
+and seismic action. The latter type selected non-pulse effect seismic
+waves, such as the Wolong (WL) seismic motion, which is charac-
+terized by the absence of pulse and narrow frequency. This motion
+caused damage to the Longxi tunnel due to the dislocation induced
+Fig. 3. Rigid fault container: (a) 3D schematic diagram of rigid fault container; (b) Physical fault container; (c) Detailed diagram of the footwall frame; and (d) Detailed diagram of
+the angle adjustment disk.
+W. Feng, L. Yang, C. Xin et al.
+Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 7711e7735
+7714
+by the seismic waves during the Wenchuan earthquake (Xin et al.,
+2022). In this case, the seismic action was applied ﬁrst, followed by
+the fault dislocation consideration. In addition, a shaking table free-
+ﬁeld test was carried out to verify the boundary effects of the
+container and to investigate the deformation behavior of the model
+soil within it. The speciﬁc loading conditions for the model tests are
+presented in Table 1. The acceleration time history curves and
+Fourier spectra of the two seismic motions are shown in Fig. 4.
+3.2. Monitoring scheme
+To investigate the dynamic response characteristics and modal
+properties of the container in test group 1, acceleration sensors
+were employed to monitor dynamic signal responses at the
+boundaries and fault locations of the fault container. Sensors A01
+through A08 were positioned at the boundaries to assess the overall
+performance. Sensors A09 and A10 were strategically positioned at
+the fault junction to examine and verify the consistency of the
+acceleration response. The detailed monitoring arrangement for
+test group 1 is shown in Fig. 5a and b.
+To validate the effectiveness of the novel fault container in test
+group 2, yellow sand in its natural state was utilized as the model
+soil for free-ﬁeld test. The free-ﬁeld response characteristics were
+identiﬁed by analyzing the acceleration and dislocation responses
+of the model soil. A longitudinal cross-section along the central line
+of the model soil was determined as the reference monitoring plane
+to deploy accelerometers and displacement sensors. The speciﬁc
+arrangements of the acceleration sensors (denoted by the letter A)
+and the locations of the laser displacement gages (denoted by the
+letter D) are illustrated in Fig. 6a and b. Accelerometers placed at
+the model's boundaries and central region were employed to
+investigate and validate the boundary conditions of the container.
+Accelerometers situated near the fault were utilized to analyze the
+dynamic response patterns of the free ﬁeld, as well as the fault
+strike-slip behavior on both the hanging wall and footwall.
+Displacement gages positioned at the tops of the hanging wall and
+footwall were used to measure the surface settlement of the model
+soil.
+To mitigate the impact of the rigid boundaries of the fault
+container, 10 cm thick foam panels were installed along both the
+lateral and longitudinal boundaries inside the container. The model
+soil was subsequently ﬁlled in layers, each measuring 20 cm in
+thickness. After the layering was complete, sensors were embedded
+according to the monitoring plan. To secure the sensors during the
+experiment and ensure accurate signal measurements, the sur-
+rounding soil was compacted. The ﬁnal height of the model soil in
+the container reached 1.6 m. Grid lines were drawn on the soil
+surface to monitor deformation characteristics. Once the ﬁlling
+process was completed, the setup was allowed to stabilize for 24 h
+before initiating the shaking table tests. The detailed construction
+process is shown in Fig. 7.
+4. Analysis of shaking table test results
+4.1. Analysis of white noise results
+Acceleration response data from multiple measuring points,
+including A01, A04, A05, A08, and A09, located at the boundaries
+and fault position within the fault container were collected using
+the frequency sweep method. Since the frequency range of seismic
+motion signals is 0e100Hz, a band-pass ﬁltering method with a
+frequency threshold range of 0-60 Hz was employed to eliminate
+experimental noise and instrumental errors during the tests. To
+analyze the frequency response of the container, the ﬁltered ac-
+celeration signals were subjected to Fourier transformation. The
+frequency domain Fourier spectra were subsequently smoothed to
+reﬁne the frequency spectrum, as shown in Fig. 8.
+As shown in Fig. 8, the response frequencies and amplitude peak
+values at the measurement points A01, A04, A05, A08 and A09 are
+(22.25 Hz, 0.016 g/Hz), (22.21 Hz, 0.018 g/Hz), (24.06 Hz, 0.085 g/
+Hz), (24.84 Hz, 0.10 g/Hz), and (25.36 Hz, 0.12 g/Hz), respectively.
+These data show signiﬁcant variations in the frequency spectrum
+characteristics between different measurement points at the top
+and bottom of the container. The amplitude at the top is greater
+than that at the bottom, which can be attributed to the bottom of
+the container being more rigidly constrained by the shaking table
+surface, resulting in lower amplitude peaks. In contrast, the top of
+the container, being a freer surface with less constraint and more
+degrees of freedom, exhibits higher amplitude peaks. This phe-
+nomenon, known as “elevation ampliﬁcation,” occurs as seismic
+waves propagate within the container. Furthermore, monitoring
+data reveal higher natural frequencies measured at the junction of
+the hanging wall and the footwall of the fault. This can be attributed
+to the necessity of simulating the fault strike-slip dislocation within
+the container model, which possesses a higher degree of freedom
+and is more susceptible to external perturbations. Consequently,
+Table 1
+Shaking table container tests case table.
+Type
+Test case
+Dislocation (cm)
+Input seismic motion
+Direction
+Peak acceleration (g)
+Test group 1
+Case-1
+0
+White noise
+Y
+0.2
+Case-2
+Menyuan
+Y
+0.4
+Case-3
+Menyuan
+Y
+1.0
+Case-4
+0
+White noise
+Y
+0.2
+Case-5
+Wolong
+Y
+0.4
+Case-6
+Wolong
+Y
+1.0
+Case-7
+5
+White noise
+Y
+0.2
+Case-8
+Menyuan
+Y
+0.4
+Case-9
+10
+White noise
+Y
+0.2
+Case-10
+Menyuan
+Y
+0.4
+Test group 2
+Case-11
+0
+White noise
+Y
+0.2
+Case-12
+Menyuan
+Y
+0.4
+Case-13
+Menyuan
+Y
+1.0
+Case-14
+0
+White noise
+Y
+0.2
+Case-15
+Wolong
+Y
+0.4
+Case-16
+Wolong
+Y
+1.0
+Case-17
+10
+White noise
+Y
+0.2
+Case-18
+Menyuan
+Y
+0.4
+Case-19
+White noise
+Y
+0.2
+W. Feng, L. Yang, C. Xin et al.
+Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 7711e7735
+7715
+this results in a higher measured natural frequency at the junctions
+between the hanging wall and the footwall of the fault, suggesting
+the suitability of the container for fault characteristics analysis.
+Overall, the arithmetic mean of the frequency values obtained from
+the measurement points suggests a natural frequency of 23.74 Hz
+for the container, providing a crucial analytical basis for evaluating
+the suitability of the container in shaking table tests and the val-
+idity of numerical simulations.
+To mitigate the impact of the container's natural frequency on
+the shaking table model tests, it is essential to minimize resonance
+between the model material and the container during the experi-
+ments. Yan et al. (2019) studied model soils composed of Class V
+surrounding rock materials for mountain tunnels crossing poor
+geological sections, identifying a natural frequency of 8.62 Hz. In
+contrast, Zhang et al. (2019) conducted shaking table tests to assess
+the dynamic response of tunnel junctions in soft soil under lateral
+excitation, ﬁnding a natural frequency of 11.43 Hz for the model
+soil. Table 2 presents a summary of the natural frequencies of
+various model soils utilized in shaking table tests. The natural fre-
+quency of the custom-designed fault container is more than twice
+that of the model soils discussed, demonstrating the container's
+strong suitability for these tests.
+White noise excitation was utilized to determine the funda-
+mental frequency of the model soil in test group 2. Fig. 9a and b
+Fig. 4. Input seismic motion acceleration time history and Fourier spectrum of shaking table model tests: (a) 0.4 g MY acceleration time history curve; (b) 0.4 g MY Fourier
+spectrum; (c) 0.4 g WL acceleration time history curve; and (d) 0.4 g WL Fourier spectrum.
+W. Feng, L. Yang, C. Xin et al.
+Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 7711e7735
+7716
+displays the Fourier spectra of accelerations at sensors A31 and A34
+under white noise cases 11 and 14, respectively. The initial white
+noise scan identiﬁed the natural frequency of the model soil as
+6.355 Hz, aligning with the natural frequencies of commonly used
+model soils listed in Table 2, thereby conﬁrming the reasonableness
+of the model soil in test group 2. The Fourier spectra from various
+positions before fault dislocation exhibit notable consistency,
+indicating the overall integrity of the container. Simultaneously, the
+fundamental frequency of the model soil increased from 6.355 Hz
+to 6.763 Hz between case 11 to case 14, accompanied by a decrease
+in amplitude. Following fault dislocation, from case 17 to case 19,
+the fundamental frequency showed a similar pattern of change.
+This is attributed to the increased density of the soil resulting from
+the seismic motion effects. Notably, after fault dislocation, the
+model soil experienced a reduction in density leading to a decrease
+in its fundamental frequency, as shown in Fig. 9c and d. The
+fundamental frequency of the hanging wall rose from 5.013 Hz to
+6.88 Hz, whereas that of the footwall increased from 5.013 Hz to
+8.974 Hz. The higher fundamental frequency of the footwall
+compared to the hanging wall is due to the hanging wall acting as
+an active block, more susceptible to fracture, while the footwall is
+vulnerable to densiﬁcation during excitation. In summary, the
+fundamental frequency of the model soil and the container differed
+by more than a factor of 2 both before and after fault dislocation,
+effectively avoiding resonance phenomena. This further conﬁrms
+the rationale behind the design of the container.
+To investigate the frequency-domain response characteristics of
+rock masses at different elevations under various seismic excita-
+tions prior to fault dislocation, a primary frequency range of 0-
+20 Hz was selected for analyzing Menyuan and Wolong seismic
+motions. This selection is based on the dominant frequency range
+of both natural seismic motions, which typically fall within 15 Hz.
+The Fourier spectra from the model soil at the top (A51) and bottom
+(A15) under these seismic excitations are shown in Fig. 10a and b.
+The peak values at different elevations correspond closely to the
+same fundamental frequency of the sandy soil surface, demon-
+strating that the container maintains good integrity during seismic
+motion excitation. Notably, the amplitude increases with elevation,
+attributed to the greater energy of seismic motions at higher ele-
+vations (Xin et al., 2024b). Furthermore, the frequency response
+under both types of seismic excitations centers around 7 Hz, rein-
+forcing the reliability of the experimental data and the reproduc-
+ibility of the tests. It is noteworthy that within the range of 0-5 Hz,
+there are slight differences in the response of frequency spectrum
+of the model, with the impact of Menyuan seismic motion being
+Fig. 5. Accelerometer arrangement for test group 1: (a) 3D view of accelerometer
+arrangement; and (b) Plan view of accelerometer arrangement.
+Fig. 6. Monitoring scheme for test group 2: (a) Schematic diagram of sensor arrangement; and (b) Side view of sensor arrangement.
+W. Feng, L. Yang, C. Xin et al.
+Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 7711e7735
+7717
+greater than that of Wolong seismic motion. This is due to Menyuan
+seismic motion having a higher amplitude in the 0e20 Hz fre-
+quency range (Fig. 4b). However, since these discrepancies are
+minor and occur in a frequency range signiﬁcantly different from
+the model soil's fundamental frequency, they are considered
+negligible. Moreover, the fundamental frequency of the model soil
+differs by more than a factor of 2 from the container's natural fre-
+quency, ensuring that under normal experimental conditions, the
+container does not resonate with the model soil, thus meeting the
+experimental requirements effectively.
+4.2. Response signal consistency analysis
+Due to the smaller scale of the model tests compared to the
+actual geological environment, no signiﬁcant differences were
+observed in signal responses at the boundaries, highlighting the
+substantial impact of the container's overall integrity on the model
+tests. Therefore, three fault dislocation scenarios were imple-
+mented to assess this impact: no dislocation, 5 cm dislocation, and
+10 cm dislocation. The consistency of the response signals at
+various measurement points within the container is critical for
+validating the overall design integrity of the container and the
+reliability of the model tests. Fig. 11 presents the acceleration time
+histories and Fourier spectra from sensor A07 under different fault
+dislocation scenarios with Menyuan seismic motion excitation.
+As shown in Fig. 11a, the signal waveforms at measurement
+point
+A07
+exhibit
+a
+high
+degree
+of
+similarity across fault
+Fig. 7. The speciﬁc construction process for test group 2.
+Fig. 8. Measuring point acceleration spectrum diagram.
+Table 2
+Natural frequency of common model soil.
+Research object
+Similarity
+ratio
+Prototype material
+Molding material
+Natural frequency of model
+soil (Hz)
+Mountain tunnel
+Cl ¼ 1:30
+Class V surrounding
+rock
+Baryte powder, quartz sand, gypsum, laundry
+detergent, water
+8.62
+Cr ¼ 1:1.5
+Ce ¼ 1:45
+Shaft tunnel
+Cl ¼ 1:60
+Undisturbed soil
+Wood chips, dry sand
+11.43
+Sa ¼ 4:1
+Slope reinforcement with anchored piles (Hu
+et al., 2023)
+Cl ¼ 1:25
+Rocky soil
+Baryte powder, quartz sand, gypsum, water
+6.78
+Cr ¼ 1:1
+Ce ¼ 1:25
+Tunnel portal slope (Wang et al., 2023a)
+Cl ¼ 1:40
+Class V surrounding
+rock
+Fly ash, river sand, engine oil, soil
+8.37
+Cr ¼ 4:5
+Ce ¼ 1:40
+Bedding rock slope (Wu et al., 2020)
+Cl ¼ 1:100
+Siliceous slate
+Baryte powder, quartz sand, glycerin, gypsum, water
+2.54
+Cr ¼ 1:1
+Ce ¼ 1:100
+Immersed tunnel (Chen et al., 2017)
+Cl ¼ 1:60
+Undisturbed soil
+Sawdust, clay
+7.81
+Cr ¼ 13:20
+Ce ¼ 1:12.4
+Note: Cl is length similarity ratio, Cr is Density similarity ratio, Ce is shear modulus similarity ratio, Sa is acceleration similarity ratio.
+W. Feng, L. Yang, C. Xin et al.
+Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 7711e7735
+7718
+Fig. 9. Comparison of Fourier spectra under different cases and positions: (a) Before fault dislocation A31; (b) Before fault dislocation A34; (c) After fault dislocation A31; and (d)
+After fault dislocation A34.
+W. Feng, L. Yang, C. Xin et al.
+Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 7711e7735
+7719
+dislocations, indicating that the container maintains good overall
+integrity and adaptability under varying fault dislocations. Addi-
+tionally, under different dislocation cases and consistent seismic
+motion excitation, the peak acceleration at this location increases
+with the extent of fault dislocation. This increase is attributed to
+intensiﬁed fault activity within the container as the dislocation
+widens, amplifying the response to seismic excitation at that spe-
+ciﬁc point. In real-world scenarios, mountain tunnels subjected to
+strong seismic activity due to active fault strike-slip can cause the
+rock mass structure to fracture and release energy. Therefore, larger
+dislocation results in greater energy release, which is consistent
+with the observation from the shaking table model tests where
+increased fault dislocation leads to larger signal responses. This
+consistency suggests that the container effectively simulates the
+coupling effects between strike-slip faults triggering strong seismic
+actions. Fig. 11b shows that the Fourier spectra also exhibit
+Fig. 10. Comparison of Fourier spectra for different seismic motions: (a) 0.4 g MY seismic motion; and (b) 0.4 g WL seismic motion.
+Fig. 11. Acceleration time history and Fourier spectrum at different dislocation: (a) Acceleration time history curve; and (b) Fourier spectrum.
+W. Feng, L. Yang, C. Xin et al.
+Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 7711e7735
+7720
+consistency in frequency spectrum under different fault disloca-
+tions. Moreover, as dislocation increases, the energy of the signal
+response intensiﬁes, inﬂuencing the dominant frequency of the
+seismic motions due to larger dislocations correlating with greater
+strain energy release. The container design incorporates fault
+tolerance and adaptability, allowing it to accommodate changes
+within a speciﬁed range without signiﬁcantly affecting overall
+performance.
+4.3. Dynamic response analysis under different seismic excitations
+To further investigate the adaptability of the container and the
+dynamic response characteristics at each measurement point un-
+der different seismic motions, Fig. 12 shows the acceleration time
+history curves at different measurement points under various in-
+tensities of Menyuan seismic motion and Wolong seismic motions.
+As shown in Fig. 12a and c, under the same peak acceleration
+excitation, the acceleration peaks at measurement points A01 and
+A05 show nonlinear ampliﬁcation, exhibiting an elevation ampli-
+ﬁcation effect. This behavior is consistent with real-world condi-
+tions and conﬁrms that the container accurately simulates the
+propagation of seismic motions. Speciﬁcally, the ampliﬁcation
+factor for Menyuan seismic motion is 1.84, while for Wolong
+seismic motion it is 2.44. In test group 1, the ampliﬁcation effect
+caused by Wolong seismic motion is more pronounced than that
+caused by Menyuan seismic motion. The consistency of waveforms
+further demonstrates the container's robust applicability and its
+ability to simulate the coupling between different types of seismic
+motions and fault dislocation. Fig. 12aed shows that for the same
+type of seismic motion, an observable ampliﬁcation effect occurs
+with increasing height; the higher the acceleration amplitude, the
+more pronounced the ampliﬁcation effect. Furthermore, it is
+observed that the time history curve of the input base acceleration
+closely aligns with the time history curve of acceleration measured
+at A01, with an error margin within a reasonable 2%. The consis-
+tency of waveforms at different measurement points within the
+container also attests to its overall integrity. Moreover, as shown in
+Fig. 12aed, the acceleration response at the same location signiﬁ-
+cantly increases with rising peak acceleration, and the energy levels
+also increase. This phenomenon is attributed to the inherent
+ampliﬁcation effect of seismic wave energy at different peak levels,
+which is consistent with the observations obtained from the
+seismic excitation of the container. This further demonstrates that
+the container effectively simulates the dynamic response following
+seismic excitation.
+As shown in Fig. 13a and b, the ampliﬁcation coefﬁcient of the
+table surface remained essentially constant as the excitation in-
+tensity increased, approximately equal to 1.0. To quantitatively
+characterize the variation in acceleration within the container un-
+der the excitation of seismic waves with different peak ground
+accelerations (PGA), the acceleration ampliﬁcation factor (AAF) is
+introduced to describe the ampliﬁcation effect. The AAF is deﬁned
+as the ratio of the PGA at the monitoring location to the input peak
+acceleration of the seismic motion. From the observation of Fig. 13,
+it can be seen that under the same type of seismic loading condi-
+tions, the acceleration ampliﬁcation factor increases with the rise in
+peak acceleration. Furthermore, the rate of increase in the accel-
+eration
+ampliﬁcation
+factor
+also
+accelerates
+with
+increasing
+elevation, which is consistent with theoretical principles. Notably,
+under different seismic excitation conditions at the same peak ac-
+celeration, the AAF at the same monitoring location for the Wolong
+wave is consistently greater than that for the Menyuan wave. In
+summary, the container does not affect the effective transmission
+of seismic wave energy, demonstrating that it meets the re-
+quirements for shake table tests. Additionally, under the 1.0 g
+seismic wave excitation conditions, the model container showed no
+signs of instability or signiﬁcant deformation, indicating that it
+possesses a strong dynamic load-bearing capacity.
+To verify the adaptability of the container under various
+coupling effects, Fourier spectrum comparisons were conducted
+using different intensities of Menyuan seismic motion, Wolong
+seismic motion, and white noise. The inﬂuence of these different
+seismic motions on the natural frequency of the container at the
+same measurement point A05 was analyzed, as shown in Fig. 14.
+Fig. 12. The acceleration time history curves of each measuring point under different excitation amplitude values and seismic motions: (a) 0.4 g MY Acceleration time history curve;
+(b) 1.0 g MY Acceleration time history curve; (c) 0.4 g WL Acceleration time history curve; and (d) 1.0 g WL Acceleration time history curve.
+W. Feng, L. Yang, C. Xin et al.
+Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 7711e7735
+7721
+Fig. 14a and b shows signiﬁcant differences in the spectral
+characteristics of the container under different seismic excitations.
+In these ﬁgures, area 1 denotes the ﬁrst natural frequency of the
+container, while area 2 represents the response of the container at
+other frequencies under seismic excitation. The natural frequency
+of the container is notably higher than the dominant frequency of
+the input seismic motions, which helps prevent resonance phe-
+nomena. The maximum frequency response of the container under
+various seismic excitations is primarily governed by the dominant
+frequency of the input seismic motions, illustrating that the
+dominant frequency of natural seismic waves is considerably lower
+than the container's natural frequency. Analysis of the frequency
+response amplitude reveals that at the same peak acceleration
+amplitude, the energy imparted by Wolong seismic motion is
+signiﬁcantly higher than that from Menyuan seismic motion.
+Consequently, the ampliﬁcation effect induced by Wolong seismic
+motion is more pronounced. This difference further underscores
+the complex interactions between the spectral characteristics of the
+seismic motions and the vibrational response of the container,
+encompassing energy transfer and nonlinear effects. Moreover,
+under seismic wave excitations, the container exhibits responses in
+other frequency bands rather than its own dominant frequency. As
+a complex structural system, the fault container likely possesses
+multiple natural frequencies. However, although container pos-
+sesses multiple natural frequencies due to its complex design, the
+tests and simulations primarily focus on identifying the funda-
+mental frequencies associated with the most dominant vibration
+mode under the speciﬁc conditions applied during shaking table
+tests. The single frequency measured does not negate the existence
+of higher-order modes, rather, it reﬂects the speciﬁc excitation
+conditions applied. The measured modes following seismic exci-
+tation are related to the input load, the distinction between real
+seismic motion and white noise is evident in their frequency
+domain power spectra. The power spectrum of all frequency
+components of white noise is relatively uniform, while real seismic
+motion exhibits a more pronounced power spectrum within spe-
+ciﬁc frequency ranges. Thus, when the resonance frequency is
+closely aligned with the dominant frequency of seismic motion, the
+corresponding mode becomes more pronounced, whereas other
+modes may be less distinct. In other words, when the frequency of
+the applied seismic motion approaches or coincides with one of
+these natural frequencies, it can trigger a spontaneous vibration,
+known as the “resonance effect,” leading to an intensiﬁed vibra-
+tional response in the container. This dynamic underscore the
+critical need for careful consideration of the container's design and
+the selection of seismic inputs to avoid unintended resonance.
+4.4. Boundary effects of modeled soil container
+The conventional method for evaluating boundary effects in soil
+Fig. 13. Comparison of acceleration ampliﬁcation coefﬁcients under different peak acceleration conditions.
+Fig. 14. Fourier spectrum under different seismic motion: (a) 0.4 g Fourier spectrum; and (b) 1.0 g Fourier spectrum.
+W. Feng, L. Yang, C. Xin et al.
+Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 7711e7735
+7722
+containers involves using the vibration response at the center of the
+soil model as a reference. This response is then compared with the
+vibration responses at other monitoring points located near the
+boundary at the same elevation (Li et al., 2020). Boundary effects
+are typically calculated by comparing the ratio of two signals,
+where a ratio closer to 1 indicates a smaller boundary effect. For
+instance, under 0.4 g excitation from Menyuan seismic motion, the
+acceleration time histories of central and boundary sensors at
+different dislocations and elevations were collected from test group
+2, as shown in Fig. 15.
+As shown in Fig. 15a and b, a comparison of the acceleration
+time histories of measurement points A14 and A17, as well as A13
+and A14, shows that the responses are nearly identical in both the
+longitudinal and transverse directions. This consistency demon-
+strates that the container meets the boundary conditions for both
+directions under seismic excitation cases. Fig.15bed shows that the
+acceleration time histories recorded at different elevations are
+similar. This suggests that the container satisﬁes the boundary
+conditions at different elevations during non-dislocation cases.
+Although a slight ampliﬁcation was observed at the boundary
+monitoring points, the errors remained within 3% margin, which is
+acceptable for experimental purposes and can be considered
+negligible. Additionally, boundary conditions for the hanging wall
+and footwall of the container were assessed during the seismic fault
+dislocation process, as shown in Fig. 15e and f. The results conﬁrm
+that both the hanging wall and footwall of the container satisfy the
+boundary conditions post-fault dislocation. This also validates that
+the container can simulate the coupling between active faults and
+seismic motion. It is noteworthy that the acceleration response of
+the hanging wall is greater than that of the footwall, aligning with
+theoretical expectations (Li et al., 2024). This outcome further
+conﬁrms the reliability and effectiveness of the container design.
+To further validate the rationality of the boundary conditions, a
+quantitative analysis of the boundary effects at the model moni-
+toring points is conducted. This analysis utilizes the Pearson
+product-moment correlation coefﬁcient (r) and 2-norm deviation
+(m) to examine the correlation and deviation between measure-
+ment points A34 and A33. This statistical approach helps quantify
+the degree of similarity and the consistency of the responses across
+these points.
+r ¼
+CovðX; YÞ
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+VarðXÞVarðYÞ
+p
+¼
+Pn
+i¼1ðxi  xÞðyi  yÞ
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+Pn
+i¼1ðxi  xÞ2Pn
+i¼1ðyi  yÞ2
+q
+(1)
+m ¼ kxi  yik
+kxik
+¼
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+P ðxi  yiÞ2
+P ðxiÞ2
+v
+u
+u
+t
+(2)
+where, xi is the reference signal and yj is the comparison signal. xi
+and yj can be obtained directly as the time histories or frequency
+spectra. Speciﬁcally, it is the peak acceleration of the monitoring
+point under seismic excitation, as shown in Table 3.
+In general, when r  0.9, the impact of boundary effects on
+model tests is considered negligible (Wang et al., 2023b; Hu et al.,
+2021). In addition, a smaller value of m indicates that x and y are
+closer, and when m ¼ 0, it signiﬁes that the boundary and the
+central point's respond identically. It can be seen from Table 4 that
+the variation ranges of r and m in this experiment are 0.95e0.99 and
+0.02e0.2, respectively, indicating that the boundary effects can be
+ignored. As peak acceleration increases, the values of r decrease and
+the values of m increases, indicating that the boundary effects
+become more pronounced with higher earthquake intensity.
+Moreover, it is evident that boundary effects vary under different
+seismic excitation cases. The boundary effects under Wolong
+seismic motion are more pronounced than those under Menyuan
+seismic motion, which may be attributed to differences in fre-
+quency content and the development of nonlinear behavior in the
+model soil. However, the trend in these changes is consistent under
+both types of seismic excitations. The uniformity of dynamic re-
+sponses across various measurement points along the boundaries
+under different seismic excitations suggests that the fault container
+satisﬁes the experimental boundary conditions. Therefore, the
+novel fault container is deemed suitable for simulating the
+boundary conditions of a real site accurately.
+4.5. Validation of seismic motion and fault coupling effects
+4.5.1. Acceleration ampliﬁcation along depth
+Acceleration data recorded from the free-ﬁeld test (A11, A31,
+A51) were utilized to investigate the free-ﬁeld ampliﬁcation effect
+of the model soil under various seismic excitation scenarios.
+Fig. 16aec illustrates the peak acceleration ampliﬁcation with
+depth across three different excitation intensities. The ampliﬁca-
+tion effect under Wolong seismic motion was found to exceed that
+under Menyuan seismic motion at all three intensity levels, as
+indicated by the ampliﬁcation coefﬁcients. This greater ampliﬁca-
+tion under Wolong seismic motion is attributed to the closer
+alignment between its base frequency and the base frequency of
+the model soil, resulting in a more pronounced acceleration
+response. Additionally, it is generally observed that surface ampli-
+ﬁcation effects decrease with increasing input peak acceleration
+(Yang et al., 2021; Xin et al., 2024a). However, in this study, the
+elevation ampliﬁcation factor initially decreases and then increases
+with increasing peak acceleration, reﬂecting the nonlinearity
+exhibited by the model soil under seismic loading.
+Using acceleration data recorded from the free-ﬁeld test (A14,
+A34, A54), the dynamic response characteristics of the model soil in
+the hanging wall and footwall sections of the fault are also inves-
+tigated. Fig. 16d shows the peak acceleration ampliﬁcation with
+depth in the hanging wall and footwall sections under 0.4 g
+Menyuan seismic motion. The ampliﬁcation factor in the hanging
+wall section is signiﬁcantly greater than that in the footwall section,
+aligning with the previous ﬁndings that the response in the
+hanging wall section in test group 1 is stronger than in the footwall
+section. Furthermore, when comparing Fig. 16b with Fig. 16d, an
+increase in the elevation ampliﬁcation effect is observed post-
+dislocation. This change is attributed to fault dislocation, which
+causes localized damage to the model soil, while the majority of the
+soil in other regions transitions into the plastic stage. This transition
+leads to a reduction in soil stiffness, resulting in increased nonlin-
+earity and an enhanced deformation capacity under seismic
+loading.
+4.5.2. Time-frequency domain analysis before and after dislocation
+In the shaking table tests, the frequency domain analysis of the
+seismic motions in the free-ﬁeld model before and after fault
+dislocation is conducted to evaluate the impact of fault dislocation
+on seismic wave propagation characteristics. The Fourier spectrum
+changes at the boundary monitoring points of the hanging wall and
+footwall sections under 0.4 g Menyuan seismic motion, before and
+after dislocation, are compared as shown in Fig. 17.
+From Fig. 17a and b, it can be observed that, in the free-ﬁeld test,
+the main frequency of the Menyuan seismic motion at the bottom
+of the hanging wall and footwall of the fault changes minimally
+before and after dislocation, which can be considered negligible.
+This stability results from their relatively stable positional charac-
+teristics with respect to the fault dislocation, which causes minimal
+changes in the propagation path and less impact from reﬂection
+and refraction. In the central region of the free-ﬁeld, Fig. 17c and
+W. Feng, L. Yang, C. Xin et al.
+Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 7711e7735
+7723
+Fig. 15. Comparison chart of acceleration time history curves at measurement points: (a) Lateral boundary; (b) Longitudinal boundary; (c) Central boundary; (d) Top boundary; (e)
+Hanging wall boundary; and (f) Footwall boundary.
+W. Feng, L. Yang, C. Xin et al.
+Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 7711e7735
+7724
+d clearly shows that the spectral characteristics of the Menyuan
+seismic motion in the hanging wall and footwall differ post-
+dislocation. For the footwall section, the main frequency remains
+around 7.3 Hz both before and after dislocation, showing no sig-
+niﬁcant change. In contrast, in the hanging wall section, the main
+frequency of the Menyuan seismic motion decreases signiﬁcantly
+from 7.299 Hz to 2.262 Hz before and after dislocation. This notable
+reduction in the main frequency of the hanging wall extends to the
+free-ﬁeld surface (Fig. 17e and f). Speciﬁcally, the main frequency of
+the seismic motions on the hanging wall surface decreases
+following fault dislocation, whereas the main frequency on the
+footwall surface remains relatively stable. This change is primarily
+attributed to the fault dislocation in the hanging wall, which leads
+to soil damage and ampliﬁes the reﬂection and refraction effects of
+the seismic waves. These effects alter the propagation path and
+frequency components of the waveform, resulting in a reduction in
+the main frequency. In contrast, the impact of dislocation on the
+footwall section is less pronounced, leading to minimal changes in
+the main frequency of the seismic motions. This phenomenon
+aligns with the observation from Wenchuan earthquake, where the
+damage to the hanging wall of the Longmenshan fault zone was
+signiﬁcantly greater than that to the footwall, consistent with
+theoretical expectations (Yu et al., 2016). This analysis further
+demonstrates that the container effectively simulates the coupling
+effects of fault dislocation and near-fault pulse seismic motion.
+To verify the effectiveness of the coupling effect between the
+Table 3
+Peak acceleration at measurement points A34 and A33 in the shaking table tests.
+Monitoring point
+Imposed seismic motion
+Input peak acceleration
+0.2
+0.4
+1.0
+A34
+Menyuan
+0.247
+0.456
+1.186
+Wolong
+0.227
+0.464
+1.351
+A33
+Menyuan
+0.253
+0.493
+1.218
+Wolong
+0.234
+0.504
+1.416
+Table 4
+Correlation coefﬁcient and 2-norm deviation at measurement points in the shaking
+table tests.
+Input peak acceleration
+r
+m
+Menyuan
+Wolong
+Menyuan
+Wolong
+0.2
+0.983
+0.991
+0.024
+0.031
+0.4
+0.972
+0.982
+0.081
+0.086
+1.0
+0.955
+0.961
+0.139
+0.163
+Fig. 16. Comparison chart of ampliﬁcation factors for different peak accelerations and fault dislocation: (a) 0.2 g Comparison of ampliﬁcation factors; (b) 0.4 g Comparison of
+ampliﬁcation factors; (c) 1.0 g Comparison of ampliﬁcation factors; and (d) Comparison of ampliﬁcation factors for a 10 cm fault dislocation at 0.4 g acceleration.
+W. Feng, L. Yang, C. Xin et al.
+Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 7711e7735
+7725
+fault and the seismic motion simulated by the container. 0.4 g
+Menyuan seismic motion was selected to study the inﬂuence of
+fault dislocation on acceleration response at fault, and the accel-
+eration time history curves of different monitoring positions at
+fault are compared and analyzed, as shown in Fig. 18. According to
+Fig. 18aec and e, before fault dislocation occurred, the acceleration
+time-history curves near the fault at the same elevation were
+similar, which indicates that the container as a whole has a satis-
+factory dynamic carrying capacity and integrity under the condi-
+tion of no dislocation, and can truly reﬂect the corresponding law of
+the real dynamic force of seismic motion in the free ﬁeld. According
+to Fig. 18bed and f, the acceleration time history curve is different
+after the fault dislocation of 10 cm, speciﬁcally, the acceleration
+response of the hanging wall is greater than that of the footwall,
+which is consistent with the conclusion obtained in Section 4.4 of
+this study. In addition, by comparing Fig. 18a and b, it can be found
+that the acceleration response after 10 cm fault dislocation is
+greater than that before fault dislocation. This indicates that the
+fault dislocation will intensify the acceleration response at the fault,
+and the fault dislocation will release more energy. It is further
+demonstrated that the model container can simulate the coupling
+effect of fault and seismic motion.
+In addition, the Daliang tunnel serves as an example in this
+study, and the model materials at both ends of the model test are
+selected for mechanical properties testing. Based on the geometric
+dimensions of the prototype tunnel and the speciﬁcations of the
+shaking table, the geometric similarity ratio is determined to be
+1:30. Geometric length, density, and elastic modulus were selected
+as control parameters, which were then used to derive the simi-
+larity relationships for key parameters. The physical and mechan-
+ical properties at the fault location, following fault dislocation and
+surrounding rock movement, are summarized in Table 5. As shown
+in Table 5, after the occurrence of fault dislocation, the measured
+values at both the fault and the surrounding rock at each end
+conform to the order of magnitude calculated using the similarity
+relation. This indicates that the dynamic characteristics of the soil
+at the fault location can be accurately simulated.
+Moreover, the seismic damage phenomenon on the surface of
+the free ﬁeld shaking table test further veriﬁes the difference be-
+tween the hanging wall and footwall caused by fault dislocation, as
+shown in Fig. 19. Under the same peak acceleration excitation
+conditions, the damage observed in the hanging wall prior to
+dislocation is greater than that in the footwall. The primary seismic
+damage manifests as small cracks, with the “hanging wall effect”
+remaining relatively subtle. This can be attributed to the container
+holding the hanging wall and footwall together as an integral rigid
+structure through high-strength bolts before fault dislocation.
+Following the coupled action of a 10 cm dislocation and seismic
+motion, the surface cracks in the soil of the hanging wall and
+footwall become more pronounced, resulting in the appearance of
+signiﬁcant wide cracks. This enhancement of the “hanging wall
+effect” is clearly evident. These observations indicate that the
+Fig. 17. Comparison chart of Fourier spectra at different locations: (a) Fourier spectrum at A11; (b) Fourier spectrum at A14; (c) Fourier spectrum at A31; (d) Fourier spectrum at
+A34; (e) Fourier spectrum at A51; and (f) Fourier spectrum at A54.
+W. Feng, L. Yang, C. Xin et al.
+Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 7711e7735
+7726
+Fig. 18. Acceleration time history curve at the fault before and after the dislocation at the same measuring point: (a) no dislocation for bottom; (b) 10 cm dislocation for bottom; (c)
+no dislocation for central; (d) 10 cm dislocation for central; (e) no dislocation for top; and (f) 10 cm dislocation for top.
+W. Feng, L. Yang, C. Xin et al.
+Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 7711e7735
+7727
+coupling of fault dislocation and seismic motion can result in
+greater damage to the model soil, while also creating more distinct
+differences in the failure phenomena of the hanging wall and
+footwall. This phenomenon aligns with theoretical expectations
+and further validates that the container can effectively simulate the
+coupling effect of seismogenic faults.
+5. Analysis of numerical simulation results
+5.1. Finite element model building
+To validate the performance of the fault container, the ﬁnite
+element software ABAQUS was utilized to analyze the test equip-
+ment. The inclination adjustment device, along with the hanging
+wall and footwall, is connected using high-strength bolts to form
+the integrated frame of the container. This assembly is therefore
+modeled as a single entity in the analysis. The motors used in the
+model tests simulate fault strike-slip, however, their impact on the
+container's strength is not being considered. The shearing frame
+structure, welded between the container and both the hanging wall
+and footwall cabinets, was modeled using a combination of ﬁnite
+elements. Speciﬁcally, 4-node shell elements (S4R) were used for
+shearing frame component, and 8-node solid elements (C3D8R)
+were applied to the hanging wall and footwall cabinets. Addition-
+ally, 2-node beam elements (B31) were selected for the support
+beam rods within the model to accurately represent their linear,
+load-bearing characteristics. These modeling details are illustrated
+in Fig. 20.
+5.1.1. Physical and mechanical parameters of materials are
+introduced
+In the numerical simulation, the container was simulated using
+an ideal elastic-plastic constitutive model, as shown in Fig. 21. The
+steel material of the container is described in Section 2.2, and the
+material parameters are listed in Table 6.
+5.1.2. Boundary conditions and contact settings
+The hanging wall and footwall of the fault shear frame were
+placed in face-to-face contact to facilitate effective load transfer
+under stress. The sidewalls of both the hanging wall and footwall
+Table 5
+Physical and mechanical parameters of surrounding rock and fault.
+Item
+Density (g/cm3)
+Elasticity modulus (MPa)
+Poisson's ratio
+Frictional angle ()
+Cohesion force (KPa)
+Surrounding Rock
+Prototype value
+1.8e2.0
+1300e2000
+0.35e0.39
+22e27
+120e200
+Require value
+1.4e1.5
+33.3e51.3
+0.35e0.39
+22e27
+3.1e5.1
+Measured value
+1.49
+41.1
+0.35
+25.3
+3.2
+Fault
+Prototype value
+1.7e1.8
+1000e1300
+0.39e0.45
+20e22
+50e120
+Require value
+1.3e1.4
+25.6e33.3
+0.39e0.45
+20e22
+1.3e3.1
+Measured value
+1.37
+28.2
+0.42
+20.1
+1.5
+Fig. 19. Comparison of hanging wall and footwall seismic damage phenomena before and after 0.4 g MY seismic motion dislocation.
+Fig. 20. Numerical simulation model.
+W. Feng, L. Yang, C. Xin et al.
+Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 7711e7735
+7728
+were constrained to the bottom plate using bonding constraints,
+which restrict movement and deformation of the frame relative to
+the bottom plate. Coupling constraints were employed between the
+beams and sidewalls of the hanging wall and footwall to simulate
+their shared load characteristics and ensure accurate load transfer
+under vibration or stress. Additionally, bonding constraints were
+applied between the shear frame and the fault section to prevent
+relative sliding under load. Vertical constraints were applied to the
+entire container to ﬁx the model bottom plate, reﬂecting its
+attachment to the shaking table during the tests. This setup prevent
+irregular deformation and vertical displacement of the bottom
+plate, ensuring the stability and integrity of the simulation
+environment.
+5.2. Analysis of container self-oscillation frequency
+Fig. 22 shows that the natural frequency of the container, as
+determined by the numerical simulation, is 24.23 Hz. This fre-
+quency closely aligns with the shaking table test result of 23.74 Hz,
+with the difference falling within a 5% error margin. This slight
+discrepancy conﬁrms the accuracy and reliability of the numerical
+simulation, demonstrating its effectiveness in capturing the key
+characteristics of structural vibrations.
+Additionally, in tunnel engineering subjected to strong seismic
+actions triggered by strike-slip faulting, the dynamic response of
+the hanging wall typically exceeds that of the footwall (Wen et al.,
+2021). In the shaking table tests, the hanging wall of the container
+functions as the active block, leading to relatively weaker con-
+straints on it. Consequently, in the numerical simulation, the
+displacement response of the hanging wall is observed to be
+greater than that of the footwall, with a maximum displacement
+recorded at 1.90 mm under the ﬁrst modal condition. This pattern is
+consistent with the acceleration response observed in the shaking
+table tests. Overall, the container exhibits minimal displacement
+under the natural frequency condition and maintains robust
+structural integrity.
+5.2.1. Modal analysis under different dislocation patterns
+Given the reliability of the numerical simulation, a further in-
+depth analysis was conducted on the modal characteristics of the
+container under different dislocation patterns. Fig. 23aec displays
+the ﬁrst-order natural frequency displacement cloud maps and
+mode shapes of the container under horizontal, vertical, and
+combined horizontal-vertical dislocation of 10 cm, respectively. By
+adjusting the dislocation parameters, variations in different vibra-
+tion modes were observed. This approach facilitates a more
+comprehensive
+understanding
+of
+the
+structural
+vibration
+characteristics.
+From Fig. 23, it can be seen that the ﬁrst-order natural frequency
+of the container exhibits minimal variation across different dislo-
+cation cases, and the response of the hanging wall is greater than
+that of the footwall, consistent with the experimental observations.
+Fig. 23a and b reveals notable changes in the mode shapes for
+vertical and horizontal dislocations, with the maximum displace-
+ment increasing from 1.896 mm to 2.240 mm. Fig. 23b and c in-
+dicates how vertical dislocation particularly affects the mode shape
+of the container. This effect is attributed to the reduced contact area
+between the hanging wall and footwall due to vertical dislocation,
+which signiﬁcantly weakens the constraints of the hanging wall
+shear frame, resulting in increased displacement at this location,
+although the increase is not substantial. These observations
+demonstrate that the container has a certain degree of adaptability
+to different dislocation modes, maintaining stable vibration modes
+and showcasing its adaptability and reliability under various con-
+ditions. By comparing Figs. 22 and 23a, it is observed that the
+impact of increased displacement due to greater dislocation is not
+signiﬁcant. This suggests that the container exhibits robustness and
+integrity even when subjected to changes in dislocation conditions,
+maintaining stable vibration modes.
+5.2.2. Harmonic response analysis
+To verify the resonance conditions of the fault container at
+speciﬁc frequencies, a sinusoidal sweep test was conducted,
+covering a frequency range from 0 to 60 Hz. This test was designed
+to analyze the steady-state response of the container under peri-
+odic excitation and to identify potential structural resonance issues
+that may be induced by seismic motions at various frequencies.
+As shown in Fig. 24a, the structural displacement response of
+the hanging wall is higher than that of the footwall, aligning with
+the test results. This greater displacement is primarily because the
+hanging wall acts as the active plate, which possesses greater de-
+grees of freedom and undergoing slight relative displacements at
+the contact area with the footwall during seismic activity. The
+frequency-displacement curve analysis at point B of the container,
+shown in Fig. 24b, indicates that within the 0e60 Hz sweep fre-
+quency range, the structure reaches its maximum displacement of
+0.56 mm at 25.23 Hz. This peak displacement falls within a 5% error
+Fig. 21. Elastic-plastic constitutive model of steel.
+Table 6
+Physical and mechanical parameters of materials.
+Material
+Density (kg/m3)
+Young's modulus (GPa)
+Poisson's ratio
+Steel
+7850
+206
+0.3
+Fig. 22. The ﬁrst-order natural frequency and vibration mode diagram of the
+container.
+W. Feng, L. Yang, C. Xin et al.
+Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 7711e7735
+7729
+margin compared to the model test data, afﬁrming that the
+container resonates at this frequency. Despite this resonance, the
+container maintains good stability and structural integrity under
+both low- and high-frequency seismic excitations.
+5.2.3. Random response analysis
+Random vibration analysis is a spectral analysis method that
+leverages modal analysis results combined with known spectra to
+calculate the structural response. This technique is predominantly
+utilized to assess the dynamic response of structures subjected to
+random or time-varying loads (Zhang et al., 2022). The purpose of
+employing random vibration analysis in this study was to explore
+the uncertainty and variability in the behavior of the fault container
+during seismic activities. Simulations of random vibrations under
+various seismic excitations were conducted to gain a comprehen-
+sive understanding of the container's dynamic response under such
+Fig. 23. The ﬁrst-order natural frequency and vibration mode diagram of the container under different stagger distances: (a) 10 cm horizontal dislocation; (b) 10 cm vertical
+dislocation; and (c) 10 cm horizontal and vertical dislocation.
+Fig. 24. Harmonic response analysis modal characteristics: (a) Harmonic response displacement cloud diagram; and (b) Harmonic response frequency-displacement curve.
+W. Feng, L. Yang, C. Xin et al.
+Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 7711e7735
+7730
+conditions. For this analysis, the white noise recorded during the
+shaking table tests served as the input for Fourier transform anal-
+ysis. Subsequently, the power spectral density (PSD) was computed,
+providing a detailed view of the energy distribution across fre-
+quency bands. The resulting PSD curve is illustrated in Fig. 25. This
+curve helps identify the frequencies at which the container is most
+responsive to seismic inputs, aiding in predicting and mitigating
+potential issues in real-world applications.
+Fig. 26 shows the random vibration acceleration cloud map
+obtained from the PSD curves input into the ﬁnite element soft-
+ware. The map reveals that the container exhibits a “hanging wall
+effect” and an “elevation ampliﬁcation effect”, consistent with the
+observations made in experimental settings. The “hanging wall
+effect” refers to the enhanced seismic response experienced by
+structures located on the hanging wall of a fault during an earth-
+quake (Cui et al., 2022a; Fei et al., 2024). Speciﬁcally, in the region
+above the fault, particularly near the fault surface, the dislocation
+has a pronounced effect, leading to a signiﬁcant increase in the
+displacement, strain, and acceleration of the hanging wall (Zhong
+et al., 2020; Gou et al., 2024). This consistency conﬁrms the accu-
+racy of the simulation relative to actual dynamic behavior. Further
+analysis involving the extraction of the acceleration-frequency
+curve at point C of the container (shown in Fig. 27), indicates that
+the acceleration amplitude occurs at a frequency of 25.23 Hz. This
+frequency corresponds closely with the model tests and harmonic
+response analysis. The observed acceleration responses at both
+high and low frequencies are attributed to resonance phenomena,
+occurring when the seismic excitation frequency aligns with other-
+order natural frequencies of the container. Despite these resonance
+effects, the signiﬁcant differences between these responses and the
+primary frequency acceleration response of the container suggest
+that their impact on the overall experimental outcomes is minimal.
+This observation demonstrates that the container maintains robust
+stability
+and
+structural
+integrity
+under
+random
+vibration
+conditions.
+6. Discussion
+This study comprehensively investigated the modal character-
+istics and dynamic response features of the fault container through
+extensive large-scale shaking table tests and detailed numerical
+simulations. The analysis of these tests demonstrated that the fault
+container exhibited commendable stability and structural integrity
+under the inﬂuence of strong seismic actions, particularly those
+triggered by strike-slip active faults. To delve deeper into the modal
+characteristics of the fault container and to enhance the accuracy of
+the test results, Siemens’ hammer signal processing technology was
+employed. This method facilitated an in-depth analysis of the
+modal characteristics, providing a clearer understanding of its dy-
+namic behavior under various conditions. To accurately capture the
+structural modal characteristics, accelerometers were placed on
+different surfaces of the container. These surfaces, labeled as A, B, C,
+and D, are illustrated in Fig. 28. This placement was designed to
+maximize data acquisition and enhance the precision of the modal
+analysis.
+Digital signal processing techniques were used to sample the
+Frequency Response Function (FRF) derived from the model. The
+test employed the Least Squares Complex Exponential method
+(LSCE) to estimate the modal frequencies and damping factors of
+the container. The LSCE method was employed in the test to esti-
+mate the modal frequencies and damping factors of the container
+modes. The least squares error associated with the solution of Eq.
+(3) was evaluated by analyzing the convergence with respect to the
+number of assumed modes (Chung and Sernaker, 1994).
+0
+B
+B
+@
+r1;1
+r1;2
+/
+r1;2N
+,
+r2;2
+/
+r2;2N
+«
+«
+«
+«
+,
+,
+,
+r2N;2N
+1
+C
+C
+A
+8
+>
+>
+<
+>
+>
+:
+a1
+a2
+«
+aN
+9
+>
+>
+=
+>
+>
+;
+¼
+8
+>
+>
+<
+>
+>
+:
+r1;0
+r2;0
+«
+r2N;0
+9
+>
+>
+=
+>
+>
+;
+(3)
+where r is the generalized Hankel matrix, and a is the autore-
+gressive coefﬁcient.
+For this reason, when initially establishing an equation such as
+Eq. (3), it is assumed that a sufﬁciently large number of modes, N, is
+present. Speciﬁcally, a subset of this equation used to solve the
+coefﬁcient of the model addresses the scenario where only a single
+mode is expressed, as demonstrated in Eq. (4).
+Fig. 25. The power spectrum curve.
+Fig. 26. Random response ﬁrst-order natural frequency and vibration mode diagram.
+Fig. 27. Random response frequency-acceleration curve.
+W. Feng, L. Yang, C. Xin et al.
+Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 7711e7735
+7731
+ r1;1
+r1;2
+,
+r2;2
+ a1
+a2
+
+¼
+ r1;0
+r2;0
+
+(4)
+The corresponding least squares error is denoted by ε1. When
+the data is assumed to contain two modes, the subset to be solved is
+shown in Eq. (5).
+0
+B
+B
+@
+r1;1
+r1;2
+r1;3
+r1;4
+,
+r2;2
+r2;3
+r2;4
+,
+,
+r3;3
+r3;4
+,
+,
+,
+r4;4
+1
+C
+C
+A
+8
+>
+>
+<
+>
+>
+:
+a1
+a2
+a3
+a4
+9
+>
+>
+=
+>
+>
+;
+¼
+8
+>
+>
+<
+>
+>
+:
+r1;0
+r2;0
+r3;0
+r4;0
+9
+>
+>
+=
+>
+>
+;
+(5)
+Fig. 28. Accelerometer arrangement of hammer test.
+Fig. 29. Least square error diagram.
+Fig. 30. Container steady state diagram.
+W. Feng, L. Yang, C. Xin et al.
+Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 7711e7735
+7732
+Similarly, when the number of assumed modes in the model
+accurately reﬂects the actual number of modes present in the data,
+the corresponding least squares error ε2 is expected to be signiﬁ-
+cantly smaller compared to the error observed when fewer modes
+are assumed (Feng, 2013).
+The variation of the least squares error with the increasing
+number of assumed modes is plotted to create the least squares
+error plot, as shown in Fig. 29.
+The optimal number of modes was determined by comparing
+the estimated frequencies and damping factors across models with
+varying numbers of assumed modes. Ideally, these estimated fre-
+quencies and damping factors should remain relatively stable, even
+as the number of assumed modes changes. A steady-state plot is
+used to illustrate how modal frequencies and damping factors vary
+with an increasing number of assumed modes. By analyzing this
+steady-state plot (Fig. 30), the optimal number of modes can be
+identiﬁed. This optimal point is where further increases in the
+number of modes no longer signiﬁcantly reﬁne the estimates.
+Tapping tests were conducted using a force hammer sensor
+(refer to Fig. 31) at the locations of the accelerometers to acquire
+the relevant test data. The speciﬁc parameters of these tests are
+detailed in Table 7. The collected data were processed and analyzed,
+and then compared with results from shaking table tests and nu-
+merical simulations. This comparison validated the fault container's
+modal characteristics and dynamic response features, conﬁrming
+the applicability and accuracy of the test methods used.
+As shown in Fig. 32, the force hammer test results indicate that
+the ﬁrst-order natural frequency of the fault container is 22.18 Hz
+with a damping ratio of 0.45%. When these results are compared
+with those from shaking table tests and numerical simulations,
+they are found to be in good agreement. Additionally, the test mode
+shapes demonstrate the container's excellent overall integrity and
+adaptability.
+7. Conclusions
+The modal characteristics of the fault container were effectively
+determined through shaking table tests, numerical simulations,
+and force hammer testing. The dynamic response features of the
+container from both the ﬁrst and second group of experiments
+were analyzed. Additionally, the container's effectiveness in simu-
+lating the coupling effects between the fault dislocation and
+seismic excitation was validated. The results from the shaking table
+tests, numerical simulations conducted under various scenarios,
+and hammer test modal characteristics were found to be consistent,
+afﬁrming the reliability of the methodologies employed. The spe-
+ciﬁc conclusions are as follows:
+(1) The natural frequencies of the container and the model soil,
+measured
+using
+the
+scanning
+frequency
+method,
+are
+23.74 Hz and 6.355 Hz, respectively. The signiﬁcant differ-
+ence between these frequencies ensures that resonance be-
+tween
+the
+container
+and
+the
+model
+soil
+is
+unlikely.
+Additionally, the natural frequency of the model container
+deviates signiﬁcantly from those commonly used in similar
+studies, further demonstrating the broad applicability of the
+container. The consistency of response signals at the same
+measurement points in the container across various dislo-
+cations is satisfactory, and the similarity of waveforms at
+different points conﬁrms the design's integrity and reason-
+ableness. The test results from group 1 revealed that the
+ampliﬁcation effect of the Wolong seismic motion is greater
+than that of the Menyuan seismic motion. Additionally, for
+the same seismic motion, the ampliﬁcation effect becomes
+more pronounced with increasing acceleration amplitudes.
+(2) Test group 2 quantitatively analyzed the impact of boundary
+effects on soil seismic responses using 2-norm deviations,
+cumulative moment correlation coefﬁcients, acceleration
+time history waveforms, and Fourier spectral characteristics.
+The analysis reveals that the container boundaries have
+minimal impact on the soil's seismic response. The Wolong
+seismic motion consistently shows a greater ampliﬁcation
+factor compared to the Menyuan seismic motion. Addition-
+ally, the Fourier spectra of seismic waves before and after
+dislocation excitation conﬁrmed that the container effec-
+tively simulates the coupling effect between fault dislocation
+and seismic motion, thereby validating the container's
+reasonableness and applicability.
+(3) Numerical simulation results indicated that the ﬁrst-order
+natural frequency of the container remains relatively stable
+across various dislocation scenarios. Signiﬁcant changes in
+the vibration modes are observed between vertical and
+horizontal
+dislocations,
+with
+vertical
+dislocation
+Fig. 31. Force hammer sensor.
+Table 7
+Main parameters of force hammer sensor.
+Axial sensitivity
+((23 ± 5) C)
+Measuring
+range
+Maximum lateral
+sensitivity
+Maximum output
+signal
+Installation resonance
+frequency
+Polarity (acceleration direction from the bottom
+to the sensor)
+Resolution
+1 mV/N
+0-60 KN
+0.05 mV/N
+5 V
+>22 kHz
+Positive direction
+<0.001 N
+Fig. 32. The ﬁrst-order natural frequency and vibration mode diagram of hammer test.
+W. Feng, L. Yang, C. Xin et al.
+Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 7711e7735
+7733
+predominantly inﬂuencing the container's vibration modes.
+The increase in dislocation distance does not signiﬁcantly
+affect displacement, suggesting that the container demon-
+strates considerable robustness and structural integrity un-
+der varying dislocation conditions, thereby maintaining
+stable fundamental vibration modes.
+(4) Under speciﬁc frequency or random seismic excitations, the
+response of the hanging wall of the container is consistently
+higher than that of the footwall. Within the frequency sweep
+range of 0-60 Hz, maximum displacement-acceleration oc-
+curs at the natural frequency of the container due to the
+resonance phenomena. The displacement-acceleration con-
+tour maps reveal pronounced “hanging wall effects” and
+“elevation
+ampliﬁcation
+effects”
+within
+the
+container.
+Further analysis of the frequency-displacement-acceleration
+curves, alongside hammer test results, substantiates the ac-
+curacy of the natural frequency measurements of the
+container. The container also demonstrates robust adapt-
+ability and maintains integrity under both low-frequency
+and high-frequency seismic excitations.
+(5) In future research, this container will be utilized to investi-
+gate various coupling mechanisms between different active
+fault strike-slip behaviors and seismic motions. Additionally,
+the
+dynamic
+response
+characteristics
+and
+anti-seismic
+mechanisms of crossing-fault tunnels under various anti-
+seismic measures will be examined, with the aim of pro-
+posing partitioned resilience repair strategies for high-speed
+railway tunnel linings following earthquakes. Furthermore,
+shaking table tests are employed to study and validate the
+instability criterion and control method of three seismic
+resilience-enhancing schemes, which focus on enhancing
+the ductility of structures, reducing seismic energy trans-
+formation, and localizing seismic damage to facilitate easier
+repairs, which provides a theoretical basis for seismic forti-
+ﬁcation of tunnel engineering.
+CRediT authorship contribution statement
+Wenkai Feng: Writing e review & editing, Funding acquisition.
+Lianjie Yang: Writing e original draft, Software, Data curation.
+Chunlei Xin: Supervision, Methodology, Funding acquisition. Zhao
+Wang: Writing e review & editing, Formal analysis. Xinyuan Yu:
+Visualization. Yixin Shuai: Software. Yuxin Tian: Validation.
+Data availability statement
+The original data supporting the conclusions of this article will
+be made available by the authors, without undue reservation.
+Declaration of competing interest
+The authors declare that they have no known competing
+ﬁnancial interests or personal relationships that could have
+appeared to inﬂuence the work reported in this paper.
+Acknowledgments
+This research was supported by the National Natural Science
+Foundation of China (Grant Nos. 52108361 and 41977252), the
+Sichuan Science and Technology Program of China (Grant Nos.
+2024ZYD0154 and 2024NSFSC0159), and the State Key Laboratory
+of Geohazard Prevention and Geoenvironment Protection Inde-
+pendent
+Research
+Project
+(Grant
+Nos.
+SKLGP2022Z015
+and
+SKLGP2020Z001).
+All
+authors
+acknowledge
+the
+anonymous
+reviewers for their comments.
+References
+Cengiz, C., Guler, E., 2020. A laminar container apparatus for 1 g testing of granular
+columns embedded in soft clay. Int. J. Phys. Model. Geotech. 20 (1), 38e54.
+Chen, H.J., Li, X.J., Yan, W.M., Chen, S.C., Zhang, X.M., 2017. Shaking table test of
+immersed tunnel considering the geological condition. Eng. Geol. 227, 93e107.
+Chen, Z.Y., Liu, Z.Q., 2019. Effects of pulse-like earthquake motions on a typical
+subway station structure obtained in shaking-table tests. Eng. Struct. 198,
+109557.
+Chen, P.L., Geng, P., Chen, J.B., Gu, W.Q., 2023. The seismic damage mechanism of
+Daliang tunnel by fault dislocation during the 2022 Menyuan Ms6.9 earthquake
+based on unidirectional velocity pulse input. Eng. Fail. Anal. 145, 107047.
+Chung, Y.T., Sernaker, M.L., 1994. Assessment of target mode selection criteria for
+payload modal survey. Proceedings of the 12th International Modal Analysis
+2251, 272.
+Cui, P., Ge, Y.G., Li, S.J., Li, Z.H., Xu, X.W., G, D., Zhou, G., Chen, H.Y., Wang, H., Lei, Y.,
+Zhou, L.B., Yi, S.J., Wu, C.H., Guo, J., Wang, Qi, Lan, H.X., Ding, M.T., Ren, J.J.,
+Zeng, L., Jiang, Y.J., Wang, Y., 2022a. Scientiﬁc challenges in disaster risk
+reduction for the SichuaneTibet Railway. Eng. Geol. 309, 106837.
+Cui, Z., Li, J.H., Fu, X.W., Sheng, Q., Zhou, G.X., Ma, Y.L.N., Wang, T.Q., 2022b. Eval-
+uating the response of a tunnel subjected to strike-slip fault rupture in
+conjunction with model test and hybrid discreteecontinuous numerical
+modeling. Rock Mech. Rock Eng. 55 (8), 4743e4764.
+Fei, J.B., Wei, J.Y., Khalid, M.I., Zhou, X.S., Li, G.L., Chen, X.S., 2024. Failure of Daliang
+tunnel induced by active stickeslip fault. J. Rock Mech. Geotech. Eng. https://
+doi.org/10.1016/j.jrmge.2024.07.007.
+Feng, D., 2013. Decomposition based fast least squares algorithm for output error
+systems. Signal Process. 93 (5), 1235e1242.
+Fishman, K.L., Mander, J.B., Richards, R., 1995. Laboratory study of seismic free-ﬁeld
+response of sand. Soil Dynam. Earthq. Eng. 14 (1), 33e43.
+Gou, Y.X., Huang, Q.B., Liu, N.N., Chen, D.P., Peng, J.B., 2024. Inﬂuence of ground
+ﬁssures on metro shield tunnels: large-scale experiment and numerical anal-
+ysis. J. Rock Mech. Geotech. Eng. https://doi.org/10.1016/j.jrmge.2024.05.022.
+Han, J.Y., Hesham El Naggar, M., Li, L.Y., Hou, B.W., Xu, J.S., Du, X.L., 2020. Design and
+commissioning of continuous soil box supported on shake tables array for
+testing long geostructures. Soil Dynam. Earthq. Eng. 132, 106107.
+Hu, W., Xin, C.L., Li, Y., Zheng, Y.S., van Asch, T.W.J., McSaveney, M., 2021. Instru-
+mented ﬂume tests on the failure and ﬂuidization of tailings dams induced by
+rainfall inﬁltration. Eng. Geol. 294, 106401.
+Hu, H.Q., Bao, Y.J., Guo, X.P., Han, X., Gan, G., 2023. Veriﬁcation of a stochastic dy-
+namic analysis method by shaking table tests of a slope retaining system.
+Structures 55, 531e544.
+Lei, H.Y., Hu, Y., Han, Q.H., Zheng, G., Zhao, B., Du, Y.M., 2020. Design and test
+veriﬁcation of a cylindrical 3D laminar shear soil container for use on shaking
+tables. Soil Dynam. Earthq. Eng. 139, 106384.
+Li, Y.D., Zheng, S., Luo, W.L., Cui, J., Chen, Q.R., 2020. Design and performance of a
+laminar shear container for shaking table tests. Soil Dynam. Earthq. Eng. 135,
+106157.
+Li, R.H., Zhao, X., Bilotta, E., Zhang, J.H., Zhao, M., Huang, J.Q., Yuan, Y., 2024. Shaking
+table tests on deformation pattern and failure mechanism of fault-crossing
+tunnels in non-rupture scenario. Soil Dynam. Earthq. Eng. 180, 108621.
+Lombardi, D., Bhattacharya, S., Scarpa, F., Bianchi, M., 2015. Dynamic response of a
+geotechnical rigid model container with absorbing boundaries. Soil Dynam.
+Earthq. Eng. 69, 46e56.
+Meng, S.B., Li, W.X., Liu, Z.X., Liu, J.Q., He, W.G., Yang, C.W., Zhao, J.W., Wei, S.T., 2024.
+Rapid resilience assessment framework for mountain tunnels subjected to
+near-fault seismic ground motions. Soil Dynam. Earthq. Eng. 182, 108746.
+Shen, Y.S., Gao, B., Yang, X.M., Tao, S.J., 2014. Seismic damage mechanism and dy-
+namic deformation characteristic analysis of mountain tunnel after Wenchuan
+earthquake. Eng. Geol. 85e98.
+Toda, S., Hataya, R., Abe, S., Miyakoshi, K., 1996. The 1995 Kobe earthquake and
+problems of evaluation of active faults in Japan. Eng. Geol. 43 (2e3), 151e167.
+Vivek, B., Raychowdhury, P., 2019. Design and calibration of a laminar soil box
+suitable for a low-capacity shake table using free-ﬁeld tests on Ganga sand.
+Soils Found. 59 (5), 1602e1612.
+Wang, G.B., Ba, F., Miao, Y., Zhao, J.L., 2022. Design of multi-array shaking table tests
+under uniform and non-uniform earthquake excitations. Soil Dynam. Earthq.
+Eng. 153, 107114.
+Wang, Q., Geng, P., Chen, C.J., Chen, J.B., He, C., 2023a. Determination of seismic
+response of reinforced tunnel portal slope using shaking table tests. Tunn.
+Undergr. Space Technol. 136, 105072.
+Wang, Q., Geng, P., Li, P.S., Chen, J.B., He, C., 2023b. Dynamic damage identiﬁcation
+of tunnel portal and veriﬁcation via shaking table test. Tunn. Undergr. Space
+Technol. 132, 104923.
+Wen, Y.M., Xin, C.L., Shen, Y.S., Huang, Z.M., Gao, B., 2021. The seismic response
+mechanisms of segmental lining structures applied in fault-crossing mountain
+tunnel: the numerical investigation and experimental validation. Soil Dynam.
+Earthq. Eng. 151, 107001.
+Wu, D.H., Liu, Y.Q., Li, H.B., Xia, X., Peng, B., Shen, H., 2020. Shaking table tests on
+dynamic ampliﬁcation and failure mechanism of layered rock slopes under
+seismic actions. Chin. J. Rock Mech. Eng. 39 (10), 1945e1956.
+Xin, C.L., Wang, Z.Z., Gao, B., 2018. Shaking table tests on seismic response and
+W. Feng, L. Yang, C. Xin et al.
+Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 7711e7735
+7734
+damage mode of tunnel linings in diverse tunnel-void interaction states. Tunn.
+Undergr. Space Technol. 77, 295e304.
+Xin, C.L., Wang, Z.Z., Zhou, J.M., Gao, B., 2019. Shaking table tests on seismic
+behavior of polypropylene ﬁber reinforced concrete tunnel lining. Tunn.
+Undergr. Space Technol. 88, 1e15.
+Xin, C.L., Wang, Z.Z., Yu, J., 2020. The evaluation on shock absorption performance of
+buffer layer around the cross section of tunnel lining. Soil Dynam. Earthq. Eng.
+131, 106032.
+Xin, C.L., Wang, Z., Hajirasouliha, I., Yang, F., Li, W.H., Gao, B., 2022. Seismic response
+mechanisms of casing-shape composite tunnel lining: theoretical analysis and
+shaking table test veriﬁcation. Tunn. Undergr. Space Technol. 162, 107440.
+Xin, C.L., Shuai, Y.X., Song, D.Q., Liu, X.L., 2024a. Dynamic interaction and failure
+mechanism in tunnel-slope systems: mitigation insights from shaking table
+tests and numerical analysis. Tunn. Undergr. Space Technol. Tunn. Undergr.
+Space Technol. 152, 105940.
+Xin, C.L., Yang, F., Feng, W.K., Wang, Z., Li, W.H., 2024b. Seismic responses and
+shattering cumulative effects of bedding parallel stepped rock slope: model test
+and numerical simulation. J. Rock Mech. Geotech. Eng. https://doi.org/10.1016/
+j.jrmge.2024.03.031.
+Yan, G.M., Shen, Y.S., Gao, B., Zheng, Q., Fan, K.X., Huang, H.F., 2020. Damage evo-
+lution of tunnel lining with steel reinforced rubber joints under normal fault-
+ing: an experimental and numerical investigation. Tunn. Undergr. Space
+Technol. 97, 103223.
+Yang, C.H., Cheng, P.H., You, J.I., Louis, L.T., 2002. Signiﬁcant resistivity changes in the
+fault zone associated with the 1999 Chi-Chi earthquake, west-central Taiwan.
+Tectonophysics 350 (4), 299e313.
+Yang, Y.S., Yu, H.T., Yuan, Y., Sun, J., 2021. 1 g Shaking table test of segmental tunnel
+in sand under near-fault motions. Tunn. Undergr. Space Technol. 115, 104080.
+Yu, H.T., Chen, J.T., Antonio, B., Yong, Y., 2016. Damage observation and assessment
+of the Longxi tunnel during the Wenchuan earthquake. Tunn. Undergr. Space
+Technol. 54, 102e116.
+Zhang, J.H., Yuan, Y., Yu, H.T., 2019. Shaking table tests on discrepant responses of
+shaft-tunnel junction in soft soil under transverse excitations. Soil Dynam.
+Earthq. Eng. 120, 345e359.
+Zhang, C.Y., Xu, J.G., Qian, Y.L., Zhang, J.P., Wang, R., Wang, B., 2022. Seismic reli-
+ability analysis of random parameter aqueduct structure under random
+earthquake. Soil Dynam. Earthq. Eng. 153, 107083.
+Zhang, Y., Zhang, Z.Q., Yin, C., Wei, R.H., Zhang, H., 2023. Experimental study on
+forced response characteristics and anti-dislocation performance of articulated
+tunnel structure under dislocation action of normal fault. Structures 48,
+867e881.
+Zhang, X., Shen, Y.S., Qiu, J.T., Chang, M.Y., Zhou, P.F., Huang, H.F., Zhu, P.L., 2024.
+Failure and deformation mode for soil and tunnel structure crossing multiple
+slip surfaces of strike-slip fault in model test. Soil Dynam. Earthq. Eng. 179,
+108541.
+Zhao, J.J., Chen, Q., Yang, Y.H., Xu, Q., 2023. Coseismic faulting model and post-
+seismic
+surface
+motion
+of
+the
+2023
+TurkeyeSyria
+earthquake
+doublet
+revealed by InSAR and GPS measurements. Remote Sens. 15, 3327.
+Zhong, Z.L., Wang, Z., Zhao, M., Du, X.L., 2020. Structural damage assessment of
+mountain tunnels in fault fracture zone subjected to multiple strike-slip fault
+movement. Tunn. Undergr. Space Technol. 104, 103527.
+Chunlei Xin has been engaged in teaching and research in
+the ﬁeld of seismic interaction in geotechnical engineering
+and underground structural engineering. He obtained his
+Master degree and PhD in Bridge and Tunnel Engineering
+from Southwest Jiaotong University in 2011 and 2016,
+respectively. He pursued joint PhD studies at Rensselaer
+Polytechnic Institute from 2013 to 2014. Since 2022, he
+has been working as a researcher at the State Key Labo-
+ratory of Geological Hazard Prevention and Geological
+Environment Protection. He was recognized as a high-
+level talent in overseas studies from Sichuan Province
+and the transportation industry. He was also regarded as
+a key teacher at Chengdu University of Technology.
+Throughout his career, he has successfully led and partic-
+ipated in over ten research projects funded by the National Natural Science Foundation
+of China and provincial-level research programs. He has published more than 20 SCI-
+indexed papers as the ﬁrst author or corresponding author. His contributions have
+been acknowledged with a second-class prize for scientiﬁc and technological progress
+at the provincial and ministerial levels.
+W. Feng, L. Yang, C. Xin et al.
+Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 7711e7735
+7735

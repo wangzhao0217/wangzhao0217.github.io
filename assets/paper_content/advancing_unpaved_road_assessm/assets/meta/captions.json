@@ -1,0 +1,16 @@
+{
+  "Figure. 1": "Different spatial resolutions of imagery for the AoI in Madagascar.",
+  "Figure. 2": "Ground-truth equipment setup in survey vehicle (a); Interface of dashcam assessment software (b).",
+  "Figure. 3": "Ground-truth road conditions by category. Z. Wang et al.",
+  "Figure. 4": "Example of road tiles collection. Table 1 Distribution of Image Samples by Resolution and Condition for Madagascar Road Network. Condition Madagascar (training/validation dataset \u00fe testing dataset) Low-Res Mid-Res High-Res Bad 881 + 221 753 + 194",
+  "Figure. 5": "PCA and Mahalanobis distance outlier detection in high-resolution road condition analysis. Z. Wang et al.",
+  "Figure. 6": "Examples of identified outliers (incorrectly labelled) in road condition data. Table 2 Distribution of cleaned image samples by resolution and road condition in the Madagascar Road Network. Condition Madagascar: Cleaned (training/validation dataset \u00fe testing dataset) Low-Res Med-Res High-Res Bad 845 + 192 733 + 179",
+  "Figure. 7": "Confusion matrices collection of predictive models across varying resolutions.",
+  "Figure. 8": "Examples of misclassified road tiles illustrating ambiguous Poor/Fair boundary cases. Z. Wang et al.",
+  "Figure. 9": "Accuracy-coverage trade-off for confidence-based prediction filtering. Z. Wang et al.",
+  "Figure. 10": "Confusion matrices for simplified classification schemes at low resolution.",
+  "Figure. 11": "Comparative performance of high-res Extended Model on lower resolution data. Z. Wang et al.",
+  "Figure. 12": "Multimodal ML model architecture for integrated image and numerical data processing. Z. Wang et al.",
+  "Figure. 13": "Confusion matrices collection of multimodal ML models across varying resolutions. Table 5 Comparison of multimodal ML and traditional ML Models. Feature Multimodal ML Model Traditional ML Model Accuracy High accuracy across all resolutions, with slight decreases at lower resolutions. High accuracy in high- resolution, but drops at lower",
+  "Figure. 14": "Confusion matrix for the UnpaveAssess-LLaVA model across different data types. Table 11 Example to demonstrate task-specific instruction-following data. Context Type 1: Segmentation Annotations Pixel-level identification of surface defects (e.g., potholes, rutting) using labelled colours to facilitate precise localisation. Context Type 2: Colour and Texture metrics Quantitative descriptors derived from RGB/HSV colour spaces and texture analysis methods. Example: \u201cmean_R = 208.66, mean_G = 146.33, mean_B = 91.57, mean_H = 0.077, mean_S = 0.565, mean_V = 0.818, contrast = 271.1, energy = 0.0778, dissimilarity = 10.770, \u2026 < omitted>\u201c"
+}

@@ -1,0 +1,1624 @@
+International Journal of Solids and Structures 283 (2023) 112496
+Available online 28 September 2023
+0020-7683/© 2023 The Author(s). Published by Elsevier Ltd. This is an open access article under the CC BY license (http://creativecommons.org/licenses/by/4.0/).
+Contents lists available at ScienceDirect
+International Journal of Solids and Structures
+journal homepage: www.elsevier.com/locate/ijsolstr
+Computation of the crack opening displacement in the phase-field model
+Lin Chen a, Zhao Wang c, Bin Li b, René de Borst c,∗
+a Northeastern University, Key Laboratory of Ministry of Education on Safe Mining of Deep Metal Mines, Shenyang 110819, China
+b Guangdong Technion-Israel Institute of Technology, Department of Mechanical Engineering, Shantou 515063, China
+c University of Sheffield, Department of Civil and Structural Engineering, Sir Frederick Mappin Building, Mappin Street, Sheffield S1 3JD, UK
+A R T I C L E
+I N F O
+Keywords:
+Crack opening
+Phase field model
+Brittle fracture
+Cohesive fracture
+Smeared crack
+A B S T R A C T
+The phase-field model treats discrete cracks in a smeared sense by a regularisation technique. It holds attractive
+properties: there is no need to consider cracks as geometric discontinuities, and it avoids remeshing around
+crack tips. The method has been employed in the analysis of brittle and cohesive fracture problems. In
+the brittle fracture model, a Griffith-like energy functional is used in the simulation, while in the cohesive
+fracture model, the fracturing problem exploits a displacement jump governed energy functional. Obviously,
+the displacement jump is crucial in the cohesive fracture model and in certain other applications, e.g. for
+hydraulic fracturing. In the current study, the approximated form of the crack opening displacement is derived
+for the brittle and cohesive fracture models. In both models, the crack opening displacement is associated with
+a line integral normal to the crack, but different factors in front of the integral apply. The derived integrals
+are verified analytically in a one-dimensional setting and numerically in multi-dimensional set-ups, featuring
+straight and curved cracks.
+1. Introduction
+Phase field models have become popular for fracturing analysis
+since its initial work by Francfort and Marigo (1998) and Bourdin
+et al. (2000). It describes the crack by a scalar phase field variable.
+Different from discrete crack models, e.g., Chen et al. (2017), cracks
+are descried in a smeared sense in phase-field models, so that there
+is no need to treat cracks as geometric discontinuities and remeshing
+around crack tips is avoided. In the phase-field approach to brittle
+fracture, crack initiation and quasi-static propagation are considered
+as an energy functional minimisation problem. To be suitable for large-
+scale computations, a regularisation strategy was developed by Bourdin
+et al. (2008), which transforms the sharp discontinuity into a smeared
+crack, governed by a phase-field variable 𝑑. The width of the smeared
+crack is set by an internal length scale 𝓁(Bourdin et al., 2000).
+The vast majority of phase-field models have been applied in the
+analysis of brittle fracture, e.g. Heider (2021). Its application spans
+from ductile fractures (Miehe et al., 2015) to fatigue analysis (Alessi
+et al., 2018), hydraulic fracturing (Chukwudozie et al., 2019), and
+dynamic fracture (Li et al., 2016). Different from the external load
+induced fracture, hydraulic fracturing is a physical process caused by
+the fluid pressure in the crack (Yoshioka et al., 2020). To consider
+the effect of the fluid flow in the crack, the Reynolds flow model is
+typically employed in the analysis (Miehe and Mauthe, 2016). Gener-
+ally, the Reynolds flow model strongly depends on the crack opening
+∗Corresponding author.
+E-mail address: r.deborst@sheffield.ac.uk (R. de Borst).
+displacement, e.g., the cubic law for the fluid velocity. The extension
+of the phase-field approach to cohesive fracture has been addressed by
+Verhoosel and de Borst (2013) and by Nguyen et al. (2016), employing
+a displacement jump dependent energy functional in the analysis,
+see also Vignollet et al. (2014), May et al. (2015), Ghaffari Motlagh
+and de Borst (2020) and Chen and de Borst (2022). Obviously, the
+displacement jump, including the crack opening displacement in the
+crack normal direction and the displacement jump in the crack shear
+direction, is a crucial variable in the cohesive fracture model and also
+in certain other applications such as hydraulic fracturing.
+So far, the computation of the displacement jump in the shear
+direction is underdeveloped, while for the computation of the crack
+opening several approaches are available (Heider, 2021). In the early
+work on the analysis of hydraulic fracturing by brittle phase-field
+models, a line integral was used to compute the crack opening in the di-
+rection normal to the crack (Bourdin et al., 2012). Later, Chukwudozie
+et al. (2019) and Yoshioka et al. (2020) have theoretically proven the
+integral formula in the framework of the brittle fracture model, and
+have detailed the implementation of the integral form.
+Verhoosel and de Borst (2013) proposed a cohesive phase field
+model which exploits an auxiliary field to model the displacement
+jump which is required as an input in a cohesive-zone model. More
+recently, Chen and de Borst (2022) have systematically studied the
+https://doi.org/10.1016/j.ijsolstr.2023.112496
+Received 16 March 2023; Received in revised form 7 September 2023; Accepted 26 September 2023
+International Journal of Solids and Structures 283 (2023) 112496
+2
+L. Chen et al.
+Fig. 1. (a) a solid body 𝛀with an internal crack 𝛤𝑐. 𝛤𝑐is an interface boundary with positive and negative sides, 𝛤+
+𝑐
+and 𝛤−
+𝑐, respectively. Tractions 𝒑are prescribed along 𝛤𝑐.
+Boundary 𝛤𝑢is prescribed with a displacement̄ 𝐮; 𝛤𝑡with a prescribed traction̂ 𝐭; (b) a solid body 𝛀with a smeared crack 𝛤𝜉(blue area).
+cohesive phase field model and proposed different forms of phase-
+field models. From their analysis, it appears that the auxiliary field
+should be prescribed in the whole domain, reducing the computational
+efficiency. Nguyen et al. (2016) avoided an auxiliary field by computing
+the displacement jump at two points near the interface. However, the
+choice of the location of these points seems arbitrary and problem-
+dependent. Lee et al. (2017) and Yoshioka et al. (2020) employed a
+level-set approach to compute the normal vector of the crack, which is
+used in the computation of the displacement jump at each quadrature
+point. Obviously, the accuracy of this approach relies on the choices of
+the level set function.
+This study will address the general case of the computation of the
+crack opening displacement in the framework of phase-field modelling.
+The line integral form of crack opening displacement will be derived
+separately for the brittle and the cohesive fracture models. We will
+validate the proposed formula theoretically in a one-dimensional set-
+ting and numerically in multi-dimensional set-ups. We will start this
+contribution with a concise description of phase field modelling of
+fractures. Subsequently, the crack opening displacement is derived for
+the brittle and cohesive fracture model, respectively. The theoretical
+validation of the proposed formula is given in Section 4. Finally, two
+numerical examples are presented to numerically validate the approach
+and conclusions are drawn.
+2. Phase field model for fracture
+In this section, we will briefly elaborate on the phase-field modelling
+of brittle and cohesive fracture, see Fig. 1. The internal discontinuity
+𝛤𝑐can either refer to a brittle or to a cohesive fracture. Tractions 𝒑on
+𝛤𝑐can either by a fluid pressure applied on the brittle fracture surface,
+or cohesive tractions. In this contribution, infinitesimal strains, linear
+elastic material behaviour and the absence of body force have been
+assumed.
+2.1. Phase field regularised brittle fracture model
+The variational approach to brittle fracture was proposed by Franc-
+fort and Marigo (1998). The crack initiation and quasi-static evolution
+are governed by a minimisation of a Griffith-like energy functional.
+Here, we consider a cracked body 𝛺⊆𝑛with a prescribed tractions
+𝒑on 𝛤𝑐, prescribed displacements̄ 𝐮on 𝜕𝛺𝑢, and a prescribed traction̂
+𝐭on 𝜕𝛺𝑡. Then, the total energy functional for the cracked body
+read (Yoshioka et al., 2020)
+(𝐮, 𝛤; 𝒑) = (𝐮, 𝛤; 𝒑) + 𝑠(𝛤) = (𝐮, 𝛤; 𝒑) + 𝑐∫𝛤
+d𝑛−1,
+(1)
+where (𝐮, 𝛤; 𝒑) is the potential for the cracked body, including the
+strain energy, the work done by the externally applied loads and
+the work from the tractions 𝒑. 𝑠(𝛤) represents the fracture surface
+energy in the sense of Griffith’s theory of brittle fracture, 𝑛−1 denotes
+the (𝑛−1)-dimensional Hausdorff surface measure and 𝛤is the set
+of cracks where the displacement fields 𝐮∈𝐻1 (𝛺⧵𝛤) can jump,
+𝐻1 (𝛺⧵𝛤) being the Sobolev space of functions with square integrable
+first derivative. 𝑐denotes a scaling factor, with the dimension of
+energy per unit surface.
+In brittle fracture models tractions 𝒑can be considered as the
+pressure 𝑝𝑓exerted on the crack 𝛤𝑐, such as in the hydraulic fractur-
+ing (Chukwudozie et al., 2019; Yoshioka et al., 2020). The pressure 𝑝𝑓
+will induce work in the crack opening direction (Chen et al., 2022b).
+To elaborate the approach on how to compute the crack opening we
+will assume the traction 𝒑to be a pressure 𝑝𝑓exerted on the crack 𝛤𝑐.
+Correspondingly, the potential (𝐮, 𝛤; 𝒑) for the cracked body is given
+as (Yoshioka et al., 2020)
+(𝐮, 𝛤; 𝒑) = (𝐮, 𝛤; 𝑝𝑓
+) = ∫𝛺⧵𝛤
+(𝐮) d𝛺−∫𝛤𝑡
+𝐮⋅̂ 𝐭d𝛤−∫𝛤𝑐
+𝑝𝑓[[𝐮⋅𝒏]] d𝛤,
+(2)
+in which (𝐮) is the energy density function and̂ 𝐭is the prescribed
+traction on the boundary 𝛤𝑡. In this contribution, we consider isotropic
+linear elasticity, such that (𝐮) = 𝜇𝜀(𝐮) ⋅𝜀(𝐮) + 𝜆∕2tr(𝜀(𝐮))2 with
+𝜀(𝐮) = 1∕2 (∇𝐮+ ∇𝐮T), 𝜆and 𝜇being Lamé constants, and ⋅denotes the
+inner product. [[𝐮⋅𝒏]] denotes the crack opening displacement, [[𝑣𝑛
+]] =
+[[𝐮⋅𝒏]].
+The direct numerical implementation of Griffith’s energy functional
+(1) is challenging because of the unknown displacement jump location.
+We therefore resort to the regularisation strategy proposed by Bourdin
+et al. (2000), originally developed for image segmentation problems.
+In a regularised framework, cracks are represented by a scalar phase
+field variable 𝑑, ranging from 0 (away from the crack) to 1 (completely
+broken state). 𝑑varies smoothly in a band of finite width, resulting in
+a smeared vision of crack model. Then, the energy functional Eq. (1) is
+substituted by the functional:
+(𝐮, 𝛤; 𝒑) = ∫𝛺
+𝑎(𝑑) (𝐮) d𝛺−∫𝛤𝑡
+𝐮⋅̂ 𝐭d𝛤−∫𝛤𝑐
+𝑝𝑓[[𝐮⋅𝒏]] d𝛤
++ 𝑐∫𝛺
+𝛾𝑑(𝑑) d𝛺
+(3)
+where 𝑎(𝑑) = (1 −𝑑)2 denotes a degradation function and 𝛾𝑑(𝑑) repre-
+sents the crack density function per unit volume. The derivation and
+explicit form of 𝛾𝑑(𝑑) will be presented in Section 3.1. In Eq. (3),
+the integration term ∫𝛤𝑐𝑝𝑓[[𝐮⋅𝒏]] d𝛤is still given in a discrete form
+(not regularised). It is difficult to carry out the integration due to
+unknown location of the crack opening. We will alleviate this by the
+phase field method in Section 3.2, where the smeared representation
+of ∫𝛤𝑐𝑝𝑓[[𝐮⋅𝒏]] d𝛤will be illustrated.
+International Journal of Solids and Structures 283 (2023) 112496
+3
+L. Chen et al.
+2.2. Phase field regularised cohesive fracture model
+Introduced in Dugdale (1960) and Barenblatt (1962) the cohesive
+zone model is now widely employed to model interface fracture (Xu
+and Needleman, 1993). The model relates tractions on a crack interface
+to the displacement jump along the interface. The interface 𝛤𝑐is placed
+in the physical domain 𝛺with positive and negative sides, 𝛤+
+𝑐and 𝛤−
+𝑐
+respectively, as illustrated in Fig. 1. Tractions 𝒑are cohesive tractions
+𝐭acting on 𝛤𝑐. In the early work, the cohesive zone model is cast in
+the discrete fracture model, treating the crack interface as geometric
+discontinuities and applying cohesive tractions on the discrete interface
+directly (Chen and de Borst, 2019). In the discrete model, the total
+energy is given as:
+(𝐮, 𝛤; 𝒑) = ∫𝛺
+(𝐮) d𝛺−∫𝛤𝑡
+𝐮⋅̂ 𝐭d𝛤+ ∫𝛤
+([[𝐮]] , 𝜅) d𝐴
+(4)
+with 𝜅being a history parameter, obeying Kuhn–Tucker conditions to
+distinguish between loading and unloading. ([[𝐮]] , 𝜅) is the fracture
+energy function, representing the energy dissipation upon the creation
+of a unit crack surface. This energy is released gradually in cohesive
+zone models, depending on the displacement jump function [[𝐮]] and the
+history parameter 𝜅. The displacement jump [[𝐮]] across the interface 𝛤𝑐
+is expressed as
+[[𝐮]] = 𝐮+ −𝐮−
+on
+𝛤𝑐
+(5)
+with 𝐮+ and 𝐮−being the displacement on the positive and negative
+sides, 𝛤+
+𝑐and 𝛤−
+𝑐in Fig. 1 respectively.
+The cohesive tractions are obtained by differentiating the fracture
+energy with respect to the displacement jump:
+𝒑= 𝐭([[𝐮]] , 𝜅) = 𝜕([[𝐮]] , 𝜅)
+𝜕[[𝐮]]
+(6)
+where 𝐭([[𝐮]] , 𝜅) and [[𝐮]] are given in the global coordinate system
+(𝑥1, 𝑥2
+). The traction and displacement jump in the normal and shear
+direction, i.e., local coordinate system (𝑠, 𝑛) in Fig. 1, are obtained via
+a standard transformation:
+𝐭= 𝐑T𝐭𝑑= 𝐑T [𝑡𝑠𝑡𝑛
+]T ,
+[[𝒗]] = [[[𝑣𝑠
+]] [[𝑣𝑛
+]]]T
+= 𝐑[[𝐮]] = 𝐑
+[[[
+𝑢𝑥1
+]] [[
+𝑢𝑥2
+]]]T
+(7)
+with 𝐑being a rotation matrix (Chen et al., 2017; Chen and de Borst,
+2019). The displacement jump in the normal direction [[𝑣𝑛
+]] is also
+considered as the crack opening displacement, as defined in Eq. (2).
+The cohesive fracture 𝛤𝑐can be regularised by the phase field
+method (Verhoosel and de Borst, 2013). In Eq. (4), the infinitesimal
+surface area d𝐴, at every point 𝒙𝑐on the interface 𝛤𝑐, can be rewritten
+in an integral form
+d𝐴(𝒙𝑐
+) = ∫
+∞
+𝑥𝑛=−∞
+𝛿(𝑥𝑛
+) d𝑥𝑛
+⏟⏞⏞⏞⏞⏞⏞⏞⏞⏞⏞⏟⏞⏞⏞⏞⏞⏞⏞⏞⏞⏞⏟
+=1
+d𝐴= ∫
+∞
+𝑥𝑛=−∞
+𝛿(𝑥𝑛
+) d𝑉≈∫
+∞
+𝑥𝑛=−∞
+𝛿𝑐
+(𝑥𝑛
+) d𝑉
+(8)
+in which 𝑥𝑛= (𝒙−𝒙𝑐
+) ⋅𝒏(𝒙𝑐
+) and 𝒏(𝒙𝑐
+) the unit vector normal to
+the crack 𝛤𝑐. 𝛿(𝑥𝑛
+) represents the Dirac-delta function, being zero ev-
+erywhere except at 𝑥𝑛. In the simulation, we cannot directly regularise
+the interface by using 𝛿(𝑥𝑛
+). An approximated form, 𝛿𝑐
+(𝑥𝑛
+), should be
+used, i.e., the last term in Eq. (8). In the current study we will employ
+the phase-field model to obtain 𝛿𝑐
+(𝑥𝑛
+). The basic idea of the phase-
+field model in the regularised framework is to approximate the discrete
+crack 𝛤𝑐by a smeared crack 𝛤𝜉, as shown in Fig. 1(b). The explicit
+form of 𝛿𝑐
+(𝑥𝑛
+) will be illustrated in Section 3.1. Substituting Eq. (8)
+into (4) leads to a phase-field regularised energy function for cohesive
+fracture (Verhoosel and de Borst, 2013):
+(𝐮, 𝛤; 𝒑) = ∫𝛺
+(𝐮) d𝛺−∫𝛤𝑡
+𝐮⋅̂ 𝐭d𝛤+ ∫𝛤
+([[𝐮]] , 𝜅) ∫
+∞
+𝑥𝑛=−∞
+𝛿(𝑥𝑛
+) d𝑉
+≈∫𝛺
+(𝐮) d𝛺−∫𝛤𝑡
+𝐮⋅̂ 𝐭d𝛤+ ∫𝛺
+([[𝐮]] , 𝜅) 𝛿𝑐
+(𝑥𝑛
+) d𝑉
+(9)
+3. Crack opening computation in the phase field method
+In the variational approach to fracture, the crack geometry is not
+tracked explicitly (Bourdin et al., 2000). Hence the crack opening
+in Eqs. (2) and (7) cannot be computed directly in the regularised
+phase field model. Chukwudozie et al. (2019) employed an integration
+approach to obtain the crack opening for their analysis of hydraulic
+fracturing in porous media. In their analysis only brittle fracture was
+considered, the extension to cohesive fracture model still being open.
+In this section we will compute the crack opening for brittle as well as
+for cohesive fracture.
+3.1. Smeared representation of crack
+The basic idea of the phase-field model is to approximate the
+crack 𝛤𝑐by a smeared representation 𝛤𝜉, as shown in Fig. 1(b). 𝛤𝜉is
+associated with a fixed phase field 𝑑(𝐱) around the interface 𝛤𝑐. 𝑑(𝐱)
+equals 1 at the centre of the crack 𝛤𝑐, that is, for 𝑥𝑛= 0, and vanishes
+gradually away from 𝛤𝑐. The width of the smeared interface is governed
+by a regularisation parameter 𝓁. The phase-field distribution can be
+determined by solving the variational problem:
+𝑑(𝐱) = Arg
+{
+inf
+𝑑∈𝑑
+𝛤𝓁(𝑑)
+}
+(10)
+in which 𝑑=
+{
+𝑑||| 𝑑(𝐱) = 1 ∀𝐱∈𝛤𝑐
+}
+and
+𝛤𝓁(𝑑) = ∫𝛺
+𝛾𝑑(𝑑) d𝑉
+(11)
+where 𝛤𝓁(𝑑) denotes the crack length, i.e. the length of crack inter-
+face per unit area. 𝛾𝑑(𝑑) represents the crack density function per
+unit volume. In the current study, following crack density function is
+employed (Chen and de Borst, 2021):
+𝛾𝑑(𝑑) = 1
+𝜋𝓁
+(2𝑑(𝐱) −𝑑(𝐱)2) + 𝓁
+𝜋∇𝑑(𝐱) ⋅∇𝑑(𝐱) ,
+(12)
+The Euler–Lagrange equation associated with the variational equa-
+tion (10) reads:
+1 −𝑑(𝑥𝑛
+) −𝓁2 d2𝑑(𝑥𝑛
+)
+d𝑥2
+𝑛
+= 0
+𝑥𝑛∈R
+𝑑= 1
+𝑥𝑛= 0
+𝑑= 0
+𝑥𝑛= (−∞, −𝜋𝓁∕2] ⋃[𝜋𝓁∕2, +∞)
+(13)
+with the solution:
+𝑑(𝑥𝑛
+) =
+⎧
+⎪
+⎨
+⎪⎩
+1 −sin
+(|𝑥𝑛|
+𝓁
+)
+−𝜋𝓁∕2 ≤𝑥𝑛≤𝜋𝓁∕2
+0
+otherwise
+(14)
+with 𝑥𝑛= (𝒙−𝒙𝑐
+) ⋅𝒏(𝒙𝑐
+), point 𝒙𝑐on the crack 𝛤𝑐and 𝒏(𝒙𝑐
+) the unit
+vector normal to 𝛤𝑐.
+For the brittle fracture model we use Eq. (11) to compute the crack
+density function 𝛾𝑑(𝑑) in Eq. (3). For the cohesive fracture model, the
+Dirac-delta function, 𝛿𝑐
+(𝑥𝑛
+) in Eq. (8), can be approximated by the
+crack density function in Eq. (11) (Chen and de Borst, 2022). To further
+simplify 𝛿𝑐
+(𝑥𝑛
+), we propose the following form to approximate the
+Dirac-delta function:
+𝛿𝑐
+(𝑥𝑛
+) = 1
+2
+|||||
+d𝑑(𝑥𝑛
+)
+d𝑥𝑛
+|||||
+= 1
+2
+⎧
+⎪
+⎪
+⎪
+⎨
+⎪
+⎪
+⎪⎩
+−
+d𝑑(𝑥𝑛
+)
+d𝑥𝑛
+0 < 𝑥𝑛≤𝜋𝓁∕2
+d𝑑(𝑥𝑛
+)
+d𝑥𝑛
+−𝜋𝓁∕2 ≤𝑥𝑛≤0
+0
+otherwise
+= 1
+2
+⎧
+⎪
+⎨
+⎪⎩
+1
+𝓁cos
+( 𝑥𝑛
+𝓁
+)
+−𝜋𝓁∕2 ≤𝑥𝑛≤𝜋𝓁∕2
+0
+otherwise
+(15)
+International Journal of Solids and Structures 283 (2023) 112496
+4
+L. Chen et al.
+Fig. 2. One-dimensional analytical phase field 𝑑(𝐱), crack density function 𝛾𝑐, and Dirac-delta function 𝛿𝑐for a uniaxial bar (length 1) with a crack 𝛤𝑐in the middle. The
+regularisation length is 𝓁= 0.1.
+in which the fraction 1
+2 stems from the constraint on the Dirac-delta
+function, ∫∞
+−∞𝛿𝑐
+(𝑥𝑛
+) d𝑥𝑛= 1.
+In Fig. 2 we plot the phase field 𝑑(𝑥𝑛
+), the crack density function
+𝛾𝑑(𝑑) and the Dirac-delta function 𝛿𝑐
+(𝑥𝑛
+). In the figure the distribution
+of 𝑑(𝑥𝑛
+), 𝛾𝑑(𝑑) and 𝛿𝑐
+(𝑥𝑛
+) is localised around the crack 𝛤𝑐, confining
+the influence of smeared crack 𝛤𝜉. In Ref. Chukwudozie et al. (2019)
+and Yoshioka et al. (2020) the line integral of the crack opening
+displacement is evaluated for the range [−∞, ∞] due to the use of
+the AT2 phase field model. Use of the current phase-field model over
+the AT2 phase-field model (Chukwudozie et al., 2019; Yoshioka et al.,
+2020) is therefore superior.
+3.2. Crack opening approximation for the brittle fracture
+The term ∫𝛤𝑐𝑝𝑓[[𝐮⋅𝒏]] d𝛤in the brittle fracture model, i.e., in
+Eq. (3), has a discrete format, i.e., is not regularised. Chukwudozie et al.
+(2019) have proposed the following smeared approximation:
+∫𝛤𝑐
+𝑝𝑓[[𝐮⋅𝒏]] d𝛤≈−∫𝛺
+𝑝𝑓𝐮⋅∇𝑑d𝛺
+(16)
+where the minus sign in front of the integration originates from the def-
+inition of the phase-field variable 𝑑, being different from that in Chuk-
+wudozie et al. (2019).
+The profile of phase-field variable 𝑑in the direction normal to 𝛤𝑐
+is given in Eq. (14). Integrating the phase field gradient in the normal
+direction 𝒏, we arrive at:
+∫
+0
+−∞
+||||
+∇𝑑(𝑥𝑛
+) ||||
+d𝑥𝑛= ∫
+∞
+0
+||||
+∇𝑑(𝑥𝑛
+) ||||
+d𝑥𝑛= 1
+(17)
+The crack opening displacement 𝛤𝑐then reads:
+[[𝐮⋅𝒏]] = 𝐮(𝑥+
+𝑛
+) ⋅𝒏−𝐮(𝑥−
+𝑛
+) ⋅𝒏= 𝐮(𝑥+
+𝑛
+) ⋅𝒏∫
+∞
+0
+||||
+∇𝑑(𝑥𝑛
+) ||||
+d𝑥𝑛
+−𝐮(𝑥−
+𝑛
+) ⋅𝒏∫
+0
+−∞
+||||
+∇𝑑(𝑥𝑛
+) ||||
+d𝑥𝑛
+(18)
+with 𝑥+
+𝑛and 𝑥−
+𝑛being points on positive and negative sides of the crack
+𝛤𝑐, i.e., 𝛤𝑐+ and 𝛤𝑐−in Fig. 1(a) respectively.
+Due to the compact support of the phase-field model, as illustrated
+in Fig. 2, the displacements 𝐮(𝑥+
+𝑛
+) and 𝐮(𝑥−
+𝑛
+) can be considered as
+constants in the direction normal to the crack, yielding:
+𝐮(𝑥+
+𝑛
+) ⋅𝒏∫
+∞
+0
+||||
+∇𝑑(𝑥𝑛
+) ||||
+d𝑥𝑛≈∫
+∞
+0
+𝐮(𝑥𝑛
+) ⋅𝒏||||
+∇𝑑(𝑥𝑛
+) ||||
+d𝑥𝑛
+𝐮(𝑥−
+𝑛
+) ⋅𝒏∫
+0
+−∞
+||||
+∇𝑑(𝑥𝑛
+) ||||
+d𝑥𝑛≈∫
+0
+−∞
+𝐮(𝑥𝑛
+) ⋅𝒏
+||||
+∇𝑑(𝑥𝑛
+) ||||
+d𝑥𝑛
+(19)
+The normal vector 𝒏can subsequently be approximated as (Chukwu-
+dozie et al., 2019):
+𝒏≈−∇𝑑(𝑥+
+𝑛
+)
+/
+||||
+∇𝑑(𝑥+
+𝑛
+) ||||
+≈∇𝑑(𝑥−
+𝑛
+)
+/
+||||
+∇𝑑(𝑥−
+𝑛
+) ||||
+(20)
+Substituting Eq. (20) into (18) and employing Eq. (19) we obtain the
+crack opening displacement for the brittle fracture model, as follows:
+[[𝐮⋅𝒏]] = 𝐮(𝑥+
+𝑛
+) ⋅𝒏−𝐮(𝑥−
+𝑛
+) ⋅𝒏≈−∫
+∞
+−∞
+𝐮(𝑥𝑛
+) ⋅∇𝑑(𝑥𝑛
+) d𝑥𝑛
+(21)
+which can be simplified as
+[[𝐮⋅𝒏]] = 𝐮(𝑥+
+𝑛
+) ⋅𝒏−𝐮(𝑥−
+𝑛
+) ⋅𝒏≈−∫
+𝜋𝓁∕2
+−𝜋𝓁∕2
+𝐮(𝑥𝑛
+) ⋅∇𝑑(𝑥𝑛
+) d𝑥𝑛
+(22)
+where the phase field model in Eqs. (13) and (14) is considered.
+3.3. Crack opening approximation for the cohesive fracture
+Following the concept of a smeared area in Eq. (8), In the cohesive
+fracture model we can regularise the displacement jump function using
+the Dirac-delta function:
+[[𝐮]]
+(𝒙𝑐
+) = ∫
+∞
+𝑥𝑛=−∞
+𝜐(𝒙) 𝛿(𝑥𝑛
+) d𝑥𝑛≈∫
+∞
+𝑥𝑛=−∞
+𝜐(𝒙) 𝛿𝑐
+(𝑥𝑛
+) d𝑥𝑛
+(23)
+with 𝑥𝑛= (𝒙−𝒙𝑐
+)⋅𝒏(𝒙𝑐
+) and 𝒏(𝒙𝑐
+) the unit vector normal to the crack
+𝛤𝑐. 𝜐(𝒙) is an auxiliary field employed to approximate the displacement
+jump in a smeared sense (Chen and de Borst, 2022). Employing the
+variational principle for minimising (𝐮, 𝛤; 𝒑) in Eq. (9) with respect to
+the displacement 𝐮and the auxiliary field 𝜐, we obtain the weak form
+of the cohesive fracture problem (Verhoosel and de Borst, 2013; Chen
+and de Borst, 2022). Applying the divergence theorem to the weak form
+equation yields the elastic strain 𝜀𝑒(Verhoosel and de Borst, 2013):
+𝜀𝑒
+𝑖𝑗= 𝑢(𝑖,𝑗) −sym (𝜐𝑖𝑛𝑗
+) 𝛿𝑐
+(24)
+with 𝑛𝑗being the component of the unit vector normal to the interface
+𝛤𝑐. Obviously, the ‘elastic’ strain 𝜀𝑒is composed of the gradient of
+the displacement and the term related to the displacement jump. In
+deriving Eq. (24), the variational principle has been employed.
+Alternatively, the extended finite element method (XFEM) can be
+used to arrive at Eq. (24) (Chen and de Borst, 2022). In XFEM the
+displacement function is composed of a continuous part, 𝐰(𝒙), and a
+bounded part that modulates the displacement jump over the domain
+through the Heaviside function ℋ(Khoei, 2014):
+𝐮(𝒙) = 𝐰(𝒙) + ℋ(𝒙)𝜐(𝒙)
+(25)
+with 𝜐(𝒙) being the displacement jump. The Heaviside function ℋis
+here defined as:
+ℋ(𝒙) = 1
+2
+{
+1 −𝑑(𝑥𝑛
+)
+if
+𝒙∈𝛺+
+𝑑(𝑥𝑛
+) −1
+otherwise
+(26)
+with 𝛺+ being the domain at the positive side of the interface 𝛤+
+𝑐.
+𝑑(𝑥𝑛
+) denotes the phase field function.
+International Journal of Solids and Structures 283 (2023) 112496
+5
+L. Chen et al.
+Fig. 3. (a) uniaxial compression of a bar with a crack 𝛤𝑐; (b) smeared crack 𝛤𝜉(blue area). Here a constant pressure 𝑝is applied in the crack 𝛤𝑐, exerted on positive and negative
+sides, 𝛤+
+𝑐
+and 𝛤−
+𝑐, respectively.
+Employing the phase-field model in Eq. (14), we obtain the follow-
+ing form of the Heaviside function ℋ
+ℋ(𝒙) = 1
+2
+⎧
+⎪
+⎨
+⎪⎩
+1
+𝜋𝓁∕2 ≤𝑥𝑛
+sin
+( 𝑥𝑛
+𝓁
+)
+−𝜋𝓁∕2 ≤𝑥𝑛≤𝜋𝓁∕2
+−1
+otherwise
+(27)
+Considering the small strain assumption, the infinitesimal strain field
+becomes (Fathi et al., 2021; Chen et al., 2022)
+𝜀𝑖𝑗= 𝑢(𝑖,𝑗) = w(𝑖,𝑗) + ℋ𝜐(𝑖,𝑗) + sym (𝜐𝑖𝑛𝑗
+) 𝛿𝑐
+(28)
+with 𝛿𝑐being the Dirac-delta function. In this way we can arrive at the
+‘elastic’ strain Eq. (24) by taking the form:
+𝜀𝑒
+𝑖𝑗= 𝑢(𝑖,𝑗) −𝜀𝜌
+𝑖𝑗
+⇒
+𝜀𝑒
+𝑖𝑗= w(𝑖,𝑗) + ℋ𝜐(𝑖,𝑗)
+and
+sym (𝜐𝑖𝑛𝑗
+) 𝛿𝑐= 𝜀𝜌
+𝑖𝑗
+(29)
+Obviously, the elastic strain as derived in Eq. (24) is identical to that
+in the regularised extended finite element method. Accordingly, the
+displacement field 𝐮in the cohesive fracture model, i.e., Eq. (9), can
+be written in the form of Eq. (25).
+If we multiply Eq. (25) with the normal vector 𝒏, defined in Eq. (20),
+and integrate over the normal direction 𝑥𝑛∈[−∞∞], we obtain an
+approximated form of the crack opening displacement for the cohesive
+fracture model:
+[[𝐮⋅𝒏]] = 𝜐(𝒙) ⋅𝒏≈−2 ∫
+∞
+−∞
+𝐮(𝑥𝑛
+) ⋅∇𝑑(𝑥𝑛
+) d𝑥𝑛
+(30)
+where Eq. (17) has been used.
+Eq. (30) can be simplified if we consider the phase-field model
+in Eq. (14):
+[[𝐮⋅𝒏]] = 𝜐(𝒙) ⋅𝒏≈−2 ∫
+𝜋𝓁∕2
+−𝜋𝓁∕2
+𝐮(𝑥𝑛
+) ⋅∇𝑑(𝑥𝑛
+) d𝑥𝑛
+(31)
+where the factor ‘2’ in front of the integration stems from the fraction
+1
+2 in Eq. (26). Eq. (30) presents an integral form of the crack opening
+displacement along the cohesive crack 𝛤𝑐. It can directly be used in the
+cohesive fracture model, i.e., Eq. (9).
+4. Validation of the computation of the crack opening displace-
+ment
+To validate the proposed formulations for the crack opening dis-
+placement computation, we will consider a two-dimensional version of
+a uniaxial compression problem, as illustrated in Fig. 3(a). The Young’s
+modulus of the plate is 𝐸. A crack is defined at 𝑥1 = 0 and a constant
+pressure, 𝑝, is applied in the crack. Due to the set-up of the problem,
+only mode-I crack opening is included in the analysis. The crack is
+regularised by the phase-field variable over the regularisation zone
+(−𝜋𝓁∕2 ≤𝑥1 ≤𝜋𝓁∕2), as shown in Fig. 3(b). The analytical solution of
+the displacement, of the crack opening displacement and of the stress
+reads:
+𝑢1
+(𝑥1, 𝑥2
+) =
+{
+𝑝𝑠
+(𝐿−𝑥1
+)
+0 < 𝑥1
+−𝑝𝑠
+(𝐿+ 𝑥1
+)
+𝑥1 < 0
+[[𝐮⋅𝒏]] = 2𝑝𝑠𝐿
+𝜎1
+(𝑥1, 𝑥2
+) = −𝑝
+(32)
+with 𝑝𝑠
+=
+𝑝∕𝐸. The factor ‘2’ in front of [[𝐮⋅𝒏]] stems from the
+symmetric crack opening about the vertical axis.
+Next we will solve the problem in the framework of phase-field
+modelling. We will separately consider the pressure 𝑝as a fluid pres-
+sure in the brittle fracture model, and a constant cohesive traction
+(independent of the crack opening) in the cohesive fracture model.
+4.1. Brittle fracture solution
+Substituting Eq. (16) into (3) leads to a smeared form of the energy
+functional:
+(𝐮, 𝛤; 𝒑) = ∫𝛺
+𝑎(𝑑) (𝐮) d𝛺−∫𝛤𝑡
+𝐮⋅̂ 𝐭d𝛤+ ∫𝛺
+𝑝𝑓𝐮⋅∇𝑑d𝛺
++ 𝑐∫𝛺
+𝛾𝑑(𝑑) d𝛺
+(33)
+For the problem given in Fig. 3 we obtain the momentum balance
+equation from the variational principle of Eq. (33):
+d
+d𝑥1
+((1 −𝑑(𝑥1
+))2 d𝑢1
+d𝑥1
+)
+−𝑝𝑠
+d
+d𝑥1
+𝑑(𝑥1
+) = 0
+−𝜋𝓁∕2 ≤𝑥1 ≤𝜋𝓁∕2
+d
+d𝑥1
+( d𝑢1
+d𝑥1
+)
+= 0
+otherwise
+(34)
+with the phase field 𝑑(𝑥1
+) given as
+𝑑(𝑥1
+) = 1 −sin
+(|𝑥1|
+𝓁
+)
+−𝜋𝓁∕2 ≤𝑥1 ≤𝜋𝓁∕2
+(35)
+Considering the boundary condition of 𝑢1 = 0 at 𝑥1 = ±𝐿, and the
+continuous displacement at 𝑥1 = ±𝜋𝓁∕2, we obtain the displacement:
+𝑢1
+(𝑥1, 𝑥2
+)
+=
+⎧
+⎪
+⎪
+⎪
+⎨
+⎪
+⎪
+⎪⎩
+𝑝𝑠
+(𝐿−𝑥1
+)
+𝜋𝓁∕2 ≤𝑥1 ≤𝐿
+−𝑝𝑠𝓁ln
+(||||
+tan
+( 𝑥1
+2𝓁
+) ||||
+)
++ 𝑝𝑠
+(
+𝐿−𝜋𝓁
+2
+)
+0 < 𝑥1 ≤𝜋𝓁∕2
+𝑝𝑠𝓁ln
+(||||
+tan
+( 𝑥1
+2𝓁
+) ||||
+)
+−𝑝𝑠
+(
+𝐿−𝜋𝓁
+2
+)
+−𝜋𝓁∕2 ≤𝑥1 < 0
+−𝑝𝑠
+(𝐿+ 𝑥1
+)
+−𝐿≤𝑥1 ≤−𝜋𝓁∕2
+(36)
+International Journal of Solids and Structures 283 (2023) 112496
+6
+L. Chen et al.
+Fig. 4. Displacement 𝑢1 and stress 𝜎1 for the uniaxial bar in Fig. 3(a). The length of the bar is 𝐿= 1 and the regularisation length is 𝓁= 0.1.
+which yields the stress 𝜎1
+(𝑥1, 𝑥2
+):
+𝜎1
+(𝑥1, 𝑥2
+) =
+⎧
+⎪
+⎪
+⎨
+⎪
+⎪⎩
+−𝑝csc
+(𝑥1
+𝓁
+)
+0 < 𝑥1 ≤𝜋𝓁∕2
+𝑝csc
+( 𝑥1
+𝓁
+)
+−𝜋𝓁∕2 ≤𝑥1 < 0
+−𝑝
+otherwise
+(37)
+Fig. 4 gives the comparison between phase-field solutions and the
+analytical solution. For the brittle fracture model, the displacement
+and the stress lead to infinite values at the crack 𝛤𝑐due to the term
+ln
+(||||
+tan
+( 𝑥1
+2𝓁
+) ||||
+)
+in Eq. (36). The displacement shows an obvious jump
+at 𝛤𝑐due to the brittle feature of the crack. The solutions tend to the
+analytical solution when 𝑥1 approaches the boundary of the phase-field
+profile, i.e. 𝑥1 →±𝜋𝓁∕2.
+The crack opening displacement of the plate is obtained by Eq. (22):
+[[𝐮⋅𝒏]] ≈−∫
+𝜋𝓁∕2
+−𝜋𝓁∕2
+𝑢(𝑥1, 𝑥2
+) ⋅
+d𝑑(𝑥1
+)
+d𝑥1
+d𝑥1
+= −∫
+0−
+−𝜋𝓁∕2
+(
+𝑝𝑠𝓁ln
+(||||
+tan
+( 𝑥1
+2𝓁
+) ||||
+)
+−𝑝𝑠
+(
+𝐿−𝜋𝓁
+2
+))
+1
+𝓁cos
+( 𝑥1
+𝓁
+)
+d𝑥1
+−∫
+𝜋𝓁∕2
+0+
+(
+𝑝𝑠𝓁ln
+(||||
+tan
+( 𝑥1
+2𝓁
+) ||||
+)
+−𝑝𝑠
+(
+𝐿−𝜋𝓁
+2
+))
+1
+𝓁cos
+( 𝑥1
+𝓁
+)
+d𝑥1
+= −∫
+0−
+−𝜋𝓁∕2
+𝑝𝑠𝓁ln
+(||||
+tan
+( 𝑥1
+2𝓁
+) ||||
+)
+1
+𝓁cos
+( 𝑥1
+𝓁
+)
+d𝑥1
+−∫
+𝜋𝓁∕2
+0+
+𝑝𝑠𝓁ln
+(||||
+tan
+( 𝑥1
+2𝓁
+) ||||
+)
+1
+𝓁cos
+( 𝑥1
+𝓁
+)
+d𝑥1
++ ∫
+𝜋𝓁∕2
+−𝜋𝓁∕2
+𝑝𝑠
+(
+𝐿−𝜋𝓁
+2
+)
+1
+𝓁cos
+( 𝑥1
+𝓁
+)
+d𝑥1
+= −2 ∫
+𝜋𝓁∕2
+0+
+𝑝𝑠𝓁ln
+(||||
+tan
+( 𝑥1
+2𝓁
+) ||||
+)
+1
+𝓁cos
+( 𝑥1
+𝓁
+)
+d𝑥1
++ ∫
+𝜋𝓁∕2
+−𝜋𝓁∕2
+𝑝𝑠
+(
+𝐿−𝜋𝓁
+2
+)
+1
+𝓁cos
+( 𝑥1
+𝓁
+)
+d𝑥1
+(38)
+The integration of the first part in Eq. (38) yields
+−2 ∫
+𝜋𝓁∕2
+0+
+𝑝𝑠𝓁ln
+(||||
+tan
+( 𝑥1
+2𝓁
+) ||||
+)
+1
+𝓁cos
+( 𝑥1
+𝓁
+)
+d𝑥1
+= −2𝑝𝑠𝓁
+[
+ln
+(
+tan
+( 𝑥1
+2𝓁
+))
+sin
+( 𝑥1
+𝓁
+)
+−1
+𝓁𝑥1
+]𝜋𝓁∕2
+0+
+(39)
+Employing L’Hospital’s rule we can solve the integral of Eq. (39):
+−2 ∫
+𝜋𝓁∕2
+0+
+𝑝𝑠𝓁ln
+(||||
+tan
+( 𝑥1
+2𝓁
+) ||||
+)
+1
+𝓁cos
+( 𝑥1
+𝓁
+)
+d𝑥1 = 𝜋𝑝𝑠𝓁
+(40)
+which leads to the crack opening displacement for the brittle fracture
+model:
+[[𝐮⋅𝒏]] = −2 ∫
+𝜋𝓁∕2
+0+
+𝑝𝑠𝓁ln
+(||||
+tan
+( 𝑥1
+2𝓁
+) ||||
+)
+1
+𝓁cos
+( 𝑥1
+𝓁
+)
+d𝑥1
++ ∫
+𝜋𝓁∕2
+−𝜋𝓁∕2
+𝑝𝑠
+(
+𝐿−𝜋𝓁
+2
+)
+1
+𝓁cos
+( 𝑥1
+𝓁
+)
+d𝑥1
+= 𝜋𝑝𝑠𝓁+ 2𝑝𝑠
+(
+𝐿−𝜋𝓁
+2
+)
+= 2𝑝𝑠𝐿
+(41)
+being identical to the analytical solution in Eq. (32).
+4.2. Cohesive fracture solution
+For the phase-field regularised cohesive fracture model we depart
+from the strain in Eq. (24). For the problem stated in Fig. 3 we then
+get the stress from the Hooke’s law:
+𝜎1
+(𝑥1, 𝑥2
+) = 𝐸
+(
+d
+d𝑥1
+𝑢1
+(𝑥1, 𝑥2
+) −𝛿𝑐𝜐
+)
+(42)
+with 𝜐being the crack opening displacement; 𝛿𝑐being Dirac-delta
+function defined in Eq. (15). The momentum balance equation reads
+𝜎1
+(𝑥1, 𝑥2
+) = 𝐸
+(
+d
+d𝑥1
+𝑢1
+(𝑥1, 𝑥2
+) −𝛿𝑐𝜐
+)
+= −𝑝
+(43)
+which is equal to the analytical solution of 𝜎1
+(𝑥1, 𝑥2
+) in Eq. (32).
+Remark. Eqs. (42) and (43) consider the case of uniaxial deformation
+of a bar with a straight crack 𝛤𝑐. 𝛤𝑐is regularised as a smeared crack
+𝛤𝜉by the Dirac-delta function 𝛿𝑐, see Fig. 3(b). Even though Fig. 3
+presents a two-dimensional fracture problem, it still represents uniaxial
+deformation. The crack 𝛤𝑐is a straight crack in the domain and is
+perpendicular to the axis of the uniaxial bar, here the horizontal axis
+𝑥1 in Fig. 3(a). Thus, the analysis in Section 4.2 is restricted to the
+phase-field model which induces a straight crack, perpendicular to the
+bar axis. Indeed, if the phase-field model with an anisotropic fracture
+constitutive law would produce a straight crack, perpendicular to the
+bar axis, the method in this section could be used to compute the crack
+opening displacement.
+Considering the boundary conditions of 𝑢1 = 0 at 𝑥1 = ±𝐿, and
+the continuous displacement field at 𝑥1 = ±𝜋𝓁∕2, we can derive the
+displacement as:
+𝑢1
+(𝑥1, 𝑥2
+) =
+⎧
+⎪
+⎨
+⎪⎩
+𝑝𝑠
+(𝐿−𝑥1
+)
+𝜋𝓁∕2 ≤𝑥1 ≤𝐿
+𝜐
+2 sin
+(𝑥1
+𝓁
+)
+−𝑝𝑠𝑥1
+−𝜋𝓁∕2 < 𝑥1 ≤𝜋𝓁∕2
+−𝑝𝑠
+(𝐿+ 𝑥1
+)
+−𝐿≤𝑥1 ≤−𝜋𝓁∕2
+(44)
+International Journal of Solids and Structures 283 (2023) 112496
+7
+L. Chen et al.
+Fig. 5. (a) 2D inclined line crack (𝑥𝑠= −𝑎to 𝑥𝑠= 𝑎) with 𝑎the half length under a constant pressure 𝑝. The crack is represented by the red line. The inclination angle of the
+crack is 𝜃. (𝑥1, 𝑥2
+) is the global coordinate with the origin 𝑂, while (𝑥𝑠, 𝑥𝑡
+) is the local coordinate along the crack; (b) normalised crack opening displacement for different values
+of the inclination angle 𝜃. The normalised crack opening displacement is defined as CODnor = COD∕CODm
+ana, where CODm
+ana is the exact solution of the maximum crack opening
+displacement (Eq. (49)), being at the origin 𝑂𝑙in the current study. For brevity, we only present the results of Verhoosel and de Borst’s approach for 𝜃= 0◦.
+Fig. 4 presents the comparison between phase-field solutions and
+the analytical solution. For the cohesive fracture model, the displace-
+ment shows some discrepancies in the range of the smeared crack
+𝛤𝜉(as illustrated in Fig. 3(b)), due to the regularised interface. The
+displacement is continuous along the bar due to the continuous Dirac-
+delta function definition in Eq. (15). In Fig. 4(b), the stress 𝜎1 is
+consistent with the analytical solution.
+We now can compute the crack opening displacement from the
+integration Eq. (31):
+[[𝐮⋅𝒏]] = 𝜐≈−2 ∫
+𝜋𝓁∕2
+−𝜋𝓁∕2
+𝑢(𝑥1, 𝑥2
+) ⋅
+d𝑑(𝑥1
+)
+d𝑥1
+d𝑥1
+= −2 ∫
+0
+−𝜋𝓁∕2
+( 𝜐
+2 sin
+(𝑥1
+𝓁
+)
+−𝑝𝑠𝑥1
+) 1
+𝓁cos
+( 𝑥1
+𝓁
+)
+d𝑥1
++ 2 ∫
+𝜋𝓁∕2
+0
+( 𝜐
+2 sin
+( 𝑥1
+𝓁
+)
+−𝑝𝑠𝑥1
+) 1
+𝓁cos
+(𝑥1
+𝓁
+)
+d𝑥1
+= 4 ∫
+𝜋𝓁∕2
+0
+( 𝜐
+2 sin
+( 𝑥1
+𝓁
+)
+−𝑝𝑠𝑥1
+) 1
+𝓁cos
+( 𝑥1
+𝓁
+)
+d𝑥1
+= 𝜐+ 2𝑝𝑠𝓁(𝜋−2)
+(45)
+obviously, this solution leads to the exact crack opening displacement
+when 𝓁→0.
+Until now, the crack opening displacement 𝜐is unknown. Herein, we
+obtain the crack opening displacement 𝜐from the continuity condition
+at 𝑥1 = ±𝜋𝓁∕2:
+𝜐= 2𝑝𝑠𝐿
+(46)
+which result is identical to the analytical solution in Eq. (32). Substi-
+tuting Eq. (46) into Eq. (45) and considering the limiting case when
+𝓁→0 we obtain the crack opening displacement in an explicit format:
+[[𝐮⋅𝒏]] = lim
+𝓁→0
+(𝜐+ 2𝑝𝑠𝓁(𝜋−2)
+) = 𝜐= 2𝑝𝑠𝐿
+(47)
+In sum, for the same problem, the brittle and cohesive fracture
+model will lead to different solutions of the displacement and stress.
+The displacement of the brittle fracture model shows a jump at the
+crack, while that of the cohesive interface model is continuous. For
+the stress, the brittle fracture model yields an infinite value, while
+the cohesive model is consistent with analytical solution. Also the
+displacement and the stress of the brittle fracture model are different
+from those of the cohesive fracture model, but both models lead to
+an identical crack opening displacement, thus validating the proposed
+formulations.
+5. Numerical example
+We now demonstrate the performance of the methodology to com-
+pute the crack opening displacement in a multi-dimensional setting
+through two representative examples. First, we will consider an infinite
+plate with a pressurised internal crack. Then, a fibre–epoxy debonding
+test is considered to explore cohesive interface debonding under mixed-
+mode loading conditions, showing the ability of the method to analyse
+curved cracks. To well represent the crack in a smeared sense, the
+regularisation length is always chosen as 𝑙≥4ℎ(ℎ: element size around
+the crack) (Bourdin et al., 2008).
+We employ Eqs. (22) and (31) to compute the crack opening dis-
+placement, depending on the fracture model, i.e., brittle or cohesive
+fracture. For brittle fracture Eq. (3) has been validated by comparing
+numerical results with the closed-form solution of Eq. (21) (Wheeler
+et al., 2014; Chukwudozie et al., 2019; Yoshioka et al., 2020) and will
+not be discussed here. The cohesive phase-field model, i.e., Eq. (9), in-
+cludes the displacement 𝐮and the displacement jump [[𝐮]] as variables.
+In the phase-field model the crack is represented in a smeared format,
+𝛤𝜉, see Fig. 1(b), and the displacement jump cannot be computed
+directly due to unknown displacement jump location (Chukwudozie
+et al., 2019). To solve this issue Verhoosel and de Borst (2013) have
+proposed a cohesive phase-field model, which uses an auxiliary field 𝜐
+to model the displacement jump [[𝐮]], required as input in a cohesive-
+zone model, see also Vignollet et al. (2014), May et al. (2015), Ghaf-
+fari Motlagh and de Borst (2020) and Chen and de Borst (2022).
+To describe the interface behaviour the cohesive zone law from the
+discrete model is used directly (Chen and de Borst, 2022). Obviously, in
+Verhoosel and de Borst’s approach, the displacement jump, including
+the crack opening displacement and the displacement jump in the shear
+direction, can be obtained directly from the finite element solution of
+system equations (Chen and de Borst, 2022). Hence, for the first exam-
+ple, we will also use this solution of the crack opening displacement
+as an additional reference solution, next to the closed form solution.
+Herein, we will obtain the displacement 𝐮, and then use Eq. (30)
+to compute the crack opening displacement, in order to validate the
+proposed approach in Section 3.3.
+In the numerical solution we exploit 1-continuous Powell–Sabin
+B-splines, which are based on triangles, for the spatial discretisa-
+tion (Chen and de Borst, 2019; Chen et al., 2020). A flexible control
+International Journal of Solids and Structures 283 (2023) 112496
+8
+L. Chen et al.
+Fig. 6. Plot of the phase field 𝑑and 𝐮⋅∇𝑑for different values of the inclination angle 𝜃. The figures in the left column represent the phase field 𝑑, while the figures in the right
+column denote 𝐮⋅∇𝑑.
+of the geometry is possible, such as remeshing using any standard
+package for triangular elements (Geuzaine and Remacle, 2009), while
+the 1-continuity assures an improved stress prediction (Chen et al.,
+2019). The plate has been discretised by the triangulation presented
+in Fig. 5(b). Powell–Sabin B-splines describe the geometry and inter-
+polate the displacement field 𝐮and the displacement jump 𝜐in an
+isoparametric sense (Chen and de Borst, 2019):
+𝒙=
+𝑁𝑣
+∑
+𝑘=1
+3
+∑
+𝑗=1
+𝑁𝑗
+𝑘𝑿𝑗
+𝑘= 𝑵𝑿
+𝐮=
+𝑁𝑣
+∑
+𝑘=1
+3
+∑
+𝑗=1
+𝑁𝑗
+𝑘𝑼𝑗
+𝑘= 𝑵𝑼
+𝜐=
+𝑁𝑣
+∑
+𝑘=1
+3
+∑
+𝑗=1
+𝑁𝑗
+𝑘𝜗𝑗
+𝑘= 𝑵𝜗,
+(48)
+where 𝑿𝑗
+𝑘represent the coordinates of the corners 𝑸𝑗
+𝑘of the Powell–
+Sabin triangles, 𝑼𝑗
+𝑘and 𝜗𝑗
+𝑘denote the degrees of freedom at 𝑸𝑗
+𝑘, and
+𝑁𝑣is the total number of vertices. The indices 𝑗= 1, 2, 3 imply that
+three Powell–Sabin B-splines 𝑁𝑗
+𝑘are defined on each vertex 𝑘. 𝑵, 𝑿,
+𝑼and 𝜗are the shape function matrix, the vector of the coordinates,
+the displacement, the displacement jump, respectively.
+5.1. Infinite plate with a pressurised internal crack
+We consider an infinite domain 𝛺with an inclined internal crack 𝛤
+(length 2𝑎), as illustrated in Fig. 5(a). The inclination angle of the crack
+is 𝜃. The crack surface is pressurised by a constant pressure 𝑝. For this
+problem an exact solution can be obtained under the assumption that
+the displacement and stress vanish at infinity (Sneddon and Lowengrub,
+1969). The closed-form solution for the crack opening displacement
+(COD) is given by:
+COD = [[𝐮⋅𝒏]] = 4𝑝𝑎
+𝐸′
+√
+√
+√
+√
+(
+1 −
+𝑥2
+𝑠
+𝑎2
+)
+(49)
+with 𝐸′
+=
+𝐸/ (1 −𝜈2) where 𝐸and 𝜈are Young’s modulus and
+Poisson’s ratio, respectively. (𝑥𝑠, 𝑥𝑡
+) is the local coordinate along the
+International Journal of Solids and Structures 283 (2023) 112496
+9
+L. Chen et al.
+Fig. 7. (a) geometry and boundary conditions of one quarter of the fibre (Chen and de Borst, 2022), where the blue area indicates the smeared interface 𝛤𝜉; (b) domain triangulation
+with the smallest element size 𝑒= 0.10; (c) domain triangulation with the smallest element size 𝑒= 0.04. In the figure, the blue area represents the smeared interface 𝛤𝜉. To well
+describe 𝛤𝜉, the mesh around the interface 𝛤𝑐is refined with the smallest element size 𝑒. A discrete interface model is employed to provide the reference solution.
+crack. The origin is set at the centre of the crack 𝑂𝑙. In addition to the
+analytical solution, the numerical solution of Verhoosel and de Borst
+(2013) has been used for validation of the present method.
+In the simulation the size of the domain has been chosen such that
+the influence of boundary condition 𝜕𝛺on the displacement field near
+the crack almost vanishes. A square domain 𝛺= [−1, 1] × [−1, 1] has
+been used to this end. The centre of the crack is at (𝑥1, 𝑥2
+) = (0, 0).
+The half crack length 𝑎= 0.1. With a suitable re-scaling of the loading
+the material properties can be chosen as: Young’s modulus 𝐸= 1 and
+Poisson’s ratio 𝜈= 0.1. The regularisation length is set 𝓁= 0.05. The
+traction on the crack surface is chosen as 𝑝= 1.
+We consider three values of the inclination angle, 𝜃= 0◦, 30◦and
+45◦, respectively. The profiles of the phase field and of 𝐮⋅∇𝑑are shown
+in Fig. 6. 𝐮⋅∇𝑑results from the post-processing of the solution of
+cohesive phase-field model. The plots of the phase field and of 𝐮⋅∇𝑑are
+confined to a local area around the crack, due to the narrow distribution
+of the phase field, as illustrated in Fig. 2. Both 𝑑and 𝐮⋅∇𝑑show nearly
+identical profiles for the different values of the inclination angle 𝜃.
+Next, a line integral of −2𝐮⋅∇𝑑is taken in the direction normal
+to the crack. The limit of the integration is [−𝜋𝓁∕2, 𝜋𝓁∕2], because
+of the definition of the phase field in Eq. (14). The line integral is
+evaluated numerically by Gaussian quadrature. For this problem, the
+crack opening displacement (COD) should be identical no matter the
+choice of 𝜃. In Fig. 5(b) the results are compared with the closed form
+solution in Eq. (49) and for 𝜃= 0◦also with the numerical solution of
+Verhoosel and de Borst (2013). Invariably, the results match very well.
+5.2. Fibre–epoxy debonding test
+To demonstrate the ability of the method to analyse curved cracks,
+we considered a problem of fibre-epoxy debonding (Chen and de Borst,
+2022). The specimen geometry is shown in Fig. 7(a). Due to symmetry
+only one quarter of the specimen has been considered with symmetry-
+enforcing boundary conditions. Plane-strain conditions are assumed.
+The material properties are given as: for the fibre Young’s modulus
+𝐸= 225 GPa and Poisson’s ratio 𝜈= 0.2, and for the epoxy Young’s
+modulus 𝐸= 4.3 GPa and a Poisson’s ratio 𝜈= 0.34. The Xu–Needleman
+cohesive zone law is used to describe the tractions at the fibre-epoxy
+interface, with 𝑡𝑢= 50 MPa and 𝑐= 4 × 10−3 N/mm. The cohesive
+phase field method of Verhoosel and de Borst (2013) is employed
+to solve the displacement 𝐮. In Fig. 7(a), the discrete interface 𝛤𝑐is
+regularised as a smeared interface 𝛤𝜉(blue area) by the phase field
+model in Section 3.1. The regularisation length is set as 𝓁= 0.5 μm.
+To demonstrate the capability of the proposed method two different
+triangular meshes are employed to triangulate the domain, see Fig. 7(b)
+and (c). To well describe 𝛤𝜉, the mesh around the interface 𝛤𝑐is refined
+with the smallest element size 𝑒.
+The response curve, in terms of the horizontal stress 𝜎1 at point 𝐴
+as a function of the prescribed displacement̄ 𝑢, has been presented and
+validated in Chen and de Borst (2022), not shown here for brevity. The
+profile of the phase field and computed 𝐮⋅∇𝑑along the interface 𝛤𝑐
+are shown in Fig. 8(a) and (b). The phase-field variable is prescribed
+analytically by Eq. (14) (Chen and de Borst, 2022). 𝐮⋅∇𝑑is obtained
+from the solution of cohesive phase-field model. As expected, due to
+the narrow distribution of the phase field 𝑑, 𝐮⋅∇𝑑is confined to a
+local area around the crack. To obtain the crack opening displacement
+(COD), a line integral of −2𝐮⋅∇𝑑is taken in the direction normal
+to the interface 𝛤𝑐, evaluated numerically by Gaussian quadrature.
+Fig. 9 compares the solutions of the proposed method against those
+of discrete interface model (Chen et al., 2017). It shows the results of
+two different triangular meshes. Clearly, the results agree well with the
+discrete interface solution. The smallest element size 𝑒shows only a
+slight deviation, due to the integral form of the proposed method. The
+integration Eq. (30) takes the information not only along the interface
+𝛤𝑐, but also around the smeared area 𝛤𝜉.
+6. Concluding remarks
+The phase-field model is widely employed in the analysis of fracture
+due to its easy description of the crack and straightforward implemen-
+tation. In the model, the crack is regularised and it has been applied
+to the analysis of brittle and cohesive fracture. In the brittle fracture
+model crack initiation and evolution are governed by a minimisation of
+a Griffith-like energy functional, while in the cohesive fracture model,
+the fracturing problem is ruled by minimising a crack displacement
+jump dependent energy functional. Obviously, the displacement jump,
+including the crack opening displacement [[𝐮⋅𝒏]] and the displacement
+jump in the crack shear direction [[𝐮⋅𝒔]], is essential in the cohe-
+sive fracture model and is also crucial in certain other applications,
+e.g. hydraulic fracturing. This study has focused on the derivation and
+verification of the computation of the crack opening displacement both
+for brittle and cohesive fracture models.
+For the brittle fracture model the crack opening displacement [[𝐮⋅𝒏]]
+can be approximated as a line integral of 𝐮⋅∇𝑑in the direction normal
+to the crack. Chukwudozie et al. (2019) have derived an identical form
+of [[𝐮⋅𝒏]] and have verified its robustness by some benchmark cases.
+For the cohesive fracture model, the crack is regularised by using an
+approximated form of Dirac-delta function (𝛿𝑐) from the phase-field
+International Journal of Solids and Structures 283 (2023) 112496
+10
+L. Chen et al.
+Fig. 8. Plot of the phase field 𝑑and 𝐮⋅∇𝑑(μm) along the interface 𝛤𝑐at the loading step̄ 𝑢= 0.25 μm.
+Fig. 9. Crack opening displacement (COD, μm) along the interface 𝛤𝑐at different loading steps. In the figure, the results of the domain triangulation in Fig. 7(b) and (c) are
+shown. The smallest element size 𝑒in Fig. 7(b) and (c) is 𝑒= 0.10 and 𝑒= 0.04 respectively. The discrete interface model is employed to provide the reference solution (Chen
+et al., 2017).
+method. Herein, we have employed the gradient of the phase-field
+variable to define 𝛿𝑐. A factor ‘2’ is obtained in the form of 𝛿𝑐, due
+to the identity constraint of the Dirac-delta function. This factor leads
+to a change in the form of the crack opening displacement [[𝐮⋅𝒏]]. It
+is given as a line integral of 2𝐮⋅∇𝑑in the direction normal to the
+crack. We have validated the proposed forms of the crack opening
+displacement analytically in a one-dimensional setting and numerically
+in two multi-dimensional problems, featuring straight crack and curved
+cracks.
+Declaration of competing interest
+The authors declare that they have no conflicts of interest regarding
+the manuscript.
+Data availability
+No data was used for the research described in the article
+References
+Alessi, R., Vidoli, S., De Lorenzis, L., 2018. A phenomenological approach to fatigue
+with a variational phase-field model: The one-dimensional case. Eng. Fract. Mech.
+190, 53–73.
+Barenblatt, G.I., 1962. The mathematical theory of equilibrium cracks in brittle fracture.
+Adv. Appl. Mech. 7, 55–129.
+Bourdin, B., Chukwudozie, C., Yoshioka, K., 2012. A variational approach to the
+numerical simulation of hydraulic fracturing. In: SPE Annual Technical Conference
+and Exhibition. OnePetro, Richardson, TX.
+Bourdin, B., Francfort, G.A., Marigo, J.-J., 2000. Numerical experiments in revisited
+brittle fracture. J. Mech. Phys. Solids 48, 797–826.
+Bourdin, B., Francfort, G.A., Marigo, J.J., 2008. The variational approach to fracture.
+J. Elasticity 91, 5–148.
+Chen, L., Bahai, H., Alfano, G., 2022. Extended Powell–Sabin finite element scheme for
+linear elastic fracture mechanics. Eng. Fract. Mech. 274, 108719.
+Chen, L., de Borst, R., 2019. Cohesive fracture analysis using Powell–Sabin B-splines.
+Int. J. Numer. Anal. Methods Geomech. 43, 625–640.
+Chen, L., de Borst, R., 2021. Phase-field modelling of cohesive fracture. Eur. J. Mech.
+A Solids 90, 104343.
+Chen, L., de Borst, R., 2022. Phase-field regularised cohesive zone model for interface
+modelling. Theor. Appl. Fract. Mech. 103630.
+Chen, L., Fathi, F., de Borst, R., 2022b. Hydraulic fracturing analysis in fluid-saturated
+porous medium. Int. J. Numer. Anal. Methods Geomech. 46, 3200–3216.
+Chen, L., Li, B., de Borst, R., 2019. Energy conservation during remeshing in the analysis
+of dynamic fracture. Internat. J. Numer. Methods Engrg. 120, 433–446.
+Chen, L., Li, B., de Borst, R., 2020. The use of Powell–Sabin B-splines in a higher-order
+phase-field model for crack kinking. Comput. Mech..
+Chen, L., Lingen, E.J., de Borst, R., 2017. Adaptive hierarchical refinement of NURBS
+in cohesive fracture analysis. Internat. J. Numer. Methods Engrg. 112 (13),
+2151–2173.
+Chukwudozie, C., Bourdin, B., Yoshioka, K., 2019. A variational phase-field model for
+hydraulic fracturing in porous media. Comput. Methods Appl. Mech. Engrg. 347,
+957–982.
+Dugdale, D.S., 1960. Yielding of steel sheets containing slits. J. Mech. Phys. Solids 8,
+100–104.
+Fathi, F., Chen, L., de Borst, R., 2021. X-IGALME: Isogeometric analysis extended with
+local maximum entropy for fracture analysis. Internat. J. Numer. Methods Engrg.
+122, 6103–6125.
+International Journal of Solids and Structures 283 (2023) 112496
+11
+L. Chen et al.
+Francfort, G.A., Marigo, J.-J., 1998. Revisiting brittle fracture as an energy minimization
+problem. J. Mech. Phys. Solids 46, 1319–1342.
+Geuzaine, C., Remacle, J.-F., 2009. Gmsh: A 3-D finite element mesh generator with
+built-in pre-and post-processing facilities. Internat. J. Numer. Methods Engrg. 79,
+1309–1331.
+Ghaffari Motlagh, Y., de Borst, R., 2020. Considerations on a phase-field model for
+adhesive fracture. Internat. J. Numer. Methods Engrg. 121 (13), 2946–2963.
+Heider, Y., 2021. A review on phase-field modeling of hydraulic fracturing. Eng. Fract.
+Mech. 253, 107881.
+Khoei, A.R., 2014. Extended Finite Element Method: Theory and Applications. John
+Wiley & Sons.
+Lee, S., Wheeler, M.F., Wick, T., 2017. Iterative coupling of flow, geomechanics and
+adaptive phase-field fracture including level-set crack width approaches. J. Comput.
+Appl. Math. 314, 40–60.
+Li, T., Marigo, J.-J., Guilbaud, D., Potapov, S., 2016. Gradient damage modeling of
+brittle fracture in an explicit dynamics context. Internat. J. Numer. Methods Engrg.
+108 (11), 1381–1405.
+May, S., Vignollet, J., de Borst, R., 2015. A numerical assessment of phase-field models
+for brittle and cohesive fracture: 𝛤-convergence and stress oscillations. Eur. J.
+Mech. A Solids 52, 72–84.
+Miehe, C., Hofacker, M., Schänzel, L.-M., Aldakheel, F., 2015. Phase field modeling
+of fracture in multi-physics problems. Part II. Coupled brittle-to-ductile failure
+criteria and crack propagation in thermo-elastic–plastic solids. Comput. Methods
+Appl. Mech. Engrg. 294, 486–522.
+Miehe, C., Mauthe, S., 2016. Phase field modeling of fracture in multi-physics problems.
+Part III. Crack driving forces in hydro-poro-elasticity and hydraulic fracturing of
+fluid-saturated porous media. Comput. Methods Appl. Mech. Engrg. 304, 619–655.
+Nguyen, T.T., Yvonnet, J., Zhu, Q.-Z., Bornert, M., Chateau, C., 2016. A phase-field
+method for computational modeling of interfacial damage interacting with crack
+propagation in realistic microstructures obtained by microtomography. Comput.
+Methods Appl. Mech. Engrg. 312, 567–595.
+Sneddon, I., Lowengrub, M., 1969. Crack Problems in the Classical Theory of Elasticity.
+John Wiley & Sons, Chichester.
+Verhoosel, C.V., de Borst, R., 2013. A phase-field model for cohesive fracture. Internat.
+J. Numer. Methods Engrg. 96, 43–62.
+Vignollet, J., May, S., de Borst, R., Verhoosel, C.V., 2014. Phase-field models for brittle
+and cohesive fracture. Meccanica 49, 2587–2601.
+Wheeler, M.F., Wick, T., Wollner, W., 2014. An augmented-Lagrangian method for
+the phase-field approach for pressurized fractures. Comput. Methods Appl. Mech.
+Engrg. 271, 69–85.
+Xu, X.P., Needleman, A., 1993. Void nucleation by inclusion debonding in a crystal
+matrix. Modelling Simul. Mater. Sci. Eng. 1, 111–132.
+Yoshioka, K., Naumov, D., Kolditz, O., 2020. On crack opening computation in
+variational phase-field models for fracture. Comput. Methods Appl. Mech. Engrg.
+369, 113210.

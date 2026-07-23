@@ -1,0 +1,182 @@
+[
+  {
+    "file": "assets/figures/page6_figure1.png",
+    "page": 6,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 2472,
+    "height": 2112,
+    "column": "full",
+    "num_columns": 1,
+    "caption_label": "Figure. 1",
+    "caption": "Integration of Off-Road Cycling Paths (red) to OS data (blue) in Edinburgh. (For interpretation of the references to colour in this figure legend, the reader is referred to the web version of this article.) Table 2 Summary of input datasets and their role in the corenet workflow. Dataset Provider Resolution Role in corenet Ordnance Survey Open Roads Ordnance Survey Great Britain; quarterly",
+    "caption_candidates": [
+      {
+        "label": "Figure. 1",
+        "text": "Integration of Off-Road Cycling Paths (red) to OS data (blue) in Edinburgh. (For interpretation of the references to colour in this figure legend, the reader is referred to the web version of this article.) Table 2 Summary of input datasets and their role in the corenet workflow. Dataset Provider Resolution Role in corenet Ordnance Survey Open Roads Ordnance Survey Great Britain; quarterly"
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page10_figure2.png",
+    "page": 10,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 3328,
+    "height": 3004,
+    "column": "full",
+    "num_columns": 1,
+    "caption_label": "Figure. 2",
+    "caption": "Edinburgh Core Network Growth.",
+    "caption_candidates": [
+      {
+        "label": "Figure. 2",
+        "text": "Edinburgh Core Network Growth."
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page10_figure3.png",
+    "page": 10,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 3333,
+    "height": 1613,
+    "column": "full",
+    "num_columns": 1,
+    "caption_label": "Figure. 3",
+    "caption": "Core Network Generation Using Different Data Sources: City of Edinburgh. Z. Wang et al. Journal of Transport Geography 131 (2026) 104549 10",
+    "caption_candidates": [
+      {
+        "label": "Figure. 3",
+        "text": "Core Network Generation Using Different Data Sources: City of Edinburgh. Z. Wang et al. Journal of Transport Geography 131 (2026) 104549 10"
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page14_figure4.png",
+    "page": 14,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 2975,
+    "height": 4348,
+    "column": "full",
+    "num_columns": 1,
+    "caption_label": "Figure. 4",
+    "caption": "Core and Existing Networks in Four Scottish Cities. Z. Wang et al. Journal of Transport Geography 131 (2026) 104549 14",
+    "caption_candidates": [
+      {
+        "label": "Figure. 4",
+        "text": "Core and Existing Networks in Four Scottish Cities. Z. Wang et al. Journal of Transport Geography 131 (2026) 104549 14"
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page15_figure5.png",
+    "page": 15,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 3328,
+    "height": 3176,
+    "column": "full",
+    "num_columns": 1,
+    "caption_label": "Figure. 5",
+    "caption": "Radar Chart Comparing Core and Existing Networks for Four Scottish Cities. Z. Wang et al. Journal of Transport Geography 131 (2026) 104549 15",
+    "caption_candidates": [
+      {
+        "label": "Figure. 5",
+        "text": "Radar Chart Comparing Core and Existing Networks for Four Scottish Cities. Z. Wang et al. Journal of Transport Geography 131 (2026) 104549 15"
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page18_figure6.png",
+    "page": 18,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 2651,
+    "height": 2028,
+    "column": "full",
+    "num_columns": 1,
+    "caption_label": "Figure. 6",
+    "caption": "Geometry Complexity Comparison between OSM and OS data in Edinburgh. A.4. Connectivity comparison between OS and OSM Our research identified connectivity issues in OSM data that affect network planning. Fig. 7 shows connectivity issues at the road level. We examined road A1140 by filtering OS data using OS$road_classification_number == \u201cA1140\u201d Z. Wang et al. Journal of Transport Geography 131 (2026) 104549 18",
+    "caption_candidates": [
+      {
+        "label": "Figure. 6",
+        "text": "Geometry Complexity Comparison between OSM and OS data in Edinburgh. A.4. Connectivity comparison between OS and OSM Our research identified connectivity issues in OSM data that affect network planning. Fig. 7 shows connectivity issues at the road level. We examined road A1140 by filtering OS data using OS$road_classification_number == \u201cA1140\u201d Z. Wang et al. Journal of Transport Geography 131 (2026) 104549 18"
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page19_figure7.png",
+    "page": 19,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 3331,
+    "height": 907,
+    "column": "full",
+    "num_columns": 1,
+    "caption_label": "Figure. 7",
+    "caption": "Connectivity in Road Levels: A1140. A subtler connectivity issue in OSM affects coherent route creation. In Fig. 8, the footway isn't actually connected to the street, identifiable by checking node degrees. The red-circled node has degree 1, when degree 3 is expected at this three-line junction. This issue stems from improper tagging, common with pavement infrastructure where contributors may not understand junction implications.",
+    "caption_candidates": [
+      {
+        "label": "Figure. 7",
+        "text": "Connectivity in Road Levels: A1140. A subtler connectivity issue in OSM affects coherent route creation. In Fig. 8, the footway isn't actually connected to the street, identifiable by checking node degrees. The red-circled node has degree 1, when degree 3 is expected at this three-line junction. This issue stems from improper tagging, common with pavement infrastructure where contributors may not understand junction implications."
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page19_figure8.png",
+    "page": 19,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 3331,
+    "height": 1394,
+    "column": "full",
+    "num_columns": 1,
+    "caption_label": "Figure. 8",
+    "caption": "Hidden Connectivity in OSM. These connectivity issues indicate OSM data requires cautious use and pre-processing. This can be achieved using GRASS or QGIS to snap nodes to the nearest line, ensuring footways connect to the road network. We developed a fix_rnet_connectivity function to address this issue, enhancing OSM data usability. The right side of Fig. 8 shows the corrected connection with proper node degrees. A.5. Road classification comparison between OS and OSM Princes Street demonstrates road classification differences between data sources. In OS data, Princes Street is an \u201cA Road.\u201d In OSM, it has three classifications: \u201ctertiary,\u201d \u201cunclassified,\u201d and \u201cprimary.\u201d This inconsistency creates preprocessing challenges. Filtering an arterial network from OS data is straightforward using OS$road_function %in% c(\u201cA Road\u201d, \u201cB Road\u201d, \u201cMinor Road\u201d). With OSM, avoiding missed routes requires including more classifications: OSM$highway %in% c(\u201cprimary\u201d, \u201cprimary_link\u201d, \u201csecondary\u201d, \u201csecondary_link\u201d, \u201ctertiary\u201d, \u201ctertiary_link\u201d, \u201cunclassified\u201d). As Fig. 9 shows, the filtered OS network is concise, while the OSM network contains scattered, disconnected lines. Some streets are missing in OSM, like Inverleith Place (classified as \u201cresidential\u201d). Such misclassifications can cause popular cycling routes to be overlooked. The abundance of un\u00ad classified OSM roads further complicates network interpretation.",
+    "caption_candidates": [
+      {
+        "label": "Figure. 8",
+        "text": "Hidden Connectivity in OSM. These connectivity issues indicate OSM data requires cautious use and pre-processing. This can be achieved using GRASS or QGIS to snap nodes to the nearest line, ensuring footways connect to the road network. We developed a fix_rnet_connectivity function to address this issue, enhancing OSM data usability. The right side of Fig. 8 shows the corrected connection with proper node degrees. A.5. Road classification comparison between OS and OSM Princes Street demonstrates road classification differences between data sources. In OS data, Princes Street is an \u201cA Road.\u201d In OSM, it has three classifications: \u201ctertiary,\u201d \u201cunclassified,\u201d and \u201cprimary.\u201d This inconsistency creates preprocessing challenges. Filtering an arterial network from OS data is straightforward using OS$road_function %in% c(\u201cA Road\u201d, \u201cB Road\u201d, \u201cMinor Road\u201d). With OSM, avoiding missed routes requires including more classifications: OSM$highway %in% c(\u201cprimary\u201d, \u201cprimary_link\u201d, \u201csecondary\u201d, \u201csecondary_link\u201d, \u201ctertiary\u201d, \u201ctertiary_link\u201d, \u201cunclassified\u201d). As Fig. 9 shows, the filtered OS network is concise, while the OSM network contains scattered, disconnected lines. Some streets are missing in OSM, like Inverleith Place (classified as \u201cresidential\u201d). Such misclassifications can cause popular cycling routes to be overlooked. The abundance of un\u00ad classified OSM roads further complicates network interpretation."
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page20_figure9.png",
+    "page": 20,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 3331,
+    "height": 1975,
+    "column": "full",
+    "num_columns": 1,
+    "caption_label": "Figure. 9",
+    "caption": "Road Classification of Princes Street. A.6. Off-Road Path Coverage Comparison between OS and OSM Fig. 10 highlights another major difference: off-road path coverage. OS data doesn't consistently include cycling infrastructure like park connectors or off-street trails, while OSM often maps these in detail. These routes are vital for complete cycling networks, particularly in urban areas where segregated cycleways and park trails provide pleasant, direct connections.",
+    "caption_candidates": [
+      {
+        "label": "Figure. 9",
+        "text": "Road Classification of Princes Street. A.6. Off-Road Path Coverage Comparison between OS and OSM Fig. 10 highlights another major difference: off-road path coverage. OS data doesn't consistently include cycling infrastructure like park connectors or off-street trails, while OSM often maps these in detail. These routes are vital for complete cycling networks, particularly in urban areas where segregated cycleways and park trails provide pleasant, direct connections."
+      }
+    ]
+  },
+  {
+    "file": "assets/figures/page20_figure10.png",
+    "page": 20,
+    "page_width": 3572,
+    "page_height": 4762,
+    "width": 3331,
+    "height": 1240,
+    "column": "full",
+    "num_columns": 1,
+    "caption_label": "Figure. 10",
+    "caption": "Off-Road Cycling Paths. Data availability Data will be publicly available on the GitHub release page upon publication. References Aldred, Rachel, Jungnickel, Katrina, 2014. Why culture matters for transport policy: the case of cycling in the UK. J. Transp. Geogr. 34, 78\u201387. https://doi.org/10.1016/j. jtrangeo.2013.12.004. Aldred, Rachel, Watson, Tom, Lovelace, Robin, Woodcock, James, 2017. Barriers to investing in cycling: stakeholder views from England. Transp. Res. A Policy Pract. https://doi.org/10.1016/j.tra.2017.11.003. Aldred, Rachel, Goodman, Anna, Gulliver, John, Woodcock, James, 2019. Cycling provision separated from motor traffic: a systematic review exploring whether stated",
+    "caption_candidates": [
+      {
+        "label": "Figure. 10",
+        "text": "Off-Road Cycling Paths. Data availability Data will be publicly available on the GitHub release page upon publication. References Aldred, Rachel, Jungnickel, Katrina, 2014. Why culture matters for transport policy: the case of cycling in the UK. J. Transp. Geogr. 34, 78\u201387. https://doi.org/10.1016/j. jtrangeo.2013.12.004. Aldred, Rachel, Watson, Tom, Lovelace, Robin, Woodcock, James, 2017. Barriers to investing in cycling: stakeholder views from England. Transp. Res. A Policy Pract. https://doi.org/10.1016/j.tra.2017.11.003. Aldred, Rachel, Goodman, Anna, Gulliver, John, Woodcock, James, 2019. Cycling provision separated from motor traffic: a systematic review exploring whether stated"
+      }
+    ]
+  }
+]

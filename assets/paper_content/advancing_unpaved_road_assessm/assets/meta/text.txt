@@ -1,0 +1,2331 @@
+Journal of Transport Geography 131 (2026) 104525
+Available online 8 January 2026
+0966-6923/© 2025 Elsevier Ltd. All rights are reserved, including those for text and data mining, AI training, and similar technologies.
+Advancing unpaved road assessment in Africa: Leveraging multimodal
+machine learning and large language-and-vision assistants across satellite
+imagery resolutions
+Zhao Wang a, Chunlei Xin b,*, Robin Workman c, Hang Hu d, Xinyuan Yu e, Yuxin Tian b,
+Robin Lovelace a, Jiupeng Zhang f, Haibo Chen a
+a Institute for Transport Studies, University of Leeds, Leeds, UK
+b State Key Laboratory of Geohazard Prevention and Geoenvironment Protection, Chengdu University of Technology, Chengdu, China
+c TRL Ltd., Crowthorne House, Nine Mile Ride, Wokingham, Berks RG40 3GA, UK
+d Department of Engineering, Chengdu Communication Investment Corporation, 66 1st Shenghe Road, Chengdu 610041, China
+e School of Mechanical, Aerospace and Civil Engineering, The University of Sheffield, Sheffield, UK
+f School of Highway Engineering, Chang’an University, Xi’an, China
+A R T I C L E I N F O
+Keywords:
+Unpaved road surface condition
+Satellite imagery
+Machine learning
+Cost-effective road maintenance
+Multimodal
+VLMs
+A B S T R A C T
+Over 53 % of African road network is unpaved, yet systematic monitoring remains limited. This study introduces
+a cost-effective machine learning (ML) solution to help local authorities monitor and plan road maintenance.
+Building on earlier work using high-resolution satellite imagery in Tanzania, the analysis extends to Madagascar,
+incorporating medium- and low-resolution imagery to reduce costs. Two distinct methodologies were evaluated:
+traditional ML and multimodal ML. The multimodal ML model achieves 93.2 % accuracy with high-resolution
+imagery and maintains satisfactory performance with medium (84.0 %) and low-resolution (85.3 %) imagery,
+aided by transfer learning. The framework demonstrates robust cross-resolution performance across Tanzania
+and Madagascar contexts. Additionally, a pilot study explored a fine-tuned Large Language-and-Vision Assistant
+(LLaVA) model, which demonstrated potential for natural language-based condition reporting and maintenance
+recommendations, offering an interpretable alternative to quantitative classification outputs. Whilst LLaVA
+currently exhibits lower classification accuracy than the multimodal ML model, multi-turn conversational ap-
+proaches show promise for enhancing performance whilst maintaining natural language interpretability. This
+study contributes to Sustainable Development Goal 9.1 by delivering a scalable, affordable strategy to support
+resilient infrastructure and economic development in low-income regions.
+1. Introduction
+Road infrastructure is fundamental for accessing essential services
+and fostering economic growth, yet a substantial proportion of networks
+in low- and middle-income countries (LMICs) remains unpaved. In Af-
+rica, 53 % of roads are unpaved, a figure unlikely to decline in the near
+term (African Development Bank Group, 2014). Tanzania typifies this
+challenge: only 7 % of the 180,000 km road network is paved (PADECO
+Co. Ltd., 2012). Consequently, over one billion rural residents world-
+wide, including 59 % of Africa's population (Mikou et al., 2019), rely on
+all-weather access routes that are frequently impassable (World Bank,
+2016). Strengthening these vital links is therefore critical for poverty
+reduction and inclusive growth.
+Maintaining these networks in LMICs is restricted by scarce budgets,
+logistical hurdles, and environmental stressors. Gravel and other ag-
+gregates are often inaccessible or unaffordable, while intensifying
+rainfall and extreme weather accelerate surface degradation (Harral and
+Faiz, 1988; Workman et al., 2023). Reliable, up-to-date road condition
+data are crucial for efficient resource allocation, but national inventories
+are frequently outdated, inconsistent, or incomplete. Conventional
+condition surveys, involving driven surveys and visual inspections, are
+labour-intensive, costly, subjective, and sporadically implemented. A
+* Corresponding author.
+E-mail addresses: z.wang13@leeds.ac.uk (Z. Wang), xinchunlei@cdut.edu.cn (C. Xin), rworkman@trl.co.uk (R. Workman), huhang750@hotmail.com (H. Hu),
+yuxinyuan123456@gmail.com (X. Yu), tyxcecily@163.com (Y. Tian), R.Lovelace@leeds.ac.uk (R. Lovelace), zhiupeng@chd.edu.cn (J. Zhang), H.Chen@leeds.ac.
+uk (H. Chen).
+Contents lists available at ScienceDirect
+Journal of Transport Geography
+journal homepage: www.elsevier.com/locate/jtrangeo
+https://doi.org/10.1016/j.jtrangeo.2025.104525
+Received 11 June 2025; Received in revised form 22 November 2025; Accepted 11 December 2025
+Journal of Transport Geography 131 (2026) 104525
+2
+survey by Transport Research Laboratory (TRL) indicated that 54 % of
+LMICs carry out condition surveys at ‘no regular interval’ (Workman
+et al., 2022). The absence of timely and accurate road condition data not
+only constrains effective infrastructure management but also un-
+dermines progress towards the attainment of the Sustainable Develop-
+ment Goals (SDGs), many of which are contingent upon dependable road
+accessibility (Vandycke et al., 2019).
+Recent advancements in remote sensing and machine learning (ML)
+present promising solutions to the challenges of road condition assess-
+ment (Burke et al., 2021). Studies integrating high-resolution satellite or
+unmanned aerial vehicle (UAV) imagery with ML have demonstrated
+effectiveness across multiple applications, including road network
+extraction and mapping (Feng et al., 2009; Mnih and Hinton, 2010;
+Nachmany and Alemohammad, 2019; Wang et al., 2016), identification
+of road surface types (Randhawa et al., 2025; Saxena et al., 2025; Zhou
+et al., 2024, 2025), defects detection and segmentation (Liu et al., 2020;
+Pan et al., 2018; T. Zhang et al., 2023), and the road surface condition
+assessment (Brewer et al., 2021; Cadamuro et al., 2018; Cardenal et al.,
+2019; Dobson et al., 2013; Kapp et al., 2025; Kotian et al., 2019; Lopes
+Amaral Loures and Rezazadeh Azar, 2023; Oppong Adu et al., 2023;
+Workman et al., 2018, 2023; C. Zhang, 2009; J. Zhao et al., 2017).
+In
+satellite
+and
+aerial
+imagery
+analysis,
+methodological
+de-
+velopments have demonstrated substantial accuracy improvements
+through deep learning architectures. Saxena et al. (2025) employed
+MaskCNN with ResNet-50 backbone, squeeze-and-excitation blocks, and
+hierarchical loss functions on U.S. NAIP aerial imagery, achieving 92.3
+% accuracy and mean IoU of 83.7 % in four-category surface classifi-
+cation (asphalt, concrete, gravel, dirt), outperforming baseline U-Net
+(89.6 %) and traditional machine learning methods (SVM 81.2 %,
+Random Forest 83.7 %) whilst addressing class imbalance through focal
+loss and spatial attention mechanisms. Complementing overhead im-
+agery analysis, ground-level and crowdsourced imagery approaches
+have enabled large-scale road surface characterization. Randhawa et al.
+(2025) leveraged 105 million Mapillary street-view images globally
+with Swin-Transformer classification to add surface type information for
+approximately 3 million km of roads (36 % of the global network),
+achieving F1 scores of 91–97 % across continents. Zhou et al. (2025)
+created the first large African road surface image dataset containing
+200,000 manually-labelled Mapillary photos across six countries, with
+transformer-based models achieving 92.4 % classification accuracy and
+exceeding 95 % on unseen African regions, demonstrating cross-regional
+generalization. Kapp et al. (2025) introduced the StreetSurfaceVis
+dataset of 9122 street-level images annotated for both surface type
+(asphalt, concrete, paving stones, sett, unpaved) and quality condition
+(excellent to very bad), employing innovative semi-automated labelling
+strategies including GPT-4o-based classification (40–65 % precision),
+similarity search using CLIP/DINOv2 embeddings, and iterative deep
+learning model refinement, achieving EfficientNetV2-S F1 scores
+exceeding 0.90 for most surface types whilst addressing severe class
+imbalance inherent in crowdsourced data.
+Deep learning architectural innovations have enabled progressively
+more accurate distress detection through specialised network designs.
+Liu et al. (2020) proposed a two-step pavement crack detection and
+segmentation method combining modified YOLOv3 for crack localiza-
+tion (F1 score 90.58 %) with U-Net employing pre-trained ResNet-34
+encoder and spatial-channel squeeze-and-excitation (SCSE) blocks for
+pixel-level segmentation (F1 score 95.75 %), demonstrating that
+detection-then-segmentation
+pipelines
+outperform
+single-stage
+methods. Zhang et al. (2023) developed an APC-GAN (Automated
+Pavement Crack Generative Adversarial Network) with enlarged 4 × 4
+kernels and Gaussian noise injection to generate synthetic training data
+for small datasets, combined with AttuNet (attention-modified U-Net)
+achieving superior performance over standard augmentation methods,
+illustrating the efficacy of generative models in addressing data scarcity
+challenges prevalent in infrastructure monitoring. Beyond single-
+modality
+approaches,
+multimodal
+integration
+has
+demonstrated
+substantial performance gains by leveraging complementary data
+sources. Saeed et al. (2024) demonstrated that fusing audio and image
+data for gravel road condition evaluation using early feature fusion
+(VGG-19 + PCA) and late decision fusion (DenseNet classifiers) achieves
+up to 97 % accuracy, with complementary modalities compensating for
+individual limitations under varying environmental conditions. The
+emergence of large vision-language models (LVLMs) represents a further
+frontier in road assessment. Bazi et al. (2024) introduced RS-LLaVA, a
+fine-tuned LLaVA model adapted for remote sensing imagery through
+low-rank adaptation (LoRA), demonstrating that instruction-tuning with
+RS-specific image-text pairs enables multi-task overhead imagery anal-
+ysis (captioning, visual question answering) with 92.3 % accuracy on
+UCM-caption dataset and 86.95 % overall accuracy on RSVQA-LR,
+enabling natural language-based condition reporting and query-driven
+analysis without task-specific architectural modifications. Collectively,
+these developments underscore growing recognition that multimodal
+approaches, transfer learning strategies, attention mechanisms, and
+vision-language
+integration
+can
+overcome
+limitations
+of
+single-
+modality, single-resolution methods whilst enabling interpretable,
+context-rich, and scalable assessments.
+Whilst substantial progress has been achieved in paved road assess-
+ment using CNN-based models (Cadamuro et al., 2018; Jiang et al.,
+2021) and UAV-based approaches for specific applications such as
+measuring road deformation caused by landslides (Cardenal et al.,
+2019), considerably less attention has been directed towards unpaved
+road networks. Oppong Adu et al. (2023) evaluated unpaved road
+conditions using UAV imagery and traditional field surveys, highlighting
+that whilst UAVs offer a cost-effective alternative, they require greater
+automation to optimise utility. Building on earlier UAV-based work by
+Lopes Amaral Loures (2021) applying CNNs with drone imagery to
+evaluate unpaved roads in Canada, Loures & Azar (2023) developed
+enhanced computer vision solutions that automatically identify com-
+mon unpaved road distresses (potholes, rutting, corrugation) using
+modified YOLOv3 (precision 91.95 %, recall 89.31 %) and estimate
+pothole dimensions from drone video frames through semantic seg-
+mentation with mean absolute error of 10.8 cm, demonstrating cost-
+effective monitoring for remote communities. However, scalability re-
+mains constrained by operational requirements such as trained opera-
+tors, visual line-of-sight regulations, and multiple launch sites for
+comprehensive coverage.
+Satellite-based approaches offer greater scalability potential for un-
+paved road networks. In 2016, TRL conducted studies in rural areas
+across Ghana, Kenya, Tanzania, Uganda, and Zambia using high-
+resolution imagery, where trained staff manually interpreted road con-
+ditions based on indicators such as pixel intensity and road width
+(Workman et al., 2018). Accuracy ranged from 63 % for five-category
+classification (Excellent/Good/Fair/Poor/Bad) to 85 % for simplified
+three-category classification (Good/Fair/Poor), though this method re-
+mains subjective and depends on the experience and knowledge of in-
+dividual assessor. In pursuit of more objective solutions, advanced trials
+in the Kilosa district of Tanzania demonstrated that integrating satellite
+imagery (0.3–0.5 m resolution) with ML could achieve up to 88 % ac-
+curacy in rural road condition assessment (Workman et al., 2023). By
+decoding pixel-level variations in imagery, this approach effectively
+identifies areas indicative of deterioration. This method is particularly
+suited for high-level assessments at Information Quality Levels (IQL) 4
+and 5 and proves advantageous in remote or conflict-affected areas
+where traditional surveys are impractical or unsafe. Moreover, this
+method allows for simultaneous evaluation of extensive road networks,
+whereas conventional surveys may take months or even years to com-
+plete. Despite these promising results, widespread adoption remains
+constrained by persistent barriers. The high cost of high-resolution im-
+agery restricts deployment in budget-limited LMICs, whilst the absence
+of comprehensive software frameworks hinders scalable implementa-
+tion. Critically, trials employing lower-cost imagery alternatives have
+yielded only 56 % accuracy, falling short of operational requirements
+Z. Wang et al.
+Journal of Transport Geography 131 (2026) 104525
+3
+(Workman et al., 2023). These constraints highlight the pressing need
+for approaches that balance accuracy, scalability, and financial viability
+to support effective maintenance planning in resource-constrained
+environments.
+Responding to these identified gaps, this study selects Madagascar as
+the Area of Interest (AoI), characterised by a predominantly unpaved,
+narrow, and hazardous road network (United Nations Economic Com-
+mission for Africa (UNECA), 2020). Satellite imagery at high, medium,
+and low resolutions was acquired and aligned with ground-truth data to
+enable systematic evaluation across resolution levels. Recognising the
+decline in accuracy when applying traditional ML models to lower-
+resolution imagery noted by previous research (Workman et al.,
+2023), this study employs a multimodal ML approach based on its
+demonstrated classification strength in analogous applications (Saeed
+et al., 2024; Zhao et al., 2022). The study compares traditional and
+multimodal approaches, conducting cost-effectiveness analysis to eval-
+uate performance implications of different spatial resolutions against
+conventional survey methods. Additionally, a pilot study assesses the
+feasibility of employing a fine-tuned Large Language-and-Vision Assis-
+tant (LLaVA) model to interpret satellite imagery for unpaved road
+condition assessment. This research pursues three primary objectives.
+First, develop and validate traditional and multimodal ML frameworks
+for operational unpaved road condition assessment across varying sat-
+ellite imagery resolutions, enabling cost-accuracy trade-off optimisa-
+tion. Second, quantify the economic and performance implications of
+resolution selection through comparative cost-effectiveness analysis
+against conventional survey methods. Third, conduct exploratory
+investigation
+of
+whether
+vision-language
+models
+such
+as
+Large
+Language-and-Vision Assistant (LLaVA) could potentially replace the
+multimodal ML framework by performing both condition recognition
+and interpretable natural language reporting (condition descriptions
+and maintenance recommendations for non-technical stakeholders). The
+operational framework (objectives 1–2) contributes directly to SDG
+9.1.1 by enabling scalable, affordable infrastructure monitoring, whilst
+the LLaVA exploration (objective 3) investigates next-generation capa-
+bilities for automated, interpretable reporting that could further reduce
+expert interpretation requirements. Furthermore, the framework sup-
+ports improved financial planning, strengthens technological capacity,
+broadens access to information and communications technologies, and
+fosters inclusive industrialisation, thereby advancing SDG 9's broader
+mandate
+for
+equitable
+and
+resilient
+infrastructure
+development
+(Workman and McPherson, 2019).
+2. Satellite imagery collection and ground truthing
+2.1. Satellite imagery collection
+In September 2023, satellite imagery at three distinct resolutions was
+acquired for the AoI in Madagascar through the UP42 platform from
+three providers: (1) Pleiades Neo (Airbus Defence and Space) providing
+0.3 m high-resolution imagery via four-band multispectral sensor (Blue:
+450–520 nm, Green: 530–590 nm, Red: 620–690 nm, Near-Infrared:
+770–880 nm) with 12-bit radiometric resolution and native multispec-
+tral resolution of 1.2 m pansharpened to 0.3 m (Cantrell et al., 2023); (2)
+Satellogic NewSat providing 0.7 m medium-resolution imagery from
+multispectral sensors with four RGB bands plus near-infrared (750–900
+nm), enhanced from 0.99 m native resolution through proprietary super-
+resolution processing with 10-bit radiometric depth (Vrabel et al.,
+2022); and (3) Vision-1 (OHB System AG/Airbus) providing 0.87 m low-
+resolution imagery with four-band multispectral sensor (Blue: 440–510
+nm, Green: 510–590 nm, Red: 600–670 nm, Near-Infrared: 780–910 nm)
+with 10-bit radiometric resolution (Vrabel et al., 2024). All imagery was
+acquired with near-nadir viewing geometry (off-nadir angles <15◦) to
+minimize geometric distortion. All imagery was delivered pansharpened
+(combining multispectral and panchromatic bands for enhanced spatial
+resolution) and orthorectified to remove terrain distortions, with
+radiometric calibration to top-of-atmosphere reflectance applied by
+suppliers using sensor-specific calibration coefficients derived from on-
+orbit vicarious calibration and laboratory characterization. No addi-
+tional atmospheric correction was performed, as comparative analysis
+across resolutions benefited from consistent radiometric processing
+levels. The imagery covered approximately 125 km2 and reflected a
+wide spectrum of unpaved road conditions, ranging from well-
+maintained to severely deteriorated. The acquisition was scheduled to
+coincide with ground-truthing activities, ensuring that satellite imagery
+analysis was synchronised with on-the-ground assessments to enhance
+data accuracy. Fig. 1 illustrates the satellite imagery at the three spatial
+resolutions used.
+2.2. Ground truthing
+Ground truthing links satellite-derived information to on-site ob-
+servations and is crucial for monitoring dynamic road conditions in
+contexts such as Madagascar, where unpaved roads deteriorate rapidly
+due to environmental factors and high usage. Validating satellite im-
+agery against real-world data also provides the empirical basis for
+training and testing machine learning (ML) models. The ground-truthing
+activities were planned and executed within six weeks of satellite image
+acquisition to align closely with the timing of the image capture. These
+activities were carried out by TRL in collaboration with the local part-
+ner, ONG Lalana, who facilitated transportation and guidance on local
+unpaved road assessment protocols. A total of 86 km of roads within the
+AoI were surveyed.
+Data collection involved capturing georeferenced high-definition
+video with a dashcam (Fig. 2(a)), recording speed, average speed, and
+accelerometer readings in X, Y, and Z directions. The RoadLabPro
+smartphone application provided International Roughness Index (IRI)
+values at 100 ± 15 m intervals (GPS-triggered), reflecting road condi-
+tion severity (Sayers et al., 1986). The application was operated
+following standard protocols: consistent vehicle (4 × 4 survey vehicle
+with standard suspension), consistent speed (approximately 40–50 km/
+h on accessible sections), and trained operator following manufacturer
+guidelines. GPS horizontal accuracy was monitored, with measurements
+requiring minimum 10 m horizontal accuracy for inclusion. Visual in-
+spection of dashcam video footage was conducted alongside IRI mea-
+surements to validate condition classifications, with IRI serving as a
+quantitative supplement to visual assessment rather than the sole
+determinant of road condition. It is important to acknowledge the
+measurement limitations inherent in smartphone-based IRI systems
+compared to Class 1 inertial profilers (ASTM International, 2023).
+However, for ML training applications where condition classes span
+substantial IRI ranges, this precision level remains adequate. In Mada-
+gascar's road classification system, condition categories correspond to
+IRI ranges established by local road authorities: Good (IRI < 10 m/km),
+Fair (IRI 10–15 m/km), Poor (IRI 15–20 m/km), and Bad (IRI > 20 m/
+km). The measurement uncertainty of smartphone-based IRI systems
+(typically ±0.5–1.0 m/km based on validation studies (Ekpenyong
+et al., 2021) is substantially smaller than these 5 m/km class boundaries,
+ensuring that measurement noise does not introduce systematic label-
+ling errors in training data. Quality assurance was maintained through:
+(1) real-time monitoring of GPS accuracy and sensor status, with
+anomalous readings flagged for repeat measurement where operation-
+ally feasible; (2) cross-validation of IRI-based classifications against vi-
+sual inspection by local road engineering specialists from ONG Lalana
+and L'Autorit´e Routi`ere de Madagascar, who are familiar with Mada-
+gascar's road condition assessment protocols; and (3) removal of mea-
+surements with insufficient GPS accuracy (>15 m horizontal error) that
+could spatially misalign IRI values with satellite imagery tiles. These
+protocols provided ground truth data suitable for supervised ML model
+training in resource-constrained field settings, balancing measurement
+quality with operational feasibility for an 86 km road network survey.
+Fig. 2(b) illustrates the software interface used to process and analyse
+Z. Wang et al.
+Journal of Transport Geography 131 (2026) 104525
+4
+collected data. This software enables the identification of road condition
+metrics, enhancing the accuracy and practical utility of results by
+providing clear and actionable insights derived from real-time field data.
+The user interface is intuitive and user-friendly, enabling operators to
+effortlessly input and monitor data, thus streamlining the assessment
+workflow. This approach is well-suited for unpaved roads and has been
+validated in previous projects, including successful techniques used in
+Tanzania (Workman et al., 2023).
+Fig. 3 shows the conditions assigned to surveyed road sections,
+validated by local specialists. Green lines (N4) indicate excellent con-
+dition requiring minimal intervention; yellow (N3) signifies fair condi-
+tion necessitating periodic maintenance; orange (N2) and red (N1)
+denote poor or bad conditions requiring rehabilitation or reconstruction.
+Purple lines mark cobblestone segments, excluded from condition
+assessments.
+Fig. 1. Different spatial resolutions of imagery for the AoI in Madagascar.
+Fig. 2. Ground-truth equipment setup in survey vehicle (a); Interface of dashcam assessment software (b).
+Fig. 3. Ground-truth road conditions by category.
+Z. Wang et al.
+Journal of Transport Geography 131 (2026) 104525
+5
+3. ML data collection and cleansing
+3.1. Road surface tiles collection
+This study utilises road surface tiles collected from satellite imagery
+as raw data for the ML process. These tiles were created using a ground
+truth road surface condition shape file. The process begins by seg-
+menting the lines in the condition shapefile into segments, each
+approximately equal to the width of the road. A buffer corresponding to
+half the road width is then created from the segmented condition lines
+using “Flat” End cap and “Bevel” Join styles. For this process, a QGIS
+plugin
+is
+developed
+(available
+at
+https://github.com/christophe
+rusky/eo_pavement_analysis) to automate tile generation. Fig. 4 illus-
+trates how these tiles are configured relative to the road layout.
+The dataset is split into training/validation (80 %) and testing (20 %)
+sets. Table 1 shows the distribution of samples across different resolu-
+tions and road conditions.
+3.2. Statistical image analysis
+Statistical image processing was performed on the image tiles
+collected from the previous step in both RGB (Red, Green, Blue) and HSV
+(Hue, Saturation, Value) colour spaces using scikit-image library (Van
+der Walt et al., 2014). Two custom functions were employed: `Col-
+our_Texture_Feature_Extraction`
+for
+basic
+features
+and
+`Colour_-
+Texture_Feature_Extraction_Extended`
+for
+advanced
+descriptors.
+Preprocessing included dead pixel removal to ensure accurate feature
+representation.
+Colour features are represented as an 18-dimensional vector,
+providing stable, size-independent characteristics that are insensitive to
+image orientation:
+Fcolour =
+[
+μH
+μS
+μV
+μR
+μG
+μB
+σ2
+H
+σ2
+S
+σ2
+V
+σ2
+R
+σ2
+G
+σ2
+B
+γH
+γS
+γV
+γR
+γG
+γB
+]
+Where μ stand for mean, σ2 stand for variance, γ stand for skewness
+per channel.
+Basic texture features derived from Grey-Level Co-occurrence Matrix
+(GLCM) (Hall-Beyer, 2017) are represented as:
+Extended texture features incorporate:
+Comprehensive derivations and implementation details for these
+metrics are accessible via the GitHub repository referenced in Section 7.
+3.3. Feature extraction reproducibility
+The feature extraction pipeline employs deterministic statistical al-
+gorithms to ensure consistency across processing batches. Colour fea-
+tures (RGB and HSV channel statistics) are computed through pixel-level
+arithmetic operations that yield identical results for the same input
+image regardless of processing order or batch composition. Texture
+features derived from Grey Level Co-occurrence Matrices (GLCM) and
+Histogram of Oriented Gradients (HOG) similarly follow deterministic
+computation paths with fixed parameters (GLCM distances, HOG cell
+sizes, orientation bins). To facilitate reproducibility, the feature
+extraction implementation includes: (1) standardised preprocessing
+steps (dead pixel removal, bit-depth normalisation) applied uniformly to
+all tiles; (2) fixed random seeds for any operations requiring pseudo-
+random number generation; and (3) explicit documentation of soft-
+ware dependencies, library versions, and parameter configurations in
+the public GitHub repository. Feature extraction consistency is validated
+Fig. 4. Example of road tiles collection.
+Table 1
+Distribution of Image Samples by Resolution and Condition for Madagascar
+Road Network.
+Condition
+Madagascar
+(training/validation dataset þ testing dataset)
+Low-Res
+Mid-Res
+High-Res
+Bad
+881 + 221
+753 + 194
+758 + 190
+Poor
+7208 + 1802
+5132 + 1293
+6375 + 1594
+Fair
+8819 + 2205
+6364 + 1586
+8600 + 2151
+Good
+463 + 116
+470 + 118
+457 + 115
+Fbasic texture = [Energy, Homogeneity, Contrast, Correlation, Dissimilarity, Angular Second Moment (ASM) ]
+Fextended texture = [Histogram of Oriented Gradients (HOG) , Local Binary Patterns (LBP) , Colour histograms, Contour Detection, Fourier Transform]
+Z. Wang et al.
+Journal of Transport Geography 131 (2026) 104525
+6
+through the 10-fold cross-validation procedure, where features are
+extracted multiple times for different data partitions. The consistent
+model performance across all folds (accuracy standard deviation <2 %)
+confirms that feature extraction variance remains negligible, as sub-
+stantial extraction instability would manifest as increased cross-
+validation variance. This validation demonstrates that the feature
+extraction pipeline produces reliable, consistent features suitable for
+operational deployment.
+3.4. Data cleansing – Outliers detection
+Data cleansing is essential for effective ML analysis, ensuring data-
+sets are free from inaccuracies and inconsistencies that may skew re-
+sults. In this study, outliers are defined as image tiles containing
+occlusions (e.g., vehicles, vegetation, shadows) or significantly devi-
+ating road surface conditions within their classification categories. Such
+anomalies could distort statistical measures and degrade ML perfor-
+mance (Ur Rehman and Belhaouari, 2021).
+Outlier detection typically employs two approaches: univariate and
+multivariate detection techniques. While univariate methods, such as
+histogram analysis (μ ± 3σ criterion), boxplot examination (IQR
+method), and Q-Q plots, offer valuable insights into individual feature
+distributions, they can be misleading when assessing complex, high-
+dimensional data (Leys et al., 2019). To address this limitation, a
+multivariate approach combining Principal Component Analysis (PCA)
+and Mahalanobis distance was implemented. PCA reduced the dataset
+dimensionality to three principal components, after which Mahalanobis
+distance identified outliers.
+Fig. 5 illustrates the dataset of colour and texture features extracted
+from high-resolution imagery, transformed via PCA and clustered using
+the Mahalanobis Distance. This method effectively segregates the data
+into distinct clusters and outliers across various road condition labels.
+Outliers, marked by red stars, are clearly differentiated from the main
+clusters, depicted as blue dots. This visual representation highlights the
+capability of this methodology in detecting critical anomalies, helping to
+identify
+potential
+misclassifications
+while
+distinguishing
+between
+normal variations and significant deviations.
+Fig. 6 presents examples of identified outliers, specifically high-
+lighting instances where the labelling has been incorrect. These images
+illustrate how outliers deviate from the typical patterns expected under
+each label.
+This
+methodology was
+applied
+consistently
+across
+all
+image
+Fig. 5. PCA and Mahalanobis distance outlier detection in high-resolution road condition analysis.
+Z. Wang et al.
+Journal of Transport Geography 131 (2026) 104525
+7
+resolutions to ensure effective outlier identification regardless of data
+quality. Table 2 details the number of image samples across these
+different resolutions and conditions after the outliers have been
+removed.
+4. Model development and evaluation
+Two distinct modelling approaches were adopted: (i) a traditional
+ML model utilising only structured data, and (ii) a multimodal ML model
+that combines structured data with imagery to increase data complexity
+and enhance predictive performance. This section presents the pro-
+gressive development of three methodologies. Traditional ML models
+establish the baseline performance, multimodal ML models address
+resolution-dependent accuracy limitations, and Large Language-and-
+Fig. 6. Examples of identified outliers (incorrectly labelled) in road condition data.
+Table 2
+Distribution of cleaned image samples by resolution and road condition in the
+Madagascar Road Network.
+Condition
+Madagascar: Cleaned
+(training/validation dataset þ testing dataset)
+Low-Res
+Med-Res
+High-Res
+Bad
+845 + 192
+733 + 179
+756 + 167
+Poor
+6874 + 1457
+4959 + 1030
+6303 + 1409
+Fair
+8727 + 2036
+6217 + 1429
+8557 + 1987
+Good
+446 + 103
+468 + 114
+457 + 112
+Z. Wang et al.
+Journal of Transport Geography 131 (2026) 104525
+8
+Vision Assistant (LLaVA) models explore future capabilities for inter-
+pretable assessment. Each subsection separates model architecture and
+development from performance evaluation to facilitate clear under-
+standing of methodological design choices and their outcomes.
+4.1. Traditional ML models
+4.1.1. Model development and selection strategy
+Traditional machine learning (ML) models were developed using
+PyCaret (version 3.0) (Moez Ali, 2020), an open-source, low-code
+automated ML framework, to establish a performance baseline.
+A systematic model development strategy was employed using
+PyCaret's capabilities for comparing, tuning, and blending algorithms:
+1. Data Preparation: The dataset was partitioned into 80 % for
+training and validation (with 10-fold cross-validation) and 20 % for
+testing on unseen data, ensuring robust model evaluation
+2. Model Comparison and Selection: Multiple algorithms were eval-
+uated using `compare_models()` to identify top performers.
+3. Ensemble Methods: The top five models were blended (`blend_-
+models()`) to enhance robustness and reduce overfitting.
+4. Hyperparameter Tuning: Individual top models and the blended
+ensemble were fine-tuned (`tune_model()`) to optimise hyper-
+parameters for the specific datasets.
+5. Finalisation: The best-performing tuned ensemble model was
+finalised (`finalize_model()`) for deployment.
+By following this structured approach, three ensemble models were
+developed for unpaved road condition assessment:
+• Base_Model: Trained on the colour and basic texture dataset.
+• Extended_Model: Trained on colour, basic and extended texture
+features.
+• PCA_Model: Trained on the feature dataset derived through the
+VGG16 model, and dimensional reduced by using PCA.
+4.1.2. Performance evaluation
+Model performance was evaluated using standard metrics: Accuracy,
+Area Under the Curve (AUC), Root Mean Square Error (RMSE), Recall,
+Precision, F1 Score, Kappa, Matthews Correlation Coefficient (MCC) and
+Mean Bias Error (MBE), and Percent Bias (PBIAS). Confusion matrices
+were also used for detailed class-specific performance analysis.
+Table 3 summarises the comparative performance of the Base,
+Extended, and PCA models across high-, mid-, and low-resolution im-
+agery. The Extended Model consistently achieved the highest perfor-
+mance, particularly with high-resolution data. However, in the mid-
+resolution setting, its results were nearly identical to those of the Base
+Model, indicating that the added complexity provides limited advantage
+when image detail is reduced. A similar pattern was observed with low-
+resolution imagery, where only marginal gains were noted in accuracy
+(81.8 % vs. 81.4 %) and RMSE (1.908 vs. 1.939), while Kappa and MCC
+remained nearly equivalent. It is worth noting that quality issues in the
+medium-resolution imagery necessitated reprocessing, which may have
+contributed to its comparatively lower performance relative to the low-
+resolution data. These results indicate that the Base Model is a more
+computationally efficient and practical choice for lower-resolution data,
+given its comparable performance. This outcome may be attributed to
+the lack of higher-order feature information, such as HOG, LBP, con-
+tours, and Fourier descriptors, in mid- and low-resolution imagery,
+which the Extended Model leverages more effectively. The PCA Model
+consistently demonstrated the weakest performance across all resolu-
+tions. Additionally, its large dataset size led to significantly higher
+computational
+costs,
+reducing
+its
+suitability
+for
+this
+practical
+application.
+Bias analysis reveals that all traditional ML models exhibit minimal
+systematic error across resolutions, where Mean Bias Error (MBE)
+quantifies average prediction deviation in original units and Percent
+Bias (PBIAS) expresses this as a normalised percentage (negative values
+indicate underestimation, positive values indicate overestimation, and
+values near zero indicate unbiased predictions). The Extended Model
+demonstrates excellent balance (MBE: −0.039 to 0.055; PBIAS: −1.533
+% to 2.161 %), with slight underestimation at high resolution tran-
+sitioning to minor overestimation at medium and low resolutions. The
+Base Model shows comparable performance (MBE: −0.026 to 0.045;
+PBIAS: −1.033 % to 1.756 %), with underestimation at high and me-
+dium resolutions shifting to slight overestimation at low resolution,
+whilst the PCA Model exhibits systematic bias oscillating from under-
+estimation at high-medium resolutions to overestimation at low reso-
+lution (MBE: −0.066 to 0.060; PBIAS: −2.576 % to 2.348 %).
+It is important to acknowledge an apparent inconsistency in the PCA
+Model results. At high resolution, the PCA Model attains a relatively low
+RMSE = 0.639; however, this coincides with higher bias (MBE =
+−0.066, PBIAS = −2.576 %) than the Base Model (MBE = −0.026,
+PBIAS = −1.033 %) and the Extended Model (MBE = −0.039, PBIAS =
+−1.533 %). This indicates underestimation despite the lower overall
+error magnitude. The explanation lies in the difference between
+continuous error minimisation and discrete classification. RMSE re-
+wards predictions that are numerically close to targets even when they
+cross class boundaries; bias metrics expose directional error. Dimen-
+sionality reduction in the PCA Model produces smoother, mean-centred
+predictions that compress the dynamic range; this reduces RMSE but
+increases systematic bias and weakens boundary discrimination.
+Confusion matrices reflect this behaviour: the PCA Model makes 738
+adjacent-class errors (Poor ↔Fair), compared with 479 and 387 for the
+Base and Extended Models, respectively. Consequently, the PCA Model
+achieves low numerical error at the expense of boundary precision,
+consistent with its weaker classification metrics (Accuracy = 71.7 %,
+Kappa = 0.502, MCC =0.503). RMSE alone therefore provides an
+incomplete assessment for multi-class classification; comprehensive
+evaluation should include accuracy, Kappa, MCC, and bias indicators
+(MBE, PBIAS) to capture both the magnitude and the direction of pre-
+dictive deviation.
+Fig. 7 shows the confusion matrices for three ML models across
+different resolutions. These matrices provide insights into the predictive
+ability of each model to classify road conditions accurately under
+different resolutions, revealing the strengths and weaknesses in their
+Table 3
+Performance comparison of ML models across varying resolutions.
+Resolution
+Model
+Accuracy
+AUC
+RMSE
+Recall
+Precision
+F1 Score
+Kappa
+MCC
+MBE
+PBIAS
+High_Res
+Base_Model
+84.4
+86.1
+1.923
+84.6
+84.4
+84.4
+0.723
+0.724
+−0.026
+−1.033
+Extended_Model
+88.0
+89.4
+1.850
+88.0
+88.3
+88.0
+0.787
+0.788
+−0.039
+−1.533
+PCA_Model
+71.7
+75.5
+0.639
+71.7
+72.4
+71.9
+0.502
+0.503
+−0.066
+−2.576
+Mid_Res
+Base_Model
+78.3
+80.6
+1.978
+78.3
+78.5
+78.4
+0.629
+0.629
+−0.017
+−0.687
+Extended_Model
+78.3
+80.3
+1.962
+78.3
+78.5
+78.4
+0.627
+0.627
+0.001
+0.057
+PCA_Model
+63.2
+67.9
+2.057
+63.2
+64.3
+63.5
+0.373
+0.373
+−0.063
+−2.478
+Low_Res
+Base_Model
+81.4
+82.3
+1.939
+81.4
+81.4
+81.2
+0.665
+0.668
+0.045
+1.756
+Extended_Model
+81.8
+82.4
+1.908
+81.8
+81.9
+81.6
+0.670
+0.674
+0.055
+2.161
+PCA_Model
+77.7
+78.5
+2.021
+77.7
+77.8
+77.3
+0.593
+0.598
+0.06
+2.348
+Z. Wang et al.
+Journal of Transport Geography 131 (2026) 104525
+9
+predictive capabilities. The Extended Model excels, especially at high
+resolution, with outstanding accuracy in differentiating between all four
+conditions. The Base Model performs well in mid and low resolutions,
+with minimal misclassifications. Conversely, the PCA Model consistently
+struggles with classification across all resolutions, especially in differ-
+entiating “Poor” from “Fair” conditions. This analysis confirms that the
+Extended Model, when used with high-resolution data, is the optimal
+choice for high-precision applications. The Base Model, meanwhile,
+Fig. 7. Confusion matrices collection of predictive models across varying resolutions.
+Fig. 8. Examples of misclassified road tiles illustrating ambiguous Poor/Fair boundary cases.
+Z. Wang et al.
+Journal of Transport Geography 131 (2026) 104525
+10
+proves to be a solid, resource-efficient alternative in lower-resolution
+settings.
+4.1.3. Error analysis across resolutions
+Analysis of confusion matrices reveals consistent misclassification
+patterns across resolutions, with Poor ↔Fair errors dominating for all
+models. Across resolutions, Base, Extended, and PCA models concen-
+trate errors at the Poor ↔Fair boundary. At high resolution the Base
+model records 574 errors with 479 (83.4 %) Poor ↔Fair (259 Fair →
+Poor, 220 Poor →Fair). The Extended model records 442 errors with
+387 (87.6 %) Poor ↔Fair (252, 135) and achieves true positive rates of
+89.2 % for ‘Bad’ and 96.4 % for ‘Good’. The PCA model records 1040
+errors with 738 (70.9 %) Poor ↔Fair (419, 319) and weaker true pos-
+itive rates of 64.7 % for ‘Bad’ and 39.3 % for ‘Good’. At medium reso-
+lution the Base and Extended models each incur 598 errors dominated
+by Poor ↔Fair cases (555, 92.8 % and 558, 93.3 %, respectively), with
+the Extended model maintaining true positive rates of 83.2 % for ‘Bad’
+and 94.7 % for ‘Good’. The PCA model produces 1012 errors, 832 (82.2
+%) of which are Poor ↔Fair (468, 364), with true positive rates of 61.5
+% for ‘Bad’ and 66.7 % for ‘Good’. At low resolution errors increase
+(Base 704, Extended 688, PCA 846) but still centre on Poor ↔Fair
+transitions (Base 627, 89.1 %; Extended 636, 92.4 %; PCA 761, 90.0 %).
+The Extended model sustains true positive rates of 87.0 % for ‘Bad’ and
+93.2 % for ‘Good’, and the PCA model improves to 80.7 % and 77.7 %
+respectively. These patterns indicate that reduced spatial detail am-
+plifies bidirectional confusion at the intermediate condition boundary,
+particularly the Fair ↔Poor pair. This boundary is inherently ambig-
+uous; visual inspection of misclassified examples (Fig. 8) shows inter-
+mediate characteristics such as subtle corrugation, heterogeneous
+aggregate distribution, and low-contrast textural cues that justify
+multiple interpretations, suggesting label uncertainty rather than
+fundamental model failure. Conversely, extreme categories maintain
+robust discrimination; the Extended Model sustains high true positive
+rates for ‘Bad’ (89.2 %, 83.2 %, 87.0 % from high to low resolution) and
+‘Good’ (96.4 %, 94.7 %, 93.2 %), indicating distinctive visual signatures
+(pronounced rutting/erosion vs. smooth uniform texture) that remain
+reliably detectable despite reduced pixel fidelity.
+4.1.3.1. Operational implications. These error patterns inform three
+practical deployment strategies:
+• First, confidence-based filtering enables accuracy-coverage trade-
+offs. Fig. 9 demonstrates that at high resolution with 0.8 confidence
+threshold, accuracy reaches 98 % whilst maintaining 60 % network
+coverage, allowing practitioners to obtain high-confidence assess-
+ments for prioritisation decisions whilst flagging ambiguous sections
+(predominantly Poor/Fair boundaries) for field verification.
+• Second, resolution-dependent classification schemes optimise reli-
+ability. Analysis reveals that merging Poor/Fair categories into
+‘Moderate’ condition achieves 98.6 % accuracy at low resolution
+(Fig. 10, left panel), eliminating the ambiguous boundary whilst
+preserving operational utility for maintenance prioritisation. Binary
+classification (Bad/Poor vs Fair/Good) maintains 82.5 % accuracy at
+low resolution (Fig. 10, right panel), suitable for initial screening
+applications where simplified serviceable/non-serviceable distinc-
+tions suffice.
+• Third, systematic visual verification protocols should prioritise
+boundary cases. Given that 87–93 % of misclassifications concen-
+trate at the Poor/Fair transition, implementing confidence score
+outputs alongside predictions enables practitioners to efficiently
+Fig. 9. Accuracy-coverage trade-off for confidence-based prediction filtering.
+Z. Wang et al.
+Journal of Transport Geography 131 (2026) 104525
+11
+identify sections requiring field validation, optimising ground truth
+collection resources.
+Fig. 8 visually shows randomly selected misclassified examples from
+high-resolution Extended Model, illustrating ambiguous boundary cases
+where intermediate characteristics (subtle surface irregularities and
+low-contrast textural cues) justify multiple condition labels.
+Fig. 9 demonstrates accuracy-coverage trade-off at high resolution,
+showing that 0.8 confidence threshold achieves 98 % accuracy with 60
+%
+coverage,
+enabling
+confidence-based
+filtering
+for
+operational
+deployment.
+Fig. 10 shows confusion matrices for simplified classification
+schemes at low resolution: (left) 3-class with Poor/Fair merged; (right)
+2-class binary classification, demonstrating 98.6 % accuracy for 3-class
+and 82.5 % accuracy for 2-class schemes.
+The critical importance of resolution-matched model training is
+further demonstrated through cross-resolution transfer experiments.
+Fig. 11 demonstrates the performance of the Extended Model, trained on
+high-resolution data, when applied to imagery of lower resolutions. As
+can be seen, a significant performance drop is evident, with accuracy
+falling to 42.2 % when tested on mid-resolution imagery and further
+declining to 23.9 % on low-resolution imagery. This sharp decline
+Fig. 10. Confusion matrices for simplified classification schemes at low resolution.
+Fig. 11. Comparative performance of high-res Extended Model on lower resolution data.
+Z. Wang et al.
+Journal of Transport Geography 131 (2026) 104525
+12
+highlights the critical importance of selecting models specifically opti-
+mised for the resolution of the data being used, particularly when
+employing traditional ML models.
+4.2. Multimodal ML models
+Traditional ML models for unpaved road condition analysis require
+resolution-specific training, separate models for high-resolution (HR:
+0.3 m/pixel) and lower-resolution (LR: 0.7–0.87 m/pixel) satellite im-
+agery. This approach introduces two key issues:
+• Redundancy: Duplicate training pipelines for each resolution.
+• Accuracy Degradation: LR models exhibit lower accuracy due to lost
+spatial details.
+To address these limitations, a unified multimodal model is pro-
+posed. This model generalises across resolutions via transfer learning
+and heterogeneous data fusion. The architecture eliminates resolution-
+specific training by leveraging HR-derived features to enhance LR
+inference, addressing the domain gap between HR and LR inputs.
+Furthermore, the framework supports future enhancements through
+integration of additional structured data (e.g., road width variation,
+traffic density, weather patterns, historical maintenance records), to
+further improve predictive accuracy and provide a more thorough un-
+derstanding of the factors that affect road conditions. For instance,
+multimodal ML can combine image and audio data for gravel road
+condition evaluation (Saeed et al., 2024) and is compatible with modern
+georeferenced Road Asset Management Systems (Workman et al., 2023),
+which would streamline the integration of all relevant information for a
+cost-effective maintenance prioritisation process.
+4.2.1. Model architecture and development
+The multimodal architecture (Fig. 12) processes variable-resolution
+inputs through three integrated components:
+• Resolution Invariance: Leverages HR-derived priors to enhance LR
+inference.
+• Heterogeneous Fusion: Integrates image, numerical, and metadata
+into a joint embedding space.
+• Extensibility: Easily extendable to new data modalities.
+For road condition prediction, the joint probability distribution is
+modelled as:
+p(y| I, x) = Softmax
+(
+WTϕ(ψ(I)⨁η(x) )
+)
+where ψ(⋅) and η(⋅) encode image and numerical inputs, respectively,
+and ⊕denote concatenation-based fusion.
+1. Image Processing Streams.
+A) Native-Resolution CNN (HR/LR Adaptation)
+Input: Raw variable-resolution road tiles I ∈ℝH×W×3, resized to 30
+× 30 × 3 pixels (zero-padded to retain aspect ratio).
+Local features extraction by lightweight CNN:
+ψCNN(I) = Flatten(Conv2D64(ReLU(Conv2D32(I) ) ) ) ∈ℝ64
+Loss function to align texture features across HR and LR
+domains:
+L texture = 1
+N
+∑
+N
+i=1⃦⃦⃦
+∇ψCNN
+(
+I(i)
+LR
+)
+−∇ψCNNI(i)
+HR⃦⃦⃦
+2
+2
+where ∇computes spatial gradients of the feature maps produced by
+ψCNN, and N is batch size.
+B) ResNet50V2 for Global Context.
+Input: Tiles upsampled to 30 × 30 × 3.
+• HR Pretraining: A ResNet50V2 backbone learns road topology using
+0.3 m data.
+• LR Fine-Tuning: Adapts these pretrained filters to LR artifacts via
+regularisation:
+θ*
+texture = arg min
+∑
+M
+i=1
+L CE
+(
+fθ
+(
+I(i)
+LR , y(i) ) )
++ λ‖θ −θHR‖2
+2
+where L CE is cross-entropy loss, θHR denotes HR-pretrained weights and
+λ controls the strength of the regularisation.
+2. Structured Numerical Stream
+Input:
+Handcrafted
+features
+Fhandcrafted = [Fcolour, Ftexture, xmeta]
+encode domain knowledge into the model by capturing measurable road
+characteristics. The metadata component xmeta could include structured
+attributes such as road width variation, traffic density, and other rele-
+vant contextual information.
+Regularisation: A linear projection is used to align learned image
+features with handcrafted features via a learnable weight matrix W,
+minimising the discrepancy between them:
+L total = L CE(y,̂ y) + λ⃦⃦Fhandcrafted −W • Flearned⃦⃦
+2
+2
+3. Multimodal Fusion
+As shown in Fig. 12, early fusion via feature-level concatenation was
+selected based on the nature of the data and computational requirements
+for LMIC deployment contexts. This approach proves particularly
+appropriate because: (a) statistical features (colour histograms, texture
+descriptors) and visual embeddings represent complementary de-
+scriptions of identical image content rather than independent informa-
+tion sources, creating natural semantic alignment that benefits from
+joint representation learning; (b) concatenation enables the classifier to
+discover non-linear interactions between modalities (e.g., correlations
+between colour variance and GLCM texture energy indicating surface
+degradation patterns), whereas alternative approaches like late fusion
+would treat modalities independently and discard these valuable cross-
+modal correlations; (c) the relatively modest dataset size suits early
+fusion's parameter efficiency, as more complex fusion mechanisms (e.g.,
+attention-based weighting) typically require substantially larger data-
+sets to properly learn modality relationships; (d) computational effi-
+ciency is critical for deployment in resource-constrained settings, where
+early fusion's simple concatenation operation offers substantial advan-
+tages over computationally intensive alternatives involving multiplica-
+tive interactions or learned gating mechanisms. Whilst attention-based
+fusion warrants future investigation as dataset sizes scale beyond 50,000
+Z. Wang et al.
+Journal of Transport Geography 131 (2026) 104525
+13
+Fig. 12. Multimodal ML model architecture for integrated image and numerical data processing.
+Z. Wang et al.
+Journal of Transport Geography 131 (2026) 104525
+14
+samples, early fusion provides an optimal balance between representa-
+tional power and practical deployment feasibility for current opera-
+tional requirements.
+Implementation: The early fusion architecture integrates image and
+structured
+data
+by
+concatenating
+embeddings
+from
+the
+CNN,
+ResNet50V2, and structured input streams:
+hfused = ψCNN(IHR)⨁ψResNet(IHR)⨁η(x)
+4. Transfer Learning Protocol
+• HR Pretraining: ResNet50V2 learns invariant road features on the
+high-resolution dataset D HR
+• LR Adaptation: The ResNet stream ψResNet is frozen, while the ψCNN
+and structured feature encoder η(x) are trained on the low-resolution
+dataset D LR
+• Fine-Tuning: All layers are unfrozen and jointly optimised with a
+learning rate lr = 10−5
+5. Extensibility & Compatibility
+The model supports integration of new modalities. Additional input
+xnew can be integrated via:
+h(t+1)
+fused = h(t)
+fused⨁ηnew(xnew)
+4.2.2. Performance evaluation
+As shown in Table 4, the multimodal model consistently outperforms
+traditional ML models across all resolutions. At high resolution, it ach-
+ieved an accuracy of 93.2 %, AUC of 93.8, and a notably low RMSE of
+0.278,
+surpassing
+the
+best-performing
+traditional
+model
+(Exten-
+ded_Model) by 5.2 percentage points in accuracy and 4.4 in AUC. In the
+mid-resolution setting, the multimodal model maintained strong per-
+formance (accuracy: 84.0 %, AUC: 85.0 %), outperforming both the
+Extended Model (78.3 %, 80.3) and the Base Model (78.3 %, 80.6). It
+also achieves higher Kappa (0.722) and MCC (0.724) scores than any
+traditional model (maximum Kappa and MCC: 0.629), indicating better
+predictive consistency under reduced resolution. At low-resolution
+setting, the multimodal ML model continued to show better perfor-
+mance, achieving an accuracy of 85.3 % and an AUC of 85.5 %. This
+represents an improvement of approximately 3.5 percentage points in
+accuracy compared to the traditional ML models (Base Model: 81.4 %,
+Extended Model: 81.8 %). Its F1 score (85.1 %), Kappa (0.732), and MCC
+(0.737) also exceed those of the traditional models (highest F1: 81.6 %,
+Kappa: 0.674, MCC: 0.668), demonstrating its superior reliability and
+confidence in predictions across a range of conditions. The multimodal
+model demonstrates minimal systematic bias (MBE: 0.003 to 0.056;
+PBIAS: 0.117 % to 2.213 %) with consistent slight overestimation ten-
+dency across all resolutions.
+Fig. 13 presents the confusion matrices for the multimodal ML model
+at three resolutions, further illustrating classification performance
+across the four condition categories. In high-resolution settings, the
+multimodal model performs exceptionally well across all categories,
+achieving true positive rates of 85 % for ‘Bad’ 92 % for ‘Poor’ 94 % for
+‘Fair’ and 98 % for ‘Good’. When the resolution is reduced to medium,
+there is a noticeable drop in accuracy, particularly in the ‘Poor’ cate-
+gory, where the true positive rate falls to 75 %. However, the model still
+maintains true positive rates of 88 % for ‘Bad’ 90 % for ‘Fair’ and 89 %
+for ‘Good’. These rates, while lower than those at high resolution, still
+reflect the considerable ability of model to categorise road surface
+quality even with reduced clarity. At low resolution, the model exhibits
+a performance similar to its performance in the medium resolution
+Table 4
+Performance comparison of multimodal ML models across varying resolutions.
+Resolution
+Model
+Accuracy
+AUC
+RMSE
+Recall
+Precision
+F1 Score
+Kappa
+MCC
+MBE
+PBIAS
+High_Res
+Multimodal_Model
+93.2
+93.8
+0.278
+93.2
+93.2
+93.2
+0.878
+0.878
+0.003
+0.117
+Mid_Res
+Multimodal_Model
+84.0
+85.0
+0.434
+84.0
+84.1
+83.9
+0.722
+0.724
+0.040
+1.59
+Low_Res
+Multimodal_Model
+85.3
+85.5
+0.423
+85.3
+85.5
+85.1
+0.732
+0.737
+0.056
+2.213
+Fig. 13. Confusion matrices collection of multimodal ML models across varying resolutions.
+Table 5
+Comparison of multimodal ML and traditional ML Models.
+Feature
+Multimodal ML Model
+Traditional ML Model
+Accuracy
+High accuracy across all
+resolutions, with slight
+decreases at lower
+resolutions.
+High accuracy in high-
+resolution, but drops at lower
+resolutions.
+Adaptability
+Highly adaptable across
+various resolutions without
+needing separate models.
+Less adaptable; often requires
+distinct models for each
+resolution.
+Scalability
+Easily scalable with a unified
+architecture for larger
+datasets and complex tasks.
+Faces scalability challenges;
+needs multiple models for
+different data types or
+resolutions.
+Data Integration
+Integrates diverse data types,
+enhancing predictive
+accuracy and context.
+Primarily relies on structured
+data, limiting analysis depth.
+Training
+Efficiency
+Longer training times, but
+benefits from transfer
+learning, optimising resource
+use over time.
+Quicker initial training, but
+requires full retraining for new
+datasets, reducing long-term
+efficiency.
+Model
+Complexity
+Higher complexity due to
+integrated data streams and
+advanced algorithms.
+Simpler models, easier to
+deploy but may miss complex
+patterns.
+Generalisability
+Better generalisability from
+diverse data types and robust
+feature extraction.
+Limited generalisability,
+relying heavily on high-
+quality, high-resolution data.
+Z. Wang et al.
+Journal of Transport Geography 131 (2026) 104525
+15
+setting, achieving 86 % accuracy for ‘Bad’ 75 % for ‘Poor’ 92 % for ‘Fair’
+and 91 % for ‘Good’.
+Table 5 presents a comparative summary of the multimodal and
+traditional ML models, highlighting key differences in performance,
+adaptability, and scalability. As image resolution decreases, perfor-
+mance generally declines, illustrating the inherent trade-off between
+predictive accuracy and the cost of high-resolution data acquisition.
+These findings underscore the importance of balancing model accuracy
+with economic and operational constraints to identify the most cost-
+effective and reliable modelling approach for diverse operational
+environments.
+4.2.3. Operational workflow for real-world deployment
+Practical implementation of the ML-based assessment framework
+comprises four primary phases:
+Phase 1: Planning and Data Acquisition (Weeks 1–2). Authorities
+identify target road networks and select appropriate satellite imagery
+resolution based on budget constraints and required assessment preci-
+sion (refer to Table 9 for cost-accuracy trade-offs). Imagery procurement
+through commercial providers (e.g., Pleiades Neo, Satellogic, Vision-1)
+typically requires 7–14 days for tasking and delivery depending on cli-
+matic conditions, weather etc., with bulk orders potentially securing
+30–50 % cost reductions.
+Phase 2: Ground Truth Collection (Weeks 2–4). Concurrent with
+imagery acquisition, field teams carry out validation surveys on repre-
+sentative road sections (typically 15–20 % of network length) using vi-
+sual inspections or measured assessments in accordance with the
+existing condition criteria and guidelines of the Roads Authority. In this
+study, road condition data were collected and measured using dashcam
+video, IRI measurements, and georeferencing equipment, as detailed in
+Section 2.2. This validation data serves dual purposes: calibrating model
+predictions to local road characteristics and providing quality assurance
+benchmarks.
+Phase 3: Model Application and Analysis (Week 5). Acquired
+imagery undergoes automated processing: tile extraction, feature
+computation, and classification using pre-trained models. The multi-
+modal ML framework requires minimal local computational resources
+(standard desktop with GPU), with processing rates of approximately
+500–800 km of road network per day, substantially faster than con-
+ventional survey rates (20–40 km per day).
+Phase 4: Reporting and Maintenance Planning (Week 6). Clas-
+sification results are integrated into geospatial platforms, generating
+condition maps, prioritisation matrices, and budget allocation recom-
+mendations. Outputs align with established road asset management
+systems, facilitating integration into existing institutional workflows.
+This six-week cycle contrasts favourably with conventional survey
+timelines
+(3–6
+months
+for
+equivalent
+network
+coverage)
+whilst
+providing higher spatial resolution (assessment every 6 m versus
+section-level ratings) and objective, reproducible condition metrics.
+4.3. Cost-effectiveness analysis
+4.3.1. Cost effectiveness methodology
+This section presents a preliminary cost-benefit analysis comparing
+ML-based and conventional survey methods for assessing unpaved road
+conditions in Madagascar. The justification for this analysis is supported
+by the demonstrated accuracy of the ML model, which achieved 93.2 %
+with high-resolution imagery and at least 84 % with lower-resolution
+imagery. These accuracy levels exceed or are comparable to those
+attained by trained local technical engineers (Workman et al., 2016).
+The primary objective is to offer an initial comparison of the financial
+and operational implications of both approaches, highlighting the po-
+tential cost savings and efficiency gains associated with adopting ML-
+based methods for large-scale road condition monitoring.
+The analysis draws on cost data collected during the implementation
+phase of this study in September 2023, providing a grounded compari-
+son based on real-world expenditures. While both methods offer distinct
+advantages, the ML approach, which leverages satellite-based assess-
+ments, allows for extensive geographic coverage and is less vulnerable to
+disruptions from conflicts or other logistical challenges. Moreover, it
+provides objective, consistent results without the need for continuous
+human intervention. On the other hand, conventional surveys can detect
+surface defects, record drainage status, and potentially measure gravel
+loss. However, conventional surveys face challenges like limited access
+to vehicles, logistical difficulties, and inconsistent training, which can
+lead to irregular and potentially unreliable data collection.
+It is important to note that this analysis is not intended to definitively
+determine the superiority of one method over the other. Instead, it
+serves as a starting point for understanding the potential economic im-
+plications of transitioning to an ML-based road condition assessment.
+While the ML approach shows promise in terms of cost-efficiency and
+scalability, more comprehensive studies, which account for a broader
+range of economic factors, such as long-term maintenance costs, data
+accuracy, and sustainability, are necessary to make a more conclusive
+comparison between the two methods.
+4.3.1.1. Conventional survey cost framework. Conventional surveys of
+unpaved road conditions typically involve in-person inspection, where
+field teams drive along selected routes to document road conditions.
+These efforts require a combination of labour for data collection and
+technical staff for data analysis. Associated costs can be categorised as
+follows:
+• Labour cost: Expenses for surveyors, data processors, and support
+staff.
+• Vehicle and Equipment Costs: Costs for vehicles and any speci-
+alised data collection tools.
+• Operational Costs: Fuel, maintenance, and logistical expenditures.
+• Data Analysis Costs: Expenses for processing and interpreting
+collected data, including software tools.
+• Time Costs: Extended project durations due to slow data acquisition
+can increase total costs.
+4.3.1.2. ML survey cost framework. ML-based surveys involve two pri-
+mary cost components: satellite imagery acquisition and model appli-
+cation. Among these, imagery acquisition represents the most significant
+expenditure. The total imagery cost is determined by the length and
+density of the surveyed road network. For this analysis, the required
+imagery area is calculated by multiplying the road network length by a
+standard swath of 5 km, which is the minimum purchasable width, and
+applying a 30 % reduction to account for overlapping areas at
+intersections.
+In addition to imagery acquisition, operational costs (including data
+processing, classification, visualization, and reporting) are estimated at
+20 % of capital costs based on research pilot implementations: (1) his-
+torical cost data from the Tanzania pilot project (Workman et al., 2023),
+where operational expenses (staff time, computing resources, software
+licenses) totalled 18–22 % of imagery procurement costs for research
+networks of 500–2000 km; and (2) internal time-tracking during the
+Madagascar implementation, where processing 86 km of roads required
+Z. Wang et al.
+Journal of Transport Geography 131 (2026) 104525
+16
+approximately 40 person-hours (data scientist and GIS analyst time) plus
+computing costs, totalling €7700 against €38,000 imagery expenditure
+(20.3 %). These research-phase estimates provide indicative costs for
+pilot-scale implementations. However, we explicitly acknowledge that
+operational costs for full-network deployment (e.g., complete provincial
+or national road networks) have not been empirically validated, as the
+framework has not yet been implemented at operational scale. Cost
+structures may differ substantially for large-scale deployment: fully
+automated operational workflows could potentially reduce processing
+costs through economies of scale and reduced manual intervention,
+whilst implementations requiring extensive local ground truth collec-
+tion or significant model customisation would likely incur higher rela-
+tive operational costs. The preliminary cost-effectiveness analysis
+provides research-phase cost comparisons rather than definitive opera-
+tional cost projections.
+4.3.2. Cost effectiveness results
+4.3.2.1. Conventional survey costs. Table 6 outlines the costs associated
+with conventional road surveys from 2023, as provided by the local
+partner in Madagascar. The total length of unpaved roads surveyed was
+42,081 km. To ensure the figures are relevant for 2024, the costs have
+been adjusted for inflation and other influencing factors, including ex-
+change rates and surface type variations. These adjustments offer a more
+accurate projection of the anticipated costs for future surveys under
+similar conditions.
+4.3.2.2. ML survey costs. Table 7 outlines the acquisition costs for a 118
+km2 survey area, based on standard procurement rates per square kilo-
+metre. These rates are assumed to apply to nationwide surveys, although
+bulk purchases may yield discounts. Furthermore, a scenario consid-
+ering up to 50 % discount on large orders is included to reflect the po-
+tential cost savings from bulk purchasing.
+Table 8 summarises total estimated costs (capital and operational)
+for each imagery provider.
+4.3.3. Comparative cost effectiveness analysis
+A comparative cost analysis is presented in Table 9, highlighting
+costs per kilometre and total costs for each survey method, both with
+and without imagery discounts. Accuracy levels are included to facilitate
+performance evaluation.
+Conventional surveys cost €60.10 per kilometre and assign a single
+condition rating to entire road sections. In contrast, ML-based methods
+assess road conditions at approximately 6-m intervals, offering signifi-
+cantly higher spatial resolution. Although ML surveys vary in cost, they
+deliver superior accuracy and can become more cost-effective with bulk
+imagery discounts.
+Among ML options, Pleiades Neo provides the highest accuracy
+(93.2 %) but also incurs the highest full cost (€100.10/km). With a 50 %
+imagery discount, its cost per kilometre falls to €54.60, making it
+comparable to conventional methods while offering much greater pre-
+cision. This option is especially advantageous for high-density networks
+or projects requiring rapid, detailed assessments with high precision.
+Satellogic and Vision2 provide more economical alternatives with
+lower-resolution imagery. Discounted rates reduce costs to €26.60/km
+and €22.23/km, respectively, with accuracies of 84 % and 85.3 %. These
+options are well-suited for budget-constrained or remote projects where
+logistical challenges make conventional methods less viable.
+4.4. Large language-and-vision assistant (LLaVA): Pilot study
+4.4.1. Model development
+The emergence of Vision-Language Models (VLMs) marks a signifi-
+cant advancement in Artificial intelligence (AI) technology. With the
+Table 6
+Conventional survey costs for Madagascar.
+Unpaved road
+length in km
+Base Cost per km
+(Local Currency 2023)
+Adjusted Cost for
+Devaluation
+Adjusted Cost for
+Surface Type
+Exchange Rate (29
+July 2024)
+Cost per
+km in €
+2024 Inflation
+Adjustment (7.8 %)
+Total Cost
+(€)
+42,081
+274,533
+274,533a
+274,533b
+4924c
+55.75d
+60.10e
+2,529,189
+a Adjusted Cost for Devaluation: A rate of 1 is applied, indicating no adjustment for devaluation.
+b Surface Type Adjustment: A rate of 1 is used, reflecting no additional cost adjustment for unpaved surface types.
+c Exchange Rate: This rate is used to convert the adjusted cost from local currency to euros.
+d Cost per km in €: Calculated by dividing the Adjusted Cost for Surface Type by the exchange rate.
+e The cost per km in € is adjusted for the year's inflation, calculated by multiplying the Cost per km in € by 7.8 %.
+Table 7
+Procurement costs for satellite imagery over 118 km2 in the Madagascar Pilot
+Survey.
+Imagery
+Resolution
+Area of
+imagery
+(km2)
+Rate
+per
+km2
+Total Cost
+€
+With 50 %
+discount €
+Pleaides
+neo
+0.3
+147,284
+26.0
+3,829,384
+1,914,692
+Satellogic
+0.7
+147,284
+10.0
+1,472,840
+736,420
+Vision1
+0.87
+147,284
+7.5
+1,104,630
+552,315
+Table 8
+Capital and operating costs for satellite imagery in the Madagascar Pilot Survey.
+Imagery
+Operating
+costs €
+Full cost
+Cost with 50 % discount
+Total
+capital
+cost €
+Total
+capital þ
+operating
+cost €
+Total
+capital
+cost €
+Total
+capital þ
+operating
+cost €
+Pleaides
+neo
+382,938
+3,829,384
+4,212,322
+1,914,692
+2,297,630
+Satellogic
+382,938
+1,472,840
+1,855,778
+736,420
+1,119,358
+Vision1
+382,938
+1,104,630
+1,487,568
+552,315
+935,253
+Table 9
+Cost comparison of conventional and ML surveys.
+Survey type
+Full cost
+Cost with 50 % imagery discount
+Accuracy
+Cost per km in €
+Total cost in €
+Cost per km in €
+Total cost in €
+%
+Conventional surveys
+60.10
+2,529,189
+60.10
+2,529,189
+–
+ML surveys
+Pleaides neo
+100.10
+4,212,322
+54.60
+2,297,630
+93.2
+Satellogic
+44.10
+1,855,778
+26.60
+1,119,358
+84.0
+Vision2
+35.35
+1,487,568
+22.23
+935,253
+85.3
+Z. Wang et al.
+Journal of Transport Geography 131 (2026) 104525
+17
+multimodal release of GPT-4 V, VLMs now possess the capability to
+understand complex contexts within imagery. Nonetheless, the pro-
+prietary nature of GPT-4 V and its substantial model size present
+considerable challenges in deployment and training within research
+settings. In contrast, the open-source Large Language-and-Vision Assis-
+tant (LLaVA) (H. Liu et al., 2024), based on a more manageable light-
+weight framework, demonstrates a strong ability to interpret and reason
+about visual information when combined with textual instructions.
+While LLaVA shows promise, it encounters specific challenges relevant
+to this study. The model is designed to process images at a resolution of
+224 × 224 pixels, whereas this study involves satellite imagery with a
+resolution of only 30 × 30 pixels, indicating a potential mismatch in
+input scale and detail. Additionally, LLaVA has been primarily trained
+on general-purpose visual datasets such as COCO, which focus on
+common everyday scenes. As a result, it lacks task-specific training and
+domain-relevant exposure required for unpaved road condition assess-
+ment, limiting its applicability without further fine-tuning. Recent
+research also reveals a critical weakness in VLMs, including LLaVA,
+specifically in image classification tasks (Y. Zhang et al., 2024). Despite
+incorporating CLIP as vision encoder, VLMs show significantly lower
+performance in image classification compared to CLIP alone when
+evaluated on benchmarks such as ImageNet. Detailed investigations into
+potential causes, such as prompt variations, label set size, and inference
+methodologies, reveal that these factors contribute minimally to
+improving classification accuracy, fine-tuning LLaVA using classifica-
+tion datasets in a text-generation format effectively closes the perfor-
+mance gap between VLMs and CLIP, suggesting that a text-generation
+training objective is an enhancement strategy. Notably, fine-tuning only
+the projector component has proven sufficient to improve the overall
+classification accuracy. This section evaluates the applicability and
+effectiveness of LLaVA in assessing unpaved road surface conditions.
+Specifically, it investigates performance in both four-category and
+binary-category classification tasks and examines the impact of
+conversational structures on model outcomes.
+4.4.1.1. Data preparation. The fine-tuning of the LLaVA-v1.5-7b model
+was conducted using high-resolution imagery data, following the official
+methodology outlined in the LLaVA repository (LLaVA, 2024). The
+dataset is structured in the OK-VQA JSON format, consisting of image-
+text pairs that simulate interactions between users and the LLaVA
+model, where users pose questions, and GPT provides answers. Each
+entry in the dataset includes metadata: a unique identifier (‘id’), the file
+path (‘image’) for the associated road surface image, and a structured
+dialogue (‘conversations’) representing user-model exchanges. These
+structured dialogues were developed to guide the model in accurately
+interpreting road surface conditions.
+Given the identified class imbalance, with the ‘Poor’ and ‘Fair’ cat-
+egories substantially outnumbering ‘Bad’ and ‘Good’, datasets were
+prepared for both four-category and binary-category classification tasks.
+In the binary classification scenario, ‘Bad’ and ‘Poor’ categories were
+combined, as were ‘Fair’ and ‘Good’. This approach enables investiga-
+tion into the influence of class frequency on model performance.
+To systematically evaluate how conversational structures influence
+fine-tuning outcomes, two distinct datasets were created for both clas-
+sification scenarios:
+• Single Conversation Dataset: This dataset involves a straightforward
+question-answer exchange aimed at classifying the road surface
+condition based on predefined categories.
+Example format:
+• Multi-turn Conversations Dataset: This dataset incorporates general
+descriptions of road surface conditions, generated through GPT-4
+collaboration with domain experts, focusing on key attributes such
+as surface condition, colour uniformity, and visible defects.
+Defined classifications included:
+o ‘Good’: “Surface Condition: Smooth, well-maintained, and defect-
+free. Color Uniformity: Highly uniform, even color with no visible
+discoloration. Defects: No visible cracks, dark patches, or texture
+irregularities.”,
+o ‘Fair’: “Surface Condition: Mostly intact with minor imperfections.
+Color Uniformity: Generally uniform color, though slight discolor-
+ation or minor texture differences may be present. Defects: Minor
+surface irregularities, but no significant dark patches or cracks.”,
+Z. Wang et al.
+Journal of Transport Geography 131 (2026) 104525
+18
+o ‘Poor’: “Surface Condition: Moderate wear, showing more pro-
+nounced surface texture issues. Color Uniformity: Some discoloration
+or darker areas, usually where wear or rutting has begun. Defects:
+Visible cracks, dark patches, or areas of uneven texture indicating
+early stages of surface degradation.”,
+o ‘Bad’: “Surface Condition: Bad condition with severe wear or erosion.
+Color Uniformity: Significant dark patches or discoloration indi-
+cating heavy wear. Defects: Large cracks, potholes, or erosion pat-
+terns, often with rutting or severe surface irregularities.”
+Example format:
+4.4.1.2. Fine-tuning methodology. Fine-tuning of the LLaVA-v1.5-7b
+model was conducted on an NVIDIA RTX 4090 GPU with 24 GB mem-
+ory. To enhance computational efficiency and reduce memory re-
+quirements, DeepSpeed and Q-LoRA optimisation techniques were
+employed. DeepSpeed facilitates distributed deep learning, enabling
+efficient handling of large models and reducing training time. Q-LoRA, a
+parameter-efficient fine-tuning method, further optimises the model
+adaptation process by significantly reducing memory consumption. The
+following script illustrates the fine-tuning parameters utilised:
+{!deepspeed./train_mem.py –lora_enable True –lora_r 128 –lora_alpha 256
+–mm_projector_lr
+2e-5
+–deepspeed
+{DEEPSPEED_JSON}
+–model_name_or_path
+{MODEL_NAME} –version v1 –data_path {DATA_PATH} –image_folder {IMAGE_-
+FOLDER}
+–vision_tower
+{VISION_TOWER}
+–tune_mm_mlp_adapter
+True
+–mm_projector_type mlp2x_gelu –mm_vision_select_layer −2 –mm_use_im_start_end
+False
+–mm_use_im_patch_token
+False
+–image_aspect_ratio
+pad
+–group_by_modality_length
+True
+–bf16
+True
+–output_dir
+{OUTPUT_DIR}
+–num_train_epochs 5 –per_device_train_batch_size 6 –per_device_eval_batch_size 4
+–gradient_accumulation_steps 1 –evaluation_strategy “no” –save_strategy “steps”
+–save_steps
+5000
+–save_total_limit
+1
+–learning_rate
+2e-4
+–weight_decay
+0.
+–warmup_ratio 0.03 –lr_scheduler_type “cosine” –logging_steps 1 –tf32 True
+–model_max_length 2048 –gradient_checkpointing True –dataloader_num_workers 4
+–lazy_preprocess True –report_to wandb}.
+Upon completion of fine-tuning, LoRA weights were merged into the
+base model using the script below, enabling the fine-tuned LLaVA model
+to effectively classify unpaved road surface conditions:
+{!python./scripts/merge_lora_weights.py
+model-path
+{MODEL_PATH}
+–model-base {MODEL_NAME} –save-model-path {OUTPUT_MODEL_PATH}}.
+4.4.2. Performance evaluation
+4.4.2.1. Evaluation methodology. The performance of the fine-tuned
+LLaVA model was evaluated using a standardised script that processes
+model
+responses
+to
+predefined
+queries
+related
+to
+road
+surface
+conditions:
+{!python
+llava/eval/model_vqa.py
+–model-path
+{OUT-
+PUT_MODEL_PATH} –image-folder {IMAGE_FOLDER} –question-file
+“question_{CONDITION}.jsonl” –answers-file “answers_{CONDITION}.
+json” –temperature 0}.
+The question_{CONDITION}.jsonl file contains queries specific to
+road surface conditions, exemplified as follows:
+{“question_id”:
+“43034d1a-bd32-411e-9871-24106228dd64”,
+“image”:
+“43034d1a-bd32-411e-9871-24106228dd64.tif”,
+“text”:
+“Based on this unpaved road surface image, please assess the surface
+condition and select one of the following options: Good, Fair, Poor, or
+Bad. Please format your response as: ‘The condition of this road tile is
+classified as ‘{condition}’.”}
+Responses from the model are stored in the answers_{CONDITION}.
+json file, structured like this:
+{“question_id”: “190”, “prompt”: “ Based on this unpaved road sur-
+face image, please assess the surface condition and select one of the
+Table 10
+Performance metrics of UnpaveAssess-LLaVA model across different data types.
+Data Type
+Accuracy
+ROC-AUC
+RMSE
+Recall
+Precision
+F1 Score
+Kappa
+MCC
+MBE
+PBIAS
+Four-category - Single Conversation
+38.7
+None
+0.881
+38.7
+15.9
+22.4
+3.1
+8.7
+−0.533
+−34.219
+Four-category - Multiple Conversation
+72.8
+None
+0.522
+72.8
+73.4
+72.6
+50.8
+51.0
+−0.010
+−0.647
+Binary-category - Single Conversation
+42.1
+48.4
+0.761
+42.1
+42.5
+29.2
+−2.80
+−7.0
+−0.515
+−90.233
+Binary-category - Multiple Conversation
+84.9
+85.4
+0.389
+84.9
+85.5
+85.0
+69.6
+70.1
+−0.054
+−9.481
+Z. Wang et al.
+Journal of Transport Geography 131 (2026) 104525
+19
+following options: Good, Fair, Poor, or Bad. Please format your response
+as: ‘The condition of this road tile is classified as ‘{condition}’.”, “text”:
+“‘The condition of this road tile is classified as ‘Good’. “, “answer_id”:
+“WbqzNHu8Dgcg7WjtpNdCQV”, “model_id”: “ UnpaveAssess-LLaVA “,
+“metadata”: {}}.
+4.4.2.2. Classification performance analysis. Table 10 summarises per-
+formance metrics across different data types and conversational settings,
+while Fig. 14 displays the confusion matrices derived from answers_
+{CONDITION}.json files. Notably, single-conversation models show a
+strong prediction bias. In the binary setting (Fig. 14 (a)), the model
+predicts the Bad/Poor class with a 93 % true positive rate but mis-
+classifies 96 % of Fair/Good samples. Similarly, in the four-category
+setting (Fig. 14 (c)), it overwhelmingly predicts the Poor class. This
+skewed behaviour is likely attributed to the limited resolution of the
+input images, which fails to capture subtle differences in surface con-
+ditions. Another consideration is the original LLaVA model may asso-
+ciate unpaved roads with rural or dirt roads (unpaved roads are typically
+categorised as gravel, or earth/dirt roads), which are typically classified
+as Poor or Bad compared to paved roads. This inherent bias in the pre-
+trained model could contribute to the observed preference for predict-
+ing Poor or Bad road conditions.
+In contrast, the multi-conversation setting demonstrates improved
+generalization. In 2-category multi-conversion (Fig. 14 (b)), the true
+positive rates for Bad/Poor and Fair/Good are 89 % and 82 %, respec-
+tively. This improved performance indicates that the multi-conversion
+approach allows the model to generalise better across categories by
+leveraging additional augmented feature representations. However, the
+misclassification rate for Bad/Poor increases from 7 % (in single con-
+version) to 11 %, suggesting that while the model better identifies Fair/
+Good, it struggles slightly more with differentiating ambiguous Bad/
+Poor cases. In 4-Category Multi-Conversion (Fig. 14 (d)), the model
+improves balance, achieving true positive rates of 78 % and 75 % for
+Poor and Fair, respectively. Despite this improvement, the Good and Bad
+classes continue to struggle with a low true positive rate of 12 % and 46
+%, respectively. These results indicate that using multi-conversion can
+mitigate issues caused by low images resolution. However, the dataset
+exhibits severe class imbalance, with the Poor and Fair categories being
+approximately 15 times larger than the Bad and Good categories. This
+imbalance skews the model's learning process, leading it to prioritise the
+larger classes to minimize overall prediction error.
+Bias analysis reveals striking differences between conversational
+formats in the LLaVA model. Single-turn conversations exhibit severe
+underestimation bias across both classification schemes (four-category:
+MBE = −0.533, PBIAS = −34.2 %; binary: MBE = −0.515, PBIAS =
+−90.2 %), indicating that direct classification prompts cause the model
+Fig. 14. Confusion matrix for the UnpaveAssess-LLaVA model across different data types.
+Table 11
+Example to demonstrate task-specific instruction-following data.
+Context Type 1: Segmentation Annotations
+Pixel-level identification of surface defects (e.g., potholes,
+rutting) using labelled colours to facilitate precise localisation.
+Context Type 2: Colour and Texture metrics
+Quantitative descriptors derived from RGB/HSV colour spaces
+and texture analysis methods.
+Example: “mean_R = 208.66, mean_G = 146.33, mean_B =
+91.57, mean_H = 0.077, mean_S = 0.565, mean_V = 0.818,
+contrast = 271.1, energy = 0.0778, dissimilarity = 10.770, … <
+omitted>“
+Context Type 3: Detailed Descriptions and Maintenance
+Suggestions
+Detailed Descriptions: Generate comprehensive and accurate
+descriptions of the road surface condition based on the
+information provided by segmentation annotations and colour
+and texture metrics.
+Maintenance Suggestions: Accompany each detailed
+description with specific, maintenance recommendations. These
+suggestions should be tailored to the type of defect identified.
+Z. Wang et al.
+Journal of Transport Geography 131 (2026) 104525
+20
+to systematically predict lower road conditions than observed. This
+substantial bias likely stems from the model's uncertainty when forced to
+provide
+immediate
+categorical
+judgements
+without
+descriptive
+reasoning steps. Multiple-turn conversations dramatically reduce bias
+(four-category: MBE = −0.010, PBIAS = −0.647 %; binary: MBE =
+−0.054, PBIAS = −9.481 %), with the four-category task achieving
+near-zero systematic error. The multi-turn format's requirement that the
+model first describe visual features before classification appears to an-
+chor predictions more accurately to observed characteristics. These
+findings demonstrate that prompt engineering substantially influences
+vision-language model calibration, with conversational formats that
+encourage intermediate reasoning steps producing markedly less biased
+predictions.
+4.4.3. Recommendations for future enhancement
+The preliminary result of LLaVA for assessing unpaved road condi-
+tions has shown substantial potential. Initial experiments conducted on
+a single GTX 4090 GPU demonstrated that fine-tuning the model on a
+multi-turn conversational dataset over 10 epochs requires approxi-
+mately 16 days, with an additional day needed for evaluation. This
+significant computational demand restricts conducting more advanced
+and complex processing. Despite these constraints, the results offer a
+clear pathway for further optimisation.
+Fine-tuning with multi-turn conversations led to substantial im-
+provements in model performance compared to single-turn approaches,
+which exhibit poor classification accuracy. Error analysis reveals that in
+multi-turn approaches, errors predominantly occur in the first conver-
+sation turn where LLaVA attempts to generate visual descriptions from
+raw satellite imagery. When accurate condition descriptions are pro-
+vided in the second conversation turn, the model achieves 99.9 % ac-
+curacy in subsequent classification. This demonstrates that LLaVA excels
+at reasoning and classification when given precise feature descriptions
+but struggles with direct visual interpretation of satellite imagery.
+Based on this finding, enhancement pathways are proposed through
+developing
+task-specific
+instruction-following datasets
+that
+target
+improving the first conversation turn.
+Table 11 illustrates the recommended dataset structure, encom-
+passing three context types: (1) segmentation annotations for pixel-level
+defect identification, (2) quantitative colour and texture metrics derived
+from RGB/HSV colour spaces and GLCM analysis, and (3) detailed
+condition descriptions with tailored maintenance recommendations.
+Training or fine-tuning LLaVA with such datasets could enable VLMs to
+achieve both high classification accuracy and interpretable natural
+language reporting capabilities, potentially replacing current ML
+frameworks whilst providing stakeholder-appropriate maintenance
+recommendations
+without
+requiring
+specialised
+training
+in
+ML
+interpretation.
+Beyond improving visual description generation, addressing the
+observed class imbalance represents a complementary enhancement
+priority. Systematic implementation of several strategies is recom-
+mended: (1) data augmentation techniques specifically targeting mi-
+nority
+classes
+(‘Good’
+and
+‘Bad’
+conditions)
+through
+geometric
+transformations and colour space perturbations, expanding minority
+class representation by 3–5 times; (2) weighted cross-entropy loss
+functions assigning higher penalty weights to minority class mis-
+classifications (e.g., weight ratios of 15:1 for ‘Good’/’Bad’ relative to
+‘Poor’/’Fair’); (3) synthetic data generation through diffusion models or
+generative adversarial networks creating realistic examples of under-
+represented conditions; and (4) focal loss mechanisms down-weighting
+easily classified examples (‘Poor’/’Fair’) whilst emphasising chal-
+lenging minority class instances. Combining these approaches could
+potentially improve minority class true positive rates from current levels
+(12–46 %) to target ranges of 65–75 %, substantially enhancing prac-
+tical utility for comprehensive condition assessment.
+Implementation of these combined enhancement strategies will
+necessitate substantial computational resources. The expanded dataset
+size resulting from data augmentation and synthetic data generation,
+combined with the complexity of multi-modal instruction-guided
+learning using rich contextual annotations, requires advanced hardware
+configurations (e.g., 8 × NVIDIA A100 GPUs) for efficient model
+training. Through comprehensive training addressing both visual
+description generation and class imbalance, VLM (i.e., LLaVA) could be
+substantially improved to generate actionable insights and support
+automated road condition reporting, contributing to more efficient
+maintenance prioritisation and data-driven asset management.
+5. Data, model release and software development
+Due to licensing restrictions, the original satellite imagery is un-
+available for release. However, a set of example images, the corre-
+sponding processed data, and the trained model will be made publicly
+available. The code developed in this study can be accessed from the
+GitHub repository: ESA_Unpaved_Roads_Surface_Condition_Assessment.
+To facilitate implementation, a Python package has been published on
+PyPI
+and
+can
+be
+installed
+using
+the
+command:
+`pip
+install
+unpaved_road_surface_conditon`.
+6. Conclusion
+This study presents innovative ML techniques for assessing unpaved
+road surface conditions satellite imagery at varying resolutions and
+pioneering the application of VLMs for this specific task. An open-source
+framework integrating Earth observation and machine learning has been
+developed to generate high-precision predictions of unpaved road con-
+dition, offering a cost-effective alternative to traditional field in-
+spections. The framework enables local authorities in LMICs to select
+imagery resolutions that balance predictive accuracy and cost across
+diverse geographic and economic contexts.
+Validation focused exclusively on Madagascar, characterised by
+humid tropical to subtropical climates with high rainfall (1000–3000
+mm annually), predominantly laterite and gravel road surfaces, and
+region-specific construction practices. This raises the question of gen-
+eralisability to other areas. Three factors affect transferability to
+climatically and geologically distinct African regions. First, arid and
+semi-arid contexts (Sahel, Horn of Africa) exhibit fundamentally
+different degradation mechanisms: wind-driven sand accumulation and
+aeolian erosion dominate rather than rainfall-induced rutting and
+washboard formation, potentially altering the visual signatures detected
+by classification models. Second, regions with different surfacing ma-
+terials (volcanic aggregates in East African highlands, clay-dominant
+soils
+in
+West
+African
+lowlands)
+require
+model
+recalibration
+or
+expanded training datasets to capture material-specific spectral and
+textural characteristics. Third, seasonal variations differ substantially:
+Madagascar's pronounced wet-dry cycles create temporal condition
+fluctuations exceeding those in consistently arid or humid regions,
+affecting optimal imagery acquisition timing. The methodological
+framework (multimodal architecture, transfer learning protocols, cost-
+benefit evaluation approach) transfers broadly across contexts. How-
+ever, operational deployment in new geographic regions requires initial
+pilot studies (100–200 km ground truth collection) to assess local model
+performance and identify necessary adaptations before full-scale
+implementation.
+Successful deployment across diverse African contexts necessitates
+strategic partnerships with local road authorities, research institutions,
+and regional development organisations. Collaborative frameworks
+should prioritise three key objectives: (1) establishing regional ground
+truth databases that capture local road construction practices, climate
+patterns, and degradation mechanisms, enabling transfer learning cali-
+bration for specific geographic contexts; (2) capacity building through
+training programmes that develop local expertise in satellite imagery
+interpretation, ML model application, and results integration into
+existing asset management systems; and (3) data sharing protocols that
+Z. Wang et al.
+Journal of Transport Geography 131 (2026) 104525
+21
+enable cross-jurisdictional learning, whereby model refinements in one
+region benefit neighbouring countries with similar road characteristics.
+Organisations such as the African Development Bank, Regional Eco-
+nomic Communities, and established research networks (e.g., Africa
+Transport Policy Program) represent promising partnership channels.
+Pilot implementations in multiple countries (e.g., extending from
+Madagascar to Mozambique, Malawi, and Zambia) would generate
+diverse validation datasets, strengthen model robustness, and demon-
+strate
+scalability
+across
+varied
+operational
+environments
+whilst
+fostering regional ownership of the technology.
+Future research should pursue several promising directions to
+enhance the framework's capabilities and applicability. Technical en-
+hancements include: (1) advancing VLM capabilities by developing task-
+specific instruction-following datasets that incorporate rich contextual
+annotations (segmentation, quantitative colour and texture metrics,
+maintenance recommendations) for training or fine-tuning; (2) incor-
+porating temporal dynamics through multi-date imagery analysis,
+enabling detection of degradation rates and prediction of future condi-
+tion trajectories to support proactive maintenance scheduling; (3)
+expanding input modalities by fusing satellite imagery with weather
+data (rainfall intensity, temperature cycles), traffic patterns, and soil
+moisture indices to explain condition variations and enhance prediction
+accuracy in heterogeneous environments; (4) developing domain
+adaptation techniques enabling models trained in one geographic region
+to transfer to others with minimal local ground truth, potentially
+through meta-learning or few-shot learning approaches; (5) systemati-
+cally evaluating accuracy-cost trade-offs for higher-resolution com-
+mercial imagery (0.15–0.25 m) and emerging satellite constellations,
+quantifying whether marginal classification accuracy improvements
+justify incremental acquisition costs and determining optimal resolution
+thresholds for different operational contexts and budget constraints; and
+(6) investigating resolution enhancement techniques using Generative
+Adversarial Networks (GANs) and Diffusion models to improve low-
+resolution imagery quality, potentially enabling super-resolution trans-
+formations that enhance spatial detail, texture clarity, and feature dis-
+criminability in cost-effective medium and low-resolution acquisitions
+(0.7–0.87 m), thereby bridging the performance gap between affordable
+imagery and high-resolution classification accuracy through post-
+acquisition computational enhancement rather than costlier sensor up-
+grades. Application-focused research should examine integration with
+broader infrastructure asset management systems, evaluate social equity
+implications (ensuring rural and marginalised communities receive
+equivalent monitoring attention), and assess framework applicability to
+related infrastructure types (footpaths, drainage systems, bridges).
+The key conclusions are as follows:
+(1) Effectiveness of Traditional ML Models: Traditional ML models
+achieved satisfactory performance with high-resolution satellite
+imagery, particularly when extended feature sets were employed.
+However, the effectiveness of the model declines when applied to
+lower-resolution images. The similarity in performance between
+the base and extended models suggests that complex feature
+extraction offers limited benefit at lower resolutions and may
+unnecessarily increase computational complexity.
+(2) Superiority of Multimodal ML Models: Multimodal ML model,
+enhanced by transfer learning, demonstrated up to 7.7 %
+improvement in accuracy over traditional models. By integrating
+structured feature data (e.g., colour and texture metrics and road
+width) with imagery, this approach offers better assessments.
+Furthermore, its flexible architecture enables the incorporation of
+additional data sources, such as traffic density, weather patterns,
+and
+historical
+maintenance
+records,
+potentially
+further
+enhancing accuracy and providing deeper insights.
+(3) Robustness Across Resolutions: Traditional ML models showed
+high sensitivity to image resolution, with performance losses up
+to 77.3 % when applied to data of differing quality. In contrast,
+the multimodal ML model maintained greater consistency across
+resolutions, making it more suitable for deployment in real-
+world, variable-data environments.
+(4) Cost-Efficiency and Practicality: The adoption of ML tech-
+niques for road assessment presents a potential cost advantages
+over conventional survey methods. High-resolution imagery
+analysis is estimated at €54.60 per kilometre, providing a
+competitive alternative to traditional surveys while delivering
+higher accuracy. Utilising lower-resolution imagery still yields
+acceptable accuracy and is even more cost-effective, with rates as
+low as €22.23 per kilometre. However, this cost-benefit analysis
+is preliminary and based on specific data from the 2023
+Madagascar study. A more comprehensive analysis that accounts
+for long-term maintenance costs, variations in data accuracy, and
+sustainability aspects is necessary for a conclusive comparison.
+(5) Potential of Vision-Language Models (LLaVA): The fine-tuned
+LLaVA-v1.5-7b model demonstrated promising capabilities in
+interpreting
+unpaved
+road
+surface
+conditions
+from
+high-
+resolution imagery. While its classification accuracy was lower
+than the best-performing ML models, this was largely due to
+limited training scope. LLaVA exhibited strong potential for
+generating detailed and context-rich assessments when provided
+with structured prompts. With further fine-tuning using task-
+specific, instruction-following datasets, LLaVA could become a
+valuable
+tool
+for
+automated
+reporting
+and
+infrastructure
+evaluation.
+Funding
+This research was supported by the European Space Agency (ESA
+Contract No. 400014180/23/I-DT-bgh).
+CRediT authorship contribution statement
+Zhao Wang: Writing – original draft, Methodology, Funding acqui-
+sition, Conceptualization, Writing – review & editing. Chunlei Xin:
+Conceptualization, Resources, Writing – original draft, Writing – review
+& editing. Robin Workman: Funding acquisition, Data curation,
+Conceptualization. Hang Hu: Software, Resources, Conceptualization.
+Xinyuan Yu: Supervision, Resources, Methodology. Yuxin Tian:
+Methodology, Investigation, Data curation. Robin Lovelace: Software,
+Methodology. Jiupeng Zhang: Investigation, Validation. Haibo Chen:
+Methodology, Formal analysis, Writing – review & editing.
+Declaration of competing interest
+The author(s) declared no potential conflicts of interest with respect
+to the research, authorship, and/or publication of this article.
+Acknowledgments
+The author(s) would like to acknowledge the ESA project team and
+the invaluable ground truthing inputs from the partners in Madagascar,
+ONG Lalana and L'Autorit´e Routi`ere de Madagascar. Thanks also go to
+TRL for their continuous support.
+Data availability
+The data that has been used is confidential.
+References
+African Development Bank Group, 2014. Tracking Africa’s Progress in Figures. African
+Development Bank Tunis.
+Ali, Moez, 2020. PyCaret: an Open Source, Low-Code Machine Learning Library in Python
+(PyCaret Version 3.0.0).
+Z. Wang et al.
+Journal of Transport Geography 131 (2026) 104525
+22
+ASTM International, 2023. Standard test Method for Measuring Road Roughness by
+Static Level Method. E1364-95. https://doi.org/10.1520/E1364-95R23.
+Bazi, Y., Bashmal, L., Al Rahhal, M.M., Ricci, R., Melgani, F., 2024. Rs-llava: a large
+vision-language model for joint captioning and question answering in remote sensing
+imagery. Remote Sens. 16 (9), 1477.
+Brewer, E., Lin, J., Kemper, P., Hennin, J., Runfola, D., 2021. Predicting road quality
+using high resolution satellite imagery: a transfer learning approach. PLoS One 16
+(7), e0253370.
+Burke, M., Driscoll, A., Lobell, D.B., Ermon, S., 2021. Using satellite imagery to
+understand and promote sustainable development. Science 371 (6535), eabe8628.
+Cadamuro, G., Muhebwa, A., Taneja, J., 2018. Assigning a grade: accurate measurement
+of road quality using satellite imagery. ArXiv Preprint (ArXiv:1812.01699) [cs.CV]
+(6 December 2018).
+Cantrell, S.J., Sampath, A., Vrabel, J.C., Bresnahan, P., Anderson, C., Kim, M., Park, S.,
+2023. System Characterization Report on the Pl´eiades Neo Imager. US Geological
+Survey.
+Cardenal, J., Fern´andez, T., P´erez-García, J.L., G´omez-L´opez, J.M., 2019. Measurement
+of road surface deformation using images captured from UAVs. Remote Sens. 11
+(12), 1507.
+Dobson, R.J., Brooks, C., Roussi, C., Colling, T., 2013. Developing an unpaved road
+assessment system for practical deployment with high-resolution optical data
+collection using a helicopter UAV. In: 2013 International Conference on Unmanned
+Aircraft Systems (ICUAS), pp. 235–243.
+Ekpenyong, E.E., Abu, A.S.P., Cinfwat, K.Z., 2021. Comparative study of the road
+roughness measurement of roadlab pro and roadroid applicatons for IRI data
+collection in Nigeria. Int. J. Eng. Sci. 10 (5), 14–19.
+Feng, W., Yundong, W., Qiang, Z., 2009. UAV borne real-time road mapping system.
+Joint Urban Remote Sens. Event 2009, 1–7.
+Hall-Beyer, M., 2017. Practical guidelines for choosing GLCM textures to use in
+landscape classification tasks over a range of moderate spatial scales. Int. J. Remote
+Sens. 38 (5), 1312–1338.
+Harral, C.G., Faiz, A., 1988. Road Deterioration in Developing Countries: Causes and
+Remedies.
+Jiang, Y., Han, S., Bai, Y., 2021. Development of a pavement evaluation tool using aerial
+imagery and deep learning. J. Transport. Engineer. Part B 147 (3), 04021027.
+Kapp, A., Hoffmann, E., Weigmann, E., Mihaljevi´c, H., 2025. StreetSurfaceVis: a dataset
+of crowdsourced street-level imagery annotated by road surface type and quality.
+Sci. Data 12 (1), 92.
+Kotian, L., Chheda, A., Narwane, V., Raut, R., 2019. Unmanned aerial vehicle for road
+monitoring: fully convolutional networks approach. Ind. Eng. J. 12 (6), 1–8.
+Leys, C., Delacre, M., Mora, Y.L., Lakens, D., Ley, C., 2019. How to classify, detect, and
+manage univariate and multivariate outliers, with emphasis on pre-registration. Int.
+Rev. Soc. Psychol. 32 (1).
+Liu, J., Yang, X., Lau, S., Wang, X., Luo, S., Lee, V.C., Ding, L., 2020. Automated
+pavement crack detection and segmentation based on two-step convolutional neural
+network. Comput. Aided Civ. Inf. Eng. 35 (11), 1291–1305.
+Liu, H., Li, C., Wu, Q., Lee, Y.J., 2024. Visual instruction tuning. Adv. Neural Inf. Proces.
+Syst. 36.
+LLaVA, 2024. October 6. Https://Github.Com/Haotian-Liu/LLaVA.
+Lopes Amaral Loures, L., 2021. Unpaved Roads’ Surface Evaluation Using Unmanned
+Aerial Vehicle and Deep Learning Segmentation.
+Lopes Amaral Loures, L., Rezazadeh Azar, E., 2023. Condition assessment of unpaved
+roads using low-cost computer vision–based solutions. J. Transport. Engineer. Part B
+149 (1), 04022066.
+Mikou, M., Rozenberg, J., Koks, E.E., Fox, C.J.E., Peralta Quiros, T., 2019. Assessing rural
+accessibility and rural roads investment needs using open source data. In: World
+Bank Policy Research Working Paper, 8746.
+Mnih, V., Hinton, G.E., 2010. Learning to detect roads in high-resolution aerial images.
+In: Computer Vision–ECCV 2010: 11th European Conference on Computer Vision,
+Heraklion, Crete, Greece, September 5-11, 2010, Proceedings, Part VI, 11,
+pp. 210–223.
+Nachmany, Y., Alemohammad, H., 2019. Detecting roads from satellite imagery in the
+developing world. In: Proceedings of the IEEE/CVF Conference on Computer Vision
+and Pattern Recognition Workshops, pp. 83–89.
+Oppong Adu, W., Dumedah, G., Adams, A.C., 2023. Surface condition assessment of
+unpaved roads through the use of unmanned aerial vehicle. Int. J. Pavement Res.
+Technol. 1–9.
+PADECO Co. Ltd, N. K. Co. Ltd, I. D. C. of J. I, 2012. Comprehensive Transport and Trade
+System Development Master Plan in the United Republic of Tanzania: Building an
+Integrated Freight Transport System (Volume 2: Present Issues).
+Pan, Y., Zhang, X., Cervone, G., Yang, L., 2018. Detection of asphalt pavement potholes
+and cracks based on the unmanned aerial vehicle multispectral imagery. IEEE J.
+Select. Top. Appl. Earth Observ. Remote Sens. 11 (10), 3701–3712.
+Randhawa, S., Aygün, E., Randhawa, G., Herfort, B., Lautenbach, S., Zipf, A., 2025.
+Paved or unpaved? A deep learning derived road surface global dataset from
+mapillary street-view imagery. ISPRS J. Photogramm. Remote Sens. 223, 362–374.
+Saeed, N., Alam, M., Nyberg, R.G., 2024. A multimodal deep learning approach for
+gravel road condition evaluation through image and audio integration. Transp. Eng.
+Aust. 16, 100228.
+Saxena, N., Mishra, A., Mishra, U., Pandey, A., 2025. Automated road surface
+classification in OpenStreetMap using MaskCNN and aerial imagery. Front. Big Data
+8, 1657320.
+Sayers, M.W., Gillespie, T.D., Queiroz, C.A.V., 1986. The International Road Roughness
+Experiment: Establishing Correlation and a Calibration Standard for Measurements.
+University of Michigan, Ann Arbor, Transportation Research Institute.
+United Nations Economic Commission for Africa (UNECA), 2020. Country Profile,
+Madagascar.
+Ur Rehman, A., Belhaouari, S.B., 2021. Unsupervised outlier detection in
+multidimensional data. J. Big Data 8 (1), 80.
+Van der Walt, S., Sch¨onberger, J.L., Nunez-Iglesias, J., Boulogne, F., Warner, J.D.,
+Yager, N., Gouillart, E., Yu, T., 2014. Scikit-image: image processing in Python.
+PeerJ 2, e453.
+Vandycke, N.L., Care Baptista Viegas, J.M., Morales Sarriera, J., 2019. Global Roadmap
+of Action toward Sustainable Mobility. The World Bank.
+Vrabel, J.C., Bresnahan, P.C., Stensaas, G.L., Anderson, C., Christopherson, J., Kim, M.,
+Park, S., 2022. System Characterization Report on the Satellogic NewSat
+Multispectral Sensor. US Geological Survey.
+Vrabel, J.C., Bresnahan, P., Sampath, A., Kim, M., Park, S., Clauson, J., 2024. System
+Characterization Report on Vision-1 (US Geological Survey).
+Wang, W., Yang, N., Zhang, Y., Wang, F., Cao, T., Eklund, P., 2016. A review of road
+extraction from remote sensing images. J. Traffic Transport. Engineer. (Engl. Ed.) 3
+(3), 271–282.
+Workman, R., McPherson, K., 2019. Consolidation, Revision and Pilot Application of the
+Rural Access Index (RAI). Workshop Report.
+Workman, R., Otto, A., Irving, A., 2016. The use of appropriate high-tech solutions for
+road network and condition analysis, with a focus on satellite imagery. In: The Use of
+Appropriate High-Tech Solutions for Road Network and Condition Analysis, with a
+Focus on Satellite Imagery.
+Workman, R., Otto, A., Irving, A., 2018. The Use of Appropriate High-Tech Solutions for
+Road Network and Condition Analysis, with a Focus on Satellite Imagery (In ReCAP).
+Workman, R., Wang, Z., Nesnas, K., 2022. A New Approach to Asset Management of
+Unpaved Roads. October 18.
+Workman, R., Wong, P., Wright, A., Wang, Z., 2023. Prediction of unpaved road
+conditions using high-resolution optical satellite imagery and machine learning.
+Remote Sens. 15 (16), 3985.
+World Bank, 2016. World Bank Annual Report 2016. https://thedocs.worldbank.org/en/
+doc/596391540568499043-0340022018/original/worldbankannualreport2016.
+pdf.
+Zhang, C., 2009. Monitoring the Condition of Unpaved Roads with Remote Sensing and
+Other Technology.
+Zhang, T., Wang, D., Mullins, A., Lu, Y., 2023. Integrated APC-GAN and AttuNet
+framework for automated pavement crack pixel-level segmentation: a new solution
+to small training datasets. IEEE Trans. Intell. Transp. Syst. 24 (4), 4474–4481.
+Zhang, Y., Unell, A., Wang, X., Ghosh, D., Su, Y., Schmidt, L., Yeung-Levy, S., 2024. Why
+are visually-grounded language models bad at image classification? Adv. Neural. Inf.
+Process Syst. 37, 51727–51753.
+Zhao, J., Wu, H., Chen, L., 2017. Road surface state recognition based on SVM
+optimization and image segmentation processing. J. Adv. Transp. 2017 (1),
+6458495.
+Zhao, X., Zhang, M., Tao, R., Li, W., Liao, W., Tian, L., Philips, W., 2022. Fractional
+Fourier image transformer for multimodal remote sensing data classification. IEEE
+Trans. Neural Netw. Learn. Syst. 35 (2), 2314–2326.
+Zhou, Q., Liu, Z., Huang, Z., 2024. Mapping road surface type of Kenya using
+OpenStreetMap and high-resolution google satellite imagery. Sci. Data 11 (1), 331.
+Zhou, Q., Duan, J., Qiao, J., Liu, Z., Yang, H., 2025. A large crowdsourced street view
+dataset for mapping road surface types in Africa. Sci. Data 12 (1), 1003.
+Z. Wang et al.
