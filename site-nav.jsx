@@ -22,6 +22,7 @@ function Nav() {
   const sections = [
     [S.ui.nav.about, "about"],
     [S.ui.nav.work, "work"],
+    [S.ui.nav.kmap, "knowledge-map"],
     [S.ui.nav.publications, "publications"],
   ];
 

@@ -74,6 +74,7 @@ function App() {
         <Hero />
         <About />
         <Career />
+        <window.KnowledgeMapSection />
         <Publications />
         <Education />
         <Contact />
