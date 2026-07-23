@@ -1,6 +1,8 @@
 # Source paper PDFs + marker extractions (~255 MB). Not needed by the deployed
 # site — curated figures are copied into assets/papers/. Delete this line to track.
 0_paper/
+0_paper_output/
+ResearchStudio/
 
 # Stray scratch images
 pics/
