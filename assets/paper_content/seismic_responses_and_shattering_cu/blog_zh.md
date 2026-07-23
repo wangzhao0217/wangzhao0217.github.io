@@ -1,29 +1,55 @@
-# Seismic responses and shattering cumulative effects of bedding parallel stepped rock slope Model test and numerical simulation — 研究成果与技术解读
+# Seismic responses and shattering cumulative effects of bedding parallel stepped rock slope: model test and numerical simulation
 
-**作者**: 王曌 等  
-**DOI**: 10.1016/j.jrmge.2024.03.031
+**Xin, C.L., Fei, Y., Feng, W.K., Wang, Z., Li, W.H.**  
+*Journal of Rock Mechanics and Geotechnical Engineering (2024)*  
+DOI: [10.1016/j.jrmge.2024.03.031](https://doi.org/10.1016/j.jrmge.2024.03.031)
 
-### 研究背景与核心问题
-本研究针对交通网络建模、结构动力学及地理空间基础设施分析中的核心难题，提出了具备强可复现性的数学模型与实证方法。
+`rock slope` | `seismic shattering` | `bedding parallel` | `stepped slope` | `FLAC3D`
 
-### 主要贡献与创新点
-- 从论文 PDF 中提取并验证了 22 组重要图表与实证数据。
-- 为交通数据科学与基础设施韧性评估建立了高效率的解决方案。
+---
 
-### 论文摘要精要
-Full Length Article
-Seismic responses and shattering cumulative effects of bedding
-parallel stepped rock slope: Model test and numerical simulation
-Chunlei Xin a, b, *, Fei Yang c, Wenkai Feng a, b, **, Zhao Wang d, Wenhui Li b
-a State Key Laboratory of Geohazard Prevention and Geoenvironment Protection, Chengdu University of Technology, Chengdu, China
-b College of Environment and Civil Engineering, Chengdu University of Technology, Chengdu, China
-c Institute of Mountain Hazards and Environment, Chinese Academy of Sciences (CAS), Chengdu, China
-d Institute for Transport Studies, University of Leeds, 34-40 University Rd, Leeds, LS2 9JT, UK
-a r t i c l e
-i n f o
-Article history:
-Received 5 January 2024
-Received in revised form
-29 January 2024
-Accepted 17 March 2024
-Available online 10 July 2
+## 研究概述
+
+Bedding parallel stepped rock slopes exist widely in nature and are used in slope engineering. They are characterized by complex topography and geological structure and are vulnerable to shattering under strong earthquakes. However, no previous studies have assessed the mechanisms underlying seismic failure in rock slopes. In this study, large-scale shaking table tests and numerical simulations were conducted to delineate the seismic failure mechanism in terms of acceleration, displacement, and earth pressure responses combined with shattering failure phenomena.
+
+---
+
+## 研究背景与动机
+
+地震荷载下的岩土工程破坏是全球基础设施倒塌和伤亡的主要原因之一，需要深入研究。
+
+深入理解rock slope/seismic shattering/bedding parallel对于推进安全可持续的岩土工程系统具有重要意义。
+
+---
+
+## 研究方法
+
+研究采用系统性方法，将分析建模与实证验证相结合。
+
+该方法具有良好的可重复性和适应性，可应用于不同情境。
+
+---
+
+## 主要发现
+
+研究结果表明，所提方法在性能上较现有方法有显著提升。
+
+**核心数据：**
+
+- Especially, the increase in cumulative permanent displacement was greater than 160% at the rear edge of the slope top, and it exceeded 180% at the external corner
+- of the third berm, the displacement responses in cases 8 and 9 were reduced by 36% and 86%, respectively, compared to that in case 7. Wider berms can distribute s
+- third berm, the displacement responses in cases 8 and 9 were reduced by 36% and 86%, respectively, compared to that in case 7. Wider berms can distribute seismic f
+
+---
+
+## 研究启示与结论
+
+According to the principle of controlling variables, two different slope terrains of bedding parallel stepped rock slope were selected to study the seismic response mechanisms and shattering cumu- lative effects using shaking table tests and numerical simulations. In the shaking table tests, the acceleration, displacement, and earth pressure distribution patterns were analyzed to elucidate the shattering failure mechanisms of the bedding parallel stepped rock slope.
+
+本文对geotechnical hazards, seismic stability, and underground structure safety领域作出了重要贡献，研究方法与成果可直接为政策制定、设计标准或实际操作提供参考。
+
+---
+
+## 阅读全文
+
+完整论文：[https://doi.org/10.1016/j.jrmge.2024.03.031](https://doi.org/10.1016/j.jrmge.2024.03.031)

@@ -1,0 +1,2138 @@
+Vol.:(0123456789)
+Rock Mechanics and Rock Engineering (2025) 58:5329–5361 
+https://doi.org/10.1007/s00603-024-04346-y
+ORIGINAL PAPER
+Investigating Deformation and Failure Mechanisms of Discontinuous 
+Anti‑dip Bench Rock Slopes Through Shaking Table Tests 
+and Numerical Simulations
+Fei Yang1 · Chunlei Xin1,2 · Zhao Wang3   · Xinyuan Yu4 · Wenkai Feng1 · Yunpeng Hu1
+Received: 25 May 2024 / Accepted: 9 December 2024 / Published online: 29 January 2025 
+© The Author(s) 2025
+Abstract
+Large-scale shaking table tests and numerical simulations were conducted to investigate the deformation and failure mecha-
+nisms of an anti-dip bench rock slope with discontinuities. The study introduces the Displacement Baseline Offset Ratio 
+(DBOR) to characterize the instability and failure processes of slopes when they reach a plastic state under seismic excita-
+tions. It examines the peak ground displacement and earth pressure responses, as well as the cumulative damage processes of 
+the slope model to provide insight into the deformation and failure mechanisms. The results show a significant displacement 
+amplification effect at elevated points of the slope when subjected to seismic excitations. Furthermore, as the input frequency 
+of the sine wave increases, the amplitude of the displacement response at the upper part of the slope accelerates. The widest 
+bench divides the entire slope into smaller segments, hindering the deformation and failure across the benches and reduc-
+ing stress transfer from the upper slope, thereby preventing stress concentration at the toe of the slope. The distribution of 
+DBOR suggests that plastic deformation is more pronounced on the inner side of the bench than on the outer side, leading to 
+earlier cracking on the inner side. A critical displacement threshold for seismic damage of each bench is established based 
+on residual displacement responses and critical peak acceleration. These findings provide theoretical references for the risk 
+assessment and seismic design of bench rock slopes.
+Highlights
+•	 Developed the Displacement Baseline Offset Ratio to measure slope instability under seismic forces.
+•	 Significant displacement increases were found at higher slope points, intensified by higher seismic frequencies.
+•	 Wide benches segment the slope, limiting deformation spread and reducing toe stress concentration.
+•	 Established displacement limits for seismic damage, aiding slope risk assessment.
+•	 Low frequencies cause overall deformation, while high frequencies lead to localized sliding failures.
+Keywords  Anti-dip bench rock slope · Baseline offset ratio offset · Shaking table test · Numerical simulation · Shattering 
+failure mechanism
+ *	 Chunlei Xin 
+	
+xinchunlei@cdut.edu.cn
+ *	 Zhao Wang 
+	
+z.wang13@leeds.ac.uk
+1	
+State Key Laboratory of Geohazard Prevention 
+and Geoenvironment Protection, Chengdu University 
+of Technology, Chengdu, China
+2	
+College of Environment and Civil Engineering, Chengdu 
+University of Technology, Chengdu, China
+3	
+Institute for Transport Studies, University of Leeds, 34‑40 
+University Rd, Leeds LS2 9JT, UK
+4	
+School of Mechanical, Aerospace and Civil Engineering, The 
+University of Sheffield, Sheffield, UK
+
+5330
+	
+F. Yang et al.
+1  Introduction
+Western China, situated on the eastern edge of the Qinghai-
+Tibet Plateau, is riddled with extensive active faults. These 
+faults contribute to numerous seismic zones across South-
+west China, which have seen an increase in earthquake activ-
+ity in recent years. Such earthquakes often trigger devastat-
+ing geological disasters, such as landslides, collapses, and 
+debris flows, resulting in significant loss of life and property 
+damage (Che et al. 2016; He et al. 2021; Li et al. 2019). 
+Among these, earthquake-induced landslides are the most 
+destructive. Earthquakes also induce a type of secondary 
+geological disaster, known as the “shattering slope”, which 
+is characterized by its widespread distribution, latent threat, 
+and large scale (He et al. 2020). This type of slope is prone 
+to developing numerous seismic cracks that undermine the 
+integrity of the rock mass, consequently reducing the slope's 
+stability aftershocks and elevating the risk in regions suscep-
+tible to earthquakes. Existing fissures may widen, leading to 
+the fragmentation of the slope into smaller blocks (Fan et al. 
+2017; Dong et al. 2021), which are destabilized by persis-
+tent gravitational forces, heightening the risk of collapse. 
+Moreover, these cracks often act as channels for rainwater, 
+which, when combined with aftershocks, can further erode 
+the structural strength of the slope, leading to significant 
+geological upheavals. (Cao et al. 2019). The magnitude of 
+these disasters is underscored by events such as the 2008 
+Wenchuan earthquake. Within minutes of the main shock, 
+the Wangjiayan landslide unleashed 1.4 million ­m3 of rock, 
+devastating half a county and resulting in over 1700 fatali-
+ties. This event stands as one of the deadliest landslides 
+triggered by the Wenchuan earthquake. Another significant 
+event was the Guantan landslide, which occurred eight hours 
+post-earthquake. This landslide moved 4.86 million ­m3 of 
+material, creating a barrier lake that significantly threatened 
+the safety of downstream residents. In 2010, heavy rainfall 
+triggered a landslide in Suoqiao Village, Yanmen Township, 
+known as the “shattering slope”. This landslide produced 
+17,000 ­m3 of debris and fully obstructed the G213 National 
+Highway. Another major incident occurred in 2009 near the 
+Chediguan Bridge, where a landslide dislodged over 10,000 
+­m3 of rock and soil mass, demolishing the bridge piers and 
+causing the entire 60-m-long bridge deck to collapse. This 
+event resulted in six deaths and twelve injuries. These inci-
+dents underscore the importance of studying the seismic sta-
+bility of complex rock slopes in geotechnical and seismic 
+engineering.
+Western China is experiencing significant infrastruc-
+ture growth, including major highway and railway pro-
+jects. Given the extremely complex geological conditions, 
+characterized by high mountains, deep gorges, and frequent 
+seismic activity, bench slopes are often formed during road 
+construction. Cutting these slopes into stepped shapes 
+enhances their stability, reduces the overall slope angle, 
+and guarantees road safety operation. Historically, anti-dip 
+rock slopes are considered more stable than bedding rock 
+slopes, with less likelihood of catastrophic failure during 
+earthquakes (Chen et al. 2020a; Chen et al. 2020b; Dang 
+et al. 2022; Fan et al. 2019). However, research on anti-
+dip rock slopes, particularly those formed as bench slopes 
+during earthquakes, is still relatively limited. Addressing 
+this research gap is crucial for understanding the shattering 
+damage mechanism and instability characteristics of anti-dip 
+bench rock slopes under earthquake excitations. At present, 
+field investigations, shaking table tests, and numerical simu-
+lations are often used to study the dynamic response law and 
+instability failure process of slopes under earthquake excita-
+tions (Peng et al. 2019; Song et al. 2020; Song et al. 2021a, 
+b; Xu et al. 2018; Yin et al. 2010). Numerical simulation 
+methods, such as the finite element method (FEM), discrete 
+element method (DEM), finite difference method (FDM), 
+and discontinuous deformation method (DDA), are widely 
+utilized to study the dynamic response of various geological 
+structures, including bedding slopes, anti-dip slopes, and 
+block slopes in rock slopes (Song et al. 2019). However, 
+limitations in the numerical model, including mesh size, 
+boundary conditions, initial conditions, and parameter selec-
+tion, can significantly affect the simulated results of slope 
+dynamic response. In contrast, shaking table tests offer more 
+precise control over parameters that mirror actual situations, 
+including model size, ground motion input parameters, and 
+boundary conditions, making them a preferred method for 
+investigating the dynamic response and instability failure 
+processes of slopes (Chen et al. 2020b; Dong, et al. 2022; 
+Wu et al. 2020a, b). Researchers have distinguished the 
+dynamic responses between bedding and anti-dip slopes by 
+examining acceleration amplification effects, slope surface 
+displacement, and marginal spectrum (Fan et al. 2016; Song 
+et al. 2021a, b). The seismic cumulative failure effect on the 
+slope with complex geological structure has been studied by 
+considering plastic deformation characteristics, where low-
+frequency components have a controlling effect on overall 
+stability, and high-frequency components have a significant 
+impact on the accumulation process of local slope deforma-
+tion (Song et al. 2021a, b). Additionally, the seismic behav-
+ior of slopes has been assessed through field investigations 
+and large-scale shaking table tests by analyzing the evolution 
+relationship between dynamic stress and strain, defining the 
+critical state of slope instability (Tao et al. 2023a; Zhang 
+et al. 2022). Notably, the acceleration amplification factor 
+
+5331
+Investigating Deformation and Failure Mechanisms of Discontinuous Anti‑dip Bench Rock Slopes…
+near fissures during peak ground acceleration significantly 
+exceeds that in non-fissured slopes. This discrepancy results 
+in stress concentrations in the middle and upper parts adja-
+cent to the fissure (Tao et al. 2023b; Tao and Dang 2023; 
+Wu et al. 2020a, b).
+Bench rock slopes with discontinuities tend to fail grad-
+ually under seismic excitations, rather than abrupt failure 
+(Dong et al. 2022; Zhou et al. 2022). The deformation and 
+failure of these slopes are influenced by the physical and 
+mechanical properties of the rock mass and the discontinui-
+ties, along with their geometric distribution. Typically, local 
+deformations occur first, once these deformations accumu-
+late to a certain extent, they lead to an overall sliding failure 
+of the slope (Qi et al. 2022). However, many previous stud-
+ies have predominantly emphasized acceleration, displace-
+ment, and earth pressure in their exploration of the dynamic 
+response of slopes, without considering residual deforma-
+tions (Ning et al. 2019; Pu et al. 2020; Dong et al. 2020; Su 
+et al. 2021). To offer a more detailed understanding of the 
+progressive failure process of slopes under seismic excita-
+tions, this paper introduces the displacement baseline offset 
+ratio (DBOR). DBOR assesses the deformation and collapse 
+process of slopes, focusing on residual deformations after 
+slopes reach a plastic state. Displacements are measured 
+using sensors and non-contact photography techniques, gen-
+erating displacement time-history curves at various locations 
+on the bench rock slope. These displacement signals are then 
+decomposed into sub-signals of varying frequencies through 
+wavelet transform. By selecting the low-scale wavelet coef-
+ficients, the baseline of the displacement time-history curves 
+is derived, revealing the residual deformation of the slopes. 
+This analysis of deformation responses serves as a pivotal 
+indicator for gauging the deformation and failure process of 
+rock mass structures under seismic excitations. Such insights 
+can be widely used for slope monitoring and early warning, 
+aiming to reduce casualties and property losses caused by 
+landslides.
+This study employed both large-scale shaking table tests 
+and numerical simulations to investigate the deformation 
+and failure mechanisms of anti-dip bench rock slopes. The 
+experimental setup modeled a scaled-down slope on a shak-
+ing table, designed to mirror a full-scale slope found along 
+the Sanqing Expressway in Yunnan, China. The slopes 
+were excited with the Wenchuan earthquake wave and sine 
+waves of different amplitudes and directions. The dynamic 
+responses were analyzed, focusing on peak ground displace-
+ment, residual displacement, dynamic earth pressure, and the 
+progressive failure process. In addition, this study advanced 
+the understanding of plastic deformation by introducing the 
+concept of DBOR as a method to assess the degree of plastic 
+deformation of the slope during seismic excitations. Conclu-
+sions were drawn regarding the critical slope failure thresh-
+olds for each bench based on DBOR.
+Fig. 1   Geological section and 
+site photographs of the study 
+area
+Table 1   The physical mechanical parameters of the prototype slope
+Param-
+eters
+Density ρ 
+(kg/m3)
+Elastic 
+modulus 
+E (MPa)
+Cohesion
+c (KPa)
+Internal 
+friction 
+angle φ 
+(°)
+Poisson’s 
+ratio μ
+Rock 
+mass
+2250
+780
+493
+36
+0.32
+Weak 
+inter-
+layer
+1950
+94
+77
+25
+0.36
+
+5332
+	
+F. Yang et al.
+2  Experiment Setup and System Calibration
+2.1  Overview of the Slope
+The study area is located in northwestern Yunnan Prov-
+ince, China, notable for its significant topographical 
+diversity. The slope in this area has a natural dip angle of 
+approximately 26° (as shown in Fig. 1). The construction 
+of a highway through this area has led to the modifica-
+tion of the slope into a bench slope, thereby enhancing its 
+stability. Borehole sampling results reveal that the bench 
+slope is primarily composed of fully weathered silty sand-
+stone, which has significantly compromised the integrity 
+of the original rock structure, making it soft. The maxi-
+mum recorded thickness of this exposed layer is 51.7 m. 
+The rock mass displays a layered structure characterized 
+by prevalent joints and fissures. The core is mostly broken 
+into blocks ranging in diameter from 2 to 8 cm. The joint 
+length is 5 ~ 8 cm. The physical and mechanical parameters 
+of the rock mass are detailed in Table 1 (Xin et al. 2024).
+According to the regional geological survey, the road-
+bed lies on the eastern branch of the Xiaojiang Fault, which 
+is an active fault in the Holocene that intersects with the 
+road, placing it in a geologically unstable area. The pres-
+ence of well-developed joints and fissures is notable, with 
+one group observed (J1: 258°∠77°, and 2–3 pieces/m). The 
+occurrence of the rock layer is 92°∠16°, featuring a smooth 
+surface filled with viscous mineral particles. The rock strata 
+are highly weathered and can be easily dislodged by ham-
+mering. The interlayer spacing measures approximately 
+3–4 cm. After excavation, the geological structure of the 
+slope is revealed as an anti-dip layered rock mass with a dip 
+angle of 16°. This geological structure of the slope is shown 
+in Fig. 1. Yunnan Province, located between the Eurasian 
+Plate and the Indian Ocean Plate, is characterized by numer-
+ous active fault zones and a history of frequent earthquakes. 
+From 2012 to 2020, the region experienced 592 earthquakes 
+with magnitudes exceeding 2.0 on the Richter scale. Given 
+the frequency of these seismic activities and the challenging 
+geological landscape, there is an imperative need to under-
+stand the deformation and failure mechanisms of anti-dip 
+bench rock slopes under seismic excitations.
+2.2  Shaking Table Performance Testing
+This series of experiments was conducted at the State Key 
+Laboratory of Geohazard Prevention and Geoenvironment 
+Protection at Chengdu University of Technology. The plat-
+form has dimensions of 4 m × 6 m and a maximum load 
+capacity of 4 × ­104 kg. The motion of the shaking table 
+is controlled by eight actuators, which allow for three-
+directions six-degree-of-freedom motion, including both 
+translational and rotational motions along the X/Y/Z axes 
+(presented in Fig. 2a and b). The shaking table is hydrauli-
+cally servo-controlled, and its main components include the 
+platform, hydraulic system, loading system, servo valves 
+and controllers, data acquisition system, and control soft-
+ware (see Fig. 2c). The main technical specifications and 
+parameters of the shaking table are as follows: the operating 
+frequency range is 0.1–60 Hz, and the maximum accelera-
+tions in the X, Y, and Z directions are 1.5 g, 1.2 g, and 1.0 
+g, respectively, corresponding to maximum displacements 
+of 300 mm, 250 mm, and 150 mm.
+The hydraulic shaking table involves multiple disci-
+plines such as mechanics, hydraulics, infrastructure, and 
+computer science, making it a complex system engineering 
+project. The articulation stiffness and gap in the mechani-
+cal mechanism have a great influence on the uniformity 
+of acceleration. For example, insufficient stiffness in the 
+connecting part between the actuators and the platform, 
+as well as friction and clearances in the connecting com-
+ponents, can cause waveform distortion. The stiffness of 
+the shaking table foundation also has a significant impact 
+on the accuracy of the input seismic waves. A low founda-
+tion stiffness can introduce anti-resonance peaks within 
+the operating frequency range, reducing the system's 
+bandwidth.
+There is no unified standard for many performance indi-
+cators of the shaking table, and such standards are often only 
+included in contracts by some manufacturers. However, the 
+description of these indicators can be inconsistent. Thus, it 
+is necessary to test the performance indicators of the shak-
+ing table so that the operational performance of the shaking 
+table can accurately simulate earthquakes, thereby provid-
+ing reliable experimental equipment for earthquake simula-
+tion shaking table tests. To evaluate the performance of the 
+shaking table, nine accelerometers labeled A1 to A9 were 
+strategically placed on the platform to study the performance 
+curves for maximum displacement, maximum velocity, and 
+maximum acceleration (presented in Fig. 2d). Additionally, 
+the tests and analyses conducted included assessing the 
+unevenness of acceleration, distortion of acceleration wave-
+forms, and accuracy of seismic wave reproduction. During 
+the testing of the maximum performance curve, a fixed-
+frequency sine wave was selected as the input waveform, 
+with measurements taken in three sections along the curve.
+To measure the maximum displacement, four frequen-
+cies were selected, starting from the lowest frequency and 
+extending to the intersection point of displacement and 
+velocity, with displacement amplitudes increasing gradu-
+ally. This method was similarly applied to select frequency 
+points for the maximum velocity and acceleration tests. The 
+frequency range for the maximum displacement test spanned 
+from 0.1 to 0.7 Hz. Actual test values for X-axis displace-
+ment consistently exceeded the expected performance value 
+
+5333
+Investigating Deformation and Failure Mechanisms of Discontinuous Anti‑dip Bench Rock Slopes…
+Fig. 2   The performance of the shaking table. a shaking table with 
+three-direction six-degree-of-freedom motion; b the actuator; c main 
+components of the shaking table; d monitoring point for the perfor-
+mance test; e maximum performance in the X direction; f maximum 
+performance in the Z direction; g displacement distortion of the shak-
+ing table; h acceleration distortion of the shaking table; i compari-
+son of input and output waveform data; j correlation diagram between 
+input and output waveform data
+
+5334
+	
+F. Yang et al.
+of 300 mm, and Z-axis displacement values surpassed the 
+anticipated 150 mm. For the maximum velocity test, the fre-
+quency range was set between 1.0 and 2.0 Hz. Here, actual 
+test values for the X-axis velocity exceeded the expected 
+1.2 m/s, and those for the Z-axis velocity were above the 
+forecasted of 1.0 m/s. The frequency range for the maxi-
+mum acceleration test covered 5–60 Hz. In this range, actual 
+test values for X-axis acceleration exceeded the predicted 
+15 m/s2, and Z-axis values surpassed the anticipated 10 m/
+s2. The resulting maximum performance curves for the X 
+and Z directions are illustrated in Fig. 2e and f. To evaluate 
+displacement distortion of the platform, sine waves at fre-
+quencies of 0.1, 0.5, 1, 3, and 5 Hz were employed, with the 
+calculation formula provided in Formula (1), where D1 rep-
+resents the fundamental wave amplitude of the displacement 
+spectrum, and Di represents the harmonic wave amplitude 
+of the displacement spectrum. Testing confirmed that the 
+maximum displacement distortion stayed within 3% for each 
+degree of freedom of the system in sinusoidal vibrations 
+below 5 Hz. Figure 2g presents the displacement distortion 
+in the X, Y, and Z directions.
+To assess the acceleration distortion of the shaking table, 
+sine waves at frequencies of 7, 10, 20, 40, and 60 Hz were 
+used during testing in acceleration-controlling mode. The 
+amplitudes of both the fundamental and harmonic waves 
+were measured using Fast Fourier Transform analysis. The 
+calculation formula, shown in Formula (1), defines D1 as 
+the fundamental wave amplitude of the acceleration spec-
+trum, and Di as the harmonic wave amplitude of the accel-
+eration spectrum. Test results indicate that the acceleration 
+distortion in the X, Y, and Z directions is less than 5%, and 
+this distortion is depicted in Fig. 2h. Further, the dynamic 
+response of the platform was evaluated by iteratively con-
+trolling the input of actual seismic waves from typical seis-
+mic stations and collecting the waveform data of the output 
+seismic waves from the shaking table. This process assessed 
+the accuracy of seismic wave simulation. The coherence 
+coefficient, a dimensionless quantity, was used to study the 
+degree of linear correlation between variables. When two 
+(1)
+d =
+∑n
+i=2 D2
+i
+D1
+Fig. 2   (continued)
+
+5335
+Investigating Deformation and Failure Mechanisms of Discontinuous Anti‑dip Bench Rock Slopes…
+random variables X and Y are independent, the correlation 
+coefficient can be determined using Formula (2).
+The waveform data collected from the shaking table are 
+compared with the original input waveform data, as shown 
+in the time-history curve in Fig. 2i. The correlation diagram, 
+shown in Fig. 2j, uses the input waveform as the horizontal 
+axis and the output waveform as the vertical axis.
+2.3  Similarity Design and Material Selection
+Maintaining similarity between the prototype and the model 
+slope is crucial in shaking table tests. Establishing a simi-
+larity relationship ensures that the physical and mechanical 
+parameters of the prototype and the model maintain the same 
+dimensions, differing only in scale. Therefore, the physical 
+phenomena and failure processes observed in the test exhibit 
+the same fundamental characteristics, allowing for the study 
+of the dynamic response of the prototype slope. However, 
+due to limitations in experimental materials and techniques, 
+achieving complete similarity between the model and the 
+prototype in shaking table tests can often be challenging 
+(Xin, et al. 2018). Consequently, this experiment prioritized 
+the following selected indicators to maintain geometric, kin-
+ematic, and dynamic similarity with the prototype param-
+eters. When two physical phenomena exhibit these three 
+types of similarity, they are considered congruent. To miti-
+gate scale effects and ensure the scalability of results from 
+model tests, several key measures have been implemented. 
+A larger geometric similarity ratio of 25 was chosen for the 
+physical simulation experiments to minimize the influence 
+of scale effects on the outcomes. Flexible materials, such 
+(2)
+휌XY =
+Cov(X, Y)
+√
+D(X)
+√
+D(X)
+as polystyrene foam boards, were utilized within the model 
+box to absorb seismic waves, significantly reducing wave 
+reflection and the resultant errors. This strategy effectively 
+diminishes the influence of boundary conditions, allowing 
+the model material to deform similarly to the prototype in a 
+free field under seismic excitation, thus better approximat-
+ing actual engineering conditions. Additionally, sensors are 
+strategically positioned at a certain distance from the model 
+boundaries to minimize the impact of boundary effects on 
+the experimental results, particularly in mitigating the influ-
+ence on internal shear strain measurements.
+In this experiment, the anti-dip bench rock slope is char-
+acterized by 14 independent physical quantities, including 
+geometric dimensions, gravitational acceleration, density, 
+elastic modulus, Poisson's ratio, cohesion force, internal 
+friction angle, stress, strain, time, displacement, damping 
+ratio, frequency, and velocity. Three main controlling indi-
+cators, length (L), density (ρ), and acceleration (a), were 
+selected. The remaining 11 physical quantities are derived 
+variables according to the Buckingham π theorem. Each of 
+these quantities possesses distinct dimensions, ensuring that 
+the dimensions of each term within any physical equation 
+remain homogeneous. Thus, these 11 physical quantities 
+can be expressed as a functional relationship between the 
+similarity criteria π1, π2, …, π11, as shown in Eq. (3) and 
+Eq. (4). Substituting the dimensions corresponding to each 
+physical quantity into Eq. (5) yields Eq. (6). This facilitates 
+solving for the algebraic relationships among the parameters, 
+culminating in Eq. (7). Given the presence of 14 unknown 
+variables against only 4 equations, the dimensional coef-
+ficients for the 11 derived physical quantities are systemati-
+cally organized in a table following the sequence of π1, π2, 
+…, π11, then the similarity criteria are solved. The similar-
+ity relationships and ratios pertinent to the experiment are 
+detailed in Table 2.
+Table 2   The similarity criterion based on the matrix method and similarity ratios
+E
+μ
+c
+φ
+σ
+ε
+t
+d
+ν
+f
+ξ
+l
+a
+ρ
+Equation
+Similarity criterion
+Similarity ratios
+a4
+a5
+a6
+a7
+a8
+a9
+a10
+a11
+a12
+a13
+a14
+a1
+a2
+a3
+π1
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+ − 1
+ − 1
+ − 1
+π1 = E/(lρa)
+CE = ClCρCa
+CE = 25
+π2
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+π2 = μ
+1
+Cμ = 1
+π3
+1
+0
+0
+0
+0
+0
+0
+0
+0
+ − 1
+ − 1
+ − 1
+π3 = c/(lρa)
+Cc = ClCρCa
+Cc = 25
+π4
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+π4 = φ
+1
+Cφ = 1
+π5
+1
+0
+0
+0
+0
+0
+0
+ − 1
+ − 1
+ − 1
+π5 = σ/(lρa)
+Cσ = ClCρCa
+Cσ = 25
+π6
+1
+0
+0
+0
+0
+0
+0
+0
+0
+π6 = ε
+1
+Cε = 1
+π7
+1
+0
+0
+0
+0
+ − 1/2
+ − 1/2
+0
+π7 = t/(a/l)1/2
+Ct = C1∕2
+l
+C−1∕2
+a
+Ct = 5
+π8
+1
+0
+0
+0
+ − 1
+0
+0
+π8 = d/l
+Cd = Cl
+Cd = 25
+π9
+1
+0
+0
+ − 1/2
+ − 1/2
+0
+π9 = v/(al)1/2
+Cv = C1∕2
+l
+C1∕2
+a
+Cv = 5
+π10
+1
+0
+1/2
+ − 1/2
+0
+π10 = f/(a/l)1/2
+Cf = C−1∕2
+l
+C1∕2
+a
+Cf = 1/5
+π11
+1
+0
+0
+0
+π11 = ξ
+1
+Cξ = 1
+
+5336
+	
+F. Yang et al.
+Similarity materials were used in this experiment to accu-
+rately represent the rock mass and the weak interlayer. The 
+target values for each physical and mechanical parameter of 
+the model material were calculated based on the established 
+similarity relationships. Similarity materials were used to 
+represent the rock mass, consisting of a mixture of barite 
+powder, bentonite, gypsum, paraffin oil, and water. In this 
+mixture, barite powder served as the aggregate, gypsum 
+acted as the binding agent, and paraffin oil functioned as 
+a water retainer. To simulate the characteristics of a weak 
+interlayer with low strength and low elastic modulus, a 
+mixture of bentonite and paraffin oil was prepared. After 
+repeated adjustments of the proportions and conducting vari-
+ous tests—including direct shear tests, uniaxial compression 
+tests, triaxial compression tests, and ring knife tests—the 
+cohesion, internal friction angle, elastic modulus, and den-
+sity of the simulated materials were accurately measured. 
+The final proportions for the rock mass material were set 
+using the following ratios: barite powder to bentonite to gyp-
+sum to paraffin oil to water at 65:13:5:13:3. For the weak 
+interlayer, the ratio of bentonite to paraffin oil was estab-
+lished at 25:2. Details of these materials and the results of 
+their physical and mechanical property tests are displayed 
+in Fig. 3, while the physical and mechanical parameters of 
+the model slope are documented in Table 3.
+2.4  Design and Preparation of the Model Slope
+The prototype slope under examination is a three-bench 
+slope in a road cutting, with each bench standing at a height 
+of 5 m. The first and third benches have a width of 2 m, 
+while the second bench measures 8 m in width. Adhering to 
+a geometric similarity ratio of 25, the model slope designed 
+for the shaking table test features each bench at a height of 
+20 cm, the widths of the first and third benches are 8 cm, and 
+(3)
+F(휋1, 휋2, 휋3 … 휋11) = 0
+(4)
+f(l, a, 휌, E, 휇, c, 휑, 휎, 휀, t, d, v, f, 휉) = 0
+(5)
+휋i = [l]a1 ⋅[a]a2 ⋅[휌]a3 ⋅[E]a4 ⋅[휇]a5 ⋅[c]a6 ⋅[휑]a7⋅
+[휎]a8 ⋅[휀]a9 ⋅[t]a10 ⋅[d]a11 ⋅[v]a12 ⋅[f]a13 ⋅[휉]a14
+(6)
+M0L0T0 = La1 ⋅(LT−2)a2 ⋅(ML−3)a3 ⋅(ML−1T−2)a4 ⋅(1)a5
+⋅(ML−1T−2)a6 ⋅(1)a7 ⋅(ML−1T−2)a8 ⋅(1)a9
+⋅(T)a10 ⋅(L)a11 ⋅(LT−1)a12 ⋅(T−1)a13 ⋅(1)a14
+(7)
+⎧
+⎪
+⎨
+⎪⎩
+a1 + a2 −3a3 −a4 −a6 −a8 + a11 + a12 = 0
+−2a2 −2a4 −2a6 −2a8 + a10 −a12 −a13 = 0
+a3 + a4 + a6 + a8 = 0
+a5 + a7 + a9 + a14 = constant
+the second bench is 32 cm. The weak interlayer is incorpo-
+rated with a thickness of 0.5 cm and an inclination angle of 
+16°. To analyze the dynamic response and progressive fail-
+ure phenomena of the bench slope, a variety of instruments 
+were utilized, including accelerometers, earth pressure cells, 
+displacement sensors, digital image correlation (DIC), and 
+cameras. Specifically, the monitoring cross-section of the 
+slope model, representing the central section of the slope, is 
+indicated with a red dashed line, as shown in Fig. 4a. Sen-
+sors were strategically placed at the transition points of slope 
+gradients on the surface, where the highest stress concentra-
+tions were anticipated based on preliminary finite element 
+analysis and previous experimental data. Additionally, accel-
+erometers were distributed at varying heights of the slope, 
+providing a comprehensive view of the deformation patterns 
+Given the inner sides of the benches are potential failure 
+zones, earth pressure cells were placed at these positions. 
+Figure 4b provides a detailed depiction of the specific loca-
+tions and numbers of the sensors.
+Each sensor was calibrated before the experiment to 
+ensure data reliability. Instruments were strategically placed: 
+accelerometers, earth pressure cells, and displacement sen-
+sors were embedded on the surface of each bench. Additional 
+accelerometers were buried at various monitoring locations 
+within the slope to record its dynamic response character-
+istics. The accelerometers adopted were IEPE piezoelectric 
+type 1A314E series, with axial sensitivities in the X, Y, and 
+Z directions of 10 ± 0.5 mV/m·s−2 and a measurement range 
+of ± 50 g. The earth pressure cells had a model number of 
+BW with a measurement range of 1 MPa, a sensitivity of 
+5 mV/MPa, and a diameter of 28 mm. The displacement 
+sensors were MIRAN KTR11 rebound displacement sen-
+sors, offering a sensitivity and accuracy of 0.01 mm. These 
+sensors were positioned on both the inner and outer sides 
+of each bench to monitor the dynamic responses of each 
+segment.
+The construction of the slope model within the model 
+container followed a systematic layer-by-layer compaction 
+method from bottom to top, incorporating stacks of rock 
+masses and weak interlayers as outlined by (Xin et al. 2019). 
+This construction process comprises five distinct steps. Step 
+1: The outline of the slope and the position of the weak 
+interlayers were marked on the acrylic plate of the model 
+container to ensure that the model conformed to the design 
+plan and maintained data reliability. Step 2: The mass of 
+similar materials was calculated based on the geometric size 
+and density of the slope. Materials were prepared according 
+to the similarity ratio and mixed thoroughly using a small 
+mixer. After mixing, the materials naturally bonded, forming 
+clusters of coarse particles enveloped in dry material, which 
+were then ground into fine particles using a 0.3 cm sieve. 
+Step 3: The prepared mixture was placed into the model con-
+tainer using a volume control method to achieve the desired 
+
+5337
+Investigating Deformation and Failure Mechanisms of Discontinuous Anti‑dip Bench Rock Slopes…
+density through compaction. This method ensured adherence 
+to the established similarity relationships and maintained a 
+consistent compaction thickness of approximately 5 cm for 
+each layer. The interlayer material was dyed red to facilitate 
+the observation of dynamic responses and the failure pro-
+cesses during seismic activity. Step 4: Sensors were strategi-
+cally installed at predetermined locations and calibrated to 
+ensure precise data collection. Extra wire length was allowed 
+to remain inside the slope to prevent any sensor damage 
+from excessive tension due to compaction or potential slid-
+ing failures. Step 5: Speckle points were applied on the slope 
+profile to assist in monitoring settlement deformation and 
+instability failure. The entire process of slope construction 
+is shown in Fig. 5.
+Fig. 3   Mechanical performance tests. a similarity materials; b direct shear test; c triaxial compression test; d shear stress-normal stress fitting 
+curve for the direct shear test; e stress–strain curves under uniaxial compression
+
+5338
+	
+F. Yang et al.
+2.5  Seismic and Sine Wave Input Schemes 
+for Dynamic Response Analysis
+In this experiment, both the Wenchuan earthquake wave 
+and sine wave were utilized as input waveforms to explore 
+the dynamic response characteristics and instability failure 
+modes of the anti-dip bench rock slope (Xin et al. 2020). The 
+time history curves and Fourier spectra of these input wave-
+forms are shown in Fig. 6a–d. Multiple-stage excitations 
+were applied to the model slope to gather data for analyzing 
+the dynamic response patterns prior to significant deforma-
+tion and failure.
+In addition, Fig. 6e displays the low-amplitude loading 
+process, which employs both actual seismic waves and sinu-
+soidal waves at varying frequencies. In the legend, WLX 
+and WLXZ denote Wolong seismic waves loaded in the X 
+and XZ directions, respectively. The sinusoidal waves are all 
+loaded in the XZ direction. SIN3Hz specifies a sinusoidal 
+wave frequency of 3 Hz, with similar notation for other fre-
+quencies. The loading amplitude gradually increases from 
+0.1 to 0.3 g. This setup helps explore the dynamic response 
+changes of the bench rock slope under different low-ampli-
+tude excitations and provides insights into the elastic behav-
+ior of the slope under varied loading conditions. Figure 6f 
+shows the high-amplitude loading process, with amplitudes 
+ranging from 0.4 to 1.3 g. The purpose of the second loading 
+stage is to examine the deformation and failure mechanisms 
+of the bench rock when subjected to high-amplitude seismic 
+waves, enabling a deeper analysis of the slope’s stability and 
+failure processes.
+3  Results Analysis
+3.1  Dynamic and Residual Displacement Responses
+Displacement sensors were strategically installed at vari-
+ous locations on the slope surface to continuously capture 
+the displacement response of the slope in real time under 
+seismic excitation. A comprehensive analysis of extensive 
+displacement time-history data revealed that the baseline of 
+the displacement time-history at specific locations exhibited 
+varying degrees of offset following multiple seismic events, 
+signaling the presence of residual displacement within the 
+slope. To analyze the dynamic response characteristics and 
+instability failure process of the anti-dip bench rock slope, 
+two important parameters were introduced: peak ground dis-
+placement (PGD) and residual displacement (RD). These 
+parameters, as shown in Fig. 7a and b, are defined to reflect 
+different dynamic behaviors of the slope under seismic exci-
+tations. Peak ground displacement and residual displacement 
+have distinct physical interpretations. Peak ground displace-
+ment refers to the transient displacement that occurs on a 
+slope during seismic excitation, which provides insights into 
+the temporary deformation and response characteristics of 
+slopes under such conditions. By analyzing peak ground 
+displacement, the overall stability and deformation char-
+acteristics of slopes during seismic events can be studied. 
+Conversely, residual displacement refers to the permanent 
+displacement remaining on a slope after seismic excitation, 
+serving as an indicator of enduring deformation. This met-
+ric is instrumental for conducting long-term stability and 
+continuous deformation analysis of slopes. Furthermore, 
+residual deformation is a vital metric commonly utilized in 
+geological hazard evaluations to assess slope stability and 
+issue early warnings. Peak ground displacement is the ini-
+tial response under seismic excitation, indicating temporary 
+deformation of the slope due to the seismic forces. If the 
+peak ground displacement exceeds certain thresholds, it can 
+lead to slope instability and eventual failure. In contrast, 
+residual displacement develops gradually through multiple 
+seismic excitations and does not appear until the end of seis-
+mic action. Analysis of extensive displacement time-history 
+data reveals that both peak ground displacement and residual 
+displacement of slopes increase with increasing peak ground 
+acceleration of the input seismic waves. This underscores 
+that the process of slope instability deformation is both 
+gradual and cumulative.
+Figure 7c and d show the peak ground displacement 
+responses at monitoring points D1 and D5 on the slope 
+surface under varying sine wave frequencies. As the input 
+frequency of the sine wave increases, the amplitude of the 
+peak ground displacement consistently rises. Specifically, 
+at D1, when the input sine wave frequency is 10 Hz with an 
+amplitude of 0.3 g, the peak ground displacement ampli-
+tude is 0.15 mm. This amplitude escalates to 0.81 mm when 
+the frequency increases to 20 Hz, representing a 5.4-fold 
+increase. In contrast, at monitoring point D5, a 10 Hz input 
+sine wave with an amplitude of 0.3 g leads to a peak ground 
+displacement amplitude of 0.4 mm, which dramatically 
+increases to 4.1 mm at a frequency of 20 Hz, an increase 
+by a factor of 10.25. This showcases a pronounced dis-
+placement amplification effect at higher elevations of the 
+slope, where the displacement response in the upper part of 
+Table 3   The physical mechanical parameters of the model slope
+Param-
+eters
+Density ρ 
+(kg/m3)
+Elastic 
+modulus 
+E (MPa)
+Cohesion
+c (KPa)
+Internal 
+friction 
+angle φ 
+(°)
+Poisson’s 
+ratio μ
+Rock 
+mass
+2200
+50
+20
+36
+0.34
+Weak 
+inter-
+layer
+1950
+3.42
+3
+23
+0.37
+
+5339
+Investigating Deformation and Failure Mechanisms of Discontinuous Anti‑dip Bench Rock Slopes…
+the slope significantly exceeds that in the lower part under 
+identical frequency and amplitude sine waves. Moreover, 
+this displacement response amplitude at the upper section 
+of the slope accelerates more rapidly with increasing input 
+frequency.
+Figure 7e and f illustrate the peak displacement responses 
+at various monitoring points on the slope surface, induced 
+by Wenchuan earthquake waves in the XZ and X directions, 
+respectively. Initially, with low input peak ground accelera-
+tions, the displacement response across different positions 
+on the slope is minimal. As the input peak ground accel-
+eration increases, the displacement response also gradu-
+ally increases. When the input acceleration peak exceeds 
+0.6 g, the displacement amplitude escalates rapidly. When 
+Fig. 4   Schematic diagram and 
+monitoring points of the anti-
+dip bench rock slope
+
+5340
+	
+F. Yang et al.
+Fig. 5   Construction process of the model slopes. a outlining the slope 
+and marking weak interlayer positions on the acrylic plate; b com-
+pacting the rock mass; c installing sensors; d stacking weak interlay-
+ers; e applying marked points onto the acrylic plate; f completing 
+construction of the anti-dip bench rock slope
+
+5341
+Investigating Deformation and Failure Mechanisms of Discontinuous Anti‑dip Bench Rock Slopes…
+the input peak ground acceleration reaches 0.6 g, the dis-
+placement response amplitudes on the outer side of the 
+first, second, and third bench are 0.99 mm, 0.93 mm, and 
+1.34 mm, respectively. When the input peak ground accel-
+eration increases to 0.9 g, the displacement amplitudes at 
+these locations rise to 5.46 mm, 3.89 mm, and 6.08 mm, 
+respectively, representing increases by factors of 4.52, 3.18, 
+and 3.54. Among the benches, the second bench has the wid-
+est width, requiring a larger seismic inertial force to achieve 
+the same level of displacement under seismic excitation as 
+the narrower benches. Thus, the wider bench plays a role in 
+mitigating the deformation and failure of the bench slope. 
+For the same input peak ground acceleration, the displace-
+ment response varies with the loading direction. The dis-
+placement response in the XZ direction is larger than that 
+in the X direction. Specifically, for the inner side of the sec-
+ond bench, when the input peak ground accelerations are 
+0.4 g, 0.6 g, 0.9 g, and 1.3 g, the displacement response in 
+the XZ direction are 1.34, 1.81, 1.29, and 3.52 times larger 
+than those in the X direction, respectively. This variability 
+highlights the significant influence of loading direction on 
+displacement response under seismic conditions.
+Residual displacement is a key metric for assessing the 
+post-earthquake stability of slopes. The Newmark method is 
+another commonly used approach for analyzing the instabil-
+ity and failure of slopes under seismic excitations. Residual 
+deformation, however, is a macroscopic behavior that mani-
+fests once a slope reaches its plastic state, with the instabil-
+ity and failure of the slope resulting from a combination of 
+both dynamic and residual displacements. Post-earthquake 
+field investigations have revealed that although some slopes 
+may exhibit significant residual displacement responses, 
+they may still retain their structural stability. Therefore it 
+is not sufficient to fully characterize the degree of plastic 
+damage to the slope. To quantify the instability and failure 
+process of slopes after entering the plastic state, the dis-
+placement baseline offset ratio (DBOR) is employed, which 
+takes into account both the peak ground displacement during 
+the seismic excitation and the residual displacement after the 
+seismic excitation, thereby offering a more comprehensive 
+reflection of the plastic deformation behavior of the slope 
+under the influence of seismic excitation.
+The formula for calculating DBOR is presented in Eq. (8). 
+The distribution of DBOR across various positions on the 
+slope surface is shown in Fig. 8. This helps in understand-
+ing how different areas of the slope are affected by seismic 
+forces and provides a detailed measure of potential instabil-
+ity and failure.
+where RD represents residual displacement, PGD represents 
+peak ground displacement.
+(8)
+DBOR = RD
+PGD
+Upon applying a peak ground acceleration of 0.4 g, the 
+DBOR is most pronounced on the inner side of the second 
+bench and the slope toe, indicating the initial entry into the 
+plastic state at these locations under seismic excitation. This 
+observation correlates with the initial onset of cracking at 
+these parts, consistent with data collected on the phenomena 
+of slope instability and failure (Bao et al. 2024; Chen et al. 
+2023; Fan et al. 2019; Shi et al. 2024; Zhou et al. 2022). 
+As the input peak ground acceleration increases to 0.6 g, 
+tensile failure occurs at the rear edge of the slope, where a 
+pronounced DBOR is also observed. The contour map fur-
+ther reveals that the DBOR at the inner side of each bench 
+is higher than at the outer side, indicating more significant 
+plastic deformation and initial cracking at the inner sides 
+under seismic excitation. With an input peak ground accel-
+eration of 0.9 g, the highest DBOR values are observed at 
+the rear edge of the slope and on the inner side of the second 
+bench, with higher DBOR values at the upper part of the 
+slope compared to the lower part. It can be seen from the 
+slope profile that the second bench has the largest width, 
+effectively dividing the complete slope into two sections 
+and transforming the overall slope failure into local failure 
+caused by the wider bench. At the input peak ground accel-
+eration of 1.3 g, the DBOR dominates in the upper part of 
+the slope, signifying it as the most vulnerable part of the 
+slope. Under strong seismic excitation, this upper part of 
+the slope experiences larger displacements due to elevation 
+amplification effects. Continuous excitations lead to degra-
+dation in the mechanical properties of the rock mass, reduc-
+ing its shear strength and resulting in the collapse of the 
+slope surface and substantial deformations, with the upper 
+part exhibiting a pronounced DBOR. Given the stepped 
+surface of the slope, the inner sides of the benches experi-
+ence stress concentration, making them more susceptible 
+to cracking and deformation under seismic excitation. To 
+assess the plastic deformation of these benches, the Damage-
+Based Offset Ratio (DBOR) of the inner sides is utilized. 
+Figure 8e illustrates the distribution pattern of DBOR across 
+the benches under various peak ground accelerations.
+As the input peak acceleration increases, the plastic 
+deformation of the slope shows an increasing trend, but the 
+degree of deformation varies across different locations. To 
+characterize the trend of DBOR, the difference in DBOR 
+(ΔDBOR) between successive stages of input peak ground 
+acceleration was calculated. For example, the ΔDBOR for 
+the 0.2 ~ 0.4 g range is obtained by subtracting the DBOR 
+at 0.2 g from that at 0.4 g, as shown in Fig. 8f. Analysis 
+of the ΔDBOR change patterns reveals that as the input 
+peak acceleration increases, the plastic deformation of the 
+bench slope initially increases and subsequently decreases. 
+The “turning point” in ΔDBOR occurs when the input peak 
+acceleration transitions from 0.6 g to 0.9 g. Therefore, the 
+input peak acceleration of 0.6 g is identified as the “critical 
+
+5342
+	
+F. Yang et al.
+
+5343
+Investigating Deformation and Failure Mechanisms of Discontinuous Anti‑dip Bench Rock Slopes…
+acceleration” for initiating significant plastic damage in the 
+slope. This critical value is further employed to estimate 
+the threshold for cumulative permanent damage. Upon 
+calculation, at 0.6 g input acceleration, the peak displace-
+ments for the first bench, second bench, third bench, and 
+slope top are 0.985 mm, 0.614 mm, 1.13 mm, and 2.836 mm, 
+respectively. Using the geometric similarity ratio derived 
+from the experimental setup, these results are extrapolated 
+to estimate the cumulative permanent damage thresholds 
+for the prototype slope. For the anti-dip bench rock slope, 
+the cumulative thresholds for permanent damage from the 
+first bench to the slope top are determined to be 24.63 mm, 
+15.37 mm, 28.25 mm, and 70.94 mm. These thresholds are 
+consistent with the California Geological Survey's bench-
+marks for shallow slope failure, which range from 0 to 150 
+mm (California Geological Survey, 2008).
+3.2  Earth Pressure Responses
+Stress variations and the distribution of post-earthquake 
+stress, induced by seismic excitations, play critical roles 
+in determining the deformation, failure mechanisms, and 
+instability characteristics of slopes. These factors are piv-
+otal in evaluating the post-earthquake stability of slopes. 
+Figure 9a illustrates the variation of peak earth pressure at 
+different benches of the slope under the excitation of the 
+Wenchuan earthquake with varying peak ground accel-
+erations. For monitoring points P1, P2, P6, and P7, the 
+peak earth pressure increases with an increase in the input 
+peak ground acceleration. Specifically, as the input peak 
+ground acceleration rises from 0.4 to 0.6 g, the peak earth 
+pressure at these monitoring points increases by 15.84%, 
+69.84%, 49.96%, and 26.81%. The increase in earth pres-
+sure is most pronounced at the base of the slope and least 
+at the top. Under seismic excitations, the toe of the slope 
+experiences compression from the overlying rock mass, 
+resulting in larger shear stress and a rapid increase in 
+earth pressure. However, for monitoring points P3, P4, 
+P5, and P8, the peak earth pressure initially increases 
+and then decreases as the input peak ground accelera-
+tion increases. This pattern reflects the deterioration of 
+the mechanical properties of the rock mass under strong 
+seismic excitations, leading to reduced shear strength. 
+When this shear strength falls below a critical value, the 
+slope reaches a critical state of cracking. With low input 
+peak ground accelerations, the rock mass is subjected to 
+minimal stress, producing insignificant deformation and 
+low peak earth pressure. As input peak ground accelera-
+tion increases beyond a specific threshold, the stress on 
+the rock mass causes deformation and cracking, sub-
+sequently raising peak earth pressure. However, as the 
+seismic acceleration continues to increase, the rock mass 
+has already experienced failure and sliding, leading to a 
+decrease in peak earth pressure.
+Figures 9b and c display the distribution of peak earth 
+pressure in the upper and lower parts of the slope under 
+the action of a 0.3 g sine wave. It can be observed that as 
+the input frequency of the sine wave increases from 3 to 
+15 Hz, the peak earth pressure continuously rises. How-
+ever, when the input frequency further increases from 15 
+to 20 Hz, the peak earth pressure decreases. This indicates 
+that the resonant frequency of the slope is approximately 
+15 Hz, which causes the maximum dynamic earth pressure 
+responses at this frequency, resulting in the slope exhibit-
+ing a resonance phenomenon. The earth pressure on each 
+bench in the lower part of the slope is higher than that 
+on the upper part. For instance, with an input amplitude 
+of 0.3 g and a frequency of 15 Hz sine wave, the earth 
+pressure at P5 is 45.7 times that of P1, and at P6 is 5.89 
+times that of P2. As seismic waves propagate through the 
+slope, they induce significant vibration and deformation 
+in the rock mass. The lower part of the slope, constrained 
+by the upper part, experiences stronger compression and 
+shear forces during seismic excitations, resulting in higher 
+dynamic earth pressures. Conversely, the lower benches 
+of the slope, situated beneath the upper part, bear greater 
+dynamic loads, resulting in a larger dynamic earth pres-
+sure response.
+The variation in earth pressure between the outer and 
+inner sides of each bench on the slope under different peak 
+ground accelerations of the Wenchuan earthquake is depicted 
+in Fig. 9d, e, and f. For the third bench, dynamic earth pres-
+sure on the inner side exceeds that on the outer side when the 
+input peak ground acceleration ranges from 0.1 g to 0.3 g. 
+During seismic excitations, the inner side of the bench expe-
+riences mutual compression from both the overlying rock 
+mass and the outer side of the bench. Moreover, the inner 
+side of the bench has stronger constraints compared to the 
+outer side, resulting in higher dynamic earth pressure on the 
+inner side. However, as the input peak ground acceleration 
+increases from 0.4 g to 0.9 g, the dynamic earth pressure on 
+the inner side of the bench becomes less than that on the outer 
+side. This discrepancy occurs as the inner side of the bench 
+gradually enters a plastic state, transforming into a tension 
+zone. Meanwhile, the outer side of the bench undergoes sig-
+nificant deformation due to the strong seismic inertial forces 
+and mutual compression of the rock mass, leading to higher 
+dynamic earth pressure on the outer side compared to the 
+inner side. For the second bench, the dynamic earth pressure 
+Fig. 6   The time history curves and Fourier spectra of the input wave-
+form. a time history of the Wolong earthquake wave; b Fourier spec-
+tra of the Wolong earthquake wave; c time history of the sine wave 
+with a frequency of 3 Hz; d Fourier spectra of the sine wave with a 
+frequency of 3 Hz; e the low-amplitude loading process; f the high-
+amplitude loading process
+◂
+
+5344
+	
+F. Yang et al.
+on the inner side is consistently lower than on the outer side. 
+Given its status as the widest of the three benches, the second 
+bench effectively divides the entire slope into two smaller 
+slopes. This division reduces the stress transferred from the 
+upper slope and mitigates stress concentration at the toe, thus 
+mitigating adverse effects on the upper slope. Under seismic 
+Fig. 7   The peak ground displacement response of the anti-dip bench 
+rock slope. a displacement time-history curve at monitoring point 
+D1 with 0.2 g peak ground acceleration; b displacement time-history 
+curve at monitoring point D1 with 0.6 g peak ground acceleration; c 
+peak ground displacement responses at monitoring point D1 to sine 
+waves at varying frequencies; d peak ground displacement responses 
+at monitoring point D5 to sine waves at varying frequencies; e peak 
+ground displacement responses at various monitoring points on the 
+slope to the Wenchuan earthquake waves in the X direction; f peak 
+ground displacement responses at various monitoring points on the 
+slope to the Wenchuan earthquake waves in the XZ direction
+
+5345
+Investigating Deformation and Failure Mechanisms of Discontinuous Anti‑dip Bench Rock Slopes…
+excitations, the inner side of the second bench acts as the rear 
+edge of the lower slope, becoming a focal area for tensile 
+stress concentration and the initial site for crack formation. 
+In contrast, the outer side, due to its larger width, experiences 
+less displacement but receives accumulated stress from the 
+upper slope, resulting in higher dynamic earth pressure on 
+the outer side. For the first bench, dynamic earth pressure is 
+consistently higher on the inner side than on the outer side. 
+Fig. 8   The distribution of DBOR at various positions on the slope 
+surface. a DBOR distribution with 0.4 g input peak ground acceler-
+ation; b DBOR distribution with 0.6 g input peak ground accelera-
+tion; c DBOR distribution with 0.9 g input peak ground acceleration; 
+d DBOR distribution with 1.3 g input peak ground acceleration; e 
+the distribution pattern of DBOR for each bench under various peak 
+ground accelerations; f the distribution pattern of ΔDBOR for each 
+bench
+
+5346
+	
+F. Yang et al.
+
+5347
+Investigating Deformation and Failure Mechanisms of Discontinuous Anti‑dip Bench Rock Slopes…
+The stress from the upper slope is transmitted to the toe of the 
+slope, intensifying stress concentration on the inner side of 
+the first bench, which also displays bulging phenomena in the 
+lower rock mass. The macro deformation and earth pressure 
+distribution across each bench under seismic excitations can 
+be categorized into translational displacement and rotational 
+displacement, as shown in Fig. 10. For the second and third 
+benches, the outer side of the bench undergoes rotational 
+displacement around the inner side of the bench, resulting in 
+lower dynamic earth pressure on the inner side. Conversely, 
+the inner side of the first bench experiences rotational dis-
+placement around the outer side, leading to higher dynamic 
+earth pressure on the inner side.
+In summary, it is essential to establish the relationship 
+between the macro deformation of a slope and the accumu-
+lation of earth pressure in the seismic design of slope engi-
+neering. This provides valuable insights into the distribution 
+pattern of earth pressure, thus offering crucial references for 
+the seismic design of slope engineering.
+3.3  Cumulative Damage Processes of the Model 
+Slope
+Under continuous seismic actions, the slope undergoes 
+cumulative damage, resulting in a progressive failure pro-
+cess. Observations from the series of shaking table tests 
+reveal accumulated damage to the anti-dip bench rock slope 
+due to multiple seismic actions. This damage accumulation 
+includes tension cracking on the inner side of the benches, 
+tension cracking and settlement at the rear edge, and bulging 
+at the slope toe, as shown in Fig. 11. High-speed cameras 
+and digital image correlation were used to record the defor-
+mation and crack development processes of the slope. Based 
+on the analysis of recorded images from the high-speed cam-
+eras and DIC, the shattering and instability failure process of 
+the anti-dip bench rock slope can be divided into four stages: 
+initial tension crack on the bench inner side, followed by 
+settlement of slope top and bulging at its toe, then overall 
+downwards settlement in slope upper part and shear-sliding 
+in its lower part, and finally, culminating in shattering and 
+collapse of the slope surface induced by strong earthquake.
+When the earthquake loading is lower than 0.4 g, the shear 
+effect of the seismic waves on the slope is minimal, and the 
+slope does not exhibit significant deformation. However, 
+data from displacement sensors clearly indicate an increase 
+in slope displacement response correlating with an increase 
+in the peak ground motion of the earthquake input. This dis-
+placement response also shows an upward trend from the 
+slope toe to the slope top, with the deformation being pri-
+marily elastic. Once the earthquake loading reaches 0.4 g, 
+the slope toe and the inner side of the second bench start to 
+show tensile cracks. From the side view, the second bench is 
+noticeably wider than the other benches. Therefore, both the 
+slope toe and the inner side of the second bench become areas 
+of stress concentration, leading to the development of tensile 
+cracks under seismic action. As the input seismic amplitude 
+increases, these cracks continue to widen and deepen. Numer-
+ous cracks can be seen extending along the weak interlayer, 
+running parallel to each other. These cracks are approximately 
+10 cm in length and about 1.5 mm in width.
+When the earthquake loading reaches 0.6 g, a tensile crack 
+develops along the slope inclination from the slope top, extend-
+ing to the inner side of the third bench. This crack progresses 
+downward, indicating a tendency to split the slope. Observed 
+from the side view of the slope, these cracks continuously widen 
+and deepen as the input peak ground acceleration increases. The 
+repeated shear effects of seismic waves cause these cracks to 
+open and close cyclically. During the opening phase, small parti-
+cles fall and accumulate at the crack ends, while during the clos-
+ing phase, these particles are compressed and moved, creating 
+a wedge-splitting effect that further expands the cracks and pro-
+gressively destabilizes the slope. Due to the elevation amplifica-
+tion effect, there is a noticeable settlement in the upper part of 
+the slope, with higher elevations experiencing greater settlement. 
+On the outer sides of the benches, where there is less constraint 
+and a larger dynamic response acceleration, the settlement of the 
+outer sides of the second and third benches is more significant 
+than that of the inner sides. As the peak ground acceleration 
+increases, the shear strength of the slope rock mass decreases, 
+leading to the detachment and fall of small rock blocks from 
+the upper part of the slope, which then accumulate on the sec-
+ond bench. These observations indicate that the bench slope 
+surface acts as an environmentally friendly artificial reinforce-
+ment method. The presence of multiple benches in the bench 
+slope provides horizontal surfaces that allow the falling rock 
+mass from the upper part of the slope a longer path to disperse 
+and consume energy. This contrasts with a single surface slope 
+where rock blocks could quickly slide to the bottom, releasing 
+a large amount of energy and potentially causing impact forces 
+that could damage important structures, such as buildings and 
+roads in the lower part of the slope, thereby reducing the likeli-
+hood of slope failure.
+When the earthquake loading reaches 0.9 g, existing cracks 
+not only expand but also deepen, extending downwards and 
+segmenting the slope into blocks that are wider at the top and 
+narrower towards the bottom. Due to stress concentration 
+on the inner sides of the bench, these cracks are particularly 
+pronounced and extend along the strike of the slope. With 
+Fig. 9   The earth pressure responses on the slope. a peak earth pres-
+sure responses at various slope positions; b peak earth pressure distri-
+bution in the upper parts of the slope with loading amplitude of 0.3 g; 
+c peak earth pressure distribution in the lower parts of the slope with 
+loading amplitude of 0.3 g; d earth pressure difference between the 
+outer and inner sides of the third bench; e earth pressure difference 
+between the outer and inner sides of the second bench; f earth pres-
+sure difference between the outer and inner sides of the first bench
+◂
+
+5348
+	
+F. Yang et al.
+ongoing seismic activity, the cracks at the slope top continu-
+ously expand and connect with those in the lower part of the 
+slope. This fragmentation reduces the structural integrity of 
+the slope and alters the propagation path of seismic waves, 
+intensifying scattering and reflection phenomena during wave 
+transmission, thereby enhancing the filtering effect of the 
+slope. From a side view, numerous cracks can be seen extend-
+ing along the direction of the weak interlayer, with the crack 
+propagation exhibiting a tracking effect.
+When the earthquake loading reaches 1.3 g, the slope 
+undergoes continuous intense seismic action, resulting in 
+enormous deformation. The rear edge of the slope becomes 
+disengaged from the model container. The second and third 
+benches, as well as the slope top, experience varying degrees 
+of settlement, while a bulge forms at the toe of the slope. 
+A large number of cracks developed across the slope and 
+crisscrossed each other. Multiple cracks can be seen from the 
+side view extending along the slope inclination, indicating 
+shear sliding failure of the slope.
+4  Dynamic Numerical Simulation Analysis
+A full-scale anti-dip bench rock slope model was established 
+using the FLAC3D code, as shown in Fig. 12. The original 
+coordinate system was set at the lower left corner of the 
+model. To avoid seismic wave reflections at the boundaries, 
+the left boundary of the model is located 2.5 H away from 
+the rear edge of the slope, and the distance from the slope 
+toe to the right boundary of the model is 1.5 H, where H rep-
+resents the height of the slope. The total height of the model 
+is 2 H and includes both the rock mass and weak interlayer, 
+with their physical and mechanical parameters detailed in 
+Table 1. In terms of grid division, the maximum size of 
+each grid element is smaller than one-tenth of the highest 
+frequency component of the input seismic wave. Therefore, 
+in this series of numerical simulation experiments, the maxi-
+mum grid size was set to 1 m. To compare with the results of 
+the shaking table model tests, the input seismic wave in this 
+series of numerical simulation experiments was identical to 
+the Wenchuan seismic wave used in the shaking table tests. 
+Analyzing the time history curve of the waveform reveals 
+that the Wenchuan seismic wave displays two distinct energy 
+release characteristics and exhibits a pulse-like effect. The 
+acceleration time history was integrated to obtain the veloc-
+ity time history and displacement time history. It was found 
+that the displacement time history does not return to zero at 
+the endpoint. The Fourier spectrum of the Wolong seismic 
+waves demonstrates the main energy is concentrated within 
+30Hz, especially in the range of 0-10Hz. Additionally, in 
+geotechnical slope engineering, the natural frequencies of 
+slopes are typically low, and excessive excitation frequencies 
+can lead to computational instability in numerical simula-
+tions. Therefore, a low-pass filter with a cut-off frequency of 
+30 Hz was applied to the seismic wave prior to simulation. 
+This filtering prevents a continuous increase in the slope 
+displacement at the end of the seismic excitations and miti-
+gates the impact of high-frequency components on the wave 
+propagation in the numerical model. Additionally, the effect 
+of frequency on the dynamic response of the slope is further 
+analyzed by loading sine waves at different frequencies.
+The boundaries of the model play a critical role in the 
+outcomes of numerical simulations. In this series of numeri-
+cal simulations, free-field boundaries were implemented to 
+prevent seismic wave reflections at the boundaries. These 
+free-field boundaries are treated as infinite field boundaries, 
+effectively reducing or even eliminating the distortion of 
+seismic waves at the edges of the simulation. Damping set-
+tings are equally crucial for the reliability of the experimen-
+tal results. Generally, a common global dissipation model 
+Fig. 10   The macro deformation and earth pressure distribution across each bench of the anti-dip bench rock slope under seismic excitations
+
+5349
+Investigating Deformation and Failure Mechanisms of Discontinuous Anti‑dip Bench Rock Slopes…
+Fig. 11   The deformation and failure process of the anti-dip bench rock slope. a at 0.4 g peak ground acceleration; b at 0.6 g peak ground accel-
+eration; c at 0.9 g peak ground acceleration; d at 1.3 g peak ground acceleration
+
+5350
+	
+F. Yang et al.
+is used, introducing additional damping in the numerical 
+simulation to mimic the energy dissipation observed in the 
+rock mass. This is related to the overall stiffness and mass 
+of the slope system and is commonly utilized to characterize 
+the overall damping properties of the materials and the struc-
+ture itself. Rayleigh damping, often represented in terms of 
+proportional damping or fundamental frequency damping, 
+can be adjusted to match the dynamic characteristics of the 
+system. By setting appropriate Rayleigh damping param-
+eters, the simulation can more accurately model the energy 
+dissipation of the rock mass, enhancing the fidelity of the 
+simulation results. While Rayleigh damping can produce 
+satisfactory experimental results, it necessitates a smaller 
+time step in explicit codes to maintain numerical stability, 
+significantly increasing computation time. In contrast, local 
+damping addresses the limitations of Rayleigh damping 
+by ensuring that the damping force is proportional to the 
+magnitude of the unbalanced force and always acts oppo-
+site to the direction of the current velocity component. This 
+approach enhances computational efficiency. Local damping 
+was set in this series of numerical simulations. The inclusion 
+of local damping can introduce high-frequency noise into the 
+calculation results. Therefore, a low-pass filter was applied 
+to the input seismic wave before starting the numerical simu-
+lation to mitigate the impact of high-frequency components 
+on the experimental results. In line with the "Code for Seis-
+mic Design of Railway Engineering" (GB 50111–2006), the 
+critical damping ratio is set at 0.05, and the local damping 
+coefficient at 0.157 for these simulations (Verrucci et al. 
+2022).
+Figure  13a–d shows the peak ground displacement 
+response time history of the anti-dip bench rock slope under 
+the 0.6 g Wenchuan wave, with inputs in both horizontal 
+and vertical directions. From the displacement time history, 
+it can be observed that there are displacement baseline off-
+sets at various locations on the slope under seismic action, 
+indicative of residual deformation in the slope. For the first, 
+second, and third benches, the peak ground displacement 
+response on the outer side of each bench is greater than that 
+on the inner side. This discrepancy occurs because the outer 
+sides of the benches, being the bulging parts of the slope, 
+are less constrained and have greater freedom of movement 
+than the inner sides. Moreover, the mechanical parameters 
+on the bench outer side deteriorate continuously under mul-
+tiple seismic actions, accumulating plastic deformation and 
+leading to a more pronounced peak ground displacement 
+response compared to the bench inner sides. It is particularly 
+noteworthy that the peak ground displacement response on 
+the inner side of the second bench is the smallest among the 
+three benches. This indicates that a wide bench can effec-
+tively mitigate the displacement response of the slope. Such 
+Fig. 11   (continued)
+Fig. 12   Numerical simulation model and dynamic boundary setting
+
+5351
+Investigating Deformation and Failure Mechanisms of Discontinuous Anti‑dip Bench Rock Slopes…
+a configuration can transform the overall failure of the slope 
+into localized failure, thereby reducing the peak ground dis-
+placement response of the entire slope.
+By comparing the results of shaking table tests with 
+numerical simulations, the accuracy and reliability of the 
+numerical model can be validated. The peak ground dis-
+placement data from both methods were analyzed under 
+varying input peak ground accelerations, focusing on four 
+distinct monitoring points on the slope surface: D1, D3, D5, 
+and D7. The first three points are located on the outer side 
+of the bench, while the fourth point is located at the slope 
+top. Since the geometric dimensions of the numerical model 
+are identical to those of the prototype, the displacements 
+obtained from the shaking table tests were scaled by the geo-
+metric similarity ratio before comparison with the numerical 
+simulation results.
+As shown in Fig. 13e–h, under low-amplitude seismic 
+loading (0.1g to 0.4g), the results from the shaking table 
+tests and numerical simulations exhibit a high degree of 
+agreement. This consistency indicates that before the slope 
+transitions into a plastic state, the numerical simulation can 
+accurately captures the dynamic response of the slope under 
+seismic excitation. Within this loading range, the peak dis-
+placements from the model tests closely align with those 
+from the numerical simulations, confirming the validity 
+and reliability of the numerical model for analyzing slope 
+dynamic responses.
+However, as the amplitude of the input seismic waves 
+increases from 0.6 to 1.0 g, discrepancies emerge between 
+the shaking table tests and numerical simulations. These 
+differences become particularly pronounced when the input 
+peak acceleration exceeds 0.6g. This divergence is primarily 
+attributed to the substantial nonlinear behavior exhibited by 
+the rock materials once the slope enters a plastic state. In this 
+state, the deformation and failure mechanisms of the slope 
+become significantly more complex, leading to deviations 
+between numerical simulation predictions and the actual test 
+observations.
+Figure 14a–d show the displacement dynamic response 
+contour map under the loading of 3 Hz, 5 Hz, 7 Hz, and 10 
+Hz sine waves with an input peak ground acceleration of 0.6 
+g. Figure 14e represents the displacement dynamic response 
+under the action of the Wenchuan earthquake with the same 
+input acceleration, while Fig. 14f illustrates the final failure 
+state of the slope under the Wenchuan earthquake motion 
+during the shaking table test. From Fig. 14a–d, it is evi-
+dent that as the input frequency increases, the displacement 
+response of the slope transitions from overall to localized 
+deformation. Specifically, the low-frequency components of 
+the seismic waves induce overall deformation of the slope, 
+whereas the high-frequency components lead to localized 
+deformation. High-frequency components, with their shorter 
+periods, cause relative displacements between particles as 
+they propagate through the slope. This activity promotes 
+the formation of micro-cracks on the slope surface or at the 
+contact points of different lithologies, leading to particle 
+rearrangement and local shear sliding, which in turn results 
+in localized deformation. Conversely, the low-frequency 
+components, with their longer periods, allow more time for 
+the rock mass to react to seismic forces. This extended inter-
+action period enables horizontal sliding and tilting within 
+the slope, contributing to its overall deformation. It is worth 
+noting that when a 3 Hz sine wave is applied, its frequency 
+closely aligns with that of the Wenchuan earthquake, lead-
+ing to a more uniform distribution of peak ground displace-
+ment responses throughout the slope. The displacement 
+contour map indicates that a wide platform can transform 
+the overall failure of the slope into localized failure, making 
+it more favorable for seismic resistance in slope engineer-
+ing. Figure 14e and f depict the final failure state of the 
+anti-dip bench rock slope under the action of the Wenchuan 
+earthquake in both numerical simulations and shaking table 
+tests, revealing consistent deformation states. The top, sec-
+ond, and third benches of the slope show varying degrees of 
+settlement deformation, while the first bench exhibits some 
+bulging.
+Figure 15 shows the time history curves of shear strain 
+increments at various locations on the slope surface. In 
+the dynamic response analysis of rock slopes, these shear 
+strain increments represent the increase in strain caused by 
+shear deformation of the rock mass under seismic excita-
+tions. They reflect the relative increment of shear displace-
+ment at different positions within the rock mass compared 
+to the initial state and can be used to identify potential 
+sliding surfaces, cracks, and other sensitive areas within 
+the rock mass. Analyzing the shear strain increments of 
+the slope under seismic excitations allows for a detailed 
+study of the deformation and failure characteristics of the 
+slope. This analysis is instrumental in assessing the safety 
+and stability of the slope and provides valuable insights 
+for seismic design and reinforcement strategies. When the 
+shear strain increment is positive, it indicates a degree of 
+positive shear deformation within the rock mass, suggest-
+ing relative sliding or shearing between particles. Positive 
+shear strain increments typically correspond to phenom-
+ena such as extension or opening in the direction of the 
+vertical propagation of seismic waves. Conversely, nega-
+tive shear strain increments indicate a degree of reverse 
+shear deformation in the rock mass, signifying relative 
+compression or closure between particles. These insights 
+are essential for understanding the dynamic responses of 
+slopes to seismic forces and tailoring appropriate engi-
+neering responses.
+In this series of numerical simulations on anti-dip bench 
+rock slopes, the time history of shear strain increments at 
+different locations on the slope surface reveals that the inner 
+
+5352
+	
+F. Yang et al.
+(g)
+(h)
+
+5353
+Investigating Deformation and Failure Mechanisms of Discontinuous Anti‑dip Bench Rock Slopes…
+side of the first bench and the slope toe exhibit the larg-
+est shear strain increments. This observation indicates that 
+these areas are particularly susceptible to deformation and 
+cracking under seismic action, aligning with seismic failure 
+patterns noted in the shaking table tests. Specifically, the first 
+bench shows a negative shear strain increment on the inner 
+side (indicating compression) and a positive increment on 
+the outer side (indicating tension), corroborating the results 
+from the earth pressure analysis. The deformation of the 
+bench includes both translational and rotational displace-
+ments. For the third and second benches, the outer side 
+rotates around the inner side, resulting in greater compres-
+sion and consequently, a higher earth pressure response on 
+the outer side. However, the first bench exhibits an opposite 
+pattern of earth pressure distribution, where the inner side 
+experiences compression and the outer side tension. Fig-
+ure 16a depict the shear strain increment contour plots under 
+the loading of the Wenchuan earthquake wave and the failure 
+state of the second bench inner side. Figure 16b depict the 
+shear strain increment contour plots under the loading of the 
+3 Hz sine wave and the failure state of the bench toe. The 
+contour maps reveal that the inner side of the second bench 
+and the slope toe exhibit the highest shear strain increments, 
+indicating these areas are the most susceptible to cracking. 
+Additionally, a wide bench is shown to transform overall 
+deformation into localized deformation, enhancing seismic 
+resistance. This design strategy, employing both wide and 
+narrow platforms on the bench slope, proves beneficial for 
+the structural stability of slope engineering.
+5  Discussion
+5.1  Cyclic Tension–Compression Cycles 
+and Tensile‑Shear Fracturing in Rock Masses
+The stress state and stress levels within a rock mass signifi-
+cantly influence the failure mechanics of slopes. In engineer-
+ing contexts, rock masses are typically subjected to compres-
+sive stress, with shear failure being the predominant failure 
+mode for both rocks and soil. Earthquakes can cause instan-
+taneous changes in the stress field of slopes, leading to alter-
+nating positive and negative changes in the magnitude and 
+direction of stress within the elements. This phenomenon 
+primarily manifests as the instantaneous alternation between 
+compressive and shear stress states.
+Assuming that the elements within the slope can be ana-
+lyzed as a plane strain problem, an element can be extracted 
+from the slope for detailed analysis. When the slope is in a 
+static state, the maximum and minimum principal stresses 
+are represented by Formulas (9) and (10), respectively (Fang 
+et al. 2024).
+where 휎x , 휎z represent the horizontal and vertical stresses, 
+respectively, and, 휏xz is the shear stress.
+When the slope is subjected to horizontal seismic excita-
+tion, it induces additional shear stress 휏s in the stress state 
+of the element. The magnitude and direction of 휏s are influ-
+enced by the input seismic waves, and the stress state can 
+be represented by Formulas (11) and (12) (Li et al. 2024).
+The formula for calculating 휏s is as follows: 휏s = 휌CS휈S , 
+where 휌 is the mass density, CS is the velocity of s wave 
+propagating in rock mass, and 휈S is the input shear velocity 
+induced by seismic excitation in the horizontal direction.
+Under the action of earthquakes, the stress state of rock 
+masses is a combination of static stress and additional 
+dynamic stress induced by seismic loading. As the magni-
+tude and direction of dynamic stress constantly changing, 
+the seismic excitation modifies the original stress state of 
+the slope, leading to deformation and eventually causing 
+instability. The Mohr’s stress circle in initial stress state and 
+stress state under seismic load is shown in Fig. 17a.
+In the Mohr’s stress circle, seismic excitation causes vari-
+ations in the difference between the maximum and mini-
+mum principal stresses. As a result, the radius of the Mohr’s 
+stress circle fluctuates, either increasing or decreasing, while 
+its center continuously moves along the stress axis. These 
+changes in the stress state of the element can lead to three 
+possible conditions relative to the Mohr’s stress and the 
+shear strength: no shear failure, incipient shear failure, and 
+shear failure. When the minimum principal stress 휎3′ is less 
+than zero and greater than the dynamic tensile strength of 
+the rock, the element experiences tensile failure. Consider-
+ing the relationship between the Mohr’s stress circle and 
+(9)
+휎1 = 휎x + 휎z
+2
++
+√(휎x −휎z
+2
+)2
++ 휏2
+xz
+(10)
+휎3 = 휎x + 휎z
+2
+−
+√(휎x −휎z
+2
+)2
++ 휏2
+xz
+(11)
+휎
+1 = 휎x + 휎z
+2
++
+√(휎x −휎z
+2
+)2
++ (휏xz + 휏s
+)2
+(12)
+휎
+3 = 휎x + 휎z
+2
+−
+√(휎x −휎z
+2
+)2
++ (휏xz + 휏s)2
+Fig. 13   The peak ground displacement response time history curves 
+of the anti-dip bench rock slope to a 0.6 g Wenchuan wave excitation 
+and Comparison of experimental results between numerical simula-
+tion and shaking table tests. a the peak ground displacement response 
+of the first bench; b the peak ground displacement response of the 
+second bench; c the peak ground displacement response of the third 
+bench; d the peak ground displacement response of the slope toe and 
+slope top; e D1 monitoring point; f D3 monitoring point; g D5 moni-
+toring point; h D7 monitoring point
+◂
+
+5354
+	
+F. Yang et al.
+the envelope of shear strength, there are four distinct stress 
+state conditions for rock masses under seismic excitations, 
+as shown in Fig. 17b. Case 1: The rock element is in a com-
+pressive-shear state under seismic excitation. Both 휎1 and 휎3 
+are increased compared to the natural state. Case 2: The rock 
+element undergoes a tensile-shear state, where 휎1 increases 
+but 휎3 decreases to less than zero compared to the natural 
+state. Case 3: The rock element is in a compressive-shear 
+state, which 휎1 decreases and 휎3 increases compared to the 
+natural state. Case 4: The rock element exhibits a tensile-
+shear state, characterized by a decrease in both 휎1 and 휎3 
+compared to the natural state, with 휎3 dropping below zero 
+in this instance.
+The stress trajectories within the slope and the possible 
+failure mode of the slope are illustrated in Fig. 17c. Based 
+on the stress state of the unit body, the analyzed failure 
+modes include tension failure, tension-shear failure, shear 
+failure, and compression-shear failure. Tension failure usu-
+ally occurs at the top or edge of the slope, especially under 
+the action of earthquakes or other external forces. In these 
+areas, tensile forces acting on the rock induce crack for-
+mation and propagation. Tension-shear failure usually is 
+Fig. 14   The displacement dynamic response contour map and final 
+failure state of the anti-dip bench rock slope. a excited by a 3 Hz sine 
+wave; b excited by a 5 Hz sine wave; c excited by a 7 Hz sine wave; 
+d excited by a 10 Hz sine wave; e excited by a Wenchuan wave; f the 
+final failure state of the anti-dip bench rock slope
+
+5355
+Investigating Deformation and Failure Mechanisms of Discontinuous Anti‑dip Bench Rock Slopes…
+Fig. 15   The shear strain incre-
+ment time history curves of the 
+anti-dip bench rock slope under 
+a 0.6 g Wenchuan wave excita-
+tion. a the shear strain incre-
+ments of the first bench; b the 
+shear strain increments of the 
+second bench; c the shear strain 
+increments of the third bench; 
+d the shear strain increments of 
+the slope toe and slope top
+Fig. 16   The shear strain increment contour plots and failure state of the anti-dip bench rock slope. a excited by Wolong seismic wave and the 
+failure state of the second bench inner side; b excited by a 3 Hz sine wave and the failure state of the bench toe
+
+5356
+	
+F. Yang et al.
+Fig. 17   The stress state and 
+the failure pattern of the rock 
+slope. a stress state of the rock 
+under earthquake excitation; b 
+the Mohr’s stress circle and the 
+envelope of shear strength; c 
+the stress trajectories within the 
+slope and the possible failure 
+mode of the slope; d the ten-
+sion cracks at the slope top of 
+Shiziliang; e the tension cracks 
+at the slope top in the shaking 
+table test; f the bulging cracks 
+at the slope toe of Shigongping 
+landslides in Qingchuan; g the 
+bulging cracks at the slope toe 
+in the shaking table test
+
+5357
+Investigating Deformation and Failure Mechanisms of Discontinuous Anti‑dip Bench Rock Slopes…
+commonly observed in the middle and upper parts of the 
+slope when subjected to the combined tensile and shear 
+forces. This type of failure often results in localized instabil-
+ity and the development of sliding surfaces. Shear failure is 
+prevalent in the middle and lower parts of the slope, primar-
+ily due to horizontal shear forces. Such failures frequently 
+lead to slope sliding and the creation of sliding surfaces. 
+Compression-shear failure is typically found in the lower 
+part of the slope, occurring under the combined effects of 
+vertical pressure and horizontal shear forces. This mode of 
+failure often causes deep-seated sliding and the formation 
+of larger sliding surfaces.
+Under the action of strong seismic horizontal inertial 
+forces, a tensile crack typically first emerges at the rear 
+edge of the slope. With the continuous excitations during 
+the earthquake, both tensile cracking and shear sliding defor-
+mation evolve at the bottom of the crack, eventually forming 
+a sliding surface that leads to slope instability along this 
+plane. The Wenchuan earthquake triggered a large number 
+of slope failures that exhibited this cracking-shear-sliding 
+pattern, including notable events such as the Wangjiayan 
+landslide in Beichuan, the Guershan landslide in Chenjiaba 
+of Beichuan, the Dongjia landslide in Qingchuan, and the 
+Guantan landslide in Anxian (presented by Fig. 17d and f). 
+The same pattern, including tension cracks at the slope top 
+and bulging at the toe, was also replicated in shaking table 
+tests (see Fig. 17e and g). Therefore, the cracking-shear-
+sliding mechanism is recognized as the fundamental geolog-
+ical-mechanical pattern contributing to large-scale landslide 
+failures under intense seismic forces.
+5.2  Wedge Splitting Effects and Crack Propagation 
+in Rock Masses
+The seismic wave body wave includes both P wave and S wave. 
+The vertical vibrations caused by P-waves and the horizon-
+tal vibrations induced by S-waves can lead to changes in the 
+movement trends of rock masses, often in opposing directions. 
+The interplay between these two wave types will determine the 
+movement trends of the slope and its potential failure mode. 
+The displacement vector diagrams of the slope under the excita-
+tion of the Wenchuan seismic wave at different times are shown 
+in Fig. 18a and b. In general, the vertical acceleration produced 
+by the P wave is less than the gravitational acceleration. The 
+Fig. 17   (continued)
+
+5358
+	
+F. Yang et al.
+inertia force generated by the P wave can cause the gravita-
+tional field of the slope to experience either overloading or 
+underloading, thus increasing or decreasing the slope gravi-
+tational deformation tendency. When the slope is subjected to 
+the combined effects of P waves and S waves, the resultant 
+inertia force direction is toward the upper right, which may 
+cause the slope to exhibit ejection-like tendencies. As stress 
+wave traverses through weak interlayers, the contrasting prop-
+erties of the media on either side create reflected waves. This 
+results in both reflected wave stress and transmitted wave stress 
+at the interface. Near the weak interlayer, there is a dynamic 
+stress differentiation due to the reflection mechanism of stress 
+waves. Specifically, when a stress wave transitions from the 
+rock mass to a weak interlayer with a lower elastic modulus, 
+the reflected wave becomes a tensile wave, producing tensile 
+stress at the interface between the rock mass and the interlayer. 
+In addition, the greater the difference in the elastic modulus 
+of the rock mass near the interface, the more pronounced the 
+tensile stress, negatively impacting the stability of the rock 
+mass. Cracks that exhibit opening and filling behavior, indica-
+tive of medium changes, also generate reflected wave stress and 
+promote further opening and cracking. In the series of shaking 
+table tests, video footage from high-speed cameras shows that 
+under the action of seismic waves, the slope experiences tensile 
+stress at the weak interlayer, resulting in the separation of the 
+rock mass, as shown in Fig. 18c. The repeated tensile shear 
+action of seismic waves creates surface cracks on the slope, 
+allowing rocks to fall inward upon crack opening. These fallen 
+rock blocks exert a wedge effect during counter-compression 
+of the slope, further widening and extending the cracks. Due to 
+the periodic nature of seismic inertia forces, the vertical plane 
+can form an opening displacement during the tension half cycle 
+with fine particles on the top filling it under gravity. In the 
+compression half cycle, these filling materials are compacted, 
+leaving a small opening displacement since the openings can-
+not completely close. Under repeated vertical openings, new 
+openings continuously form, and particles fall and fill these 
+gaps, becoming compacted during reciprocating compression. 
+Fig. 18   The displacement vector diagram of the slope under Wenchuan seismic wave excitation at different times. a at 8 s; b at 23 s; c rock mass 
+separation; d wedge splitting effect
+
+5359
+Investigating Deformation and Failure Mechanisms of Discontinuous Anti‑dip Bench Rock Slopes…
+This ongoing process leads to the continuous generation of new 
+residual tension displacement, as shown in Fig. 18d.
+6  Conclusions
+This study employed large-scale shaking table tests and numer-
+ical simulations to investigate the deformation and failure 
+mechanisms of anti-dip bench rock slopes under seismic exci-
+tations. The introduction of the displacement baseline offset 
+ratio provided a novel approach to quantify the instability and 
+failure process of slopes after reaching the plastic state. The 
+findings of this study offer theoretical insights into the defor-
+mation and failure mechanisms of anti-dip bench rock slopes 
+under seismic excitations, contributing to the risk assessment 
+and seismic design of such slopes in earthquake-prone regions. 
+The key findings and conclusions are summarized as follows:
+1.	 Seismic excitations trigger a pronounced displacement 
+amplification effect at elevated parts of the slope. As the 
+input frequency of the sine wave increases, the displace-
+ment response in the upper regions of the slope becomes 
+more pronounced.
+2.	 Among all the benches, the second bench is the widest, 
+effectively dividing the slope into two distinct segments. 
+This division not only impedes the deformation and fail-
+ure processes within the slope but also diminishes the 
+stress conveyed from the upper slope, thus preventing 
+stress concentration at the slope toe and mitigating nega-
+tive impacts on the upper regions.
+3.	 The DBOR distribution revealed that plastic deformation 
+was more pronounced on the inner sides of benches com-
+pared to the outer sides, indicating the inner sides as the 
+initial zones to manifest cracking under seismic excitations.
+4.	 Displacement mutation serves as a criterion for identifying 
+potential instability and the likelihood of failure within 
+slopes. Critical displacement thresholds for seismic dam-
+age on each bench have been established by analyzing the 
+residual displacement responses on the inner side of each 
+bench of the anti-dip bench rock slope, coupled with the 
+critical acceleration peak that induces a sharp increase in 
+residual displacement. These thresholds align with the 
+California Geological Survey's benchmarks for shallow 
+slope failure, which range from 0 to 150 mm.
+5.	 Low-frequency seismic wave components are respon-
+sible for the overall deformation of the slope, whereas 
+high-frequency components contribute to localized 
+deformation. As localized deformations accumulate to 
+a critical extent, they precipitate a comprehensive slid-
+ing failure of the slope.
+6.	 The cyclic tension–compression cycles induced by 
+seismic waves led to tensile-shear fracturing in the rock 
+mass. A cracking-shear-sliding mechanism was iden-
+tified as the fundamental geological-mechanical pat-
+tern contributing to large-scale landslide failures under 
+intense seismic forces.
+7.	 The wedge-splitting effect, caused by the opening and 
+closing of cracks during seismic excitations, facilitated 
+the propagation of cracks within the rock mass, progres-
+sively destabilizing the slope.
+8.	 The dynamic earth pressure response exhibited a reso-
+nance phenomenon, with the maximum dynamic earth 
+pressure occurring at an input frequency of approxi-
+mately 15 Hz. The earth pressure on each bench in the 
+lower part was higher than on the upper part.
+Acknowledgements  This research was supported by the National 
+Natural Science Foundation of China (Grant No. 52108361 and 
+41977252), the Sichuan Science and Technology Program of China 
+(Grant No.2024ZYD0154, 2023YFS0436 and 2024NSFSC0159), 
+and the State Key Laboratory of Geohazard Prevention and Geoen-
+vironment Protection Independent Research Project (Grant No. SKL-
+GP2022Z015 and SKLGP2020Z001). All authors acknowledge the 
+anonymous reviewers for their comments.
+Funding  This research was supported by the National Natural Science 
+Foundation of China (Grant No. 52108361 and 41977252), the Sichuan 
+Science and Technology Program of China (Grant No.2024ZYD0154 
+and 2024NSFSC0159), and the State Key Laboratory of Geohazard 
+Prevention and Geoenvironment Protection Independent Research Pro-
+ject (Grant No. SKLGP2022Z015 and SKLGP2020Z001). All authors 
+acknowledge the anonymous reviewers for their comments.
+Data Availability  The original data supporting the conclusions of 
+this article will be made available by the authors, without undue 
+reservation.
+Declarations 
+Conflict of interest  The authors declare that they have no known com-
+peting financial interests or personal relationships that could have ap-
+peared to influence the work reported in this paper.
+Open Access  This article is licensed under a Creative Commons Attri-
+bution 4.0 International License, which permits use, sharing, adapta-
+tion, distribution and reproduction in any medium or format, as long 
+as you give appropriate credit to the original author(s) and the source, 
+provide a link to the Creative Commons licence, and indicate if changes 
+were made. The images or other third party material in this article are 
+included in the article’s Creative Commons licence, unless indicated 
+otherwise in a credit line to the material. If material is not included in 
+the article’s Creative Commons licence and your intended use is not 
+permitted by statutory regulation or exceeds the permitted use, you will 
+need to obtain permission directly from the copyright holder. To view a 
+copy of this licence, visit http://creativecommons.org/licenses/by/4.0/.
+References
+Bao N, Chen JF, Sun R, Yan KM, Shi ZM (2024) Seismic response of 
+soil arching in pile-reinforced soil slopes: insights from shaking 
+table tests. Soil Dyn Earthq Eng 184:108852. https://​doi.​org/​10.​
+1016/j.​soild​yn.​2024.​108852
+
+5360
+	
+F. Yang et al.
+California Geological Survey (2008) Guidelines for evaluating and 
+mitigating seismic hazards in California [M]. California Geologi-
+cal Survey Publication, California, pp 1–40
+Cao LC, Zhang JJ, Wang ZJ, Liu FC, Liu Y, Yang YY (2019) Dynamic 
+response and dynamic failure mode of the slope subjected to 
+earthquake and rainfall. Landslides. https://​doi.​org/​10.​1007/​
+s10346-​019-​01179-7
+Che AL, Yang HK, Wang B, Ge XR (2016) Wave propagations through 
+jointed rock masses and their effects on the stability of slopes. 
+Eng Geol 2016(201):45–56. https://​doi.​org/​10.​1016/j.​enggeo.​
+2015.​12.​018
+Chen CC, Li HH, Chiu YC, Tasi YK (2020a) Dynamic response of a 
+physical anti-dip rock slope model revealed by shaking table tests. 
+Eng Geol. https://​doi.​org/​10.​1016/j.​enggeo.​2020.​105772
+Chen GP, Yang CW, Tong XH, Wen H, Yue M (2023) Shaking table 
+test on dynamic response of a deposit slope with a weak inter-
+layer reinforced by the pile-anchor structure. Soil Dyn Earthq Eng 
+170:107912. https://​doi.​org/​10.​1016/j.​soild​yn.​2023.​107912
+Chen JC, Wang LM, Pu XW, Li FX, Li TL (2020b) Experimental study 
+on the dynamic characteristics of low-angle loess slope under the 
+influence of long-and short-term effects of rainfall before earth-
+quake. Eng Geol 273:105684. https://​doi.​org/​10.​1016/j.​enggeo.​
+2020.​105684
+Dang WG, Tao K, Chen XF (2022) Frictional behavior of planar and 
+rough granite fractures subjected to normal load oscillations of 
+different amplitudes[J]. J Rock Mech Geotech Eng 14(3):746–756. 
+https://​doi.​org/​10.​1016/j.​jrmge.​2021.​09.​011
+Dong S, Feng WK, Yin YB, Hu W, Dai HC, Zhang GQ (2020) Calcu-
+lating the permanent displacement of a rock slope based on the 
+shear characteristics of a structural plane under cyclic loading. 
+Rock Mech Rock Eng 53:4583–4598. https://​doi.​org/​10.​1007/​
+s00603-​020-​02188-y
+Dong JY, Wang C, Huang ZQ, Yang JH, Xue L (2022) Shaking table 
+model test to determine dynamic response characteristics and 
+failure modes of steep bedding rock slope. Rock Mech Rock Eng 
+55(6):3645–3658. https://​doi.​org/​10.​1007/​s00603-​022-​02822-x
+Dong JY, Wang C, Huang Z, Yang J, Xue L (2021) Dynamic response 
+characteristics and instability criteria of a slope with a middle 
+locked segment. Soil Dyn Earthq Eng. https://​doi.​org/​10.​1016/j.​
+soild​yn.​2021.​106899
+Fan G, Zhang JJ, Wu JB, Yan KM (2016) Dynamic response and 
+dynamic failure mode of a weak intercalated rock slope using a 
+shaking table. Rock Mech Rock Eng 49(8):3243–3256. https://​
+doi.​org/​10.​1007/​s00603-​016-​0971-7
+Fan G, Zhang LM, Zhang JJ, Ouyang F (2017) Energy-based analysis 
+of mechanisms of earthquake-induced landslide using hilbert-
+huang transform and marginal spectrum. Rock Mech Rock Eng 
+50(9):2425–2441. https://​doi.​org/​10.​1007/​s00603-​017-​1245-8
+Fan G, Zhang LM, Zhang JJ, Yang CW (2019) Analysis of seismic 
+stability of an obsequent rock slope using time-frequency method. 
+Rock Mech Rock Eng 52(10):3809–3823. https://​doi.​org/​10.​1007/​
+s00603-​019-​01821-9
+Fang K, Fu Y, Tang H, Gao T, An P, Wu Q (2024) Landslide model 
+tests with a miniature 2D principal stress sensor. J Rock Mech 
+Geotech Eng. https://​doi.​org/​10.​1016/j.​jrmge.​2023.​12.​025
+He K, Li YJ, Ma GT, Hu XW, Liu B, Ma ZG, Xu ZP (2020) Fail-
+ure mode analysis of post-seismic rockfall in shattered moun-
+tains exemplified by detailed investigation and numerical mod-
+elling. Landslides 18(1):425–446. https://​doi.​org/​10.​1007/​
+s10346-​020-​01532-1
+He JX, Qi SW, Zhan ZF, Guo SF, Li CL, Zheng BW, Huang XL, Zou 
+Y, Yang GX, Liang N (2021) Seismic response characteristics and 
+deformation evolution of the bedding rock slope using a large-
+scale shaking table. Landslides 18(8):2835–2853. https://​doi.​org/​
+10.​1007/​s10346-​021-​01682-w
+Li HB, Li XW, Ning Y, Jiang SF, Zhou JW (2019) Dynamical process 
+of the Hongshiyan landslide induced by the 2014 Ludian earth-
+quake and stability evaluation of the back scarp of the remnant 
+slope. Bull Eng Geol Environ 78(3):2081–2092. https://​doi.​org/​
+10.​1007/​s10064-​018-​1233-6
+Li H, Pel L, You Z, Smeulders D (2024) Stress-dependent instantane-
+ous cohesion and friction angle for the Mohr-Coulomb criterion. 
+Int J Mech Sci 283:109652. https://​doi.​org/​10.​1016/j.​ijmec​sci
+Ning YB, Zhang GC, Tang HM, Shen WC, Shen PW (2019) Process 
+analysis of toppling failure on anti-dip rock slopes under seismic 
+load in southwest China. Rock Mech Rock Eng 52(11):4439–
+4455. https://​doi.​org/​10.​1007/​s00603-​019-​01855-z
+Pu XW, Wang LM, Wang P, Chai SF (2020) Study of shaking table test 
+of seismic subsidence loess landslides induced by the coupling 
+effect of earthquakes and rainfall. Nat Hazards 103(1):923–945. 
+https://​doi.​org/​10.​1007/​s11069-​020-​04019-3
+Peng JB, Wang SK, Wang QY, Zhuang JQ, Huang WL, Zhu XH, Leng 
+YQ, Ma PH (2019) Distribution and genetic types of loess land-
+slides in China. J Asian Earth Sci 170:329–350. https://​doi.​org/​
+10.​1016/j.​jseaes.​2018.​11.​015
+Qi SW, He JX, Zhan ZF (2022) A single surface slope effects on seis-
+mic response based on shaking table test and numerical simula-
+tion. Eng Geol. https://​doi.​org/​10.​1016/j.​enggeo.​2022.​106762
+Shi WP, Zhang JW, Song DQ, Liu XL, Wang EZ, Zhao JJ (2024) 
+Dynamic response characteristics and instability mechanism of 
+high-steep bedding rock slope at the tunnel portal in high-intensity 
+seismic region. Rock Mech Rock Eng 57(2):827–849. https://​doi.​
+org/​10.​1007/​s00603-​023-​03629-0
+Song DQ, Che AL, Zhu RJ, Ge XR (2019) Natural frequency charac-
+teristics of rock masses containing a complex geological struc-
+ture and their effects on the dynamic stability of slopes. Rock 
+Mech Rock Eng 52(11):4457–4473. https://​doi.​org/​10.​1007/​
+s00603-​019-​01885-7
+Song DQ, Liu XL, Huang J, Zhang JM (2021a) Energy-based analysis 
+of seismic failure mechanism of a rock slope with discontinui-
+ties using Hilbert-Huang transform and marginal spectrum in the 
+time-frequency domain. Landslides 18(1):105–123. https://​doi.​
+org/​10.​1007/​s10346-​020-​01491-7
+Song DQ, Liu XL, Huang J, Zhang YF, Zhang JM, Nkwenti BN 
+(2021b) Seismic cumulative failure effects on a reservoir bank 
+slope with a complex geological structure considering plastic 
+deformation characteristics using shaking table tests. Eng Geol 
+286:106085. https://​doi.​org/​10.​1016/j.​enggeo.​2021.​106085
+Song DQ, Liu XL, Li B, Zhang JM, Bastos JJV (2020) Assessing the 
+influence of a rapid water drawdown on the seismic response 
+characteristics of a reservoir rock slope using time–frequency 
+analysis. Acta Geotech 16:1281–1302. https://​doi.​org/​10.​1007/​
+s11440-​020-​01094-5
+Su LJ, Li C, Zhang CL (2021) Large-scale shaking table tests on the 
+seismic responses of soil slopes with various natural densities. 
+Soil Dyn Earthq Eng 140:106409. https://​doi.​org/​10.​1016/j.​soild​
+yn.​2020.​106409
+Tao K, Dang WG (2023) Frictional behavior of quartz gouge during 
+slide-hold-slide considering normal stress oscillation[J]. Int J Coal 
+Sci Technol 10(3):34. https://​doi.​org/​10.​1016/j.​jrmge.​2021.​09.​011
+Tao K, Dang WG, Li YC (2023a) Frictional sliding of infilled planar gran-
+ite fracture under oscillating normal stress. Int J Min Sci Technol 
+33(6):687–701. https://​doi.​org/​10.​1016/j.​ijmst.​2022.​12.​001
+Tao K, Dang WG, Liao X, Li XX (2023b) Experimental study on 
+the slip evolution of planar fractures subjected to cyclic normal 
+stress[J]. Int J Coal Sci Technol 10(4):67
+Verrucci L, Pagliaroli A, Lanzo G, Di Buccio F, Biasco AP, Cucci C 
+(2022) Damping formulations for finite difference linear dynamic 
+analyses: performance and practical recommendations. Comput 
+Geotech 142:104568
+
+5361
+Investigating Deformation and Failure Mechanisms of Discontinuous Anti‑dip Bench Rock Slopes…
+Wu ZJ, Zhao DY, Che AL, Chen DW, Liang C (2020a) Dynamic 
+response characteristics and failure mode of slopes on the 
+loess tableland using a shaking-table model test. Landslides 
+17(7):1561–1575. https://​doi.​org/​10.​1007/​s10346-​020-​01373-y
+Wu ZJ, Zhang D, Wang S, Liang C, Zhao D (2020b) Dynamic-response 
+characteristics and deformation evolution of loess slopes under 
+seismic loads. Eng Geol 267:105507. https://​doi.​org/​10.​1016/j.​
+enggeo.​2020.​105507
+Xin CL, Wang ZZ, Gao B (2018) Shaking table tests on seismic 
+response and damage mode of tunnel linings in diverse tunnel-
+void interaction states. Tunn Undergr Space Technol 77:295–304. 
+https://​doi.​org/​10.​1016/j.​tust.​2018.​03.​010
+Xin CL, Wang ZZ, Yu J (2020) The evaluation on shock absorption 
+performance of buffer layer around the cross section of tunnel lin-
+ing. Soil Dyn Earthq Eng 131:106032. https://​doi.​org/​10.​1016/j.​
+soild​yn.​2020.​106032
+Xin CL, Wang ZZ, Zhou JM, Gao B (2019) Shaking table tests on 
+seismic behavior of polypropylene fiber reinforced concrete tunnel 
+lining. Tunn Undergr Space Technol 88:1–15. https://​doi.​org/​10.​
+1016/j.​tust.​2019.​02.​019
+Xin CL, Li WH, Wang Z, Feng WK, Hajirasouliha I, Yu XY (2024) 
+Shaking table tests on the stability of dip and anti-dip rock slopes 
+with structural planes induced by seismic motions. Eng Geol 
+341:107707
+Xu M, Tang YF, Liu XS, Yang HQ, Luo B (2018) A shaking table 
+model test on a rock slope anchored with adaptive anchor cables. 
+Int J Rock Mech Min Sci 112:201–208. https://​doi.​org/​10.​1016/j.​
+ijrmms.​2018.​10.​021
+Yin JH, Chen J, Xu XW, Wang XL, Zheng YG (2010) The character-
+istics of the landslides triggered by the Wenchuan Ms 8.0 earth-
+quake from Anxian to Beichuan. J Asian Earth Sci 37(5):452–459. 
+https://​doi.​org/​10.​1016/j.​jseaes.​2009.​12.​002
+Zhang CL, Miao SS, Su LJ (2022) Seismic behaviour of granular slope 
+under railway embankment in large-scale shaking table test. Eng 
+Geol 305:106714. https://​doi.​org/​10.​1016/j.​enggeo.​2022.​106714
+Zhou HX, Che AL, Zhu RJ (2022) Damage evolution of rock slopes 
+under seismic motions using shaking table test. Rock Mech Rock 
+Eng 55(8):4979–4997. https://​doi.​org/​10.​1016/j.​enggeo.​2018.​08.​011
+Publisher's Note  Springer Nature remains neutral with regard to 
+jurisdictional claims in published maps and institutional affiliations.

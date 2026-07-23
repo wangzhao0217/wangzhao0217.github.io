@@ -1,0 +1,1567 @@
+Construction and Building Materials 415 (2024) 134890
+Available online 23 January 2024
+0950-0618/© 2024 Published by Elsevier Ltd.
+Effect of fibre length on the mechanical properties of SFRC using recycled 
+Steel fibres 
+Zhao Wang a, Hang Hu b,c,*, Panos Papastergiou a, Harris Angelakopoulos d, 
+Maurizio Guadagnini a, Kypros Pilakoutas a 
+a Department of Civil and Structural Engineering, The University of Sheffield, Sir Frederick Mappin Building, Mappin Street, Sheffield S1 3JD, UK 
+b Department of Engineering, Chengdu Communication Investment Corporation, 66 1st Shenghe Road, Chengdu 610041, China 
+c Department of Civil and Structural Engineering, The University of Sheffield, Sir Frederick Mappin Building, Mappin Street, Sheffield S1 3JD, UK 
+d Zero Waste Works Limited Charlotte House, 500 Charlotte Road, Sheffield S2 4ER, UK   
+A R T I C L E I N F O  
+Keywords: 
+Fibre lengths, Steel Fibre Reinforced Concrete 
+(SFRC) 
+Recycled Tyre Steel Cords (RTSC), Recycled 
+Tyre Cord Filaments (RTCF) 
+Recycled Tyre Steel Fibres (RTSF) 
+3-point notched prism flexural tests 
+A B S T R A C T  
+Despite significant amount of research on Recycled Tyre Steel Fibres (RTSF – extracted from end-of-life tyres) as 
+reinforcement in concrete slab applications, the potential of RTSF is not fully understood mainly due to their 
+variability in length (and aspect ratio). This paper investigates the effect of fibre length on the mechanical 
+properties of Steel Fibre Reinforced Concrete (SFRC) using Recycled Tyre Cord Filaments (RTCF - extracted from 
+unvulcanised rubber tyre belt off-cuts) which have very similar mechanical properties to RTSF. The flexural 
+behaviour of SFRC prisms is evaluated using fixed lengths of RTCF (6, 9, 12, 15, 18, 21 and 24 mm) at a dosage of 
+30 kg/m3. Based on the flexural results, inverse Finite Element analysis (FEA) is used to determine the uniaxial 
+tensile behaviour of the SFRC mixes. Mixes with fibres longer than 15 mm control macro-cracks well whilst 
+residual flexural tensile strength fR increases almost linearly with fibre length, up to fibre lengths of 21 mm. 
+Fibres with a length of 21 mm are the optimum for the mixes examined in this study in terms of post-cracking 
+flexural behaviour and energy dissipation. The relative contribution of various fibre lengths (aspect ratios) in an 
+RTSF mix is predicted well by using an equivalent energy approach. This work will help determine the efficiency 
+of RTSF and speed up their adoption by industry.   
+1. Introduction 
+Approximately 1.7 billion tyres/annum reach the end of their useful 
+lives worldwide [1,2]. Although these tyres can no longer be used for 
+their initial purpose, their highly engineered constituents (rubber and 
+steel wire) maintain their intrinsic mechanical properties (high strength, 
+durability, elasticity, and damping) and could be reused in other com­
+posites, such as concrete, to replace virgin materials. To extract the steel 
+wire reinforcement from end-of-life tyres, tyre recycling plants usually 
+employ reduction mechanical processes such as shredding and granu­
+lation. These processes produce steel fibres of irregular geometrical 
+shape, length and diameter and are often heavily contaminated with 
+rubber particles (up to 20% by mass). As a result, these fibres are not 
+suitable as reinforcement in concrete, since rubber particles can reduce 
+concrete strength whilst fibres with large aspect ratios can cause fibre 
+agglomeration (balling) and short fibres have insufficient bond to 
+develop stress. Researchers at the University of Sheffield (USFD) [3–20] 
+addressed this problem by controlling the amount of fibres with large 
+aspect ratios and developed a method to produce clean, sorted and 
+classified steel fibres by introducing additional processing techniques 
+and employing a quality assurance system based on photogrammetry 
+methods. The resulting Recycled Tyre Steel Fibres (RTSF) have minimal 
+rubber contamination (less than 1% by mass) and are within a specific 
+range of lengths (usually from 5 to 40 mm) and diameters (ranging from 
+0.12 to 0.4 mm) [9,19,21,22]. Since 1999, USFD has conducted exten­
+sive experimental work [4,5,7–9,13–20] to investigate the mechanical 
+properties of Steel Fibre Reinforced Concrete (SFRC) using RTSF 
+(Fig. 1a) and assess RTSF’s potential in structural applications. The re­
+sults show that RTSF can partially or even fully replace Manufactured 
+Steel 
+Fibres 
+(MSF) 
+for 
+SFRC 
+applications 
+including 
+conventionally-placed concrete [4,5,9,13,16,18–27], sprayed concrete 
+[7], self-compacted concrete [16,28,29] and roller-compacted concrete 
+[6,7,17]. In addition, Life Cycle Assessment (LCA) studies showed that 
+the production of RTSF requires only 5% of the energy needed to 
+* Corresponding author at: Department of Engineering, Chengdu Communication Investment Corporation, 66 1st Shenghe Road, Chengdu 610041, China. 
+E-mail address: huhang750@hotmail.com (H. Hu).  
+Contents lists available at ScienceDirect 
+Construction and Building Materials 
+journal homepage: www.elsevier.com/locate/conbuildmat 
+https://doi.org/10.1016/j.conbuildmat.2024.134890 
+Received 3 September 2023; Received in revised form 14 December 2023; Accepted 2 January 2024   
+
+Construction and Building Materials 415 (2024) 134890
+2
+produce MSF, thus highlighting the significant environmental benefits of 
+using RTSF as reinforcement in concrete [27,28]. 
+In the majority of existing SFRC applications [30], a single type of 
+MSF is used and the geometrical and mechanical properties of the fibres 
+are selected to suit the specific application. The use of single-type MSF is 
+effective in arresting or bridging cracks of specified widths, but the 
+fracture process of the concrete matrix is multi-scale and progressive 
+[30]. Since RTSF have a wide length distribution (and aspect ratio) and 
+their nominal tensile strength is higher than that of typical MSF, they 
+can potentially provide better crack control over a broader range of 
+“micro” and “meso” crack widths. Nevertheless, previous studies [7,9, 
+10,14,21,22,25,26] show that RTSF cannot provide better flexural per­
+formance in SFRC than specially designed MSF (at the same dosage), in 
+particular when “macro” cracks develop (>0.5 mm). As RTSF have 
+variable length distribution, the inferior flexural performance at the 
+macro level can be attributed to the inability of RTSF (with lengths in the 
+range of 5–20 mm) to control macro cracks in concrete with aggregates 
+of similar or larger diameter than the fibres. 
+Fibres arising from the recycling of tyre steel cords (Recycled Tyre 
+Steel Cords - RTSC, Fig. 1b [10]) have very similar mechanical/geo­
+metrical characteristics to RTSF (Fig. 1a), but they are rubber-free, 
+relatively straight in shape, and have the added advantage that they 
+can be cut to specific lengths. These fibres are extracted from 
+pre-vulcanised rubber belts (off-cuts from the tyre manufacturing pro­
+cess) using a cryogenic process which freezes the belts and then extracts 
+the reinforcement cords intact. A typical RTSC comprises 7–16 steel 
+filaments which are twisted together to form the cord. This cord is then 
+cut into predetermined lengths and the filaments (called Recycled Tyre 
+Cord Filaments – RTCF, Fig. 1c) separate out. 
+Whilst the effect of fibres in enhancing the toughness of concrete is 
+well known, research on the effect of fibre length on the uniaxial tensile 
+concrete strength is still inconclusive. Furlan and De Hanai [31] 
+observed that the addition of 1–2% (by volume) of longer steel fibres, 
+can increase the uniaxial tensile strength of concrete, whilst Meddah and 
+Bencheikh [32] showed that small amounts of such steel fibres can only 
+improve the post-cracking performance of concrete. Hence, it is critical 
+to assess the contribution of each fibre length to the flexural behaviour 
+of SFRC. 
+This study aims to investigate the effect of fibre length on the me­
+chanical properties of SFRC using RTCF. Since RTCF are made from the 
+same material as RTSF, the outcome of this study can be used to improve 
+RTSF quality and further understand the performance of RTSF rein­
+forced concrete. To achieve this, 7 lengths of RTCF are selected with 
+resulting aspect ratios ranging from 30 to 120, which fall within 
+commonly used values for MSF [39]. 
+This paper presents the experimental details, including RTCF prop­
+erties, concrete mix design as well as test setup and procedures adopted 
+to determine the compressive and flexural performance of SFRC with 
+RTCF of different lengths. It then discusses the experimental results, 
+together with the results of inverse analysis used to simulate the 
+mechanical properties of SFRC. At the end, key findings and conclusions 
+are summarised. 
+The work presented in this study was part of the FP7 EU-funded 
+project “Anagennisi” [40] which aimed to develop uses for all 
+end-of-life tyre by-products (rubber, steel and polymer fibres) as rein­
+forcement in concrete. 
+2. Experimental details and results 
+2.1. Fibre characterisation 
+The RTCF used in this study were derived from tyre cord (RTSC) 
+extracted from pre-vulcanised rubber tyre belts and cut to specific 
+lengths (6, 9, 12, 15, 18, 21 and 24 mm) with aspect ratios ranging from 
+30 to 120. Each extracted cord (typically 0.5–2.0 m long) consisted of 11 
+brass coated cold drawn steel filaments twisted together with a thin 
+filament spirally wrapped around them to hold them together. The 
+tensile strength of RTSC was found to be around 2600 MPa (based on an 
+average of 30 samples) by performing direct tension tests [10]. The 
+diameter was 0.20±0.01 mm. RTCF has very similar tensile strength to 
+RTSF (2570 MPa [7]), indicating that the shredding process does not 
+affect much the mechanical properties of the wire. 
+2.2. Experimental programme and concrete mix design 
+The concrete mix design was kept the same as the one used in pre­
+vious studies by the authors [9,10] to enable direct comparison of the 
+mechanical properties of different SFRC mixes. A dosage of 30 kg/m3 of 
+fibres (fibre volume Vf = 0.38%) was selected for this parametric study 
+as commonly used in structural applications, such as slabs-on-grade [9]. 
+To assess the flexural and compressive properties of the SFRC mixes, 6 
+prisms and 3 cubes were cast per mix (from the same batch of concrete), 
+whilst 6 plain concrete prisms and 3 cubes (mix PC) were also manu­
+factured and tested for control and comparison purposes. Table 1 shows 
+the details of the experimental programme, including properties of the 
+concrete mix (slump, density), modulus of elasticity derived from flex­
+ural testing (Efm) and compressive testing (Ecm), as well as the average 
+compressive strength (fcu) on the day of testing (65–70 days after cast­
+ing). Each mix was named according to the length of the fibre used (for 
+example, mix 12 refers to a mix reinforced with 12 mm long RTCF). The 
+average density for each mix was determined from the prisms’ di­
+mensions and their weight on the day of testing. Visual inspection of the 
+fractured surfaces of the prisms, after testing, did not reveal any sig­
+nificant void concentrations. 
+2.2.1. Concrete mix design and casting procedure 
+A ready-mix concrete with a target 28-day compressive strength, fcu, 
+of 40 MPa was used in this study. The concrete mix design was as fol­
+lows: 150 kg/m3 of cement (CEM I) and 150 kg/m3 of GGBS, 1097 kg/ 
+m3 of coarse aggregates (4–20 mm) and 804 kg/m3 of fine gravel 
+Fig. 1. Recycled Tyre Steel Fibres (RTSF) [a], Recycled Tyre Steel Cords (RTSC) [b] and Recycled Tyre Cord Filaments (RTCF) [c].  
+Z. Wang et al.                                                                                                                                                                                                                                   
+
+Construction and Building Materials 415 (2024) 134890
+3
+aggregates (0–4 mm), with initial water cement ratio (w/c) of 0.55. 
+The initial slump of the delivered ready mix concrete was 35 mm 
+which is quite low for fibre dispersal. As the workability of concrete is 
+expected to reduce further by the inclusion of fibres [21,42], additional 
+water (10 l/m3 of concrete) and superplasticiser (4.5 l/m3 of concrete) 
+were added to the concrete mix to bring the slump closer to 200 mm 
+(considered optimum workability prior to the addition of steel fibres) 
+and help avoid agglomeration and achieve a more uniform fibre 
+dispersion The fibres were then dispersed into the concrete manually 
+(the dispersal time varied from 5 to 8 min) in a medium-sized drum 
+mixer with a capacity of 180 litres. After the addition of fibres, the final 
+slump was brought back to ordinary workability levels (90 mm – final 
+slump). Although the slump test is not the best indicator of workability 
+for SFRC [43], it is still used by the flooring industry as a quality control 
+method. Past studies [41,42] suggested that slump values of concrete 
+could decrease with increasing fibre length (aspect ratio), however this 
+study shows that there was no significant influence of fibre length on 
+workability. This may be due to the small dosage used (30 kg/m3), as 
+suggested by Centonze et al. [21] and Leone et al. [25]. 
+According to BS EN 14651: 2005 [38], the prismatic moulds 
+(550mmx150mmx150mm) were first filled in the centre and then the 
+edges whilst being compacted by external vibration. No major fibre 
+agglomeration issues were observed during casting. The specimens were 
+covered with wet hessian and cured in the moulds for 48 h before 
+demoulding. After demoulding, all specimens were covered again with 
+wet hessian and plastic sheets to retain moisture for a period of 28 days, 
+at a temperature of 22 ± 3 ◦C. After curing, all hessian and plastic sheets 
+were removed and the specimens were left to dry. All specimens were 
+tested at the age of 65–70 days. 
+2.3. Compressive tests 
+2.3.1. Testing procedure 
+The concrete cubes (150 mm) were tested under uniaxial compres­
+sive loading at a constant loading rate of 0.4 MPa/s, according to BS EN 
+12390–3: 2019 [44]. The dimensions of each cube were measured prior 
+to testing to obtain accurate estimates of strength. 
+2.3.2. Compressive strength 
+The SFRC average cube compressive strength, fcu, ranged from 43.2 
+to 52.5 MPa, whilst the plain concrete average compressive strength was 
+47 MPa (see Table 1). Overall, the use of different lengths of RTCF 
+marginally affected the compressive strength concrete. Compared to 
+plain concrete, mix 12 showed a small loss of strength (about 8%), whist 
+the other mixes exhibited slightly higher compressive strength (up to 
+12%). Longer fibres can delay the initiation of lateral microcracks and 
+slow down their coalescence in macrocracks; the compaction of con­
+crete, however, is more likely to be adversely affected by longer fibres, 
+leading to strength degradation of concrete. A similar observation was 
+made [42] for concrete reinforced with MSF (up to 120 kg/m3) with 
+aspect ratios ranging from 45 to 80. Finally, the variability in concrete 
+compressive strength of the SFRC mixes (see Table 1) was similar to that 
+of plain concrete. Overall it can be concluded that the RTCF length does 
+not significantly affect compressive strength. 
+2.4. Flexural tests 
+Uniaxial tensile tests on SFRC are difficult to perform and interpret 
+[4,16,33,34], hence, flexural tests are usually conducted to characterise 
+the nominal tensile characteristics of SFRC. Compared to other test 
+methods, such as the 4-point un-notched prism [35], 3 point supported 
+circular slab [36] and boundary supported square slab tests [37], the 
+3-point flexural test on notched prisms [38] has the advantage of 
+generating a predetermined crack plane, leading to better comparisons 
+between SFRC mixes. Hence, for this study, the EN 14651: 2005 stan­
+dard is adopted to quantify the tensile properties of the mixes with 
+different lengths of RTCF. 
+2.4.1. Testing arrangement and procedure 
+According to BS EN 14651:2005, a notch (25 mm deep and 5 mm 
+wide) was sawn at mid-span of each prism (550×150×150mm) one day 
+before testing. All specimens were tested under a 3-point bending 
+arrangement (Fig. 2), in a 300 kN universal electromechanical testing 
+machine. To eliminate experimental measurement errors induced by 
+support movements and the stiffness of the loading frame, an aluminium 
+yoke [45] was used to measure deflections relative to the specimen 
+supports, using Linear Variable Differential Transformers (LVDTs). A 
+clip gauge (gauge length 12.5 mm) was mounted under the notch to 
+monitor the Crack Mouth Opening Displacement (CMOD). Apart from 
+deflection and CMOD, the applied load was also recorded during testing. 
+The tests were conducted in displacement control at a constant 
+Table 1 
+Fresh and hardened properties of RTCF mixes.  
+RTCF 
+dosage 
+(kg/m3) 
+RTCF 
+mix 
+Slump 
+(mm) 
+initial/final* 
+Average density 
+(kg/m3) 
+Standard deviation (Stdev) (kg/m3) 
+AVG fcu* * 
+(MPa) 
+SFRC/Plain 
+Stdev (MPa)* * 
+SFRC/Plain 
+Efm (GPa)* ** 
+Ecm * ** (GPa) 
+30 
+PC   
+2378  
+10  
+47.0  
+1.5 
+33.2 (12%)  
+35.0 
+6 
+35/90  
+2371  
+14  
+47.9  
+1.3 
+32.6 (11%)  
+35.2 
+9 
+35/90  
+2379  
+16  
+47.8  
+0.4 
+33.9 (8%)  
+35.2 
+12 
+35/90  
+2355  
+9  
+43.2  
+0.8 
+32.6 (6%)  
+34.1 
+15 
+35/90  
+2352  
+9  
+52.0  
+1.3 
+32.6 (6%)  
+36.1 
+18 
+35/90  
+2372  
+3  
+51.8  
+0.6 
+33.2 (3%)  
+36.0 
+21 
+35/90  
+2354  
+8  
+52.5  
+2.0 
+34.7 (10%)  
+36.2 
+24 
+35/90  
+2379  
+11  
+51.0  
+1.3 
+34.1 (4%)  
+36.0  
+* See Section 2.2.1, * * See Section 2.3.2, * ** See Section 2.4.2 
+Fig. 2. Experimental arrangement for flexural prism tests.  
+Z. Wang et al.                                                                                                                                                                                                                                   
+
+Construction and Building Materials 415 (2024) 134890
+4
+CMOD rate of 0.05 mm/min for CMOD from 0 to 0.1 mm and then 
+0.2 mm/min for CMOD between 0.1 mm and 4 mm. To estimate the 
+flexural stress, the geometrical properties of each specimen were 
+recorded before testing, including the distance between the notch tip to 
+the top of the cross-section. All specimens exhibited acceptable failures 
+with the notch acting as a “crack inducer” [13] by initiating cracks 
+which propagated towards the top of the specimen. 
+2.4.2. Flexural modulus of elasticity 
+Elastic analysis was used to determine the flexural modulus of elas­
+ticity Efm (by using results up to 40% of the ultimate flexural load) from 
+flexural tests. Since the load spreading effect is negligible [16], the shear 
+deformation is also ignored. The linear equation (Eq. 1) relating the load 
+and deflection to Efm is therefore, 
+Efm = PL3
+48Iδ
+(1)  
+where P
+δ (kN/mm) is the slope of the initial part of the load-deflection 
+curve, L (mm) is the span of the prism, I (mm4) is the second moment 
+of area of the cross-section at mid span. 
+Table 1 shows the average Efm of all SFRC mixes (including plain 
+concrete), along with the corresponding coefficient of variation (COV) 
+listed in brackets. All SFRC mixes showed similar Efm and corresponding 
+COV values to the plain concrete. For comparison purposes, the modulus 
+of elasticity (Ecm) predicted from the compressive strength by using 
+Eurocode 2 [64]. The values of Ecm are slightly higher (4–11%) than Efm 
+for all mixes, possibly due to the simplifications made in predicting Ecm. 
+As expected, RTCF length does not appear to affect the elastic 
+properties of concrete. For the same mass ratio of fibres, the modulus of 
+elasticity of concrete is mainly affected by the volume and the modulus 
+of the aggregates rather than fibre geometry [41]. This contradicts the 
+work undertaken by Furlan and Hanai [31] who found that SFRC using 
+1–2% (by volume) of shorter fibres exhibit higher modulus of elasticity 
+than using longer fibres. 
+2.4.3. Stress-deflection curves 
+The mid-span deflections of the prisms are determined from the 
+average of the two vertical LVDTs positioned on either side of the 
+specimen (§2.4.1). Fig. 3a shows the average (of six specimens) flexural 
+stress-deflection curves across the full testing range (0–4 mm), whilst 
+Fig. 3b zooms in on the first 0.15 mm of mid-span deflection to identify 
+the behaviour of concrete during crack initiation. The curves for the 
+plain concrete mix are indicated in solid black line, whilst the SFRC 
+mixes are shown in dashed lines. As discussed in Section 2.4.4, the 
+flexural curves for mixes PC, 6, 9 and 12, were extended to compare the 
+energy dissipation up to 4 mm deflection (dotted lines). 
+The plain mix showed the typical brittle behaviour of concrete, 
+confirming the weakness of concrete in resisting tensile forces after 
+cracking. All SFRC mixes generally exhibited a deflection softening 
+behaviour, as RTCF debond, pull out or even break at different de­
+flections (or crack widths), leading to progressive flexural deterioration. 
+As expected, enhanced flexural toughness was obtained from mixes with 
+longer RTCF (from 15 mm to 24 mm), highlighting the effectiveness of 
+longer fibres in controlling macro-cracks, as also reported in [42] for 
+MSF. However, mixes 21 and 24 showed very similar flexural behaviour: 
+Although longer fibres have better bond and resist macro-crack devel­
+opment, after a certain length, they may adversely affect the compaction 
+of concrete, leading to degraded flexural performance. Mix 24 exhibited 
+an increased tendency for the fibres to agglomerate, which means that 
+fibre lengths above 21 mm need to be controlled to avoid balling issues 
+at relatively high fibre dosages. 
+Fig. 3b shows improvement in the peak flexural load for all SFRC 
+mixes compared to plain concrete, which indicates that RTCF can be 
+effective in “arresting” micro-cracks and delaying meso-crack initiation 
+and propagation, as also reported in [9] for RTSF concrete prisms under 
+fatigue. However, mixes with RTCF lengths of 6 mm and 9 mm still show 
+a softening post peak behaviour, which means that their lengths are not 
+sufficient to develop much of the fibre strength. Mixes with 12 mm (or 
+above) RTCF show initial hardening behaviour, thus giving an indica­
+tion that the fibres are developing significant stresses before slipping 
+initiates. 
+2.4.4. Dissipated energy 
+The dissipated energy of all RTCF mixes was calculated at pre­
+determined deflections (Fig. 4). This was done to obtain a better 
+(a)
+(b)
+0
+1
+2
+3
+4
+5
+0
+2
+4
+6
+Bending stress (MPa)
+Mid-span deﬂecƟon (mm)
+PC
+6
+9
+12
+15
+18
+21
+24
+Mix E
+0
+1
+2
+3
+4
+5
+0
+0.03
+0.06
+0.09
+0.12
+0.15
+Bending stress (MPa)
+Mid-span deﬂecƟon (mm)
+PC
+6
+9
+12
+15
+18
+21
+24
+Mix E
+Fig. 3. Average stress-deflection curves of SFRC mixes including plain concrete mix: (a) full curves, (b) zoom in on crack initiation.  
+0
+5
+10
+15
+20
+25
+30
+35
+40
+45
+0 0.2 0.4 0.6 0.8 1 1.2 1.4 1.6 1.8 2 2.2 2.4 2.6 2.8 3 3.2 3.4 3.6 3.8 4
+Energy (Joule)
+Average mid-span deﬂecƟon (mm)
+PC
+6
+9
+12
+15
+18
+21
+24
+E
+Fig. 4. Average dissipated energy.  
+Z. Wang et al.                                                                                                                                                                                                                                   
+
+Construction and Building Materials 415 (2024) 134890
+5
+understanding of the flexural behaviour of SFRC mixes and to establish a 
+methodology to predict their flexural behaviour based on the RTSF 
+length (aspect ratio) distribution. By assuming exponential softening, 
+the flexural curves of mixes 6 and 9 were extended to 4 mm of deflec­
+tion. A similar approach was used for the plain mix (PC), which reached 
+zero stress at 0.8 mm as shown in Fig. 3a (dotted lines). The above 
+approximation was necessary as the testing of the aforementioned mixes 
+was terminated when their flexural capacity fell below 1 MPa, to avoid a 
+sudden/uncontrollable failure which would damage the instrumenta­
+tion mounted on the specimens. 
+From Fig. 4, it is clear that RTCF shorter than 15 mm (aspect ratio 
+75) are not as effective at enhancing toughness and, hence, an attempt 
+should be made to minimise such fibres in RTSF. Nonetheless, it is 
+important to note that this discussion specifically applies to normal/high 
+strength concrete. In the case of Ultra-High Performance Concrete 
+(UHPC), where a large volume of fibres is required, shorter fibre lengths 
+are necessary to avoid agglomeration. 
+Since the dissipated energy is estimated for various lengths of RTCF, 
+an attempt was made to correlate these energy results with the energy 
+dissipated using a typical RTSF concrete mix at the same fibre dosage, 
+using the weighted mass approach. In this approach, for each fibre 
+length/diameter ratio (i), the fibre percentage (mass, mi) is multiplied 
+by the dissipated energy of each equivalent RTCF mix at predefined 
+deflections (ERTCFi) of 0.2 mm, 0.4 mm, 0.6 mm, 0.8 mm, 1 mm, 2 mm, 
+3 mm and 4 mm, [ERTSF = ∑105
+i=30(ERTCFi)•mi,i = 30,45,60,75,90,105,
+120]. 
+Based on a previous experimental work undertaken by the authors 
+[9], an SFRC mix with 30 kg/m3 of RTSF was selected (Mix E), which 
+had similar plain concrete flexural strength (3.2 MPa) to the mixes 
+presented in this study. Since RTSF has a range of diameters, for this 
+analysis, the aspect ratios of the fibres were used over their lengths for 
+more direct comparison. The aspect ratio distribution analysis of RTSF 
+was conducted at intervals of 10 (see Fig. 5), and correlated to the 
+equivalent aspect ratios of each RTCF length (i.e. 6, 9, 12 etc.) (Table 2). 
+For example, RTSF with aspect ratios from 15 to 35 are assumed to 
+behave similarly to RTCF mix 6 (aspect ratio of 30: 6 mm/0.2 mm).  
+Table 3 shows the energy predictions for mix E, based on the energy 
+values obtained from RTCF mixes of the current study. 
+The results show that RTSF dissipate less energy than what predicted 
+from the individual fibre lengths by 18.1% (average). This may be partly 
+due to the differences in concrete characteristics (the compressive 
+strength of mix E was only 37 MPa) and to the curly geometry of the 
+RTSF. To account for differences in material properties, the energy 
+values were normalised by the flexural strength (fL) of each mix and 
+recalculated (Table 3). These results show a much closer agreement 
+(1.1% overestimation) and indicate that the relative contribution of 
+various fibre lengths (aspect ratios) in an RTSF mix can be estimated 
+accurately. 
+2.4.5. LOP (fL) and residual flexural tensile strength (fR) 
+According to BS EN 14651:2005 [38], the limit of proportionality 
+(LOP) and the residual flexural tensile strength parameters (fR) can be 
+determined from the load-deflection (or CMOD) curves. LOP (fL) is the 
+flexural stress corresponding to the maximum load recorded up to a 
+CMOD of 0.05 mm, whilst four residual flexural tensile strength pa­
+rameters (fR1, fR2, fR3 and fR4) are calculated from the post-cracking 
+stage of the curves at 0.5, 1.5, 2.5 and 3.5 mm of CMOD, respectively. 
+The calculation of the above parameters is given in Eq. 2 [38]: 
+fL = 3FLl
+2bh2
+sp
+, fRi = 3FRil
+2bh2
+sp
+(2)  
+Where FL is the load corresponding to LOP, FRi is the load at CMODs of 
+0.5, 1.5, 2.5 and 3.5 mm (i = 1,2,3,4, respectively), b is the specimen 
+width, l is the span length and hspis the distance from the notch tip to the 
+top of the cross-section. 
+Table 4 shows fL and fR and their corresponding COV values (dis­
+played in brackets) for all mixes, whilst Fig. 6 shows the fR values nor­
+malised by fL of PC. Since PC, as well as mixes 6 and 9, failed before all 
+specified CMOD could be reached, some of the fR values are not shown. 
+A significant increase (15–40%) in fL is observed in the SFRC mixes over 
+PC, confirming the effectiveness of RTCF in arresting microcracks and 
+delaying the fracture of the concrete. Overall, longer RTCF slightly 
+enhance fL values (except for mixes 18 and 24). 
+As LOP depends highly on the elastic properties of the concrete 
+matrix, the slightly lower fL values for mixes 18 and 24 may be due to 
+small fibre agglomerations or inconsistent compaction (which can leave 
+air trapped around longer fibres). Up to 21 mm, fR values (fR1, fR2, fR3 
+and fR4) increase with fibre length (Fig. 6), indicating that the maximum 
+length for RTCF in concrete is about 21 mm with an aspect ratio of 105. 
+Similar critical aspect ratios (i.e. 100) were reported by Hannant [41] 
+and ACI 544.1R-96 [39] for MSF. 
+Fig. 6 shows that fR values increase almost linearly with fibre length, 
+l, (from 6 to 21 mm), highlighting the beneficial effect of fibre length 
+(and aspect ratio) on the post-cracking performance of SFRC. This leads 
+to strong correlations between fR1 and fR2, and between fR3 and fR4 
+(Fig. 7), which means that fewer fracture parameters, e.g. fR1 and fR4, are 
+sufficient to represent the post-cracking behaviour of SFRC at smaller (i. 
+e. at SLS) and larger cracks (at ULS), respectively. Similar observation 
+was made by the authors [9,10] for SFRC using MSF on their own or 
+blended with RTSF at total dosages of 30–45 kg/m3. The Concrete So­
+ciety TR 34 [46] has already adopted this approach for the design of 
+SFRC slabs-on-grade. Furthermore, RILEM TC 162-TDF [47] only uses 
+fR1 and fR4 for the determination of the uniaxial tensile stress–strain 
+relationship of SFRC, whilst Model Code 2010 [33] uses fR1 and fR3. 
+The COV of fR values for all SFRC mixes (Table 4) were within the 
+range of 30%, which is in agreement with literature [9,26,48,49]. For 
+each SFRC mix, COV increases with CMOD (starting from fL, to fR1 and 
+fR4). This may be due to the fact that the post-cracking behaviour of 
+SFRC depends increasingly on fibre-matrix interaction, fibre distribution 
+and orientation as cracks develop, rather than the resistance provided by 
+the matrix itself through aggregate interlocking [50–55]. Furthermore, 
+the overall COV for fR values seem to increase with fibre length. A likely 
+cause for this is that shorter fibres are more homogenously distributed 
+0%
+10%
+20%
+30%
+40%
+50%
+60%
+70%
+80%
+90%
+100%
+0%
+1%
+2%
+3%
+4%
+5%
+6%
+7%
+8%
+9%
+10
+30
+50
+70
+90
+110
+130
+150
+170
+190
+210
+230
+250
+270
+290
+310
+330
+CUMULATIVE
+Mass (mi)
+Aspect Ratio
+Mass (mi)
+Cumulative
+Fig. 5. RTSF aspect ratio distribution by mass %.  
+Table 2 
+RTCF/RTSF correlation by mass.  
+RTCF Length/Diameter ratio (i) 
+RTSF l/d range (f) 
+Mass (mi) 
+30 (mix 6) 
+15 < f < 35  
+1.2% 
+45 (mix 9) 
+40 < f < 50  
+3.4% 
+60 (mix 12) 
+55 < f < 65  
+7.0% 
+75 (mix 15) 
+70 < f < 80  
+10.5% 
+90 (mix 18) 
+85 < f < 95  
+10.9% 
+105 (mix 21) 
+100 < f < 110  
+11.6% 
+120 (mix 24) 
+f > 115  
+55.5%  
+Z. Wang et al.                                                                                                                                                                                                                                   
+
+Construction and Building Materials 415 (2024) 134890
+6
+throughout the volume of concrete due to their larger amount, thus 
+resulting in a more consistent post-cracking performance. Similar 
+observation was made by Buratti [56]. 
+2.4.6. Uniaxial tensile behaviour of SFRC 
+Previous research by the authors [11] shows that the flexural 
+behaviour of SFRC using RTSF of lengths in the range of 15–40 mm can 
+be predicted satisfactorily by a simplified trilinear stress strain (σ-ε) 
+diagram as shown below and in Fig. 8.  
+where fctm,fl is flexural tensile strength, fR1, fR3 is the load at CMODs of 
+0.5 and 2.5 mm, respectively. kh is a size factor to accommodate the size 
+effect of various SFRC structural elements. For the notched prisms, kh 
+= 1 is suggested. 
+In this study, this simplified trilinear stress-strain (σ-ε) model is 
+employed as an initial attempt to investigate its capability in capturing 
+the post-cracking behaviour of SFRC with varying fibre lengths. Subse­
+quently, an inverse finite element (FE) analysis is conducted to accu­
+rately determine the ratio between post-cracking tensile stresses (σ2, σ3) 
+and their corresponding flexural loads (fR1 and fR3). 
+Fig. 9 illustrates the flowchart of the inverse analysis that was per­
+formed utilising a Python package pyabaqus [65] along with the finite 
+element (FE) package, ABAQUS. The Concrete Damage Plasticity (CDP) 
+model has been implemented in this study as it has been shown to 
+simulate successfully the mechanical properties of SFRC [11,48,57–60]. 
+In general, the framework of inverse FE analysis consists of three 
+parts: 
+Part 1: Determination of the tensile stress-strain (σ-ε) relationship 
+and parameters for CDP model. 
+For each mix, the concrete Young’s modulus Ec (= Efm) and the 
+values of σ1,σ2, σ3 and ε1,ε2,ε3 are determined according to methodol­
+ogies outlined in reference [11]. Specifically, Ec (= Efm) is obtained 
+using Eq. 1, while σ1,σ2, σ3 and ε1,ε2,ε3 are calculated using equation 3. 
+The subsequent values of σn
+and
+εn (n ≥4) are calculated using 
+linear interpolation based on σ2, σ3 and ε2,ε3. A standard mesh sensi­
+tivity analysis is conducted to determine the characteristic length Lc for 
+SFRC, which was found to be 65 mm [66]. 
+Table 6 lists the parameters adopted in the CDP model of SFRC. 
+Part 2: Preparation of the input file, FE analysis and modelling 
+results. 
+The prism is modelled using a two-dimensional plane stress solid 
+element (CPS4) with four nodes. The displacement load and boundary 
+conditions are applied via the reference points of the steel rollers, which 
+are modelled as analytical rigid body. A frictionless surface-to-surface 
+interaction is assigned to the steel roller- prism interface. The tensile 
+stress-strain (σ-ε) relationship of the SFRC developed in Part 1 is updated 
+to account for the size of the mesh being used through the relationship 
+ε ×
+Lc
+Mesh Size. A 5 mm mesh size is adopted in the fracture area of the SFRC 
+prism to better capture its post-cracking behaviour (Fig. 10). 
+The FE analyses are automatically conducted and the results (i.e. 
+load-deflection curve) are extracted. 
+Part 3: Comparison of the experimental and modelling curves. 
+The numerical and experimental load-deflection curves are 
+compared by selecting key points based on the relationship (Eq. 4) 
+proposed in EN 14651:2005 [38]. The root-mean-square deviation 
+(RMSD) is calculated and checked against a maximum acceptable error 
+of 0.02. If the RMSD exceeds the acceptable error, the input file is 
+updated accordingly and a new analysis is performed.[38]. 
+CMOD = εi × Mesh Size
+Averaged deflection(mm) = k
+× CMOD(mm) + 0.04mm, k = 0.85
+(4) 
+Table 7 and Fig. 11 present the stresses σi for each SFRC mix at their 
+corresponding strains εi determined by inverse FE analysis. Fig. 12 il­
+lustrates the correlation between fibre length and the ratio of tensile 
+stress to corresponding flexural load for the examined SFRC mixes.  
+Fig. 13 shows a comparison of the average load-deflection curves 
+derived from the experimental data with those produced from the FE 
+modelling. The results indicate a satisfactory agreement for all SFRC 
+mixes in terms of load-deflection behaviour. Overall, absolute error 
+values ≤5% were achieved in terms of both peak load and energy ab­
+sorption (up to 4 mm of deflection). 
+Table 7 shows that the tensile strength σ1 of the SFRC mixes was 
+about half (54%) of their flexural strength fL. This observation is in 
+agreement with previous findings [11], and suggests that the fibre 
+length does not significantly impact the relationship between tensile and 
+flexural strengths. A modest tensile strength enhancement of 5.5% is 
+Table 3 
+Energy prediction for mix E based on RTCF mixes.  
+Mix 
+Energy in Joule (at various deflections)  
+0.2 mm 
+0.4 mm 
+0.6 mm 
+0.8 mm 
+1 mm 
+2 mm 
+3 mm 
+4 mm  
+E 
+1.95 
+4.00 
+6.01 
+7.98 
+9.85 
+18.01 
+24.29 
+29.22  
+E - predicted 
+2.44 
+4.94 
+7.31 
+9.58 
+11.78 
+21.56 
+29.68 
+36.49 
+Average deviation 
+Deviation 
+20.1% 
+19.0% 
+17.8% 
+16.7% 
+16.3% 
+16.5% 
+18.1% 
+19.9% 
+18.1% 
+Mix 
+Normalised Energy by flexural strength (fL) (at various deflections)  
+0.2 mm 
+0.4 mm 
+0.6 mm 
+0.8 mm 
+1 mm 
+2 mm 
+3 mm 
+4 mm  
+E 
+0.56 
+1.14 
+1.71 
+2.27 
+2.81 
+5.13 
+6.92 
+8.32  
+E - predicted 
+0.58 
+1.17 
+1.73 
+2.27 
+2.78 
+5.09 
+7.00 
+8.60 
+Average deviation 
+Deviation 
+4.0% 
+2.6% 
+1.0% 
+-0.3% 
+-0.8% 
+-0.8% 
+1.1% 
+3.2% 
+1.1%  
+σ1 = 0.55f ctm,fl
+ε1 = σ1/Ec
+the elastic region of the load −deflection curve
+and defines the peak load which is mainly
+achieved by the tensile contribution of the
+concrete matrix
+σ2 = 1
+3khf R1
+ε2 = ε1 + 0.002
+the behaviour at the microcracking stage (SLS)
+σ3 = 1
+3khfR3
+ε3 = 0.025
+the behaviour at large deformations (ULS)
+(3)   
+Z. Wang et al.                                                                                                                                                                                                                                   
+
+Construction and Building Materials 415 (2024) 134890
+7
+observed in Mixes 6 and 9, while a 17–22% improvement is found for 
+mixes with longer RTCF (>12 mm) as they can more effectively restrain 
+crack formation and development. This highlights that the tensile 
+strength of plain concrete (1.8 MPa) can be improved by incorporating 
+steel fibres, even at a relatively low fibre aspect ratio. This finding 
+contradicts the results reported by Meddah and Bencheikh [32], who 
+observed no increase in strength under similar conditions. 
+As shown in Fig. 12, when the fibre length is larger than 9 mm, the 
+post-cracking stresses σ2 and σ3 were found to be around 1/3 of the 
+corresponding residual flexural tensile strength values fR, with values of 
+0.35 and 0.29, respectively. This is in good agreement with the co­
+efficients proposed in the literature [11,33,61–63], for scaling fR values 
+of SFRC prisms to the corresponding post-cracking tensile strengths. The 
+linear correlations between σ2 and fR1, σ3 and fR3 demonstrate that the 
+post-cracking behaviour of SFRC can be defined well by two indepen­
+dent fracture parameters fR1 and fR3, for SLS and ULS, respectively. 
+However, the relationship between post-cracking stresses and corre­
+sponding residual flexural tensile strength values is not consistent for 
+fibre lengths of 6 mm and 9 mm, suggesting that the mechanical 
+behaviour of SFRC mixes may change at shorter fibre lengths. This can 
+be attributed to various factors, such as changes in the fibre dispersion, 
+fibre-matrix bond, fibre orientation, or other material properties. Un­
+derstanding the reasons behind this inconsistency and how it may affect 
+the performance of SFRC mixes at shorter fibre lengths requires further 
+investigation. 
+2.4.7. Validation of proposed material model 
+The proposed material model has been further examined using a 
+larger mesh size (25 mm), as depicted in Fig. 14. It can be seen from  
+Fig. 15 that the FE model using proposed σ-ε relations exhibits a 
+reasonably good ability to predict the overall load-deflection responses, 
+including the initial stiffness and the flexural strength with corre­
+sponding mid-span deflection. However, the accuracy of the proposed 
+material model in predicting post-failure behaviour was found to be 
+lower, particularly for plain concrete. This can be attributed to the se­
+lection of 65 mm as the corresponding characteristic length. It is rec­
+ommended to choose a smaller value for better accuracy, although this 
+was beyond the scope of the current study. 
+2.5. Classification of SFRC mixes and slab-on-grade thickness analysis 
+2.5.1. Classification of SFRC mixes 
+To classify the post-cracking behaviour of FRC, Model Code 2010 
+[33] introduces two parameters based on the characteristic residual 
+flexural tensile strength parameters, fR1,c and fR3,c/fR1,c. The fR1,c rep­
+resents the residual strength of a material at serviceability conditions, 
+whilst the ratio fR3,c/fR1,c considers both serviceability and ultimate 
+conditions. The strength class is denoted by a specific code name 
+comprising a digit (based on the fR1,c value) and a letter (based on the 
+fR3,c/fR1,c ratio), as given in Table 8. Model code 2010 [33] states that an 
+SFRC mix can be used to substitute (entirely or partially) conventional 
+reinforcement in concrete at ULS, if the following minimum perfor­
+mance requirements are met: fR1,c/fL,c> 0.4 and fR3,c/fR1,c> 0.5 (where 
+fL,c is the characteristic value of LOP). 
+Table 9 shows the characteristic strength, fL,c, residual stresses, fRi,c, 
+and stress ratios fR1,c/fL,c and fR3,c/fR1,c for all SFRC mixes. The char­
+acteristic strength values (fL,c and fRi,c) were determined from the mean 
+values by assuming a t-distribution, and the number of specimens tested 
+for each mix, according to RILEM TC 162-TDF [47]. 
+For mixes with RTCF lengths of 15 mm and longer, both conditions 
+(fR1,c/fL,c>0.4 and fR3,c/fR1,c>0.5) adopted by Model Code are met 
+(green figures – Table 9) and these fibres can be used to replace, at least 
+partially, conventional reinforcement in concrete. The characteristic 
+values, fL,c, fR1,c and fR3,c, of mix 24 were lower than those of mix 21, 
+Fig. 8. Simplified trilinear stress-strain diagram for SFRC.  
+Table 4 
+fL and fR values of SFRC mixes.  
+Mix 
+fL (MPa) 
+fR1 (MPa) 
+fR2 (MPa) 
+fR3 (MPa) 
+fR4 (MPa) 
+PC 
+3.1 (7%) 
+0.7 (7%) 
+- 
+- 
+- 
+6 
+3.6 (5%) 
+1.7 (12%) 
+0.8 (13%) 
+- 
+- 
+9 
+3.7 (10%) 
+1.8 (12%) 
+1.1 (13%) 
+0.8 (14%) 
+- 
+12 
+4.1 (10%) 
+2.7 (12%) 
+1.8 (12%) 
+1.3 (13%) 
+1.0 (13%) 
+15 
+4.2 (4%) 
+3.4 (8%) 
+2.8 (13%) 
+2.3 (12%) 
+1.9 (14%) 
+18 
+3.9 (9%) 
+3.7 (13%) 
+3.0 (13%) 
+2.5 (13%) 
+2.1 (14%) 
+21 
+4.4 (2%) 
+4.1 (18%) 
+3.7 (18%) 
+3.2 (19%) 
+2.8 (20%) 
+24 
+4.3 (10%) 
+4.1 (21%) 
+3.6 (27%) 
+3.2 (27%) 
+2.8 (27%)  
+0
+0.2
+0.4
+0.6
+0.8
+1
+1.2
+1.4
+1.6
+0
+3
+6
+9
+12
+15
+18
+21
+24
+fR/fLplain and fL/fLplain
+RTCF mixes
+fR1/fLplain
+fR2/fLplain
+fR3/fLplain
+fR4/fLplain
+fL/fLplain
+PC     
+Fig. 6. Normalised flexural residual strength.  
+fR1 = 0.88fR2 + 0.97
+R² = 0.96
+fR3 = 1.08fR4 + 0.19
+R² = 0.99
+0
+1
+2
+3
+4
+5
+6
+0
+1
+2
+3
+4
+5
+6
+fR1, fR3 (MPa)
+fR2, fR4 (MPa)
+fR1 vs fR2
+fR3 vs fR4
+Linear (fR1 vs fR2)
+Linear (fR3 vs fR4)
+Fig. 7. Correlation between fR1 and fR2, and fR3 and fR4.  
+Z. Wang et al.                                                                                                                                                                                                                                   
+
+Construction and Building Materials 415 (2024) 134890
+8
+Fig. 9. Flowchart of inverse FE analysis.  
+Z. Wang et al.                                                                                                                                                                                                                                   
+
+Construction and Building Materials 415 (2024) 134890
+9
+which confirms again that the optimum length of RTCF is around 
+20 mm. 
+2.5.2. Slabs-on-grade: thickness analysis 
+This section demonstrates the effect of fibre length on slab thickness. 
+A critical design case for a slab-on-grade under flexure is examined in 
+this section to assess the effect of fibre length on the required structural 
+thickness. A typical back-to-back racking legs loading scenario is 
+considered, with two closely spaced point loads applied near an edge of 
+the slab. The assumptions include a design leg load of 78 kN and a 
+typical contact area of 100 × 100 mm per leg. More details on the design 
+assumptions are given in a previous study [9]. Following the design 
+methodology for FRC ground-supported slabs suggested in Concrete 
+Society TR 34 [46], the following expression was derived to calculate 
+the required slab thickness: h ≥̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅
+72655
+0.072fR1+0.107fR4
++1.72
+√
+[9]. Fig. 15 
+shows the relation between RTCF lengths (6–24 mm) and the required 
+slab thicknesses. Fig. 16. 
+As the fibre length increases, the required slab thickness decreases 
+(except for mix 24) with a saving of up to 13% compared with PC. Mix E 
+(previously referred in the “Energy dissipation” section of this paper) 
+was also added to the graph assuming an average length of 15 mm. The 
+results show that mixes with RTCF longer than 12 mm and RTSF (mix E) 
+are promising candidates for industrial concrete flooring applications, 
+leading to significant environmental benefits. 
+3. Main conclusions 
+The mechanical properties of 7 SFRC mixes, reinforced with RTCF of 
+various lengths (6–24 mm at intervals of 3 mm) at a 30 kg/m3 dosage, 
+Fig. 10. Finite element meshes adopted in the inverse analysis.  
+Table 7 
+Determined σi and εi values for the examined SFRC mixes.  
+Mix 
+Strain (‰) 
+Stress (MPa) 
+Ratios 
+Error (%) 
+ε1 
+ε2 
+ε3 
+σ1 
+σ2 
+σ3 
+σ1/fL 
+σ2/fR1 
+σ3/fR3 
+Peak load 
+Energy absorption 
+0 
+0.06 
+2.06 
+10 
+1.8 
+0.43 
+0.01 
+0.58 
+0.61 
+- 
+-5 
+0.5 
+6 
+0.06 
+2.06 
+20 
+1.90 
+0.73 
+0.13 
+0.53 
+0.43 
+- 
+-4 
+-2 
+9 
+0.06 
+2.06 
+25 
+1.90 
+0.73 
+0.16 
+0.51 
+0.41 
+0.20 
+-3 
+-3 
+12 
+0.07 
+2.07 
+25 
+2.22 
+0.98 
+0.39 
+0.54 
+0.36 
+0.30 
+-1 
+-2 
+15 
+0.07 
+2.07 
+25 
+2.25 
+1.2 
+0.62 
+0.54 
+0.35 
+0.27 
+-0.5 
+2 
+18 
+0.07 
+2.07 
+25 
+2.20 
+1.29 
+0.71 
+0.56 
+0.35 
+0.28 
+-1.5 
+-3 
+21 
+0.07 
+2.07 
+25 
+2.32 
+1.38 
+0.92 
+0.53 
+0.34 
+0.29 
+-1 
+-1 
+24 
+0.07 
+2.07 
+25 
+2.32 
+1.38 
+0.93 
+0.54 
+0.34 
+0.29 
+0 
+-2       
+Average 
+0.54 
+0.36 
+0.27 
+-1.2 
+-1.5  
+Table 6 
+Parameters adopted for the CDP model.  
+Dilation angle, ψ 
+(ο) 
+Eccentricity, ε 
+σb0
+σc0  
+Κc 
+Viscosity 
+parameter 
+Poisson’s 
+ratio 
+ν 
+31  
+0.1  
+1.2  
+0.667  
+0  
+0.2  
+0
+0.5
+1
+1.5
+2
+2.5
+0
+0.02
+0.04
+0.06
+0.08
+Tensile stress (MPa)
+Tensile strain
+6
+9
+12
+15
+18
+21
+24
+Fig. 11. Determined σ −ε diagrams for the examined SFRC mixes.  
+Fig. 12. Fibre length vs. stress/flexural load ratio (black lines represent mean 
+values and the length of the line indicates the fibre length covered). 
+Z. Wang et al.                                                                                                                                                                                                                                   
+
+Construction and Building Materials 415 (2024) 134890
+10
+were examined experimentally. From the discussion presented above, 
+the following conclusions can be drawn:  
+• Strong correlations between fR1 and fR2, and between fR3 and fR4 have 
+been obtained allowing fewer fracture parameters to sufficiently 
+represent the post-cracking behaviour of SFRC at SLS and ULS.  
+• fcu and Efm are insignificantly affected by fibre length.  
+• Longer fibre lengths overall increase fL and can lead to significant 
+strength increases (15-40%) when compared to PC, thus confirming 
+the effectiveness of longer RTCF (>12 mm) in arresting microcracks 
+and delaying the fracture of the concrete.  
+• RTCF longer than 15 mm are effective in enhancing post-cracking 
+behaviour and show excellent post-cracking performance (fR4>
+2 MPa). This confirms that the critical length of RTCF is 15 mm and 
+that the number of shorter fibres should be minimised in RTSF. Fi­
+bres with a length of 21 mm are the optimum for the mix examined in 
+this study.  
+• The majority of fibres in a typical RTSF sample are within a range 
+(15-40 mm) that has shown to be effective in concrete.  
+• Post-cracking flexural behaviour is dominated by fibre-matrix 
+interaction, orientation and distribution. The residual flexural 
+strength fR values increase up to 30% with increasing length. 
+Fig. 13. Comparison between load-deflection curves from experiment and FE modelling (mesh size of fracture area is 5 mm).  
+Fig. 14. Discretisation of a SFRC prism with a mesh size of 25 mm in fracture area.  
+Fig. 15. Comparison between load-deflection curves from experiment and FE modelling (mesh size of fracture area is 25 mm).  
+Z. Wang et al.                                                                                                                                                                                                                                   
+
+Construction and Building Materials 415 (2024) 134890
+11
+However, the corresponding COV values also increase with fibre 
+length, as shorter fibres can be more homogenously distributed 
+throughout the volume of concrete, due to their larger amount, thus 
+resulting in a more consistent post-cracking performance.  
+• The energy approach was used to predict the energy of a previously 
+studied RTSF mix and the RTCF mixes of this study. It was found that 
+the RTSF dissipate the same energy as predicted from the individual 
+fibre lengths.  
+• Mixes with RTCF lengths ≥15 mm or RTSF can be used to replace, at 
+least partially, conventional reinforcement in concrete.  
+• Mixes with RTCF lengths ≥12 mm or RTSF are promising candidates 
+for industrial concrete flooring applications, leading to significant 
+environmental benefits. 
+CRediT authorship contribution statement 
+Pilakoutas Kypros: Writing – review & editing, Supervision, Re­
+sources, Project administration, Funding acquisition. Guadagnini 
+Maurizio: Writing – review & editing, Supervision. Hu Hang: Writing – 
+review & editing, Writing – original draft, Validation, Investigation, 
+Formal analysis, Conceptualization. Wang Zhao: Writing – review & 
+editing, Writing – original draft, Visualization, Validation, Methodol­
+ogy, Formal analysis, Conceptualization. Angelakopoulos Harris: 
+Writing – review & editing. Papastergiou Panos: Writing – review & 
+editing, Methodology. 
+Declaration of Competing Interest 
+We have no conflicts of interest to declare. 
+Data Availability 
+Data will be made available on request. 
+Acknowledgements 
+This research was funded by Anagennisi project (grant agreement n◦
+603722), an EU FP7 collaborative research project which dealt with the 
+development of innovative uses of recycled end-of-life tyre by-products 
+in concrete applications. Dr Hu would like to express his gratitude to the 
+China Scholarship Council (CSC number: 201508060086) for spon­
+soring his PhD studies. 
+References 
+[1] WBCSD, End-of-life tires: a framework for effective management systems, https:// 
+docplayer.net/6083024-End-of-life-tires-a-framework-for-effective-management- 
+systems.html, (accessed 19. 04.27). 
+[2] The European Tyre Recycling Association, Introduction to tyre recycling (2013), 
+Brussels, Belgium. 
+[3] USFD, Thin wire reinforcement for concrete. British Patent Application No 
+0130852.7 and 0511012.7, filed by The University of Sheffield on 24/12/2001 
+(published on 9/11/2005), Sheffield, UK, 2001. 
+[4] H. Tlemat, Steel fibres from waste tyres to concrete, testing, modelling and design, 
+PhD Thesis, The University of Sheffield, Sheffield, 2004. 
+[5] N. Jafarifar, K. Pilakoutas, T. Bennett, Moisture transport and drying shrinkage 
+properties of steel-fibre-reinforced-concrete, Constr. Build. Mater. 73 (2014) 
+41–50, https://doi.org/10.1016/j.conbuildmat.2014.09.039. 
+[6] H. Angelakopoulos, P. Papastergiou, K. Pilakoutas, Fibrous roller-compacted 
+concrete with recycled materials - feasibility study, Mag. Concr. Res. 67 (2015), 
+https://doi.org/10.1680/macr.14.00246. 
+[7] H. Angelakopoulos, Reused post-consumer tyre steel fibres in Roller Compacted 
+Concrete, PhD Thesis, The University of Sheffield, Sheffield, 2016. 
+[8] K.H. Younis, K. Pilakoutas, Assessment of post-restrained shrinkage mechanical 
+properties of concrete, Acids Mater. J. 113 (2016) 267–276, https://doi.org/ 
+10.14359/51688699. 
+[9] H. Hu, P. Papastergiou, H. Angelakopoulos, M. Guadagnini, K. Pilakoutas, 
+Mechanical properties of SFRC using blended manufactured and recycled tyre steel 
+fibres, Constr. Build. Mater. 163 (2018) 376–389, https://doi.org/10.1016/j. 
+conbuildmat.2017.12.116. 
+[10] H. Hu, P. Papastergiou, H. Angelakopoulos, M. Guadagnini, K. Pilakoutas, 
+Mechanical properties of SFRC using blended Recycled Tyre Steel Cords (RTSC) 
+and Recycled Tyre Steel Fibres (RTSF), Constr. Build. Mater. 187 (2018) 553–564, 
+https://doi.org/10.1016/j.conbuildmat.2018.07.206. 
+[11] H. Hu, Z. Wang, F.P. Figueiredo, P. Papastergiou, M. Guadagnini, K. Pilakoutas, 
+Postcracking tensile behavior of blended steel fiber-reinforced concrete, Struct. 
+Concr. (2018) 11–15, https://doi.org/10.1002/suco.201800100. 
+[12] Z. Al-Kamyani, F.P. Figueiredo, H. Hu, M. Guadagnini, K. Pilakoutas, Shrinkage 
+and flexural behaviour of free and restrained hybrid steel fibre reinforced concrete, 
+Constr. Build. Mater. 189 (2018) 1007–1018, https://doi.org/10.1016/j. 
+conbuildmat.2018.09.052. 
+[13] H. Tlemat, K. Pilakoutas, K. Neocleous, Stress-strain characteristic of SFRC using 
+recycled fibres, Mater. Struct. 39 (2006) 365–377, https://doi.org/10.1617/ 
+s11527-005-9009-4. 
+[14] H. Tlemat, K. Pilakoutas, K. Neocleous, Modelling of SFRC using inverse finite 
+element analysis, Mater. Struct. 39 (2006) 221–233, https://doi.org/10.1617/ 
+s11527-005-9010-y. 
+[15] K. Neocleous, H. Tlemat, K. Pilakoutas, Design issues for concrete reinforced with 
+steel fibers, including fibers recovered from used tires, J. Mater. Civ. Eng. 18 
+(2006) 677–685, https://doi.org/10.1061/(ASCE)0899-1561(2006)18:5(677). 
+[16] A.G. Graeff, Long-term performance of recycled steel fibre reinforced concrete for 
+pavement applications, PhD Thesis, The University of Sheffield, Sheffield, 2011. 
+[17] K. Neocleous, H. Angelakopoulos, K. Pilakoutas, M. Guadagnini, Fibre-reinforced 
+roller-compacted concrete transport pavements, Proc. Inst. Civ. Eng. - Transp. 164 
+(2011) 97–109, https://doi.org/10.1680/tran.9.00043. 
+[18] N. Jafarifar, Shrinkage behaviour of steel fibre reinfoced concrete pavements, The 
+University of Sheffield, Sheffield, 2012. 
+[19] A.G. Graeff, K. Pilakoutas, K. Neocleous, M.V.N.N. Peres, Fatigue resistance and 
+cracking mechanism of concrete pavements reinforced with recycled steel fibres 
+recovered from post-consumer tyres, Eng. Struct. 45 (2012) 385–395, https://doi. 
+org/10.1016/j.engstruct.2012.06.030. 
+[20] K.H. Younis, K. Pilakoutas, Strength prediction model and methods for improving 
+recycled aggregate concrete, Constr. Build. Mater. 49 (2013) 688–701, https://doi. 
+org/10.1016/j.conbuildmat.2013.09.003. 
+[21] M.A. Aiello, F. Leuzzi, G. Centonze, A. Maffezzoli, Use of steel fibres recovered 
+from waste tyres as reinforcement in concrete: Pull-out behaviour, compressive and 
+Table 8 
+Classification of SFRC mixes according to Model Code 2010.  
+Classification (MC2010) 
+1 
+1.5 
+2 
+2.5 
+3 
+4 
+for 1 ≤fR1,c≤1.5 
+for 1.5 ≤fR1,c≤2 
+for 2 ≤fR1,c≤2.5 
+for 2.5 ≤fR1,c≤3 
+for 3 ≤fR1,c≤4 
+for 4 ≤fR1,c≤5 
+a for 0.5 ≤fR3,c/fR1,c≤0.7 
+b for 0.7 ≤fR3,c/fR1,c≤0.9 
+c for 0.9 ≤fR3,c/fR1,c≤1.1 
+d for 1.1 ≤fR3,c/fR1,c≤1.3 
+e for 1.3 ≤fR3,c/fR1,c  
+Table 9 
+Main characteristic stress and strength class of SFRC mixes.  
+Mix 
+fL,c 
+(MPa) 
+fR1,c 
+(MPa) 
+fR3,c 
+(MPa) 
+fR1,c/fL,c 
+fR3,c/fR1,c 
+Strength 
+class  
+6  
+3.3  
+1.2 
+-  
+0.38 
+- 
+-  
+9  
+3.0  
+1.4 
+0.6  
+0.45 
+0.42 
+-  
+12  
+3.4  
+2.1 
+1.0  
+0.63 
+0.49 
+2a  
+15  
+3.9  
+3.0 
+1.8  
+0.77 
+0.60 
+3a  
+18  
+3.3  
+2.9 
+1.9  
+0.86 
+0.67 
+2.5a  
+21  
+4.3  
+2.8 
+2.1  
+0.66 
+0.74 
+2.5b  
+24  
+3.6  
+2.6 
+1.6  
+0.72 
+0.64 
+2.5a  
+Fig. 16. Effect of fibre length on slab thickness.  
+Z. Wang et al.                                                                                                                                                                                                                                   
+
+Construction and Building Materials 415 (2024) 134890
+12
+flexural strength, Waste Manag 29 (2009) 1960–1970, https://doi.org/10.1016/j. 
+wasman.2008.12.002. 
+[22] G. Centonze, M. Leone, M.A. Aiello, Steel fibers from waste tires as reinforcement 
+in concrete: a mechanical characterization, Constr. Build. Mater. 36 (2012) 46–57, 
+https://doi.org/10.1016/j.conbuildmat.2012.04.088. 
+[23] G. Groli, Crack width control in RC elements with recycled steel fibres and 
+applications to integral structures: theoretical and experimental study, 
+Polytechnical University of Madrid, Madrid, Spain, 2014. 
+[24] E. Martinelli, A. Caggiano, H. Xargay, An experimental study on the post-cracking 
+behaviour of Hybrid Industrial/Recycled Steel Fibre-Reinforced Concrete, Constr. 
+Build. Mater. 94 (2015) 290–298, https://doi.org/10.1016/j. 
+conbuildmat.2015.07.007. 
+[25] M. Leone, G. Centonze, D. Colonna, F. Micelli, M.A. Aiello, Fiber-reinforced 
+concrete with low content of recycled steel fiber: shear behaviour, Constr. Build. 
+Mater. 161 (2018) 141–155, https://doi.org/10.1016/j.conbuildmat.2017.11.101. 
+[26] Z. Zamanzadeh, L. Lourenço, J. Barros, Recycled steel fibre reinforced concrete 
+failing in bending and in shear, Constr. Build. Mater. 85 (2015) 195–207, https:// 
+doi.org/10.1016/j.conbuildmat.2015.03.070. 
+[27] D. Bjegovic, A. Baricevic, S. Lakusic, D. Damjanovic, I. Duvnjak, Positive 
+interaction of industrial and recycled steel fibres in fibre reinforced concrete, 
+J. Civ. Eng. Manag. 19 (2013) S50–S60, https://doi.org/10.3846/ 
+13923730.2013.802710. 
+[28] M. Skazli´c, A. Bariˇcevi´c, D. Bjegovi´c, Fibre reinforced SCC concrete with recycled 
+fibres, Newsletter (2017) 1–7. 
+[29] G. Groli, A.P. Caldentey, A.G. Soto, Cracking performance of SCC reinforced with 
+recycled fibres - an experimental study, Struct. Concr. 15 (2014) 136–153, https:// 
+doi.org/10.1002/suco.201300008. 
+[30] N. Banthia, S.M. Soleimani, Flexural response of hybrid fiber-reinforced 
+cementitious composites, Acids Mater. J. 102 (2005) 382–389. 
+[31] S. Furlan, J.B. de Hanai, Shear behaviour of fiber reinforced concrete beams, Cem. 
+Concr. Compos. 19 (1997) 359–366, https://doi.org/10.1016/S0958-9465(97) 
+00031-0. 
+[32] M.S. Meddah, M. Bencheikh, Properties of concrete reinforced with different kinds 
+of industrial waste fibre materials, Constr. Build. Mater. 23 (2009) 3196–3205, 
+https://doi.org/10.1016/j.conbuildmat.2009.06.017. 
+[33] F.I. du B´eton, Fib Model Code for Concrete Structures 2010, Wilhelm Ernst & Sohn, 
+Berlin, Germany, 2013. 
+[34] ACI 544.8R-16, Report on indirect method to obtain stress-strain response of fiber- 
+reinforced concrete (FRC), American Concrete Institute, Michigan, US, 2016. 
+[35] BS EN 14488-3:2023, Testing sprayed concrete – Part 3: Flexural strengths (first 
+peak, ultimate and rsidual) of fibre reinforced beam specimens, British Standards 
+Institution, London, UK, 2006. 
+[36] ASTM C1550-05, Standard test method for flexural toughness of fiber reinforced 
+concrete (using centrally loaded round panel), ASTM International, Pennsylvania, 
+US, 2005. 
+[37] BS EN 14488-5:2006, Testing sprayed concrete – Part 5: Determination of energy 
+absorption capacity of fibre reinforced slab specimens, British Standards 
+Institution, London, UK, 2006. 
+[38] BS EN 14651:2005, Test method for metallic fibre concrete - Measuring the flexural 
+tensile strength (limit of proportionality (LOP), residual), British Standards 
+Institution, London, UK, 2005. 
+[39] ACI 544.1R-96 (Reapproved 2002), State-of-the-art report on fiber reinforced 
+concrete, American Concrete Institute, Michigan, US, 2002. 
+[40] Pilakoutas K., Raffoul S., Papastergiou P., Garcia R., Guadagnini M. and 
+Hajirasouliha I., 2015, Innovative reuse of all tyre components in concrete: The 
+Anagennisi project, International Conference on Sustainable Structural Concrete, 
+15–18 Sep 2015, La Plata, Argentina. 
+[41] D.J. Hannant, Fibre Cements and Fibre Concrete, John Wiley and Sons, New York, 
+US, 1978. 
+[42] S¸. Yazıcı, G. ˙Inan, V. Tabak, Effect of aspect ratio and volume fraction of steel fiber 
+on the mechanical properties of SFRC, Constr. Build. Mater. 21 (2007) 1250–1253, 
+https://doi.org/10.1016/j.conbuildmat.2006.05.025. 
+[43] ACI 544.2R-89 (Reapproved 1999), Measurement of properties of fiber reinforced 
+concrete, American Concrete Institute, Michigan, US, 1999. 
+[44] BS EN 12390-3:2019, Testing hardened concrete - Part 3: Compressive strength of 
+test specimens, British Standards Institution, London, UK, 2009. 
+[45] N. Banthia, J.F. Trottier, Test methods for flexural toughness characterization of 
+fiber reinforced concrete: some concerns and a proposition, Acids Mater. J. 92 
+(1995) 48–57. 
+[46] Technical report 34, Concrete industrial ground floors: a guide to their design and 
+construction, The Concrete Society, Surrey, UK, 2013. 
+[47] RILEM TC 162-TDF, σ-ε-Design Method, Mater. Struct. 36 (2003) 560–567, 
+https://doi.org/10.1007/BF02480834. 
+[48] S. Oikonomou-Mpegetis, Behaviour and Design of Steel Fibre Reinforced Concrete 
+Slabs, Imperial College London, London, UK, 2012. 
+[49] B.I.G. Barr, M.K. Lee, E.J. de Place Hansen, D. Dupont, E. Erdem, S. Schaerlaekens, 
+B. Schnütgen, H. Stang, L. Vandewalle, Round-robin analysis of the RILEM TC 162- 
+TDF beam-bending test: Part 1—Test method evaluation, Mater. Struct. 36 (2003) 
+609–620, https://doi.org/10.1007/BF02483281. 
+[50] Y.M. Abbas, M.I. Khan, Fiber–matrix interactions in fiber-reinforced concrete: a 
+review, Arab. J. Sci. Eng. 41 (4) (2016) 1183–1198. 
+[51] P. Blagojevi´c, N. Blagojevi´c, D. Kukaras, Flexural behavior of steel fiber reinforced 
+concrete beams: probabilistic numerical modeling and sensitivity analysis, Appl. 
+Sci. 11 (20) (2021) 9591. 
+[52] V.C. Cong, V.D. Tam, An analytical approach to predict post-cracking behavior of 
+steel fiber reinforced concrete considering the fibers orientation, J. Sci. Technol. 
+Civ. Eng. (JSTCE)-HUCE 17 (3) (2023) 114–127. 
+[53] T.L. Freire Rodrigues, R. Durand, Numerical modeling of steel fiber reinforced 
+concrete using cohesive elements, J. Build. Pathol. Rehabil. 8 (2) (2023) 69. 
+[54] A. Mudadu, G. Tiberti, F. Germano, G.A. Plizzari, A. Morbi, The effect of fiber 
+orientation on the post-cracking behavior of steel fiber reinforced concrete under 
+bending and uniaxial tensile tests, Cem. Concr. Compos. 93 (2018) 274–288. 
+[55] D.Y. Yoo, Y.S. Yoon, N. Banthia, Predicting the post-cracking behavior of normal- 
+and high-strength steel-fiber-reinforced concrete beams, Constr. Build. Mater. 93 
+(2015) 477–485. 
+[56] N. Buratti, C. Mazzotti, M. Savoia, Post-cracking behaviour of steel and macro- 
+synthetic fibre-reinforced concretes, Constr. Build. Mater. 25 (2011) 2713–2722, 
+https://doi.org/10.1016/j.conbuildmat.2010.12.022. 
+[57] N. Jafarifar, K. Pilakoutas, H. Angelakopoulos, T. Bennett, Post-cracking tensile 
+behaviour of steel-fibre-reinforced roller-compacted-concrete for FE modelling and 
+design purposes, Mater. Constr. 67 (2017) 122, https://doi.org/10.3989/ 
+mc.2017.06716. 
+[58] B. Mobasher, Mechanics of fiber and textile reinforced cement, CRC Press, Florida, 
+US, 2012. 
+[59] W.A. Labib, An Experimental Study and Finite Element Analysis of Punching Shear 
+Failure in Steel Fibre-Reinforced Concrete Ground-Suspended Floor Slabs, 
+Liverpool John Moores University, Liverpool, UK, 2008. 
+[60] C. An, X. Castello, M. Duan, R.D. Toledo Filho, S.F. Estefen, Ultimate strength 
+behaviour of sandwich pipes filled with steel fiber reinforced concrete, Ocean Eng. 
+55 (2012) 125–135, https://doi.org/10.1016/j.oceaneng.2012.07.033. 
+[61] M. Bakhshi, C. Barsby, B. Mobasher, Comparative evaluation of early age 
+toughness parameters in fiber reinforced concrete, Mater. Struct. Constr. 47 (2014) 
+853–872, https://doi.org/10.1617/s11527-013-0098-1. 
+[62] B. Mobasher, M. Bakhshi, C. Barsby, Backcalculation of residual tensile strength of 
+regular and high performance fiber reinforced concrete from flexural tests, Constr. 
+Build. Mater. 70 (2014) 243–253, https://doi.org/10.1016/j. 
+conbuildmat.2014.07.037. 
+[63] J. a O. Barros, V.M.C.F. Cunha, A.F. Ribeiro, J.A.B. Antunes, Post-cracking 
+behaviour of steel fibre reinforced concrete, Mater. Struct. 38 (2004) 47–56, 
+https://doi.org/10.1617/14058. 
+[64] Eurocode 2: Design of Concrete Structures. Part 1–1: General Rules and Rules for 
+Buildings. Brussels, 2004. 
+[65] Wang, Haiiliin. "PyAbaqus." PyAbaqus, https://pyabaqus.haiiliin.com/. 
+[66] Z. Wang, H. Hu, I. Hajirasouliha, M. Guadagnini, K. Pilakoutas, Tensile stress-strain 
+characteristics of rubberised concrete from flexural tests, Constr. Build. Mater. 236 
+(2020) 117591. 
+Z. Wang et al.                                                                                                                                                                                                                                   

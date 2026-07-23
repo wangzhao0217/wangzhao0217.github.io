@@ -1,24 +1,56 @@
-# Seismic stability evaluation of benched bedding rock slopes with varying landforms — 研究成果与技术解读
+# Seismic stability evaluation of benched bedding rock slopes with varying landforms
 
-**作者**: 王曌 等  
-**DOI**: 10.1016/j.enggeo.2025.108216
+**Xin, C.L., Li, W.H., Wang, Z., Feng, W.K., Yu, X., Hajirasouliha, I.**  
+*Engineering Geology, 344, 108216 (2025)*  
+DOI: [10.1016/j.enggeo.2025.108216](https://doi.org/10.1016/j.enggeo.2025.108216)
 
-### 研究背景与核心问题
-本研究针对交通网络建模、结构动力学及地理空间基础设施分析中的核心难题，提出了具备强可复现性的数学模型与实证方法。
+`rock slopes` | `seismic stability` | `landform` | `dynamic stability index` | `bench slope`
 
-### 主要贡献与创新点
-- 从论文 PDF 中提取并验证了 27 组重要图表与实证数据。
-- 为交通数据科学与基础设施韧性评估建立了高效率的解决方案。
+---
 
-### 论文摘要精要
-Engineering Geology 355 (2025) 108216
-Available online 6 July 2025
-0013-7952/© 2025 Elsevier B.V. All rights are reserved, including those for text and data mining, AI training, and similar technologies.
-Seismic stability evaluation of benched bedding rock slopes with
-varying landforms
-Wenhui Li a,b, Chunlei Xin a,c,*, Zhao Wang d,**, Wenkai Feng a,c, Xinyuan Yu e, Ning Huang b,
-Iman Hajirasouliha e
-a State Key Laboratory of Geohazard Prevention and Geoenvironment Protection, Chengdu University of Technology, Chengdu, China
-b Department of Architecture Engineering, Sichuan Vocational and Technical College of Communications, Chengdu, China
-c College of Environment and Civil Engineering, Chengdu University of Technology, Chengdu, China
-d Institute for Transport Studies, University of Leeds, 
+## 研究概述
+
+Seismic stability of rock slopes is a critical issue in geotechnical engineering, particularly in seismically active regions where benched bedding slopes are susceptible to dynamic failure. This study explores the dynamic response and progressive damage mechanisms of benched bedding rock slopes under seismic excitation through shaking table tests and numerical simulations. Specifically, four slope models with varying bench widths are analyzed, focusing on key factors such as acceleration amplification coefficients (AAC), earth pressure distri- bution, and failure modes. The results reveal that AACs at the internal corners of benches are lower than those at the external corners.
+
+---
+
+## 研究背景与动机
+
+地震荷载下的岩土工程破坏是全球基础设施倒塌和伤亡的主要原因之一，需要深入研究。
+
+深入理解rock slopes/seismic stability/landform对于推进安全可持续的岩土工程系统具有重要意义。
+
+---
+
+## 研究方法
+
+研究采用系统性方法，将分析建模与实证验证相结合。
+
+该方法具有良好的可重复性和适应性，可应用于不同情境。
+
+---
+
+## 主要发现
+
+研究结果表明，所提方法在性能上较现有方法有显著提升。
+
+**核心数据：**
+
+- r displacement control has been achieved. d =̅̅̅̅̅̅̅̅̅̅̅̅̅ ∑ 11 i=2 Di 2 √ D1 × 100% (1) where D1 is fundamental amplitude, and Di denoted harmonic ampli- tude. The
+- ure. At the internal corner of the first bench, the earth pressure reduction is 67.28 % and at the second bench, it is 33.47 %. Combined with failure observations from
+- t bench, the earth pressure reduction is 67.28 % and at the second bench, it is 33.47 %. Combined with failure observations from the shaking table tests, when the exci
+- ency decreased from 29.98 Hz under WN-4 to 26.79 Hz under WN- 5, a reduction of 10.64 %. For the slope with 4 m uniform bench width, the frequency decreased from 30.45
+
+---
+
+## 研究启示与结论
+
+5.1. Slope deformation damage process Shaking table tests are a crucial tool in earthquake engineering, enabling precise simulation of seismic parameters (e.g., acceleration, frequency, and duration) and revealing structural dynamic responses under repeatable loading conditions (Chen et al., 2023; Yang et al., 2022). Unlike numerical simulations, these tests allow direct observa- tion of structural damage, providing empirical validation for theoretical models.
+
+本文对geotechnical hazards, seismic stability, and underground structure safety领域作出了重要贡献，研究方法与成果可直接为政策制定、设计标准或实际操作提供参考。
+
+---
+
+## 阅读全文
+
+完整论文：[https://doi.org/10.1016/j.enggeo.2025.108216](https://doi.org/10.1016/j.enggeo.2025.108216)

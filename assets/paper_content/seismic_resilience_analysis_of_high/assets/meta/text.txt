@@ -1,0 +1,2460 @@
+Available online at www.sciencedirect.com
+ScienceDirect 
+Underground Space 25 (2025) 99–131
+www.keaipublishing.com/undsp 
+Research Paper 
+Seismic resilience analysis of high-speed railway tunnels across 
+fault zones using ensemble learning approach
+Lianjie Yang b , 
+b College of Environment and Civil Engineering, Chengdu Universit y of Technology, Chengdu 610054, China
+Chunlei Xin a,b , 
+a State Key Laboratory of Geohazard Prevention and Geoenvironment Protection, Chengdu University of Technology, Chengdu 610054, China
+Zhao Wang c,⁎ , 
+c Institute for Transport Studies, University of Leeds, Leeds LS2 9JT, UK
+Xinyuan Yu d , 
+d School of Mechanical, Aerospace and Civil Engineering, The University of Sheﬃeld, Sheﬃeld S1 3JD, UK
+Iman Hajirasouliha d , Wenkai Feng a,b 
+Received 25 January 2025; received in revised form 29 March 2025; accepted 11 April 2025
+Available online 20 September 2025
+Abstract 
+Severe damage to the Daliang high-speed railway tunnel during earthquakes primarily results from the dynamic interplay between 
+fault dislocation and intense seismic forces near fault lines, accompanied by their complex feedback mechanisms. This study introduces 
+a novel hybrid ﬁnite element model to explore the impact of fault dislocation-induced earthquakes on tunnel lining integrity. The inﬂu-
+ence of seismic characteristics on factors such as peak ground acceleration, tunnel structure form, and the shear modulus of surrounding 
+rock is analyzed. Extensive numerical simulations investigate the coupling eﬀects of faults and various seismic motions on tunnel struc-
+tures. Additionally, a rapid resilience assessment model for tunnels crossing strike-slip faults is developed using the Adaboost algorithm. 
+This model evaluates the seismic fragility and resilience of such tunnels, oﬀering insights into the anti-seismic behaviors of three distinct 
+tunnel lining conﬁgurations under the combined stresses of fault dislocation and signiﬁcant seismic activity. Furthermore, the fault dam-
+age characteristics of the crossing-fault high-speed railway tunnel are assessed, based on real earthquake damage classiﬁcation and cur-
+rent seismic codes. Findings demonstrate that the evaluation model is both highly accurate and eﬃcient, serving as an eﬀective alternative
+to traditional nonlinear time-history analysis of tunnel structures. Research shows that critical factors inﬂuencing seismic fragility and
+resilience include the structural design of the tunnel, shear modulus of the surrounding rock, peak ground acceleration, and tunnel
+height. Simulations reveal that tensile and compressive damage are signiﬁcantly reduced in circular tunnels with a shock-absorbing joint
+compared to original tunnel prototypes. Overall, damage assessments from actual faults in crossing-fault high-speed railway tunnels cor-
+relate well with numerical predictions, providing essential references for structural recovery and safety evaluations post-earthquake.
+Keywords: Tunnel engineering; Lining structure; Strike-slip seismic fault; Ensemble learning; Seismic resilience
+1 Intr oduction
+Fault-crossing tunnels are particularly susceptible to sev-
+ere seismic damage due to fault dislocation and strong seis-
+mic motion, especially during high-magnitude earthquakes.
+For instance, the 2008 Wenchuan earthquake, triggered by
+⁎ Corresponding author. 
+Peer review under the responsibility of Tongji University
+E-mail address: z.wang13@leeds.ac.uk (Z. Wang). 
+https://doi.org/10.1016/j.undsp.2025.04.011 
+2467-9674/© 2025 Tongji University. Publishing Services by Elsevier B.V. on behalf of KeAi Communications Co. Ltd. 
+This is an open access article under the CC BY-NC-ND license (http://creativecommons.org/licenses/by-nc-nd/4.0/). 
+the Longmenshan fault zone, caused severe damage to the 
+Longdongzi and Longxi Tunnels (Qu et al., 2 021). Simi-
+larly, the 2022 Menyuan earthquake, associated with the 
+Lenglongling fault zone (LLLF), resulted in substantial dis-
+location damage to the Daliang Tunnel (Liu et al., 2 022; P .
+Chen et al., 2 023). More recently, the 2023 earthquake in 
+Turkey damaged railway infrastructure near O zan village
+(Aydan et al., 2 024). Historical data indicate that damage 
+to tunnels crossing fault lines is typically severe, making 
+their repair or reconstruction exceptionally challenging.
+
+Enhancing the seismic resilience of tunnels in active fault 
+zones has therefore become a critical challenge for engineer-
+ing projects. Tunnel resilience refers to the fragility and risk 
+of tunnel structures under seismic loading as well as their 
+capacity to withstand disaster impacts and recover swiftly. 
+Although unde rground structures generally demonstrate
+better seismic performance than above-ground structures,
+past earthquake events have shown that high-speed railway
+tunnels crossing fault zones remain vulnerable to consider-
+able damage (Chen et al., 2020; Cui et al., 2022a). The ongo-
+ing implementation of national strategies, such as ‘‘A 
+Country with Strong Transportation Network” and ‘‘Chi-
+na’s Western Development Strategy”, is driving the con-
+struction of major tunnel projects in areas with active 
+seismic faults. Consequently, ensuring the seismic safety
+of these tunnel structures has become imperative, with tun-
+nel resilience emerging as a vital metric for assessing seismic
+safety.
+100
+L. Yang et al. / Underground Space 25 (2025) 99–131
+Earlier studies primarily relied on expert judgment and 
+historical data; however, numerical sim ulation technology
+has now become a critical analysis method (Jiang et al.,
+2024). Cui et al. (2022b) developed a large-scale under-
+ground engineering model using FLAC3D and established 
+a peak ground acceleration (PGA) index-based earthquake
+damage prediction method. Jiang et al. (2022) conﬁrmed 
+through soil-structure ﬁnite element analysis that site con-
+ditions signiﬁcantly inﬂuence the probability of earthqua ke
+damage by altering structural stiﬀness and burial depth.
+Moayedifar et al. (2019) derived the PGA fragility curve 
+for mountain tunnels based on a 2D ﬁnite element model.
+Regarding resilience assessment, Fabozzi et al. (2018)
+developed a risk early warning framework for high-speed 
+railway tunnel systems to quantify economic losses under
+varying levels of intensiﬁcation. Han et al. (2023) proposed 
+an innovative three-dimensional (3D) spatial model to 
+reveal the dynamic evolution of tunnel composite perfor -
+mance and repair costs during the disaster process. H.
+Huang et al. (2016, 2017) developed a recoverable model 
+for shield tunnel overload and the vulnerable surface the-
+ory for double-intensity earthquakes, enab ling systematic
+analysis from disaster damage assessment to recovery per-
+formance. Xin et al. (2019) proposed a buﬀer layer param-
+eter optimization method to enhance structural damping 
+performance through the adjustment of material and geo-
+metric parameters. The existing studies still have theoreti-
+cal gaps regarding the seismic mechanism of crossing-
+fault tunnel linings and the rapid resilience assessment of 
+high-speed railway tunnels under the seismic trigger eﬀect
+of active faults. There is an urgent need to develop an intel-
+ligent evaluation system based on multi-physical ﬁeld
+coupling.
+Incremental dynamic analysis (IDA), a primary method 
+for seismic fragility assessment, relies on nonlinear time-
+history analysis, leading to low computational eﬃciency 
+and challenges in addressing uncertainties in geometric
+parameters, material properties, and structural conﬁgura-
+tions of tunnels crossing fault zones and mountain tunnels.
+Repeatedly generating deterministic fragility curves signiﬁ-
+cantly increases computational burden, particularly when 
+assessing key parameter inﬂuences, thereby limiting the 
+engineering applicability of quantitative tunnel seismic resi-
+lience evaluation under complex geological conditions. In
+recent years, several innovative methods have emerged in
+nonlinear ﬁnite element analysis. Rabczuk et al. (2004,
+2010) developed a meshless EEGP method for eﬃciently 
+simulating complex dynamic cracks using local particle
+enrichment and an implicit crack activation mechanism.
+Firouzi et al. (2023) developed a time-varying deformation 
+prediction model for viscoelastic ﬁlm materials, utilizing 
+deformation gradient tensor decomposition and implicit 
+trapez oidal time integration to enhance the accuracy of
+large deformation analysis. Karami et al. (2021) integrated 
+gene expression programming (GEP) and multiple linear 
+regression (MLR) to develop a predictive model for the 
+ﬁre-bearing capacity of composite honeycomb steel beams,
+overcoming the limitations of traditional testing methods.
+Samaniego et al. (2020) embedded deep neural networks 
+(DNNs) into the energy variational framework to directly 
+solve mechanical partial diﬀerential equatio ns, addressing
+challenges in multi-ﬁeld coupling and high-order continu-
+ity. Shishegaran et al. (2021a, 2023) achieved intelligent 
+prediction of water pressure-induced damage evolution in 
+ﬁber-reinforced concrete tunnels by integrating GEP with 
+nonlinear ﬁnite element modeling. Collectively, these stud-
+ies demonstrate that integrating machine learning with
+advanced numerical methods signiﬁcantly improves com-
+putational eﬃciency and simulation reliability in complex
+tunnel engineering.
+Several scholars have investigated the application of 
+advanced machine learning techniques in structural engi-
+neering. Regarding materials, Shishegaran et al. (202 0a)
+investigated the PVP-modiﬁed polyether sulfone mem-
+brane in combination with GEP to optimize ultraﬁltration 
+process parameters, achieving eﬃcient removal of the anio-
+nic surfactant SDS from wastewater. In structural engi-
+neering prediction and evaluation, Zhang et al. (20 25)
+developed a CNN-based 3D numerical model framework 
+to quantify the dynamic response and resilience of tunnels 
+subjected to explosion loads. Lyu et al. (2024) introduced 
+an LSTM-CFD fusion approach to enable intelligent 
+tracking of ﬂammable gas leakage through time seri es data
+analysis. Huang et al. (2023) developed a 1D-CNN-PDEM 
+non-parametric model to enhance the accuracy of time-
+dependent seismic vulnerability assessment of s ubway sta-
+tions. Shishegaran et al. (2020b, 2021b) and Naghsh et a l.
+(2021) integrated machine learning algorithms with multi-
+disciplinary methods to enhance model performance in 
+complex scenarios. They further combined nonlinear ﬁnite 
+element analysis with GEP, the adaptive neuro-fuzzy infer-
+ence system (ANFIS), and other algorithms. A multi-
+scenario predictive system for structural engineering was 
+developed. Regarding tunnel fragility analysis and risk
+assessment, Sun et al. (2018) pioneered a support vector 
+machine multi-classiﬁcation model to predict tunnel extru-
+
+sion deformation eﬀectively. Z. Huang et al. (2022a) inte-
+grated ﬁnite element methods and SVM algorithms to 
+develop an intelligent system for generating vulnerability 
+curves of mountain tunnels and concrete dams. Regarding
+the modeling of nonlinear geological problems, Adoko 
+et al. (2013) used MARS and ANN to develop a conver-
+gence deformation prediction model for high-speed railway 
+soft rock tunnels , oﬀering a new paradigm for analyzing
+complex geological conditions. Hasanpour et al. (2020)
+developed a dynamic assessment framework for TBM 
+extrusion risk based on ANN and Bayesian networks 
+through multi-source data fusi on, enabling the coupling
+analysis of geological and construction parameters. L.
+Wang et al. (2023) innovatively combined probabilistic 
+seismic design methods with uncertainty quantiﬁcation to 
+create a collaborative assessment system for the seismic 
+vulnerability and resilience of mountain tunnels. Despite 
+these advancements, research on the seismic resilience anal-
+ysis and reinf orcement strategies for tunnel linings under
+the combined impacts of fault dislocation and intense seis-
+mic activity, facilitated by machine learning, remains in the
+preliminary stages.
+L. Yang et al. / Underground Space 25 (2025) 99–131
+101
+Advances in seismic resilience enhancement for fault-
+zone tunnels primarily focus on two aspects: optimizing 
+mate rial modiﬁcations and developing novel seismic struc-
+tures. Dai et al. (2023) investigated the vibration isolation 
+mechanism of glass ﬁber-reinforced concrete lining through 
+shaking table tests and systematically analyzed the eﬀects 
+of ﬁbe r content and isolation layer thickness on the
+dynamic response intensity in key areas. Long et al.
+(2023) developed a shape memory alloy ﬂexible ring joint, 
+whose unique deformation adaptability enhanced the tun-
+nel’s longitudinal stiﬀness adjustment and energy dissipa-
+tion eﬃciency. Wang et al. (2024) identiﬁed typical weak 
+zones in the 45° conjugate direction of the tunnel lining 
+through model tests in the fault fracture zone. Although 
+the damping layer reduced peak internal forces at the arch
+foot and spandrel, it did not alter the overall dynamic
+response of the structure. Xin et al. (2018, 2020, 2022)
+and Wen et al. (2021) compared the seismic performance 
+of damping joints, buﬀer layers, and casing structures, ﬁnd-
+ing that ﬂexible joints enhanced deformation coordination 
+through stiﬀness matching. The buﬀer layer mitigates bond 
+damage risk in the surrounding rock through interface 
+decoupling. The casing structure oﬀers dual advantages: 
+enhancing resistance during earthquakes and optimizing 
+post-earthquake repair eﬃciency. These studies highlight 
+key strategies for enhancing tunn el seismic performance
+through damping measures. By mitigating seismic damage
+and facilitating post-earthquake recovery, this study pro-
+vides theoretical support and technical guidance for
+enhancing the long-term seismic resilience of high-speed
+railway tunnels crossing strike-slip seismogenic faults.
+This study establishes a rapid resilience assessment 
+framework for high-speed railway tunnels crossing strike-
+slip seismogenic faults. Centered on numerical simulations
+of the dynamic interaction between surrounding rock and
+tunnel, this study generates high-quality datasets to sup-
+port resilience analysis, optimizes model performance using 
+the Adaboost algorithm, and integrates multi-source mod-
+eling techniques to enhance prediction accuracy and ﬂexi-
+bility. The developed damage prediction model eﬀectively 
+quantiﬁes the relationship between seismic intensity, tunnel 
+structure, surrounding rock properties, and damage index, 
+enabling key parameter selection and input variable reduc-
+tion. Based on this, the coupling mechanism of fault dislo-
+cation and seismic motion on tunnel fragility and resilience 
+is thoroughly analyzed, followed by a comprehensive eval-
+uation of seismic performance and an investigation into the
+regulatory eﬀects of various repair strategies on tunnel seis-
+mic response. Finally, using the Daliang Tunnel project as
+a case study, the model’s accuracy in identifying damage
+features and assessing recovery capability in real earth-
+quake events is validated, providing a theoretical founda-
+tion
+and
+technical
+support
+for
+risk
+mitigation
+and
+resilience
+enhancement
+in
+tunnel
+engineering
+across
+strike-slip seismogenic fault.
+2 Seismic resilience framework for tunnels
+This study proposes a resilience evaluation framework 
+for high-speed railways aﬀected by across strike-slip seismic
+events (as shown in Fig. 1(a)). The Adaboost algorithm 
+identiﬁed key variables, including tunnel parameters, sur-
+rounding rock properties, and seismic motion intensity. 
+PGA was the main input, and the lining damage index 
+was the output. By integrating fault dislocation and seismic 
+excitation, a nonlinear seismic response dataset was con-
+structed. The trained model replaces numerical simulations
+and shaking table tests to generate tunnel seismic fragility
+curves. A quantitative resilience evaluation system inte-
+grates multi-source disaster data for analyzing earthquake
+damage evolution and structural resilience.
+In the tunnel seismic resilience framework, an initial 
+seismic damage analysis is performed. Based on existing 
+research and ﬁeld investigations, this analysis determines 
+earthquake damage extent. Seismic fragility analysis 
+assesses structural performance degradation under speciﬁc 
+conditions. The structural reco very time is estimated to
+develop an appropriate recovery model. This forms a resi-
+lience analysis model, evaluated with quantitative indica-
+tors. The process is shown in Fig. 1(b). 
+2.1 Tunnel seismic hazard analysis
+Based on the existing active fault zone distribution map 
+and the study of strong earthquake areas, the seismic dam-
+age characteristics of relevant sites are described using the 
+seismic motion intensity parameters (IM). This method can 
+calculate the probability of exceeding a speciﬁc seismic 
+demand level during a deﬁned operational period or deter-
+mine the spatial distribution of IM during site-speciﬁc seis-
+mic response analyses of high-speed railway tunnels
+(Huang et al., 2 020). Due to the uncertainty of seismic
+
+102
+L. Yang et al. / Underground Space 25 (2025) 99–131
+Fig. 1. Seismic resilience framework for tunnels. (a) Resilience evaluation framework of high-speed railway across strike-slip seismogenic fault, and (b)
+seismic resilience evaluation framework of tunnel.
+motion, quantiﬁcation is a critical factor. Common 
+dynamic loads for underground structures include PGA, 
+peak ground velocity (PGV), and permanent ground dis-
+placement (PGD). For high-speed railway tunnels, PG A
+and PGV are generally better correlated with structural
+damage and can be used to characterize earthquake hazard
+levels (Zhou et al., 2 021). The seismic hazard analysis is 
+designed to identify representative disaster scenarios, 
+including earthquakes, debris ﬂows, and high ground 
+stress, in the tunnel area to evaluate expected losses and 
+the resilience of infrastructure. Additionally, fault disloca-
+tion, as the primary hazard, triggers seismic motion, which
+
+in turn leads to additional hazards such as ground shaking, 
+surface rupture, and potentially landslides (illustrated in
+Fig. 2(b) and (c)). These secondary hazards depend on 
+the primary hazard and form a cascading chain of eﬀects. 
+The multiple hazards identiﬁed in the foundational setup
+are
+categorized
+as
+correlated
+or
+cascading
+hazards
+(Argyroudis et al., 2020). Figure 2 illustrates the tunnel lin-
+ing hazard analysis curve in relation to increasing peak
+ground acceleration.
+L. Yang et al. / Underground Space 25 (2025) 99–131
+103
+2.2 Seismic fragility analysis of tunnel structure
+The seismic intensity measure directly inﬂuences the 
+variability and validity of seismic fragility analysis results, 
+and is a key factor in assessing the seismic fragility of tun-
+nel structures. Thus, selec ting an appropriate seismic inten-
+sity measure (IM) is a crucial aspect of the seismic fragility
+analysis of tunnels (Tsinidis et al., 2022). The seismic fragi-
+lity of the tunnel can be evaluated using a fragility curve, 
+which indicates the probability of the tunnel structure 
+exceeding various damage states under diﬀerent seismic 
+intensities. This study examines the dynamic interaction 
+between the rock mass and tunnel structure, along with 
+the corresponding demand measures (DM) under various 
+peak acceleration conditions through numerical simula-
+tion. Subsequently, based on the calculated DM and corre-
+sponding IM, a probabilistic seismic demand model
+(PSDM) is developed. Following this, the nonlinear time-
+history results are post-processed to explore the statistical
+correlation between seismic intensity measures and struc-
+tural response across each damage state. Cornell et al.
+(2002) represented the structural seismic demand measure 
+as a log-linear function of the seismic intensity measure
+(Eq. (1)): 
+ln d 
+a 
+b ln IM
+1
+where d represents the structural seismic demand parame-
+ter, IM denotes the seismic motion intensity parameter, a 
+and b signify the regression parameter. In seismic fragility 
+analysis of structures, regression analysis is commonly
+employed to establish the relationship between seismic
+DM and seismic IM.
+Fig. 2. Seismic damage analysis curve.
+Ultimately, fragility functions are derived from the pro-
+posed probabil istic
+seismic
+demand
+model
+(PSDM)
+(Huang et al., 2021). In current seismic fragility analyses 
+of tunnels, most fragility curves are characterized by a 
+two-parameter logarithmic distribution model, as illus-
+trated in Eq. (2): 
+P f ds 
+dsi IM
+U 1 
+btot 
+ln 
+IM
+IMmi
+2
+where
+represents the probability of exceeding a cer-
+tain failure state
+denotes the cumulative probability 
+function of the standard normal distribution;
+repre-
+sents the threshold of the seismic parameter S that causes 
+the i-th failure state; 
+represents the total logarithmic
+standard deviation, which is a combination of three inde-
+pendent uncertainties and can be expressed by Eq. (3): 
+Mmi 
+ot
+P f 
+ds; U 
+I 
+bt 
+btot
+b2 
+ds 
+b2 
+C 
+b 2
+D
+3
+where
+represents the uncertainty of the failure state, 
+accounts for the uncertainty in the tunnel’s response and 
+bearing capacity, and
+captures the uncertainty of the 
+input seismic motion. The values of
+and
+re typically 
+set as 0.4 and 0.3, respectively. The value o
+is deter-
+mined based on the standard deviation of the damage index
+calculated from diﬀerent seismic wave inputs and the devi-
+ation of the ﬁtted regression curve (Z. Huang, 2022b). 
+b 
+D 
+b 
+b
+D
+bds
+C 
+b 
+ds
+a
+C 
+f b 
+2.3 Seismic resilience analysis of tunnel structure
+2.3.1 Tunnel performance recover y curve
+Assessing the seismic resilience of engineering structures 
+is crucial for disaster mitigation; however, existing theoret-
+ical frameworks remain underdeveloped. This study exam-
+ines the variability in post-earthquake recovery curves of 
+tunnels with identical damage states, utilizing the FEMA 
+(2020) empirical model to characterize time-dependent 
+restoration processes (as shown in Fig. 3). The proposed 
+methodology quantiﬁes recovery velocity, completeness, 
+and total duration, addressing the limitations of conven-
+tional linear recovery assumptions. Key functionalities 
+include bottleneck identiﬁcation,
+resource
+allocation
+
+optimization, and stage-speciﬁc intervention planning, 
+forming a dynamic decision-making framework for priori-
+tizing post-disaster rehabilitation eﬀorts. This approach 
+enhances resi lience evaluation by incorporating nonlinear
+recovery
+dynamics
+into
+infrastructure
+performance
+assessments.
+104
+L. Yang et al. / Underground Space 25 (2025) 99–131
+Fig. 3. Estimation of the functionality function Q (t) of a tunnel.
+2.3.2 Deﬁnition and metric of tunnel resilience
+Throughout the extended service life of high-speed rail-
+way tunnels, the durability of concrete lining structures 
+progressively diminishes. Additionally, infrequent low-
+probability risks and adverse environmental conditions 
+(such as earthquakes, debris ﬂows, and high ground stres-
+ses) may further compromise the integrity of the lining 
+structure. Various modes of seismic damage correlate with 
+diﬀerent degrees of structural performance loss in the tun-
+nel lining. However, quantitative analyses of structural per-
+formance loss remain inadequate. To address this issue, a
+resilience framework can assess the extent of degradation
+in a tunnel’s structural performance following an adverse
+environmental disturbance, as well as its ability to recover
+rapidly from damage, thereby estimating a reasonable
+repair time, as shown in Fig. 4 (X. S. Chen et al., 2023). 
+Initially, consider the performance decline caused by the 
+time eﬀect under normal conditions, referred to as normal 
+performance. The period from the occurrence of a disaster 
+such as a strong earthquake, to the restoration of the
+tunnel to operational status
+includes a duration of
+structural performance changes
+. Figure 4 illustrates 
+this transition with a dashed arrow line. When the tunnel 
+experiences strong earthquake and fault coupling at
+its 
+structural performance will sharply decline to the level at 
+The interval fro
+represents the decision-
+making period for emergency rescue and repair measures.
+It is assumed that if repair actions are initiated a
+the
+tunnel will return to an operational performance level by
+Eventually, the tunnel may achieve a stable state. Table 1 
+provides a detailed explanation of the various dimensions 
+4 )
+t)
+t2
+t3
+,
+of resilience depicted in this ﬁgure. Similar to other infras-
+tructure, tunnel resilience must possess the capacity to 
+withstand performance disturbances, exhibiting high 
+robustne ss or low fragility, as well as the ability to rapidly
+recover to an acceptable performance level (Tsinidis et al.,
+2024a). 
+t1, 
+(t 
+(D 
+t1, 
+t2.
+m
+to 
+t t 3
+t4. 
+By quantifying structural damage and recovery poten-
+tial to assess system resilience, the elasticity index integrates 
+structural strength, functional durability, and repair cycle 
+parameters in tunnel engineering, enabling predictive anal-
+ysis and optimized decision-making for post-disaster recov-
+ery. Considering the nonlinear characteristics of structural 
+properties and the limitations of traditional conditional
+probability
+methods,
+this
+study
+establishes
+a
+multi-
+dimensional seismic resilience evaluation system for tunnel
+linings based on the resilience model developed by Huang 
+et al. (2016). 
+Re 
+F t2 
+t1 
+S t3 
+t2 
+R t 
+4
+t3
+t4
+t1
+4
+In the formula, the three weight coeﬃcients represent 
+area ratios derived from the transitio n curves, failure
+curves
+evolution curve
+and recovery curves
+depicted in Fig. 4. Variations in tunnel environmental 
+conditions and the types of repair measures implement ed
+after an earthquake can lead to diﬀerent scenarios. Figure 5 
+illustrates several general types of performance change 
+curves. Notably, during the damage stage, structural prop-
+erties may degrade in ductile
+linea
+or britt 
+modes. Otherwise, the duration of the repair decision pro-
+cess signiﬁcantly impacts damage recovery, repair costs, 
+and overall recovery eﬃciency of tunnel linings. An earlier 
+decision can reduce costs and requirements, helping to 
+maintain the tunnel’s designed service life. Therefore, the 
+post-earthquake decision-making stage
+is assumed to 
+lead to a further damage stage. Following tunnel repair, 
+structural performance may manifest in one of three sce-
+narios: case 1 better than the initial pe rformanc
+case 2 equal to the initial performance
+or case
+3 lower than the initial performanc
+This study
+focuses on the degree and mode of degradation of post-
+earthquake structural performance, assuming that the tun-
+nel structure returns to its initial performance after repair,
+corresponding to case 2.
+t ,
+S t ,
+t
+1,
+2,
+F 3
+1
+0 R1 ,
+R2 R3 ,
+Q0 R4 .
+F
+s 
+R 
+F
+r F
+le 
+S 
+e Q 
+Q0 
+e 
+2.3.3 Performance indicators of tunnel linings
+The above deﬁnition and measurement of the resilience 
+model can also be applied to the conditions and perfor-
+mance indices of tunnel lining under the coupled action 
+of fault and seismic motion. Under the coupling of fault 
+dislocation and seismic motion, the resilience of high-
+speed railway tunnels decreases sharply, with damage 
+states ranging from slight to complete. The selection of 
+the tunnel lining performance index is essential for deter-
+mining the resilience indices, as it reﬂects the tunnel’s 
+post-earthquake damage.
+Therefore,
+the
+performance
+index must be established before deriving the performance
+
+degradation curve to reﬂect changes in tunnel lining perfor-
+mance. According to D. Huang et al. (2022), the primary 
+defects of tunnel systems post-disaster and the prioritiza-
+tion of common defect risks under FEMA are illustrated
+in Fig. 6. Consequently, in this study, the selected tunnel 
+lining diameter convergence is used as an index for evalu-
+ating lining performance (Lin et al., 2022), deﬁned as 
+follows:
+L. Yang et al. / Underground Space 25 (2025) 99–131
+105
+Fig. 4. Performance variation trend in tunnel resilience analysis.
+Table 1 
+System properties in the frame of resilience.
+Dimension
+Symbol
+System property 
+Degradation
+Q t
+Performance degradation due to time eﬀect
+Robustness
+R0 
+f tf
+Residual of performance after disruption
+Fragility
+V n 
+Q tf
+f tf
+Loss of performance after disruption
+Rapidity
+DT 
+t4 
+t1
+Whole time duration for disrupted state of system
+Q t 
+DD0 
+DD t
+5
+where
+is the initial convergence when the tunnel is 
+built, and
+is the convergence at time t.
+D0
+D t
+D 
+D 
+To assess the inﬂuence of various environmental factors 
+and the eﬀectiveness of rapid recovery or adaptation strate-
+gies for tunnel structures after an earthquake, it is essential 
+to evaluate the resilience of the tunnel linin g structure, fol-
+lowing the calculation of resilience and structural perfor-
+mance.
+This
+study
+assesses
+the
+resilience
+evaluation
+indices proposed by Z. Huang et al. (2022c), as present ed
+in Table 2. 
+The resilience model employed in this study character-
+izes tunnel damage resulting from the coupled eﬀects of 
+fault activity and seismic motion, including cracks in the
+tunnel lining, extensive lining shedding, and tunnel disloca-
+tion. Notably, this study does not account for delays due to 
+aftershock activity, site repairs, and evaluations.
+3 Method ology
+3.1 Ensemble learn ing
+Advances in machine learning have greatly improved 
+tunnel disaster resilience analysis. This study applies an
+integrated learning algorithm (Deco` et al., 2013) to address 
+the limitations of traditional methods in handling engineer-
+ing uncertainties. Multiple base learners are integrated 
+using voting or weighting to enhance prediction accuracy. 
+This approach mitigates overﬁtting in multi-dimensional 
+tunnel performance analysis, improves generalization, 
+and addresses limitations of the linear damage hypothesis.
+The proposed framework, leveraging data-driven feature
+extraction, captures the nonlinear relationship between
+structural degradation and recovery potential, advancing
+intelligent resilience assessment.
+Among various ensemble learning algorithms, Adaboost 
+is one of the most widely used enhancement algorithms, 
+featuring adaptive resampling technology for selecting 
+training samples. In each iteration, the selection frequency 
+of misclassiﬁed data from the previous classiﬁer is higher
+
+106
+L. Yang et al. / Underground Space 25 (2025) 99–131
+Fig. 5. Trend of tunnel performance and cumulative damage under the eﬀect of fault dislocation triggering strong earthquakes.
+Fig. 6. Risk priority of common defects under FEMA.
+
+than that of correctly classiﬁed data, allowing the new clas-
+siﬁer to focus on the reweighted misclassiﬁed samples. Each 
+iteration adjusts the weights of the data set, allowing the
+subsequent integration models to focus more on the previ-
+ously misclassiﬁed data (Hong et al., 2018; Xing et al.,
+2024).
+L. Yang et al. / Underground Space 25 (2025) 99–131
+107
+Table 2 
+Classiﬁcation of resilience grades.
+Standard
+Resilience
+Resilience grade 
+Robustness
+Rapidity 
+High
+Better
+Excellent
+0.9 ≤ R < 1.0
+Moderate
+Good
+Fast
+0.6 ≤ R < 0.9
+Low
+General
+Moderate
+0 ≤ R < 0.6
+No
+Poor
+Slow
+R < 0 
+3.2 Principle of the Adaboo st algorithm
+In geotechnical engineering, commonly used ensemble 
+learning algorithms include Adaboost and its extensions: 
+Adaboost.M1, M2, R, R2, and RT. For a robust ensemble
+model, base predictors should be reasonable, eﬀective, and
+independent (Wu et al., 2020). Traditional Adaboost uses a 
+single-type base classiﬁer. Diﬀerent base models are 
+selected based on sample distributions during training. This 
+study modiﬁes Adaboost.RT by incorporating diverse base
+learners to construct the ﬁnal ensemble framework.
+The Adaboost.RT algorithm is an improved version 
+based on Adaboost regression algorithms such as Ada-
+boost.R and Adaboost.R2. A threshold is introduced in 
+the Adaboost algorithm, dividing the training set into ‘‘sat-
+isfactory” and ‘‘disappointing ” categories by comparing
+the training error with the threshold. Consequently, the
+regression problem is transformed into a straightforward
+binary classiﬁcation problem (Tian et al., 2010). The speci-
+ﬁc process of the Adaboo st.RT algorithm is illustrated in
+Fig. 7. 
+3.3 Establishment of an integrated multi-learning model 
+based on the Adaboost.RT algorithm
+To develop an ensemble learning model with robust gen-
+eralization capabilities, it is ideal for the weak learners 
+within the ensemble to be as independent as possible. How-
+ever, achieving complete independence is often challenging 
+in practical applications. Therefore, the common practice 
+involves selecting the same base learning model, utilizing 
+diﬀerent training samples to generate distinct weak learn-
+ers. In this study, various base learning models are chosen 
+as weak learners to build strong learning models with
+enhanced generalization capability. Given the limited
+amount of tunnel engineering data, which falls into the cat-
+egory of small sample data, there is a need for a model
+adept at processing such datasets eﬀectively. Additionally,
+considering the factor of training time, this study selects
+three base learning models that are well-suited for small 
+sample data and demonstrate robust learning capabilities: 
+support vector regres sion (SVR), back propagation (BP),
+and extreme learning machine (ELM) (Du et al., 2024). 
+Fig. 7. Work ﬂow of Adaboost.RT algorithm.
+Among the selected base classiﬁers, SVR, derived from 
+SVM, is noted for its robust generalization capabilities. It 
+eﬀectively addresses challenges associated with small sam-
+ple sizes, overﬁtting, high dimensionality, and local min-
+ima,
+making
+it
+particularly
+suitable
+for
+complex
+engineering problems (Gu et al., 2015). The BP network 
+demonstrates signiﬁcant adaptability, self-organization, 
+self-learning capability, and nonlinear mapping ability, 
+overcoming the limitations of traditional feedback meth-
+ods, and has gained widespread use in recent years (Tian 
+et al., 202 2). Compared with traditional gradient descent 
+algorithms, the ELM learning machine exhibits faster con-
+vergence and higher prediction accuracy, facilitating global
+optimization (Chai et al., 2023). Table 3 illustrates the 
+speciﬁc application of the Adaboost.RT algorithm in
+high-speed railway tunnels.
+In the Adaboost.RT algorithm, the selection of the 
+threshold signiﬁcantly inﬂuences the eﬀectiveness of the 
+algorithm. Currently, there is no established automatic 
+threshold selection algorithm that consistently provides 
+clear and reliable results. Therefore, this study employs a
+manual approach, adjusting and iteratively reﬁning the
+threshold to optimize performance.
+4 Engineering application and comparison
+4.1 Study a rea
+On January 8, 2022, at 1:45 AM, an Ms 6.9 earthquake 
+struck Menyuan County, Qinghai Province, China 
+(101.26°E, 37.77°N). The earthquake was associated with 
+the Lenglongling fault (F5) in the middle-west section of 
+the Qilian-Haiyuan fault, which is located on the 
+northeastern margin of the Qinghai-Xizang Plateau, which
+
+i
+i
+b
+E i
+u
+1
+other
+T
+t 1 lg
+bt
+evident in the aﬀected zone of the F5 fault. This segment 
+constitutes 5.33% of the tunnel’s total length, while the 
+overall lengt h aﬀected by severe seismic damage accounts
+for 15.96% of the total length of the tunnel (Y. Wang 
+et al., 2023). 
+108
+L. Yang et al. / Underground Space 25 (2025) 99–131
+Table 3 
+Speciﬁc application of the Adaboost.RT algorith m in high-speed railway tunnels.
+Algorithm name: Adaboost.RT for resilience analysis of high-speed railway tunnel lining.
+Input: Training set
+three basic learning models
+iteration times
+threshold 
+value u, sample weight 
+X
+x1 x2 x3 y1 
+x2 x3 x4 y2
+xn xn 1 xn 2 yn
+,
+Q1 Q2 Q3,
+T
+3,
+Dt.
+Initialization: Error rate
+iteration times
+initialize sample weights
+et 
+0,
+t 
+1,
+Dt i 
+1
+n i
+1 2 3
+n.
+Training: When t 
+T
+Step 1: Call the base learner to provide sample weights: Dt i
+1
+m.
+Step 2: Establish regression model: f t x
+L t X Dt
+y.
+Step 3: Calculate the relative error of each training sample: E t
+f t xi
+yi
+y
+.
+Step 4: Calculate error rate:
+until
+et
+iDt i ,
+Et i
+f t xi
+yi
+y
+u.
+Step 5: Set weight update parameters: bt 
+eh 
+t
+h
+1 2 3 .
+,
+Step 6: Update sample weights: Dt 1 i
+D t i
+Zi
+t
+t
+.
+Step 7: Adjust according to the Adaboost.RT algorithm.
+Step 8: Set t = t + 1.
+Step 9: Output the integrated learner: f x
+t 1 lg 1
+bt f t x
+T
+1
+.
+exhibits pure left-lateral strike-slip characteristics (Zhu 
+et al., 2023; Zhang et al., 2023a) (see Fig. 8). The epicenter 
+was located approximately 4.5 km from the Daliang Tun-
+nel of the Lan(zhou) Xin(jiang) high-speed railway. The 
+primary surface crack formed by the earthquake extends 
+nearly east–west through the mountain above the tunnel’s 
+exit. The fracture length on the north side measur es
+approximately 21.5 km, with a maximum displacement of
+about 3.1 m. On the south side, the fracture length is
+approximately 3.8 km, with a maximum displacement of
+about 0.5 m (Zhang et al., 2023b). Daliang Tunnel is a 
+double-track high-speed railway tunnel featuring a 5 m line 
+spacing, a maximum bur ied depth of approximately 800 m,
+and a total length of 6567.82 m (Bao et al., 2022). The 
+Menyuan earthquake resulted in a maximum horizontal 
+displacement of 1.78 m along the tunnel’s alignment. The 
+segment of the tunnel lining exhibiting the most severe seis-
+mic damage measures approximately 350 m, particularly
+Fig. 8. Earthquake background and location in the Daliang tunnel area.
+The section of the Daliang Tunnel from K1971+341 to 
+K1971+691 crosses an active fault, where signiﬁcant seis-
+mic damage has occurred, including severe misalignment 
+of the track, lateral extrusion of the side wall, and collapse 
+of the secondary lining. Notably, the maximum uplift 
+height of the track bed is approximately 0.7 m. The rail 
+has twisted and is suspended in a serpentine shape, the fas-
+teners have collapsed, and the entire side of the track plate 
+is damaged. The cover plates of the ditches on both sides 
+were pushed upward, causing the ditch side walls to tilt 
+and partially crush. Additionally, the arches of the lining
+in certain sections were continuously crushed and frac-
+tured. The side wall of the lining at the boundary of the
+
+icant left-lateral strike-slip characteristics are eviden t (as
+shown in Fig. 9(a) and (b)).
+L. Yang et al. / Underground Space 25 (2025) 99–131
+109
+fault exhibits extrusion failure, with a maximum displace-
+ment of approximately 1.8 m on the right wall and about 
+1.5 m on the left wall. The steel reinforcement is distorted,
+the waterproof membrane is torn and exposed, and signif-
+Fig. 9. Schematic diagram of earthquake damage phenomenon. (a) Overall oﬀset shape and typical extremely serious earthquake damage of Daliang
+tunnel, and (b) Daliang Tunnel crossing Lenglongling strike-slip active fault and extremely serious earthquake damage morphology.
+The sections K1970+695 to K1971+341 and K1971 
++691 to K1972+093 exhibit severe seismic damage in the
+
+Daliang tunnel, with the lining misaligned by approxi-
+mately 10 cm. Additionally, the arch and left wall show 
+signiﬁcant spalling in 10 locations, covering areas ranging 
+from 0.5 to 15 m2 . The arch and side walls display annular, 
+longitudinal, and oblique discontinuous cracking, with 
+earthquake damage primarily concentrated along the ring. 
+Water seepage is observed in some areas, and longitudinal 
+continuous cracking of the invert ﬁlling layer occurs in sev-
+eral sections, alongside cracking in some interior walls of 
+the attach ed caverns. The severely damaged section is sig-
+niﬁcantly aﬀected by the left-lateral extrusion of the fault;
+however, the extent of this inﬂuence is less severe than that
+observed in the fault fracture zone. Consequently, crossing-
+fault tunnel engineering incurs substantial losses and pre-
+sents challenges for repairing earthquake damage, high-
+lighting the urgent need to enhance seismic resilience.
+110
+L. Yang et al. / Underground Space 25 (2025) 99–131
+4.2 Establishment of a 3D ﬁnite element model
+Using the world’s ﬁrst case of Daliang tunnel damage 
+and repair due to a strong earthquake induced by fault dis-
+location, an adaptive numerical model is developed. This 
+model, featuring a circular section and a shock-absorbing 
+joint, aligns with ﬁeld repair technology. It is employed 
+to elucidate the damage mechanisms of various anti-
+seismic lining measures under coupled eﬀects, providing
+theoretical and technical support for enhancing the resili-
+ence of tunnels across strike-slip seismogenic fault (P.
+Chen et al., 2024). 
+Fig. 10. Three-dimensional ﬁnite element numerical calculation model of surrounding rock-tunnel interaction. (a) Overall three-dimensional model, (b) 
+front view of the three-dimensional model, (c) prototype tunnel lining, (d) circular tunnel lining, and (e) shock-absorbing joint tunnel lining.
+A ﬁnite element three-dimensional numerical model of 
+the surrounding rock-tunnel interaction was developed, 
+as illustrated in Fig. 1 0. The fault inclination was set at 
+60°, and the model consisted of a ﬁxed disk and a moving 
+disk, with the hanging wall designated as the moving disk 
+and the footwall as the ﬁxed disk. The overall dimensions 
+of the model were 120 m × 110 m × 80 m, and the cross-
+section of the prototype tunnel was horseshoe shaped. 
+Additionally, numerical models were created for both cir-
+cular sections and shock-absorbing joints to investigate 
+the dynamic response characteristics of the tunnel under 
+diﬀerent cross-sectional shapes and repair measures. The
+surrounding rock is classiﬁed as Grade V, and the lining
+
+materials consist entirely of C35 concrete. The shear mod-
+ulus of the surrounding rock is 1 GPa, and its shear density
+is 2200 kg/m3. Speciﬁc material parameters are provided in
+Table 4. Based on this, three tunnel heights of 6, 9, and 
+12 m were constructed to explore the inﬂuence of tunnel
+clearance height on damage.
+L. Yang et al. / Underground Space 25 (2025) 99–131
+111
+Table 4 
+Model material parameters.
+Properties
+Density (kg/m3 )
+Young’s modulus, E (GPa)
+Poisson’s ratio, m
+Friction angle (°)
+Cohesion (MPa) 
+Surrounding rock
+1800
+1.0
+0.35
+25.3
+3.2 
+Fault
+1700
+0.9
+0.42
+20.1
+1.5 
+Lining
+2500
+31.5
+0.2
+–
+23.4 
+Table 5 
+Information of input motions.
+No.
+Earthquake event
+Year
+Station
+Earthquake magnitude
+Epicentral distance (km)
+1
+Imperial-Vally-06
+1979
+Brawley Airport
+6.53
+10.42 
+2
+Imperial-Vally-06
+1979
+EI Centro Array #4
+6.53
+7.05 
+3
+Landers
+1992
+Lucerne
+7.28
+2.19 
+4
+Menyuan
+2022
+62HUC
+6.9
+10 
+5
+Wenchuan
+2008
+051MZQ
+8.0
+14 
+A three-dimensional (3D) ﬁnite element model (FEM) is 
+developed in Abaqus, with its dimensions set to the proto-
+type scale. To mitigate boundary eﬀects in the coupled 
+analysis of fault dislocation and seismic motion, the dis-
+tance from the model boundary to the middle line was des-
+ignated ﬁve times the tunnel diameter (China Merchan ts
+Chongqing Transportation Research and Design Institute
+Co., Ltd., 2019). For discretization, the mesh of the sur-
+rounding and tunnel utilized eight-node brick reduced inte-
+gration elements (C3D8R ). To determine the maximum
+size of the surrounding element, Eq. (6) (Kuhlemeyer & 
+Lysmer, 1973) was utilized:
+hmax 
+1 
+10 
+1 
+8 k
+6
+where hmax and k represent the maximum element size of 
+the surrounding rock and the shear wave length of seismic 
+motion, respectively. In this study, pulse waves such as 
+Menyuan wave are used as the main frequency component 
+of input seismic motion. Vs is approximately 462.3 m/s, 
+while
+is set as 20 Hz. Therefore, the maximum element
+size used in this study is approximately 2.3 to 2.9 m. Addi-
+tionally, in the stress concentration area of the tunnel sur-
+rounding rock, the local encrypted mesh is needed to
+accurately capture the plastic deformation and failure
+mode.
+ax
+f m 
+To simulate the dislocation eﬀect of the fault plane and 
+the contact interactions between the tunnel structure and 
+the surrounding rock, surface-to-surface contact is deﬁned 
+at both the fault plane of the hanging wall and footwall, as
+well as the contact point between the tunnel and the sur-
+rounding rock. In the case of ‘‘face-to-face contact,” the 
+Coulomb friction law is implemented by deﬁning the nor-
+mal and tangential behaviors as ‘‘hard” and ‘‘penalty” 
+types, respectively. The ‘‘hard” type characterizes the com-
+pressive interaction between the master and slave surfaces, 
+allowing separation under tensile conditions. The tangen-
+tial ‘‘penalty” behavior speciﬁes the shear behavior of the
+two surfaces based on their contact state, employing a fric-
+tion coeﬃcient set at 0.4, derived from the internal friction
+angle (approximately 23.6°) of the Grade V surrounding
+rock in this study (Xin et al., 2024a). It is important to note 
+that tunnel excavation can also induce tensile forces in the
+tunnel (Shishegaran et al., 2020c; Bigdeli et al., 2021). 
+However, this study primarily focuses on improving the 
+seismic resilience of tunnel lining structures after seismic 
+events and subsequent restoration. As the ﬁrst high-speed 
+railway tunnel worldwide to experience a strong earth-
+quake induced by fault dislocation during operati on, it is
+reasonable to assume that construction excavation had left
+the tunnel lining structure in a stable state. Therefore, the
+eﬀects of excavation were not considered in this study.
+4.3 Seismic motion selection and input
+In the analysis of tunnel structural resilience, seismic 
+motion and diﬀerent tunnel structural forms are the main 
+inﬂuencing factors of uncertainty. Due to the fault rupture 
+mechanism, all seismic motions contain velocity pulses in
+the low frequency range. Therefore, ﬁve diﬀerent pulse-
+type seismic motions are selected as input seismic waves,
+and the parameters are shown in Table 5. The fragility 
+analysis of the amplitude of the fault seismogram was car-
+ried out, and the amplitude was linearly scaled to 
+PGA = 0.1g–1.2g, and a total of 60 seismic motion data
+were obtained.
+The concrete constitutive model employed in this 
+study is the concrete damage plastic model (Fig. 1 1)
+
+(X. Chen et al., 2023), with speciﬁc parameters detailed in
+Table 6. The implementation of the dynamic analysis pro-
+cedures and boundary conditions is outlined as follows:
+112
+L. Yang et al. / Underground Space 25 (2025) 99–131
+Fig. 11. Constitutive models for the concrete. (a) Under compression, and (b) under tension.
+Table 6 
+Plastic damage parameter s of concrete.
+Material
+Young’s modulus (GPa)
+Poisson’s ratio, m
+Dilation angle (°)
+Eccentricity
+f b0 f c0
+K
+Viscosity parameter 
+Concrete (C35)
+31.5
+0.2
+35
+0.1
+1.15
+0.667
+0.0005 
+Note: K is the ratio of the second stress invariant on the tensile meridian to that on the compressive meridian at the same hydrostatic pressure.
+Step 1: Ground stress balance
+The initial ground stress ﬁeld is a critical initial condi-
+tion for the ﬁnite element analysis of the structure-
+foundation interaction, as the accuracy of the equilibrium 
+result directly inﬂuences the numerical analysis results. Ini-
+tially, only gravitational forces are considered in the static 
+analysis of the ﬁnite element model. Concurrently, normal 
+direction constraints are applied to the lateral boundary of 
+the mod el, while ﬁxed constraints in both normal and tan-
+gential directions are applied to the bottom boundary. This
+is accomplished using an automatic geostress balancing
+method in the 3D ﬁnite element software, which establishes
+the initial stress ﬁeld for subsequent fault dislocation
+analysis.
+Step 2: Fault dislocati on application
+Based on the ground stress balance, the bottom and lat-
+eral boundaries of the hanging wall are modiﬁed to apply 
+only normal direction constraints. A 3-m displacement in 
+the fault direction is applied to the hanging wall, following 
+the proportional relationship of the fault dislocation. The 
+initial stress ﬁeld corresponding to the ﬁnal fault disloca-
+tion is obtained, and the stress tensor for all elements,
+together with the reaction force (RF) at the model bound-
+ary nodes, is extracted from the computational structure.
+Step 3: Application of dynamic boundary conditions
+Subsequently, reasonable dynamic boundary conditions 
+are established at the boundary nodes by replacing the 
+ﬁxed boundary with a viscoelastic artiﬁcial boundary. 
+The extracted stress tensor serves as the initial stress of
+the elements, while the reaction force at the model bound-
+ary nodes is treated as the external load, as illustrated in
+Fig. 12. As the model is already in equilibrium, it indicates 
+that all elements are under stable and constant stress.
+Step 4: Application of seismic waves
+Finally, the east–west Wolong seismic wave is applied 
+along the tunnel axis. The input seismic wave is converted 
+into equivalent node forces (ENF) at the boundary nodes, 
+and the velocity-displacement time history data of the seis-
+mic wave is incorporated into the wave equation for calcu-
+lation (Du et al., 2010; J . Huang et al., 2017). 
+4.4 Data preparation and generation
+The initial step in employing ensemble learning methods 
+for tunnel resilience analysis is to deﬁne the tunnel damage 
+condition and select relevant input parameters. In this 
+study, the damage index (DI) of the tunnel is deﬁned as 
+the ratio of the actual bending moment
+of the tunnel 
+section to its bearing moment
+. Adaboost.RT was
+employed to establish the relationship between the random
+variables and the damage index
+, thereby
+forming
+the
+foundation
+of
+the
+prediction
+model
+(M
+)
+MRd)
+(MSd MRd)
+Sd 
+( 
+es
+
+(Argyroudis et al., 2012). Data collection and preprocess-
+ing are critical in assessing the resilience of tunnel linings, 
+primarily obtained through numerical simulations. To 
+explore the damage mechanisms of tunnel linings under 
+the combined eﬀects of fault and seismic motions, three 
+tunnel models were developed. These models varied in lin-
+ing structure, peak ground motion, and seismic motion 
+type. The simulations extracted physical parameters, such 
+as bending moment capacity, tension and compression 
+damage factors, stress, strain, and displacement, to investi-
+gate the mechanisms of damage and instability in tunnel 
+linings. The damage levels in the tunnel model were catego-
+rized into ﬁve classes: no damag
+slight damag
+moderate damage
+extensive damage
+and complete
+damage
+The median failure indicator, representing the
+central value of DI, was selected in this study for its robust-
+ness and reliability in predicting the typical failure state of
+the tunnel lining, providing valuable insights for engineer-
+ing design and decision-making. Table 7 presents the rela-
+tionship between the ranges of DI and their corresponding
+states (Meng et al., 2024). The database for the Adaboost. 
+RT algorithm models is derived from damage degree values 
+calculated during numerical simulation tests. However, due 
+to varying units and dimensions of the input data, the 
+ranges of diﬀerent variables diﬀer signiﬁcantly, necessitat-
+ing dimensionless processing of the input data. All input
+data are all positive; therefore, the S-type function is
+selected as the response function. The sample data is nor-
+malized by transforming the values to the range [0, 1], as
+shown in Eq. (7). 
+s0,
+ds1, 
+, 
+,
+.
+L. Yang et al. / Underground Space 25 (2025) 99–131
+113
+Fig. 12. FEMs for dynamic analysis: dynamic analysis procedure.
+e d
+e 
+ds2
+ds3 
+ds4 
+x 
+x 
+xmin 
+xmax 
+xmin
+7
+Table 7 
+Relationship between failure indicator range and failure state.
+Damage state (ds)
+Range of damage index (DI)
+Central value of DI
+No damage ds0
+Msd/MRd ≤1.0
+– 
+Slight damage ds1
+1.0 < Msd/MRd ≤1.5
+1.25 
+Moderate damage ds2
+1.5 < Msd/MRd ≤2.5
+2.00 
+Extensive damage ds3
+2.5 < Msd/MRd ≤3.5
+3.00 
+Complete damage ds4
+3.5 < Msd/MRd
+–
+where
+the original data, x 
+and x 
+are the maximum 
+and minimum values of the original data, respectively.
+x is
+max
+min 
+The input data for the model were derived from the 
+results of the numerical simulations. First, all possible com-
+binations of tunnel structural forms, surrounding rock 
+shear modulus, and tunnel heights were generated using 
+the Cartesian product method, ensuring comprehensive 
+consideration of variable combinations. Weighted sam-
+pling was then applied, assigning a speciﬁc weight to each 
+seismic wave based on its PGA to reﬂect the higher likeli-
+hood of occurrence for certain seismic waves in reality. 
+This process ensured that seismic waves with higher prob-
+abilities were adequately represented. A total of 200 data-
+sets were selected for model training, taking into account
+variables such as structural forms, peak ground accelera-
+tion, and the mechanical properties of the surrounding
+rock. The root mean square error (RMSE), mean absolute
+error (MAE), and coeﬃcient of determination (R2) were
+used to evaluate the predicted and simulated values of
+the sample set, as shown in Eqs. (8) to (10) (Bai et al.,
+2023). 
+MAE 
+1 
+n 
+n 
+i 1 
+yi
+yi
+8
+RMSE 
+1 
+n 
+n 
+i 1 
+yi 
+yi
+2
+1 2
+9
+R2 
+1 
+n 
+i 1 yi 
+yi 
+2 
+n 
+i 1 yi
+yi
+2
+10
+
+114
+L. Yang et al. / Underground Space 25 (2025) 99–131
+5 Result analys is
+5.1 Performing feature importa nce analysis
+In the study of tunnel seismic fragility and resilience 
+using ensemble learning, parameter importance analysis is 
+essential for identifying key control factors. This analysis 
+quan tiﬁes the marginal inﬂuence of each input parameter
+on the output through numerical simulations (as shown
+in Fig. 13), eﬀectively identifying key factors limiting struc-
+tural resilience and providing a theoretical basis for opti-
+mal design. In this study, the Adaboost.RT integrated
+algorithm was employed to develop a predictive model.
+Table 8 presents the parameter system utilized in the algo-
+rithm and its functions. The results indicate that the PGA 
+exhibits the strongest correlation with the tunnel damage 
+index. In tunnel engineering, PGA represents the maximum 
+ground acceleration induced by seismic waves and directly 
+inﬂuences the forces acting on the tunnel structure. The 
+structural form of the tunnel (such as segmented, horse-
+shoe, or circular) determines its stiﬀness and seismic perfor-
+mance, while the surrounding rock properties (such as 
+strength and shear modulus) dictate the external pressur e
+and support capacity. Additionally, the weight ratios for
+the tunnel lining structure, shear modulus of the surround-
+ing rock, and the model size are 0.35, 0.18, and 0.11,
+respectively. This highlights that the inﬂuence of PGA on
+the tunnel’s dynamic response is more signiﬁcant than that
+of the tunnel structure and the mechanical properties of the
+surrounding rock.
+Nevertheless, the tunnel’s structural form signiﬁcantly 
+aﬀects seismic damage, a factor often overlooked in previ-
+ous studies. For instance, larger PGA values lead to stron-
+ger seismic dynamic loads, requiring the structural form to 
+be suﬃciently robust and well-designed to absorb seismic 
+energy and maintain stability. At the same time, surround -
+ing rock dimensions and mechanical properties also criti-
+cally inﬂuence tunnel stability. To address these factors,
+the eﬀects of surrounding rock properties and tunnel lining
+structure on seismic fragility and structural resilience are
+further discussed using detailed numerical simulation
+models.
+Fig. 13. Importance coeﬃcients of parameters.
+5.2 Veriﬁcation of ensemble learning algorithms
+To ensure model reliability and generalizability, feature 
+selection was performed to analyze parameter correlations
+(as shown in Fig. 14(a)). This analysis revealed that the 
+three primary input parameters—PGA, TS, and Gs—all 
+exhibit correlations greater than 0.7. To further ensure 
+model robustness, the dataset (200 samples) was randomly 
+split 10 times, with each split generating a training set (140
+samples) and a testing set (60 samples) in a 70:30 ratio. For
+each training set (140 samples), a 5-fold cross-validation
+approach was employed (see Fig. 14(b)), where in each 
+fold, 80% of the data (112 samples) was used for training 
+and 20% (28 samples) for validation. This approach 
+ensured robust hyperparameter tuning and helped improve 
+model generalization. Early stopping was applied based on 
+the validation performance to prevent ov erﬁtting. Once the
+optimal hyperparameters were determined, the ﬁnal model
+was trained on all 140 training samples, while the indepen-
+dent test set (60 samples) was reserved for ﬁnal evaluation.
+As shown in Fig. 14(c), the validation loss curve stabilized 
+within 10 training epochs, indica ting effective convergence
+and generalizability (Harati et al., 2024). 
+This study employs support vector regression (SVR), the 
+backpropagation (BP) neural network, and the extreme 
+learning machine (ELM) as base learning models. To fur-
+ther evaluate the eﬀecti veness of the proposed AdaBoost.
+RT model, a comparative analysis was performed against
+individual base prediction models (see Fig. 14(d)). In 
+Fig. 4, the upper and lower solid lines denote the extreme 
+absolute prediction errors of each model, while the red
+median line represents the 50th percentile of absolute errors
+(Shishegaran et al., 2021c; Cao et al., 2021). The boxplot of 
+the AdaBoost.RT model shows the smallest area distribu-
+tion among all models, indicating the highest prediction 
+accuracy and the lowest absolute prediction error. To fur-
+ther enhance model training, L2 regularization was applied 
+during trai ning to mitigate overﬁtting. Moreover, a rela-
+tively small learning rate was maintained throughout train-
+ing to limit the impact of weak learners, thereby preventing
+overﬁtting (Ayvaz et al., 2021). 
+Figure 1 5 illustrates the validation of the prediction 
+model based on the Adaboost.RT algorithm. Figure 1 5
+(a) presents the distribution plot of 10 experiments, depict-
+ing the median and variability range for both the training 
+and test sets. The coeﬃcients of determination for the 
+training set and test set are 0.978 and 0.959, respectively. 
+Notably, after each random partition, the training set 
+undergoes cross-validation, and the model’s performance 
+metrics on the validation and tes t sets are recorded across
+10 independent experiments (as shown in Table 9). Fur-
+thermore, the simulation results from 60 randomly selected 
+samples in the test set were compared with the predictions 
+obtained from the model, as shown in Fig. 1 5(b). The
+
+maximum error between the simulated and predicted val-
+ues is 9.5%, which satisﬁes the requirements of the predic-
+tion model. Additionally, Fig. 15(c) compares the seismic 
+fragility curves derived from the prediction model and 
+numerical simulation, both of which meet the requirements 
+of the model. This also indicates that the fragility curve of 
+the method is consistent across all damage states. The
+model demonstrates high accuracy and is suitable for seis-
+mic fragility analysis of tunnels subjected to the coupling of
+faults and seismic motion.
+L. Yang et al. / Underground Space 25 (2025) 99–131
+115
+5.3 Fragility analysis of tunnel structure
+5.3.1 Inﬂuence of tunnel structure
+The stiﬀness and strength characteristics of diﬀerent tun-
+nel structures vary, aﬀecting the response of the tunnel to 
+seismic loads and consequently altering the risk of damage. 
+This paper analyzes the seismic fragility of high-speed rail-
+way tunnels by modifying the tunnel structures and dis-
+cusses the damage eﬀects associated with varying tunnel
+heights. Figure 16(b) illustrates the seismic fragility of tun-
+nels of varying heights across diﬀerent structural designs.
+As shown in Fig. 16(a), the damage probability of the pro-
+totype structure exceeds that of the shock-absorbing joint 
+structure, while the circular structure exhibits the lowest 
+damage probability. This is attributed to the circular tun-
+nel’s ability to distribute forces more uniformly under fault 
+dislocati on and seismic motion, eﬀectively absorbing seis-
+mic wave energy and reducing damage probability. As
+the peak ground acceleration increases, the damage proba-
+bility rises progressively. For instance, Fig. 16(b) illustrates 
+that at a PGA of 0.6g and a tunnel height of 6 m, the prob-
+ability of moderate damage for the prototype structure is 
+1.21 times greater than that for the circular structure.
+The probability of tunnel damage increases with tunnel
+height. This ﬁnding aligns with previous studies (Sun 
+et al., 2024; Reddy et al., 2024). This occurs because taller 
+tunnels may experience greater surface loads and ground-
+water pressures, resulting in increased loads and stresses 
+on the tunnel structure. Additionally, taller tunnel struc-
+tures are more susceptible to uneven settlement and stress 
+concentration during repairs, exacerbating structural dam-
+age. Speciﬁcally, at a PGA of 0.6g, the probability of minor 
+damage for a 12-m high tunnel is 1.12 times that of a 6 m 
+high tunnel, assuming all structures are prototypes. Nota-
+bly, this study’s damage and failure analysis focuses on
+fault dislocation zones. The results show that the likelihood
+of widespread damage to the prototype tunnel exceeds 50%
+at a peak acceleration of 0.4g, with this probability increas-
+ing as peak acceleration rises.
+5.3.2 Inﬂuence of shear modulus of surrounding rock
+Figure 17 presents the fragility analysis of the tunnel 
+considering various surrounding rock properties and the 
+damage probability under diﬀerent peak ground accelera-
+tions. Figure 17(a) illustrates that the shear modulus of 
+the surrounding rock has a signiﬁcant eﬀect on the struc-
+Table 8 
+Adaboost.RT involves parameters and functions.
+Input parameter
+Output parameter
+Role 
+Lining
+Surrounding rock
+Seismic motion 
+Tunnel structure (TS) (such as horseshoe, circular,
+and shock absorbing joint)
+Shear modulus (Gs)
+Peak ground acceleration (PGA)
+Bending moment (M)
+Classiﬁcation of damag e grade
+Strength of reinforced concrete (SRC)
+Density (q)
+Near-Fault Ground Motion (NFGM)
+Deformation (U)
+Quantiﬁcation of structural functio n recovery
+Thickness (H)
+Model scale (MS)
+–
+Damage (D)
+Analysis of damage mechanism
+
+ity of extensive damage in a 12 m tunnel is 1.23 times that 
+of a 6 m tunnel. When the PGA is 1.0g, under identical
+conditions, the probability of extensive damage in a 12 m
+tunnel increases by 9%.
+116
+L. Yang et al. / Underground Space 25 (2025) 99–131
+Fig. 14. Surrogate model validation. (a) Parameter correlation of each variable, (b) 5-fold cross-validation, (c) loss curve during training, and (d) absolute
+error between predicted and training values for each prediction model.
+tural performance of the tunnel. For instance, when the 
+PGA is 0.6g and the tunnel height is 6 m, the probability 
+of moderate damage in a tunnel with a shear modulus of 
+1 GPa increases by 52.6% compared to that of a tunnel 
+with a shear modulus of 6 GPa. Under the same PGA 
+and tunnel height conditions, the probability of extensive 
+damage in a tunnel with a shear modulus of 1 GPa is
+1.88 times greater than that in a tunnel with a shear mod-
+ulus of 6 GPa. This occurs because soft rock has minimal
+effect on tunnel performance, while seismic waves propa-
+gate more prominently in soft surrounding rock, leading
+to an ampliﬁcation effect (Z. Chen et al., 2023). The seismic 
+fragility characteristics of the 6 and 12 m tunnels are simi-
+lar, as illustrated in Fig. 17(b). Under identical PGA and 
+shear modulus conditions, the probability of tunnel dam-
+age increases with tunnel height. Speciﬁcally, when the 
+shear modulus is 3 GPa and the PGA is 0.6g, the probabil-
+5.4 Resilience analysis of tunnel structure
+5.4.1 Inﬂuence of tunnel structure
+Under the combined eﬀects of fault and seismic motion, 
+the inﬂuence of the tunnel structure on its functionality and 
+resilience varies (see in Fig. 1 8). Assuming a total repair 
+time of 120 days, Fig. 1 8(a) shows that the structural per-
+formance of the prototype structure is superior to that of 
+the shock-absorbing joint structure under the same peak 
+acceleration when subjected to the coupling eﬀects of a 
+strong earthquake and seismic motion prior to repair. As 
+the peak acceleration increases, the structural performance
+
+L. Yang et al. / Underground Space 25 (2025) 99–131
+117
+Fig. 15. Accuracy validation of the surrogate model. (a) Determination coeﬃcient, (b) comparis on of simulated and predicted values, and (c) fragility
+validation.
+Table 9 
+Comparison and validation between the training set and the testing set.
+Algorithms
+Dataset
+MAE
+RMSE
+R2 
+Adaboost
+Train
+0.141
+0.185
+0.978 
+Test
+0.237
+0.263
+0.959 
+of all sections decreases signiﬁcantly. Furthermore, exclud-
+ing the 10 days decision time, the structural performance of 
+the tunnel recovers after approximately 80 days. However, 
+the functional recovery of the prototype tunnel remains
+slow, while the structural performance can be signiﬁcantly
+improved by incorporating a shock-absorbing joint. Fig-
+ure 1 8(b) presents the resilience indices of various tunnel 
+structures after 15 days of repair, considering diﬀe rent peak
+accelerations and tunnel heights. Under low acceleration
+amplitudes, the tunnel functionality can reach 0.95 across 
+diﬀerent structural forms, with minimal performance diﬀer-
+ences observed among the various structures, all exhibiting 
+high resilience. As peak acceleration increases, the perfor-
+mance of the tunnel structure gradually decreases. Mean-
+time, under varying tunnel structures, performance 
+diﬀerences become increasingly apparent. Speciﬁcally, at 
+a peak ground acceleration of 0.4g, the tunnel structure 
+exhibits high resilience as tunnel height increases, indicat-
+ing that height also has minimal inﬂuence on the resilience 
+index at lower PGAs. In addition, at a PGA of 0.8g and a 
+tunnel height of 6 m, the resilience of the circular structure 
+increases by approximately 20% compared to the prototype 
+structure. At a PGA of 0.8g and a tunnel height of 12 m, 
+the resilience of the circular structure is only 14% greater
+than that of the prototype structure. This indicates that
+increased tunnel height reduces the resilience of the tunnel
+
+lining. With a PGA of 1.2g and a tunnel height of 6 m, the 
+resilience of the circular structure is 12% higher than that 
+of the prototype structure. This further indicates that the
+resilience of the tunnel structure decreases more signiﬁ-
+cantly as the peak acceleration increases.
+118
+L. Yang et al. / Underground Space 25 (2025) 99–131
+Fig. 16. Fragility curves of tunnels with diﬀerent tunnel heights and construction of the surrounding rock. (a) Fragility curves, and (b) probability of
+damage under diﬀerent PGAs.
+Fig. 17. Fragility curves of tunnels with diﬀerent tunnel heights and shear modulus of the surroundin g rock. (a) Fragility curves, and (b) probability of
+damage under diﬀerent PGAs.
+5.4.2 Inﬂuence of shear modulus of surrounding rock
+Figure 1 9 illustrates how the shear modulus of the sur-
+rounding rock aﬀects the structural performance and resi-
+lience of the tunnel under the combined inﬂuence of
+active fault dislocation and seismic motion. In Fig. 1 9(a), 
+the results indicate that the performance of the tunnel 
+structure decreases as the shear modulus of the surround-
+ing rock decreases under the same peak acceleration condi-
+tions. Before the implementation of repair measures, it is 
+clear that a higher shear modulus leads to better structural 
+performance of the tunnel after a disaster. This indicates 
+that when the tunnel is embedded in softer rock, the earth-
+quake damage is more severe under the same peak ground
+acceleration,
+leading
+to
+slower
+functional
+recovery.
+
+ulus on tunnel resilience is also dependent on tunn el height.
+Additionally, comparing with Fig. 18(b), it is evident that 
+under the excitation condition of a 1.2g peak acceleration, 
+the inﬂuence of tunnel structure on resilience surpasses that 
+of the surrounding rock’s shear modulus at the same tunnel
+height, which aligns with the ﬁndings from the fragility
+analysis ratio.
+L. Yang et al. / Underground Space 25 (2025) 99–131
+119
+Fig. 18. (a) Functionality and (b) resilience of tunnels under diﬀerent construction.
+Fig. 19. (a) Functionality and (b) resilience of tunnels under diﬀerent shear modulus.
+Figure 1 9(b) illustrates that, similar to the eﬀects of tunnel 
+structural form, the diﬀerence in shear modulus among 
+various surrounding rocks ﬁrst increases and then 
+decreases with rising peak acceleration. Speciﬁcally, for a 
+9 m high tunnel subjected to a seismic intensity of 0.8g, 
+the tunnel structural resilience after 15 days of repair is 
+measured at 0.65, 0.72, and 0.82 for shear modulus of 1, 
+3, and 6 GPa, respectively, belonging to moderate resili-
+ence. Furthermore, at a PGA of 0.8g, the resilience of the 
+tunnel with a shear modulus of 6 GPa and a height of
+9 m is 26% greater than that of the tunnel with a shear
+modulus of 1 GPa. At a PGA of 1.2g and a shear modulus
+of 6 GPa, the resilience of the 6 m high tunnel is 1.21 times
+that of the 1 GPa tunnel. However, under identical condi-
+tions, the resilience of the 12 m high tunnel increased by
+only 11.1%. This suggests that the inﬂuence of shear mod-
+6 Discuss ion
+6.1 Analysis of seismic mechanism of diﬀerent repai r
+measures of crossing-fault tunnel
+Tunnels are susceptible to various types of structural 
+damage stemming from the combined inﬂuences of seismic 
+faults and seismic motions. This study leverages numerical
+
+120
+L. Yang et al. / Underground Space 25 (2025) 99–131
+simulations to elucidate the damage mechanisms impacting 
+various tunnel structures under the dual inﬂuence of active 
+faults and seismic motions. It is essential to understand 
+how fault activity, seismic wave propagation, and the 
+deformation of surrounding rock contribute to tunnel 
+structure vulnerability. Additionally, this analysis aims to 
+identify the damage characteristics of tunnels subjected to
+diﬀerent repair measures, facilitating a deeper understand-
+ing of the dynamic interactions between the tunnel and sur-
+rounding
+geological
+formations.
+By
+comparing
+the
+eﬀectiveness of various repair strategies, the study assesses
+Fig. 20. Comparison of tunnel structural damage with diﬀerent repair measures. (a) Prototype tunnel damagec, (b) prototype tunnel damaget, (c) shoc k-
+absorbing joint damagec, (d) shock-absorbing joint damaget, (e) circular tunnel damagec, and (f) circular tunnel damaget.
+their mitigation eﬀects on tunnel structures, particularly 
+focusing on how they interact with the combined inﬂuences 
+of fault activity and seismic motions. The strengths and 
+weaknesses of each repair strategy are critically evaluated 
+to identify the most beneﬁcial approach. The seismic resili-
+ence enhancement mechanism of tunnel lining with the pur-
+pose of ‘‘anti-seismic and dislocation reduction, load 
+transfer and damage limitation” is proposed and veriﬁed 
+by the seismic resilience assessment framework, whi ch pro-
+vides a theoretical basis for seismic fortiﬁcation of tunnel
+engineering. Figure 2 0 illustrates the compressive and
+
+tensile damage to the tunnel structure resulting from the 
+combined eﬀects of fault dislocation and seismic motion,
+as well as the inﬂuence of two diﬀerent repair measures.
+L. Yang et al. / Underground Space 25 (2025) 99–131
+121
+Figure 20 illustrates that, under the coupling eﬀects of 
+fault dislocation and seismic motion, the compressive and 
+tensile damage to the prototype tunnel is most severe, while 
+the damage to the shock-absorbing joint and circular tun-
+nel is signiﬁcantly reduced under the same conditions. 
+Notably, the damage range of the circular tunnel is greater 
+than that of the shock-absorbing joint, because the shock-
+absorbing joint has a relatively low stiﬀness compared to 
+the tunnel lining. Moreover, the shock-absorbing joint 
+retains satisfactory deformation capacity and resilience, 
+allowing the displacement and deformation resul ting from
+the coupling of fault dislocation and seismic motion to be
+concentrated at the fault. This creates a blocking eﬀect
+on the hanging wall and footwall. Consequently, energy
+transfer at the fracture is hindered, thereby reducing the
+damage area. Additionally, the plastic strain magnitude
+(PEMAG) directly reﬂects the plastic deformation and
+damage evolution process of the landslide. Figure 21 indi-
+cates that the stress on the shock-absorbing joint at the 
+fault is signiﬁcant, further demonstrati ng that the shock-
+absorbing joint eﬀectively reduces stress transfer.
+As can be seen from Fig. 22, the tunnel structural dam-
+age in the aﬀected section of the fault can be eﬀectively 
+reduced by applying shock-absorbing joints on the basis 
+of the prototype and changing the tunnel structure to a cir-
+cular shape. Speciﬁcally, for applying shock-absorbing 
+joints, the damage factor dc is reduced by 0.933% and
+the damage factor dt is reduced by 0.956%. This is because
+the shock-absorbing joint material has a certain resilience,
+and the uniform layout of the entire longitudinal section
+improves the overall deformation ability of the tunnel, 
+thereby improving the overall resilience of the structure. 
+For the circular structure, the damage factor dc is reduced 
+by 1.33%, and the damage factor dt is reduced by 1.621%.
+This is because the circular tunnel structure is characterized
+by its uniform stress distribution, superior seismic perfor-
+mance, and overall stability (G. Chen et al., 2024;
+Tsinidis et al., 2024b). In addition, compared with the tun-
+nel structure with a shock-absorbing joint, the circular tun-
+nel structure can mitigate the damage caused by the 
+coupling of fault dislocation and seismic motion. At the 
+same time, for the tensile damage, it can be observed that 
+the shock-absorbing joint and the circular tunnel structure 
+can eﬀectively alleviate the tensile damage of the tunnel 
+structure. This is because the damping joint reduces the 
+transmission of seismic waves by absorbing and dispersing 
+stress. The circular tunnel structure, by virtue of its uni-
+form stress characteristics, can eﬀectively reduce the stress
+concentration and reduce the tensile damage of the tunnel
+structure. It is worth mentioning that it can be obviously
+observed that the compressive damage of the tunnel struc-
+ture is mainly concentrated in the fault-aﬀected section,
+while the damage of the circular structure and the shock-
+absorbing joint structure is signiﬁcantly reduced at the
+fault.
+Fig. 21. Stress distribution at the fault of the tunnel structure with seismic expansion joints.
+Figure 2 3 illustrates the deformation and displacement 
+of the circular tunnel and prototype tunnel structures at 
+various sections under the coupling eﬀects of fault disloca-
+tion and seismic motion. The displacement and deforma-
+tion of the circular tunnel are clearly more uniform than 
+those of the p rototype tunnel. Furthermore, as illustrated
+in Fig. 2 4(a) and (b), the resistance stress in the circular sec-
+tion is uniformly distributed perpendicular to its surface,
+
+whereas the maximum principal stress in the horseshoe sec-
+tion exhibits multiple components and stress deﬂection, 
+resulting in uneven deformation. This further indicates that
+the circular section exhibits greater anti-seismic perfor-
+mance compared to the horseshoe section tunnel lining.
+122
+L. Yang et al. / Underground Space 25 (2025) 99–131
+Fig. 22. Comparison of tensile and compressive damage across diﬀerent tunnel structures. (a) Prototype tunnel damagec, (b) prototype tunnel damaget, 
+(c) shock-absorbing joint damagec, (d) shock-absorbing joint damaget, (e) circular tunnel damagec, and (f) circular tunnel damaget.
+6.2 Seismic damage characteristics and resil ience evaluation
+of tunnel
+Highway tunnels and high-speed railway tunnels pri-
+marily exhibit ﬁve types of damage: lining cracks, lining
+
+spalling, construction joint damage, pavement and under-
+lying structure damage, and water leakage. The degree of 
+damage may vary signiﬁcantly due to changes in seismic 
+intens ity, coupling of fault dislocation, geological condi-
+tions, structure forms, and potential construction defects
+(Xin et al., 2024b; Huang et al., 2024). In the presence of 
+seismic activity, the coupling eﬀect of fault dislocation 
+and seismic motion exacerbates the damage. The relative 
+displacement at the fault zone, combined with the propaga-
+tion of seismic waves, ampliﬁes the stresses on the tunnel
+lining. This interaction increases the risk of failure, leading
+to a signiﬁcant reduction in the tunnel’s seismic resilience
+(Yu et al., 2016). 
+L. Yang et al. / Underground Space 25 (2025) 99–131
+123
+Fig. 23. Displacement deformation under the coupling eﬀects of fault displacement and seismic motion for diﬀerent cross-sectional forms. (a) Circular
+tunnel, and (b) horseshoe tunnel.
+Fig. 24. Stress distribution and deformation characteristics at the fault 
+under the coupling eﬀects of fault displaceme nt and seismic motion for
+diﬀerent cross-sectional forms. (a) Circular tunnel, and (b) horseshoe
+tunnel.
+Moreover, fault-induced earthquakes release energy 
+associated with the fracture of the rock mass, which gener-
+ates deformations in the displacement ﬁeld. The energy
+released from fault rupture is considerably greater than
+that of distant seismic events. Most seismic motions associ-
+ated with fault activity are classiﬁed as near-fault pulse 
+motions, which tend to result in more severe damage com-
+pared to distant earthquakes (Zhong et al., 2020). Conse-
+quently, 
+fault 
+dislocation 
+alters 
+the 
+mechanical 
+environment surrounding the tunnel, signiﬁcantly aﬀecting 
+the structural stability and seismic resistance of the tunnel 
+lining. Therefore, in the case of Daliang tunnels aﬀected by 
+seismogenic faults, the interaction between fault disloca-
+tion and strong seismic coupling has resulted in more sev-
+ere damage to the tunnel lining. An investigation of the
+damage to the Daliang tunnel following the earthquake
+categorized the damage into ﬁve types: complete damage,
+extensive damage, moderate damage, slight damage, and
+no damage. Speciﬁcally, as follows:
+(1) The segment of co mplete damage
+The segment from K1971+341 to K1971+691 (350 m) 
+experienced severe bulging of the track bed, with ampli-
+tudes reaching 30–50 cm, resulting in general damage and 
+deformation of the track. The ditch covers on both sides 
+are squeezed and uplifted, causing the side walls of the 
+ditch to incline, resulting in noticeable localized damage. 
+Damage at the fault position was particularly severe. Cir-
+cumferential extrusion failure occurred in the lining, expos-
+ing the waterproof layer, with extensive spallin g of the arch
+and deformation, fracture, and exposure of numerous steel
+bars, as shown in Fig. 2 5. The misalignment of the right 
+wall is at K1971+394.9, while the left wall is misaligned 
+at K1971+404.1. The horizontal dislocation is approxi-
+mately 1.5 to 1.8 m, the vertical dislocation is about 0.2 
+to 0.7 m, and the crack width ranges from 0.3 to 0.8 m.
+
+The intersection angle with the tunnel is approximately 50°, 
+indicating primarily left
+lateral
+slip
+with
+a
+thrust
+component.
+124
+L. Yang et al. / Underground Space 25 (2025) 99–131
+Fig. 25. Site earthquake damage in the completely damaged section of Daliang tunnel. (a) Obvious dislocations and blockages in the lining section, and (b)
+severe uplift and widespread cracking of the roadbed plate.
+(2) The segment of extens ive damage
+In the extensively damaged areas, there has been an 
+improvement in the extent of damage observed. The main 
+manifestations include signiﬁcant spalling or severe crack-
+ing of the lining, notable breakage, and exposure or even
+bending of the steel bar, as shown in Fig. 26. Nevertheless, 
+the overall functionality remains compromised, with more
+severe structural damage, resulting in the interruption of 
+railway service along the line. Statistical analysis indicates 
+that there are 10 severely damaged sections with spalling 
+blocks, each measuring between 1.5 and 10 m in length 
+and ranging from 0.5 to 15 m2 in area. Some of the fallen 
+steel bars exhibit leakage, deformation, and bending, with 
+most located within a 500-m inﬂuence range on either side 
+of the severely aﬀected earthquake section. Additionally, a 
+total of 15 sections of the lining sustained serious damage 
+due to cracks, including oblique and circumferential 
+through cracks, as well as multiple parallel cracks intersect-
+ing in various directions. Certain sections of the lining
+
+structure exhibit signiﬁcant compressive deformation, 
+cracking, and dislocation.
+L. Yang et al. / Underground Space 25 (2025) 99–131
+125
+Fig. 26. Site earthquake damage of the extensively damaged section of Daliang tunnel. (a) Construction joints exhibiting cracks and spalling, and (b)
+lining dislocations with exposed steel bar.
+(3) The segment of moderat e damage
+The primary issues in the moderate damage segment 
+include: cracks in the side walls (primarily circumferential 
+cracks), cracks in the invert ﬁlling layer, leakage, cracks 
+and leaks in the adjoining cavern, blockage of the central
+ditch, and spalling of construction joints (see Fig. 27). 
+These issues are unevenly distributed throughout the tun-
+nel. The degree of damage decreases with increasing dis-
+tance from the Lenglongling fault zone (LLLF). 
+Although the overall functionality has large ly been main-
+tained, the visible structural damage poses a risk to train
+operations.
+(4) The segment of sli ght damage
+This section of the lining primarily exhibits localized 
+slight cracking, minor spalling, and small falling fragments. 
+The construction joint displays minor cracks, along with a
+
+few scattered fractures (as shown in Fig. 28). Despite this 
+damage, the structure remains largely intact, and there is 
+no signiﬁcant inﬂuence on the safety of train operations.
+126
+L. Yang et al. / Underground Space 25 (2025) 99–131
+Fig. 27. Site earthquake damage in the moderately damaged section of the Daliang tunnel. (a) A few cracks and water leaks in the side walls, and (b)
+peeling concrete blocks, exposed rebar, and deformation.
+Based on the research results and damage cases reported
+in previous earthquakes (Alliance et al., 2001), Table 10 
+summarizes the potential damage modes of the Daliang 
+tunnel under diﬀerent damage states. Field investigations 
+reveal that the tunnel lini ng at K1971+400, which suﬀered
+severe earthquake damage, exhibits the largest dislocation.
+The horizontal dislocation on both sides ranges from 1.1 to 
+1.7 m, while the vertical dislocation ranges from 0.2 to 
+0.7 m. The circumferential through-crack caused by the lin-
+ing dislocation measures approximately 300 to 800 mm in 
+width and 25.2 m in length, categorizing it as an extensive 
+damage stage. This is consistent with the conclusions 
+obtained from the numerical simulation of the fault using 
+the MSd/MRd method. The eﬀectiveness of the numerical
+simulation is further demonstrated.
+
+L. Yang et al. / Underground Space 25 (2025) 99–131
+127
+Fig. 28. Site earthquake damage in the slightly damaged section of the Daliang tunnel. (a) Localized cracks in the side walls, and (b) localized spalling and
+cracks in the side walls.
+7 Conc lusions
+This paper proposes an ensemble learning approach to 
+establish a rapid resilience assessment framework for 
+crossing-fault high-speed railway
+tunnels.
+Employing
+numerical simulation methods, the study eﬃciently collects
+data on the coupling eﬀects of fault dislocation and seismic 
+motion. The convergence of the lining is selected as the 
+structural performance index, with the damage index 
+derived from the established prediction model. This 
+approach signiﬁcantly reduces the computational load for 
+seismic fragility and resilience analyses of the tunnel
+
+structure. Field investigations from the Daliang tunnel val-
+idate the numerical simulation’s accuracy. The ﬁndings are
+as follows:
+128
+L. Yang et al. / Underground Space 25 (2025) 99–131
+Table 10 
+Potential damage modes under diﬀerent damage states.
+Tunnel 
+damage state
+Tunnel lining
+Crack speciﬁcation 
+Length (m)
+Width (mm) 
+No damage
+–
+–
+– 
+Minor damage
+Minor cracking and spalling
+<5
+<3 
+Moderate damage
+Small cracking, spalling, and falling
+5–10
+3–30 
+Extensive damage
+Large cracking, spalling, and falling
+>10
+>30 
+Complete damage
+Complete collapse
+–
+– 
+(1) The rationality of the proposed ensemble learning 
+algorithm and the accuracy of the prediction model 
+have been eﬀectively veriﬁed. The test set showed a 
+coeﬃcient of determination of 0.959, a root mean 
+square error of 0.263, and a mean absolute error of 
+0.237, with a maximum error of 9.5%. The results 
+of the numerical simulation closely align with the fra-
+gility curves obtained from the prediction model, fur-
+ther 
+conﬁrmi ng
+the
+validity
+of
+the
+model.
+Additionally, the study examines the relationship
+between various input variables, including structure
+form, shear modulus of surrounding rock, tunnel
+height, and peak ground acceleration, as well as the
+output variables, such as the bending moment of
+the tunnel section and the convergence of the lining.
+(2) The fragility importance analysis indicates that the 
+inﬂuence of the PGA on the dynamic response of 
+the tunnel is more signiﬁcant than that of the struc-
+tural design of the tunnel and the mechanical proper-
+ties of the surrounding rock. Variations in the tunnel 
+structure form, shear modulus of the surrounding 
+rock, tunnel height, and PGA reveal that the resili-
+ence of the circular structure tunnel surpasses that 
+of the other structural forms, with the prototype tun-
+nel showing the least resilience. As the shear modulus
+of the surrounding rock increases, the resilience of the
+tunnel structure improves incrementally. However, as
+PGA and tunnel height increase, the tunnel structure
+sustains more damage, leading to a progressive
+decline in structural resilience.
+(3) Numerical simulations reveal that the area of the tun-
+nel most severely aﬀected by damage, under the com-
+bined inﬂuence of active fault and seismic motion, is 
+predominantly located in the fault-aﬀected section. 
+Variations in the structural form of the tunnel 
+demonstrate that the prototype structure exp eriences
+the most signiﬁcant damage, whereas the circular
+structure sustains the least damage. This ﬁnding cor-
+roborates the accuracy of the fragility and resilience
+analysis. Additionally, the introduction of a shock-
+pling eﬀects of fault activity and seismic motion. 
+absorbing joint substantially reduces the extent of
+damage across the tunnel when subjected to the cou-
+(4) 
+sively declines from high to medium and then to low. 
+The resilience index of the tunnel lining is calculated 
+according to the established multi-stage resilience 
+analysis model. The convergence of the tunnel diam-
+eter is chosen as the structural resilience index, and 
+the ratio of the actual bending moment of the tunnel 
+section to the bearing capacity bending moment 
+serves as the damage index. Resilience evaluations 
+from various numerical simulations suggest that the
+tunnel lining exhibits high resilience under lower
+amplitude conditions. However, as tunnel accelera-
+tion increases, resilience decreases from high to med-
+ium. Under extreme conditions, such as with the
+prototype tunnel structure and a surrounding rock
+shear modulus of 1 GPa, tunnel resilience progres-
+Data availabil ity
+The code developed in this study and sample data can be
+accessed from the GitHub repository: https://github.com/ 
+wangzhao0217/AdaBoost.RT_for_resilience-evaluation_ 
+of_high-speed_railway_tunnels. The data are provided 
+under the Open Data Commons Attribution License.
+CRediT authorship contribution statement
+Lianjie Yang: Supervision, Project administration, 
+Methodology, Investigation, Funding acquisition. Chunlei 
+Xin: Writing – original draft. Zhao Wang: Writing – origi-
+nal draft, Methodology, Formal analysis, Data curation. 
+Xinyuan Yu: Vi sualization, Methodology, Formal analysis.
+Iman Hajirasouliha: Writing – review & editing, Methodol-
+ogy. Wenkai Feng: Funding acquisition.
+Declaration of competing interest
+The authors declare that they have no known competing 
+ﬁnancial interests or personal relationships that could have 
+appeared to inﬂuence the work reported in this paper.
+
+L. Yang et al. / Underground Space 25 (2025) 99–131
+129
+Acknowledgement 
+This research was supported by the National Natural 
+Science Foundation of China (Grant No. 52108361), the 
+Sichuan Science and Technology Program of China (Grant 
+Nos. 25CXCY0063 and 2024ZYD0154), and the State Key
+Laboratory of Geohazard Prevention and Geoenviron-
+ment Protection Independent Research Project (Grant
+No. SKLGP2022Z015).
+References 
+Adoko, A. C., Jiao, Y. Y., Wu, L., Wang, H., & Wang, Z. H. (2013).
+Predicting tunnel convergence using multivariat e adaptive regression
+spline and artiﬁcial neural network. Tunnelling and Underground Space
+Technology, 38, 368–376. 
+Alliance, A. L. (2001). Seismic fragility formulations for water systems:
+Part 1-guideline. American Society of Civil Engineers-FEMA. 
+Argyroudis, S. A., & Pitilakis, K. D. (2012). Seismic fragility curves of
+shallow tunnels in alluvial deposits. Soil Dynamics and Earthquake
+Engineering, 35, 1–12. 
+Argyroudis, S. A., Mitoulis, S. A., Hofer, L., Zanini, M. A., Tubaldi, E.,
+& Frangopol, D. M. (2020). Resilience assessment framework for
+critical infrastructure in a multi-hazard environme nt: Case study on
+transport assets. Science of the Total Environment, 714. 
+Aydan, O¨ ., Malistani, N., Ulusay, R., & Kumsar, H. (2024). The damage
+and response of some underground structures by the 2023 February 6
+great Turkish earthquakes and some considerations. Engineering
+Geology, 336, 107549. 
+Ayvaz, S., & Alpay, K. (2021). Predictive maintenance system for
+production lines in manufacturing: A machine learning approach
+using IoT data in real-time. Expert Systems with Applications, 173, 
+114598. 
+Bai, X. D., Cheng, W. C., Wu, B., Li, G., & Ong, D. E. L. (2023). Shield
+machine position prediction and anomaly detection during tunnelling
+in loess region using ensemble and deep learning algorithms. Acta
+Geotechnica, 18(11), 6175–61 99. 
+Bao, F., Zeng, X. F., Lin, R. B., Chi, B. X., Lu, H., & Sha, C. N. (2022).
+Detecting aftershocks of the M_S6.9 Menyuan earthquake and
+mapping blind faults by a distributed acoustic sensing array with an
+existing ﬁber-optic cable. Chinese Science Bulletin, 67(27), 3340–3347. 
+Bigdeli, A., Shishegaran, A., Naghsh, M. A., Karami, B., Shishegaran, A.,
+& Alizadeh, G. (2021). Surrogate models for the prediction of damage
+in reinforced concrete tunnels under internal water pressure. Journal of
+Zhejiang University: Science A, 22(8), 632–656. 
+Cao, Y., Zhou, X. K., Yan, K., & Li, D. Y. (2021). Deep learning neural
+network model for tunnel ground surface settlement prediction based
+on sensor data. Mathematical Problems in Engineering, 2021(1), 
+9488892. 
+Chai, W. G., Zheng, Y. X., Tian, L., Qin, J., & Zhou, T. (2023). GA-
+KELM: Genetic-algorithm-improved kernel extreme learning machine
+for traﬃc ﬂow forecasting. Mathematics, 11(16). 
+Chen, G., & Yu, H. T. (2024). Analytic al solution for seismic response of
+composite tunnel liners with arbitrary section shape and embedded
+with an isolation layer. Tunnelling and Underground Space Technology,
+150, 105821. 
+Chen, J. T., Yu, H. T., Bobet, A., & Yuan, Y. (2020). Shaking table tests
+of transition tunnel connecting TBM and drill-and-blast tunnels.
+Tunnelling and Underground Space Technology, 96, 103197. 
+Chen, P. L., Geng, P., He, D. W., Wang, T. Q., & He, C. (2024). A novel
+tool for seismic response analysis of tunnel in multilayered media
+based on kinematic earthquake source. Engineering Geology, 340, 
+107675. 
+Chen, P. L., Geng, P., Chen, J. B., & Gu, W. Q. (2023a). The seismic
+damage mechanism of Daliang tunnel by fault dislocation during the
+2022 Menyuan Ms6.9 earthquake based on unidirectional velocity
+pulse input. Engineering Failure Analysis, 145, 107047. 
+Chen, X., Xiong, Z. M., Zhuge, Y., & Liu, Y. (2023b). Numerical analysis
+on the seismic performance of subway station in ground crack area.
+Tunnelling and Underground Space Technology, 134, 10501. 
+Chen, X. S., Shen, J., Bao, X. H., Wu, X. L., Tang, W. C., & Cui, H. Z.
+(2023c). A review of seismic resilience of shield tunnels. Tunnelling and
+Underground Space Technology, 136, 105075. 
+Chen, Z. W., & Wang, G. (2023). Comparison of empirically-based and
+physically-based analyses of coseismic landslides: A case study of the
+2016 Kumamoto earthquake. Soil Dynamic s and Earthquake Engi-
+neering, 172, 108009. 
+China Merchants Chongqing Transportation Research and Design 
+Institute Co., Ltd. (2019). JTG 2232 —2019: Speciﬁcation for Seismic
+Design of Highway Tunnel (in Chinese).
+Cornell, C. A., Jalayer, F., Hamburger, R. O., & Foutch, D. A. (2002).
+Probabilistic basis for 2000 SAC federal emergency management
+agency steel moment frame guidelines. Journal of Structural Engineer-
+ing, 128 (4), 526–533. 
+Cui, Z., Sheng, Q., Zhang, G. M., Zhang, M. C., & Mei, X. C. (2022a).
+Response and mechanism of a tunnel subjected to combined fault
+rupture deformation and subsequent seismic excitation. Transportation
+Geotechnics, 34, 100749. 
+Cui, Z., Li, J. H., Fu, X. W., Sheng, Q., Zhou, G. X., Ma, Y. L. N., &
+Wang, T. Q. (2022b). Evaluating the response of a tunnel subjected to
+strike-slip fault rupture in conjunction with model test and hybrid
+discrete–continuous numerical modeling. Rock Mechan ics and Rock
+Engineering, 55, 4743–4764. 
+Dai, L., Zhu, Z. D., Zhang, C., & Zhu, D. (2023). Experimental study on
+the inﬂuence of glass ﬁber reinforced concrete isolation layer on the
+seismic dynamic response of tunnels. Case Studies in Construction
+Materials, 19, e02303. 
+Deco`, A., Bocchini, P., & Frangopol, D. M. (2013). A probabilistic
+approach for the prediction of seismic resilience of bridges. Earthquake
+Engineering and Structural Dynamics, 42(10), 1469–1487. 
+Du, L., Zhang, R., & Fu, Y. G. (2024). A robust evaluating strategy of
+tunnel deterioration using ensemble machine learning algorithms.
+Engineering Applications of Artiﬁcial Intelligence, 133. 
+Du, X. L., & Zhao, M. (2010). A local time-domain transmitting
+boundary for simulating cylindrical elastic wave propagation in inﬁnite
+media. Soil Dynamics and Earthquake Engineering, 30(10), 937–946. 
+Fabozzi, S., Bilotta, E., Picozzi, M., & Zollo, A. (2018). Feasibility study
+of a loss-driven earthquake early warning and rapid response systems
+for tunnels of the italian high-spee d railway network. Soil Dynamics
+and Earthquake Engineering, 112, 232–242. 
+Federal Emergency Management Agency (FEMA). (2020). Hazus 4.2 SP3:
+Hazus earthquake model technical manual.
+Firouzi, N., Zur, K. K., Amabili, M., & Rabczuk, T. (2023). On the time-
+dependent mechanics of membranes via the nonlinear ﬁnite element
+method. Computer Methods in Applied Mechanics and Engineering, 407, 
+115903. 
+Gu, B., Sheng, V. S., Wang, Z. J., Ho, D., Osman, S., & Li, S. (2015).
+Incremental learning for m-support vector regression. Neural Networks,
+67, 140–150. 
+Han, K. H., Zhang, D. M., Chen, X. S., Su, D., Ju, J. W. W., Lin, X. 
+T., & Cui, H. Z. (2023). A r esilience assessment framework for
+existing underground structures under adjacent con struction dis-
+turbance. Tunnelling and Underground Space Technology, 141. 
+Harati, M., & van de Lindt, J. W. (2024). Data-driven machine learning
+for multi-hazard fragility surfaces in seismic resilience analysis.
+Computer-Aided Civil and Infrastructure Engineering, 40(6), 698–720. 
+Hasanpour, R., Rostami, J., Schmitt, J., Ozcelik, Y., & Sohrabian, B.
+(2020). Prediction of TBM jamming risk in squeezing grounds using
+Bayesian and artiﬁcial neural networks. Journal of Rock Mechanics and
+Geotechnical Engineering, 12 (1), 21–31. 
+Hong, H. Y., Liu, J. Z., Bui, D. T., Pradhan, B., Acharya, T. D., Pham, B.
+T., Zhu, A. X., Chen, W., & Ahmad, B. B. (2018). Landslide
+susceptibility mapping using J48 decision tree with AdaBoost, Bagging
+and Rotation Forest ensembles in the Guangchang area (China).
+Catena, 163, 399–413. 
+Huang, D. W., Zhu, H. H., Shen, Y., Yan, Z. G., & Ju, J. W. W. (2022).
+Resilient analysis on tunnel structural serviceability based on lifetime
+dynamic prediction model. Tunnelling and Underground Space Tech-
+nology, 129, 104690. 
+Huang, H. W., & Zhang, D. M. (2016). Resilience analysis of shield tunnel
+lining under extreme surcharge: Characteriz ation and ﬁeld application.
+Tunnelling and Underground Space Technology, 51, 301–312. 
+Huang, H. W., Zhang, Y. J., Zhang, D. M., & Ayyub, B. M. ( 2017a). Field
+data-based probabilistic assessment on degradation of deformational
+
+130
+L. Yang et al. / Underground Space 25 (2025) 99–131
+performance for shield tunnel in soft clay. Tunnelling and Underground
+Space Technology, 67, 107–119. 
+Huang, J. Q., Du, X. L., Zhao, M., & Zhao, X. (2017b). Impact of
+incident angles of earthquake shear (S) waves on 3-D non-linear
+seismic responses of long lined tunnels. Engineering Geology, 222, 
+168–185. 
+Huang, P. F., Chen, Z. Y., & Liu, Z. Q. (2023). Nonparametric
+probabilistic seismic demand model and fragility analysis of subway
+stations using deep learning techniques. Underground Space, 11, 63–80. 
+Huang, S., Xin, C. L., Song, D. Q., Feng, W. K., Liu, X. L., Wang, E. Z.,
+Xu, T. H., & Xiong, X. H. (2024). Resilience assessment of the seismic
+damage mechanism of the Daliang high-spee d railway tunnel in the
+2022 Menyuan earthquake (Mw 6.7) in China.
+Transportation
+Geotechnics, 49, 101417. 
+Huang, Z. K., Pitilakis, K., Tsinidis, G., Argyroudis, S., & Zhang, D. M.
+(2020). Seismic vulnerability of circular tunnels in soft soil deposits:
+The case of Shanghai metropolitan system. Tunnelling Underground
+Space Technology, 98, 103341. 
+Huang, Z. K., Pitilakis, K., Argyroudis, S., Tsinidis, G., & Zhang, D. M.
+(2021). Selection of optimal intensity measures for fragility assessment
+of circular tunnels in soft soil deposits. Soil Dynamics and Earthquake
+Engineering, 145, 106724. 
+Huang, Z. K., Argyroudis, S. A., Pitilakis, K., Zhang, D. M., & Tsinidis,
+G. (2022a). Fragility assessment of tunnels in soft soils using artiﬁcial
+neural networks. Underground Space, 7(2), 242–253. 
+Huang, Z. K. (2022b). Resilience evaluati on of shallow circular tunnels
+subjected to earthquakes using fragility functions. Applied Sciences, 12
+(9), 4728. 
+Huang, Z. K., Zhang, D. M., Pitilakis, K., Tsinidis, G., Huang, H. W.,
+Zhang, D. M., & Argyroudis, S. (2022c). Resilience assessment of
+tunnels: Framework and application for tunnels in alluvial deposits
+exposed to seismic hazard. Soil Dynamic s and Earthquake Engineering,
+162, 107456. 
+Jiang, J. W., El Naggar, M. H., Huang, W. T., Xu, C. S., Zhao, K., & Du,
+X. L. (2022). Seismic fragility analysis for shallow-buried underground
+frame structure considering 18 existing subway stations. Soil Dynamics
+and Earthquake Engineering, 162, 107479. 
+Jiang, J. W., Tao, R., El Naggar, M. H., Liu, H., & Du, X. L. (2024).
+Seismic performance and fragility analysis for bifurcated tunnels in
+soft soil. Computers and Geotechnics, 167, 106065. 
+Karami, B., Shishegaran, A., Taghavizade, H., & Rabczuk, T. (2021).
+Presenting innovative ensemble model for predictio n of the load
+carrying capacity of composite castellated steel beam under ﬁre.
+Structures, 33, 4031–4052. 
+Kuhlemeyer, R. L., & Lysmer, J. (1973). Finite element method accuracy
+for wave propagation problems. Journal of the Soil Mechanics and
+Foundations Division, 99 (5), 421–427. 
+Lin, X. T., Chen, X., Su, D., Han, K., & Zhu, M. (2022). An analytical
+model to evaluate the resilience of shield tunnel linings considering
+multistage disturbances and recoveries. Tunnelling and Underground
+Space Technology, 127, 104581. 
+Liu, J. H., Hu, J., Li, Z. W., Ma, Z. F., Shi, J. W., Xu, W. B., & Sun, Q.
+(2022). Three-dimensional surface displacements of the 8 January 2022
+Mw6.7 Menyuan earthquake, China from Sentinel-1 and ALOS-2
+SAR observations. Remote Sensing, 14(6), 1404. 
+Long, X. H., Ma, Y. T., Miao, Y., & Ruan, B. (2023). An innovative
+shape memory alloy ﬂexible circumferential joint for tunnel seismic
+mitigation. Tunnelling and Underground Space Technology, 131, 
+104783. 
+Lyu, S., Qi, Q., Huang, X. M., Peng, S. N., Yang, D., & Chen, L. Y.
+(2024). Machine learning-based method for gas leakage source term
+estimation in highway tunnels. Tunnelling and Underground Space
+Technology, 154, 106114. 
+Meng, S. B., Li, W. X., Liu, Z. X., Liu, J. Q., He, W. G., Yang, C. W.,
+Zhao, J. W., & Wei, S. T. (2024). Rapid resilience assessment
+framework for mountain tunnels subjected to near-fault seismic
+ground motions. Soil Dynamics and Earthquake Engineering, 182, 
+108746. 
+Moayedifar, A., Nejati, H. R., Goshtasbi, K., & Khosrotash, M. (2019).
+Seismic fragility and risk assessment of an unsupported tunnel using
+incremental dynamic analysis (IDA). Earthquakes and Structures., 16
+(6), 705–714. 
+Naghsh, M. A., Shishegaran, A., Karami, B., Rabczuk, T., Shishegaran,
+A., Taghavizadeh, H., & Moradi, M. (2021). An innovative model for
+predicting the displacement and rotation of column-tree moment
+connection under ﬁre. Frontiers of Structural and Civil Engineering, 15, 
+194–212. 
+Qu, L. M., Ding, X. M., Zheng, C. J., Wu, C. R., & Cao, G. W. (2021).
+Numerical and test study on vertical vibration characteristics of pile
+group in slope soil topography. Earthquake Engineering and Engineer-
+ing Vibration, 20 (2), 377–390. 
+Rabczuk, T., & Belytschko, T. (2004). Cracking particles: A simpliﬁed
+meshfree method for arbitrary evolving cracks. International Journal
+for Numerical Methods in Engineering, 61(13), 2316–2343. 
+Rabczuk, T., Zi, G., Bordas, S., & Nguyen-Xua n, H. (2010). A simple and
+robust three-dimensional cracking-particle method without enrich-
+ment. Computer Methods in Applied Mechanics and Engineering, 199
+(37/38/39/40), 2437–2455. 
+Reddy, A. D., & Singh, A. (2024).
+A
+simplistic
+method
+for
+assessing seismic damage in rock tunnels before earthquake: Part 1—
+damage prediction and validation using seismic damage classiﬁcation
+of tunnels. Rock Mechanics and Rock
+Engineering,
+57(12), 
+11001–11032. 
+Samaniego, E., Anitescu, C., Goswami, S., Nguyen-Thanh, V. M., Guo,
+H., Hamdia, K., Zhuang, X., & Rabczuk, T. (2020). An energy
+approach to the solution of partial diﬀerential equations in computa-
+tional mechanics via machine learning: Concepts, implementation and
+applications. Computer Methods in Applied Mechanics and Engineering,
+362, 112790. 
+Shishegaran, A., Boushehri, A. N., & Ismail, A. F. (2020a). Gene
+expression programming for process parameter optimization during
+ultraﬁltration of surfactant wastewater using hydrophilic polyether-
+sulfone membrane. Journal of Environmental Management, 264, 
+110444. 
+Shishegaran, A., Khalili, M. R., Karami, B., Rabczuk, T., & Shishegaran,
+A. (2020b). Computational predictions for estimating the maximum
+deﬂection of reinforced concrete panels subjected to the blast load.
+International Journal of Impact Engineering, 139, 103527. 
+Shishegaran, A., Saeedi, M., Kumar, A., & Ghiasinejad, H. (2020c).
+Prediction of air quality in Tehran by developing the nonlinear
+ensemble model. Journal of Cleaner Production, 259, 120825. 
+Shishegaran, A., Moradi, M., Naghsh, M. A., Karami, B., & Shishegaran,
+A. (2021a). Prediction of the load-carryin g capacity of reinforced
+concrete connections under post-earthquake ﬁre. Journal of Zhejiang
+University: Science A, 22(6), 441–466. 
+Shishegaran, A., Karami, B., Safari Danalou, E., Varaee, H., & Rabczuk,
+T. (2021b). Computational predictions for predicting the performance
+of steel 1 panel shear wall under explosive loads. Engineering
+Computations, 38 (9), 3564–35 89. 
+Shishegaran, A., Varaee, H., Rabczuk, T., & Shishegaran, G. (2021c).
+High correlated variables creator machine: Prediction of the compres-
+sive strength of concrete. Computers & Structures, 247. 
+Shishegaran, A., Saeedi, M., Mirvalad, S., & Korayem, A. H. (2023).
+Computational predictions for estimating the performance of ﬂexural
+and compressive strength of epoxy resin-based artiﬁcial stones.
+Engineering with Computers, 39(1), 347–372. 
+Sun, W. Y., Lin, J. C., Ma, Q. G., Yan, S. H., Tong, H., & Liang, Q. G.
+(2024). Seismic fragility assessment of circular metro tunnels in loess
+deposit. Journal of Central South University, 31(3), 950–964. 
+Sun, Y., Feng, X. D., Yang, L. Q., & Chastre, C. (2018). Predicting tunnel
+squeezing using multiclass support vector machines. Advances in Civil
+Engineering, 2018 (1). 
+Tian, H. X., & Mao, Z. Z. (2010). An ensemble ELM based on modiﬁed
+AdaBoost.RT algorithm for predicting the temperature of molten steel
+in ladle furnace. IEEE Transactions on Automation Science and
+Engineering, 7 (1), 73–80. 
+Tian, J. W., Liu, Y., Zheng, W. F., & Yin, L. R. (2022). Smog prediction
+based on the deep belief - BP neural network model (DBN-BP). Urban
+Climate, 41, 101078. 
+Tsinidis, G., Karatzetzou, A., Stefanidou, S., & Markogiannaki, O.
+(2022). Developments in seismic vulnerability assessment of tunnels
+and underground structures. Geotechnics, 2(1), 209–249. 
+Tsinidis, G., Stefanidou, S., & Karatzetzou, A. (2024a). New limit states
+for the seismic fragility assessment of circular tunnels: Application in
+case of tunnels in clayey soil deposits. Tunnelling and Underground
+Space Technology, 154, 106129. 
+Tsinidis, G., Karatzetzou, A., & Stefanidou, S. (2024b). On th e eﬀects of
+salient parameters for an eﬃcient assessment of seismic res ponse and
+fragility of circular tunnels in clayey deposits. Soil Dyn amics and
+Earthquake Engineering, 1 78, 10849 0.
+
+L. Yang et al. / Underground Space 25 (2025) 99–131
+131
+Wang, L. J., Geng, P., Chen, J. B., & Wang, T. Q. (2023a). Machine
+learning-based fragility analysis of tunnel structure under diﬀerent
+impulsive seismic actions. Tunnelling and Underground Space Technol-
+ogy, 133, 104953. 
+Wang, Q., Geng, P., Li, P. S., He, D. W., & Shen, H. M. (2024). Failure
+analysis of circumferential joints and preferable bolt form of shield
+tunnel under normal fault dislocation. Tunnelling and Underground
+Space Technology, 146, 105648. 
+Wang, Y., Wang, Q., Zhong, X. M., & Deng, J. (2023b). Seismic response
+analysis of the Daliang tunnel during the Menyuan M_S6.9earth-
+quake. China Earthquake Engineering Journal, 45(6), 1315–1323, 1332
+(in Chinese). 
+Wen, Y. M., Xin, C. L., Shen, Y. S., Huang, Z. M., & Gao, B. (2021). The
+seismic response mechanisms of segmental lining structures applied in
+fault-crossing mountain tunnel: The numerical investigation and
+experimental validation. Soil Dynamics and Earthqua ke Engineering,
+151, 107001. 
+Wu, Y. L., Ke, Y. T., Chen, Z., Liang, S. Y., Zhao, H. L., & Hong, H. Y.
+(2020). Application of alternating decision tree with AdaBoost and
+bagging ensembles for landslide susceptibility mapping. Catena, 187. 
+Xin, C. L., Wang, Z. Z., Zhou, J. M., & Gao, B. (2019). Shaking table
+tests on seismic behavior of polypropyle ne ﬁber reinforced concrete
+tunnel lining. Tunnelling and Underground Space Technology, 88, 1–15. 
+Xin, C. L., Wang, Z. Z., & Gao, B. (2018). Shaking table tests on seismic
+response and damage mode of tunnel linings in diverse tunnel-void
+interaction states. Tunnelling and Underground Space Technology, 77, 
+295–304. 
+Xin, C. L., Wang, Z. Z., & Yu, J. (2020). The evaluation on shock
+absorption performance of buﬀer layer around the cross section of
+tunnel lining. Soil Dynamics and Earthquake Engineering, 131, 106032. 
+Xin, C. L., Wang, Z., Hajirasouliha, I., Yang, F., Li, W. H., Chen, T., &
+Gao, B. (2022). Seismic response mechanism s of casing-shape com-
+posite tunnel lining: Theoretical analysis and shaking table test
+veriﬁcation. Soil Dynamics and Earthquake Engineering, 162, 107440. 
+Xin, C. L., Shuai, Y. X., Song, D. Q., & Liu, X. L. (2024a). Dynamic
+interaction and failure mechanism in tunnel-slope systems: Mitigation
+insights from shaking table tests and numerical analysis. Tunnelling and
+Underground Space Technology, 152, 105940. 
+Xin, C. L., Feng, W. K., Song, D. Q., Huang, S., & Liu, X. L. (2024b).
+Seismic damage to non-fault-crossing and fault-crossing tunnels:
+Comparative study of the 2008 Wenchuan earthquake (Mw 7.9) and
+the 2022 Menyuan earthquake (Mw 6.7). Engineering Failure Analysis,
+166, 108843. 
+Xing, H. J., Liu, W. T., & Wang, X. Z. (2024). Bounded exponential loss
+function based AdaBoost ensemble of OCSV Ms. Pattern Recognition,
+148, 110191. 
+Yu, H. T., Chen, J. T., Bobet, A., & Yuan, Y. (2016). Damage observation
+and assessment of the Longxi tunnel during the Wenchuan earthquake.
+Tunnelling and Underground Space Technology, 54, 102–116. 
+Zhang, C. L., Zhang, B., Zhang, D. M., Huang, Z. K., & Huang, H. W.
+(2025). Machine learning-based resilience assessmen t of tunnel under
+explosions: Integrating post-explosion loss and recovery models.
+Computers and Geotechnics, 179, 107008. 
+Zhang, Y. F., Yuan, K., Zhou, W. J., & Fan, J. W. (2023a). Study on
+structural deformation characteristics and surface crack distribution of
+Daliang tunnel across Lenglongling fault caused by Menyuan earth-
+quake. Chinese Journal of Rock Mechanics and Engineering, 42(5), 
+1055–1069 (in Chinese). 
+Zhang, Y. F., Chen, J., Gong, W. Y., Han, N. N., Liu, Y. H., & Shan, X.
+J. (2023b). Geodetic modelling of the 2022 Mw6.6 Menyuan earth-
+quake: Insight into the strain-partitioned northern Qilian Shan fault
+system and implications for regional tectonics and seismic hazards.
+Geophysical Journal International, 233(3), 1987–2003. 
+Zhong, Z. L., Wang, Z., Zhao, M., & Du, X. L. (2020). Structural damage
+assessment of mountain tunnels in fault fracture zone subjected to
+multiple strike-slip fault movement. Tunnelling and Underground Space
+Technology, 104, 103527. 
+Zhou, H., He, C. D., Wang, X., Chen, Y. J., & Li, J. (2021). Assessment of
+the Seismic Response of Shallow b uried Elliptical Tunnels. Journal of
+Earthquake Engineering, 27 (3), 465–487. 
+Zhu, H. H., Yu, H. T., Han, F. Q., Wei, Y. B., & Yuan, Y. (2023). Seismic
+Resilience Design Principles and Key Issues for Tunnels C rossing
+active Faults. China Journal of Highway and Transport, 36(11), 
+193–204 (in Chines e).

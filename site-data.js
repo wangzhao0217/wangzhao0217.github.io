@@ -33,6 +33,7 @@ window.SITE = {
       pubsEyebrow:   "grep -ri 'paper' ./publications",
       pubsTitle:     { en: "Publications", zh: "论文发表" },
       pubsIntro:     { en: "22 peer-reviewed journal papers and selected conference papers. Full citations on ResearchGate.", zh: "22 篇同行评审期刊论文及代表性会议论文，完整引用见 ResearchGate。" },
+      rsNotesLabel:  { en: "Research notes", zh: "研究笔记" },
       eduTitle:      { en: "Education", zh: "教育背景" },
       rolesLabel:    { en: "Roles", zh: "职位" },
     },

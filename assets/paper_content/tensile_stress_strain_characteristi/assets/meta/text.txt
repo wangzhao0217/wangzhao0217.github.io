@@ -1,0 +1,1637 @@
+Tensile stress-strain characteristics of rubberised concrete from ﬂexural
+tests
+Zhao Wang a,⇑, Hang Hu b, Iman Hajirasouliha a, Maurizio Guadagnini a, Kypros Pilakoutas a
+a Dept. of Civil and Structural Engineering, The University of Shefﬁeld, Sir Frederick Mappin Building, Mappin Street, Shefﬁeld S1 3JD, UK
+b Chengdu Communication Investment Corporation, 66 Shenghe 1st Road, Chengdu City, Sichuan Province 610041, China
+h i g h l i g h t s
+ The fracture energy, energy absorption capacity and ductility of RuC is superior to that of conventional concrete.
+ The Mode I fracture behaviour of RuC is characterised through ﬂexural tests on notched prisms.
+ The implementation of an adaptive fracture energy approach can successfully address mesh sensitivity.
+ The complete tensile stress-strain relationship of RuC is obtained using inverse FE analyses.
+ A reﬁned constitutive model to capture the tensile behaviour of RuC is proposed.
+a r t i c l e
+i n f o
+Article history:
+Received 26 June 2019
+Received in revised form 31 October 2019
+Accepted 11 November 2019
+Available online 18 November 2019
+Keywords:
+Rubberised concrete
+Three-point bending test
+Fracture energy
+Tension softening
+Inverse ﬁnite element analysis
+Crack band
+a b s t r a c t
+The tensile characteristics of rubberised concrete are practically impossible to obtain from direct tensile
+tests, due to the non-uniform distribution of aggregates and stiffness. In this paper, notched three-point
+bending tests are used to characterise Mode I fracture behaviour of concrete incorporating high volume of
+rubber particles obtained from post-consumer tyres. The test results show that rubber particles enhance
+energy absorption capacity and ductility of concrete. Inverse ﬁnite element analysis is performed to indi-
+rectly determine tensile stress-strain curves of rubberised concrete. The key material parameters intro-
+duced in the constitutive model are tensile strength, fracture energy and crack band width. The
+spurious mesh dependency is resolved by adopting a simple modiﬁcation to the softening modulus as
+a function of element size. The performance of the proposed tensile stress-strain relation is compared
+with that of Model Code 2010 using ABAQUS concrete damaged plasticity model and shows considerably
+better accuracy. The proposed model can be used to improve the reliability of numerical analyses of rub-
+berised concrete elements and structures.
+ 2019 Elsevier Ltd. All rights reserved.
+1. Introduction
+Vulcanised rubber material extracted from end-of-life tyres is
+highly durable, has good strength and deformability, and can main-
+tain its volume under stress, thus making it an ideal candidate to
+replace mineral aggregate for highly deformable concrete. The fea-
+sibility of utilising recycled rubber as aggregate in concrete has
+been assessed by many studies in the past [1–4]. The majority of
+those investigations focused on compressive performance and
+found that the replacement of mineral aggregates with rubber
+can reduce concrete density, workability, compressive strength
+and elastic modulus. This means that rubberised concrete (RuC)
+can only be used for non-structural applications, such as heat,
+sound and vibration isolation. More recently, it was also found that
+RuC has enhanced lateral strain [5,6] under axial loading. This has
+led researchers during the EU-funded project ‘‘Anagennisi” [7] to
+conﬁne rubberised concrete (RuC) in an attempt to enhance axial
+strength and strain capacity [6]. The hypothesis was that conﬁned
+RuC could be used in regions with high deformation demands, such
+as base isolation columns and bridge bearings. To model such ele-
+ments, the full mechanical characteristics of RuC are required [8].
+The compressive characteristics of RuC can be determined from
+uniaxial and triaxial compressive tests. However, its tensile charac-
+teristics are difﬁcult to obtain from direct tensile tests as the
+uneven distribution of rubber particles results in a non-uniform
+distribution of tensile strength, even for small linear elements
+[1]. Hence, the tensile performance of RuC is normally derived from
+https://doi.org/10.1016/j.conbuildmat.2019.117591
+0950-0618/ 2019 Elsevier Ltd. All rights reserved.
+⇑Corresponding author.
+E-mail addresses: zwang88@shefﬁeld.ac.uk (Z. Wang), i.hajirasouliha@shefﬁeld.
+ac.uk
+(I.
+Hajirasouliha),
+m.guadagnini@shefﬁeld.ac.uk
+(M.
+Guadagnini),
+k.pilakoutas@shefﬁeld.ac.uk (K. Pilakoutas).
+Construction and Building Materials 236 (2020) 117591
+Contents lists available at ScienceDirect
+Construction and Building Materials
+journal homepage: www.elsevier.com/locate/conbuildmat
+
+splitting or ﬂexural tensile tests. Experimental evidence [1,5,9] has
+shown that the tensile strength (splitting or ﬂexural) of RuC
+decreases with increasing rubber content. Furthermore, the tensile
+strength values obtained from the two types of tests are not equiv-
+alent. The maximum strength derived from ﬂexural tests is gov-
+erned by the concrete strength on the tension surface of the
+beam and can be affected by its boundary and moisture conditions
+[10]. In the case of splitting tests, the majority of the concrete per-
+pendicular to the loading direction is under constant tensile stress,
+thus the splitting tensile strength is closer to the strength deter-
+mined from direct tensile tests [11]. On the other hand, ﬂexural
+tests produce a more stable load-deﬂection curve than splitting
+tests and can be used to obtain a more reliable estimate of the
+energy dissipation ability of RuC after cracking [1]. Such test
+results prove that the ﬂexural post-cracking performance of RuC
+is enhanced by the replacement of aggregates with rubber particles
+[12]. This can be explained by the ability of rubber particles to
+store elastic energy and dissipate it through pull-out [13]. Since
+both indirect tensile tests do not provide a direct measure of the
+tensile stress-strain or stress-crack opening relations, there is a
+lack of a tensile constitutive model for this novel material. This
+limits the development of numerical models that could demon-
+strate the applicability of RuC in structural applications.
+The Concrete Damage Plasticity (CDP) model is widely used to
+simulate the failure behaviour of concrete in ﬁnite element analy-
+sis [14–16]. The CDP treats cracked concrete as a continuum and
+cracks are represented by cracking strains smeared over a certain
+width of fracture zone, or the width of a ﬁnite element. Thus the
+constitutive behaviour of cracked concrete is modelled using the
+stress-strain relations combined with a damage parameter [17].
+The successful ﬁnite element modelling of RuC using CDP also
+requires the complete uniaxial tensile stress-strain relationship.
+Although this cannot be obtained from direct tensile tests, it is pos-
+sible to obtain the tensile stress-strain relationship by inverse
+ﬁnite element analysis (FEA) on the ﬂexural test result. However,
+if a softening material model is only described on the basis of
+stress-strain relationships, strain-softening can lead to spurious
+sensitivity with respect to the size of elements due to the localisa-
+tion of deformation [17–19]. Mesh reﬁnement leads to a smaller
+strain localisation band width and reduces global energy dissipa-
+tion. One remedy for this spurious mesh sensitivity issue is to
+use the crack band technique [17,20]. The basic idea of this tech-
+nique is to modify the strain-softening modulus to the chosen size
+of the ﬁnite element. This adjustment ensures that different size
+elements dissipate identical fracture energies [21].
+This study proposes a new tensile constitutive model for RuC
+obtained through inverse FEA and implemented in the CDP model
+to predict the tensile behaviour of RuC. The paper initially
+describes an experimental program on which three-point bending
+(TPB) and splitting tensile tests are utilised to determine the tensile
+behaviour of RuC. The next sections describe the methodology
+applied for the inverse FEA and mesh sensitivity studies. Finally,
+to demonstrate the efﬁciency of the proposed model, the predicted
+mechanical response using the proposed tensile r-e relationships
+and relationships obtained from Model Code 2010 are compared.
+This work will lead to a better understanding of the behaviour of
+RuC and will assist in developing applications for highly deform-
+able elements.
+2. Experimental program
+Forty-ﬁve samples consisting of thirty-six cylindrical specimens
+(Ø100  200 mm) and nine prisms (L500  W150  H150 mm)
+were manufactured to examine the compressive and tensile
+characteristics of RuC. The samples were divided into three sets
+by rubber contents (qvr = 0%, 30% and 60%) and labelled as R0,
+R30 and R60, respectively. The rubber content qvr is deﬁned as
+the volume of mineral aggregates in the reference regular concrete
+mix replaced by rubber [5,22].
+2.1. Rubber particles
+The recycled rubber particles were extracted from car (sizes up
+to 10 mm) and truck (sizes in the range of 10–20 mm) end-of-life
+tyres [23]. Fig. 1 shows the particles size range and used ratio in
+the concrete mix. These proportions were adopted from an exper-
+imental study on RuC mixes conducted by Raffoul et al. [22], in
+which acceptable strength loss and desirable workability were
+achieved.
+2.2. Mix designs
+A reference regular concrete mix (qvr = 0) for bridge pier design
+with target 28-day compressive strength of 60 MPa was initially
+selected and modiﬁed for rubberised concrete mixing. In the RuC
+mixes, 20% of the cement (CEM II – 52.5N) was replaced by 50%
+ﬂy ash [24] and 50% silica fume [25]. Silica fume and ﬂy ash were
+added to increase ﬂowability and strength and to improve particles
+packing. Two RuC mixes were produced with 30% and 60% of rub-
+ber contents, respectively. The speciﬁc gravity of mineral aggre-
+gates was considered to be 2.65, and that of rubber was 0.8 [22].
+The quantities of rubber particles used in the mixes were 165 kg/
+m3 and 330 kg/m3, respectively. Table 1 summarises the mix pro-
+portions used in this study.
+2.3. Test procedure and methodology
+2.3.1. Compressive and splitting tests
+The compressive (see Fig. 2a) and splitting tests (see Fig. 2b) on
+cylindrical specimens were conducted under load control at load-
+ing rates of 0.4 MPa/s [26] and 0.01 MPa/s [27], respectively. For
+the compressive tests, three laser sensors (accuracy of 0.005 mm)
+were used to measure global axial displacement. The sensors were
+mounted radially at 120 on two aluminium rings with 100 mm
+gauge length. Local axial strains were measured by using strain
+gauges placed at mid-height of the specimen. The possible initial
+rotations were accommodated by a top loading plate ﬁtted with
+a hinge. The dimensions of each specimen were measured before
+testing.
+The
+specimen
+ends
+were
+strengthened
+with
+post-
+tensioned metal straps with a thickness of 0.8 mm and a width
+of 25 mm to avoid local failure.
+The splitting tensile strength (fct,sp) can be calculated by Eq. (1)
+considering the maximum load (Pmax) [27]:
+0-0.5 (5%)
+0.5-0.8 (5%)
+1.0-2.5 (15%)
+2-4 (20%)
+4-10 (10%)
+4-10 (22.5%)
+10-20 (22.5%)
+Rubber particles (sizes: mm)
+Fig. 1. Rubber particles used in the concrete mix to replace sand (size:0–4 mm) and
+mineral aggregate (sizes: 4–10 mm and 10–20 mm).
+2
+Z. Wang et al. / Construction and Building Materials 236 (2020) 117591
+
+f ct;sp ¼ 2Pmax
+pLdcy
+ð1Þ
+where L is the length of the specimen, dcy is the diameter of the
+cylinder.
+The load in Eq. (1) is assumed to be concentrated along a line.
+However, the load is practically applied on a sheet of plywood or
+compact cardboard. Rocco et al. [28] showed that the loading area
+width (t) can affect the tensile strength of the cylinders up to 25%.
+Tang et al. [29] proposed the following equation to consider the
+effect of the loading area width on the splitting tensile strength.
+f ct;sp ¼ 2Pmax
+pLdcy
+1 
+2t
+dcy
+
+2
+ 
+!1:5
+ð2Þ
+Bompa et al. [5] proposed Eq. (3) to predict the splitting tensile
+strength (fct,sp), tensile strength (fct) and elastic modulus (Ec) as a
+function of the compressive strength (fco) of RuC. The performance
+of these equations will be evaluated against the test data obtained
+in this study.
+f ct;sp ¼ 0:26f
+2=3
+co
+f ct ¼ 0:24f
+2=3
+co
+Ec ¼ 12 f co
+10
+
+2=3
+ð3Þ
+2.3.2. Three-point bending tests
+Before testing, the geometrical dimensions of each specimen
+were measured and a 5 mm wide and 25 mm deep notch was sawn
+at mid-span of the prisms and perpendicular to the cast surface
+using a diamond blade [30]. All specimens were tested under a
+TPB loading arrangement using a 300 kN electromagnetic testing
+machine (see Fig. 3). Two Linear Variable Differential Transducers
+(LVDTs) were mounted on an aluminium yoke to measure central
+deﬂections [31] and a clip gauge was mounted across the notch
+to obtain the crack mouth opening displacement (CMOD) [32]. In
+order to achieve a stable result, the tests were CMOD-controlled
+at a constant rate of 0.02 mm/min [33]. The load, central deﬂection
+and CMOD were recorded throughout loading history.
+Fig. 3. Set-up of the three-point bending tests.
+Fig. 2. View of testing for a) Compression tests and b) Splitting tests.
+Table 1
+Mix proportions for optimised RuC mix.
+qvr
+CEM II
+52.5
+Silica
+Fume
+Pulverised
+Fuel Ash
+Aggregates
+Rubber Particles
+Plasticiser
+Superplasticiser
+Water
+Designed
+density
+0/5 mm
+5/10 mm
+10/20 mm
+0/4 mm
+4/10 mm
+10/20 mm
+kg/m3
+l/m3
+kg/m3
+0
+340
+42.5
+42.5
+820
+364
+637
+–
+–
+–
+2.5
+5.1
+150
+2396
+30%
+340
+42.5
+42.5
+574
+255
+456
+74
+17
+75
+2.5
+5.1
+150
+2026
+60%
+340
+42.5
+42.5
+328
+146
+255
+149
+33
+148
+2.5
+5.1
+150
+1634
+Z. Wang et al. / Construction and Building Materials 236 (2020) 117591
+3
+
+The ﬂexural tensile strength (fctm,ﬂ) can be calculated as the
+equivalent elastic tensile ﬂexural stress corresponding to the max-
+imum load recorded, as:
+f ctm;fl ¼
+3Pmaxl
+2b d  a
+ð
+Þ
+2
+ð4Þ
+where l is the span of the prism, b is the width of the prism, d is the
+depth of the prism, and a is the effective depth of the notch.
+The ﬂexural modulus of elasticity (Efm) is determined by using
+the elastic ﬂexural deformations, as given below:
+Efm ¼ l
+3P
+48Id
+ð5Þ
+where P=d (N/mm) is the slope of the load-deﬂection curve at 40% of
+the peak load and I (mm4) is the second moment of area of the mid-
+span cross-section.
+2.3.3. Total fracture energy using work-of-fracture method
+Hillerborg’s work-of-fracture method assumes that the energy
+required for crack formation is equivalent to the work of the exter-
+nal load. Thus the complete load-deﬂection curve of the specimen
+is necessary to estimate the work of the external load, which can
+be represented as the area under the load-deﬂection curve. The
+fracture energy (GF) can be then calculated using the following
+equation [34]:
+GF ¼ W0 þ m1 l
+L þ 2m2
+
+
+gd0
+Af
+ð6Þ
+where W0 is energy absorption capacity, which represents the area
+under the load-deﬂection curve during the bending test; m1 is the
+mass of the beam between supports; m2 is the mass of the unat-
+tached loading apparatus; L and l are the length and span of the
+specimen, respectively; g is the gravity acceleration; d0 represents
+the maximum recorded deﬂection; and Af = (d  a)b denotes the
+area of the fracture surface.
+2.4. Experimental results
+2.4.1. Changes in unit weight
+As a result of the low unit weight of rubber particles, the unit
+weight of rubberised concrete reduces by increasing the rubber
+content. Fig. 4 shows the expected linear relationship between unit
+weight (dRuC) and rubber contents (qvr). Compared with the unit
+weight of concrete mixes without rubber, the average unit weight
+of the concrete mix with a rubber content of 30% and 60%
+decreased by 15.4% and 31.8%, respectively.
+2.4.2. Compressive and splitting tensile strength
+The compressive test results are summarised in Table 2. The
+mean cylindrical compressive strengths (fco) of R30 and R60 were
+about 29% and 10% of that of regular concrete R0 (75 MPa), respec-
+tively. The compressive stress-strain curves are shown in Fig. 5.
+The elastic moduli (Ec) of R30 and R60 were 41% and 21% of that
+of R0 (41 GPa), respectively. The post-peak behaviour was also sig-
+niﬁcantly inﬂuenced by the percentage of rubber content. The typ-
+ical compressive failure patterns for the tested cylinders are shown
+in Fig. 6a. As expected, all plain (qvr = 0%) specimens failed sud-
+denly in a brittle manner. The failure of RuC cylinders with
+qvr = 30% and 60% was more gradual as the cylinders developed a
+large number of macro-cracks prior to failure. Rubber particles
+dilate more at lower displacements than mineral aggregates due
+to their high Poisson’s ratio and low modulus of elasticity. This
+dilation generates internal splitting tensile stresses perpendicular
+to the loading direction and causes the concrete to fail at an earlier
+stage.
+1600
+1800
+2000
+2200
+2400
+0
+30
+60
+Unit weight (kg/m3)
+Rubber contents 
+(%)
+Measured
+Expected
+dRuC = 2396 −0.7ρvrhdagg
+dagg = 1820 kg/m3
+Fig. 4. Unit weight of RuC with different rubber contents qvr.
+Table 2
+Experimental results of examined concrete mixes.
+qvr
+fco
+Ec
+fct,sp
+fctm,ﬂ
+Efm
+GF
+W0
+MPa
+GPa
+MPa
+MPa
+GPa
+N/mm
+Nm
+0
+75 (5.6)
+41 (2.3)
+4.1 (0.32)
+5.9 (0.5)
+44 (9)
+0.12 (0.02)
+2.2 (0.02)
+30
+21.9 (3.6)
+17 (3.5)
+1.8 (1.29)
+3.9 (1.86)
+20 (8)
+0.46 (0.14)
+8.1 (0.14)
+60
+7.7 (0.3)
+8.5 (1.2)
+0.9 (0.52)
+2.1 (0.22)
+10 (0.3)
+0.93 (0.06)
+16.8 (0.06)
+Note: Standard Deviation is presented in brackets.
+0
+20
+40
+60
+80
+100
+0
+0.005
+0.01
+Compressive Stress (MPa)
+Compressive Strain (mm/mm)
+R0
+R30
+R60
+Fig. 5. Compressive stress-strain curves of R0, R30 and R60.
+4
+Z. Wang et al. / Construction and Building Materials 236 (2020) 117591
+
+During the splitting tests, as expected, all samples failed due to
+wedge formation and splitting as shown in Fig. 6b. Compared to
+the brittle failure mode of plain concrete, the RuC samples exhib-
+ited a slower axial splitting process and higher capacity in absorb-
+ing plastic energy. The regular concrete specimens split into two
+halves immediately upon reaching their ultimate load capacity,
+while the RuC specimens were capable of withstanding at least
+80% of the ultimate load for about 30 s (R30) and 55 s (R60) after
+splitting. The RuC specimens underwent large displacements
+before the loading stopped, and the deformation was partially
+recovered upon unloading. All the RuC specimens maintained their
+integrity even for highly cracked specimens. The splitting tensile
+strength (fct,sp) results are reported in Table 2, which show an
+apparent degradation in tensile strength with increasing rubber
+content. However, the trend in tensile strength loss is less severe
+than in compressive strength. The splitting tensile strengths of
+R30 and R60 were 44% and 22% of that of R0 (4.1 MPa),
+respectively.
+2.4.3. Three-point bending tests
+The ﬂexural failure patterns of all specimens are shown in
+Fig. 6c. The average ﬂexural strength (fctm,ﬂ) and modulus (Efm) of
+three replicates are listed in Table 2. Fig. 7 shows images of typical
+fracture surfaces obtained after the bending tests (upper row for
+each mix) as well as the results from the digital image processing
+of these sections (lower row) to examine rubber particle distribu-
+tion along the casting direction. The images show that the rubber
+tended to ﬂoat towards the cast face (left in the pictures) during
+(a)
+(b)
+(c)
+Fig. 6. Typical failure modes for a) Compression; b) Splitting tension and c)
+Flexural.
+Fig. 7. The fracture surface of three-point bending tests.
+Z. Wang et al. / Construction and Building Materials 236 (2020) 117591
+5
+
+vibration of the fresh concrete leading to an agglomeration of rub-
+ber particles. However, this tendency is less obvious in the speci-
+mens with a rubber content of qvr = 60%.
+Fig. 8 shows the individual and average P  d curves from three
+TPB specimens for each of the qvr tested. The mid-span deﬂection
+of each prism was determined by averaging the measurements
+from LVDTs. The response of the TPB test can be described by three
+typical phases: 1) an elastic phase up to cracking; 2) a short ﬂexu-
+ral hardening response up to the maximum ﬂexural capacity; and
+3) a reduction of the load with increasing CMOD/deﬂection. The
+comparative assessment of load-deﬂection curves from Fig. 8
+shows a reduction in ﬂexural strength and stiffness with increasing
+rubber content. The ﬂexural strengths (fctm,ﬂ) of concrete with
+qvr = 30% and 60% are 66% and 35.6% of the reference concrete,
+respectively. The ﬂexural modulus (Efm) of R30 and R60 were
+reduced to 45% and 20% of that of R0, respectively. However, the
+ratio of cracking stress to ﬂexural strength (fcr/fctm,ﬂ) are 54%, 68%
+and 72% for R0, R30 and R60, respectively. At load levels close to
+the peak, RuC specimens exhibited a stable transition from the
+pre-cracking to post-cracking regimes, while the reference (plain
+concrete) beams showed a brittle behaviour after the maximum
+capacity was reached. Beyond the peak, the descending branch
+showed
+reducing
+gradients
+(Ed,R0 = 143,
+Ed,R30 = 24
+and
+Ed,R60 = 7 MPa)
+and
+increasing
+energy
+absorption
+capacity
+(W0 = 2.2; W0,R30 = 8.1 and W0,R60 = 16.8 Nm) and fracture energy
+(GF,R0 = 0.15, GF,R30 = 0.51 and GF,R60 = 0.93 N/mm2) as the rubber
+content increased (see Fig. 9). This enhancement indicates that
+the capability of rubberised concrete in energy absorption is signif-
+icantly better than regular concrete and RuC specimens developed
+up to 20 times larger deﬂections. The higher deformability of rub-
+berised concrete elements can potentially result in more resilient
+structural systems and improve structural integrity under extreme
+load conditions.
+The fracture energy (GF) in N/mm2 for regular concrete can be
+determined using Model Code 2010 [35]:
+GF ¼ 0:073  f
+0:18
+co
+ð7Þ
+Using the results of this study, a parametric equation was devel-
+oped to calculate the fracture energy (GF,RuC) of RuC based on Eq.
+(7) and as a function of rubber content (qvr) (Eq. (8) and Fig. 9):
+GF;RuC ¼ ð1 þ 10:8qvrÞ  GF
+ð8Þ
+Further inspection of the fractured surfaces (see Fig. 6) revealed
+a different degree of roughness depending on the percentage of
+rubber volume replacement. At 0% rubber replacement, almost
+all the aggregates were found broken. The ﬂexural failure mode
+of RuC can be explained as follows. At 30% rubber replacement,
+the majority of mineral aggregates were found broken on the frac-
+ture surface. At 60% rubber replacement, no broken mineral aggre-
+gates were found on the fracture surface. When a tension crack
+propagates through RuC and reaches a rubber particle, the crack
+keeps developing in the same direction as the rubber has the abil-
+ity to withstand large elastic deformation under small tensile
+stress. As rubber can withstand much higher tensile stress and
+strain until failure than cement and mineral aggregates, the
+0
+5
+10
+15
+20
+25
+0
+0.2
+0.4
+0.6
+0.8
+1
+Load (kN)
+Mid-span Deflection (mm)
+R0-1
+R0-2
+R0-3
+Averaged.EXP
+0
+5
+10
+15
+20
+25
+0
+2
+4
+6
+8
+Load (kN)
+Mid-span Deflection (mm)
+R60-1
+R60-2
+R60-3
+Averaged.EXP
+0
+5
+10
+15
+20
+25
+0
+1
+2
+3
+4
+5
+Load (kN)
+Mid-span Deflection (mm)
+R30-1
+R30-2
+R30-3
+Averaged.EXP
+0
+10
+20
+0
+0.1
+0.2
+Ec = 44 GPa
+0
+10
+20
+0
+0.1
+0.2
+Ec = 19.6 GPa
+0
+5
+10
+0
+0.1
+0.2
+Ec = 10 GPa
+Ed = 143 MPa
+Ed = 24 MPa
+Ed =
+7 MPa
+c
+b
+a
+Fig. 8. Load-deﬂections of TPB specimens: (a) R0, (b) R30 and (c) R60.
+0
+2.5
+5
+7.5
+10
+12.5
+15
+17.5
+20
+0
+30
+60
+Energy absorption capacity W0 (N·m)
+Rubber contents
+(%)
+0
+200
+400
+600
+800
+1000
+0
+30
+60
+Fracture energy GF (J/m2)
+Rubber contents
+(%)
+Experimental
+Predicted by Eq. (8)
+Fig. 9. Energy absorption capacity and fracture energy with different rubber contents.
+6
+Z. Wang et al. / Construction and Building Materials 236 (2020) 117591
+
+primary failure mechanism of rubber particles is pull-out. This fail-
+ure mechanism results in the energy dissipation enhancement dis-
+cussed above.
+3. Inverse FEA
+Inverse fracture energy based FEA is developed and utilised in
+this section to obtain the tensile stress-strain curves of RuC by
+using the experimental results presented in Section 2.
+3.1. Assumptions
+The following assumptions are used, the ﬁrst three proposed by
+Uchida et al. [36]
+i. A single main crack exists through a fracture area (see
+Fig. 10). A rotational axis exists on the top of the fracture
+area. The distribution of the crack opening is linear.
+ii. The mean crack opening (wc) at the fracture area is repre-
+sented by half of the crack mouth opening displacement
+(CMOD) at the notch. This opening can be smeared over a
+crack band width to obtain strain.
+iii. The externally applied energy is equivalent to the energy
+needed for crack development.
+iv. The shape of the uniaxial tension softening curve of concrete
+is exponential, and the function proposed by Krätzig and
+Pölling [37] can be adopted (Eq. (9)):
+y ¼ e ecr
+ct xðx > 1Þ
+ð9Þ
+where x = eck/ecr, y = rt/fct; rt and eck are tensile stress and strain,
+respectively; ecr is cracking strain; the tensile strength (fct), and
+elastic modulus (Ec) can be calculated by Eqs. (3); ct adjusts the area
+under the stress-strain curve and can be determined by:
+ct ¼ gt
+f ct
+ 1
+2
+f ct
+Ec
+ð10Þ
+3.2. Deﬁnitions
+– Gch = wcb  gc is energy dissipated during crushing in a compres-
+sive test;
+– GF = wcb  gt is energy required for crack propagation in a ﬂexu-
+ral test;
+– Coefﬁcients gc and gt are equal to the areas under r  ep curves
+in uniaxial tension and compression, respectively, as shown in
+Fig. 11;
+– wcb is the crack band width of a heterogeneous material and
+represents the effective width of the strain-softening damage
+zone [38,39]. This length can be expressed as the ratio of the
+energy dissipated per unit area (N/mm2) to the energy dissi-
+pated per unit volume (N/mm3).
+Bazˇant and Oh [18] claimed that wcb is approximately 2.7–3
+times the maximum aggregate size da. The value of wcb is also
+dependent on concrete strength. By reducing the difference
+between the elastic modulus of the coarse aggregates and the mor-
+tar (e.g. in high strength concrete), the value of wcb/da decreases
+and a more homogeneous material is obtained. The opposite is
+expected for low strength concrete or when rubber aggregates
+are used as the material becomes more heterogeneous.
+Since direct tensile tests on rubberised concrete are neither easy
+to perform nor available, the crack band width cannot be calcu-
+lated via GF/gt. However, it can be estimated through the determi-
+nation of the rc  ech curve and crushing energy (Gch) of RuC with
+various rubber contents from carefully instrumented compressive
+tests according to [8]. For the RuC mix examined, compressive test
+results are available from this study and Raffoul et al. [6], and an
+analytical r  e model is given by Bompa et al. [5]. These results
+are used to determine wcb as shown in Table 3. It is interesting to
+note that the value of wcb is higher for RuC and increases with
+increasing rubber content, which conﬁrms the hypothesis that
+wcb increases with increasing heterogeneity.
+3.3. Steps for the inverse FEA
+1. Determination of total external work (W0) through the integra-
+tion of the load-deﬂection curve.
+2. Determination of fracture energy (GF) by Eq. (6). Table 2 shows
+the results.
+3. Determination of the ultimate cracking strain (eult) of concrete
+by dividing the ultimate mean crack mouth opening (wc,ult) by
+wcb. Results are shown in Table 3.
+CMOD = 2wc
+wc
+Fig. 10. Model of fracture area reproduced from Uchida et al. [33].
+Fig. 11. Deﬁnition of coefﬁcient gc and gt, after [8].
+Z. Wang et al. / Construction and Building Materials 236 (2020) 117591
+7
+
+eult ¼ wc;ult
+wcb
+ð11Þ
+4. Determination of gt by using the fracture energy (GF) obtained
+from bending tests. Results are shown in Table 3.
+gt ¼ GF
+wcb
+ð12Þ
+5. Determination of the shape factor ct in Eq. (10) by using gt.
+Results are shown in Fig. 12.
+4. Numerical modelling
+A ﬁnite element model has been developed using Abaqus/Stan-
+dard ﬁnite element software package [40]. The ‘‘Concrete Damaged
+Plasticity (CDP)” [41] developed by Lubliner et al. [8] and elabo-
+rated by Lee and Fenves [42] is adopted as it allows the use of a
+custom tensile stress-strain model for concrete in tension. CDP
+uses the modiﬁed Drucker-Prager criterion and the yield surface
+F in the deviatoric plane and assumes isotropic damage d. The
+details can be found in [43].
+The CDP model requires the following material functions and
+parameters:
+ stress-strain relations for uniaxial behaviour in compression
+and tension. The compressive stress-strain relations proposed
+by Bompa et al. [5] are adopted in this study, and the tensile
+stress-strain relations are obtained through inverse FEA (see
+Fig. 12).
+ The damage variables dc and dt represent the portion of nor-
+malised energy dissipation for damage in compression and ten-
+sion, respectively [8]. The values of dc and dt are determined
+using Eq. (13), and the curves of dt vs eck are shown in Fig. 13
+(zero means no damage and one means fully damaged).
+dc ¼
+Z ech
+0 rcdech=gc; dt ¼
+Z eck
+0 rtdeck=gt
+ð13Þ
+ The default values of 2/3, 0.1 and 1.16 are assigned to shape
+parameter Kc, eccentricity , and the biaxial to uniaxial com-
+pressive strength ratio fbo/fco, respectively [40]. A low viscosity
+parameter of 2  106 was used to avoid convergence problems.
+It should be noted that the non-associative plastic volume
+deformation of the concrete is controlled by the dilation angle
+w, while the lateral dilation of concrete increases with increas-
+ing w. As replacing the mineral aggregates with rubber particles
+can dramatically increase the lateral dilation of RuC by up to
+300% over the plain concrete [6], a relatively high dilation angle
+w = 40 was chosen for RuC [44,45].
+4.1. Mesh-sensitivity study
+The lower bound value of ﬁnite element size that can be attrib-
+uted to wcb is shown in Table 3, while an upper bound value of
+GFEc/ft
+2 is recommended by Bazˇant and Oh [38]. It can be seen that
+the lower bound values are signiﬁcantly larger when compared
+with the dimension of the specimens examined in this study, thus
+to obtain a detailed resolution within the strain-softening region,
+the element mesh size (he) needs to be smaller than the experi-
+mentally derived wcb. However, as discussed before, this would
+lead to mesh sensitivity issues as the dissipation of energy depends
+on the width of the element size used in the area where the dam-
+age is localised. To investigate the mesh-sensitivity problem, the
+0
+1
+2
+3
+4
+5
+0
+0.02
+0.04
+0.06
+0.08
+Tensile stress (MPa)
+Cracking strain (mm/mm)
+R0
+R30
+R60
+0
+1
+2
+3
+4
+5
+0
+0.005
+0.01
+γt = 0.0005
+γt = 0.0035
+γt = 0.0106
+Fig. 12. Tensile stress-strain curves for concrete with various rubber contents.
+0
+0.2
+0.4
+0.6
+0.8
+1
+0
+0.02
+0.04
+0.06
+0.08
+0.1
+dt
+Cracking strain (mm/mm)
+R0
+R30
+R60
+Fig. 13. Tensile damage variables (dt) vs cracking strain (eck).
+Table 3
+Crushing energy (Gch) and coefﬁcient (gt) of concrete with different rubber contents (qvr).
+qvr
+Gch
+gc
+eult
+gt
+wcb=da
+N/mm2
+N/mm3
+mm/mm
+N/mm3
+0
+9.1
+0.16
+0.006
+0.0027
+2.8
+30%
+8.7
+0.11
+0.055
+0.0065
+3.9
+60%
+10.5
+0.10
+0.075
+0.0088
+5.0
+Note: da is maximum aggregate size, which is 20 mm in this study.
+8
+Z. Wang et al. / Construction and Building Materials 236 (2020) 117591
+
+numerical response of a square plate (200  200 mm) subjected to
+plane stress conditions (Fig. 14) was examined. A monotonically
+increasing displacement in the positive y-direction was applied
+to the upper boundary (y = +10 mm), while a traction-free bound-
+ary condition was applied to the bottom edge. The numerical cal-
+culation was performed using four-node elements with four
+integration points (CPS4) and six different mesh sizes (see
+Fig. 14). The reduced integration option was not considered in this
+study as it is not reliable for problems involving crack formation
+[46]. The tensile stress-strain relation of R60 with a value of
+wcb = 100 mm was used.
+Fig. 15 illustrates the average resulting stress on the upper
+boundary vs average tensile strain, which clearly shows the sensi-
+tivity of the results to the selected mesh size. It can be noted that
+only the stress-strain curves obtained from the plate with the ele-
+ment sizes above 100 mm are similar to the curves derived from
+the input data (i.e. experimental test results). Fig. 16 shows that
+the total energy dissipation is mesh-dependent as a result of the
+localisation of deformations (see Fig. 16).
+4.2. Modiﬁed procedure
+Based on the numerical observation above, the element mesh
+size (he) used in the fracture zone should be carefully selected
+when deﬁning the tensile behaviour of the material. The crack
+band model can provide substantially the same results regardless
+of the width of the strain localisation zone when the energy dissi-
+pation per unit area of the crack band plane is correct [17]. The
+softening modulus of the post-peak softening curve can be
+adjusted by incorporating the ratio of element size (he) to the crack
+band width (wcb) so that the correct energy dissipation per unit
+crack surface can be obtained for all cases. In a uniaxial tensile
+experiment on concrete, the dissipated energy (GF) per unit crack
+surface can be written as
+GF ¼ wcb
+Z eult
+0
+eecr
+ct decr
+
+
+¼ he
+Z eult;he
+0
+e
+ ecr
+ct;he decr
+
+
+ð14Þ
+The shape factor ct,he for different mesh sizes can be obtained
+as:
+ct;he ¼ k gt
+f ct
+ 1
+2
+f ct
+Ec
+ð15Þ
+Hence, the corresponding ultimate cracking strain is:
+eult;he ¼ k eult
+ð16Þ
+where k = wcb/he. he is the element size. For a square element with a
+surface area Ae, the value of he is equal to
+ﬃﬃﬃﬃﬃ
+Ae
+p
+. A detailed discussion
+on element size can be found in [20,47].
+The modiﬁed tensile stress/damage variable vs cracking strain
+curves of R60 for different mesh sizes are shown in Fig. 17. The
+effectiveness of the modiﬁcation expressed by Eqs. (16) and (17)
+5 mm
+12.5 mm
+25 mm
+50 mm
+y
+x
+100 mm
+y = +10 mm
+200 mm
+Fig. 14. Plate subjected to uniaxial tension: boundary conditions and examined mesh geometries.
+0
+0.2
+0.4
+0.6
+0.8
+1
+0
+0.025
+0.05
+0.075
+0.1
+Tensile stress (MPa)
+Tensile strain (mm/mm)
+Input data-R60
+200 mm
+100  mm
+50    mm
+25    mm
+12.5 mm
+5      mm
+Fig. 15. Tensile response of a plate subjected to uniaxial tension and modelled
+using different mesh sizes.
+0
+0.04
+0.08
+0.12
+0.16
+0.2
+0
+2
+4
+6
+8
+10
+GF (N/mm2)
+Displacement (mm)
+5      mm
+12.5 mm
+25    mm
+50    mm
+100  mm
+200  mm
+Fig. 16. Total energy dissipation of a plate subjected to uniaxial tension and
+modelled using different mesh sizes.
+Z. Wang et al. / Construction and Building Materials 236 (2020) 117591
+9
+
+are illustrated in Fig. 18, which conﬁrms that similar total energy
+dissipation can be obtained with different mesh sizes.
+The proposed methodology enables the derivation of a more
+reliable tensile constitutive law for both conventional and rub-
+berised concrete solely based on values obtained from simple com-
+pression tests. Eqs. (3) and (7) or (8) can be used to calculate tensile
+strength (fct) and fracture energy (GF), respectively; while the crack
+band width (wcb) of rubberised concrete tested in this study was
+found to be directly proportional to the rubber content (qvr). A lin-
+ear relationship between wcb/da and qvr (wcb/da = 3.67qvr + 2.8) was
+found to capture reasonably well the crack band width variation
+for the concrete tested in this study, but further work should be
+carried out to validate these ﬁndings for different values of qvr or
+different particles size distributions. For any given mesh size (he),
+the complete tensile constitutive law can be described by Eqs.
+(14)–(16).
+4.3. Veriﬁcation of the material model
+4.3.1. Splitting tests
+Finite element modelling of cylinders subjected to splitting
+tests was performed to examine whether Eq. (3) can provide a
+reasonable prediction of the splitting tensile strength. As the dia-
+metric compression load was applied experimentally through a
+plywood strip (width: 10 mm and thickness: 3 mm), the same area
+was used to apply the load on the surface of the cylinder in the
+numerical
+analysis.
+Since
+maximum
+capacity
+is
+mesh-
+independent, an arbitrary mesh size of 15 mm was chosen [20].
+Fig. 19 shows the comparison between numerical and experimen-
+tal results, which conﬁrms the effectiveness of Eq. (3).
+4.3.2. TPB tests
+Two ﬁnite element meshes (5 mm and 50 mm in fracture area)
+were used to model the beams subjected to TPB, as illustrated in
+Fig. 20a. In the TPB tests, the load was applied via a steel roller.
+In the numerical study, the steel roller was modelled as a rigid
+body and a load was applied as a displacement at the relative ref-
+erence point (see Fig. 20b). A frictionless surface-to-surface inter-
+action was assigned to the steel roller-concrete interface.
+For each rubber content, the load-deﬂection curves were calcu-
+lated by using the general stress-strain relations suggested by
+Model Code 2010 [35] and by the proposed model with the adapt-
+able softening modulus (obtained from inverse FEA). The Model
+0
+0.2
+0.4
+0.6
+0.8
+1
+0
+0.2
+0.4
+0.6
+0.8
+Tensile stress (MPa)
+Cracking strain (mm/mm)
+5      mm
+12.5 mm
+25    mm
+50    mm
+0
+0.2
+0.4
+0.6
+0.8
+1
+0
+0.2
+0.4
+0.6
+0.8
+dt
+Cracking strain (mm/mm)
+5      mm
+12.5 mm
+25    mm
+50    mm
+Fig. 17. Modiﬁed tensile constitutive laws of R60 for different mesh sizes: (a) tensile stress-cracking strain curves; (b) damage variables-cracking strain curves.
+0
+0.2
+0.4
+0.6
+0.8
+1
+0
+0.05
+0.1
+Tensile stress (MPa)
+Cracking strain (mm/mm)
+input data-R60
+50    mm-Modified
+25    mm-Modified
+12.5 mm-Modified
+5      mm-Modified
+Fig. 18. Results of the modiﬁed tensile constitutive laws of R60 with respect to
+different mesh sizes under uniaxial tensile loading.
+0
+1
+2
+3
+4
+5
+0
+1
+2
+3
+4
+5
+Predicted fct,sp
+Experimental fct,sp
+R0
+R30
+R60
+Fig. 19. Comparison of the predicted splitting tensile strength with experimental
+results.
+10
+Z. Wang et al. / Construction and Building Materials 236 (2020) 117591
+
+Code stress-strain relation was derived from the bilinear stress-
+crack opening relation accounting for the selected mesh size (he)
+as follows:
+rt ¼ f ct 
+1:0  0:8  w
+w1
+	
+
+for w 6 w1
+rt ¼ f ct 
+0:25  0:05  w
+w1
+	
+
+for w1 < w 6 wc
+ð17Þ
+where w1 = GF/fct is the crack opening at rt = 0.2fct, w2 = 5GF/fct is the
+crack opening at rt = 0 and fct = 0.3(fco)2/3.
+Fig. 21 shows the converted tensile stress-strain curves for
+mesh sizes 50 mm and 5 mm, respectively. The accuracy of the
+two models was evaluated by the errors in the FE predictions for
+peak load and energy absorption capacity as well as the Mean
+Square Error (MSE) between the predicted load-deﬂection beha-
+viour over the entire loading range and the corresponding experi-
+mental results (average of three tests).
+MSE ¼
+PN
+i¼1 v
+ð Þanal
+i
+ v
+ð Þexp
+i
+h
+i2
+N
+ð18Þ
+where (v)i
+anal represents the predicted values of ﬂexural load (fctm,ﬂ),
+(v)i
+exp shows the corresponding experimental values and N is the
+total number of collection data.
+In Fig. 22, the average experimental load-deﬂection curves for
+all tested TPB specimens are compared with the numerical
+Fig. 20. Discretisation of a beam subjected to a three-point bending test.
+0
+1
+2
+3
+4
+5
+6
+0
+0.02
+0.04
+0.06
+0.08
+Tensile stress (MPa)
+Cracking strain (mm/mm)
+R0
+R30
+R60
+0
+1
+2
+3
+4
+5
+6
+0
+0.2
+0.4
+0.6
+0.8
+1
+Tensile stress (MPa)
+Cracking strain (mm/mm)
+R0
+R30
+R60
+(a)
+(b)
+Fig. 21. stress-strain curves according to Model Code 2010: (a) mesh size 50 mm; (b) mesh size 5 mm.
+0
+5
+10
+15
+20
+25
+30
+0
+0.1
+0.2
+0.3
+0.4
+0.5
+Load (kN)
+Mid-span Deflection (mm)
+Avg.R0
+Cal.R0 - 50 mm
+Cal.R0 - 5   mm
+Model code - 50 mm
+Model code - 5   mm
+0
+5
+10
+15
+20
+25
+30
+0
+1
+2
+3
+4
+5
+Load (kN)
+Mid-span Deflection (mm)
+Avg.R30
+Cal.R30 - 50 mm
+Cal.R30 - 5   mm
+Model code - 50 mm
+Model code - 5   mm
+0
+5
+10
+15
+20
+0
+0.5
+1
+1.5
+2
+0
+5
+10
+15
+20
+25
+30
+0
+2
+4
+6
+8
+Load (kN)
+Mid-span Deflection (mm)
+Avg. R60
+Cal.R60 - 50 mm
+Cal.R60 - 5   mm
+Model code - 50 mm
+Model code - 5   mm
+0
+5
+10
+15
+0
+1
+2
+Fig. 22. Comparison of numerically derived load-deﬂection curves with experimental data.
+Z. Wang et al. / Construction and Building Materials 236 (2020) 117591
+11
+
+predictions. It is shown that the numerical analyses performed
+using the inverse FEA stress-strain relations show a considerably
+better agreement with the experimental data for both rubberised
+and conventional concrete specimens. It can be seen that when
+the Model Code relations are adopted, higher ﬂexural strength is
+obtained, as well as larger fracture energy. This can be attributed
+to the fact that the bilinear stress-strain curve of Model Code yields
+a higher value for the coefﬁcient gt (see Fig. 23). Moreover, the
+load-deﬂection curve obtained from implementing the proposed
+relations with different mesh sizes can achieve nearly identical
+results, thus conﬁrming that proposed relations describe more
+accurately the evolution of gt at increasing levels of strain.
+For better comparison, the calculated errors are also sum-
+marised in Table 4. The results indicate that the stress-strain rela-
+tion recommended in Model Code led to, on average, 32% and 63%
+overestimation of the peak ﬂexural load and the energy absorption
+capacity, respectively. It should be mentioned that similar observa-
+tions were reported in [48,49]. However, by using the modiﬁed
+stress-strain relation with adaptable softening modulus, the aver-
+age errors reduced to 11% and 3% for energy absorption capacity
+and peak ﬂexural load, respectively. The MSE results also conﬁrm
+that the proposed adaptive stress-strain relation can provide an
+accurate simulation of the ﬂexural behaviour of concrete over the
+entire loading range.
+Fig. 24 shows the variation of the damage parameter (dt) vs
+CMOD for R0, R30 and R60. The value of dt for the reference con-
+crete R0 increases rapidly for relatively small CMOD values due
+to the relative low toughness and higher brittleness of regular con-
+crete. The dt of RuC (R30 and R60), however, increases at a slower
+rate once the crack develops, and the severity of damage evolution
+decreases with increasing rubber content. This can be attributed to
+the fact that the rubber particles can control crack development
+and lead to an increase in ultimate CMOD and overall ductility.
+5. Conclusions
+In this paper, the fracture energy of rubberised concrete has
+been investigated by conducting three-point bending tests. The
+primary parameter investigated was the total aggregate replace-
+ment volume by rubber particles. The experimental results show
+that replacing mineral aggregates with rubber particles leads to
+an apparent reduction in strength (compressive, tensile and ﬂexu-
+ral) and elastic modulus. However, a less severe reduction is
+observed in the tensile and ﬂexural properties. Replacing aggre-
+gates with rubber also enhanced the fracture energy and energy
+absorption capacity and led to a more ductile post-cracking beha-
+viour. The test results enabled the implementation of an energy-
+based inverse ﬁnite element analysis method to obtain the tensile
+stress-strain relation of rubberised concrete indirectly. The pro-
+posed constitutive laws were implemented in the concrete damage
+plasticity model in ABAQUS to analyse the tensile strain-softening
+behaviour numerically. The inﬂuence of mesh size on load-
+displacement and energy dissipation was examined and an adap-
+tive method was proposed to eliminate mesh dependency by intro-
+ducing element size and fracture energy as parameters in the
+tensile constitutive model. It is shown that the proposed method-
+ology can provide signiﬁcantly more accurate predictions com-
+pared to the implementation of the strain-softening relationship
+proposed in Model Code 2010 for regular concrete in terms of peak
+load, energy absorption capacity and load-deﬂection response over
+the entire loading range.
+0
+1
+2
+3
+4
+0
+0.02
+0.04
+0.06
+0.08
+Tensile stress (MPa)
+Cracking strain (mm/mm)
+R0   - inverse FEA
+R30 - inverse FEA
+R60 - inverse FEA
+R0   - Model code 2010
+R30 - Model code 2010
+R60 - Model code 2010
+0
+1
+2
+0
+0.01
+0.02
+Fig. 23. Comparison of stress-strain curves for Model Code 2010 and modiﬁed
+model obtained based on inverse FEA.
+Table 4
+Errors in predicting load-deﬂection response, peak load and energy absorption.
+he (mm)
+qvr (%)
+Error in peak load
+Error in energy absorption
+MSE of load-deﬂection response
+MC 2010
+Inverse FEA
+MC 2010
+Inverse FEA
+MC 2010
+Inverse FEA
+5
+R0
+26%
+2.6%
+70%
+10%
+78%
+1.7%
+R30
+25%
+5.6%
+58%
+17%
+21%
+2.4%
+R60
+49%
+0.2%
+50%
+16%
+9%
+0.8%
+50
+R0
+39%
+2.6%
+67%
+13%
+95%
+1.3%
+R30
+19%
+5.8%
+83%
+3%
+18%
+1.1%
+R60
+35%
+0.3%
+49%
+8%
+4%
+0.3%
+0
+0.2
+0.4
+0.6
+0.8
+1
+0
+1
+2
+3
+4
+dt
+CMOD (mm)
+R0
+R30
+R60
+Full 
+damaged
+No 
+damaged
+0
+0.2
+0.4
+0.6
+0.8
+1
+0
+0.2
+0.4
+Fig. 24. Evolution of the damage variable, dt.
+12
+Z. Wang et al. / Construction and Building Materials 236 (2020) 117591
+
+Declaration of Competing Interest
+The authors declare that they have no known competing ﬁnan-
+cial interests or personal relationships that could have appeared
+to inﬂuence the work reported in this paper.
+Acknowledgements
+The study contributes to the FP7 EU-funded project ‘‘Anagen-
+nisi” [FP7/2007–2013] under grant agreement n 603722. The ﬁrst
+author also appreciates the support from China Scholarship Coun-
+cil (CSC) under Grant CSC n 201608060059.
+References
+[1] N.N. Eldin, A.B. Senouci, Rubber-tire particles as concrete aggregate, J. Mater.
+Civ. Eng. 5 (4) (1993) 478–496.
+[2] I.B. Topcu, The properties of rubberized concretes, Cem. Concr. Res. 25 (2)
+(1995) 304–310.
+[3] R. Siddique, T.R. Naik, Properties of concrete containing scrap-tire rubber–an
+overview, Waste Manage. 24 (6) (2004) 563–569.
+[4] Z.K. Khatib, F.M. Bayomy, Rubberized Portland cement concrete, J. Mater. Civ.
+Eng. 11 (3) (1999) 206–213.
+[5] D. Bompa, A. Elghazouli, B. Xu, P. Stafford, A. Ruiz-Teran, Experimental
+assessment and constitutive modelling of rubberised concrete materials,
+Constr. Build. Mater. 137 (2017) 246–260.
+[6] S. Raffoul, R. Garcia, D. Escolano-Margarit, M. Guadagnini, I. Hajirasouliha, K.
+Pilakoutas, Behaviour of unconﬁned and FRP-conﬁned rubberised concrete in
+axial compression, Constr. Build. Mater. 147 (2017) 388–397.
+[7] K. Pilakoutas, S. Raffoul, P. Papastergiou, R. Garcia, M. Guadagnini, I.
+Hajirasouliha, Innovative reuse of all tyre components in concrete: the
+Anagennisi project, in: Proc. of the International Conference on Sustainable
+Structural Concrete, 2015, pp. 15–18.
+[8] J. Lubliner, J. Oliver, S. Oller, E. Onate, A plastic-damage model for concrete, Int.
+J. Solids Struct. 25 (3) (1989) 299–326.
+[9] A. Payne, J. Scott, The Properties, Testing and Design of Rubber as an
+Engineering Material, MacLaren & Sons, LTD, London, UK and Interscience
+Publishers, Inc, 1960.
+[10] S. Carmona, A. Aguado, New model for the indirect determination of the tensile
+stress–strain curve of concrete by means of the Brazilian test, Mater. Struct. 45
+(10) (2012) 1473–1485.
+[11] C. Ozyildirim, N.J. Carino, Concrete Strength Testing, Signiﬁcance of Tests and
+Properties of Concrete and Concrete-Making Materials, ASTM International,
+2006.
+[12] A. Turatsinze, M. Garros, On the modulus of elasticity and strain capacity of
+self-compacting concrete incorporating rubber aggregates, Resour. Conserv.
+Recycl. 52 (10) (2008) 1209–1215.
+[13] M.M. Reda Taha, A. El-Dieb, M. Abd El-Wahab, M. Abdel-Hameed, Mechanical,
+fracture, and microstructural investigations of rubber concrete, J. Mater. Civil
+Eng. 20 (10) (2008) 640–649.
+[14] W. Brekelmans, J. De Vree, Reduction of mesh sensitivity in continuum damage
+mechanics, Acta Mech. 110 (1–4) (1995) 49–56.
+[15] L. Kachanov, Introduction to Continuum Damage Mechanics, Springer Science
+& Business Media, 2013.
+[16] J.-L. Chaboche, Continuum damage mechanics: Part II—Damage growth, crack
+initiation, and crack growth, J. Appl. Mech. 55 (1) (1988) 65–72.
+[17] J.G. Rots, P. Nauta, G. Kuster, J. Blaauwendraad, Smeared crack approach and
+fracture localization in concrete, (1985).
+[18] Z.P. Bazˇant, B.H. Oh, Crack band theory for fracture of concrete, Mater.
+Construc. 16 (3) (1983) 155–177.
+[19] J. Cˇervenka, Z.P. Bazˇant, M. Wierer, Equivalent localization element for crack
+band approach to mesh-sensitivity in microplane model, Int. J. Numer. Meth.
+Eng. 62 (5) (2005) 700–726.
+[20] J.G. Rots, Computational modeling of concrete fracture, 1988.
+[21] Z.P. Bazˇant, Concrete fracture models: testing and practice, Eng. Fract. Mech.
+69 (2) (2002) 165–205.
+[22] S. Raffoul, R. Garcia, K. Pilakoutas, M. Guadagnini, N.F. Medina, Optimisation of
+rubberised concrete with high rubber content: an experimental investigation,
+Constr. Build. Mater. 124 (2016) 391–404.
+[23] N.F. Medina, R. Garcia, I. Hajirasouliha, K. Pilakoutas, M. Guadagnini, S. Raffoul,
+Composites with recycled rubber aggregates: properties and opportunities in
+construction, Constr. Build. Mater. 188 (2018) 884–897.
+[24] CEN (European, Committee for Standardization) EN 450-1:2012 Fly Ash for
+Concrete – Part 1: Deﬁnition, Speciﬁcations and Conformity Criteria CEN,
+Brussels (Belgium), 2012.
+[25] ELKEM, Elkem Microsilica Grade 940 for Concrete, https://www.elkem.com/
+silicon-materials/high-performance-concrete/microsilica-concrete-grades/
+microsilica-grade-940-construction/.
+[26] ASTM International. C39/C39M – 15 Standard Test Method for Compressive
+Strength of Cylindrical Concrete Specimens, West Conshohocken (USA), 2015.
+[27] ASTM International. C496/C496M – 11 Standard Test Method for Splitting
+Tensile Strength of Cylindrical Concrete Specimens, West Conshohocken
+(USA), 2015.
+[28] C. Rocco, G.V. Guinea, J. Planas, M. Elices, Size effect and boundary conditions
+in the Brazilian test: experimental veriﬁcation, Mater. Struct. 32 (3) (1999)
+210.
+[29] T. Tang, S.P. Shah, C. Ouyang, Fracture mechanics and size effect of concrete in
+tension, J. Struct. Eng. 118 (11) (1992) 3169–3185.
+[30] Institution BS. Test Method for Metallic Fibre Concrete: Measuring the Flexural
+Tensile Strength (limit of Proportionality (LOP), Residual): BSI, 2008.
+[31] N. Banthia, J.-F. Trottier, Test methods for ﬂexural toughness characterization
+of ﬁber reinforced concrete: some concerns and a proposition, ACI Mater. J. 92
+(1995). 48-48.
+[32] CEN. Test Method for Metallic Fiber Concrete—Measuring the Flexural Tensile
+Strength (Limit of Proportionality (LOP), Residual), 2012.
+[33] B. Barr, M. Lee, E.J. de Place Hansen, D. Dupont, E. Erdem, S. Schaerlaekens, B.
+Schnütgen, H. Stang, L. Vandewalle, Round-robin analysis of the RILEM TC 162-
+TDF beam-bending test: part 1—test method evaluation, Mater. Struct. 36 (9)
+(2003) 609–620.
+[34] R.D. Recommendation, Determination of the fracture energy of mortar and
+concrete by means of three-point bend tests on notched beams, Mater. Struct.
+18 (106) (1985) 285–290.
+[35] Model Code, ﬁb Model Code for Concrete Structures. KGaA, Weinheim,
+Germany: Wiley-VCH Verlag GmbH & Co., 2010. http://doi.org/10.1002/
+9783433604090.
+[36] Y. Uchida, K. Rokugo, W. Koyanagi, Determination of tension softening curves
+of concrete by means of bending tests, ECF8, Torino 1990.
+[37] W.B. Krätzig, R. Pölling, An elasto-plastic damage model for reinforced
+concrete with minimum number of material parameters, Comput. Struct. 82
+(15–16) (2004) 1201–1215.
+[38] Z.P. Bazˇant, G. Pijaudier-Cabot, Measurement of characteristic length of
+nonlocal continuum, J. Eng. Mech. 115 (4) (1989) 755–767.
+[39] J. Oliver, A consistent characteristic length for smeared cracking models, Int. J.
+Numer. Meth. Eng. 28 (2) (1989) 461–474.
+[40] D. Systèmes, Abaqus Analysis User’s Manual, Simulia Corp., Providence, RI,
+USA, 2007.
+[41] Abaqus, Abaqus User Manual (Version 6.14), 2014.
+[42] J. Lee, G.L. Fenves, Plastic-damage model for cyclic loading of concrete
+structures, J. Eng. Mech. 124 (8) (1998) 892–900.
+[43] D. Systèmes, Abaqus 6.14–Analysis Users’s Guide: Volume IV: Elements,
+Providence, Rhode Island, 2013.
+[44] O. Youssf, M.A. ElGawady, J.E. Mills, X. Ma, An experimental investigation of
+crumb rubber concrete conﬁned by ﬁbre reinforced polymer tubes, Constr.
+Build. Mater. 53 (2014) 522–532.
+[45] A. Duarte, B. Silva, N. Silvestre, J. de Brito, E. Júlio, Mechanical characterization
+of rubberized concrete using an image-processing/XFEM coupled procedure,
+Composites B: Eng. 78 (2015) 214–226.
+[46] R. De Borst, P. Nauta, Non-orthogonal cracks in a smeared ﬁnite element
+model, Eng. Comput. 2 (1) (1985) 35–46.
+[47] L. Chen, R. de Borst, Cohesive fracture analysis using Powell-Sabin B-splines,
+Int. J. Numer. Anal. Meth. Geomech. 43 (2) (2019) 625–640.
+[48] H. Hu, P. Papastergiou, H. Angelakopoulos, M. Guadagnini, K. Pilakoutas,
+Mechanical properties of SFRC using blended manufactured and recycled tyre
+steel ﬁbres, Constr. Build. Mater. 163 (2018) 376–389.
+[49] H. Tlemat, K. Pilakoutas, K. Neocleous, Modelling of SFRC using inverse ﬁnite
+element analysis, Mater. Struct. 39 (2) (2006) 221–233.
+Z. Wang et al. / Construction and Building Materials 236 (2020) 117591
+13

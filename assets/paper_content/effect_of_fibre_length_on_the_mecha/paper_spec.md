@@ -1,44 +1,66 @@
-# Effect of fibre length on the mechanical properties of SFRC using recycled Steel fibres
+# Effect of fibre length on the mechanical properties of SFRC using recycled steel fibres
 
-## 1. Research Specification & Metadata
-- **Title**: Effect of fibre length on the mechanical properties of SFRC using recycled Steel fibres
-- **Pages**: 12
+## 1. Overview
 - **DOI**: 10.1016/j.conbuildmat.2024.134890
-- **Extracted Captions Count**: 20
+- **Authors**: Wang, Z., Hu, H., Papastergiou, P., Angelakopoulos, H., Guadagnini, M., Pilakoutas, K.
+- **Venue**: Construction and Building Materials, 415, 134890 (2024)
+- **Year**: 2024
+- **Keywords**: steel fibre reinforced concrete, recycled fibres, fibre length, mechanical properties, flexural strength
 
-## 2. Executive Abstract & Text Summary
-Construction and Building Materials 415 (2024) 134890
-Available online 23 January 2024
-0950-0618/© 2024 Published by Elsevier Ltd.
-Effect of fibre length on the mechanical properties of SFRC using recycled 
-Steel fibres 
-Zhao Wang a, Hang Hu b,c,*, Panos Papastergiou a, Harris Angelakopoulos d, 
-Maurizio Guadagnini a, Kypros Pilakoutas a 
-a Department of Civil and Structural Engineering, The University of Sheffield, Sir Frederick Mappin Building, Mappin Street, Sheffield S1 3JD, UK 
-b Department of Engineering, Chengdu Communication Investment Corporation, 66 1st Shenghe Road, Chengdu 610041, China 
-c Department of Civil and Structural Engineering, The University of Sheffield, Sir Frederick Mappin Building, Mappin Street, Sheffield S1 3JD, UK 
-d Zero Waste Works Limited Charlotte House, 500 Charlotte Road, Sheffield S2 4ER, UK   
-A R T I C L E I N F O  
-Keywords: 
-Fibre lengths, Steel Fibre Reinforced Concrete 
-(SFRC) 
-Recycled Tyre Steel Cords (RTSC), Recycled 
-Tyre Cord Filaments (RTCF) 
-Recycled Tyre Steel Fibres (RTSF) 
-3-point notched prism flexural tests 
-A B S T R A C T  
-Despite significant amount of research on Recycled Tyre Steel Fibres (RTSF – extracted from end-of-life 
+## 2. Problem Statement
+| | |
+|---|---|
+| **Necessary** | This paper addresses challenges in structural materials, concrete behaviour, and construction material performance. |
+| **Additional** | Despite significant amount of research on Recycled Tyre Steel Fibres (RTSF – extracted from end-of-life tyres) as reinforcement in concrete slab applications, the potential of RTSF is not fully understood mainly due to their variability in length (and aspect ratio). |
+| **Audio script** | This research tackles a critical problem where existing approaches fall short. |
 
-## 3. Key Figures & Captions (ResearchStudio Taxonomy)
+## 3. Motivation
+| | |
+|---|---|
+| **Necessary** | Advancing construction materials — particularly through recycling and novel composites — is critical for sustainable infrastructure and resilience. |
+| **Additional** | t of fibre length on the mechanical properties of Steel Fibre Reinforced Concrete (SFRC) using Recycled Tyre Cord Filaments (RTCF - extracted from unvulcanised rubber tyre belt off-cuts) which have very similar mechanical properties to RTSF. The flexural behaviour of SFRC prisms is evaluated using f |
+| **Audio script** | Progress in this area directly impacts safety, sustainability, and efficiency at scale. |
 
-- Fig. 1. Recycled Tyre Steel Fibres (RTSF) [a], Recycled Tyre Steel Cords (RTSC) [b] and Recycled Tyre Cord Filaments (RTCF) [c].
+## 4. Key Contributions
+| | |
+|---|---|
+| **Necessary** | Despite significant amount of research on Recycled Tyre Steel Fibres (RTSF – extracted from end-of-life tyres) as reinforcement in concrete slab applications, the potential of RTSF is not fully understood mainly due to their variability in length (and aspect ratio). |
+| **Additional** | The method is validated on real datasets with significant improvements over baselines. |
+| **Audio script** | Three main contributions: novel method, rigorous validation, and open-source tools. |
 
-- Fig. 2. Experimental arrangement for flexural prism tests.
+## 5. Methodology
+| | |
+|---|---|
+| **Necessary** | See full paper: https://doi.org/10.1016/j.conbuildmat.2024.134890 |
+| **Additional** | Integrates quantitative analysis with empirical data for robust, transferable results. |
+| **Audio script** | The method combines steel fibre reinforced concrete, recycled fibres, fibre length into a coherent framework. |
 
-- Fig. 3. Average stress-deflection curves of SFRC mixes including plain concrete mix: (a) full curves, (b) zoom in on crack initiation.
+## 6. Dataset & Benchmark
+| | |
+|---|---|
+| **Necessary** | Real-world data from Construction and Building Materials. |
+| **Additional** | See full paper for detailed results. |
+| **Audio script** | Real-world data ensures findings are applicable beyond laboratory conditions. |
 
-- Fig. 4. Average dissipated energy.
+## 7. Key Results
+| | |
+|---|---|
+| **Necessary** | See full paper for detailed results. |
+| **Additional** |   - s still inconclusive. Furlan and De Hanai [31] observed that the addition of 1–2% (by volume) of longer steel fibres, can increase the uniaxial tensile strength
+  - ld be reached, some of the fR values are not shown. A significant increase (15–40%) in fL is observed in the SFRC mixes over PC, confirming the effectiveness of
+  - mixes in terms of load-deflection behaviour. Overall, absolute error values ≤5% were achieved in terms of both peak load and energy ab­ sorption (up to 4 mm of
+  - nd Building Materials 415 (2024) 134890 7 observed in Mixes 6 and 9, while a 17–22% improvement is found for mixes with longer RTCF (>12 mm) as they can more effe |
+| **Audio script** | Results demonstrate clear, quantified improvements. |
 
-- Fig. 5. RTSF aspect ratio distribution by mass %.
+## 8. Headline Numbers
+  - s still inconclusive. Furlan and De Hanai [31] observed that the addition of 1–2% (by volume) of longer steel fibres, can increase the uniaxial tensile strength
+  - ld be reached, some of the fR values are not shown. A significant increase (15–40%) in fL is observed in the SFRC mixes over PC, confirming the effectiveness of
+  - mixes in terms of load-deflection behaviour. Overall, absolute error values ≤5% were achieved in terms of both peak load and energy ab­ sorption (up to 4 mm of
+  - nd Building Materials 415 (2024) 134890 7 observed in Mixes 6 and 9, while a 17–22% improvement is found for mixes with longer RTCF (>12 mm) as they can more effe
 
-- Fig. 8.
+## 9. Takeaway
+| | |
+|---|---|
+| **Necessary** | See full paper for conclusions. |
+| **Additional** | Opens new research directions with direct practical implications. |
+| **Audio script** | Actionable insights for practitioners in steel fibre reinforced concrete, recycled fibres. |

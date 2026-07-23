@@ -1,0 +1,1308 @@
+T E C H N I C A L P A P E R
+Postcracking tensile behavior of blended steel fiber-reinforced
+concrete
+Hang Hu
+| Zhao Wang | Fabio P. Figueiredo | Panos Papastergiou | Maurizio Guadagnini |
+Kypros Pilakoutas
+Department of Civil and Structural Engineering,
+The University of Sheffield, Sheffield, UK
+Correspondence
+Hang Hu, Department of Civil and Structural
+Engineering, The University of Sheffield, Sir
+Frederick Mappin Building, Mappin Street,
+Sheffield S1 3JD, UK.
+Email: hhu6@sheffield.ac.uk
+Funding information
+The China Scholarship Council, Grant/Award
+Number: 201508060086; European Union Seventh
+Framework Programme, Grant/Award Number:
+FP7/2007-2013
+Fiber blends have the potential to improve the mechanical and sustainability cre-
+dentials of steel fiber-reinforced concrete (SFRC), but at which ratios these can
+work is not known a priori. This paper investigates the uniaxial tensile stress–strain
+(σ −ε) relationship of blended SFRC using manufactured steel fibers on their
+own, or blended with sorted steel fibers recycled from end-of-life tires (recycled
+tire steel fiber [RTSF]), at total fiber dosages of 30, 35, and 45 kg/m3. The accu-
+racy of two σ −ε relations proposed by RILEM TC 162-TDF and Model Code
+2010 is assessed using the experimental results from concrete prisms. By using
+nonlinear finite element (FE) analysis, it is found that the RILEM approach can
+lead to significant overestimation (up to 72%) of peak flexural load and energy
+absorption capacity (up to 39%), while the Model Code 2010 can provide a rather
+accurate prediction of the energy absorption capacity and some overestimation (less
+than 34%) of the peak flexural load. Inverse FE analysis is used to determine indi-
+rectly the uniaxial tensile σ −ε relations of the examined SFRC mixes, and a sim-
+plified trilinear relation for SFRC is proposed. It is concluded that the tensile
+strength of SFRC with RTSF at a low total fiber dosage is only marginally
+improved by fiber addition, and the postcracking tensile strengths at different
+strains can be determined directly from residual flexural tensile strengths (fRi) of
+prisms.
+KEYWORDS
+blended steel fibers, inverse analysis, postcracking behavior, recycled tire steel
+fibers (RTSFs), SFRC, tensile stress–strain relationship
+1
+|
+INTRODUCTION
+The mechanical properties of steel fibers recycled from end-
+of-life tires have been studied since 1999 at The University
+of Sheffield.1–8 Recycled tire steel fibers (RTSFs, see
+Figure 1), as randomly distributed reinforcement in concrete
+is now a product used in industrial flooring. It has been
+shown that RTSF can improve the flexural strength and
+toughness of concrete, in particular, at the initial stage of
+cracking. More significantly, for sustainability, Life Cycle
+Assessment (LCA) studies9,10 show that the production of
+RTSF only requires up to 5% of the energy input compared
+with that of manufactured steel fibers (MSFs). However, the
+current design guidelines for steel fiber-reinforced concrete
+(SFRC) still do not consider the benefits of using neither
+fiber blends nor RTSF only, and this becomes a main barrier
+to the wider use of RTSF in construction applications.
+For a low dosage (<0.5% by volume) of steel fibers
+added in concrete, many studies8,11–15 have suggested that
+fiber addition has an insignificant effect on the compressive
+Discussion on this paper must be submitted within two months of the print
+publication. The discussion will then be published in print, along with the
+authors' closure, if any, approximately nine months after the print publication.
+Received: 9 April 2018
+Revised: 27 July 2018
+Accepted: 23 October 2018
+DOI: 10.1002/suco.201800100
+Structural Concrete. 2019;20:707–719.
+wileyonlinelibrary.com/journal/suco
+© 2018 fib. International Federation for Structural Concrete
+707
+
+strength
+of
+concrete.
+Existing
+design
+guidelines
+(e.g., RILEM TC 162-TDF16 and Model Code 201017)
+mainly focus on the tensile properties of SFRC, as in most
+applications (e.g., pavements and tunnel linings), the mate-
+rial is subjected to bending. Because tensile tests on SFRC
+are difficult to execute and interpret,17–21 flexural tests on
+prisms or slabs are universally adopted to provide the nomi-
+nal tensile properties of SFRC. Based on fracture parame-
+ters determined using three-point notched prism tests,
+RILEM TC 162-TDF16 proposes a trilinear stress–strain
+(σ −ε) relationship for SFRC, while Model Code 201017
+adopts a stress-crack opening (σ −w) law in uniaxial ten-
+sion. The σ −w relationships can be converted to σ −ε by
+introducing a structural characteristic length lcs. Neverthe-
+less, these design guidelines (i.e., RILEM TC 162-TDF and
+Model Code 2010) rely on test results from SFRC using
+single-type fibers (i.e., MSF), and it is not certain if they
+are also suitable for blended SFRC mixes. Compared with
+typical MSF, RTSFs have a wide range of fiber length and
+aspect ratio distributions, as well as higher strength
+(≥2,000 MPa).5,22–26 This paper will examine the suitabil-
+ity of these two constitutive models for fiber blends with
+RTSF. Comparisons are made between predicted load-
+deflection curves using FE analysis versus the experimental
+results. The research reported in this paper was undertaken
+as part of the FP7 EU-funded project “Anagennisi”,27
+which aimed to develop uses for all tire components in con-
+crete. This numerical work is based on a previous experi-
+mental investigation on the fiber blends using RTSF,8 and
+it is found that the mechanical properties of blended mixes
+using RTSF vary depending on dosages but are comparable
+with (or even better than) those of MSF-only mixes at the
+same fiber dosage.
+The following Section 2 summarizes the characteris-
+tics of the tensile constitutive models for SFRC, as pro-
+posed by RILEM and Model Code 2010. Section 3
+briefly reports the mechanical properties of the examined
+10 SFRC mixes. Section 4 describes details of the FE
+modeling adopted and uses the two constitutive models to
+predict the load-deflection characteristics, which are com-
+pared against the experimental results. The tensile σ −ε
+relations for the examined SFRC mixes are then deter-
+mined using inverse FE analysis, and a simplified trilinear
+σ −ε relation for SFRC using RTSF (at low fiber dos-
+age) is proposed. Key research findings are summarized
+in Section 5.
+2
+|
+STRESS–STRAIN MODELS PROPOSED
+BY RILEM TC 162-TDF AND MODEL
+CODE 2010
+2.1
+|
+Concepts of flexural tensile strength (fctm, fl) and
+residual flexural tensile strength (fR)
+EN 14651:200528 follows a testing methodology first
+adopted by RILEM16 to characterize the flexural tensile
+behavior of SFRC prisms. It uses the average load-Crack
+Mouth Opening Displacement (CMOD) (or -deflection)
+curve from three-point notched prism tests (Figure 2) to
+extract several fracture parameters of SFRC mixes.
+The flexural tensile strength fctm, fl is determined as the
+flexural stress corresponding to the maximum load Fctm, fl
+up to a CMOD of 0.05 mm. To characterize the postcracking
+behavior of SFRC, four residual flexural tensile strength
+parameters (fR1, fR2, fR3, and fR4) are obtained from the post-
+cracking part of the curve at 0.5, 1.5, 2.5, and 3.5 mm of
+CMOD, respectively. The fctm, fl and fR values are calculated
+using the expressions below,28
+fctm,fl ¼ 3Fctm,fll
+2bh2
+sp
+,fRi ¼ 3FRil
+2bh2
+sp
+,
+ð1Þ
+where Fctm, fl (N) is the load corresponding to fctm, fl, and FRi
+(N) is the load at CMODs of 0.5, 1.5, 2.5, and 3.5 mm
+(i = 1, 2, 3, 4), respectively. b is the width of the specimen,
+l is the span length, and hsp is the effective depth of the
+notched section.
+FIGURE 1
+Recycled tire steel fibers (RTSFs)8
+FIGURE 2
+Definition of fctm, fl and fR values according to EN
+14651:200528
+708
+HU ET AL.
+ 17517648, 2019, 2, Downloaded from https://onlinelibrary.wiley.com/doi/10.1002/suco.201800100 by <Shibboleth>-member@leeds.ac.uk, Wiley Online Library on [02/01/2024]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+2.2
+|
+The σ −ε relationship proposed by RILEM TC
+162-TDF
+Figure 3 represents the trilinear σ −ε relationship of SFRC
+in tension proposed by RILEM TC 162-TDF.16 The key
+points in the diagram are defined by the expressions given
+below16:
+σ1 ¼ 0:7fctm,fl 1:6−d
+ð
+Þ,ε1 ¼ σ1
+Ec
+,
+σ2 ¼ 0:45fR1kh,ε2 ¼ ε1 + 0:1‰,
+ð2Þ
+σ3 ¼ 0:37fR4kh,ε3 ¼ 25‰,
+where d (in m) is the effective specimen depth, Ec
+(in MPa) is the average modulus of elasticity of SFRC, and
+kh is a size factor to accommodate the size effect of various
+SFRC structural elements. For the notched prisms, kh=1 is
+suggested.
+2.3
+|
+The σ −ε relationship proposed by Model
+Code 2010
+Model Code 2010 provides both the σ −w and σ −ε rela-
+tionship, and the latter being derived by adopting a suitable
+structural characteristic length lcs. Because strain is used for
+design purposes, in this study, the models are compared
+using the σ −ε relationship.
+Model Code 2010 allows for both softening and harden-
+ing σ −ε behavior. For softening behavior (see Figure 4a),
+the same σ −ε relationship proposed for plain concrete in
+uniaxial tension is used up to an intersection (σc) with the
+postcracking tensile response of SFRC. For hardening
+behavior (Figure 4b,c), the σ −ε relationship is defined
+using four branches, with an enhanced tensile strength of
+SFRC. The key points on the σ −ε relationships can be
+determined by the following equations17:
+σA ¼ 0:9ft,εA ¼ σA
+Ec
+,σB ¼ ft,εB ¼ 0:00015,
+σD ¼ σSLS ¼ 0:45fR1,εSLS ¼ CMOD1
+lcs
+,σA0 ¼ 0:9σSLS,εA0 ¼ σA0
+Ec
+,
+ð3Þ
+σE ¼ σULS ¼ σSLS−
+Wu
+CMOD3
+σSLS −0:5fR3 + 0:2fR1
+ð
+Þ,
+εULS ¼ Wu
+lcs
+¼ min εFu,2:5
+lcs
+
+
+lcs ¼ min srm,y
+ð
+Þ,
+CMOD1 ¼ 0:5 mm,
+FIGURE 3
+Trilinear σ −ε diagram for steel fiber–reinforced concrete
+(SFRC), according to RILEM TC 162-TDF16
+FIGURE 4
+Tensile σ −ε relations adopted by Model Code 201017 for:
+(a) softening behavior, (b), and (c) hardening behavior
+HU ET AL.
+709
+ 17517648, 2019, 2, Downloaded from https://onlinelibrary.wiley.com/doi/10.1002/suco.201800100 by <Shibboleth>-member@leeds.ac.uk, Wiley Online Library on [02/01/2024]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+where ft is the tensile strength of plain concrete, srm is
+the mean distance between cracks, y = d (effective specimen
+depth) is assumed for sections without traditional reinforce-
+ment under bending, wu ≤2.5 mm is the maximum crack
+opening accepted in structural design and for variable strain
+distribution along the cross section εFu = 0.02.
+3
+|
+EXPERIMENTAL PROGRAM
+3.1
+|
+Materials and compositions
+Ten SFRC mixes at total fiber dosages of 30 kg/m3 (vol-
+ume fraction Vf = 0.38%), 35 kg/m3 (Vf = 0.45 % ), and
+45 kg/m3 (Vf = 0.57%) were examined. In these mixes, two
+types of undulated MSF (Figure 5a,b) were used on their
+own or blended with cleaned, classified, and sorted RTSF
+(Figure 1). RTSF had a nominal diameter of 0.22 mm and a
+nominal tensile strength of around 2,500 MPa.29 Using a
+specially developed optical system,29 a length distribution
+analysis (Figure 5c) shows that roughly 68% by mass of the
+RTSF had lengths in the range of 15–40 mm. For the two
+types of MSF used, MSF1 (diameter: 1.0 mm, length:
+60 mm) has high tensile strength (nominal tensile strength
+of 1,450 MPa), while MSF2 (diameter: 0.8 mm, length:
+55 mm) has nominal strength of 1,050 MPa. Both fiber
+types are widely used in different applications by the floor-
+ing industry. Concrete reinforced with 45 kg/m3 of MSF1
+is commonly used in the applications of suspended slabs on
+piles, while SFRC using MSF2 at 30 kg/m3 is usually used
+in the applications of slabs on grade. The concrete mix
+design comprised the following: 150 kg/m3 of cement,
+1,097 kg/m3 of coarse aggregates (4–20 mm), 804 kg/m3
+of fine aggregates (0–4 mm), 150 kg/m3 of Ground Granu-
+lated Blast Furnace Slag (GGBS), and 2.25 L/m3 of plasti-
+cizer. The water cement ratio was 0.55. More details of this
+experimental work can be found elsewhere.8
+Owing to the large volume of concrete needed, the
+ready-mix concrete was cast in five separate batches. Six
+plain concrete cubes and six prisms were manufactured for
+each batch. For each SFRC mix, either six or 12 prisms and
+six cubes were cast. Table 1 shows the details of the exam-
+ined SFRC mixes, as well as the results of the compressive
+cube tests and flexural prism tests. Each mix is given a code
+based on the fiber type and dosage used. For example,
+2M20R10 refers to a blended mix with 20 kg/m3 of MSF2
+and 10 kg/m3 of RTSF.
+3.2
+|
+Compressive cube strength
+The compressive strength fcu of the examined SFRC mixes
+ranged from 41.8 to 50.3 MPa, while the strength of the cor-
+respondent plain concrete was between 37.6 and 47.5 MPa.
+The variability found is considered typical for ready mixed
+concrete. Overall, the compressive strength of concrete was
+not affected dramatically either positively or negatively by
+the addition of steel fibers.
+3.3
+|
+Results of SFRC prism tests
+The flexural tests on prisms (150 × 150 × 550 mm) were
+performed according to EN 14651:2005.28 A notch at mid-
+span of each specimen was sawn 1 day before testing, and a
+clip gauge was used to measure the CMOD values. A yoke
+with two linear variable differential transformers was used to
+measure central deflections. The average flexural modulus
+of elasticity (Efm) for each SFRC mix was determined by uti-
+lizing the results up to 40% of the peak load of the load-
+deflection curves. Table 1 reports the mean values of fcu,
+Efm, fctm, fl, and fR for the examined SFRC mixes. The aver-
+aged (displacement based) load-deflection curves for the
+examined
+SFRC
+mixes
+are
+shown
+and
+discussed
+in
+Section 4.2.
+Although four residual flexural tensile strength parame-
+ters (fR1, fR2, fR3, and fR4) are determined according to EN
+14651:2005, strong correlations (Figure 6) between fR1 and
+fR2, fR3 and fR4 values for the tested SFRC prisms, were
+found.8 This can lead to simpler design calculation.
+FIGURE 5
+(a) manufactured steel fiber (MSF)1, (b) MSF2, and (c) recycled tire steel fiber (RTSF) length distribution8
+710
+HU ET AL.
+ 17517648, 2019, 2, Downloaded from https://onlinelibrary.wiley.com/doi/10.1002/suco.201800100 by <Shibboleth>-member@leeds.ac.uk, Wiley Online Library on [02/01/2024]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+4
+|
+NUMERICAL RESEARCH
+4.1
+|
+FE modeling
+In this study, the FE analysis package, ABAQUS (Dassault
+Systemes Simulia Corp., Providence, Rhode Island, USA),
+was used to perform nonlinear analysis, as it allows the user
+to define a custom σ −ε behavior for concrete in tension.2
+A two-dimensional plane stress solid element (CPS4) with
+four nodes having two degrees of freedom was chosen. A
+standard mesh sensitivity analysis was carried out consider-
+ing the influence of element size on the peak load and post-
+cracking behavior of SFRC prisms. Figure 7 shows the
+variable finite element mesh adopted in the study, which
+was found to significantly increase computational efficiency
+while maintaining accuracy.
+Three
+material
+models,
+concrete
+smeared
+cracking
+(CSC), brittle cracking (BC), and concrete damaged plastic-
+ity (CDP) are available in ABAQUS. Although Mobasher30
+suggests that all those three material models can be used for
+members dominated by tensile cracking, serious conver-
+gence issues were reported by several researchers31,32 when
+SFRC prisms were modeled using the CSC model. Further-
+more, the CDP model was preferred to the BC model
+because the latter is only available for explicit dynamic or
+quasi-dynamic problems. Hence, the CDP model, which has
+been successfully applied in various numerical studies for
+SFRC,30–34 was adopted in this study.
+4.1.1
+|
+Uniaxial compressive and tensile behavior
+In the CDP model, it is assumed that the main failure mecha-
+nisms of concrete are compressive crushing and tensile
+cracking, which relate to different degradation of the elastic
+stiffness in compression and tension, respectively. Under
+cyclic loading, a single degradation variable (dc) is used for
+the isotropic (scalar) stiffness reduction in compression
+while dt is applied for tension. In addition, two equivalent
+plastic strains, ~εpl
+c and ~εpl
+t , are adopted in the CDP model to
+characterize the compressive and tensile behavior of cracked
+concrete, respectively. Figure 835 shows the stress–strain
+relationship under (monotonic and cyclic) uniaxial compres-
+sive and tensile loading.
+As reported in several studies,2,30,33 for SFRC prisms
+(with steel fibers up to dosages of 140 kg/m3) under flexural
+loading, the compressive strain remains in the linear elastic
+region, and the dominant failure mode is the tensile cracking
+of concrete. To simplify the analysis, the bilinear stress–
+strain relationship (see Figure 9) for concrete in compression
+was used, but the compressive stress in concrete is not
+expected to exceed the first linear portion of the bilinear
+curve. Where fcc (in MPa) represents the SFRC mean com-
+pressive cylinder strength and Ecm = Efm (see Table 1) is
+assumed.
+TABLE 1
+Experimental results of the examined SFRC mixes
+Total fiber
+dosage (kg/m3)
+Mix code
+Average fcu (MPa)
+SFRC/plain
+Efm (MPa)
+fctm, fl
+(MPa)
+fR1 (MPa)
+fR2 (MPa)
+fR3 (MPa)
+fR4 (MPa)
+30
+2M30
+43.9/42.0
+30,500
+3.8
+3.6
+3.4
+2.9
+2.4
+2M20R10
+42.6/46.1
+31,500
+3.8
+3.7
+3.6
+3.1
+2.5
+2M15R15
+44.3/47.5
+31,200
+3.3
+3.4
+3.2
+2.8
+2.3
+2M10R20
+44.6/47.5
+31,600
+3.3
+3.1
+2.7
+2.4
+2.1
+R30
+41.8/37.6
+29,200
+3.5
+3.2
+2.7
+2.2
+1.8
+35
+1M35
+42.9/42.0
+30,100
+3.7
+3.8
+4.0
+3.7
+3.3
+45
+1M45
+41.9/42.0
+29,400
+3.4
+4.2
+4.4
+4.1
+3.8
+1M35R10
+42.8/46.1
+29,700
+3.6
+4.2
+4.5
+4.2
+3.9
+1M22.5R22.5
+50.3/47.5
+34,600
+4.2
+4.8
+4.7
+4.1
+3.4
+1M10R35
+44.5/39.9
+32,000
+4.1
+4.6
+4.3
+3.6
+2.9
+SFRC: steel fiber-reinforced concrete.
+FIGURE 6
+Relations between fR1 and fR2, and between fR3 and fR4
+8
+FIGURE 7
+Mesh adopted for the finite element model
+HU ET AL.
+711
+ 17517648, 2019, 2, Downloaded from https://onlinelibrary.wiley.com/doi/10.1002/suco.201800100 by <Shibboleth>-member@leeds.ac.uk, Wiley Online Library on [02/01/2024]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+4.1.2
+|
+Yield condition and flow rule
+The CDP model adopts a yield condition that was first
+developed by Lubliner et al.36 and then modified by
+Lee and Fenves.37 The ratio of biaxial to uniaxial com-
+pressive strength (σb0
+σc0) and the ratio of the second stress
+invariant on the tensile meridian to that on the compressive
+meridian (Kc) are adopted in the CDP model to characterize
+the failure surface of concrete. For plain concrete, σb0
+σc0 and Kc
+are usually assumed to be 1.15 and 2/3 respectively. In
+accordance with previous work5,30,31,34 on numerical model-
+ing of SFRC, the Kc value suggested for plain concrete was
+also adopted in this study for SFRC. However, the ratio σb0
+σc0
+slightly increases for SFRC reinforced with low dosages of
+steel fibers (0.5% by volume)38 and as a result, a ratio of 1.2
+was chosen in this study. Drucker–Prager hyperbolic func-
+tion is used in the CDP model for the determination
+of the flow potential.35 The dilation angle ψ and flow poten-
+tial eccentricity ϵ are parameters used to define the flow rule.
+A dilation angle ψ =31
+ was adopted in this study as sug-
+gested in literature33 for SFRC reinforced with RTSF or
+MSF at a low total fiber dosage. An insignificant influence
+of steel fibers on this parameter was reported in the litera-
+ture.39
+The
+eccentricity,
+ϵ=0.1,
+proposed
+by
+some
+researchers30,31,33,34 for SFRC, was also adopted in this
+research. A small value of 0.00025 for the viscosity parame-
+ter was chosen since a small value was reported to provide
+better convergence for cracked concrete.34 As the addition of
+steel fibers was found not to affect significantly the Poisson's
+ratio ν for compressive strengths lower than 85 MPa,38
+a value of 0.2 was used in this study. Table 2 summarizes
+the values of the parameters adopted in the FE modeling
+for SFRC.32
+4.2
+|
+Evaluation of the σ −ε relations proposed by
+RILEM TC 162-TDF and MODEL CODE 2010
+By using the FE model described above in conjunction with
+the tensile σ −ε relations proposed by RILEM and Model
+Code 2010 (see Figure 10), the respective load-deflection
+curves were derived for each of the tested SFRC mixes. The
+load-deflection
+curves
+derived
+using
+σ −ε
+relations
+FIGURE 8
+Uniaxial behavior of concrete adopted in concrete damaged plasticity (CDP) model: (a) in compression, (b) in tension35
+FIGURE 9
+Compressive stress–strain relationship for concrete employed
+in this study
+TABLE 2
+Parameters adopted in the FE modeling
+Dilation angle ψ (
+)
+Eccentricity ϵ
+σb0
+σc0
+Kc
+Viscosity parameter
+Poisson's ratio ν
+31
+0.1
+1.2
+0.667
+0.0002
+0.2
+FE: finite element.
+712
+HU ET AL.
+ 17517648, 2019, 2, Downloaded from https://onlinelibrary.wiley.com/doi/10.1002/suco.201800100 by <Shibboleth>-member@leeds.ac.uk, Wiley Online Library on [02/01/2024]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+obtained by inverse analysis are also shown in the figure, as
+discussed later.
+In Figure 10, the load-deflection curves are shown up to
+a deflection of 2.0 mm, which is the value that corresponds
+to the ultimate limit strains (0.02 and 0.025)2 proposed in
+the two design models. Table 3 shows the relative errors in
+the FE predictions for peak load and energy absorption
+(up to 2 mm).
+It is clear that the two design models cannot capture
+well the flexural behavior of SFRC. The RILEM model
+shows significant overestimations (up to 72%) of the peak
+flexural load, and similar observations were reported in
+literature.2,3,12,32 The overestimation of the flexural load
+continues up to deflections of about 1.5–2.0 mm, leading
+to significant overestimations of the energy absorption
+capacity up to 39% for 30 kg/m3 mixes and up to 21% for
+mixes at 45 kg/m3. As the values of σ1 = 0.7fctm, fl(1.6 −
+d) and σ2 = 0.45fR1kh (see Figure 3) strongly influence
+the peak load of the predicted load-deflection curves, it is
+clear
+that
+the
+use
+of
+smaller
+values
+for
+the
+two
+FIGURE 10
+Comparisons between experimental and predicted load-deflection curves for the examined steel fiber–reinforced concrete (SFRC) mixes
+HU ET AL.
+713
+ 17517648, 2019, 2, Downloaded from https://onlinelibrary.wiley.com/doi/10.1002/suco.201800100 by <Shibboleth>-member@leeds.ac.uk, Wiley Online Library on [02/01/2024]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+parameters may lead to more accurate predictions of the
+peak load.
+The Model Code approach provides a rather accurate
+prediction of the energy absorption capacity but does
+overestimate the peak flexural load up to 34%. For soften-
+ing or slight hardening behavior, Model Code 2010
+assumes the tensile strength of SFRC (see Figure 4a,b) to
+be the same as for plain concrete and, if that is correct,
+then the overestimation in peak load by the Model Code
+method is primarily due to the inaccurate estimation of
+σD = σSLS = 0.45fR1.
+As errors in both models significantly reduce at dis-
+placements of 1.5–2.0 mm, it means that a residual flexural
+tensile strength (i.e., fR) approach can still be used to pre-
+dict the overall behavior of SFRC after cracking. Despite
+their inaccuracies, the RILEM relations are more conve-
+nient for practical purposes because less key points are
+required to determine the σ −ε curve. In particular, the
+determination of the intersection point in the Model Code
+relations is not straightforward, as the trilinear relationship
+for the behavior of plain concrete and the relation for the
+postcracking behavior of each SFRC mix need to be deter-
+mined separately.
+It is clear that there is a need for a simplified σ −ε
+model, which can provide more accurate predictions of the
+flexural behavior of SFRC.
+4.3
+|
+Inverse FE analysis
+Inverse analysis, or back calculation, is a useful tool extensively
+used to determine best-fitting stress–strain (or stress-crack) rela-
+tions for SFRC from flexural tests.2,12,24,33,40–45 Kooiman
+et al.,43 Barros et al.,12 and Neocleous et al.3 have suggested
+that the flexural behavior of SFRC prisms with up to 140 kg/
+m3 of MSF can be simulated well using a trilinear relation.
+Three strain values, ε0
+1 ¼ σ0
+1
+Ec, ε0
+2 ¼ ε0
+1 + 0:002, and ε0
+3 ¼ 0:025,
+also used by Tlemat et al.,2 are adopted in this study. ε0
+1
+defines the elastic portion of the load-deflection curve and
+the tensile contribution of the concrete. ε0
+2 is associated with
+the peak load and the behavior of SFRC with only micro-
+cracks (SLS),3 while ε0
+3 is used to define the tail of the curve
+and represent the behavior of SFRC at large cracks (ultimate
+limit state [ULS]). Corresponding σ0
+i values for each mix are
+determined during the analysis until small absolute error
+values (≤5%) are achieved for the peak load and energy
+absorption up to 2 mm.
+The results of the inverse analysis for all SFRC mixes
+are shown in Table 3. The small errors confirm that the tri-
+linear σ −ε relation is capable of providing accurate simu-
+lations of the flexural behavior of SFRC, in particular
+blended SFRC using RTSF at a low total fiber dosage.
+Table 4 presents the σ0
+i values defining the trilinear σ −ε
+relations obtained from inverse analysis, and the graphical
+representation of the relations is shown in Figure 11. The
+single-type fiber-reinforced mixes are shown in solid lines in
+the figure, while the blended mixes are indicated in dashed
+lines.
+TABLE 3
+Errors in predicting peak load and energy absorption
+Total fiber dosage
+SFRC mix code
+Error in peak load
+Error in energy absorption
+(kg/m3)
+RILEM (%)
+MC 2010 (%)
+Inverse
+analysis (%)
+RILEM (%)
+MC 2010 (%)
+Inverse
+analysis (%)
+30
+2M30
+49
+21
+−1
+22
+−5
+2
+2M20R10
+53
+23
+−1
+19
+−5
+−2
+2M15R15
+69
+34
+3
+28
+0
+−5
+2M10R20
+72
+30
+4
+39
+1
+−1
+R30
+44
+18
+−4
+29
+−10
+−5
+35 or 45
+1M35
+61
+21
+2
+21
+1
+−3
+1M45
+29
+15
+−2
+13
+0
+−5
+1M35R10
+54
+17
+1
+15
+−2
+−4
+1M22.5R22.5
+48
+16
+0
+14
+−7
+−2
+1M10R35
+39
+16
+1
+11
+−9
+1
+Average error
+52
+21
+0
+21
+−4
+−1
+SFRC: steel fiber-reinforced concrete.
+TABLE 4
+σ0
+i values defining the trilinear σ −ε relation, obtained from
+inverse analysis
+Total fiber
+dosage (kg/m3)
+SFRC mix code
+Stress values (MPa)
+σ0
+1
+σ0
+2
+σ0
+3
+30
+2M30
+1.95
+0.95
+0.90
+2M20R10
+1.90
+0.95
+0.90
+2M15R15
+1.90
+0.90
+0.60
+2M10R20
+1.90
+0.80
+0.55
+R30
+1.90
+0.90
+0.50
+35 or 45
+1M35
+1.95
+0.95
+1.10
+1M45
+2.06
+1.15
+1.20
+1M35R10
+2.06
+1.15
+1.30
+1M22.5R22.5
+2.22
+1.35
+1.35
+1M10R35
+2.22
+1.35
+1.20
+SFRC: steel fiber-reinforced concrete.
+714
+HU ET AL.
+ 17517648, 2019, 2, Downloaded from https://onlinelibrary.wiley.com/doi/10.1002/suco.201800100 by <Shibboleth>-member@leeds.ac.uk, Wiley Online Library on [02/01/2024]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+To investigate the correlations between the actual tensile
+properties ðσ0
+i values) of SFRC and the nominal tensile prop-
+erties (fctm, fl and fRi values) derived from prism tests, several
+ratios, σ0
+1
+fctm,fl, σ0
+2
+fR1, σ0
+2
+fR2,σ0
+3
+fR3, and σ0
+3
+fR4, were computed
+by dividing the σ0
+i values by the corresponding fracture
+parameters fj. Figure 12 shows the effect of the RTSF dosage
+on those ratios. It was found that σ0
+i values overall correlate
+well with their corresponding fctm, fl or fRi values. Although
+there is some variability, the strength ratios (σ0
+i
+fj) are not
+affected much by the RTSF dosage contained in the mixes.
+As a result, a simplified trilinear σ −ε relationship for
+SFRC (using blended MSF and RTSF) can be developed
+from flexural tests.
+4.4
+|
+Proposed tensile stress–strain (σ
+0 −ε
+0)
+relationship of SFRC
+A simplified trilinear σ
+0 −ε
+0 relation is proposed for the ten-
+sile behavior of SFRC (including blended SFRC), as given
+below:
+σ0
+1 ¼ 0:55fctm,fl COV ¼ 6%
+ð
+Þ,ε0
+1 ¼ σ0
+1
+Ec
+,
+σ0
+2 ¼ 0:27kh fR1 COV ¼ 6%
+ð
+Þ,ε0
+2 ¼ ε0
+1 + 0:002,
+ð4Þ
+σ0
+3 ¼ 0:29kh fR3 COV ¼ 13%
+ð
+Þ,ε0
+3 ¼ ε0
+u ¼ 0:025:
+Because this model was developed based on the EN
+14651:2005 prisms with a standard geometry, the size effect
+FIGURE 11
+σ −ε diagrams for the examined steel fiber–reinforced
+concrete (SFRC) mixes (a) at 30 kg/m3 (b) 45 kg/m3
+FIGURE 12
+Relationship between RTSF dosage contained in each steel
+fiber–reinforced concrete (SFRC) mix and different strength ratios
+HU ET AL.
+715
+ 17517648, 2019, 2, Downloaded from https://onlinelibrary.wiley.com/doi/10.1002/suco.201800100 by <Shibboleth>-member@leeds.ac.uk, Wiley Online Library on [02/01/2024]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+was not addressed in this study, but size-dependent safety
+factors (e.g., kh adopted in the RILEM approach) can be eas-
+ily included. It should be noted that this model applies only
+to the SFRC mixes used in this study.
+4.4.1
+|
+Determined tensile strength, σ0
+1
+The determined tensile strength (σ0
+1) of SFRC with RTSF at
+a low total fiber dosage was around 55% of fctm, fl. Overall,
+the tensile strength of plain concrete (1.90 MPa, determined
+from inverse analysis) was only marginally increased by the
+fiber addition. A small strength enhancement was seen for
+the 30 kg/m3 mixes, while an enhancement of up to 17%
+was observed for the 45 kg/m3 mixes. The two blended
+mixes 1M22.5R22.5 and 1M10R35 exhibited greater tensile
+strength
+(2.22 MPa)
+than
+mixes
+1M35,
+1M45,
+and
+1M35R10 reinforced with higher dosages of MSF. This
+points to a synergetic performance of the two fiber types.
+The better distribution of short and thin RTSF can assist in
+arresting microcracks, while long and stiff MSF can be more
+effective in controlling larger cracks.46,47
+4.4.2
+|
+Postcracking tensile strength, σ0
+2 and σ0
+3
+Postcracking tensile strengths σ0
+2 and σ0
+3 were found to be
+about one-third of the corresponding residual flexural tensile
+strength values (fR). These values (0.27 for σ0
+2 and 0.29 for
+σ0
+3) are in good agreement with those suggested by Barros
+et al.,12 who proposed coefficients of 0.36 and 0.27 for
+SFRC using hooked ends MSF up to 45 kg/m3 at a small
+(microcracking stage) and large (macrocracking stage) ten-
+sile strain, respectively. Mobasher et al.41 also pointed out
+that a correction factor of 0.31 can be used to correlate the
+RILEM equivalent flexural tensile strength feq, 3 and the ten-
+sile strength of cracked SFRC. In Model Code 2010, a coef-
+ficient of 1/3 is adopted in a simplified rigid-plastic model
+by scaling fR3 to the tensile strength of cracked SFRC at the
+ultimate limit state, fFtu (Figure 13). Since fR values are
+determined using linear elastic principles (Figure 14a), it is
+clear that if used directly they will lead to a significant over-
+estimation of the tensile strength of cracked SFRC which
+behaves in a nonlinear manner.
+As shown in Figure 6, fR1 and fR2, as well as fR3 and fR4
+of the tested SFRC prisms are strongly correlated. For the
+proposed σ
+0 −ε
+0 relationship, it is confirmed that the use of
+fR1 and fR3 is sufficient to accurately represent the behavior
+of SFRC at small and large cracks, respectively.
+The postcracking σ −ε relations adopted in RILEM and
+Model Code 2010 are based on the assumption that concrete
+remains linear in compression and perfectly plastic in ten-
+sion with a predetermined neutral axis depth (Figure 14b,c).
+Although these scalar values used in the two approaches
+could be used for design at specific limit states, they do not
+represent the true σ −ε characteristics of SFRC, which are
+better captured by the proposed equations. Given the inher-
+ent variability of SFRC in tension, the proposed equations
+could be further simplified by adopting a unified factor for
+σ0
+2 and σ0
+3 (e.g., 0.27).
+The larger COV value for σ0
+3 (see Equation (4)) com-
+pared with the values for σ0
+1 and σ0
+2 (although all these COV
+values are generally small) indicates that at larger cracks the
+FIGURE 13
+Simplified postcracking stress-crack opening law adopted by
+Model Code 201017
+FIGURE 14
+Stress distribution to determine: (a) fRi, (b) σ2, and (c) σ3 according to RILEM TC 162 TDF16
+716
+HU ET AL.
+ 17517648, 2019, 2, Downloaded from https://onlinelibrary.wiley.com/doi/10.1002/suco.201800100 by <Shibboleth>-member@leeds.ac.uk, Wiley Online Library on [02/01/2024]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+behavior is more variable, as it is dominated by fiber distri-
+bution and orientation, as well as fiber pull out behavior.
+4.4.3
+|
+Ultimate limit strain ε0
+u
+Although the ultimate limit strain ε0
+u ¼ ε0
+3 ¼ 0:025 (as also
+adopted in the RILEM model) corresponds only to a mid-
+span deflection of 2.0 mm and CMOD of about 2.5 mm, this
+strain value (0.025) is considered sufficient for structural
+design of SFRC at the ULS. Since ε0
+u is about 10 times larger
+than ε0
+2 that corresponds to the peak load of the prisms, for a
+statically determinate element with a single hinge (crack), ε0
+u
+will lead to a curvature ductility of at least 5. This curvature
+ductility should be adequate for moment redistribution pur-
+poses, when plastic analysis is used.48
+5
+|
+CONCLUSIONS
+Based on the test results of 10 SFRC mixes using MSF and
+RTSF at varying dosages, the accuracy of the uniaxial tensile
+σ −ε relations proposed by RILEM and Model Code 2010
+has been evaluated and a new uniaxial tensile σ
+0 −ε
+0 relation
+for SFRC has been proposed. The main research findings are
+as follows:
+• The RILEM approach can lead to significant overestima-
+tion (up to 72%) of the peak flexural load and energy
+absorption capacity (up to 39%), while the Model Code
+2010 can provide a rather accurate prediction of the
+energy absorption capacity and some overestimation
+(less than 35%) of the peak flexural load.
+• The simplified trilinear stress–strain (σ
+0 −ε
+0) relation-
+ships for the tested SFRC mixes were proposed.
+• The tensile strength of SFRC with RTSF at a low total
+fiber dosage is only marginally improved by fiber addi-
+tion, and the postcracking tensile strengths at different
+strains can be determined directly from residual flexural
+tensile strengths (fRi) of prisms.
+ACKNOWLEDGMENTS
+This research was funded by the European Union Seventh
+Framework Programme [FP7/2007-2013] under grant agree-
+ment no 603722 (www.anagennisi.org). The first author's
+PhD studies are sponsored by The China Scholarship Coun-
+cil (CSC number: 201508060086). The authors also thank
+Twincon Ltd. for material supply and in-kind contributions.
+ORCID
+Hang Hu
+https://orcid.org/0000-0003-1786-9485
+REFERENCES
+1. Tlemat H, Pilakoutas K, Neocleous K. Stress-strain characteristic of SFRC
+using recycled fibres. Mater Struct. 2006;39:365–377. https://doi.org/10.
+1617/s11527-005-9009-4.
+2. Tlemat H, Pilakoutas K, Neocleous K. Modelling of SFRC using inverse
+finite element analysis. Mater Struct. 2006;39:221–233. https://doi.org/10.
+1617/s11527-005-9010-y.
+3. Neocleous K, Tlemat H, Pilakoutas K. Design issues for concrete reinforced
+with steel fibers, including fibers recovered from used tires. J Mater Civ
+Eng. 2006;18:677–685. https://doi.org/10.1061/(ASCE)0899-1561(2006)18:
+5(677).
+4. Graeff AG, Pilakoutas K, Neocleous K, Peres MVNN. Fatigue resistance
+and cracking mechanism of concrete pavements reinforced with recycled
+steel fibres recovered from post-consumer tyres. Eng Struct. 2012;45:
+385–395. https://doi.org/10.1016/j.engstruct.2012.06.030.
+5. Jafarifar N, Pilakoutas K, Bennett T. Moisture transport and drying shrink-
+age properties of steel-fibre-reinforced-concrete. Construct Build Mater.
+2014;73:41–50. https://doi.org/10.1016/j.conbuildmat.2014.09.039.
+6. Younis KH, Pilakoutas K. Strength prediction model and methods for
+improving recycled aggregate concrete. Construct Build Mater. 2013;49:
+688–701. https://doi.org/10.1016/j.conbuildmat.2013.09.003.
+7. Younis KH, Pilakoutas K. Assessment of post-restrained shrinkage mechani-
+cal properties of concrete. ACI Mater J. 2016;113:267–276. https://doi.
+org/10.14359/51688699.
+8. Hu H, Papastergiou P, Angelakopoulos H, Guadagnini M, Pilakoutas K.
+Mechanical properties of SFRC using blended manufactured and recycled
+tyre steel fibres. Construct Build Mater. 2018;163:376–389. https://doi.
+org/10.1016/j.conbuildmat.2017.12.116.
+9. Angelakopoulos H, Waldron P. Tyre wire in concrete leading to environ-
+mental sustainability. CIP Eco-innovation project, Twincletoes project—
+Layman's report. Sheffield, UK: Twincon Ltd; 2015.
+10. Neocleous K, Maxineasa SG, Dumitrescu L, Themistocleous K, Taranu N,
+Hadjimitsis D. D1.6 Preliminary LCA. Anaegennisi Project, Anagennisi:
+Innovative use of all tyre components in concrete; 2014.
+11. Zollo RF. Fiber-reinforced concrete: An overview after 30 years of develop-
+ment. Cem Concr Compos. 1997;19:107–122. https://doi.org/10.1016/
+S0958-9465(96)00046-7.
+12. Barros JAO, Cunha VMCF, Ribeiro AF, Antunes JAB. Post-cracking behav-
+iour of steel fibre reinforced concrete. Mater Struct. 2004;38:47–56. https://
+doi.org/10.1617/14058.
+13. Neves RD, Fernandes de Almeida JCO. Compressive behaviour of steel
+fibre reinforced concrete. Struct Concr. 2005;6:1–8. https://doi.org/10.1680/
+stco.6.1.1.62458.
+14. Martinelli E, Caggiano A, Xargay H. An experimental study on the post-
+cracking behaviour of hybrid industrial/recycled steel fibre-reinforced con-
+crete. Construct Build Mater. 2015;94:290–298. https://doi.org/10.1016/j.
+conbuildmat.2015.07.007.
+15. Bjegovic D, Baricevic A, Lakusic S, Damjanovic D, Duvnjak I. Positive
+interaction of industrial and recycled steel fibres in fibre reinforced concrete.
+J Civ Eng Manag. 2013;19:S50–S60. https://doi.org/10.3846/13923730.
+2013.802710.
+16. Rilem Tc 162-Tdf. σ-ε-design method. Mater Struct. 2003;36:560–567.
+https://doi.org/10.1007/BF02480834.
+17. du Béton FI. Fib Model Code for concrete structures. Berlin, Germany: Wil-
+helm Ernst & Sohn, 2010;p. 2013.
+18. Tlemat H. Steel fibres from waste tyres to concrete, testing, modelling and
+design. Sheffield, UK: The University of Sheffield, 2004.
+19. Graeff AG. Long-term performance of recycled steel fibre reinforced con-
+crete for pavement applications. Sheffield, UK: The University of Sheffield,
+2011.
+20. ACI 544.1R-96 (Reapproved 2002), State-of-the-art report on fiber rein-
+forced concrete. Michigan, US: American Concrete Institute; 2002.
+21. Caratelli A, Meda A, Rinaldi Z. Design according to MC2010 of a fibre-
+reinforced concrete tunnel in Monte Lirio, Panama. Struct Concr. 2012;13:
+166–173. https://doi.org/10.1002/suco.201100034.
+22. Aiello MA, Leuzzi F, Centonze G, Maffezzoli A. Use of steel fibres recov-
+ered from waste tyres as reinforcement in concrete: Pull-out behaviour, com-
+pressive and flexural strength. Waste Manag. 2009;29:1960–1970. https://
+doi.org/10.1016/j.wasman.2008.12.002.
+HU ET AL.
+717
+ 17517648, 2019, 2, Downloaded from https://onlinelibrary.wiley.com/doi/10.1002/suco.201800100 by <Shibboleth>-member@leeds.ac.uk, Wiley Online Library on [02/01/2024]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+23. Centonze G, Leone M, Aiello MA. Steel fibers from waste tires as
+reinforcement in concrete: A mechanical characterization. Construct
+Build Mater. 2012;36:46–57. https://doi.org/10.1016/j.conbuildmat.2012.
+04.088.
+24. Zamanzadeh Z, Lourenço L, Barros J. Recycled steel fibre reinforced con-
+crete failing in bending and in shear. Construct Build Mater. 2015;85:
+195–207. https://doi.org/10.1016/j.conbuildmat.2015.03.070.
+25. Angelakopoulos H, Papastergiou P, Pilakoutas K. Fibrous roller-compacted
+concrete with recycled materials - feasibility study. Mag Concr Res. 2015;
+67:801–811. https://doi.org/10.1680/macr.14.00246.
+26. Groli G, Caldentey AP, Soto AG. Cracking performance of SCC reinforced
+with recycled fibres—An experimental study. Struct Concr. 2014;15:
+136–153. https://doi.org/10.1002/suco.201300008.
+27. Anagennisi Project, Anagennisi: Innovative use of all tyre components in
+concrete [cited 2017 July 20]. Available from: http://anagennisi.org/
+wordpress/; 2014
+28. EN 14651, Test method for metallic fibred concrete—Measuring the flexural
+tensile strength (limit of proportionality [LOP], residual); 2005.
+29. Angelakopoulos H. Reused post-consumer tyre steel fibres in roller com-
+pacted concrete. Sheffield, UK: The University of Sheffield, 2016.
+30. Mobasher B. Mechanics of fiber and textile reinforced cement. Boca Raton,
+FL: CRC Press, 2012.
+31. Oikonomou-Mpegetis S. Behaviour and design of steel fibre reinforced con-
+crete slabs. London, UK: Imperial College London, 2012.
+32. Labib W. An experimental study and finite element analysis of punching
+shear failure in steel fibre-reinforced concrete ground-suspended floor slabs.
+Liverpool, UK: Liverpool John Moores University, 2008.
+33. Jafarifar N, Pilakoutas K, Angelakopoulos H, Bennett T. Post-cracking ten-
+sile behaviour of steel-fibre-reinforced roller-compacted-concrete for FE
+modelling and design purposes. Mater Construct. 2017;67:122. https://doi.
+org/10.3989/mc.2017.06716.
+34. An C, Castello X, Duan M, Toledo Filho RD, Estefen SF. Ultimate strength
+behaviour of sandwich pipes filled with steel fiber reinforced concrete.
+Ocean
+Eng.
+2012;55:125–135.
+https://doi.org/10.1016/j.oceaneng.2012.
+07.033.
+35. Abaqus V. 6.14 Documentation. Dassault Systemes Simulia Corporation;
+2014.
+36. Lubliner J, Oliver J, Oller S, Oñate E. A plastic-damage model for concrete.
+Int J Solids Struct. 1989;25:299–326. https://doi.org/10.1016/0020-7683(89)
+90050-4.
+37. Lee J, Fenves GL. Plastic-damage model for cyclic loading of concrete
+structures. J Eng Mech. 1998;124:892–900. https://doi.org/10.1061/(ASCE)
+0733-9399(1998)124:8(892).
+38. Swaddiwudhipong S, Seow PEC. Modelling of steel fiber-reinforced con-
+crete under multi-axial loads. Cem Concr Res. 2006;36:1354–1361. https://
+doi.org/10.1016/j.cemconres.2006.03.008.
+39. Lu X, Hsu C-TT. Behavior of high strength concrete with and without steel
+fiber reinforcement in triaxial compression. Cem Concr Res. 2006;36:
+1679–1685. https://doi.org/10.1016/j.cemconres.2006.05.021.
+40. Bakhshi M, Barsby C, Mobasher B. Comparative evaluation of early age
+toughness parameters in fiber reinforced concrete. Mater Struct Constr.
+2014;47:853–872. https://doi.org/10.1617/s11527-013-0098-1.
+41. Mobasher B, Bakhshi M, Barsby C. Backcalculation of residual tensile
+strength of regular and high performance fiber reinforced concrete from flex-
+ural tests. Construct Build Mater. 2014;70:243–253. https://doi.org/10.1016/
+j.conbuildmat.2014.07.037.
+42. Soranakom C, Mobasher B. Flexural design of fiber-reinforced concrete.
+ACI Mater J. 2009;106:461–469.
+43. Kooiman AG, van der Veen C, Walraven JC. Modelling the post-cracking
+behaviour of steel fibre reinforced concrete for structural design purposes.
+HERON. 2000;45(4):275–307.
+44. Tiberti G, Minelli F, Plizzari G. Reinforcement optimization of fiber rein-
+forced concrete linings for conventional tunnels. Compos Part B. 2014;58:
+199–207. https://doi.org/10.1016/j.compositesb.2013.10.012.
+45. ACI 544.8R-16, Report on indirect method to obtain stress-strain response
+of fiber-reinforced concrete (FRC). American Concrete Institute, Michigan,
+US; 2016.
+46. Younis KH. Restrained Shrinkage Behaviour of Concrete with Recycled
+Materials. Sheffield, UK: The University of Sheffield, 2014.
+47. Younis KH, Pilakoutas K, Guadagnini M, Angelakopoulos H. Feasibility of
+using recycled steel fibres to enhance the behaviour of recycled aggregate
+concrete. Fibre reinforced concrete: from design to structural applications,
+FRC 2014 Joint ACI-fib International Workshop. Montreal: Canada; 2014,
+p. 598–608.
+48. EN 1992-1-1, Eurocode 2: Design of concrete structure—Part 1–1:
+General rules and rules for buildings European Committee for Standardi-
+zation; 2004.
+AUTHORS’ BIOGRAPHIES
+Hang Hu
+Department of Civil and Structural
+Engineering, The University of Shef-
+field, Sir Frederick Mappin Building,
+Mappin
+Street,
+Sheffield
+S1
+3JD, UK.
+Zhao Wang
+Department of Civil and Structural
+Engineering, The University of Shef-
+field, Sir Frederick Mappin Building,
+Mappin
+Street,
+Sheffield
+S1
+3JD, UK.
+Fabio P. Figueiredo
+Department of Civil and Structural
+Engineering, The University of Shef-
+field, Sir Frederick Mappin Building,
+Mappin
+Street,
+Sheffield
+S1
+3JD, UK.
+Panos Papastergiou
+Department of Civil and Structural
+Engineering, The University of Shef-
+field, Sir Frederick Mappin Building,
+Mappin
+Street,
+Sheffield
+S1
+3JD, UK.
+Maurizio Guadagnini
+Department of Civil and Structural
+Engineering, The University of Shef-
+field, Sir Frederick Mappin Building,
+Mappin
+Street,
+Sheffield
+S1
+3JD, UK.
+Member of the
+718
+HU ET AL.
+ 17517648, 2019, 2, Downloaded from https://onlinelibrary.wiley.com/doi/10.1002/suco.201800100 by <Shibboleth>-member@leeds.ac.uk, Wiley Online Library on [02/01/2024]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+Kypros Pilakoutas
+Department of Civil and Structural
+Engineering, The University of Shef-
+field, Sir Frederick Mappin Building,
+Mappin
+Street,
+Sheffield
+S1
+3JD, UK.
+Member of the
+How
+to
+cite
+this
+article: Hu
+H,
+Wang
+Z,
+Figueiredo
+FP,
+Papastergiou
+P,
+Guadagnini
+M,
+Pilakoutas
+K.
+Postcracking
+tensile
+behavior
+of
+blended steel fiber-reinforced concrete. Structural
+Concrete. 2019;20:707–719. https://doi.org/10.1002/
+suco.201800100
+HU ET AL.
+719
+ 17517648, 2019, 2, Downloaded from https://onlinelibrary.wiley.com/doi/10.1002/suco.201800100 by <Shibboleth>-member@leeds.ac.uk, Wiley Online Library on [02/01/2024]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License

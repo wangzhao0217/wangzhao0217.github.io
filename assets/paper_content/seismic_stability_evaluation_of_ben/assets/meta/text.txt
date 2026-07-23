@@ -1,0 +1,1824 @@
+Engineering Geology 355 (2025) 108216
+Available online 6 July 2025
+0013-7952/© 2025 Elsevier B.V. All rights are reserved, including those for text and data mining, AI training, and similar technologies.
+Seismic stability evaluation of benched bedding rock slopes with
+varying landforms
+Wenhui Li a,b, Chunlei Xin a,c,*, Zhao Wang d,**, Wenkai Feng a,c, Xinyuan Yu e, Ning Huang b,
+Iman Hajirasouliha e
+a State Key Laboratory of Geohazard Prevention and Geoenvironment Protection, Chengdu University of Technology, Chengdu, China
+b Department of Architecture Engineering, Sichuan Vocational and Technical College of Communications, Chengdu, China
+c College of Environment and Civil Engineering, Chengdu University of Technology, Chengdu, China
+d Institute for Transport Studies, University of Leeds, Leeds, UK
+e School of Mechanical, Aerospace and Civil Engineering, The University of Sheffield, Sheffield, UK
+A R T I C L E I N F O
+Keywords:
+Benched bedding rock slope
+Dynamic response
+Seismic stability evaluation
+Shaking table tests
+Numerical simulations
+A B S T R A C T
+Seismic stability of rock slopes is a critical issue in geotechnical engineering, particularly in seismically active
+regions where benched bedding slopes are susceptible to dynamic failure. This study explores the dynamic
+response and progressive damage mechanisms of benched bedding rock slopes under seismic excitation through
+shaking table tests and numerical simulations. Specifically, four slope models with varying bench widths are
+analyzed, focusing on key factors such as acceleration amplification coefficients (AAC), earth pressure distri-
+bution, and failure modes. The results reveal that AACs at the internal corners of benches are lower than those at
+the external corners. Moreover, it is observed that slope stability improves as the bench width increases, as
+evidenced by a reduction in failure occurrences for slopes with uniform bench widths of 2 m, 4 m, and 6 m. In
+contrast, the slope with uneven bench widths exhibits more severe failure. Furthermore, numerical simulations
+confirm that slopes with wider platforms at lower elevations are more prone to bench-scale failure. To quantify
+these effects, a novel dynamic stability equation, Sqt, validated by test data, classifies stability into four levels: Sqt
+< 1.0 (unstable), 1.0 < Sqt < 1.3 (less stable), 1.3 < Sqt < 1.5 (basically stable), and Sqt > 1.5 (stable). These
+findings provide a necessary basis for understanding the shattering cumulative damage mechanism and seismic
+fortification of complex rock slopes, and offer valuable insights for the design of cutting slopes in high-intensity
+seismic areas.
+1. Introduction
+In recent years, major earthquakes in China have led to catastrophic
+geological disasters. Notably, the Mw7.9 Wenchuan earthquake in
+Sichuan Province on May 12, 2008, triggered over 15,000 landslides and
+619 debris flows, causing widespread devastation (Dong et al., 2022;
+Fan et al., 2016; He et al., 2021). Among these, the Daguangbao land-
+slide remains the largest earthquake-induced landslide ever recorded
+globally, with an astounding volume of 742 million cubic meters. This
+landslide formed a dammed lake that soared to a height of 690 m (Huang
+et al., 2011; Feng et al., 2022). The Mw7.1 Yushu earthquake on July 1,
+2010, resulted in over 2036 landslides in Qinghai Province, claiming the
+lives of 2220 people and leaving 70 unaccounted for. Similarly, the
+Lushan earthquake in Ya’an on April 20, 2013, resulted in a total of 3000
+geological disasters. More recently, on September 5, 2022, a magnitude
+of Mw 6.8 earthquake struck Luding County in Garze Prefecture, Sichuan
+Province, initiating 565 geological hazards in Luding and Shimian
+counties. These included 331 collapses and 234 landslides, and
+Abbreviations: d, Displacement distortion; D1, Fundamental amplitude; Di, Harmonic amplitude; L, Geometric dimension; a, Acceleration; ρ, Density; E, Elastic
+modulus; μ, Poisson’s ratio; c, Cohesion force; φ, Internal friction angle; σ, Stress; ε, Strain; t, Time; d, Displacement; v, Velocity; ζ, Damping ratio; Sq, Stability; Sqt,
+Dynamic stability; α, Overall slope angle; β, Bench angle; θ, Inter-ramp angle; δ, Interlayer angle; AAC, Acceleration Amplification Coefficient; EAE, Elevation
+Amplification Effects.
+* Corresponding author at: State Key Laboratory of Geohazard Prevention and Geoenvironment Protection, Chengdu University of Technology, Chengdu, China.
+** Corresponding author.
+E-mail addresses: xinchunlei@cdut.edu.cn (C. Xin), z.wang13@leeds.ac.uk (Z. Wang).
+Contents lists available at ScienceDirect
+Engineering Geology
+journal homepage: www.elsevier.com/locate/enggeo
+https://doi.org/10.1016/j.enggeo.2025.108216
+Received 26 December 2024; Received in revised form 26 June 2025; Accepted 30 June 2025
+
+Engineering Geology 355 (2025) 108216
+2
+exacerbated the deformation of 81 existing geological hazards. In
+Western China, where earthquake intensity is generally high, the con-
+struction of large-scale roads often requires the formation of numerous
+cutting slopes (Xiao et al., 2010; Xin et al., 2024a; Zhao et al., 2024).
+Additionally, in open-pit mining, the extraction of orebodies at different
+strata levels frequently results in the creation of benched landforms. A
+tragic example occurred on February 22, 2023, when a multi-bench
+landslide at Xinjing Coal Mine in Alxa Left Banner, Inner Mongolia,
+resulted in 63 deaths and the movement of nearly 5 million cubic meters
+of earth (Yi et al., 2022). These incidents underscore the critical need for
+enhanced stability assessments of bench slopes in seismically active
+regions.
+Recent research has led to substantial advancements in both meth-
+odological approaches and mechanistic understanding of slope dynamic
+response and stability. With regard to dynamic response mechanisms,
+Jafarzadeh et al. (2015) systematically investigated the generation of
+Rayleigh waves in terrain amplification effects through a combination of
+shaking table tests and ABAQUS finite element simulations. Their find-
+ings quantitatively demonstrated the topographic amplification can
+significantly increase induced accelerations at the slope surface,
+particularly at the crest. Furthermore, they introduced the concept of the
+“effective depth of surficial amplification,” providing new insight into
+the influence of low-frequency seismic waves on deep slope responses.
+Song et al. (2019) employed a methodological framework integrating
+three-dimensional finite element modal analysis with shaking table
+testing to identify, for the first time, the typical vibration modes (shear,
+torsional, and flexural) and associated characteristic frequencies (12–29
+Hz) of complex-structured rock slopes. Their results indicated that high-
+frequency components tend to cause localized surface damage, whereas
+low-frequency components are more likely to initiate progressive overall
+sliding failures. In terms of the geological structure’s role in disaster
+control, Yang et al. (2025a) conducted shaking table tests based on a
+comparison of different weak interlayer designs (homogeneous weak
+layers and those with discontinuous interfaces). Using digital image
+correlation (DIC) full-field strain monitoring technology, they revealed
+the key influence of the development degree of weak interlayer struc-
+tures on peak ground acceleration (PGA) distribution: continuous weak
+layers significantly increase PGA at the slope crest, aggravating back-
+edge tension cracking, while discontinuous interfaces suppress the
+amplification effect at the slope crest but lead to shear stress concen-
+tration at the slope toe. Another study on anti-dip bench rock slopes
+(Yang et al., 2025b) used large-scale shaking table tests and numerical
+simulations to find that the bench geometry parameters (width and slope
+angle) regulate the failure mode by altering the stress transfer path. The
+widest bench effectively blocks internal deformation of the slope, and
+the displacement baseline offset ratio (DBOR) indicator was introduced
+for the first time to quantify the plastic zone expansion process.
+Regarding innovations in stability assessment methods, Maheshwari and
+Das (2023) established a small-scale physical model and PLAXIS HS
+small model coupling platform to accurately quantify the sensitivity of
+seismic settlement to slope angle and base edge distance. Pradhan and
+Siddique (2020) employed the Phase2D finite element platform, inte-
+grating the nonlinear Generalized Hoek-Brown (GHB) criterion and the
+Geological Strength Index (GSI) to establish a classification system for
+Fig. 1. The location and geological profile of the study area. (a) location of the study area; (b) geological profile of the slope.
+W. Li et al.
+
+Engineering Geology 355 (2025) 108216
+3
+the stability of Himalayan jointed rock slopes. Their analysis confirmed
+that slopes with a factor of safety (FoS) ≤1 represent a critical state of
+instability and demonstrated the superior applicability of the GHB cri-
+terion over the Mohr-Coulomb model in cases of high joint density.
+Zirsang et al. (2024) further applied the Morgenstern-Price algorithm of
+the Slope/W limit equilibrium module, using 50 parameterized slope
+models. Their study verified that step-back setback configurations for
+buildings can enhance the seismic safety factor, thereby providing a
+quantitative foundation for disaster mitigation design in urban hilly
+terrains.
+Despite these advances, three key limitations persist in the existing
+literature: 1) Object limitation: Current studies predominantly address
+homogeneous slopes or single-bench configurations, with limited
+investigation into the seismic response transmission mechanisms and
+overall system stability of benched rock slopes; 2) Methodological gap:
+Conventional static indicators (such as FoS) fail to capture dynamic
+cumulative damage. Although dynamic indicators like DBOR have been
+proposed, no unified assessment framework integrating geological
+structures, geometric morphology, and dynamic parameters has been
+established; 3) Engineering applicability: Existing models lack quanti-
+tative analysis of the synergistic effect of benched geometric parameters
+(overall slope angle α, bench angle β, and inter-ramp angle θ), thereby
+limiting
+their practical utility in dynamic control during slope
+construction.
+This research examines the dynamic response and stability of slopes
+with varying topographies using a series of shaking table tests. It ana-
+lyzes acceleration and earth pressure to evaluate the amplification ef-
+fects and distribution of these factors at different platform positions of
+benched rock slopes. Moreover, the study also investigates the geometric
+characteristics of multi-bench slopes and establishes relationships be-
+tween the overall slope angle (α), bench angle (β), and inter-ramp angle
+(θ). The equation for calculating the slope stability, based on geological
+conditions (e.g., dip of structural surfaces), is proposed. The equation’s
+applicability is verified through shaking table tests and numerical sim-
+ulations. A dynamic correction coefficient (ζ) is introduced to refine
+slope stability analysis, and a new stability judgment equation incor-
+porating this coefficient is developed. This study fills a gap in large-scale
+rock slope stability assessment, particularly regarding dynamic response
+analysis and slope angle adjustment. The proposed dynamic stability
+judgment equation offers a more accurate representation of the rock
+mass’s mechanical behavior, providing geotechnical engineers with a
+precise and practical tool for real-time slope stability analysis and ad-
+justments during construction, with significant engineering application
+potential.
+2. Geological setting of the study slope
+The study area is located in the Dongtai fold belt in Yunnan Province,
+China, known for its complex geological structures and well-developed
+faults. The project site is situated near the boundary between the
+Sichuan-Yunnan and South China fault blocks, traversing the active
+Xiaojiang fault zone. This zone, characterized by strong tectonic activity
+with features of inheritance and multi-stage reactivation, has a signifi-
+cant impact on the proposed road construction. The Xiaojiang fault, a
+northeast-trending Holocene active fault, features a left-lateral strike-
+slip movement and spans a structural width of 20 km. The exposed
+geological strata in the area include Quaternary (Q4) of the Cenozoic
+era, and Lower and Middle Cambrian Series (ε1 and ε2), respectively. In
+this series of shaking table tests, the cutting slope from Sanbao section to
+Qingshui section (K86 + 380 to K86 + 740) was selected as the proto-
+type. Drill core tests were conducted at three locations along this
+segment (as shown in Fig. 1(b)). The results from borehole 1 indicate the
+presence of strongly weathered siltstone, borehole 2 revealed highly
+weathered sandstone, and borehole 3 displayed moderately weathered
+sandstone.
+Under the influence of the geological structure of the study area, the
+highway cutting slope exhibits a layered structure with fully developed
+structural planes. The distribution and development degree of these
+structural planes, as well as their physical and mechanical properties,
+play a key role in determining the deformation, strength and stability of
+Fig. 2. The shaking table system. (a) shaking table; (b) hydraulic actuator; (c) hydraulic oil source system; (d) shaking table controlling center.
+W. Li et al.
+
+Engineering Geology 355 (2025) 108216
+4
+the slope. Therefore, accurately determining the mechanical parameters
+that reflect the actual engineering conditions is essential. Field in-
+vestigations, sampling and in-situ testing were conducted on the cutting
+slope. Borehole shear tests were employed to enhance understanding of
+the in-situ geological condition and to retrieve rock mass samples,
+including rock blocks and structural planes. In order to establish the
+physical and mechanical parameters of the prototype, a comprehensive
+series of tests were conducted. These included in-situ shear tests, indoor
+direct shear tests, and uniaxial compression tests. The uniaxial
+compression and direct shear tests aimed to determine the physical and
+mechanical properties of rock masses and structural planes. Ring knife
+tests were conducted to obtain the density of the rock mass and struc-
+tural plane, while direct shear tests provided data on the cohesive force
+(c) and internal friction angle (φ). Additionally, uniaxial compression
+tests were performed to ascertain the elasticity modulus (E) and Poisson
+ratio (μ).
+Site investigations and borehole sampling reveal that the engineering
+geological profile of the slope section primarily consists of siltstone and
+sandstone, characterized by argillaceous and layered structures. These
+rocks exhibit developed joint fissures and a loosely bonded structure,
+resulting in low mechanical strength. The geological formation of the
+slope is characterized by a monoclinal structure with strongly weathered
+sandstone bedrock, with a rock occurrence of 138◦∠35◦. This orienta-
+tion, combined with the slope direction, predisposes the slope to
+downslope movements and potential bedding plane sliding. The slope
+contained multiple structural planes with a dip angle of 35◦, composed
+of clay with the thickness of the structural plane ranging from 0.1 to 0.2
+m. Given the steep slope terrain and a natural inclination of
+Fig. 3. Three-dimensional six-degree-of-freedom seismic simulation shaking table system. (a) displacement distortion curve; (b) acceleration distortion curve; (c)
+maximum performance curve in the X direction; (d) maximum performance curve in the Z direction; (e) shaking table system diagram.
+W. Li et al.
+
+Engineering Geology 355 (2025) 108216
+5
+approximately 30◦, it is recommended to perform bench excavation of
+the slope. In the preliminary design phase, the maximum excavation
+height for this section is estimated at 29.5 m, to be accomplished in three
+benches. The excavation will follow a slope ratio of 1:1 for the first two
+benches and 1:1.25 for the third bench as shown in Fig. 1(b).
+3. Shaking table model test
+3.1. Test device
+The shaking table test system employed in this research was provided
+by the Seismic Simulation Shaking Table Laboratory of the State Key
+Laboratory of Geohazard Prevention and Geoenvironment Protection,
+Chengdu University of Technology (see Fig. 2). The shaking table
+equipment, produced by SERVOTEST company, UK, includes a shaking
+table measuring 6 m × 4 m (Length × Width). This table is operated by
+four vertical actuators and four horizontal actuators, complemented by a
+1500 L@28Mpa oil source, an oil source control system, and a pulsar
+vibration input control system. The maximum load capacity of the
+shaking table is 4.0 × 104 kg. The actuators allow the table to achieve a
+full load horizontal and vertical acceleration of 1.5 g and 1.0 g,
+respectively, with corresponding maximum strokes of 300 mm and 150
+mm.
+The seismic simulation shaking table system can experience wave-
+form distortion due to various factors, such as insufficient connection
+stiffness, high harmonics from the localized shaking on the table,
+nonlinearity of the servo valve, and the interactive effects between the
+specimen and the table. The degree of waveform distortion can be
+measured by the distortion degree, which comprises displacement
+waveform distortion and acceleration waveform distortion. The equa-
+tion for calculating the distortion degree is given in Eq. (1). The
+distortion of displacement waveform is assessed in the maximum
+displacement range, by applying sinusoidal vibration to an inertia
+specimen at 50 % ~ 80 % of the maximum displacement level. The
+system undergoes testing at five different frequencies (0.1, 0.5, 1, 3, and
+5 Hz), with each test lasting a minimum of five minutes. The shaking
+table system is required to maintain a maximum displacement distortion
+of less than 3 % for sinusoidal vibrations below 5 Hz in each degree of
+freedom. As illustrated in Fig. 3(a), the test results demonstrate that the
+displacement distortion values in the X/Y/Z directions are all below the
+3
+%
+threshold,
+indicating
+minimal
+waveform
+distortion
+under
+displacement control has been achieved.
+d =̅̅̅̅̅̅̅̅̅̅̅̅̅
+∑
+11
+i=2
+Di
+2
+√
+D1
+× 100%
+(1)
+where D1 is fundamental amplitude, and Di denoted harmonic ampli-
+tude. The distortion degree of acceleration waveform is tested in the
+velocity and acceleration section with the maximum function. Under the
+action of inertia load, acceleration control mode is implemented for
+testing. The testing process focuses on five key frequencies (7, 10, 20, 40,
+and 60 Hz), and the acceleration distortion degree is required to remain
+below 5 % before the iteration. The test results are presented in Fig. 3(b).
+It can be seen that with the use of acceleration control, the distortion
+levels for the X/Y/Z axes remain less than 5 %, indicating the suitability
+of the shaking table system for high-precision testing applications.
+The maximum performance curve refers to the ultimate performance
+parameters of the seismic simulation shaking table, including its
+maximum acceleration, displacement, and velocity. During the mea-
+surement of the table’s maximum capabilities, a sinusoidal wave with a
+fixed frequency is applied, and the curve is measured in three segments.
+The maximum performance curves of the shaking table system in the X
+and Z directions are shown in Figs. 3(c) and 3(d). The composition of the
+whole seismic simulation shaking table system is shown in Fig. 3(e).
+3.2. Scaled model
+Based on the dimension of the shaking table, a steel structure model
+container measuring 3.6 m × 1.5 m × 2.1 m (Length × Width × Height)
+was designed, as depicted in Fig. 4(a). The model container was
+composed of steel plate, section steel, and plexiglass. To minimize
+seismic wave reflections on the model container boundaries and ensure
+continuous deformation between the slope model and the container,
+flexible materials were employed to absorb seismic waves during the
+shaking table tests. The properties of these materials, including elastic
+modulus, density, and damping ratio were carefully determined to
+identify the material thickness that best approximates the free-field
+dynamic response. Following this analysis, an optimal thickness for
+the flexible material was established as 20 cm (Xin et al., 2019; Zhang
+et al., 2018). Consequently, a 20 cm polystyrene foam board was
+installed inside the model container to simulate the absorbing material
+in the horizontal vibration direction. Plexiglass was also installed along
+the sidewalls of the model container parallel to the excitation direction,
+Fig. 4. The model containerand the measures of reducing boundary effect. (a) the model container; (b) the measures of reducing boundary effect.
+Table 1
+The similarity relationship and similarity ratios.
+Number
+Parameter
+Similarity relation
+Similarity ratio
+1
+Geometric dimension (L)
+Dominating variable
+CL = 25
+2
+Acceleration (a)
+Dominating variable
+Ca = 1
+3
+Density (ρ)
+Dominating variable
+Cρ = 1
+4
+Elastic modulus (E)
+CE = CLCρCa
+CE = 25
+5
+Poisson’s ratio (μ)
+–
+Cμ = 1
+6
+Cohesion force (c)
+Cc = CLCρCa
+Cc = 25
+7
+Internal friction angle (φ)
+1
+Cφ = 1
+8
+Stress (σ)
+Cσ = CLCρCa
+Cσ = 25
+9
+Strain (ε)
+1
+Cε = 1
+10
+Time (t)
+Ct = CL
+1/2Ca
+−1/2
+Ct = 5
+11
+Displacement (d)
+Cd = CL
+Cd = 25
+12
+Velocity (v)
+Cv = CL
+1/2Ca
+1/2
+Cv = 5
+13
+Damping ratio (ζ)
+–
+Cζ = 1
+W. Li et al.
+
+Engineering Geology 355 (2025) 108216
+6
+as illustrated in Fig. 4(b).
+To ensure that the model provides an accurate representation of the
+prototype, shaking table tests must adhere to similarity relationships
+under both static and dynamic conditions. In this study, the Buckingham
+π theorem was employed, which utilizes dimensional analysis to deter-
+mine the geometric similarity ratio between the model and prototype.
+Thirteen key parameters were considered for the shaking table test,
+including geometric dimensions L, mass density ρ, and seismic acceler-
+ation a. These were designated as the fundamental control quantities
+with scaling CL = 25, Cρ = 1, and Ca = 1, respectively. The similarity
+relationships and dimensional representations of the shaking table test
+are detailed in Table 1.
+To accurately determine the physical and mechanical parameters of
+the model material, a series of direct shear tests, and uniaxial
+compression tests were conducted on rock mass samples. These tests
+were aimed at assessing the strength parameters and mechanical prop-
+erties of the rock mass and structural planes. From the results of
+orthogonal tests on the similar material ratios for the slope model, an
+optimal mass ratio of 10:35:25:14:2 for gypsum, barite powder, quartz
+sand, water, and glycerin were selected for the slope model rock mass.
+Here, barite powder and quartz sand served as fine and coarse aggre-
+gates, respectively, while gypsum and water served as binding agents,
+and glycerin aided in water retention. The deformation, strength and
+stability of rock slopes were governed by the distribution, degree of
+development and mechanical properties of the internal structural
+planes. Therefore, the careful selection and proportioning of similar
+materials for structural planes are crucial for obtaining accurate test
+results (Qi et al., 2022; Song et al., 2018; Xin et al., 2024b). Based on the
+results of laboratory physical and mechanical tests, clay, barite powder,
+and glycerol were chosen as similar materials for the structural plane,
+with a mass ratio of 10:25:1. Table 2 presents the target values, actual
+measured values, and the degree of similarity for physical quantities
+such as density, elastic modulus, and cohesion of the slope model. The
+degree of similarity is defined as the ratio between the actual measured
+values from the slope model and the target values of the model.
+The construction processes of the benched bedding rock slope model
+were divided into three primary components: rock mass, structural
+plane and base. Initially, the outline of the slope, including the positions
+of the interlayer and base, was marked on the acrylic plates and affixed
+inside the plexiglass model container as depicted in Fig. 5(a). For the
+model base, M5 cement mortar and bricks were used to precisely control
+the angle of slope rock mass and structural plane. During the filling
+process, slope materials were thoroughly mixed in the designated pro-
+portions and layered from bottom to top following the volume control
+principle, with each layer’s filling thickness maintained at about 5 cm
+(see Fig. 5(b)). The surface of each rock mass and interlayer layer was
+compacted and smoothed using wooden boards to ensure consistency
+throughout the construction process as shown in Fig. 5(c). The density of
+each layer was verified using the ring knife method to ensure the uni-
+formity of the model rock mass. Accelerometers and earth pressure cells
+were strategically embedded at specific positions within the model as
+per the design scheme (see Fig. 5(d)). To safeguard the functionality of
+the sensors, they were encased with cling film and sealed with adhesive
+tape for waterproofing. After assembly, the model was allowed to cure to
+ensure the materials reached their design strength prior to testing.
+Gridlines spaced at 10 cm intervals were drawn on the completed bench
+slope surface and reflectors were placed at grid intersections to facilitate
+the collection of displacement data during seismic activity as depicted in
+Fig. 5(e). The entire construction process for the benched bedding rock
+slope model is shown in Fig. 5.
+3.3. Measuring systems
+Following the geological mapping of the slope, a benched bedding
+rock slope with a structural plane was identified for the study. Four
+bench slopes with different landform patterns were selected for exami-
+nation, including slopes with uniform bench widths of 2 m, 4 m, and 6
+m, and a slope with an uneven bench width of 8 m. These widths comply
+with the requirements of the Specifications for Design of Highway Sub-
+grades (JTGD30–2015) in China, which specifies the dimensions and
+traffic functionality of the bench slope platform. Adhering to the geo-
+metric similarity ratio of 1:25 established for the test, the width of the
+model slopes with uniform bench were set to 8 cm, 16 cm, and 24 cm,
+respectively. For the model with an uneven bench width, the second
+platform was set to 32 cm, while the width of the other benches was set
+to 8 cm. Each of the four model slopes featured three benches, with each
+bench standing at 22 cm high, culminating in a total height of 118 cm.
+Scheme 1 was applied to the model slopes with 8 cm uniform bench
+width and the uneven bench width, while Scheme 2 was designated for
+model slopes with uniform bench widths of 16 cm and 24 cm (as shown
+Table 2
+The physical mechanical parameters of model slopes.
+Projects
+Parameters
+Density
+ρ (kg/m3)
+Elastic modulus
+E (Gpa)
+Cohesion
+c (Mpa)
+Internal friction
+angle φ (◦)
+Poisson’s ratio
+μ
+Rock mass
+prototype value
+2680
+5.233
+2.562
+28
+0.22
+target value
+2680
+0.2093
+0.1152
+28
+0.22
+measured value
+2520
+0.1962
+0.1025
+25
+0.18
+similarity degree
+94.03 %
+93.74 %
+88.98 %
+89.29 %
+81.82 %
+Structural plane
+prototype value
+1910
+0.7815
+0.6831
+25
+0.36
+target value
+1910
+0.0313
+0.0317
+25
+0.36
+measured value
+1860
+0.0256
+0.0273
+22
+0.35
+similarity degree
+97.38 %
+81.79 %
+86.12 %
+88.00 %
+97.22 %
+Fig. 5. Construction process of the model slopes in the shaking table test. (a) lable skeleton line; (b) mix similarity material; (c) smooth structural plane; (d) bury
+sensors; (e) paste the reflector.
+W. Li et al.
+
+Engineering Geology 355 (2025) 108216
+7
+in Fig. 6). In addition, the model slope incorporated a structural plane
+with a thickness of 0.5 cm, positioned at an angle of 35◦to the horizontal
+plane, and spaced at 15 cm intervals.
+To fulfil the objectives of the test, accelerometers and earth pressure
+cells were strategically positioned at both the internal corners and
+external corners of each platform within the model slope (as depicted in
+Fig. 6). These sensors were utilized to analyze the dynamic response of
+the slope at various elevations when subjected to ground motion, aiming
+to ascertain the deformation and failure laws of the slope. Table 3 shows
+the sensor types used in this study. During the loading process, the dy-
+namic behavior of the slope model was captured in real-time using a
+high-definition camera. For precise real-time monitoring of the surface
+displacement, reflectors were affixed to the slope surface. These re-
+flectors were then tracked using a laser displacement meter, allowing for
+accurate measurement of movement during the tests.
+3.4. Testing sequences
+The shaking table test was conducted by selecting the east-west (E-
+W) component of the strong earthquake recorded at Wolong Station,
+near the fault in the Wenchuan earthquake, to serve as the dynamic load
+input. The seismic excitation was horizontally applied in the X-direction.
+The time history and Fourier spectra are shown in Figs. 7(a) and 7(b).
+Spectrum analysis revealed that seismic wave energy was primarily
+concentrated in the first 10 s in the time domain and 12 Hz in the fre-
+quency domain (see Fig. 7(c)). To evaluate the progressive failure of the
+model slope subjected to varying excitation amplitudes, six distinct
+loading conditions were tested: 0.1 g, 0.2 g, 0.4 g, 0.6 g, 0.8 g, and 1.0 g.
+Following each loading, the deformation and failure of the model slope
+were observed and recorded at 20-min intervals. Before each excitation,
+a 0.05 g white noise was also applied to obtain the natural frequency of
+the model slope. The test loading scheme is illustrated in Fig. 7(d).
+4. Analysis of the test results
+4.1. Seismic response characteristics of slope model
+4.1.1. Distribution law of slope’s acceleration
+The inertial force generated by seismic acceleration is a critical factor
+for slope deformation and instability under an earthquake action.
+Consequently, variations in acceleration are essential for evaluating the
+dynamic response of the slope (Wu et al., 2020; Zhou et al., 2022).
+Therefore, this section focuses on the horizontal acceleration amplifi-
+cation coefficient of the benched bedding rock slope with structural
+planes at different platform positions as illustrated in Fig. 8. In this
+figure, legend “222” implies that the actual widths of the third, second,
+and first benches of the slope are all 2 m, whereas “282” signifies that the
+actual widths of the third, second, and first benches are 2 m, 8 m, and 2
+m, respectively. The acceleration amplification coefficient (AAC) is
+defined as the ratio of the peak horizontal acceleration at each
+measuring point to the peak acceleration at the base of the shaking table.
+The acceleration responses at the internal and external corners of the
+first and second benches were analyzed under various excitation am-
+plitudes. The results indicate that the acceleration response of all four
+slope models significantly increases as the excitation amplitude rises,
+particularly up to 0.6 g. Among these, the slope with 6 m uniform bench
+width displays the highest acceleration values. When the excitation
+amplitude ranges from 0.6 g to 0.8 g, the acceleration response at the
+internal corners of the first and second benches of the slope with uneven
+bench width decreases significantly (as shown in Figs. 8(a) and 8(c)).
+This reduction is attributed to the extensive propagation of internal
+cracks within the slope when the excitation amplitude exceeds 0.6 g.
+These cracks absorb seismic wave energy, thereby reducing the moni-
+tored acceleration at the internal corners.
+As seen in Fig. 9, the AAC gradually increases from the bottom to the
+top of the slope and reaches the maximum values at the slope top
+regardless of the slope surface patterns. This trend highlights the
+elevation amplification effects (EAE) of seismic-induced acceleration
+responses in bedding rock slopes. The test results reveal that AACs at the
+Fig. 6. The schematic diagram of the model slope and the monitoring points.
+(a) Overall schematic of the model slope; (b) Scheme 1 – sensor layout on the
+slope with 2 m uniform bench width; (c) Scheme 2 – sensor layout on the slope
+with uneven bench widths; (d) Scheme 1 – sensor layout on the slope with 4 m
+uniform bench width; (e) Scheme 1 – sensor layout on the slope with 6 m
+uniform bench width. (Unit: cm).
+Table 3
+Types of sensors.
+Type
+Number
+Illustration
+Note
+Accelerometer
+16
+Monitoring acceleration
+at different positions of
+the slope
+Earth pressure
+cell
+16
+Monitoring earth
+pressure
+at different positions of
+the slope
+W. Li et al.
+
+Engineering Geology 355 (2025) 108216
+8
+Fig. 7. The Wolong wave characteristics and loading scheme. (a) the time history of E-W component; (b) Fourier spectra of E-W component; (c) time-frequency
+distribution of seismic wave; (d) loading scheme in the shaking table test.
+Fig. 8. Distribution of acceleration amplification coefficients of four slope models under different excitation amplitudes. (a) the AAC at the internal corner of the first
+bench; (b) the AAC at the external corner of the first bench; (c) the AAC at the internal corner of the second bench; (d) the AAC at the external corner of the
+second bench.
+W. Li et al.
+
+Engineering Geology 355 (2025) 108216
+9
+internal corners of benches are consistently lower than those at the
+external corner. This disparity can be attributed to the fact that the
+variations of slope gradients, which lead to conspicuous stress concen-
+tration at the internal corners of the benches. Moreover, compared to the
+interior of the slope, the surface is more sensitive to seismic excitation
+due to the lack of internal constraints, making it more prone to loosening
+and collapse.
+4.1.2. Distribution law of slope’s earth pressure
+The stability assessment of slopes after an earthquake primarily de-
+pends on understanding the stress changes induced by seismic excitation
+and the subsequent stress redistribution. These factors are crucial for
+determining the deformation mechanisms and damage modes of slopes
+during multi-stage seismic events. For example, benched bedding slopes
+experience damage due to the combined effects of dynamic and residual
+earth pressures. During seismic excitation, both dynamic and residual
+earth pressures develop. While dynamic earth pressure dissipates after
+excitation, residual earth pressure persists, causing further deformation
+until significant cracking occurs. This section analyzes the peak earth
+pressure responses at the internal corners of the first and second benches
+in four slope models to explore the pressure response patterns.
+As shown in Fig. 10, the earth pressure increases with excitation
+Fig. 9. The AAC distribution of the four slopes at 1.0 g. (a) the AAC distribution of the slope with 2 m uniform bench width; (b) the AAC distribution of the slope with
+uneven bench width; (c) the AAC distribution of the slope with 4 m uniform bench width; (d) the AAC distribution of the slope with 6 m uniform bench width.
+Fig. 10. The earth pressure distribution at the internal corner of the first bench and the second bench in slope model with different excitation amplitudes. (a) the
+earth pressure at the internal corner of the first bench; (b) the earth pressure at the internal corner of the second bench.
+W. Li et al.
+
+Engineering Geology 355 (2025) 108216
+10
+amplitude, ranging from 0.2 g to 0.6 g. This is attributed to enhanced
+particle interaction within the slope material, leading to higher contact
+forces, internal friction, and shear strength. However, when the excita-
+tion amplitude exceeds 0.6 g, the earth pressure in the slope generally
+decreases with increasing amplitude. Among the four slope models, the
+slope with uneven bench width exhibits the largest reduction in earth
+pressure. At the internal corner of the first bench, the earth pressure
+reduction is 67.28 % and at the second bench, it is 33.47 %. Combined
+with failure observations from the shaking table tests, when the exci-
+tation amplitude exceeds 0.6 g, severe damage occurred at the first and
+second benches of the slope with uneven bench width. Extensive crack
+propagation absorbs seismic energy, resulting in reduced earth pressure.
+Crack damage in the rock mass limits the accumulation of residual
+earth pressure. Existing cracks hinder further increases in residual
+pressure, causing a nonlinear response. Additionally, residual earth
+pressure at the external corner of the second bench is mainly due to
+seismic inertial forces acting from the third bench and slope top during
+excitation. In conclusion, the gradual increase of residual earth pressure
+induced by earthquakes is significant and should not be overlooked.
+Real-time monitoring of earth pressure responses, especially at internal
+corners, is essential for slope engineering.
+Fig. 11. The failure phenomena of four slope models subjected to multi-stage seismic excitations. (a) failure phenomena of slope with 2 m uniform bench width after
+seismic excitations; (b) failure phenomena of slope with uneven bench width after excitations; (c) failure phenomena of slope with 4 m uniform bench width after
+seismic excitations; (d) failure phenomena of slope with 6 m uniform bench width after seismic excitations.
+W. Li et al.
+
+Engineering Geology 355 (2025) 108216
+11
+4.1.3. Failure process analysis
+Fig. 11 illustrates the failure phenomena of four slope models sub-
+jected to multi-stage seismic excitations. In the scheme 1 of tests, a slope
+with 2 m uniform bench width exhibited no significant failure when the
+acceleration amplitude was below 0.6 g. However, when the amplitude
+increased to 0.6 g, an initial crack appeared at the internal corner of the
+third bench. Under repeated tension-shearing action of seismic waves,
+tensile cracks appeared at the internal corners of all benches, and
+numerous tension-shearing cracks parallel to the interlayer appeared on
+both sides of the structural plane near the slope surface at an accelera-
+tion amplitude of 0.8 g. At this stage, the shear stress became more
+concentrated at the internal corners, diminishing the shear strength and
+stability of the slope. At an acceleration amplitude of 1.0 g, the surface
+cracks of the slope propagated and became deeper and wider, while the
+density of cracks on the side of the slope increased. From the front to the
+rear edge of the slope, the density of cracks decreased successively,
+indicating that the transverse shear action of seismic waves had a sig-
+nificant impact on the transformation of the rock mass at the bottom.
+This also implies a propensity for the slope to slide down along the
+structural plane. Despite the presence of cracks throughout the slope
+body under multi-stage earthquake action, no complete collapses were
+observed. The pre-existing cracks dissipated a portion of the seismic
+energy during the vibration excitation process, enhancing the filtering
+effect of the rock mass and resulting in failure phenomena characterized
+by produced cracks on the slope body without a loss of overall stability
+(Liu et al., 2024; Lu, 2015; Wang et al., 2024).
+In contrast, the slope with uneven bench width exhibited more se-
+vere failure phenomena (as shown in Fig. 11(b)). At an excitation
+acceleration amplitude of 0.6 g, initial tensile cracks appeared at the
+internal corner of the second bench due to the seismic dynamics.
+Concurrently, the slope was affected by the elevation amplification ef-
+fects (EAE), resulting in shear cracks parallel to the structural plane’s
+strike in the rock mass with high elevations on the slope, with the rock
+mass tending to slide along the structural plane under seismic action.
+When the acceleration amplitude reached 0.8 g, cracks at the external
+corner of the second bench rotated outward from slope due to the syn-
+ergistic effect of the free surface amplification and seismic inertia force,
+manifesting as the propagating of cracks along the slope’s free surface in
+the reciprocating vibration process. The tension cracks, generally wider
+at the top and narrower at the bottom, gradually extended downward.
+After multi-stage seismic excitations, some cracks interconnected with
+shear cracks parallel to the interlayer strike, splitting the slopes into
+fractured rock mass and increasing the wave filtering effects of the slope
+bodies. At an excitation acceleration amplitude of 1.0 g, the second
+wider bench tended to slide down along the structural plane under the
+strong seismic inertia force, with the upper part of the slope structure
+compressing the lower part repeatedly during the earthquake dynamic
+action. Eventually, the first bench of the slope was completely squeezed
+and slid down quickly along the structural plane and out of the slope. It
+is worth noting that the fractured rock fell into the crevice, forming a
+wedge splitting effect that further expanded the crack downward at the
+moment of crack opening. After test loading, the rear edge of the slope
+was 8 cm away from the absorption boundary, and a settlement of 9 cm
+occurred, indicating that the upper structure of the slope slid along the
+structural plane. The position of each platform on the slope model
+showed significant misalignment compared to its initial state after the
+Fig. 11. (continued).
+W. Li et al.
+
+Engineering Geology 355 (2025) 108216
+12
+earthquake.
+Compared to scheme 1, the slope failures in scheme 2 were relatively
+minor (as shown in Fig. 11(c) and 11(d)), with only tensile cracks at the
+internal corner and a few tensile-shear cracks along the slope side. As the
+bench width of the slope increased from 2 m to 6 m, both the degree of
+failure and the development of cracks gradually reduced. These obser-
+vations suggest that the stability of the slope enhanced with the
+widening of the slope platform width, as evidenced by the reduction in
+failure phenomena compared to slopes with uniform bench widths of 2
+m, 4 m, and 6 m.
+Following the completion of the loading in scheme 1, the slope was
+dissected layer by layer along the structural plane, revealing irregular
+tensile cracks perpendicular to the structural plane and compressive-
+shear cracks parallel to it on the first and second structural surfaces
+(see Fig. 12). A comparison between Fig. 12(a) and Fig. 12(b) indicates
+that cracks were densely developed in the middle and lower parts of the
+slope, mainly due to the tendency of the rock mass to slide downward
+along the structural plane under seismic excitations. As the seismic in-
+tensity increased, this sliding tendency became more pronounced,
+resulting in differential deformation across each structural plane and
+scratches on the interlayer surfaces within the slope. This confirmed the
+relative displacement between layers in the slope during seismic
+excitations. It was noteworthy that the slope with uneven bench width
+was dissected and exhibited cracks spanning the entire width of the
+second bench at the first and second interlayer planes (as depicted in
+Figs. 12(c) and 12(d)). This pattern was consistent with the penetrating
+cracks of the second bench at the internal corners of the slope surface
+induced by seismic waves. These observations indicated the differential
+deformation of rock masses between layers in the slope, with the
+interlayer serving as a potential sliding surface. Under intense seismic
+excitations, the slope might slide along the structural plane due to the
+continuous tensile action of seismic waves.
+4.2. Slope stability analysis
+In the field of rock slope failure prevention and control, the primary
+task is to calculate and evaluate slope stability (Hu et al., 2024; Pradhan
+and Siddique, 2020; Song et al., 2021). Prior to conducting slope sta-
+bility analysis, it is necessary to assess the potential failure modes,
+corresponding failure directions, failure scale, and impact scopes under
+geotechnical engineering geological conditions, as outlined in Section
+5.2.1 of the Technical Specifications for Construction Slope Engineering
+(GB50330–2013) of China. Currently, the stereographic projection
+method is widely adopted for qualitative analysis to evaluate the
+Fig. 12. The failure phenomena of two slope models subjected to multi-stage seismic excitations. (a) cracks distribution of the first structural plane of the slope with
+2 m uniform bench width dissected after seismic excitations; (b) cracks distribution of the second structural plane of the slope with 2 m uniform bench width
+dissected after seismic excitations; (c) cracks distribution of the first structural plane of the slope with uneven bench width dissected after seismic excitations; (d)
+cracks distribution of the second structural plane of the slope with uneven bench width dissected after seismic excitations.
+W. Li et al.
+
+Engineering Geology 355 (2025) 108216
+13
+influence of structural planes on bench slopes. This method allows direct
+determination of the relationship between the structural plane and the
+slope body. However, most analyses conventionally consider the slope
+angle of a single bench as the boundary for determining local failure,
+where the boundary is defined as the free surface of the bench slope.
+Thus, the results of such analyses can only represent the failure mode of
+a single bench rather than the failure mode of multi-bench combination.
+Since the characteristics of the bench slope are not examined in detail,
+the corresponding boundary conditions remain ambiguous. Therefore,
+to conduct a comprehensive qualitative analysis of the impact of struc-
+tural planes on slope stability, it is imperative to analyze the geometric
+characteristics of multi-bench combination slopes (Dong et al., 2025; Li
+et al., 2023; Song et al., 2020).
+Assuming the geometrical configuration of the bench slope as
+depicted in Fig. 13, where each bench exhibits an identical height (h)
+and bench angle (β), the main geometric parameters entail the overall
+slope height (H), the number of platforms (n), the count of uniform
+platforms underneath the wider platform (m), the uniform platform
+width (a), the wider platform width (b), the distance from the crest to the
+rear edge of the slope (c), and the length from the rear edge to the slope
+toe defined as the overall length (L). The angles involved are the overall
+slope angle (α), defined as the angle between the line connecting the
+slope toe to the crest and the horizontal plane, the bench angle (β),
+which is the angle between each bench and the horizontal plane, and the
+inter-ramp angle (θ), which is the angle between the slope toe, the
+external edge of the wider bench, and the horizontal plane. The
+following relationships between these parameters are valid:
+h = H
+n
+(2)
+L = c + (n −2)a + b + nh/tanβ
+(3)
+Fig. 12. (continued).
+Fig. 13. Geometric parameters of bench slope.
+W. Li et al.
+
+Engineering Geology 355 (2025) 108216
+14
+tanα =
+H
+L −c =
+H
+(n −2)a + b + H/tanβ
+(4)
+tanθ =
+m+1
+n H
+ma + m+1
+ntanβ H
+(5)
+Hereon, we can calculate
+1
+tanβ = C1 +
+1
+tanα ,
+1
+tanβ = C2 +
+1
+tanθ respectively
+from Eqs. (4) and (5), where the constantC1 = −
+(n−2)a+b
+H
+, C2 = −
+nma
+(m+1)H.
+Finally, both overall slope angle (α) and inter-ramp angle (θ) can be
+represented by bench angle (β) as follows:
+α = arctan
+1
+1/tanβ −C1
+(6)
+θ = arctan
+1
+1/tanβ −C2
+(7)
+By applying the equation
+1
+tanβ = C1 +
+1
+tanα ,
+1
+tanβ = C2 +
+1
+tanθ, we can
+derive the relationshipC2 −
+C1 =
+1
+tanα −
+1
+tanθ.
+Accordingly, the final equation can be expressed as follows:
+sin(θ −α) = (C2 −C1)sinθsinα
+(8)
+cos(β −α) = 2sinαsinβ −C1sinαcosβ
+(9)
+Furthermore, it is evident that angles α and β must comply with the
+criterion of β > α, wherein angle β varies from 0 to 90◦. Based on the Eq.
+(6) between α and β, it is apparent that as angle β increases, angle α
+increases proportionally. Similarly, the Eq. (7) between θ and β dem-
+onstrates that as angle β expands, angle θ increases comparatively.
+In a series of shaking table tests, four slope models with different
+bench widths were considered, representing a three- bench slope. These
+can also be viewed as mining slopes consisting of two safety platforms
+and one clean-out platform. The varying bench widths correspond to
+different slope angles. Four key angles in the slope model were defined:
+overall slope angle (α), bench angle (β), inter-ramp angle (θ), and
+structural plane dip angle (δ), as illustrated in Fig. 14. In the shaking
+table tests, the slope model had a ratio of 1:0.7, and the overall slope
+angle (α), bench angle (β), and inter-ramp angle (θ) could all be
+determined by the bench height and platform width, as given in Eqs.
+(10)–(12).
+tanα =
+4h
+4l + 2a + b
+(10)
+tanβ = h
+l
+(11)
+tanθ =
+2h
+2l + a
+(12)
+where l is defined as the projection length of each bench on the hori-
+zontal plane.
+Based on previously derived equations, the relationships between the
+geometric characteristics of the bench slope have been established.
+Additionally, considering the inherent geological conditions of the slope
+(i.e., the dip angle of the structural plane), a series of geometric calcu-
+lations involving the overall slope angle (α), bench angle (β), inter-ramp
+angle (θ), and structural plane dip angle (δ) were performed to define the
+slope stability assessment equation, as shown in Eq. (13).
+Sq =̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅
+|cos(θ + δ) sin(α + δ) |
+cos(β −α)sin(θ −α)
+√
+(13)
+Hereon, the denominator of the equation is dictated by the values of
+β-α and θ-α, both of which range from 0◦to 90◦, with the requirement
+that θ cannot be equal to α. Regarding the numerator of the equation, the
+values of θ + δ and α + δ range from 0◦to 180◦. Nevertheless, it is crucial
+to emphasize that θ + δ cannot be equal to 90◦, as this would lead to a
+singularity in the calculation of the stability equation Sq. The angle
+values are calculated by substituting each of the four slope models, and
+the corresponding results are presented in Table 4. It is observed that the
+slope with uneven bench width exhibits the smallest Sq, indicating the
+lowest stability and highest potential for failure along the structural
+plane. Contrarily, with the increase of bench width, the Sq value of the
+slope with uniform bench width grows, and the stability is progressively
+enhanced. This law is in accordance with the damage observed in the
+four types of slopes in the shaking table model tests.
+4.3. Plastic zone of the bench rock slope
+FLAC 3D is a three-dimensional numerical simulation software that is
+widely used for analyzing the seismic stability of slopes. The software is
+capable of constructing three-dimensional geological models, accom-
+modating various material behaviors (such as elastic, elastoplastic, and
+plastic models), simulating seismic loads, and analyzing the impact of
+varying slope landforms. It also facilitates the visualization and inter-
+pretation of stress and displacement data, allowing for precise assess-
+ments of slope stability under seismic conditions and enabling detailed
+Fig. 14. The angle schematics of the four slope models in the shaking table tests. (a) angle diagram of slope with 2 m uniform bench width; (b) angle diagram of slope
+with 4 m uniform bench width; (c) angle diagram of slope with 6 m uniform bench width; (d) angle diagram of slope with uneven bench width.
+Table 4
+The Sq value results of four slopes in shaking table test.
+Slope type
+tanα
+tanβ
+tanθ
+δ
+Sq =̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅
+|cos(θ + δ) sin(α + δ) |
+cos(β −α)sin(θ −α)
+√
+2 2 2
+1.028
+1.429
+1.134
+35
+1.511
+282
+0.803
+1.429
+1.134
+35
+0.808
+4 4 4
+0.803
+1.429
+0.940
+35
+1.617
+6 6 6
+0.659
+1.429
+0.803
+35
+1.726
+W. Li et al.
+
+Engineering Geology 355 (2025) 108216
+15
+sensitivity analyses through parameter adjustments (Alsardi and Yerro,
+2023; Lu et al., 2022; Song et al., 2024).
+To explore how the position of wider platforms influences slope
+failure modes, the single-factor analysis method was employed in this
+section. A numerical simulation model was established using finite dif-
+ference software FLAC 3D based on the actual engineering slope di-
+mensions, as shown in Fig. 15. Generally, in order to accurately
+represent the wave propagation characteristics, the maximum mesh size
+in the numerical model should be smaller than 1/10–1/8 of the wave-
+length of the input seismic motion in dynamic numerical simulations,
+expressed as:△l ≤(1/10 ∼1/8)λ. Herein, l represents the mesh size of
+the numerical model; λ refers to the minimum wavelength of seismic
+motion. Thus, the maximum mesh size of the elements was set to 0.8 m
+in this series of numerical simulations. Additionally, the dynamic
+boundary condition was another crucial issue in dynamic numerical
+simulation. The seismic wave would reflect along the boundary of the
+numerical model, subsequently influencing the accuracy of wave prop-
+agation. To mitigate this issue, a free field was implemented to minimize
+the wave reflection in the dynamic numerical simulation. Furthermore,
+the local damping with a value of 0.157 was adopted in this study. The
+loading method employed in the dynamic numerical simulation
+mirrored that of the shaking table test. The model was subjected to the
+Wolong seismic wave as a horizontal seismic input, and dynamic
+response simulation was conducted to supplement and compare with
+shaking table test results. Specifically, four numerical models were
+developed to investigate the relationship between the position of wider
+platforms on the slope and the slope failure modes. Two specific types of
+slopes were analyzed: the slope with 2 m uniform bench width and
+uneven bench width. The results of these numerical simulations were
+compared with findings from shaking table tests, showing remarkable
+consistency in slope failure modes, characterized by tension failure at
+the inner corner of the bench and shear failure along the structural
+plane. Additionally, two supplementary models with wider platforms
+placed at the first bench and third bench were constructed to explore the
+influence of wider platform position on slope failure mechanisms and
+stability. These additional simulations served both as an extension of the
+shaking table test results and as a confirmation of the stability equation
+Sq.
+The distribution of plastic zones of the slope under seismic excitation
+is shown in Fig. 16, where “shear” refers that the yield shear stress of the
+rock material exceeds the shear strength, and shear failure occurs in the
+rock mass. On the other hand, “tension” denotes that the tensile stress of
+the rock material exceeds the yield tensile strength. The suffix “n” in-
+dicates that the rock material is undergoing failure, the suffix “p” means
+that failure has occurred, and “None” indicates that the rock is in an
+elastic state. It is evident that, compared to other slopes, the slope with 2
+m uniform bench width experienced minor damage, primarily in the
+form of shear damage at the interlayer and tension damage at the rear
+edge of the slope and the internal corner of the bench (as illustrated in
+Fig. 16(a)). Notably, no sliding surface was observed extending from the
+slope surface to the internal interlayer. Conversely, the wider platform
+located at the second bench of the slope, showed the initiation of a
+tensile plastic zone at the internal corner of the second bench and the
+rear edge of the slope when subjected to seismic waves. The resulting
+damage propagated inward and connected to the structural plane in the
+slope. The slope was susceptible to experiencing shear sliding along the
+interlayer, as illustrated in Fig. 16 (b). In the case of a slope with a wider
+platform on the first bench (see Fig. 16(c)), the shear plastic zone
+initially appeared on the structural plane when the loading time was 10s
+(see Fig. 16(e)), due to its inherently low shear strength. Furthermore, at
+the lower part of the slope, the tensile stress exceeded the rock’s tensile
+strength on both sides of the interlayer, leading to the formation of a
+tensile plastic zone. By t = 24 s, this zone expanded downward on both
+sides and appeared at the internal corner of the first bench (as depicted
+in Fig. 16(f)). Concurrently, a tensile plastic zone was developed on the
+rear edge of the slope, leading to a downward sliding tendency along the
+structural plane. At t = 36 s, the tensile plastic zone connected with the
+interlayer, which led to a high susceptibility of the first bench to slide
+away from the slope along the interlayer. In the case of the wider plat-
+form located on the third bench of the slope, the damage to the slope is
+shown in Fig. 16(h) after the seismic wave loading was completed.
+Extensive tensile plastic damage to the rock body was noted at the rear
+edge of the slope and both sides of the interlayer with higher elevation,
+resulting in a tendency for the slope to slide down along the structural
+plane.
+Nevertheless,
+the
+overall
+stability
+of
+the
+slope
+remains
+maintained.
+5. Discussion
+5.1. Slope deformation damage process
+Shaking table tests are a crucial tool in earthquake engineering,
+enabling precise simulation of seismic parameters (e.g., acceleration,
+frequency, and duration) and revealing structural dynamic responses
+under repeatable loading conditions (Chen et al., 2023; Yang et al.,
+2022). Unlike numerical simulations, these tests allow direct observa-
+tion of structural damage, providing empirical validation for theoretical
+models. However, they have two main limitations: size constraints, as
+large or complex structures require scaled models that may introduce
+size effects or boundary distortion, and discrepancies in simulating
+seismic motion, as real earthquake waves exhibit spatial non-uniformity
+and multi-dimensional coupling, which are challenging to fully repli-
+cate, especially with respect to randomness and local geological effects.
+Despite these challenges, the shaking table used in this study (6.0 m
+× 4.0 m) offers a favorable specimen-to-table mass ratio, mitigating
+boundary distortion from scaled model effects. Displacement and ac-
+celeration distortions in the X, Y, and Z directions remain within
+acceptable limits. Therefore, the shaking table meets high precision
+standards, and the data obtained are reliable and accurate.
+The cumulative failure of the slope during seismic excitations can be
+divided into four distinct developmental stages, as illustrated in Fig. 17.
+These stages include shallow creep (0.1 g–0.2 g), local tension (0.2
+g–0.6 g), accelerated deformation (0.6 g–0.8 g), and overall instability
+(0.8 g–1.0 g). The model test results show that the deformation damage
+Fig. 15. Numerical models and boundary conditions. (a) the slope model geometry in numerical simulation; (b) the free field boundary generation in numeri-
+cal simulation.
+W. Li et al.
+
+Engineering Geology 355 (2025) 108216
+16
+Fig. 16. The distribution of plastic zones of the slope and the failure phenomena under seismic excitations. (a) the distribution of plastic zone in the slope with 2 m
+uniform bench width; (b) failure phenomena of slope with 2 m uniform bench width after excitations; (c) the distribution of plastic zone in the slope model of the
+wider platform on the second bench; (d) failure phenomena of slope with uneven bench width after excitations; (e) the distribution of plastic zone in the slope of the
+wider platform on the first bench at 10 s of loading; (f) the distribution of plastic zone in the slope of the wider platform on the first bench at 24 s of loading; (g) the
+distribution of plastic zone in the slope of the wider platform on the first bench; (h) the distribution of plastic zone in the slope of the wider platform on the
+third bench.
+W. Li et al.
+
+Engineering Geology 355 (2025) 108216
+17
+mode is generally expressed as a slip-tension type.
+The shear fault momentum in rock mass results from the accumu-
+lation of fault momentum in a specific direction under the influence of
+multi-stage earthquakes (Liao et al., 2015; Tai et al., 2024). This cu-
+mulative damage, similar to material fatigue damage, is a function of
+earthquake duration and magnitude, and it increases with both pa-
+rameters. This analysis is consistent with the regional phenomenon of
+opening joints observed on the deep surface during the investigation of
+slope damage caused by the Wenchuan earthquake. In actual slope
+engineering, attention should be paid to the “dynamic” stability evalu-
+ation of the slope. Here, the term “dynamic” encompasses several as-
+pects: the slope deformation develops dynamically over time, and its
+stability must be continuously tracked and monitored. Moreover, the
+stability evaluations require constant revision of the calculated condi-
+tions and parameters. Therefore, the evaluation methods and means are
+also undergoing dynamic development. Consequently, the dynamic
+evaluation of slope is a continuous cycle process of theoretical calcula-
+tion and field monitoring “interaction”.
+Fig. 17. The cumulative failure process of slopes under seismic excitations.
+Table 5
+The Sq of different slope models.
+Slope type
+b/a
+α
+β
+θ
+δ
+θ −α
+β −α
+θ + δ
+α + δ
+Sq =̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅
+|cos(θ + δ) sin(α + δ) |
+cos(β −α)sin(θ −α)
+√
+4 2 2
+2
+42
+56
+47
+35
+5
+14
+82
+77
+1.266
+2 4 2
+2
+42
+56
+49
+35
+7
+14
+84
+77
+0.928
+2 2 4
+2
+42
+56
+56
+35
+14
+14
+91
+77
+0.269
+6 2 2
+3
+39
+56
+47
+35
+8
+17
+82
+74
+1.003
+2 6 2
+3
+39
+56
+49
+35
+10
+17
+84
+74
+0.778
+2 2 6
+3
+39
+56
+56
+35
+17
+17
+91
+74
+0.245
+8 2 2
+4
+37
+56
+47
+35
+10
+19
+82
+72
+0.898
+2 8 2
+4
+37
+56
+49
+35
+12
+19
+84
+72
+0.808
+2 2 8
+4
+37
+56
+56
+35
+19
+19
+91
+72
+0.232
+10 2 2
+5
+36
+56
+47
+35
+11
+20
+82
+71
+0.856
+2 10 2
+5
+36
+56
+49
+35
+13
+20
+84
+71
+0.684
+2 2 10
+5
+36
+56
+56
+35
+20
+20
+91
+71
+0.227
+12 2 2
+6
+34
+56
+47
+35
+13
+22
+82
+69
+0.789
+2 12 2
+6
+34
+56
+49
+35
+15
+22
+84
+69
+0.638
+2 2 12
+6
+34
+56
+56
+35
+22
+22
+91
+69
+0.217
+Note: Slope type column “4 2 2” in the table indicates that the widths of the third, second and first benches of the actual three-bench slope are 4 m, 2 m and 2 m
+respectively.
+Fig. 18. White noise time history curve and slope model under WN-1 condition of the transfer function curve of each measuring point. (a) white noise time history
+curve; (b) transfer function curve of each measuring point.
+W. Li et al.
+
+Engineering Geology 355 (2025) 108216
+18
+5.2. Identification of the slope stability
+To examine the impact of varying widths of wider platforms (i.e.,
+different b values) and their positions on slope stability, we developed
+several slope models with uneven bench widths (where a/b ∕= 1). The
+parameters α, β, θ, and δ were extracted from these models, and the Sq
+values for each slope model were calculated and are presented in
+Table 5. Notably, when b/a = 2 and the wider platform is placed on the
+third bench, the Sq value is 1.266; when b/a = 3 and the platform is on
+the third bench, the Sq value is 1.003. As the b/a ratio increases, the Sq
+value decreases, indicating a reduction in slope stability. The Sq distri-
+bution for the 8 2 2, 2 8 2, and 2 2 8 slopes follows the trend observed in
+numerical simulations. This confirms that the proposed Sq stability
+equation is consistent with both model test results and numerical sim-
+ulations, demonstrating its strong applicability to benched bedding rock
+slopes. Additionally, as shown in Table 5, regardless of platform width, if
+the platform is positioned on the first bench, the Sq value remains
+around 0.2, indicating extremely poor stability. Consequently, these
+slopes are highly prone to bench-scale damage at the internal corner of
+the first bench. Therefore, reinforcement of these slopes, particularly at
+the internal corner of the wider bench, is essential to prevent bench-
+scale failure and maintain slope stability.
+The natural frequency and damping ratio are critical dynamic pa-
+rameters of the slope model, which can be derived from the acceleration
+time history curves at various monitoring points. When the slope is
+subjected to seismic excitations, the slope model will generate stress and
+strain during the vibration process (Wu et al., 2024; Zhang et al., 2025;
+Zhao et al., 2023). These forces cause deformation and damage to the
+slope’s internal structure, leading to slope deterioration. Changes in the
+natural frequency and damping ratio indicate the extent of internal
+damage to the slope model. By analyzing the acceleration time history
+curves, the slope’s dynamic parameters can be calculated. These pa-
+rameters
+quantify
+the
+slope’s
+vibration
+characteristics,
+and
+by
+comparing them with those of an undamaged slope, the degree of
+damage and deformation can be assessed, providing insight into the
+progression of slope degradation. As damage accumulates, the natural
+frequency decreases due to a reduction in stiffness and damping capacity
+caused by slope deformation and failure.
+According to the loading scheme in the shaking table test, a 0.05 g
+white noise scan lasting 60 s is applied before each seismic excitation (as
+shown in Fig. 18(a)). Each slope model undergoes seven white noise
+scans, labeled sequentially as WN-1, WN-2, …, WN-7. In this study, the
+absolute transfer function at each monitoring point is determined using
+the tfestimate function in the MATLAB toolbox. The equation for tfes-
+timate in MATLAB is as follows:
+Txy(f) = Pyx(f)
+Pxx(f)
+(14)
+where，Txy(f)represents the transfer function between the input signal x
+(acceleration at the table measurement point) and the output signal y
+(acceleration at the slope measurement point); Pyx(f) denotes the cross-
+correlation spectral density function between signals x and y; Pxx(f)is the
+autocorrelation spectral density function of signal x, and f is the signal
+frequency.
+This series of shaking table tests includes four slope models. Before
+seismic excitation, each slope model undergoes a white noise scan, and
+the transfer function of the slope is plotted using Matlab. Taking the
+slope with uneven bench width as an example, the transfer function
+curve is shown in Fig. 18(b). The frequencies corresponding to the peak
+points of the transfer function curve can be approximated as the natural
+frequencies of the slope model.
+The transfer function of each slope model before each seismic exci-
+tation in the shaking table tests is calculated using the tfestimate func-
+tion in MATLAB. The first-order natural frequencies of the four slope
+models under each white noise condition are statistically analyzed, as
+shown in Table 6. The natural frequencies of all slope models decreased
+with increasing excitation amplitudes. In the shaking table tests, cu-
+mulative damage to the slopes increased under multiple seismic exci-
+tations, with some slopes showing significant damage and instability.
+For the slope with 2 m uniform bench width, the first-order natural
+frequency decreased from 29.98 Hz under WN-4 to 26.79 Hz under WN-
+5, a reduction of 10.64 %. For the slope with 4 m uniform bench width,
+the frequency decreased from 30.45 Hz under WN-4 to 28.64 Hz under
+WN-5, a 5.94 % reduction. The slope with 6 m uniform bench width
+showed a decrease from 30.78 Hz under WN-4 to 28.94 Hz under WN-5,
+a 5.98 % reduction. For the slope with uneven bench width, the fre-
+quency decreased from 28.76 Hz under WN-4 to 26.13 Hz under WN-5, a
+9.14 % reduction.
+Minimal changes in the first-order natural frequencies were observed
+between WN-1 and WN-3. However, the largest decrease occurred be-
+tween WN-4 and WN-5, with some slopes experiencing a sudden drop in
+frequency between these conditions. WN-4 and WN-5 correspond to
+excitation amplitudes of 0.4 g and 0.6 g for the slope, respectively. The
+results from the shaking table tests indicate that after experiencing these
+two higher excitation amplitudes, the slope exhibited severe damage.
+When subjected to lower excitation amplitudes, the first-order natural
+Table 6
+First order natural vibration frequency of slope model.
+Slope
+type
+White noise
+condition
+first-order
+natural
+vibration
+frequency
+Slope
+type
+White noise
+condition
+first-order
+natural
+vibration
+frequency
+2 2 2
+WN-1
+31.89
+4 4 4
+WN-1
+32.22
+WN-2
+31.66
+WN-2
+32.14
+WN-3
+30.99
+WN-3
+31.89
+WN-4
+29.98
+WN-4
+30.45
+WN-5
+26.79
+WN-5
+28.64
+WN-6
+26.76
+WN-6
+27.98
+WN-7
+26.53
+WN-7
+27.75
+6 6 6
+WN-1
+32.45
+2 8 2
+WN-1
+32.03
+WN-2
+32.24
+WN-2
+31.89
+WN-3
+31.99
+WN-3
+30.23
+WN-4
+30.78
+WN-4
+28.76
+WN-5
+28.94
+WN-5
+26.13
+WN-6
+28.37
+WN-6
+25.99
+WN-7
+28.03
+WN-7
+25.74
+Table 7
+The Sqt.of slope model considering dynamic coefficient.
+Slope
+type
+Sq =̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅
+|cos(θ + δ) sin(α + δ) |
+cos(β −α)sin(θ −α)
+√
+dynamic
+coefficient ζ
+Sqt =
+ζ̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅
+|cos(θ + δ) sin(α + δ) |
+cos(β −α)sin(θ −α)
+√
+2 2 2
+1.511
+0.9
+1.360
+4 4 4
+1.617
+1
+1.617
+6 6 6
+1.726
+1
+1.726
+2 8 2
+0.808
+0.7
+0.566
+Fig. 19. Slope dynamic stability classification.
+W. Li et al.
+
+Engineering Geology 355 (2025) 108216
+19
+frequencies showed little change, as the slope could withstand smaller
+stresses, maintaining stable dynamic characteristics. However, at higher
+excitation amplitudes, the increased stresses led to greater damage and
+deformation, resulting in a significant decrease in the first-order natural
+frequency. This suggests that abrupt changes in natural frequency may
+serve as indicators of severe damage, deformation, or instability in the
+slope models.
+The Technical code for building slope engineering (GB50011–2010) in
+China outlines guidelines for slope safety classification. Section 3.2
+specifies that classification should consider factors such as potential
+damage severity, slope type, and height, categorizing slopes into three
+safety levels: Class I, Class II, and Class III. Section 5.3 outlines the slope
+stability evaluation criteria, with Subsection 5.3.2 defining the slope
+stability safety factor (Fst). For slopes under “normal conditions”, the Fst
+for Class I slopes is 1.35, while under “seismic conditions”, the Fst is 1.15.
+For Class II slopes, the Fst under “normal conditions” is 1.30, and under
+“seismic conditions”, it is 1.10. For Class III slopes, the Fst under “normal
+conditions” is 1.25, and under “seismic conditions”, it is 1.05. This
+standard suggests that the stability safety factor is reduced under seismic
+conditions, reflecting a reduction coefficient applied to the “normal
+conditions” safety factor. This concept is incorporated into the stability
+equation presented in this paper. As shown by the transfer function
+analysis, slope failure is a dynamic process involving cumulative dam-
+age, necessitating the inclusion of a dynamic correction coefficient, ζ,
+which accounts for slope displacement and crack propagation rate.
+Larger displacements and faster crack propagation negatively impact
+stability.
+Based on the failure processes observed during shaking table tests,
+and using displacement sensors, the displacement of slopes during
+seismic excitation was measured to determine the dynamic correction
+coefficient for each slope. The equation for evaluating dynamic stability,
+incorporating the dynamic correction coefficient, is proposed, with ζ
+values provided in Table 7.
+The Code for investigation of geotechnical engineering (GB50021–2001)
+of China specifies that for newly designed slopes, the stability coefficient
+K should range from 1.30 to 1.50 for important projects, 1.15 to 1.30 for
+general projects, and 1.05 to 1.15 for minor projects. Similarly, the
+Technical code for building slope engineering (GB50330–2013) of China
+stipulates that for slope engineering stability verification, the stability
+coefficient should be no less than the safety factor requirement Ks
+(ranging from 1.20 to 1.35) to avoid necessitating slope reinforcement.
+In Queensland, Australia, Geotechnical Design Standard–Minimum Re-
+quirements states that stability analysis for geotechnical design of a
+cutting slope must adhere to a minimum factor of safety (FOS) of 1.30
+during construction (short-term). This study classifies slope stability
+based on the dynamic stability equation, Sqt (as shown in Fig. 19). The
+dynamic stability is considered basically stable if Sqt falls within the
+range of 1.3 to 1.50, with potential for localized damage. When Sqt ex-
+ceeds 1.5, the slope is deemed fully stable. A Sqt value between 1.0 and
+1.3 indicates less stable, while a value below 1.0 suggests very poor
+stability and a high likelihood of bench-scale failure. Consequently, the
+dynamic stability Sqt of slopes should not be lower than 1.0. The dy-
+namic stability equation provides geotechnical engineers and rock en-
+gineers with a practical means to assess the dynamic stability of multi-
+bench rock slopes on-site. It also allows for potential adjustments to
+the slope angle as the rock mass conditions evolve during slope exca-
+vation. This approach represents a convenient and effective method for
+evaluating slope stability.
+6. Conclusion
+The seismic response of benched bedding rock slopes was investi-
+gated in this study through shaking table tests and complimentary nu-
+merical simulations. Four types of slopes with diverse bench widths
+were examined, utilizing real-time test data to analyze the distinct
+damage phenomena under seismic excitation, acceleration distribution
+laws, and earth pressure responses across different platform positions.
+Moreover, a dynamic stability equation Sqt was proposed as an index for
+assessing slope stability. The key findings are summarized as follows:
+(1) The test outcomes show that the AACs at the internal corners of
+benches are lower compared to those at the external corners. This
+phenomenon is attributed to the considerable stress concentra-
+tion induced by the variations of slope gradients, where the in-
+ternal corner of the bench serves as the stress concentration zone.
+Additionally, the external surfaces of the slope, being less con-
+strained, are more susceptible to seismic excitations. Hence,
+mitigating steep changes in slope topography is a primary focus
+in actual slope projects. Implementing rounded internal corners
+helps alleviate stress concentration and reduces the likelihood of
+potential damage.
+(2) The benched bedding rock slopes experience shattering damage
+due to the combined influence of dynamic earth pressure and
+residual earth pressure. While dynamic earth pressure dissipates
+after the excitation ends, residual earth pressure persists within
+the slope, leading to further deformation until noticeable cracks
+emerge. Consequently, the progressive growth of earthquake-
+induced residual earth pressure should not be overlooked, and
+real-time monitoring of earth pressure response is vital for slope
+engineering, especially at the internal corners.
+(3) The stability of the slope increases with the widening of the slope
+platform, as evidenced by the reduction in failure phenomena
+compared to slopes with uniform bench widths of 2 m, 4 m, and 6
+m. However, the slope with uneven bench width exhibits more
+severe failure phenomena. Therefore, slopes with uniform bench
+widths generally demonstrate better seismic stability than those
+with uneven bench widths.
+(4) The numerical simulation results show that slopes with wider
+platforms at lower elevations (e.g., the first bench) exhibit a
+higher density of shear plastic zones compared to those with
+platforms at higher elevations (e.g., the third bench), making the
+slope more prone to sliding along the structural planes. Addi-
+tionally, when the wider platforms are located at lower elevations
+of the slope, the slope is more likely to experience bench-scale
+failure.
+(5) The Sqt effectively measures the dynamic stability of the slope.
+The calculated results are consistent with the damage law
+observed in shaking table model tests and align well with nu-
+merical simulations, demonstrating the high applicability of the
+equation for benched bedding rock slopes with varying geological
+structures and landform patterns.
+CRediT authorship contribution statement
+Wenhui Li: Writing – original draft, Software, Data curation.
+Chunlei Xin: Writing – original draft, Supervision, Resources, Project
+administration, Methodology, Funding acquisition, Formal analysis.
+Zhao Wang: Writing – review & editing, Visualization, Validation,
+Software, Formal analysis. Wenkai Feng: Writing – review & editing,
+Supervision, Project administration, Funding acquisition. Xinyuan Yu:
+Visualization, Software, Methodology, Investigation, Conceptualization.
+Ning Huang: Investigation, Methodology, Validation. Iman Hajir-
+asouliha: Writing – review & editing, Conceptualization.
+Declaration of competing interest
+The authors declare that they have no known competing financial
+interests or personal relationships that could have appeared to influence
+the work reported in this paper.
+W. Li et al.
+
+Engineering Geology 355 (2025) 108216
+20
+Acknowledgements
+This research was supported by the National Natural Science Foun-
+dation of China (Grant Nos. 52108361 and 41977252), the Sichuan
+Science and Technology Program of China (Grant Nos. 2024ZYD0154
+and 2024NSFSC0159), and the State Key Laboratory of Geohazard
+Prevention and Geoenvironment Protection Independent Research
+Project (Grant Nos. SKLGP2022Z015 and SKLGP2020Z001). All the
+authors acknowledge the anonymous reviewers for their comments.
+Data availability
+Data will be made available on request.
+References
+Alsardi, A., Yerro, A., 2023. Coseismic site response and slope instability using periodic
+boundary conditions in the material point method. J. Rock Mech. Geotech. Eng. 15
+(3), 641–658. https://doi.org/10.1016/j.jrmge.2022.09.016.
+Chen, J.C., Che, A.L., Wang, L.M., 2023. Cumulative damage evolution rule of rock slope
+based on shaking table test using VMD-HT. Eng. Geol. 314. https://doi.org/10.1016/
+j.enggeo.2023.107003.
+Dong, J.Y., Wang, C., Huang, Z.Q., Yang, J.H., Xue, L., 2022. Shaking table model test to
+determine dynamic response characteristics and failure modes of steep bedding rock
+slope. Rock Mech. Rock. Eng. 55 (6), 3645–3658. https://doi.org/10.1007/s00603-
+022-02822-x.
+Dong, S., Xi, H., Shi, T.T., Zhang, Q.H., Mai, Z.J., 2025. Effect of high-frequency
+microseismicity on shear strength of interlayer structural planes of bedding rock
+landslides. J. Rock Mech. Geotech. Eng. https://doi.org/10.1016/j.
+jrmge.2025.03.011.
+Fan, G., Zhang, J.J., Wu, J.B., Yan, K.M., 2016. Dynamic response and dynamic failure
+mode of a weak intercalated rock slope using a shaking table. Rock Mech. Rock. Eng.
+49 (8), 3243–3256. https://doi.org/10.1007/s00603-016-0971-7.
+Feng, W.K., Xin, C.L., Li, W.H., Yang, F., Liao, J., 2022. Seismic induced shattering
+cumulative effects on step-like bedding rock slopes with residual deformation
+features. Chin. J. Rock Mech. Eng. 41 (8), 1581–1594 (in Chinese).
+He, J.X., Qi, S.W., Zhan, Z.F., Guo, S.F., Li, C.L., Zheng, B.W., Huang, X.L., Zou, Y.,
+Yang, G.X., Liang, N., 2021. Seismic response characteristics and deformation
+evolution of the bedding rock slope using a large-scale shaking table. Landslides 18
+(8), 2835–2853. https://doi.org/10.1007/s10346-021-01682-w.
+Hu, H.Q., Bao, Y.J., Guo, X.P., 2024. Seismic fragility analysis of slopes based on large-
+scale shaking table model tests. Eng. Geol. 333. https://doi.org/10.1016/j.
+enggeo.2024.107479.
+Huang, R.Q., Pei, X.J., Fan, X.M., Zhang, W.F., Li, S.G., Li, B.L., 2011. The characteristics
+and failure mechanism of the largest landslide triggered by the Wenchuan
+earthquake, May 12, 2008, China. Landslides 9 (1), 131–142. https://doi.org/
+10.1007/s10346-011-0276-6.
+Jafarzadeh, F., Shahrabi, M.M., Farahi Jahromi, H., 2015. On the role of topographic
+amplification in seismic slope instabilities. J. Rock Mech. Geotech. Eng. 7 (2),
+163–170. https://doi.org/10.1016/j.jrmge.2015.02.009.
+Li, L.Q., Ju, N.P., Sheng, D.C., 2023. Seismic performance and failure mechanism of
+interbedded slopes with steep rock layers. Eng. Geol. 326. https://doi.org/10.1016/
+j.enggeo.2023.107312.
+Liao, Y., Derrega, S.M., Hall, C.A., 2015. A case history study on causation of the
+landslide in Santa Clara, California, USA. J. Rock Mech. Geotech. Eng. 7 (2),
+185–192. https://doi.org/10.1016/j.jrmge.2015.02.006.
+Liu, H.F., Luo, Y.H., Wang, Y.S., Wang, W.P., Zhu, X., Li, J.Y., Zhou, Z., Jing, J.J., 2024.
+Influence of surface wave impedance ratios on the dynamic response and damage
+characteristics of slopes based on shaking table tests. Eng. Geol. 332. https://doi.
+org/10.1016/j.enggeo.2024.107452.
+Lu, Y.F., 2015. Deformation and failure mechanism of slope in three dimensions. J. Rock
+Mech. Geotech. Eng. 7 (2), 109–119. https://doi.org/10.1016/j.jrmge.2015.02.008.
+Lu, Z., Jin, Z., Kotronis, P., 2022. Numerical analysis of slope collapse using SPH and the
+SIMSAND critical state model. J. Rock Mech. Geotech. Eng. 14 (1), 169–179. https://
+doi.org/10.1016/j.jrmge.2021.03.009.
+Maheshwari, B.K., Das, S., 2023. Experimental and numerical study for seismic response
+of strip footing on slopes. Soil Dyn. Earthq. Eng. 174, 108208. https://doi.org/
+10.1016/j.soildyn.2023.108208.
+Pradhan, S.P., Siddique, T., 2020. Stability assessment of landslide-prone road cut rock
+slopes in Himalayan terrain: a finite element method based approach. J. Rock Mech.
+Geotech. Eng. 12 (1), 59–73. https://doi.org/10.1016/j.jrmge.2018.12.018.
+Qi, S.W., He, J.X., Zhan, Z.F., 2022. A single surface slope effects on seismic response
+based on shaking table test and numerical simulation. Eng. Geol. 306. https://doi.
+org/10.1016/j.enggeo.2022.106762.
+Song, D.Q., Che, A.L., Chen, Z., Ge, X.R., 2018. Seismic stability of a rock slope with
+discontinuities under rapid water drawdown and earthquakes in large-scale shaking
+table tests. Eng. Geol. 245, 153–168. https://doi.org/10.1016/j.
+enggeo.2018.08.011.
+Song, D.Q., Che, A.L., Zhu, R.J., Ge, X.R., 2019. Natural frequency characteristics of rock
+masses containing a complex geological structure and their effects on the dynamic
+stability of slopes. Rock Mech. Rock. Eng. 52 (11), 4457–4473. https://doi.org/
+10.1007/s00603-019-01885-7.
+Song, D.Q., Liu, X.L., Huang, J., Zhang, J.M., 2020. Energy-based analysis of seismic
+failure mechanism of a rock slope with discontinuities using Hilbert-Huang
+transform and marginal spectrum in the time-frequency domain. Landslides 18 (1),
+105–123. https://doi.org/10.1007/s10346-020-01491-7.
+Song, D.Q., Liu, X.L., Huang, J., Zhang, Y.F., Zhang, J.M., Nkwenti, B.N., 2021. Seismic
+cumulative failure effects on a reservoir bank slope with a complex geological
+structure considering plastic deformation characteristics using shaking table tests.
+Eng. Geol. 286. https://doi.org/10.1016/j.enggeo.2021.106085.
+Song, J., Xue, Y.L., Zhang, S., Ji, J., Gao, Y.F., 2024. Directionality of earthquake-induced
+slope displacements from numerical analysis and sliding block approaches. Eng.
+Geol. 339. https://doi.org/10.1016/j.enggeo.2024.107638.
+Tai, D.P., Qi, S.W., Zheng, B.W., Luo, G.M., He, J.X., Guo, S.F., Zou, Y., Wang, Z., 2024.
+Effect of excitation frequency and joint density on the dynamic amplification effect
+of slope surface on jointed rock slopes. Eng. Geol. 330. https://doi.org/10.1016/j.
+enggeo.2023.107385.
+Wang, C., Guo, M.Z., Chen, X.L., Gu, K.S., Gong, Y.F., Qi, Y.P., Yuan, D.D., Zhu, C.,
+Chen, B.B., 2024. Damage evolution of the bedding rock landslide and debris
+landslide under earthquakes in the Three-rivers Basin. Eng. Geol. 339. https://doi.
+org/10.1016/j.enggeo.2024.107631.
+Wu, Z.J., Zhang, D., Wang, S.N., Liang, C., Zhao, D.Y., 2020. Dynamic-response
+characteristics and deformation evolution of loess slopes under seismic loads. Eng.
+Geol. 267. https://doi.org/10.1016/j.enggeo.2020.105507.
+Wu, Q., Liu, Z.Q., Tang, H.M., Wang, L.Q., Huo, X.X., Cui, Z., Li, S.Y., Zhang, B., Lin, Z.
+W., 2024. Experimental investigation on shear strength deterioration at the interface
+between different rock types under cyclic loading. J. Rock Mech. Geotech. Eng. 16
+(8), 3063–3079. https://doi.org/10.1016/j.jrmge.2023.11.019.
+Xiao, S.G., Feng, W.K., Zhang, J.J., 2010. Analysis of the effects of slope geometry on the
+dynamic response of a near-field mountain from the Wenchuan Earthquake. J. Mt.
+Sci. 7 (4), 353–360. https://doi.org/10.1007/s11629-010-2055-6.
+Xin, C.L., Wang, Z.Z., Zhou, J.M., Gao, B., 2019. Shaking table tests on seismic behavior
+of polypropylene fiber reinforced concrete tunnel lining. Tunn. Undergr. Space
+Technol. 88, 1–15. https://doi.org/10.1016/j.tust.2019.02.019.
+Xin, C.L., Li, W.H., Wang, Z., Feng, W.K., Hajirasouliha, I., Yu, X.Y., 2024a. Shaking table
+tests on the stability of dip and anti-dip rock slopes with structural planes induced by
+seismic motions. Eng. Geol. 341. https://doi.org/10.1016/j.enggeo.2024.107707.
+Xin, C.L., Yang, F., Feng, W.K., Wang, Z., Li, W.H., 2024b. Seismic responses and
+shattering cumulative effects of bedding parallel stepped rock slope: Model test and
+numerical simulation. J. Rock Mech. Geotech. Eng. https://doi.org/10.1016/j.
+jrmge.2024.03.031.
+Yang, B., Zhou, Z.H., Hou, J.R., Yang, T., Zhang, J.Y., 2022. Failure characteristics and
+mechanism of deposit slopes with bedrock for different soil moisture contents under
+seismic load. Soil Dyn. Earthq. Eng. 154. https://doi.org/10.1016/j.
+soildyn.2021.107128.
+Yang, H.L., Pei, X.J., Cui, S.H., He, Z.H., Lei, J., 2025a. Effects of weak interlayers on
+seismic performance of bedding slopes based on shaking table tests. J. Rock Mech.
+Geotech. Eng. https://doi.org/10.1016/j.jrmge.2025.02.002.
+Yang, F., Xin, C.L., Wang, Z., Yu, X.Y., Feng, W.K., Hu, Y.P., 2025b. Investigating
+deformation and failure mechanisms of discontinuous anti-dip bench rock slopes
+through shaking table tests and numerical simulations. Rock Mech. Rock. Eng. 58,
+5329–5361. https://doi.org/10.1007/s00603-024-04346-y.
+Yi, X.Y., Feng, W.K., Li, B.T., Yin, B.G., Dong, X.J., Xin, C.L., Wu, M.T., 2022.
+Deformation characteristics, mechanisms, and potential impulse wave assessment of
+the Wulipo landslide in the Baihetan reservoir region, China. Landslides 20 (3),
+615–628. https://doi.org/10.1007/s10346-022-02010-6.
+Zhang, T., Gao, B., Fan, K., Zheng, Q., Huang, H., Shen, Y., Zhao, H., 2018. Study on
+flexible material in the sidewall of rigid model box in shaking table test. Chin. J.
+Rock Mech. Eng. 37 (10), 2415–2424 (in Chinese).
+Zhang, S.X., Wei, Y.F., Liu, Y.L., Chen, C.Y., Yang, H., Zhang, X., Liang, P., 2025. Pseudo-
+dynamic viscoelastic stability analysis of anti-dip bedding rock slopes. J. Rock Mech.
+Geotech. Eng. 17 (3), 1631–1645. https://doi.org/10.1016/j.jrmge.2024.03.029.
+Zhao, B., Su, L.J., Wang, Y.S., Li, W.L., Wang, L.J., 2023. Insights into some large-scale
+landslides in southeastern margin of Qinghai-Tibet Plateau. J. Rock Mech. Geotech.
+Eng. 15 (8), 1960–1985. https://doi.org/10.1016/j.jrmge.2022.09.005.
+Zhao, B., Su, L.J., Qiu, C.C., Lu, H.Y., Zhang, B., Zhang, J.Q., Geng, X.Y., Chen, H.Y.,
+Wang, Y.S., 2024. Understanding of landslides induced by 2022 Luding earthquake,
+China. J. Rock Mech. Geotech. Eng. https://doi.org/10.1016/j.jrmge.2024.07.006.
+Zhou, H.X., Che, A.L., Zhu, R.J., 2022. Damage evolution of rock slopes under seismic
+motions using shaking table test. Rock Mech. Rock. Eng. 55 (8), 4979–4997. https://
+doi.org/10.1007/s00603-022-02921-9.
+Zirsang, Z., Rebecca, R., Mozumder, R.A., Tluanga, L., 2024. Impact of building
+topologies on hill slope stability in Aizawl city. Results Eng. 23, 102744. https://doi.
+org/10.1016/j.rineng.2024.102744.
+W. Li et al.

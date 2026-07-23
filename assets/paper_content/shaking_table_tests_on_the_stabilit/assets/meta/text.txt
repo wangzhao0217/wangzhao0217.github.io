@@ -1,0 +1,1309 @@
+Shaking table tests on the stability of dip and anti-dip rock slopes with 
+structural planes induced by seismic motions
+Chunlei Xin a,b, Wenhui Li a, Zhao Wang c,*, Wenkai Feng a,b, Iman Hajirasouliha d, Xinyuan Yu d
+a State Key Laboratory of Geohazard Prevention and Geoenvironment Protection, Chengdu University of Technology, Chengdu, China
+b College of Environment and Civil Engineering, Chengdu University of Technology, Chengdu, China
+c Institute for Transport Studies, University of Leeds, Leeds, UK
+d Department of Civil and Structural Engineering, The University of Sheffield, Sheffield, UK
+A R T I C L E I N F O
+Keywords:
+Benched rock slope
+Shaking table test
+Dynamic response
+Failure evolution process
+HHT analysis
+A B S T R A C T
+Benched rock slopes are prevalent in extensive engineering endeavors such as mining and road construction. This 
+research investigates the dynamic response patterns and failure mechanisms of dip and anti-dip rock slopes 
+through shaking table tests. The adopted approach involves utilizing the acceleration amplification factor (AAF) 
+to compare the amplification effects on both slope types under varying excitation amplitudes. Fourier spectrum 
+analysis of acceleration is conducted to explore the relationship between seismic wave frequency and slope 
+response. The Hilbert-Huang Transform (HHT) method is employed to analyze the differences in seismic response 
+between dip and anti-dip slopes. The results reveal that anti-dip slope exhibits superior stability compared to dip 
+slope, as the latter experiences earlier failure. The study also identifies the critical excitation intensity value 
+(“threshold point”), indicating the evolution of benched slope dynamic response. The findings demonstrate that 
+dip slopes are more significantly affected by seismic motion, exhibiting higher energy concentration and release. 
+The seismic wave propagation in dip slope also shows a greater energy release compared to anti-dip slope. These 
+outcomes should provide valuable insights for the design and seismic disaster risk assessment of benched slope 
+engineering in regions with high seismic activity. The findings highlight the increased risk of slope failure in dip 
+slopes and emphasize the importance of considering slope stability in engineering projects. The approach pro­
+posed in this study, along with the identified critical excitation intensity value, can aid in understanding and 
+mitigating the potential risks associated with benched slope engineering.
+1. Introduction
+Approximately two-thirds of China’s land area is covered by moun­
+tains, resulting in a widespread presence of natural slopes. Geographi­
+cally positioned between the circum-Pacific and Eurasian seismic belts, 
+the country also faces compression from the Pacific, Indian, and Phil­
+ippine Sea Plates, fostering well-developed seismic fault zones with a 
+high frequency of seismic activity (Wen et al., 2021; Xin et al., 2022). 
+Notably, the 2008 Wenchuan Ms8.0 earthquake induced a massive 
+number of landslide disasters, including the Daguangbao landslide, the 
+largest recorded landslide in China and one of the few super large-scale 
+landslides in the world, with over 500 million m3 in volume and creating 
+a landslide dam standing at 690 m, the tallest in the global record (Hu 
+et al., 2021). In 2013, the Lushan County Ms. 7.0 earthquake also trig­
+gered landslides and collapses over an area about approximately 1300 
+km2, resulting in about 3000 geological hazards. Likewise, the Jiuz­
+haigou Ms. 7.0 earthquake on August 8, 2017, triggered around 1900 
+geological hazards, affecting an area of 8.11 km2. As another example, 
+on September 5, 2022, the Luding County Ms. 6.8 earthquake caused 
+331 collapses and 234 landslides in the heavily affected areas of Luding 
+and Shimian counties. Following this, on December 18, 2023, a 
+magnitude 6.2 thrust earthquake struck in Jishishan County, Linxia 
+Prefecture, Gansu Province, triggering over 1500 geological hazards, 
+primarily comprising of small to medium-scale loess landslides and 
+shallow rock collapses. A noteworthy incident within these events was a 
+special mudflow in Qijiagou, Zhongchuan Township, Minhe County, 
+Qinghai Province, which led to the destruction of 95 houses, disruption 
+of 19 roads, and 13 casualties. The recent surge in earthquake activity 
+has led to a notable rise in landslide disasters, highlighting a strong 
+correlation between the severity of slope instability and failure under 
+* Corresponding author.
+E-mail address: z.wang13@leeds.ac.uk (Z. Wang). 
+Contents lists available at ScienceDirect
+Engineering Geology
+journal homepage: www.elsevier.com/locate/enggeo
+https://doi.org/10.1016/j.enggeo.2024.107707
+Received 29 March 2024; Received in revised form 15 August 2024; Accepted 2 September 2024  
+Engineering Geology 341 (2024) 107707 
+Available online 5 September 2024 
+0013-7952/© 2024 The Authors. Published by Elsevier B.V. This is an open access article under the CC BY license ( http://creativecommons.org/licenses/by/4.0/ ). 
+
+seismic actions, the natural geographical setting, and the influence of 
+human economic development and engineering activities (Hu et al., 
+2024; Xu et al., 2022). The extensive nature of these engineering ac­
+tivities can diminish the stability of natural slopes, which in turn, 
+directly impacts the safety of the engineering works themselves (Ning 
+et al., 2019; Yang et al., 2023a, 2023b).
+The investigation of slope dynamic stability fundamentally relies on 
+understanding the seismic dynamic response of slopes. This response is 
+influenced by internal factors such as topography, lithology, and 
+geological structures (He et al., 2020; Song et al., 2019; Song et al., 
+2021a, 2021b, 2021c), as well as external factors such as the duration, 
+amplitude, and frequency of seismic motion (Xu et al., 2023). Currently, 
+large-scale shaking table tests represent the most direct approach for 
+elucidating the dynamic response patterns and failure modes of such 
+systems (Dong et al., 2022; Fan et al., 2016; Xin et al., 2024a). These 
+tests can simulate the complete interaction of seismic waves with slopes, 
+offering a direct observation of their effects. High-precision sensors 
+embedded within slopes enable continuous monitoring of dynamic 
+changes in acceleration, pressure, and displacement (Chen et al., 2020; 
+Zhao et al., 2020).
+Researchers have employed shaking table tests to investigate the 
+dynamic response and cumulative damage of slopes caused by 
+Fig. 1. On-site investigation and parameter determination of prototype slopes: (a) the location of study area; (b) geological profile of the dip rock slope; (c) 
+geological profile of the anti-dip rock slope; (d) lower portion sampling of the slope between sections K79 + 190 and K79 + 460 and sections K88 + 040 and K88 +
+260; (e) instruments of physical and mechanical property test.
+C. Xin et al.                                                                                                                                                                                                                                      
+Engineering Geology 341 (2024) 107707 
+2 
+
+earthquakes. For instance, a series of shaking table tests were conducted 
+to investigate the influence of a single surface slope on seismic response, 
+revealing the distribution pattern of peak ground acceleration (PGA) 
+under vertical SV wave impact and validating numerical simulation 
+results using a physical model (Qi et al., 2022). Another relevant study 
+examined the dynamic response of bedding rock slopes using three sets 
+of typical joints in large-scale shaking table tests. This study analyzed 
+the effects of input harmonic frequency and joint density on the PGA at 
+the slope surface under vertical SV wave excitation (Tai et al., 2024). 
+Shaking table tests were also employed to explore the cumulative 
+damage to bedding slopes caused by historical earthquakes (Cui et al., 
+2023). By using the acceleration amplification coefficient and plastic 
+effect coefficient, this study assessed damage accumulation in bedding 
+slopes subjected to multiple seismic events. The findings indicated that 
+the cumulative damage from multiple earthquakes led to a nonlinear 
+amplification of PGA on the slope surface and a nonlinear reduction in 
+the natural frequency of the slope model. Subsequently, a series of 
+shaking table model tests were conducted to examine the time-domain 
+and frequency-domain dynamic responses of slopes to near-fault 
+ground motions. The results indicated that the PGA induced by near- 
+fault ground motions escalated with elevation. However, once the 
+seismic load amplitude exceeded a critical threshold (0.2 g ~ 0.5 g), the 
+intensity of near-fault ground motions increased, leading to reduced 
+PGA amplification with elevation and intensified high-frequency 
+filtering effects of slopes (Bao et al., 2021). To enhance the 
+understanding of these phenomena, the variation mode decomposition 
+and Hilbert transform method (VMD-HT) were introduced to identify 
+the natural frequencies of slopes. A damage coefficient based on changes 
+in first-order natural frequency of pre- and post-loading conditions was 
+established to study the cumulative damage evolution process of the 
+slope during these tests (Chen et al., 2023). Moreover, several shaking 
+table tests have investigated the effects of rapid water drawdown (RWD) 
+on the seismic response of rock slopes with discontinuities. Through 
+time-frequency analysis, these studies investigated the spectral and en­
+ergy propagation characteristics of reservoir rock slopes under RWD 
+conditions. The influence of RWD on the slope damage development 
+process was explained through energy-based analytical methods (Song 
+et al., 2021a, 2021b, 2021c). Despite these advances, significant gaps 
+remain in understanding the seismic behavior differences between dip 
+and anti-dip rock slopes, which are crucial for developing effective 
+seismic risk assessment and mitigation strategies.
+To address the above research gap, the current study will focus on the 
+dynamic responses of typical dip and anti-dip rock slopes along the 
+Sanbao (Qujing city) to Qingshui (Kunming city) expressway, set against 
+a backdrop of mountainous terrain characterized by frequent seismic 
+activities. To investigate the impact of seismic waves on these slopes, 
+shaking table tests were conducted, utilizing seismic waves with grad­
+ually amplitudes recorded at the Wolong station during the Wenchuan 
+earthquake. This approach allowed for a detailed analysis of the dy­
+namic response, covering damage, instability, and failure mechanisms. 
+Fig. 1. (continued).
+C. Xin et al.                                                                                                                                                                                                                                      
+Engineering Geology 341 (2024) 107707 
+3 
+
+To compare the elevation-dependent variation between dip and anti-dip 
+slopes under different amplitudes of the Wolong wave, a dimensionless 
+factor known as acceleration amplification factor (AAF) was introduced. 
+Furthermore, Fourier spectrum analysis of acceleration was employed to 
+establish the relationship between slope response and seismic wave 
+frequency. The Hilbert-Huang Transform (HHT) method was systemat­
+ically applied to analyze the differences in seismic response between dip 
+and anti-dip rock slopes, considering failure phenomena, AAF, fre­
+quency domain characteristics, and acceleration time-frequency char­
+acteristics. By integrating acceleration, Arias intensity, and dynamic 
+characteristics of the model slopes during the excitation process, this 
+study aims to identify critical excitation values that reflect the dynamic 
+response changes of the model slopes. The results obtained enhance our 
+overall comprehension of the dynamic response characteristics dis­
+played by benched rock slopes under seismic conditions, thereby offer­
+ing valuable insights for the formulation of strategies related to disaster 
+risk assessment and mitigation for slope engineering.
+2. Geological setting of the study slope
+This study focuses on the ongoing construction of the Sanqing 
+Expressway, specifically the segment connecting Sanbao (Qujing city) to 
+Qingshui (Kunming city), situated within the high seismic intensity 
+zone. Understanding the seismic response and developing effective 
+disaster mitigation strategies of the slope are crucial for this expressway 
+and similar infrastructure projects in the high seismic intensity zone of 
+Southwest China. Two representative rock slope sections along the 
+Sanqing Expressway were chosen for detailed investigation. Fig. 1(a) 
+respectively depict the geographical location map and contour map of 
+the study area. The first selected slope is located between sections K79 +
+190 and K79 + 460 of the Sanqing Expressway. Borehole sampling, 
+predominantly showing cake-like or short columnar shapes, revealed 
+that this section primarily comprises highly weathered siltstone with 
+low cementation. The stratum occurrence corresponds to approximately 
+138◦∠35◦, and the relationship between the rock stratum and the slope 
+aspect indicates a dip slope configuration as shown in Fig. 1(b). The 
+second selected slope is located between sections K88 + 040 and K88 +
+260 of the Sanqing Expressway. In this research area, approximately 40 
+% of the land is covered by vegetation, which includes both trees and 
+cultivated lands. Borehole sampling from this slope revealed that the 
+overlying strata in the roadbed area consist of Quaternary Holocene 
+residual slope deposits (Q4
+dl+el), comprising reddish-brown clay with a 
+hard-plastic consistency and approximately 5 % ginger stone particles 
+ranging in size from 2 to 20 mm. The predominant lithology in this 
+section is highly weathered siltstone. The stratum occurrence corre­
+sponds to approximately 92◦∠16◦, and the relationship between the 
+rock stratum and the slope aspect indicates an anti-dip slope configu­
+ration as shown in Fig. 1(c). Field sampling was also conducted on the 
+selected slopes (as shown in Figs. 1(d)), followed by laboratory direct 
+shear tests and uniaxial compression tests (Fig. 1(e)). The direct shear 
+tests involved the preparation of standard specimens, which were then 
+subjected to incremental shear tests under normal stresses of 0.5 MPa, 
+1.0 MPa, 1.5 MPa, and 2.0 MPa. Uniaxial compression tests were con­
+ducted on cylindrical specimens, each with a diameter of 50 mm and a 
+height of 100 mm, compressed until failure.
+3. Shaking table model test
+3.1. Test device
+The shaking table test system utilized in this study was provided by 
+the Seismic Simulation Shaking Table Laboratory, belonging to the State 
+Fig. 2. Shaking table operating systems: (a) shaking table; (b) hydraulic actuator; (c) hydraulic oil source system; (d) computerized control center.
+C. Xin et al.                                                                                                                                                                                                                                      
+Engineering Geology 341 (2024) 107707 
+4 
+
+Key Laboratory of Geohazard Prevention and Geoenvironment Protec­
+tion at Chengdu University of Technology (see Fig. 2). The shaking table 
+equipment was manufactured by SERVOTEST company, a renowned 
+company based in the United Kingdom. The system features a table 
+measuring 4 m × 6 m (width×length), equipped with four vertical ac­
+tuators, four horizontal actuators, a hydraulic power source with a ca­
+pacity of 1500 l @ 28Mpa, a hydraulic power control system, and a 
+Pulsar vibration input control system. The maximum load capacity of 
+the shaking table is 4.0 × 104 kg, while the actuators can produce 
+maximum load accelerations of 1.5 g horizontally and 1.0 g vertically, 
+with maximum displacements of 300 mm and 150 mm, respectively. It is 
+worth mentioning that, in general, shaking table systems may experi­
+ence waveform distortion due to insufficient stiffness of the connecting 
+components, high harmonic vibrations resulting from local vibrations of 
+the table, and the interactive effect of the specimen and the table. 
+Therefore, to verify the accuracy of the test data in this study, both 
+displacement and acceleration distortions of the shaking table were 
+thoroughly examined. The results indicated that the three-axis 
+displacement distortion (X, Y, and Z) of the shaking table was less 
+than 3 %, and the three-axis acceleration distortion met the requirement 
+of being under 5 %. Therefore, it was concluded that the waveform 
+generated by the shaking table satisfies the specified accuracy criteria.
+3.2. Scaled model
+To maintain similarity between the model and the prototype, the 
+shaking table test must adhere to the similarity relationship in both 
+static and dynamic conditions. In this study, acceleration (g), density (ρ), 
+and geometric dimension (L) were chosen as the primary control vari­
+ables (Xin et al., 2018). Based on the Buckingham π theorem, the geo­
+metric similarity ratio (CL) between the prototype and the model was 
+established at CL = 25. This ratio guided the construction of the slope 
+model to dimensions of 2 m in length, 0.7 m in width, and 1 m in height. 
+The similarity relationship and dimensional representation of shaking 
+table tests are shown in Table 1.
+In order to obtain precise physical and mechanical parameters for the 
+slope model, a range of laboratory tests, including direct shear tests, 
+uniaxial compression tests, and standard triaxial tests, were performed. 
+These tests provided the strength parameters and mechanical charac­
+teristics of the rock mass and its structural planes as outlined in Table 2
+and Table 3. The target values for various physical and mechanical pa­
+rameters of the model material were determined based on the estab­
+lished similarity relationship. Orthogonal experimental results of the 
+similarity material ratio for the slope model were also used to select the 
+optimal ratio of barite powder, bentonite, gypsum, paraffin oil, and 
+water in a mass ratio of 65:13:5:13:3, as shown in Fig. 3. Barite powder 
+served as fine aggregates, while gypsum and water acted as binders, and 
+paraffin oil functioned as a water-retaining agent. Considering the sig­
+nificant influence of structural planes on the deformation, strength, and 
+stability of the rock slope, precise simulation of these features is essential 
+for obtaining reliable test outcomes.
+In this study, the film units measuring 15 cm × 10 cm were utilized to 
+simulate structural planes within the inclined-layer slope model, and the 
+mechanical parameters of the structural planes were determined 
+through direct shear tests. The connectivity rate of structural planes 
+Table 1 
+The similarity relationship and similarity ratios.
+Number
+Parameter
+Similarity relation
+Similarity ratio
+1
+Geometric dimension (L)
+Dominating variable
+CL = 25
+2
+Acceleration (a)
+Dominating variable
+Ca = 1
+3
+Density (ρ)
+Dominating variable
+Cρ = 1
+4
+Elastic modulus (E)
+CE = CLCρCa
+CE = 25
+5
+Poisson’s ratio (μ)
+–
+Cμ = 1
+6
+Cohesion force (c)
+Cc = CLCρCa
+Cc = 25
+7
+Internal friction angle (φ)
+1
+Cφ = 1
+8
+Stress (σ)
+Cσ = CLCρCa
+Cσ = 25
+9
+Strain (ε)
+1
+Cε = 1
+10
+Time (t)
+Ct = CL
+1/2Ca 
+−1/2
+Ct = 5
+11
+Displacement (d)
+Cd = CL
+Cd = 25
+12
+Velocity (v)
+Cv = CL
+1/2Ca 
+1/2
+Cv = 5
+13
+Damping ratio (ζ)
+–
+Cζ = 1
+Table 2 
+The physical mechanical parameters of rock mass.
+Rock 
+mass
+Density 
+ρ (kg/ 
+m3)
+Elastic 
+modulus 
+E (Mpa)
+Cohesion 
+c (kPa)
+Internal 
+friction angle 
+φ (◦)
+Poisson’s 
+ratio (μ)
+Prototype
+2250
+780
+493
+36
+0.32
+Model
+2200
+50
+20
+36
+0.34
+Table 3 
+The physical mechanical parameters of structure plane.
+Structure 
+plane
+Cohesion 
+c (kPa)
+Internal 
+friction 
+angle 
+φ (◦)
+Normal stiffness 
+kn (Gpa/m)
+Shear stiffness ks 
+(Gpa/m)
+Prototype
+493
+36
+3.9
+2.5
+Model
+20
+36
+3.5
+2.3
+Fig. 3. Similar materials and specimens of the model slope.
+C. Xin et al.                                                                                                                                                                                                                                      
+Engineering Geology 341 (2024) 107707 
+5 
+
+refers to the proportion of connected structural planes within a certain 
+area in the interconnected network system formed by the structural 
+planes. The connectivity rate for these structural planes was determined 
+based on the field observations of vertical spacing, the internal friction 
+angle of the rocks, and the average length of individual structural 
+planes, as indicated by Eqs. (1) and (2). 
+kl =
+Lcp
+Lcp + Lk
+(1) 
+where, kl represents the connectivity rate, Lcp represents the average 
+length of a single structural plane, and Lk denotes the modified value 
+derived from the average spacing of the structural planes in accordance 
+with the rock failure criterion, calculated using the following equation: 
+Lk =
+a
+sin
+(
+45
+◦−
+φ
+2
+)
+(2) 
+where, φ represents the internal friction angle of the rocks, and a denotes 
+the vertical spacing of the structural planes.
+A connectivity rate of 60 % was assigned to the structural planes in 
+the shaking model tests, aligning with similar approaches adopted by 
+other researchers (Cui et al., 2024; Yang et al., 2023a, 2023b).
+The prototype slope was designed as a three-level platform benched 
+slope, where each bench was 5 m in height. The first and third benches 
+were 2 m wide, while the second bench had a width of 8 m. Reflecting to 
+the geometric similarity ratio of 1:25, each bench in the model slope 
+measured 20 cm in height, with the widths of the first and third benches 
+set at 8 cm and the second bench at 32 cm. In the prototype area of the 
+Fig. 4. Construction process and testing scheme of the slope model: (a) construction process of the slope model; (b) testing scheme of the slope model.
+C. Xin et al.                                                                                                                                                                                                                                      
+Engineering Geology 341 (2024) 107707 
+6 
+
+slope, the average length of a single structural plane is 20 cm, and the 
+vertical spacing between structural planes ranges from 5 to 8 cm. In the 
+paper, a vertical spacing of 7 cm for the structural planes is assumed. The 
+internal friction angle of the rock is 36◦. In the dip slope model, the 
+structural planes exhibited an inclination angle of 35◦, while in the anti- 
+dip slope model, the structural planes featured an inclination angle of 
+16◦. Fig. 4 illustrates the construction process of the benched rock slope, 
+which begins with marking the slope outline and the positions of the 
+structural planes on the organic glass before filling the model. The 
+materials of the slope were mixed uniformly according to the designated 
+proportions. Subsequently, the filling of the slope proceeded in layers, 
+from the base upwards, with meticulous attention to controlling the 
+thickness of each layer at approximately 5 cm. The material was then 
+compacted using a tamping hammer to achieve the desired density, 
+ensuring compliance with the similarity relationship. Thin film units 
+measuring 15 cm × 10 cm, were utilized to simulate the structural 
+planes, with a 60 % connectivity rate implemented in each layer. To 
+protect the model against external environmental effects and ensure the 
+integrity of test results, each construction phase was followed by 
+covering the model surface with a protective film. This measure served 
+to maintain the reliability of the test results and guarantee the accuracy 
+(Xin et al., 2019). Sensor installation was carefully managed during the 
+layering process. Accelerometers, earth pressure cells, and displacement 
+gauges for the test were strategically placed within the model, while 
+sensors were waterproofed by wrapping them in tape, enhancing their 
+operational reliability. Upon completion of the model, to enable accu­
+rate monitoring of slope displacement under seismic actions, a grid with 
+10 cm spacing was drawn on the bench slope surface, and reflective 
+markers were placed at grid intersections.
+3.3. Measuring Systems
+The monitoring scheme employed during the shaking table test is 
+presented in Fig. 5. Various instruments, including accelerometers, earth 
+pressure cells, displacement sensors, extended three-dimensional digital 
+image correlation (XTDIC) system, and cameras, were utilized to record 
+and monitor the failure mechanism in the slope under seismic wave 
+loading. Accelerometers and earth pressure cells were embedded at the 
+internal corner and external corner of the bench as well as inside the 
+slope body. Displacement gauges were placed on the slope surface. 
+Specifically, IEPE piezoelectric accelerometers were selected, with a 
+type of 1A314E, a measurement range of ±50 g, a frequency response 
+range of 0.5–700 Hz for the X/Y/Z axes, and an axial sensitivity of 10.10 
+Fig. 5. Monitoring schemes and site arrangement for shake table tests: (a) monitoring scheme of dip slope; (b) monitoring scheme of anti-dip slope; (c) the un­
+derlying principles of XTDIC.
+Table 4 
+Ground motion parameters of Wolong (WCW) station.
+Monitoring 
+stations
+Components
+Fundamental 
+frequency/Hz
+Focal 
+depth/km
+PGA 
+cm/s2
+051WCW
+EW
+2.4
+14
+957.700
+051WCW
+UD
+8.1
+948.103
+051WCW
+NS
+6.9
+652.851
+C. Xin et al.                                                                                                                                                                                                                                      
+Engineering Geology 341 (2024) 107707 
+7 
+
+mV/ms2 for the X-axis. The earth pressure cells with a type of BW were 
+employed, offering a measurement range of 1 MPa, a sensitivity of 5 
+mV/MPa, and a diameter of 28 mm. The displacement gauges utilized 
+were MIRAN KTR11 rebound-type displacement gauges, capable of 
+measuring within a range of 100 mm with an accuracy of 0.01 mm. The 
+XTDIC three-dimensional full-field strain measurement and analysis 
+system were combined with binocular vision microscope technology to 
+measure the three-dimensional coordinates and displacement fields on 
+the surface of the slope model during deformation. Digital Image Cor­
+relation (DIC) technique was utilized to track the deformation process of 
+speckle patterns on the object’s surface. By calculating changes in the 
+grayscale values of the speckle field, DIC provided valuable information 
+regarding the measured surface deformation (as depicted in Fig. 5(c)).
+3.4. Input Motion
+The seismic loading input for the shaking table test was chosen as the 
+ground motion recorded at the Wolong Station during the 2008 Wen­
+chuan earthquake. The recorded seismic waves at the Wolong Station 
+encompassed components in the east-west (EW), up-down (UD), and 
+north-south (NS) directions, with peak accelerations of 957.7 cm/s2, 
+948.1 cm/s2, and 652.9 cm/s2, respectively (as detailed in Table 4). 
+Among these components, the EW component from the Wolong Station 
+recordings was selected as the loading input for the shaking table test. 
+The excitation loading direction on the shaking table was aligned with 
+the horizontal X-axis, which indicates the input seismic wave in the X- 
+direction represented a horizontal shear wave. The duration of the 
+seismic wave excitation is 36 s, as depicted in Fig. 6(a). Spectrum 
+analysis revealed that the energy of the seismic wave was primarily 
+concentrated within the time domain of the first 5–10 s and 17–23 s, 
+with the frequency domain being centered around 3–7 Hz, as shown in 
+Fig. 6(b). To evaluate the failure process and failure modes of the slope 
+model under different excitation amplitudes, six loading cases were 
+defined: 0.1 g, 0.2 g, 0.4 g, 0.6 g, 0.8 g, and 1.0 g. These scenarios aimed 
+to investigate the variations in slope dynamic response and damage 
+mechanisms under seismic actions with increasing intensity levels, as 
+well as to compare the failure modes of dip slope and anti-dip slope 
+subjected to seismic forces (Xin et al., 2020). Before initiating each 
+excitation, a Gaussian white noise with an amplitude of 0.05 g was 
+applied to obtain the natural frequencies of the model slope. The loading 
+scheme for the tests is presented in Fig. 6(c).
+4. Analysis of the test results
+4.1. Acceleration amplification factor analysis
+The original acceleration dataset was processed in MATLAB software 
+for baseline correction and bandpass filtering (0.1–60 Hz). For the 
+Fig. 6. Input ground motion and loading scheme for shaking table test: (a) the time history of Wolong seismic wave; (b) the Fourier spectrum of Wolong seismic 
+wave; (c) loading scheme.
+C. Xin et al.                                                                                                                                                                                                                                      
+Engineering Geology 341 (2024) 107707 
+8 
+
+acceleration time history curves, the absolute maximum value was 
+identified as the peak value, which reflects the maximum seismic inertia 
+force within the slope (Yang et al., 2018). The peak horizontal accel­
+eration represented the maximum acceleration in the horizontal direc­
+tion. To provide a better representation of the slope’s response relative 
+to the input wave during seismic action, the concept of dimensionless 
+acceleration amplification factor (AAF) is adopted. The AAF is defined as 
+the ratio of the peak response acceleration at any point within the slope 
+to the peak response acceleration on the shaking table.
+Fig. 7 illustrates the AAF variation along the elevation for both dip 
+slope and anti-dip slope models subjected to different excitation am­
+plitudes. It reveals an increase in the AAF along the slope and at slope 
+surface with relative elevation, indicating a pronounced elevation 
+amplification effect (EAE). The stress state within the interior of the 
+slope remains relatively stable in comparison to the slope surface, 
+demonstrating higher resistance to seismic disturbances. The analysis of 
+AAF values for both the interior and surface of the slopes, as shown in 
+Fig. 7, indicates that the AAF at the slope surface surpasses those within 
+the slope interior. This observation highlights the presence of a surface 
+amplification effect (SAE) in such cases. Moreover, the AAF trends 
+nonlinearly upwards with increasing excitation amplitude, becoming 
+especially noticeable at a 0.4 g threshold. This nonlinear behavior can be 
+attributed to the emergence of cracks in the slope under 0.4 g loading, 
+with each crack acting as a propagation interface for the seismic wave. 
+As seismic waves propagate through these cracks, they undergo complex 
+refraction and reflection, also affected by the uneven distribution of 
+seismic wave energy across time and frequency domains. This results in 
+a nonlinear acceleration response of the slope. Comparing the AAF be­
+tween dip slope and anti-dip slope under excitation amplitudes from 0.1 
+g to 0.6 g, it is evident that the AAF of the dip slope generally exceeds 
+that of the anti-dip slope. However, as the excitation amplitude in­
+creases, the dip slope exhibits earlier failure compared to the anti-dip 
+slope. When the excitation acceleration amplitude reached 1.0 g, se­
+vere damage occurred at the slope shoulder (A8) of the dip slope, with 
+numerous rock blocks falling to the second bench under the action of 
+high-amplitude seismic waves. Tensile cracks appeared at the crest of 
+the slope, in the process of instantaneous dynamic extension, tensile 
+cracks on the slope rapidly propagated, further increasing the slope 
+failure. The occurrence of numerous cracks in the slope fragmented it 
+into loose blocks, reducing the integrity of the slope and lowering its 
+inherent frequency. This leads to an enhanced filtering effect and 
+increased isolation and damping effects on the slope. At this point, the 
+acceleration amplification effect at the dip slope shoulder position (A8) 
+is weaker than that at the anti-dip slope.
+4.2. Fourier spectrum analysis
+In the series of shaking table tests, white noise scans were conducted 
+on both the dip slope and anti-dip slope models before seismic loading. 
+The transfer functions of each slope model were plotted using Matlab. 
+The frequencies corresponding to the peak points of the transfer function 
+curves can be approximately considered as the natural frequencies of the 
+slopes. From Fig. 8(a) and Fig. 8(b), it can be observed that the natural 
+frequency of the dip slope is approximately 22 Hz, while the natural 
+frequency of the anti-dip slope is approximately 25 Hz.
+The Fourier spectrum analysis of the acceleration is conducted to 
+provide a close relationship between the slope’s response and the fre­
+quency of seismic waves. The results indicate that as seismic waves 
+propagate upward through the slope, selective amplification of certain 
+frequency ranges occurs, while other frequency ranges weaken corre­
+spondingly (Che et al., 2016). Comparing the Fourier spectra of the input 
+seismic wave acceleration with the acceleration Fourier spectra at the 
+monitoring points (A8 and A14) for both the dip slope and the anti-dip 
+slope under a 0.6 g excitation amplitude, it is evident that the slope 
+amplifies specific frequency components of the seismic waves, resulting 
+in the observed acceleration amplification. The Fourier spectrum anal­
+ysis of the horizontal acceleration component also reveals that the 
+amplification of acceleration with elevation is attributed to the slope 
+amplifying a particular frequency component of the seismic wave. Sec­
+tions of the slope with a relative elevation h/H ≥0.5 are most 
+Fig. 7. Acceleration amplification factors of dip slope and anti-dip slope models: (a) AAFs of dip slope model for the slope surface; (b) AAFs of dip slope model for the 
+inside of slope body; (c) AAFs of anti-dip slope model for the slope surface; (d) AAFs of anti-dip slope model for the inside of slope body.
+C. Xin et al.                                                                                                                                                                                                                                      
+Engineering Geology 341 (2024) 107707 
+9 
+
+susceptible to frequency amplification changes, making the nonlinear 
+variation of the AAF more pronounced at higher elevation levels. This 
+observation is consistent with the nonlinear AAF model depicted in 
+Fig. 7, underscoring the complex interaction between seismic wave 
+frequencies and slope response.
+The Fourier spectra of seismic wave acceleration exhibit notable 
+differences before and after passing through the slope. A comparison 
+between the response at the monitoring points A8 and A14 shows that 
+the Fourier spectrum amplitude at A8 is lower than that at A14, high­
+lighting the significant influence of elevation on the Fourier spectrum 
+amplitude within the slope. It can also be seen that the amplitude ex­
+hibits a decreasing trend with increasing elevation. In the dip slope, both 
+A8 and A14 exhibit larger Fourier spectrum amplitudes compared to 
+their counterparts in the anti-dip slope. This observation suggests a 
+greater accumulation of energy at the monitoring points within the dip 
+slope, leading to a stronger dynamic response of the slope. Figs. 8(c) and 
+8(d) show that the Fourier spectra at the monitoring points A8 and A14 
+display characteristics of low-frequency absorption relative to the input 
+wave. Under the 0.6 g excitation, the low-frequency absorption rate is 
+10.9 % at monitoring point A8 and 0.41 % at A14 for the dip slope, while 
+Fig. 8. Transfer functions and Fourier analysis of the dip slope and anti-dip slope: (a) transfer function curve of dip slope; (b) transfer function curve of anti-dip slope; 
+(c) Fourier spectrum of acceleration of dip slope at 0.6 g; (d) Fourier spectrum of acceleration of anti-dip slope at 0.6 g. (e) the spectral ratio of dip slope when the 
+input peak acceleration was 0.6 g; (f) the spectral ratio of anti-dip slope when the input peak acceleration was 0.6 g.
+C. Xin et al.                                                                                                                                                                                                                                      
+Engineering Geology 341 (2024) 107707 
+10 
+
+for the anti-dip slope, it is 9.7 % at A8 and 1.5 % at A14. Furthermore, 
+both the slopes exhibit a surge in the amplitude of the Fourier spectrum 
+around 25 Hz, indicating an approximate natural frequency of 25 Hz for 
+the slope. As the seismic wave excitation reaches 0.6 g, the development 
+of numerous cracks affects the integrity of the slope. As discussed before, 
+the seismic wave propagation through the slope results in reflection and 
+refraction, leading to a complex stress field and an amplified amplitude 
+of the high-frequency component. High-frequency component of seismic 
+waves, characterized by shorter periods and higher excitation fre­
+quencies, primarily induce local damage in vulnerable slop areas. The 
+rapid excitations associated with high-frequency seismic waves can 
+trigger shear failure or localized fragmentation within the slope.
+Fig. 8(e) and Fig. 8(f) present the spectral ratios for the dip slope and 
+anti-dip slope when the peak input acceleration reaches 0.6 g. For the 
+dip slope, in the low-frequency range (0-20 Hz), there is minimal vari­
+ation in spectral ratios between the top and bottom of the slope. How­
+ever, in the high-frequency range (frequencies above 20 Hz), there are 
+significant differences in spectral ratios, with the largest difference 
+occurring at 25 Hz. In this series of tests, the dip slope consists of mul­
+tiple structural planes. When seismic waves propagate through these 
+structural planes, multiple reflections and refractions occur, resulting in 
+wavefield superposition. This effect is particularly pronounced at the top 
+of the slope, where the highest degree of freedom exists. Consequently, 
+higher frequency components are generated near the slope top, 
+indicating notable terrain effects. Therefore, for the dip slope, the 
+spectral ratio at the top position (A8) was significantly higher than that 
+at the bottom of the slope (A14) in the high-frequency range. Based on 
+transfer function analysis, the natural frequency of the slope is around 
+25 Hz, which explains the largest difference in spectral ratios at this 
+frequency. Conversely, for the anti-dip slope, there is little variation in 
+spectral ratios between the top and bottom across the entire frequency 
+range. Moreover, the peak spectral ratio of the anti-dip slope is smaller 
+than that of the dip slope, indicating better seismic stability for the anti- 
+dip slope.
+4.3. Identifying seismic damage
+4.3.1. Hilbert-Huang Transform analysis
+In general, seismic waves are characterized by their non-stationary, 
+nonlinear, and time-varying signals, and encompass diverse frequency 
+components that evolve during vibration. Relying solely on the Fourier 
+transform is insufficient for capturing the time characteristics of these 
+frequency components. Therefore, the need for a time-frequency trans­
+formation of seismic waves becomes crucial. The Hilbert-Huang Trans­
+form (HHT) stands out as an optimal tool for analyzing nonlinear and 
+non-stationary signals due to its adaptive and efficient signal decom­
+position capabilities (Fan et al., 2019; Li et al., 2023). Hence, in this 
+study the HHT method is employed to analyze the dynamic response 
+Fig. 9. EMD results of acceleration of A8 measuring point under 0.4 g seismic wave: (a) acceleration；(b) instantaneous frequency.
+C. Xin et al.                                                                                                                                                                                                                                      
+Engineering Geology 341 (2024) 107707 
+11 
+
+characteristics of slopes under seismic actions. Through the HHT 
+method, the relationship between the slope’s dynamic response in terms 
+of time, frequency, and amplitude can be obtained (Chen et al., 2022). 
+The analysis of the dynamic response of dip and anti-dip slopes in the 
+time-frequency domain using the HHT method involves two-step pro­
+cess: Empirical Mode Decomposition (EMD) followed by the Hilbert 
+transform. The EMD process begins by treating the seismic signal as a 
+composite signal composed of distinct Intrinsic Mode Functions (IMFs). 
+By applying the Hilbert transform to these IMF components, the 
+instantaneous frequency spectra of each IMF component can be then 
+obtained. The synthesis of the instantaneous frequency spectra from all 
+IMF components yields the distribution characteristics of the seismic 
+signal in the time-frequency domain, represented by the Hilbert spec­
+trum (as shown in Eq. (3)). 
+H(ω, t) = Re
+∑
+n
+i=1
+ai(t)e
+∫
+ωi(t)dt
+(3) 
+where, ai(t) represents the instantaneous amplitude, ωi(t) represents the 
+instantaneous frequency, and Re denotes the imaginary part of the real 
+number.
+The acceleration time history recorded at the slope shoulder mea­
+surement point (A8) of the dip slope, subjected to the WL seismic wave 
+with an amplitude of 0.4 g, was chosen for EMD processing. Fig. 9
+presents the extracted 7th order IMF components and their corre­
+sponding Fourier spectra. A comparison with the original acceleration 
+time history and its Fourier spectrum reveals that the first four IMF 
+components (IMF1 to IMF4) exhibit more significant amplitudes and 
+encompass a broad spectrum of frequency components. These IMF 
+components replicate the amplitudes and frequencies of the original 
+acceleration time history. Hence, it can be inferred that these first four 
+IMF components represent the primary components of the original ac­
+celeration time history, while the remaining IMF components mainly 
+consist of interference components. This underscores the EMD method’s 
+capability in isolating and removing noise from the seismic signal, 
+thereby enhancing the analysis of seismic wave effects on slope stability.
+Fig. 10 illustrates the Hilbert spectra at various elevations within the 
+dip and anti-dip slopes under the WL seismic wave with a 0.6 g. The 
+horizontal axis represents the vibration duration, and the vertical axis 
+represents the instantaneous frequency, while the color intensity cor­
+responds to the amplitude at specific moments and frequencies. The 
+figure reveals two distinct concentration areas that correspond to the 
+two prominent exciting periods of the input wave. Specifically, under 
+the WL seismic wave with a 0.6 g, these concentration areas primarily 
+occur within the 5–10 s and 17–23 s intervals. The frequency of the slope 
+predominantly ranges between 10 and 25 Hz, with a notable peak 
+around 25 Hz, indicating the HHT method’s capability to depict the 
+propagation characteristics of seismic energy accurately in the time- 
+frequency domain. As the seismic wave propagates from the slope 
+base to its top, the shape and peak values of the Hilbert spectra at 
+different elevations undergo significant changes. The energy concen­
+tration areas gradually expand toward higher frequencies with 
+increasing elevation. At the bottom of the slope (A14), the seismic 
+energy’s low-frequency component (0–20 Hz) mainly distributes around 
+the 6–8 s, while the high-frequency component (30–50 Hz) is predom­
+inantly present around the 8–12 s and 21–23 s intervals. With an in­
+crease in elevation, the amplitude of low-frequency energy gradually 
+diminishes, shifting toward the high-frequency range. Notably, at the 
+slope shoulder (A8), seismic energy concentrates between 20 and 50 Hz, 
+featuring multiple peaks at the 7th, 10th, and 11th seconds. This in­
+dicates that the slope acts as a filter for low-frequency seismic wave 
+energy, while amplifying the high-frequency component. When 
+Fig. 10. Hilbert spectrum of dip slope and anti-dip slope models under 0.6 g horizontal Wolong Wave action: (a) Hilbert spectrum of dip slope model at different 
+measuring points; (b) Hilbert spectrum of anti-dip slope model at different measuring points.
+C. Xin et al.                                                                                                                                                                                                                                      
+Engineering Geology 341 (2024) 107707 
+12 
+
+comparing the Hilbert spectra of the dip and anti-dip slopes at various 
+elevations, it becomes evident that the dip slope exhibits greater seismic 
+energy compared to the anti-dip slope.
+4.3.2. Marginal SPECTRUM analysis
+By performing a time integration of the expression for the Hilbert 
+spectrum, the Hilbert marginal spectrum of the seismic signal can be 
+obtained using the following equation. 
+h(ω, t) =
+∫T
+0
+H(ω, t)dt
+(4) 
+The Hilbert marginal spectrum, reflects the global energy distribu­
+tion of each frequency in the seismic signal (Song et al., 2021a, 2021b, 
+2021c). Fig. 11 illustrates the marginal spectra of the dip and anti-dip 
+slopes subjected to a 0.6 g seismic wave. From Figs. 11(a) and 11(b) it 
+can be observed that the seismic wave frequency components at 
+different elevations of the slope exhibit significant differences, espe­
+cially between the upper and lower parts of the slope. As elevation in­
+creases (A14-A8), the marginal spectrum’s amplitude shows an upward 
+trend. The lower part of the slope concentrates energy in the low- 
+frequency range (3–5 Hz), while the middle and upper parts of the 
+slope exhibit energy concentration within 6–10 Hz. The marginal 
+spectrum at measurement point A14 increases slowly, indicating mini­
+mal damage occurred at the slope toe under the 0.6 g seismic wave. With 
+increasing the elevation, the peak amplitude of the marginal spectrum 
+shifts toward higher frequencies. High-frequency components primarily 
+induce localized slope deformation. This change alters the marginal 
+spectrum’s shape and the emergence of multiple peaks (e.g., A8), indi­
+cating damage at that location. Figs. 11(c) and 11(d) depict the evolu­
+tion of the peak marginal spectrum amplitude (PMSA) for the dip and 
+anti-dip slopes under different excitation amplitudes, revealing the 
+progressive failure process. Minor changes in PMSA imply slight dam­
+age, while sharp changes indicate significant damage. As shown in 
+Fig. 11(c), for the dip slope, slight PMSA reductions under 0.1–0.2 g 
+loading indicate limited seismic energy propagation and minor damage. 
+When the excitation amplitude ranges from 0.4 g to 0.6 g, PMSA starts to 
+increase rapidly, especially in the upper slope (A12 and A8) with growth 
+rates of 75 % and 114 %, respectively. This indicates a more dominant 
+filtering effect on the seismic wave, accelerating cumulative slope fail­
+ure. Once the excitation amplitude surpasses 0.6 g, PMSA exhibits a 
+decreasing trend at each measurement point, making 0.6 g as a “turning 
+point” for severe slope damage, with A12 and A8 experiencing the most 
+significant amplitude decreases at rates of 25 % and 50 %, respectively. 
+Fig. 11(d) shows that, for the anti-dip slope, as the excitation amplitude 
+ranges from 0.4 g to 0.6 g, PMSA increases rapidly. This results in an 
+accumulating damage that reduces stiffness and increases damping 
+ratio. Once the excitation amplitude exceeds 0.6 g, PMSA at each 
+measurement point displays a decreasing trend. Notably, A13 and A8 
+exhibit the largest amplitude decreases at rates of 66 % and 52 %, 
+respectively. These results indicate that in the case of dip slope major 
+damage generally occurs at the shoulder (A8), while for the anti-dip 
+slope, significant damage is observed at the second bench (A13) under 
+seismic excitations.
+4.4. Comparison of failure modes
+During the shaking table tests, high-speed cameras were employed to 
+capture the deformation of the slope models at each stage of seismic 
+loading, facilitating comparative analysis of failure modes between dip 
+and anti-dip rock slopes (Xin et al., 2024b). In general, the shaking table 
+tests revealed a distinct superiority in the stability of the anti-dip slope 
+when compared to the dip slope.
+Fig. 11. Marginal spectrum and PMSA of the dip slope model and anti-dip slope model: (a) marginal spectrum of the dip slope model; (b) marginal spectrum of the 
+anti-dip slope model; (c) PMSA variation pattern of dip slope model under different excitation amplitudes; (d) PMSA variation pattern of anti-dip slope model under 
+different excitation amplitudes.
+C. Xin et al.                                                                                                                                                                                                                                      
+Engineering Geology 341 (2024) 107707 
+13 
+
+Fig. 12. The failure phenomena of dip model slope subjected to multi-stage seismic excitations: (a) failure phenomena of dip model slope at 0.4 g; (b) failure 
+phenomena of dip model slope at 0.6 g; (c) failure phenomena of dip model slope at 0.8 g; (d) failure phenomena of dip model slope at 1.0 g.
+C. Xin et al.                                                                                                                                                                                                                                      
+Engineering Geology 341 (2024) 107707 
+14 
+
+The failure processes of dip and anti-dip slopes are illustrated in 
+Fig. 12 and Fig. 13. For the dip slope, the sequence of failure begins at an 
+excitation amplitude of 0.2 g, where stress concentration and the inertia 
+force of the earthquake initiate tension cracks at the internal corner of 
+the second bench and shear cracks along the structural planes near the 
+slope surface. As the excitation amplitude increased to 0.4 g, the cracks 
+at the internal corner of the second bench widened, causing some rock 
+particles to fall from the slope shoulder. Continuous seismic wave action 
+resulted in cracks appearing at the internal corner of the first bench. 
+When viewed from the slope side, cracks developed along the structural 
+planes near the slope surface. The propagation of seismic waves through 
+the structural planes caused stress concentration and redistribution 
+along the planes, generating tensile stress and the downward extension 
+of cracks along the planes. In rock slopes, cracks typically follow the 
+development of existing joints as they extend downward, leading to 
+increased depth and slope stability deterioration as depicted in Fig. 12
+(a). At an excitation amplitude of 0.6 g and under the tensile-shear stress 
+of the seismic waves, cracks at the internal corner of each bench 
+widened, and shear cracks appeared at the slope top (see Fig. 12(b)). At 
+an excitation amplitude of 0.8 g, when viewed from the slope side, 
+cracks that developed along the structural planes alternated between 
+opening and closing due to the tensile-shear action of the seismic waves, 
+and deformation extended into the deeper parts of the slope. The 
+structural planes near the slope surface experienced a maximum sepa­
+ration of 4 mm under the seismic forces, indicating a strong tendency for 
+sliding and detachment along the structural planes away from the slope. 
+The emergence of numerous cracks parallel to the structural planes, 
+increasing in density with elevation, as well as distinct movement to­
+ward the free surface of the slope above the boundary of the second 
+bench suggests increased settlement and localized damage in this area. 
+However, the region below this boundary (the first and second benches) 
+remains relatively stable with minimal settlement. This indicates that 
+the wider bench plays a key role in impeding the dynamic response and 
+failure of the slope, limiting potential overall instability to localized 
+damage. The wider platform also facilitates as a catchment for dislodged 
+rock debris from the upper part, and hence contributes to slope stability 
+(as depicted in Fig. 12(c)). When the excitation amplitude reached 1.0 g, 
+the slope shoulder suffered severe damage. At this stage, extensive rock 
+block fell to the second bench while tension cracks were formed at the 
+slope top, indicating dynamic extension with an 8 mm opening 
+displacement. The settlement difference across the second bench 
+boundary was intensified, and the slope toe exhibited bulging (see 
+Fig. 12(d)), indicating advanced stages of failure under high-amplitude 
+seismic activity.
+In contrast, the failure process of the anti-dip slope unfolds as fol­
+lows: Initially, at an excitation amplitude of 0.2 g, no cracks were 
+observed on the slope due to the relatively low seismic energy. When the 
+amplitude increased to 0.4 g, the instantaneous high-energy excitation 
+intensified stress concentration at the internal of the bench, particularly 
+affecting the second wider platform with higher seismic inertia force. 
+This resulted in the initiation of tension cracks at the internal corner of 
+the second bench and the slope toe. These cracks then propagated along 
+the structural planes, and shear cracks parallel to the structural planes 
+appeared on the slope’s side as shown in Fig. 13(a). Upon increasing the 
+excitation amplitude to 0.6 g, existing cracks deepened and widened due 
+to the repeated tensile-shear action of the seismic waves. These cracks 
+extended into the slope with a depth of 15 mm and a width of approx­
+imately 2 mm along the structural planes. Additionally, a tension crack 
+appeared at the slope top, extending downwards to the internal corner of 
+the third bench as depicted in Fig. 13(b). The slope experienced uneven 
+settlement across different elevations, with larger settlement observed at 
+higher elevations (third bench and slope top) compared to the lower 
+elevations (first bench and second bench). By subsequent increase of the 
+excitation amplitude to 0.8 g, tension cracks appeared at the internal 
+corner of each bench and the slope toe. These cracks propagated 
+downward, segmenting the slope into blocks and fragmenting its inter­
+nal structure, which significantly compromised its overall integrity. The 
+seismic waves underwent reflection and refraction through multiple 
+crack interfaces, creating a complex stress field, while increasing the 
+filtering effect of the slope (see Fig. 13(c)). When the excitation ampli­
+tude reached 1.0 g, the intensified seismic activity further deepened and 
+widened the cracks at the internal corner of the second bench to a depth 
+of 100 mm and a width of 3 mm. Numerous cracks parallel to the 
+shaking direction appeared on the slope, further contributing to signif­
+icant uneven settlement. The slope top settled by 35 mm, while the 
+second bench settled by 15 mm. Moreover, the rear of the slope 
+continued to experience tension cracking, moving away from the 
+absorbing boundary. The slope toe underwent intense deformation, 
+resulting in noticeable bulging, accompanied by tension cracks at the 
+bulging section as shown in Fig. 13(d).
+Fig. 14 presents the final failure phenomena of the dip and anti-dip 
+slopes after experiencing various seismic excitations. A comparative 
+analysis of the failure dynamics under these conditions shows a variance 
+in the onset acceleration for dynamic deformation between the slopes. 
+Specifically, the results indicate that tensile cracks occur at the internal 
+corner of second bench and shear cracks along the structural plane in the 
+Fig. 12. (continued).
+C. Xin et al.                                                                                                                                                                                                                                      
+Engineering Geology 341 (2024) 107707 
+15 
+
+Fig. 13. The failure phenomena of anti-dip slope model subjected to multi-stage seismic excitations: (a) failure phenomena of anti-dip slope at 0.4 g; (b) failure 
+phenomena of anti-dip slope at 0.6 g; (c) failure phenomena of anti-dip slope at 0.8 g; (d) failure phenomena of anti-dip slope at 1.0 g.
+C. Xin et al.                                                                                                                                                                                                                                      
+Engineering Geology 341 (2024) 107707 
+16 
+
+dip slope model at an excitation amplitude of 0.2 g. Conversely, the anti- 
+dip slope model demonstrates tensile cracks at the internal corner of 
+second bench and slope toe at an excitation amplitude of 0.4 g. More­
+over, distinct dynamic failure modes are exhibited by the dip and anti- 
+dip slope models. The dynamic failure of the dip slope is primarily 
+categorized as tensile sliding along the structural plane, leading to 
+rockfall at the slope shoulder and fragmentation at the slope top. 
+Conversely, the dynamic failure mode of the anti-dip slope mainly 
+presents as cracks along the internal corner of the second bench, 
+extending downward along the structural plane, and bulging at the front 
+edge of the slope toe.
+The observed failure characteristics at each loading increment allow 
+for the categorization of the slope failure process into distinct stages (Liu 
+et al., 2021; Zang et al., 2022). For the dip slope, the failure process 
+encompasses the following stages: elastic failure stage (0.1–0.2 g), 
+plastic failure stage (0.2–0.6 g), cumulative failure stage (0.6–0.8 g), and 
+shear sliding failure stage (0.8–1.0 g). On the other hand, the failure 
+process of the anti-dip slope comprises the elastic failure stage (0.1–0.4 
+g), plastic failure stage (0.4–0.6 g), cumulative failure stage (0.6–0.8 g), 
+and instability failure stage (0.8–1.0 g).
+5. Discussion
+5.1. Structural plane angle influence factor
+To quantify the differences in dynamic responses between the dip 
+and anti-dip slopes, a dimensionless coefficient called “structural plane 
+angle influence coefficient” (Ra) is introduced. Ra is defined as the ratio 
+of the AAF at the same monitoring point in the dip slope model to that in 
+the anti-dip slope model as shown in the following equation: 
+Ra = AAFb
+AAFa
+(5) 
+where, AAFb represents the AAF of the dip slope, and AAFa is the AAF of 
+the anti-dip slope.
+Fig. 15 illustrates the impact of variations in the structural plane 
+angle on the acceleration response in the dip and anti-dip slope models. 
+Upon comparing Figs. 15(a) and 15(b), it is observed that when the 
+excitation amplitude reaches 0.4 g, the acceleration response at moni­
+toring point A8 in the dip slope is lower than that in the anti-dip slope 
+(Ra < 1.0). This finding suggests that the dip slope has already experi­
+enced failure at the slope shoulder at 0.4 g, leading to reduced slope 
+integrity and an enhanced the filtering effect. At the monitoring point 
+A6, positioned at the external corner of the third bench, the dynamic 
+response difference between the dip and anti-dip slopes becomes more 
+pronounced with increasing excitation amplitude, peaking at 1.0 g with 
+Ra = 1.11. Conversely, at the same elevation within the slope, specif­
+ically monitoring point A12, the distinction in dynamic response be­
+tween the dip and anti-dip slopes remains minimal during small 
+amplitude excitations (0.2–0.4 g). However, once the excitation ampli­
+tude reaches 0.6 g, the difference in dynamic response between the dip 
+and anti-dip slopes reaches its maximum with Ra = 1.05, and as exci­
+tation amplitude increases further, this difference gradually decreases. 
+This pattern indicates that at the earthquake intensity level of 0.6 g, the 
+dip slope has developed numerous cracks, especially where relative 
+elevation h/H > 0.5, absorbing high seismic energy and diminishing 
+dynamic response in the affected areas. Therefore, 0.6 g represents the 
+critical excitation amplitude for severe slope failure. At the monitoring 
+point A4, positioned at the second bench, and the monitoring point A13, 
+situated at the same elevation, the difference in dynamic response be­
+tween the dip and anti-dip slopes gradually decreases as the excitation 
+amplitude increases. Regarding the monitoring point A2, located at the 
+first bench, minimal differences in dynamic response between the dip 
+and anti-dip slopes are observed during small amplitude excitations 
+(0.2–0.4 g). Once the excitation amplitude reaches 0.6 g, both slopes 
+exhibit maximum dynamic response with Ra = 1.08. Subsequently, as 
+the excitation amplitude continues to increase, the difference in dy­
+namic response between the dip and anti-dip slopes gradually di­
+minishes. At the monitoring point A14, a peak Ra value of 1.07 is 
+observed at 0.6 g excitation. This suggests that when h/H < 0.5 and 
+during lower amplitude excitations (0.2–0.4 g), the influence of the 
+structural plane angle on the slope’s dynamic response is relatively 
+minor. However, as the excitation amplitude reaches 0.6 g, the tendency 
+for sliding along the structural plane becomes apparent in the dip slope, 
+and the distinction in dynamic response between the dip and anti-dip 
+slopes becomes more pronounced.
+5.2. Arias intensity
+This section aims is to obtain a critical excitation amplitude that can 
+effectively capture the variation process of the slope’s dynamic 
+response. This is achieved by integrating the acceleration, Arias in­
+tensity, and the dynamic characteristics of the model slopes during the 
+excitation process. Arias intensity, initially proposed by Arias in 1970, is 
+calculated by integrating the squared acceleration values recorded by a 
+Fig. 13. (continued).
+C. Xin et al.                                                                                                                                                                                                                                      
+Engineering Geology 341 (2024) 107707 
+17 
+
+Fig. 14. The final failure phenomena and failure process of dip and anti-dip slopes: (a) the final failure phenomena of dip slope; (b) the final failure phenomena of 
+anti-dip slope; (c) the failure process of dip slope; (d) the failure process of anti-dip slope.
+C. Xin et al.                                                                                                                                                                                                                                      
+Engineering Geology 341 (2024) 107707 
+18 
+
+strong motion seismograph over the duration of vibration (Bradley, 
+2015). Unlike peak acceleration, Arias intensity considers additional 
+factors such as seismic motion amplitude, duration, and frequency, of­
+fering a more comprehensive representation of the seismic energy 
+released at the recording site, as shown in Eq. (6). 
+Ia = π
+2g
+∫Td
+0
+[a(t) ]2dt
+(6) 
+where, Ia represents the Arias intensity; and Td is the duration recorded 
+by the strong motion seismograph.
+Fig. 16 depicts the variation of Arias intensity over time for the dip 
+and anti-dip slopes under an excitation amplitude of 0.6 g, reflecting the 
+energy release process of the seismic waves on the slopes. A clear trend 
+of increasing Arias intensity with elevation is observed from monitoring 
+points A14-A8 on both slopes. This trend is a direct result of the positive 
+correlation between Arias intensity and acceleration in the time domain, 
+signifying an elevation amplification effect (EAE). The seismic waves 
+exhibit an initial energy release concentrated within the time range of 
+5–10 s, followed by a secondary energy release occurring between 17 
+and 23 s and aligned with the timing of the two energy releases in the 
+acceleration time history. As shown in Fig. 16(b), the initial energy 
+release rate at the monitoring point A8 on the dip slope reaches 70 %, 
+while the subsequent energy release rate is 23 %. Fig. 16(d) shows that 
+Fig. 15. The Ra for the slope surface and the inside of slope body at different excitation amplitudes: (a) The Ra for the slope surface at different excitation amplitudes; 
+(b) The Ra for the inside of slope body at different excitation amplitudes.
+Fig. 16. Time-history curves of Arias intensity for dip and anti-dip slopes: (a) Arias intensity at monitoring points A14 and A13 in the dip slope; (b) Arias intensity at 
+monitoring points A12 and A8 in the dip slope; (c) Arias intensity at monitoring points A14 and A13 in the anti-dip slope; (d) Arias intensity at monitoring points A12 
+and A8 in the anti-dip slope.
+C. Xin et al.                                                                                                                                                                                                                                      
+Engineering Geology 341 (2024) 107707 
+19 
+
+at the same monitoring point on the anti-dip slope, the initial energy 
+release rate is 62 %, with the secondary energy release rate equal to 20 
+%. The dip slope in this case exhibits a higher energy release rate than 
+the anti-dip slope, which can be attributed to their distinct propagation 
+and reflection behavior of seismic waves. As seismic waves propagate 
+into the dip slope, they encounter less damping and scattering due to the 
+alignment of geological layers with the slope inclination direction. This 
+propagation characteristic fosters energy accumulation within the dip 
+slope and facilitates more effective energy release into the slope body, 
+contributing to an elevated energy release rate. Conversely, the anti-dip 
+slope features geological layers opposing the slope inclination, leading 
+to more damping and scattering during wave propagation, resulting in a 
+lower energy release rate compared to the dip slope. Notably, the initial 
+energy release rate of the Wolong seismic wave significantly surpasses 
+the secondary energy release rate, indicating that slope failure is pri­
+marily triggered by the initial strong energy release of the Wolong wave.
+Fig. 17 presents a synthesis of acceleration, Hilbert-Huang Transform 
+(HHT), and Arias intensity parameters for both dip and anti-dip slopes, 
+enabling a comprehensive analysis of their seismic response in the time 
+domain. Acceleration serves as direct observation data for seismic mo­
+tion, while HHT analysis shows the influence of different frequency 
+components on the slope, and Arias intensity is used as an indicator of 
+seismic motion intensity. The time history of Arias intensity is 
+segmented into distinct stages, including the initial stage, the mainshock 
+stage, and the aftershock stage, each representing different stages of 
+seismic wave energy release. By synthesizing the analysis of these three 
+parameters, a more thorough evaluation of the slope’s seismic response 
+characteristics can be achieved, which provides valuable insights for 
+slope engineering design and seismic hazard risk management.
+6. Conclusion
+This study aimed to investigate the dynamic response of both dip and 
+anti-dip rock slopes, through seismic simulations on a shaking table, 
+with incremental loading using the Wolong wave. The conducted anal­
+ysis covered time domain characteristics of the acceleration, frequency 
+domain characteristics, and time-frequency characteristics. Addition­
+ally, by integrating the analysis of acceleration, Arias intensity, and the 
+dynamic characteristics of the model slopes during the excitation pro­
+cess, the critical excitation amplitude for each case was determined. The 
+key findings of this study are summarized as follows:
+(1) Under the action of 0.6 g WL wave, notable differences in the 
+Hilbert spectra between dip and anti-dip slopes were observed. 
+With increasing elevation, the energy concentration area 
+expanded progressively toward higher frequencies. The seismic 
+wave energy amplitude was greater in the dip slope compared to 
+the anti-dip slope, however, differences in their time and fre­
+quency domain distributions remained minimal.
+(2) Significant differences in marginal spectra were observed be­
+tween the dip and anti-dip slopes when subjected to the 0.6 g WL 
+wave. During the 0.4–0.6 g loading, the dip slope exhibited 
+accelerated failure, with the most severe damage occurring at the 
+upper parts. Similarly, the anti-dip slope showed increased 
+damage within the same loading range, particularly at the second 
+bench. The 0.6 g threshold represented a “turning point” for 
+substantial slope failure, characterized by significant damage to 
+the shoulder of the dip slope and severe damage to the second 
+bench of the anti-dip slope.
+(3) The introduction of the dimensionless coefficient “structural 
+plane angle influence coefficient”Ra enabled a quantitative 
+characterization of the dynamic response differences between the 
+dip and anti-dip slopes. At relative elevations h/H < 0.5 and 
+lower excitation amplitudes (0.2–0.4 g), the impact of the 
+structural plane angle on the slope’s dynamic response was 
+relatively insignificant. However, upon reaching 0.6 g excitation 
+amplitude, sliding tendencies along the structural plane in the dip 
+slope becomes more evident, underscoring distinct dynamic 
+response differences between the slope types. This observation 
+firmly establishes the 0.6 g excitation amplitude as the critical 
+threshold beyond which severe damage to slopes is likely to 
+occur.
+(4) The Arias intensity of the slopes demonstrated an elevation- 
+dependent amplification effect, with the dip slope exhibiting a 
+higher rate of energy release compared to the anti-dip slope. This 
+suggests that the dip slope is more susceptible to seismic motion, 
+characterized by enhanced energy accumulation and release, 
+thereby escalating the potential for slope failure.
+It should be noted that the findings presented in this study are spe­
+cific to the conditions of the slopes examined here. Nevertheless, the 
+general conclusions are expected to be applicable to various types of dip 
+and anti-dip rock slopes. These insights should prove useful for more 
+efficient design and assessment of such systems. By understanding the 
+Fig. 17. Hilbert spectrum and Arias intensity at monitoring point A8 during 
+horizontal Wolong wave loading in dip and anti-dip slopes: (a) Hilbert spectrum 
+and Arias intensity at monitoring point A8 during horizontal Wolong wave 
+loading in dip slope; (b) Hilbert spectrum and Arias intensity at monitoring 
+point A8 during horizontal Wolong wave loading in anti-dip slope.
+C. Xin et al.                                                                                                                                                                                                                                      
+Engineering Geology 341 (2024) 107707 
+20 
+
+critical excitation thresholds and dynamic responses, engineers and 
+geologists can better predict and mitigate potential slope failures, 
+enhancing the safety and stability of rock slopes in seismic regions.
+CRediT authorship contribution statement
+Chunlei Xin: Writing – review & editing, Supervision, Resources, 
+Project administration, Investigation, Funding acquisition, Conceptual­
+ization. Wenhui Li: Writing – original draft, Formal analysis, Data 
+curation. Zhao Wang: Writing – review & editing, Validation, Super­
+vision, Project administration, Methodology, Formal analysis, Concep­
+tualization. 
+Wenkai 
+Feng: 
+Investigation, 
+Resources. 
+Iman 
+Hajirasouliha: Writing – review & editing. Xinyuan Yu: Writing – re­
+view & editing, Visualization.
+Declaration of competing interest
+The authors declare that they have no known competing financial 
+interests or personal relationships that could have appeared to influence 
+the work reported in this paper.
+Data availability
+Data will be made available on request.
+Acknowledgements
+This research was supported by the National Natural Science Foun­
+dation of China (Grant No. 52108361), the Sichuan Science and Tech­
+nology 
+Program 
+of 
+China 
+(Grant 
+No. 
+2023YFS0436 
+and 
+2024NSFSC0159), and the State Key Laboratory of Geohazard Preven­
+tion and Geoenvironment Protection Independent Research Project 
+(Grant No. SKLGP2022Z015). All authors acknowledge the anonymous 
+reviewers for their comments.
+References
+Bao, Y.J., Huang, Y., Zhu, C.Q., 2021. Effects of near-fault ground motions on dynamic 
+response of slopes based on shaking table model tests. Soil Dyn. Earthq. Eng. 149.
+Bradley, B.A., 2015. Correlation of Arias intensity with amplitude, duration and 
+cumulative intensity measures. Soil Dyn. Earthq. Eng. 78, 89–98.
+Che, A.L., Yang, H.K., Wang, B., Ge, X.R., 2016. Wave propagations through jointed rock 
+masses and their effects on the stability of slopes. Eng. Geol. 201, 45–56.
+Chen, C.C., Li, H.H., Chiu, Y.C., Tsai, Y.K., 2020. Dynamic response of a physical anti-dip 
+rock slope model revealed by shaking table tests. Eng. Geol. 277, 105772.
+Chen, J.C., Wang, L.M., Wang, P., Che, A.L., 2022. Failure mechanism investigation on 
+loess-mudstone landslides based on the Hilbert-Huang transform method using a 
+large-scale shaking table test. Eng. Geol. 302, 106630.
+Chen, J.C., Che, A.L., Wang, L.M., 2023. Cumulative damage evolution rule of rock slope 
+based on shaking table test using VMD-HT. Eng. Geol. 314, 107003.
+Cui, S.H., Pei, X.J., Yang, H.L., Zhu, L., Jiang, Y., Zhu, C., Jiang, T., Huang, R.Q., 2023. 
+Bedding slope damage accumulation induced by multiple earthquakes. Soil Dyn. 
+Earthq. Eng. 173.
+Cui, S.H., Pei, X.J., Huang, R.Q., Zhu, L., Yang, H.L., Liang, Y.F., Zhu, C., 2024. The 
+analysis of seismic induced progressive instability and failure mechanisms: a case 
+study. Int. J. Rock Mech. Min. Sci. 174.
+Dong, J.Y., Wang, C., Huang, Z.Q., Yang, J.H., Xue, L., 2022. Shaking Table Model Test to 
+Determine Dynamic Response Characteristics and failure Modes of Steep Bedding 
+Rock Slope. Rock Mech. Rock. Eng. 55 (6), 3645–3658.
+Fan, G., Zhang, J.J., Wu, J.B., Yan, K.M., 2016. Dynamic Response and Dynamic failure 
+Mode of a Weak Intercalated Rock Slope using a Shaking Table. Rock Mech. Rock. 
+Eng. 49 (8), 3243–3256.
+Fan, G., Zhang, L.M., Zhang, J.J., Yang, C.W., 2019. Analysis of Seismic Stability of an 
+Obsequent Rock Slope using Time-Frequency Method. Rock Mech. Rock. Eng. 52 
+(10), 3809–3823.
+He, J.X., Qi, S.W., Wang, Y.S., Saroglou, C., 2020. Seismic response of the Lengzhuguan 
+slope caused by topographic and geological effects. Eng. Geol. 265.
+Hu, W., Xin, C.L., Li, Y., Zheng, Y.S., van Asch, T.W.J., McSaveney, M., 2021. 
+Instrumented flume tests on the failure and fluidization of tailings dams induced by 
+rainfall infiltration. Eng. Geol. 294, 106401.
+Hu, X.L., Liu, D.Z., Zheng, W.B., Tannant, D., Kang, C., 2024. 1-g physical modeling in 
+engineering geology and its application of pile-reinforced reservoir landslides. Eng. 
+Geol. 331, 107450.
+Li, L.Q., Ju, N.P., Sheng, D.C., 2023. Seismic performance and failure mechanism of 
+interbedded slopes with steep rock layers. Eng. Geol. 326, 107312.
+Liu, H.D., Zhao, Y.W., Dong, J.Y., Wang, Z.F., 2021. Experimental study of the dynamic 
+response and failure mode of anti-dip rock slopes. Bull. Eng. Geol. Environ. 80 (8), 
+6583–6596.
+Ning, Y.B., Zhang, G.C., Tang, H.M., Shen, W.C., Shen, P.W., 2019. Process analysis of 
+toppling failure on anti-dip rock slopes under seismic load in Southwest China. Rock 
+Mech. Rock. Eng. 52 (11), 4439–4455.
+Qi, S.W., He, J.X., Zhan, Z.F., 2022. A single surface slope effects on seismic response 
+based on shaking table test and numerical simulation. Eng. Geol. 306, 106762.
+Song, D.Q., Che, A.L., Zhu, R.J., Ge, X.R., 2019. Natural Frequency Characteristics of 
+Rock Masses Containing a complex Geological Structure and their Effects on the 
+Dynamic Stability of Slopes. Rock Mech. Rock. Eng. 52 (11), 4457–4473.
+Song, D.Q., Liu, X.L., Huang, J., Zhang, J.M., 2021a. Energy-based analysis of seismic 
+failure mechanism of a rock slope with discontinuities using Hilbert-Huang 
+transform and marginal spectrum in the time-frequency domain. Landslides 18 (1), 
+105–123.
+Song, D.Q., Liu, X.L., Huang, J., Zhang, Y.F., Zhang, J.M., Nkwenti, B.N., 2021b. Seismic 
+cumulative failure effects on a reservoir bank slope with a complex geological 
+structure considering plastic deformation characteristics using shaking table tests. 
+Eng. Geol. 286, 106085.
+Song, D.Q., Liu, X.L., Li, B., Zhang, J.M., Bastos, J.J.V., 2021c. Assessing the influence of 
+a rapid water drawdown on the seismic response characteristics of a reservoir rock 
+slope using time–frequency analysis. Acta Geotech. 16 (4), 1281–1302.
+Tai, D.P., Qi, S.W., Zheng, B.W., Luo, G.M., He, J.X., Guo, S.F., Zou, Y., Wang, Z., 2024. 
+Effect of excitation frequency and joint density on the dynamic amplification effect 
+of slope surface on jointed rock slopes. Eng. Geol. 330, 107385.
+Wen, Y.M., Xin, C.L., Shen, Y.S., Huang, Z.M., Gao, B., 2021. The seismic response 
+mechanisms of segmental lining structures applied in fault-crossing mountain 
+tunnel: the numerical investigation and experimental validation. Soil Dyn. Earthq. 
+Eng. 151, 107001.
+Xin, C.L., Wang, Z.Z., Gao, B., 2018. Shaking table tests on seismic response and damage 
+mode of tunnel linings in diverse tunnel-void interaction states. Tunn. Undergr. 
+Space Technol. 77, 295–304.
+Xin, C.L., Wang, Z.Z., Zhou, J.M., Gao, B., 2019. Shaking table tests on seismic behavior 
+of polypropylene fiber reinforced concrete tunnel lining. Tunn. Undergr. Space 
+Technol. 88, 1–15.
+Xin, C.L., Wang, Z.Z., Yu, J., 2020. The evaluation on shock absorption performance of 
+buffer layer around the cross section of tunnel lining. Soil Dyn. Earthq. Eng. 131, 
+106032.
+Xin, C.L., Wang, Z., Hajirasouliha, I., Yang, F., Li, W.H., Chen, T., Gao, B., 2022. Seismic 
+response mechanisms of casing-shape composite tunnel lining: Theoretical analysis 
+and shaking table test verification. Soil Dyn. Earthq. Eng. 162, 107440.
+Xin, C.L., Shuai, Y.X., Song, D.Q., Liu, X.L. 2024a. Dynamic interaction and failure 
+mechanism in tunnel-slope systems: Mitigation insights from shaking table tests and 
+numerical analysis. Tunnelling and Underground Space Technology. 152. 105940.
+Xin, C.L., Yang, F., Feng, W.K., Wang, Z., Li, W.H., 2024b. Seismic responses and 
+shattering cumulative effects of bedding parallel stepped rock slope: Model test and 
+numerical simulation. J. Rock Mech. Geotech. Eng. 1614, 31. https://doi.org/ 
+10.1016/j.jrmge.2024.03.031.
+Xu, X., Huang, Y., Yashima, A., Du, X.L., 2022. Failure evolution process of pile-anchor 
+reinforced rock slope based on centrifuge shaking table tests. Eng. Geol. 311, 
+106920.
+Xu, M., Yu, X.Y., Pan, Y.H., Liu, X.S., Zhao, Y.P., Hu, J.J., 2023. Analysis of the seismic 
+dynamic response and failure mode of the Layue landslide. Landslides 20 (6), 
+1135–1148.
+Yang, G.X., Qi, S.W., Wu, F.Q., Zhan, Z.F., 2018. Seismic amplification of the anti-dip 
+rock slope and deformation characteristics: a large-scale shaking table test. Soil Dyn. 
+Earthq. Eng. 115, 907–916.
+Yang, H.L., Cui, S.H., Pei, X.J., Fan, X.M., Lei, J., 2023a. Multiple earthquake-induced 
+progressive failure of bedding slopes with a saturated weak layer: Shaking table 
+model tests. Soil Dyn. Earthq. Eng. 170, 107906.
+Yang, C.W., Tong, X.H., Chen, G.P., Yuan, C., Lian, J., 2023b. Assessment of seismic 
+landslide susceptibility of bedrock and overburden layer slope based on shaking 
+table tests. Eng. Geol. 323, 107197.
+Zang, M.D., Yang, G.X., Dong, J.Y., Qi, S.W., He, J.X., Liang, N., 2022. Experimental 
+study on seismic response and progressive failure characteristics of bedding rock 
+slopes. J. Rock Mech. Geotech. Eng. 14 (5), 1394–1405.
+Zhao, L.Y., Huang, Y., Hu, H.Q., 2020. Stochastic seismic response of a slope based on 
+large-scale shaking-table tests. Eng. Geol. 277, 105782.
+C. Xin et al.                                                                                                                                                                                                                                      
+Engineering Geology 341 (2024) 107707 
+21 

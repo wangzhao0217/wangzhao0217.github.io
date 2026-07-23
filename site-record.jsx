@@ -56,6 +56,22 @@ function Publications() {
   const lang = window.useLang();
   const t = (v) => window.tx(v, lang);
   const [filter, setFilter] = React.useState("All");
+  const [rsIndex, setRsIndex] = React.useState({});
+
+  // Load ResearchStudio index and build DOI → blog_en map
+  React.useEffect(() => {
+    fetch("assets/paper_content/researchstudio_index.json")
+      .then(r => r.json())
+      .then(data => {
+        const map = {};
+        data.forEach(entry => {
+          if (entry.doi && entry.blog_en) map[entry.doi] = entry;
+        });
+        setRsIndex(map);
+      })
+      .catch(() => {});
+  }, []);
+
   const filters = [["All", S.ui.pubs.all], ["Journal", S.ui.pubs.journal], ["Conference", S.ui.pubs.conference]];
   const list = S.publications.filter((p) => filter === "All" || p.type === filter);
 
@@ -81,9 +97,17 @@ function Publications() {
       </div>
       <div>
         {list.map((p, i) => {
-          const links = p.doi
-            ? [{ label: t(S.ui.pubs.doi), href: `https://doi.org/${p.doi}`, icon: <Icon name="link-45deg" /> }]
-            : [{ label: t(S.ui.pubs.find), href: `https://www.researchgate.net/search/publication?q=${encodeURIComponent(p.title)}`, icon: <Icon name="search" /> }];
+          const rsEntry = p.doi ? rsIndex[p.doi] : null;
+          const blogFile = rsEntry ? (lang === "zh" ? rsEntry.blog_zh : rsEntry.blog_en) : null;
+          const links = [];
+          if (p.doi) {
+            links.push({ label: t(S.ui.pubs.doi), href: `https://doi.org/${p.doi}`, icon: <Icon name="link-45deg" /> });
+          } else {
+            links.push({ label: t(S.ui.pubs.find), href: `https://www.researchgate.net/search/publication?q=${encodeURIComponent(p.title)}`, icon: <Icon name="search" /> });
+          }
+          if (blogFile) {
+            links.push({ label: t(S.ui.sections.rsNotesLabel), href: blogFile, icon: <Icon name="journal-text" /> });
+          }
           const typeLabel = p.type === "Conference" ? t(S.ui.pubs.conference) : t(S.ui.pubs.journal);
           return (
             <PublicationItem key={i} year={p.year} authors={p.authors} title={p.title} venue={p.venue}

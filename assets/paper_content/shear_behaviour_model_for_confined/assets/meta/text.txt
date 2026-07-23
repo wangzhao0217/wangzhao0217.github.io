@@ -1,0 +1,1950 @@
+Shear Behavior Model for FRP-Confined
+and Unconfined Rubberized Concrete
+Zhao Wang1; Lin Chen2; Maurizio Guadagnini3; and Kypros Pilakoutas4
+Abstract: This paper presents the experimental and numerical results of an ongoing investigation aimed at developing high-strength,
+high-deformability fiber-reinforced polymer (FRP) confined rubberized concrete (CRuC) suitable for structural applications. The rubberized
+concrete (RuC) utilizes recycled rubber particles as a replacement for both fine and coarse aggregates. Rubber aggregates reduce the
+compressive strength and stiffness of RuC, thus limiting its application for structural purposes. Confining RuC with FRP jackets recovers
+strength and enables the development of high deformability, ductility, and energy dissipation capacity. Recent research mainly focuses on the
+axial performance of RuC and CRuC, but little work exists on the shear behavior of this flexible concretes. This paper adopts a nonlinear
+numerical approach for the practical implementation of the smeared, fixed-angle crack approach in finite element analysis to predict the shear
+response of RuC and CRuC. Constitutive models are proposed on the basis of fundamental test results. The model is validated through a
+simulation of a series of shear tests on RuC and CRuC with different shear span-to-depth ratios (a=d). The model predictions are then
+compared against the experimental results, and good agreement is found. DOI: 10.1061/(ASCE)CC.1943-5614.0000962. © 2019 American
+Society of Civil Engineers.
+Author keywords: Rubberized concrete; Fiber reinforced polymer; Stress strain relations; Shear behavior; Soften truss model.
+Introduction
+Elements of large reinforced concrete (RC) structures can be sub-
+jected to significant lateral loads and/or deformations from either
+shrinkage and thermal moments or accidental actions, such as those
+arising from differential settlement or seismic motion. To prevent
+the development of large moments, highly deformable elements
+often made with elastomeric materials are utilized, such as rubber
+bridge bearings or base isolation units. These elements are required
+to carry high axial loads and simultaneously be sufficiently flexible
+to allow large shear deformations. In general, these elements are not
+as durable as the structure itself and, hence, require inspection and
+regular replacement, adding costs and service disruptions. Conven-
+tional RC elements deflect mainly through flexural deformations
+and offer relatively high shear stiffness. Thus, the development
+of highly flexible RC elements that can lead to integrated structures
+can have a strong impact on RC structural design. To achieve this
+goal, more flexible concrete materials need to be developed and
+rubberized concrete (RuC) is a natural candidate.
+Rubber extracted from tires is a highly durable material, and it
+has good strength, flexibility, and a remarkable ability to maintain
+its volume under stress. As a result, there is a drive to find new
+applications for rubber and, in particular, for waste rubber extracted
+from scrap tires. In the past few decades, the use of rubber in con-
+struction materials, such as concrete, has received particular atten-
+tion from researchers (Freakley and Payne 1978; Sienkiewicz et al.
+2012; Medina et al. 2018). Both ductility and post-peak behavior
+of concrete were found to be positively enhanced by the substitu-
+tion of mineral aggregates with rubber particles (Eldin and Senouci
+1993). However, rubber in large proportions (e.g., 100% sand
+replacement) decreases the compressive strength (by up to 90%),
+splitting tensile strength and elastic modulus (by up to 93%) (Naito
+et al. 2014; Khatib and Bayomy 1999; Raffoul et al. 2017). Con-
+sequently, RuC is not currently used in structural applications.
+Recent research by the authors through the EU funded Anagennisi
+project (Pilakoutas 2017) proved that FRP-confined rubberized
+concrete (CRuC) with up to 60% total aggregate replacement is
+able to withstand high levels of stress (up to 90 MPa) at large de-
+formation levels (up to 6%) (Raffoul et al. 2017; Raffoul et al.
+2016). Hence, CRuC has the potential to be used for the develop-
+ment of flexible elements for a range of new structural applications,
+including bridge bearings, integral structures, base isolation ele-
+ments, coupling beams for shear walls, and zero moment connec-
+tions. In many of these potential applications, the concrete elements
+are subjected to high axial compressive stresses and large shear de-
+formations. Although the compressive behavior of FRP-confined
+conventional concrete has been extensively studied and compre-
+hensive models exist (Lam and Teng 2003a; Alecci et al. 2014),
+the behavior of RuC and CRuC has not been widely investigated.
+Bompa et al. (2017) proposed a uniaxial constitutive analytical
+model for RuC, whereas the compressive behavior of RuC and
+CRuC was comprehensively examined by Raffoul et al. (2017).
+Furthermore, limited studies on the shear behavior of this novel
+material have been reported.
+1Ph.D. Candidate, Dept. of Civil and Structural Engineering, Univ. of
+Sheffield, Sir Frederick Mappin Bldg., Mappin St., Sheffield S1 3JD, UK
+(corresponding author). ORCID: https://orcid.org/0000-0002-4054-0533.
+Email: zwang88@sheffield.ac.uk
+2Research Associate, Dept. of Civil and Structural Engineering, Univ. of
+Sheffield, Sir Frederick Mappin Bldg., Mappin St., Sheffield S1 3JD, UK.
+Email: lin.chen@sheffield.ac.uk
+3Senior Lecturer, Dept. of Civil and Structural Engineering, Univ. of
+Sheffield, Sir Frederick Mappin Bldg., Mappin St., Sheffield S1 3JD, UK.
+Email: m.guadagnini@sheffield.ac.uk
+4Professor, Dept. of Civil and Structural Engineering, Univ. of
+Sheffield, Sir Frederick Mappin Bldg., Mappin St., Sheffield S1 3JD, UK.
+ORCID: https://orcid.org/0000-0001-6672-7665. Email: k.pilakoutas@
+sheffield.ac.uk
+Note. This manuscript was submitted on July 28, 2018; approved on
+February 7, 2019; published online on August 2, 2019. Discussion period
+open until January 2, 2020; separate discussions must be submitted for
+individual papers. This paper is part of the Journal of Composites for
+Construction, © ASCE, ISSN 1090-0268.
+© ASCE
+04019039-1
+J. Compos. Constr.
+ J. Compos. Constr., 2019, 23(5): 04019039 
+Downloaded from ascelibrary.org by University of Leeds on 01/02/24. Copyright ASCE. For personal use only; all rights reserved.
+
+In the past century, the understanding of the structural per-
+formance of concrete in shear has grown significantly around
+the concept of the truss analogy. A significant step forward was
+the development of softened concrete struts by Robinson and
+Demorieux (1968) that reduced compressive strength in the pres-
+ence of principal tensile stress. Various rational softened truss mod-
+els have been proposed on the basis of the smeared-crack concept.
+Vecchio and Collins (1986) proposed the compression field theory
+(CFT) to predict the nonlinear behavior of reinforced concrete (RC)
+elements by implementing softened stress-strain characteristics for
+concrete in compression. This attempt was the first to quantify the
+softening parameter as a function of the two principal strains. The
+rotating-angle softened truss model (RA-STM) was generalized
+by Hsu and his coworkers (Hsu 1988; Pang and Hsu 1995) for the
+shear and torsion of RC members. This model considered both con-
+crete compression softening and the tension stiffening effect. It as-
+sumed that cracks will develop in a direction perpendicular to the
+principal tensile stress and “rotate” to follow the changing principal
+stress during loading. Because the crack angle assumed coincides
+with the principal stress direction, neither the CFT nor the RA-STM
+can adequately represent shear behavior because concrete shear re-
+sistance cannot be developed along the principal direction. In con-
+trast, the fixed-angle softened truss model (FA-STM) (Pang and
+Hsu 1996; Zhu et al. 2001) assumes cracks to be oriented in the
+direction of the applied principal compressive stresses and are fixed
+at this angle thereafter. Because shear stresses can develop along
+the crack direction, the FA-STM can account for the concrete con-
+tribution in shear resistance. Although the predictions of these ra-
+tional shear models are in good agreement with various types of
+conventional RC structures subjected to shear or torsion, the appli-
+cability of the softened truss theory to RuC and CRuC has not been
+assessed.
+The primary objective of this paper is to assess whether the
+Fixed-Angle Softened Truss Model for RC proposed by Pang and
+Hsu (1996) can be used in the case of RuC and CRuC and modify
+them if necessary. This work is presented in four parts. The first
+part describes the original FA-STM and introduces a modification
+considering the properties of RuC and CRuC. The second part
+discusses the required constitutive models for the implementation
+of the modified FA-STM and how they are determined, including:
+(1) concrete in compression; (2) concrete in tension; (3) concrete
+in shear; and (4) FRP in tension. In the third part, a user defined
+material subroutine (UMAT) is developed to enable the implemen-
+tation of the proposed model in ABAQUS (2014). Finally, an ex-
+perimental program on 18 prismatic samples is described and the
+accuracy of the proposed model is assessed. This work will lead
+to the development of numerical tools that will enable a deeper
+understanding of the behavior of RuC and CRuC and will assist
+in developing applications for highly deformable elements. The re-
+sults presented in this study are part of the FP7 EU-funded project
+Anagennisi, which aims to develop solutions to reuse all tire com-
+ponents in high value innovative concrete applications (Pilakoutas
+et al. 2015).
+Application of FA-STM in RuC and CRuC
+The FA-STM theory is based on six equations derived from two-
+dimensional equilibrium and Mohr compatibility conditions. These
+theoretical equations, along with constitutive material laws, can be
+used in a numerical analysis to predict the performance of struc-
+tures subjected to external loading (Pang and Hsu 1996). When
+dealing with RC 2-D elements subjected to in-plane shear and nor-
+mal stresses (τlt and σl, σt), the FA-STM defines three coordinate
+systems (Fig. 1a): (a) l-t: the directions of longitudinal and trans-
+verse steel bars, respectively; (b) 2-1: the directions of the principal
+stresses of the RC element; (c) d-r coordinates: the directions of
+principal stresses in the concrete alone. The governing equations
+are derived by assuming that cracks in concrete are oriented at a
+fixed angle α2, which is the angle between the 2-axis and the l-axis.
+The angle between the d-axis and the l-axis is the rotating angle α,
+which continues to rotate away from the fixed angle α2 as the load
+increases. The angle between α2 and α is defined as the deviating
+angle β ¼ α2 −α.
+To apply FA-STM for unreinforced RuC and CRuC, the coor-
+dinate systems have to be redefined (Fig. 1b) as follows: (1) l-t: the
+directions of the longitudinal and transverse beam, respectively;
+(2) 2-1: the directions of the principal stresses of RuC or CRuC
+element; the angle between the 2-axis and l-axis is called the prin-
+cipal angle θp; (3) n-m: the parallel and perpendicular directions
+of the crack plane; fixed angle α2 is replaced by the angle of the
+inclined strut; and, (4) the principal directions in concrete at any
+stage are still represented by d-r coordinates, resulting in a rotating
+angle θc. The deviating angle β is redesignated as the difference
+between θf and θc. In RuC, the 2-1 coordinate coincides with the
+d-r coordinate.
+Angle of the Inclined Strut
+For members with a shear span-to-depth ratio (a=d) less than
+2.5–2, a significant portion of the applied shear force can be trans-
+ferred directly to the support through an inclined strut. This load-
+carrying mechanism is normally referred to as a direct strut
+(one-panel model) (Kani 1979; Collins 1973). Experimental ob-
+servations (Birrcher et al. 2009) indicate that a direct strut is the
+primary load mechanism for specimens with a=d of 1.85. ACI 318
+(ACI 2002) recommends using a one-panel strut when a=d is less
+(a)
+(b)
+Fig. 1. Coordinate systems in the (a) FA-STM; and (b) proposed model.
+© ASCE
+04019039-2
+J. Compos. Constr.
+ J. Compos. Constr., 2019, 23(5): 04019039 
+Downloaded from ascelibrary.org by University of Leeds on 01/02/24. Copyright ASCE. For personal use only; all rights reserved.
+
+than or equal to 2.1. The model presented here is based on this
+loading mechanism and developed for the Deep beam shear region
+(D-Region). The governing equations of the proposed model are
+derived by the angle of the inclined concrete strut (θf), which is
+defined by
+θf ¼ π
+2 −arc tan a
+d
+ð1Þ
+where a = distance between the applied load and support; and
+d = depth of specimen.
+Governing Equations
+Fig. 1(b) indicates the coordinate systems in a RuC element sub-
+jected to applied stresses σl, σt, and τ lt. Fig. 2(a) presents the stress
+state of a CRuC element under in-plane pure shear stress τlt. The
+stresses in concrete and FRP are indicated in Figs. 2(b and c). The
+FRP is assumed only to resist the tensile stress, ρtffrp, and the con-
+crete is subjected to a set of in-plane stresses −ρtffrp and τlt.
+Stresses σcn, σcm, and τcnm are the average normal stresses and aver-
+age shear stress of the concrete strut in the n and m directions.
+Equilibrium and compatibility equations for the RuC (ρt ¼ 0) and
+CRuC elements are derived by transforming the stresses and strains
+from the n-m to the l-t coordinate [Eqs. (2)–(7)].
+Stress equilibrium equations
+σl ¼ σcncos2θf þ σcmsin2θf þ 2τcnm sin θf cos θf
+ð2Þ
+σt ¼ σcnsin2θf þ σcmcos2θf −2τcnm sin θf cos θf þ ρtffrp
+ð3Þ
+τlt ¼ ð−σcn þ σcmÞ sin θf cos θf þ τcnmðcos2θf −sin2θfÞ
+ð4Þ
+Strain compatibility equations
+εl ¼ εncos2θf þ εmsin2θf þ γnm sin θf cos θf
+ð5Þ
+εt ¼ εnsin2θf þ εmcos2θf −γnm sin θf cos θf
+ð6Þ
+γlt
+2 ¼ ð−εn þ εmÞ sin θf cos θf þ γnm
+2 ðcos2θf −sin2θfÞ
+ð7Þ
+To solve Eqs. (2)–(7), the following four constitutive laws
+are required: (1) concrete in compression, relating the average
+concrete stress σcn and average strain εn in the n-direction; (2) con-
+crete in tension, relating the average concrete stress σcm and
+average strain εm in the m-direction; (3) concrete in shear, re-
+lating the average concrete shear stress τcnm and average shear
+strain γnm in the n-m coordinate; and (4) FRP in tension
+(t-direction).
+For RuC, the assumption that the constitutive relation in the
+direction of the inclined strut (σcn-εn, σcm-εm relation) is identical
+to that in the principal direction of concrete (σd-εd, σr-εr relation)
+can be considered accurate when a=d is less than or equal to 2.1
+(Pang and Hsu 1996). However, the deviating angle β in CRuC will
+increase as the confining stress increases, which will lead to an in-
+crease in the difference between σcn and σd as well as σcm and σr.
+Therefore, the constitutive relation of cracked concrete in the direc-
+tion of the inclined strut (σcn-εn, σcm-εm) cannot be replaced with the
+constitutive relation in the principal direction (σd-εr, σr-εr). The
+stresses σcn, σcm of concrete in the n-m coordinate and correspond-
+ing strains εn, εm should be calculated by stress and strain trans-
+formation from the principal d-r coordinate using the following
+equation:
+8
+>
+<
+>
+:
+σcm
+σcn
+τcnm
+9
+>
+=
+>
+;
+¼
+2
+64
+c2
+s2
+2cs
+s2
+c2
+-2cs
+-cs
+cs
+c2-s2
+3
+75
+8
+>
+<
+>
+:
+σr
+σd
+0
+9
+>
+=
+>
+;
+;
+8
+>
+<
+>
+:
+εm
+εn
+γnm
+9
+>
+=
+>
+;
+¼
+2
+64
+c2
+s2
+cs
+s2
+c2
+−cs
+−2cs
+2cs
+c2 −s2
+3
+75
+8
+>
+<
+>
+:
+εr
+εd
+0
+9
+>
+=
+>
+;
+ð8Þ
+where c ¼ cos β and s ¼ sin β.
+Fig. 2. Stress state in a CRuC element subjected to pure shear.
+© ASCE
+04019039-3
+J. Compos. Constr.
+ J. Compos. Constr., 2019, 23(5): 04019039 
+Downloaded from ascelibrary.org by University of Leeds on 01/02/24. Copyright ASCE. For personal use only; all rights reserved.
+
+Constitutive Laws
+All tested specimens (cylinders and prisms) were manufactured
+using rubberized concrete with rubber particles replacing 60% of
+both fine and coarse mineral aggregates by volume. This “optimized”
+mix was chosen from a detailed study on 40 mixes carried out by
+Raffoul et al. (2016), which achieved the best balance between
+strength retention and deformability. Table 1 provides the proper-
+ties of this particular mix.
+Concrete in Compression
+The uniaxial compressive stress-strain relations of RuC and CRuC
+can be obtained from compression tests. Cylindrical specimens of
+diameter 100 mm and height 200 mm were tested, as indicated in
+Fig. 3. The global axial deformations were measured by three laser
+sensors (LS), with an accuracy of 40 με, placed radially at 120° and
+100-mm gauge length. The global lateral deformations were mea-
+sured using three linear variable differential transformers (LVDTs)
+placed radially around the specimens (120° apart). Local axials
+strains (V1 and V2) and local lateral strain (H1, H2, and H3) were
+measured by using strain gauges placed at the midheight of the
+specimen.
+RuC
+Up to the peak load, the experimental data match well the modified
+stress-strain model [Eq. (9)] (Fig. 4), which was initially proposed
+for FRP-confined concrete by Lam and Teng (2003b) [with E2 ¼ 0;
+see Eq. (19)]. To capture the principal compressive behavior of
+RuC under biaxial compression-tension, the model has been modi-
+fied by introducing parameter ζ (a compressive capacity reduction
+factor)
+σc ¼ Ecεc −
+E2c
+4ζf 0co
+ε2c
+ð9Þ
+The descending portion of the stress-strain model is based on the
+model in Guo (2014), which is represented as follows:
+y ¼
+x
+αðx −1Þβ þ x ðx > 1Þ
+ð10Þ
+where y ¼ σc=ζf 0co and x ¼ εc=ζεco.
+The parameters α, β can be calibrated using experiment data.
+For the concrete tested in this study, these parameters were found
+to be α ¼ 1 and β ¼ 1.55, as shown in Eq. (11)
+σc
+ζf 0co
+¼
+εc
+ζεco
+
+εc
+ζεco −1
+1.55 þ εc
+ζεco
+ð11Þ
+The following equations, proposed by Bompa et al. (2017), are
+used to determine the modulus of elasticity and the crushing strain
+of RuC
+Ec ¼ 12
+f 0co
+10
+2=3
+;
+εco ¼ 0.7f 00.31
+co
+ð12Þ
+Compressive Capacity Reduction Factor
+Because there is a biaxial stress state in the beam shear span, the
+resistance of the diagonal compression struts developed in that
+region are governed by the failure criterion in the compression-
+tension branch (Fig. 5). Hence, the strength of the inclined strut
+ðf 0c;maxÞ is lower than the uniaxial concrete compressive strength
+Table 1. Summary of material properties
+RuC
+Basalt bars
+Carbon fibers
+f 0co
+(MPa)
+εco
+(×10−3)
+Elastic
+modulus
+(GPa)
+Rupture
+strain
+(%)
+Elastic
+modulus
+(GPa)
+Ultimate
+strain
+(%)
+Thickness of
+one layer
+(mm)
+7.5
+1.307
+39
+2.81
+227
+0.9
+0.185
+1.1a
+0.8a
+5a
+0.08a
+17a
+0.05a
+0.01a
+aStandard deviation.
+Fig. 3. Experimental setup for compression tests on cylinders.
+0
+5
+10
+15
+20
+0
+1000
+2000
+3000
+4000
+Compressive Stress (MPa)
+Micro Compressive Strain
+CRuC-CAL
+CRuC-EXP
+RuC-CAL
+RuC-EXP
+Fig. 4. Compressive stress-strain curves of RuC and CRuC.
+© ASCE
+04019039-4
+J. Compos. Constr.
+ J. Compos. Constr., 2019, 23(5): 04019039 
+Downloaded from ascelibrary.org by University of Leeds on 01/02/24. Copyright ASCE. For personal use only; all rights reserved.
+
+given the existence of the lateral tensile strain. A compressive
+capacity reduction factor ζ is used to account for this effect, which
+is defined as the ratio of maximum principal compressive stress
+to uniaxial compressive stress of concrete (ζ ¼ f 0c;max=f 0co). The
+biaxial failure criterion for concrete and ζ can be determined
+by testing square concrete panels subjected to various in-plane
+loading stress ratios σ2=σ1. The general Drucker-Prager failure
+criterion is adopted here because it captures well the interaction
+between tension and compression and can reflect the fact that
+the shear strength of concrete is higher than its tensile strength
+Eq. (13)
+F ¼ αI1 þ
+ﬃﬃﬃﬃ
+J2
+p
+−τ0 ¼ 0
+ð13Þ
+where α and τ 0 are determined from the experiment; I1 = first
+invariant; and J2 = second deviatoric.
+The parameters α and τ0 for the failure surface in tension-
+compression quadrants are obtained by solving the stress states in
+uniaxial compression and tension, given as:
+α ¼ 1ﬃﬃ
+3
+p f 0co −fct
+f 0co þ fct
+;
+τ0 ¼ 2ﬃﬃ
+3
+p
+f 0cofct
+f 0co þ fct
+ð14Þ
+For plane stress conditions (σ3 ¼ 0), Eq. (13) can be written as:
+ð1 −3α2Þðσ2
+1 þ σ2
+2Þ −ð1 þ 6α2Þσ1σ2 þ 6τ 0αðσ1 þ σ2Þ −3τ 0 ¼ 0
+ð15Þ
+Eq. (15) can be rewritten in the form:
+Aðσ2
+1 þ σ2
+2Þ þ Bσ1σ2 þ Cðσ1 þ σ2Þ þ D ¼ 0
+ð16Þ
+where A ¼ 1 −3α2, B ¼ −ð1 þ 6α2Þ, C ¼ 6τ0α, and D ¼ −3τ0.
+Substituting the loading stress ratio φ ¼ σ2=σ1 and σ1 ¼ ζf 0co
+into Eq. (16) yields
+Að1 þ φ2Þ þ Bφ þ Cð1 þ φÞ
+1
+ζf 0co
+þ
+D
+ðζf 0coÞ2 ¼ 0
+ð17Þ
+where φ = loading stress ratio. The principal tensile stress σ1
+and principal compressive stress σ2 can be calculated by the cor-
+responding principal strains ε1 and ε2 through relative constitutive
+laws, and the loading stress ratio φ is obtained. Solving Eq. (17)
+leads to
+ζ ¼
+−2D
+f 02
+co
+Cð1þφÞ
+f 0co
+−
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+
+Cð1þφÞ
+f 0co
+2 −4 ½Að1þφ2ÞþBφD
+f 02
+co
+r
+ð0 < ζ < 1Þ
+ð18Þ
+With Eq. (18), the softening compressive stress-strain curve
+of RuC under different biaxial loading stress ratios (tension and
+compression) can be obtained (Fig. 6).
+CRuC
+The model proposed by Lam and Teng (2003b) can also capture
+well the uniaxial compressive behavior of CRuC (Fig. 4)
+σc ¼ Ecεc −ðEc −E2Þ2
+4ζf 0co
+ε2c
+for 0 ≤εc ≤εtr
+ð19Þ
+σc ¼ ζf 0co þ E2εc
+for εtr ≤εc ≤εcu
+ð20Þ
+where σc and εc = compressive stress and strain of CRuC, respec-
+tively; Ec = elastic modulus of RuC; εtr = axial strain at transition
+point; E2 = slope of the straight second portion; and f 0co = com-
+pressive strength of RuC. To capture the principal compressive
+behavior of CRuC under biaxial compression-tension, the model
+has been modified by introducing parameter ζ. The parameters εtr
+and E2 are given by
+εtr ¼
+2ζf 0co
+ðEc −E2Þ ;
+E2 ¼ f 0cc −ζf 0co
+εcu
+ð21Þ
+Fig. 5. Biaxial strength envelopes for concrete under combined tension and compression.
+0
+2
+4
+6
+8
+0
+0.001
+0.002
+0.003
+0.004
+0.005
+Compressive Stress (MPa)
+Compressive Strain (mm/mm)
+-1/0
+-1/0.052
+-1/0.1
+-1/0.2
+-1/0.33
+-1/1
+Fig. 6. Softening compressive stress-strain curves of RuC under
+different loading stress ratios.
+© ASCE
+04019039-5
+J. Compos. Constr.
+ J. Compos. Constr., 2019, 23(5): 04019039 
+Downloaded from ascelibrary.org by University of Leeds on 01/02/24. Copyright ASCE. For personal use only; all rights reserved.
+
+where εcu = ultimate strain [Eq. (22)] and f 0cc = compressive
+strength of CRuC [Eq. (23)], respectively
+εcu
+ζεco
+¼ 1.75 þ 12ks2
+ fl;a
+ζf 0co
+εh;rup
+ζεco
+0.45
+ð22Þ
+f 0cc
+ζf 0co
+¼ 1 þ 3.3ks1
+fl;a
+ζf 0co
+ð23Þ
+where εh;rup = actual hoop rupture strain of FRP jacket; εco = axial
+strain at compressive strength of RuC; fl;a = actual maximum con-
+fining pressure; and ks1 and ks2 are the shape factor for strength and
+strain enhancement, respectively, and are defined as follows:
+ks1 ¼
+b
+h
+2 Ae
+Ac
+;
+ks2 ¼
+b
+h
+0.5 Ae
+Ac
+ð24Þ
+where h and b = depth and width of the rectangular section, respec-
+tively; and Ae=Ac = effective confinement area ratio [Eq. (26)].
+FRP Jacket
+Substantial research (Teng et al. 2009; Saadatmanesh et al. 1994;
+Raffoul et al. 2017; Ozbakkaloglu and Akin 2012; Lam et al. 2006)
+indicates that FRP confinement can lead to an enhancement of
+the compressive strength and deformability of concrete. These en-
+hancements rely mainly on the following: (1) the characteristics of
+FRP material; (2) section shape (circular or square); and (3) fiber
+orientation.
+According to the experimental results (Pessiki et al. 2001; Li
+et al. 2006; Lam and Teng 2003b), FRP jackets rarely fail at the
+ultimate tensile strain obtained from direct tensile coupon tests.
+Hence, Lam and Teng (2003b) use the actual hoop rupture strain
+εh;rup in their model, which relates to the ultimate tensile strain εfrp
+through an efficiency factor kε (Pessiki et al. 2001). An average
+value of 0.586 for kε is recommended by Lam and Teng (2003b)
+εh;rup ¼ kεεf
+ð25Þ
+That the concrete is uniformly confined in a circular section
+(Ae ¼ Ac) is commonly accepted, whereas only part of the con-
+crete is effectively confined by the FRP (Ae < Ac) in a rectangular
+section. The effective confinement area ratio (Ae=Ac) is given by
+Lam and Teng (2003b) as follows:
+Ae
+Ac
+¼ 1 −½ðb
+hÞðh −2RcÞ2 þ ðh
+bÞðh −2RcÞ2=3Ag −ρsc
+1 −ρsc
+ð26Þ
+where Rc = size of round corner; and ρsc = ratio of vertical
+reinforcement, if implemented.
+When FRP ruptures, the confining pressure reaches its maxi-
+mum value given by
+fl;a ¼ 2Efnftfεh;rup
+Deq
+ð27Þ
+Where Deq = diameter of the equivalent circular section that cir-
+cumscribes the rectangular section; and nf and tf = number of
+layers and thickness of FRP jacket, respectively
+Deq ¼
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+h2 þ b2
+p
+ð28Þ
+For FRP with fiber is oriented at an angle from the loading
+direction, the maximum confining pressure is modified as
+fl;a ¼ 2Efnftfεh;rup
+Deq
+cos2θf
+ð29Þ
+Concrete in Tension
+Three main methods exist to experimentally determine the tensile
+characteristic of concrete: (1) direct tensile test; (2) Brazilian-split
+cylinder test; and (3) three-point bending test. Theoretically, the
+direct tension test should yield the stress-strain relationship ðσ-εÞ
+or the stress-crack width relationship ðσ-wÞ of concrete under pure
+uniaxial tension. However, this test is difficult to carry out because
+of multiaxial stress at the boundary conditions, load eccentricity,
+and uncertain crack location. The Brazilian-split cylinder test is the
+simplest method to obtain tensile strength but can provide neither
+the stress-strain nor the stress-displacement relation. However, this
+method was used by Bompa et al. (2017) to predict the direct tensile
+strength of RuC [Eq. (30)]
+fct ¼ 0.26f 02=3
+co
+ð30Þ
+The cracking strain of RuC can be calculated as follows:
+εcr ¼ fct=Ec
+ð31Þ
+The three-point bending test (Fig. 7) is easier to perform and can
+produce a stable load-deflection curve. Therefore, an inverse finite
+element analysis (FEA) method is proposed to obtain the tensile
+stress-strain relation by taking advantage of data obtained from
+both Brazilian tests and three-point bending tests, as subsequently
+described.
+1. Calculation of fracture energy. The fracture energy of concrete
+GF can be determined by the energy Us dissipated by fracturing
+in the specimens over the fracture surface area ðGF ¼ Us=A0Þ.
+The Crack Band theory (Bažant and Oh 1983), which used the
+“smeared crack” approach, assumes that cracks are distributed
+along a defined width of the fracture process zone. Bažant and
+Oh (1983) assumed that the width (wcb) of the fracture process
+zone is equal to three times the nominal maximum aggregate
+size. The balance of energy requires that the toughness (Ws ¼
+∫εult
+0 σðεctÞdεct) can be calculated by dividing GF by wcb
+Ws ¼ GF
+wcb
+ð32Þ
+Fig. 7. Experimental setup for three-point-bending tests.
+© ASCE
+04019039-6
+J. Compos. Constr.
+ J. Compos. Constr., 2019, 23(5): 04019039 
+Downloaded from ascelibrary.org by University of Leeds on 01/02/24. Copyright ASCE. For personal use only; all rights reserved.
+
+2. Calculation of ultimate tensile strain. The ultimate tensile strain
+of concrete can be determined by dividing the ultimate crack
+mouth opening by wcb
+εult ¼ wult
+2wcb
+ð33Þ
+3. Determination of σ-ε curves. The general form of the tensile
+stress-strain model proposed by Guo (2014) is adopted in this
+work because it is known to simulate reasonably well the tensile
+behavior of concrete
+y ¼
+x
+ϕðx −1Þ1.7 þ x ðx > 1Þ
+ð34aÞ
+where x ¼ εct=εcr, y ¼ σct=fct.
+4. The damage variable dt represents the portion of normalized
+energy dissipation for damage. The value of dt is determined
+using Eq. (34b), where a value of 0 indicates no damage and
+a value of 1 indicates that the material is fully damaged
+dt ¼
+Z εct
+0
+σctdεct=Ws
+ð0 ≤dt ≤1Þ
+ð34bÞ
+Using fracture energy values determined from load-deflection
+curves from flexural tests on RuC, the parameter “ϕ” was deter-
+mined to be 0.036. The resulting σ-ε curve is indicated in Fig. 8.
+The three-point bending tests have been modeled in the Abaqus/
+Standard finite element software package. The concrete damage
+plasticity (CDP) model, which utilizes the proposed tensile
+stress-strain curve of RuC and relative damage factor, was used to
+predict the load-deflection curve of the tested prisms. The load was
+applied experimentally via a steel roller in displacement control. In
+the numerical study, the steel roller was modeled as a rigid body,
+and a displacement was applied to its reference point (Fig. 9). A
+frictionless surface-to-surface interaction was assigned to the steel
+roller-concrete interface. The concrete was modeled using two-
+dimensional (2D) four-node linear plane stress (CPS4) elements
+with a mesh size of 5 mm within the fracture zone. Fig. 9 indicates
+the distribution of the tensile damage variable at failure (higher
+damage corresponds to darker color), whereas Fig. 10 indicates a
+comparison between numerical and experimental results in terms of
+the typical load-displacement behavior of RuC.
+Concrete in Shear
+Variables τcnm and γnm [introduced in Eqs. (2)–(7)] can be obtained
+from shear tests.
+Shear Stress τcnm and Shear Strain γnm in RuC
+Substituting Eqs. (3) and (2) into Eq. (4) with pure shear state
+(σl ¼ 0, σt ¼ 0) results in the following:
+τcnm ¼ τ ltðcos2θf −sin2θfÞ
+ð35Þ
+Substituting Eqs. (6) and (5) into Eq. (7) with pure shear state
+(εl ¼ 0, εt ¼ 0) results in the following:
+γnm ¼ γltðcos2θf −sin2θfÞ
+ð36Þ
+G ¼ τ cnm
+γnm
+¼ τlt
+γlt
+ð37Þ
+Because Eq. (37) does not include the angle θf, the shear modu-
+lus of smeared crack concrete should be the same in any coordinate
+system. The shear stress-strain curve (τlt-γlt) can be obtained from
+an asymmetric shear test, as discussed in the next section.
+Shear Stress τcnm and Shear Strain γnm in CRuC
+The average concrete shear stress τ cnm can be obtained by writing
+the equilibrium condition along the n-direction of the triangular
+free body in Fig. 11 [Eq. (38)]
+τcnm ¼ 1
+2 ρtft sin 2θf þ τ lt cos 2θf
+ð38Þ
+The average shear strain γnm can be obtained from the
+compatibility relation and the measured four-average strain
+0
+0.2
+0.4
+0.6
+0.8
+1
+1.2
+0
+0.002
+0.004
+0.006
+0.008
+0.01
+Tensile Stress (MPa)
+Tensile Strain (mm/mm)
+Fig. 8. Tensile stress-strain curve of RuC.
+Fig. 9. Distribution of damage dt at final state of three-point bending tests. Darker shades indicate higher degrees of damage.
+© ASCE
+04019039-7
+J. Compos. Constr.
+ J. Compos. Constr., 2019, 23(5): 04019039 
+Downloaded from ascelibrary.org by University of Leeds on 01/02/24. Copyright ASCE. For personal use only; all rights reserved.
+
+(εm, εn, εl and εt) along the m, n, l, and t directions. This com-
+patibility relation is derived by subtracting Eq. (6) from Eq. (5)
+γnm ¼ ðεl −εtÞ csc 2θf þ ðεm −εnÞ cot 2θf
+ð39Þ
+When θf ¼ 45°, Eqs. (38) and (39) simplify to τ cnm ¼ 1=2ρtff
+and γnm ¼ −εt, respectively. The shear modulus of CRuC beam is
+given by
+G ¼ τcnm
+γnm
+¼
+1
+2 ρtEfð−εtÞ
+−εt
+¼ 1
+2 ρtEf
+ð40Þ
+Asymmetric Shear Test
+The τ lt −γlt relation is obtained from the asymmetric shear test
+(Fig. 12). The test was conducted on rectangular concrete prisms
+in which the central part (where the maximum shear forces are
+expected) was cast using RuC and had a reduced section of 70 mm,
+whereas the sides were cast with regular concrete and reinforced
+with ∅6 mm steel bars (Fig. 12). The tests were carried out in an
+electromagnetic universal testing machine that applies load mono-
+tonically in displacement control at a rate of 0.1 mm=min until
+failure. The measurement setup is shown in Fig. 13. LVDTs and
+potentiometers (POT) were used to measure the deflections during
+the tests: LVDT 1 and 2 were situated on an aluminum yoke (fixed
+at the middle height of the prism) to measure the relative deflection
+at the midspan of each side of the prism. Four potentiometers were
+used to measure absolute deflection. POT 1 measures the deflection
+at the free end of the prism. POT 2 and 4 measure the deformations
+at the supports. POT 3 measures the deflection at the midspan
+externally. Two 10-mm 120-ohms strain gauges were placed at
+midspan and oriented 45° to the center line of the prisms to measure
+the shear strains.
+Using data from tests undertaken in this study (Fig. 14), Eq. (41)
+is suggested to predict the shear strength of RuC with 60% rubber
+replacement as a function of the compressive strength. Eq. (41)
+has an average test-to-prediction strength ratio of 1.02 and COV
+of 4.3%
+Fig. 11. Triangular free body.
+0
+1
+2
+3
+4
+5
+0
+1
+2
+3
+4
+Bending load (kN)
+Mid-point deflection (mm)
+Bending test
+Inverse FEA
+Fig. 10. Comparison of load-deflection curves between inverse FEA
+and test (ϕ ¼ 0.036).
+potentiometers
+2 strain gauges each side
+1 LVDT each side
+POT2
+POT1
+POT3
+POT4
+Fig. 13. Set-up overview of asymmetric shear test.
+Fig. 12. Schematic of test set-up, angle of inclined strut, reinforcement
+details, and shear and bending moment diagrams (dimensions in
+millimeters).
+© ASCE
+04019039-8
+J. Compos. Constr.
+ J. Compos. Constr., 2019, 23(5): 04019039 
+Downloaded from ascelibrary.org by University of Leeds on 01/02/24. Copyright ASCE. For personal use only; all rights reserved.
+
+τp ¼ 0.36f 00.57
+co
+ð41Þ
+The relation between the value of shear strain γp at peak and
+shear strength τp (N=mm2) of RuC with 60% rubber replacement
+can be represented by regression equation ([Eq. (42)]. Eq. (42) has
+an average test-to-prediction ratio of 1.08 and COV of 16.5%
+γp ¼ ε1p −ε2p ¼ ð2160τ p −766.6Þ × 10−6ðτp in MPaÞ
+ð42Þ
+The initial shear modulus of RuC is determined from the secant
+modulus at 0.3τp. The average value obtained is 2.687 GPa, and the
+standard deviation is 0.25 GPa. The ratio between initial modulus
+G0 and secant modulus at peak stress (Gp ¼ τ p=γp) varies from 2.3
+to 2.7, and an average value of 2.51 is adopted (standard deviation
+is 0.064).
+Complete Shear Stress-Strain Curve
+The complete stress-strain curve of RuC in shear is comprised of
+two parts, as indicated in Figs. 15 (a and b), representing the
+ascending and descending branches, respectively.
+Ascending Branch. Using the known boundary conditions, the as-
+cending branch can be represented by a cubic equation of Eq. (43).
+The four boundary conditions are as follows: (1) x ¼ 0, y ¼ 0;
+(2) x ¼ 0, dy=dx ¼ G0=Gp; (3) x ¼ 1, y ¼ 1; and (4) x ¼ 1,
+dy=dx ¼ 0 (where x ¼ γ=γp, y ¼ τ=τp)
+τ
+τp
+¼ 2.5 × γ
+γp
+−2 ×
+ γ
+γp
+2
+þ 0.5 ×
+ γ
+γp
+3
+ð43Þ
+The comparative assessment between predicted and experimen-
+tal constitutive response (Fig. 15a) indicates good agreement. The
+tangent shear modulus can also be determined from Eq. (44)
+Gt ¼ dτ
+dγ ¼ τp
+γp
+
+2.5 −4 × γ
+γp
+þ 1.5 ×
+ γ
+γp
+2
+ð44Þ
+Descending Branch. An equation similar to that for concrete in
+tension is adopted
+y ¼
+x
+ηðx −1Þ1.7 þ x ðx > 1Þ
+This equation again satisfies the following four known boundary
+conditions: (1) x ¼ 1, y ¼ 1; (2) x ¼ 1, dy=dx ¼ 0; (3) x →∞,
+y →0; and (4) x →∞, dy=dx →0. Because strain gauges nor-
+mally fail at or before peak load, the parameter η was determined
+to be 0.05 (Fig. 15b) based on the numerical investigations in the
+present study (Fig. 16)
+y ¼
+x
+0.05ðx −1Þ1.7 þ x ðx > 1Þ
+ð45Þ
+Numerical Implementation
+The proposed shear behavior model of CRuC and RuC has been
+implemented in the Abaqus/Standard finite element software pack-
+age using the UMAT. The numerical integration algorithms update
+the Cauchy nominal stresses and solution-dependent state varia-
+bles, as well as the consistent tangent matrix, which ensures the
+quadratic convergence rate of the Newton-Raphson method in
+the FEA. The solution scheme is based on the incremental form of
+strain. The loading history is discretized into a sequence of load
+steps [Fi; Fiþ1], i ∈0; 1; 2; 3 : : : n. Each step is referred to as the
+load increment. Driven by the strain increment Δε, the discrete
+problem in the context of a backward Euler scheme can be stated
+as follows: for a given variable set fεn; σng at the beginning of
+the (n þ 1)th increment, find the updated variable set fεnþ1; σnþ1g
+at the end of the (n þ 1)th increment. The updated stresses and
+0
+0.2
+0.4
+0.6
+0.8
+1
+1.2
+-1000
+-500
+0
+500
+1000
+Stress (MPa)
+Strain (
+)
+Avg. PC
+Avg. PT
+Avg. S
+Fig. 14. Average principal compressive/tensile and shear strain versus
+corresponding stress (PC is principal compressive strain, PT is principal
+tensile strain, and S is shear strain).
+0
+0.2
+0.4
+0.6
+0.8
+1
+0
+0.2
+0.4
+0.6
+0.8
+1
+/ p
+/ P
+EXP
+CAL
+0
+0.2
+0.4
+0.6
+0.8
+1
+1
+10
+19
+28
+/ p
+/ P
+- Eq. (43)
+Inverse FEA - Eq. (45)
+(a)
+(b)
+Fig. 15. Normalized shear stress-strain behavior obtained from (a) axisymmetric shear test up to peak; and (b) inverse FEA after peak.
+© ASCE
+04019039-9
+J. Compos. Constr.
+ J. Compos. Constr., 2019, 23(5): 04019039 
+Downloaded from ascelibrary.org by University of Leeds on 01/02/24. Copyright ASCE. For personal use only; all rights reserved.
+
+solution-dependent state variables are sorted at the end of the
+(n þ 1)th increment and are passed on to the UMAT at the begin-
+ning of the next increment. The interactive procedure is summa-
+rized in Appendix.
+Experimental Program
+Eighteen prismatic samples (500 × 100 × 100 mm) were tested to
+assess the shear performance of CRuC and RuC. Fig. 17 indicates
+the geometry and reinforcement details of the prisms and the
+loading and support conditions. The central parts of the prisms
+were cast with RuC (with a rubber content replacing 60% of the
+aggregate by volume), whereas the sides were cast with regular
+concrete. The prisms were reinforced with four basalt FRP bars
+(∅4 mm) along the length of the prism. Basalt-FRP bars were
+chosen for their low shear and axial stiffness to enable the develop-
+ment of expected higher deformations within a shear span. Three
+different shear span-to-depth ratios (a=d ¼ 0.5, 0.75, and 1) were
+considered. For each ratio, tests were conducted on three uncon-
+fined samples and three additional specimens confined with one
+layer of carbon-FRP by using a wet lay-up technique. The overlap
+length is 90 mm and is located on the top of the prism. Table 1
+shows the material properties of the Basalt-FRP bars and carbon
+fabric used in this research as obtained from direct tensile coupon
+tests. The adopted test setup was the same as described in Fig. 13
+and was used to obtain the shear stress-strain curve.
+Figs. 18 and 19 show the average experimental shear stress-
+strain and shear force-deflection plots for various a=d ratios of RuC
+and CRuC, respectively. The shear stress τ was determined by nor-
+malizing the shear force with respect to the cross-sectional area
+at midspan. The shear strain γ was measured by two strain gauges
+boned on the surface of the beam or the CFRP jacket and oriented
+45° to the center line of the prisms. Given the pure shear stress
+state at midspan, the directions of 45° are assumed to be the
+principal directions of the strain. Therefore, the shear strain can be
+determined by the two strain gauge readings, γ ¼ ε1p −ε2p. The
+deflection was the average reading of LVDT 1 and 2 (Fig. 13).
+The grey shaded area of the curve in Fig. 19 represents the range
+of experimental results. This variability can be attributed to the
+manufacturing quality of the FRP jackets and the inherent variabil-
+ity of concrete.
+A comparison of the results provided in Figs. 18 and 19 indi-
+cates that both stress and strain at failure for confined specimens
+are higher than for unconfined specimens, clearly indicating that
+CFRP confinement enhances the load-carrying capacity and de-
+formability. The hardening behavior of CRuC can be explained
+by the fact that the confinement pressure provided by the CFRP
+jacket maintains the integrity of the concrete and enhances its
+ability to carry load. Although the load-deflection curves of
+unconfined specimens are heavily influenced by their a=d ratio
+(i.e., increasing a=d increases the moment in the flexural region),
+the a=d ratio does not have a significant influence on the shear
+stress-strain curves. The shear deformation of confined specimens
+increases with increasing a=d ratio and results in higher ultimate
+shear strain and deflection. Table 2 summarizes the average ex-
+perimental data for both RuC and CRuC. Relative to RuC,
+G0;CRuC is similar to G0;RuC (without considering the abnormal
+value G0;RuC ¼ 4,407 in the case of a=d ¼ 1.0). An estimated
+value of 1,200 με for the peak shear strain of RuC (γp) was ob-
+tained from the numerical analysis as the strain gauges crossing
+the shear cracks failed prematurely and no experimental results
+were available. The ultimate shear strain of CRuC (γcu) is
+Shear Force (kN)
+Deflection (mm)
+Avg.EXP
+Predicted
+Fig. 16. Comparison of load-deflection curves between inverse FEA
+and test (φ ¼ 0.05).
+(a)
+(b)
+(c)
+Fig. 17. Configuration of (a) specimens; (b) reinforcement detail; and (c) experimental set-up overview (dimensions in millimeters).
+© ASCE
+04019039-10
+J. Compos. Constr.
+ J. Compos. Constr., 2019, 23(5): 04019039 
+Downloaded from ascelibrary.org by University of Leeds on 01/02/24. Copyright ASCE. For personal use only; all rights reserved.
+
+enhanced by more than 20 times compared with γp, whereas the
+ultimate shear stress of CRuC (τcc) is increased by 35%. This
+enhancement enables the CRuC specimens to dissipate approxi-
+mately 12 times more energy than their respective RuC specimens
+(Fig. 20). Because a complete stress-strain relationship could not
+be obtained, ΓRuC is calculated by integrating Eqs. (43) and (45)
+and is found to be 0.006 N=mm3.
+The shear stress-strain responses of RuC and CRuC are charac-
+terized by three phases: (1) an elastic phase up to the cracking shear
+stress (τcr); τcr defines the shear stress at which the onset of micro-
+cracking occurs; (2) a hardening response up to the maximum shear
+capacity of RuC (τp) or the transition point of CRuC (τt); and
+(3) this phase is a function of confinement level and is characterized
+by a softening branch for RuC and a linear hardening branch for
+CRuC up to failure. In Phase I, the initial slope of CRuC is the same
+as the initial shear modulus of RuC. The responses of RuC and
+CRuC in Phases II and III are affected by the presence of an FRP
+jacket. The linear hardening behavior of CRuC can be explained by
+the fact that the confinement pressure provided by the CFRP jacket
+maintains the integrity of the concrete and enhances its ability to
+carry load. The slope (G2) of this hardening portion is affected by
+the number of layers or type of FRP jacket. Based on this exper-
+imental observation, the assumptions proposed by Lam and Teng
+(2003b) for the behavior of FRP-confined concrete under compres-
+sion are used for the shear response of CRuC; that is, the τ-γ model
+consists of a parabolic first portion and a straight line second por-
+tion (Fig. 21). The parabolic first portion smoothly intersects the
+linear second portion.
+0
+5
+10
+15
+20
+0
+1
+2
+3
+4
+Shear force in mid-span (kN)
+Deflection (mm)
+Predicted
+Avg.EXP
+Onset of flexural cracking
+0
+0.5
+1
+1.5
+2
+0
+1000
+2000
+3000
+4000
+5000
+Shear Stress (MPa)
+Shear Strain (
+)
+Predicted
+Avg.EXP
+*
+0
+5
+10
+15
+20
+0
+1
+2
+3
+4
+Shear force in mid-span (kN)
+Deflection (mm)
+Predicted
+Avg.EXP
+Onset of flexural cracking
+0
+0.5
+1
+1.5
+2
+0
+1000
+2000
+3000
+4000
+5000
+Shear Stress (MPa)
+Shear Strain (
+)
+Predicted
+Avg.EXP
+*
+0
+5
+10
+15
+20
+0
+1
+2
+3
+4
+Shear force in mid-span (kN)
+Deflection (mm)
+Predicted
+Avg.EXP
+Onset of flexural cracking
+0
+0.5
+1
+1.5
+2
+0
+1000
+2000
+3000
+4000
+5000
+Shear Stress (MPa)
+Shear Strain (
+)
+Predicted
+Avg.EXP
+*indicates failure of strain gauges
+*
+(a)
+(b)
+(c)
+(d)
+(e)
+(f)
+Fig. 18. Comparisons between numerical and experimental shear stress-strain curves (left) and load-deflection curves (right) of RuC specimens
+[(a and b) a=d ¼ 0.5; (c and d) a=d ¼ 0.75; and (e and f) a=d ¼ 1].
+© ASCE
+04019039-11
+J. Compos. Constr.
+ J. Compos. Constr., 2019, 23(5): 04019039 
+Downloaded from ascelibrary.org by University of Leeds on 01/02/24. Copyright ASCE. For personal use only; all rights reserved.
+
+0
+1
+2
+3
+0
+10000
+20000
+30000
+Shear Stress (MPa)
+Shear Strain (
+)
+Predicted
+Avg.EXP
+0
+10
+20
+30
+0
+1
+2
+3
+4
+5
+6
+Shear force in mid-span (kN)
+Deflection (mm)
+Predicted
+Avg.EXP
+indicates malfunction of LVDTs 
+0
+1
+2
+3
+0
+10000
+20000
+30000
+Shear Stress (MPa)
+Shear Strain (
+)
+Predicted
+Avg.EXP
+0
+10
+20
+30
+0
+1
+2
+3
+4
+5
+6
+Shear force in mid-span (kN)
+Deflection (mm)
+Predicted
+Avg.EXP
+0
+1
+2
+3
+0
+10000
+20000
+30000
+Shear Stress (MPa)
+Shear Strain (
+)
+Predicted
+Avg.EXP
+0
+10
+20
+30
+0
+1
+2
+3
+4
+5
+6
+Shear force in mid-span (kN)
+Deflection (mm)
+Predicted
+Avg.EXP
+Test upper bound
+Test lower bound
+(a)
+(b)
+(c)
+(d)
+(e)
+(f)
+Fig. 19. Comparisons between numerical and experimental shear stress-strain curves (left) and load-deflection curves (right) of CRuC specimens
+[(a and b) a=d ¼ 0.5; (c and d) a=d ¼ 0.75; and (e and f) a=d ¼ 1].
+Table 2. Comparison between numerical and average experimental result of parameters used in Fig. 21
+a=d
+Types of
+value
+G0;RuC
+G0;CRuC
+G2
+τcr;RuC
+τcr;CRuC
+τp
+τt
+τcc
+γcr;RuC
+γcr;CRuC
+γt
+γcu
+ΓCRuC
+0.5
+Avg.Exp
+2,782
+2,873
+22
+0.7
+0.5
+1.4
+1.75
+2
+247
+174
+9,086
+21,751
+0.058
+Numerical
+3,547
+2,600
+28
+0.5
+0.65
+1.3
+1.56
+2.1
+129
+250
+6,212
+22,808
+0.067
+0.75
+Avg.Exp
+2,492
+2,100
+21
+0.8
+0.7
+1.3
+1.82
+2.1
+305
+330
+6,968
+23,163
+0.069
+Numerical
+4,703
+2,458
+24
+0.6
+0.74
+1.4
+1.79
+2.2
+129
+301
+5,317
+25,057
+0.072
+1.0
+Avg.Exp
+4,407
+2,216
+16
+0.5
+0.86
+1.4
+1.94
+2.2
+118
+388
+8,773
+26,689
+0.082
+Numerical
+5,833
+2,693
+17
+0.8
+0.94
+1.5
+1.88
+2.3
+132
+349
+4,332
+29,453
+0.095
+Note: Unit of shear modulus, G: MPa; shear stress, τ: MPa; shear strain, γ: με; and energy dissipation per volume, Γ: N · mm.
+© ASCE
+04019039-12
+J. Compos. Constr.
+ J. Compos. Constr., 2019, 23(5): 04019039 
+Downloaded from ascelibrary.org by University of Leeds on 01/02/24. Copyright ASCE. For personal use only; all rights reserved.
+
+Verification of the Material Model
+The finite element mesh used to perform the simulation of the
+beams failing in shear is illustrated in Fig. 22. In the experiment,
+the load was applied via a loading beam in displacement control
+and was transferred to the specimen by two steel rollers (Fig. 17c).
+In the numerical study, a displacement was applied at a reference
+point, which was coupled with two nodal points on the beam
+(Fig. 22). Four-node quadrilateral elements were used to model
+the concrete, whereas two-node truss elements were used to model
+the basalt bars. The perfect bond between the concrete and the
+basalt bars was assumed. The total mesh consists of 130 plane
+stress quadrilateral elements for concrete and 25 linear truss ele-
+ments for basalt bars.
+Figs. 18 and 19 compare the curves predicted by the proposed
+model and the average experimental shear stress-strain and load-
+deflection curves for RuC and CRuC, respectively. For the case
+of RuC, the comparative assessment indicates that the numerical
+modeling predicts reasonably well the ascending branch of the
+stress-strain curves. However, the initial stiffnesses of the predicted
+curves are generally stronger than that observed experimentally.
+Furthermore, the numerical model fails to predict the load-
+deflection behavior of the specimens (a=d ¼ 0.75 and 1.0) beyond
+the load causing extensive flexural cracking (Fig. 18) given the
+low flexural reinforcement provided. For the case of CRuC, the
+comparative assessment between predicted and average experimen-
+tal curves indicates good agreement.
+Table 2 compares the critical material parameters obtained
+from the experimental data and numerical modeling. For RuC,
+the numerical values of the initial shear modulus (G0;RuC) are
+higher than the experimental ones, whereas cracking shear stress
+and shear strength (τcr;RuC and τp) are similar to the experimental
+observations. For CRuC, the predicted G0;CRuC and G2 agree well
+with the experimental values. The tendency of G2 to decrease with
+increasing a=d is also demonstrated. The cracking shear stress
+τcr;CRuC is higher than τcr;RuC because the FRP may control crack-
+ing in the concrete. The transition between nonlinear and linear
+behavior (τt; γt) in the numerical model occurs earlier than in the
+experiment, which may be attributed to the fact that no gap be-
+tween the jacket and concrete is allowed in the numerical model.
+Thus, the jacket is mobilized earlier. The numerical ultimate
+stress/strain values (τcc and γcu) are higher than the corresponding
+experimental values, which may be attributed to the fact that the
+effectiveness of FRP in confining concrete subjected to a combi-
+nation of moment and shear is substantially different from the case
+of concrete under compression only. Hence, this aspect requires
+further investigation.
+Conclusions
+This paper presents the development and implementation of con-
+stitutive material models for RuC and CRuC into nonlinear FEA
+using a smeared, fixed crack approach. The material constitutive
+laws were determined by combining the experimental methods
+(uniaxial compression test, three-point bending test, and asymmet-
+ric four-point bend test) with inverse FEA. The experimental work
+used to calibrate and validate the model is also discussed in detail.
+On the basis of the results presented, the following conclusions can
+be drawn:
+1. CRuC made with high rubber volumes (60% of aggregate repla-
+cement) and confined with one layer of carbon fibers indicates
+ductile and stable performance that allows the development
+of high shear deformations (up to 40 times of RuC) at shear
+strength values up to two times higher than for RuC. This in-
+novative concrete can be used to develop highly deformable RC
+components for structures.
+2. By modifying the FA-STM, a new material model was devel-
+oped that can be used to provide a reasonable characterization
+of the shear behavior of RuC and CRuC. The abilities of the
+model to portray the load-displacement relation and the shear
+stress-strain relation are verified.
+3. The model can be used to examine the shear performance of
+highly deformable CRuC elements, such as bridge bearings,
+shear wall coupling beams, or base isolation columns.
+Fig. 20. Comparison of energy dissipation between RuC and CRuC.
+Fig. 21. Shear stress (τ)-strain (γ) model for RuC and CRuC.
+F1
+F2
+Fig. 22. Finite element mesh used in numerical modeling of asym-
+metric shear test.
+© ASCE
+04019039-13
+J. Compos. Constr.
+ J. Compos. Constr., 2019, 23(5): 04019039 
+Downloaded from ascelibrary.org by University of Leeds on 01/02/24. Copyright ASCE. For personal use only; all rights reserved.
+
+Appendix. Calculations of Element Stiffness Matrix
+Step 1: Provide material properties of concrete (f 0co) and FRP (Ef,
+nf, tf, and εh;rup).
+Eqs. (12), (29), (30), (31), (41), and (42) are used to solve seven
+unknown material properties: elastic modulus, Ec, crushing strain,
+εco, FRP-confinement pressure, fl;a, tensile strength, fct, cracking
+strain, εcr, shear strength, τp, and corresponding shear strain, γp.
+Step 2: Extract strain and strain increment in current load step
+εn ¼ εn−1 þ Δε
+Step 3: Transform the strain ½εx; εy; γxyT to the strain ½ε1; ε2;
+γ12T on the crack plane
+8
+>
+<
+>
+:
+ε1
+ε2
+γ12
+9
+>
+=
+>
+;
+¼
+2
+64
+c2
+s2
+2cs
+s2
+c2
+−2cs
+−cs
+cs
+c2 −s2
+3
+75
+8
+>
+<
+>
+:
+εx
+εy
+γxy
+9
+>
+=
+>
+;
+where c ¼ cos φ, s ¼ sin φ and φ ¼ 180° −θf.
+Step 4: Select stress state from seven cases.
+Case
+Stress states
+Uncracked tension—uncracked tension
+ε1 < εcr, ε2 < εcr
+Uncracked tension—uncrushed compression
+ε1 < εcr, εcu < ε2 < 0
+Uncrushed compression—uncrushed
+compression
+εco < ε1 < 0, εcu < ε2 < 0
+Cracked tension—cracked tension
+ε1 ≥εcr, ε2 ≥εcr
+Cracked tension—uncracked tension
+ε1 ≥εcr, ε2 < εcr
+Cracked tension—uncrushed compression
+ε1 ≥εcr, εcu < ε2 < 0
+Crushed compression—crushed compression
+ε1 < εco, ε2 < εcu
+The components of the tangential stiffness matrix can be deter-
+mined by corresponding constitutive laws [Eqs. (9), (11), (18), (19),
+(20), (34), (40), (44), and (45)]
+8
+>
+<
+>
+:
+σ1
+σ2
+τ12
+9
+>
+=
+>
+;
+¼
+2
+64
+E1
+μE1
+0
+μE2
+E2
+0
+0
+0
+G12
+3
+75
+8
+>
+<
+>
+:
+ε1
+ε2
+γ12
+9
+>
+=
+>
+;
+Step 5: Transfer the stiffness matrix in the 1-2 coordinate back to
+the x-y coordinate
+½Ecxy ¼ ½T−1½E12½T
+½T ¼
+2
+64
+cos2θ
+sin2θ
+cos θ sin θ
+sin2θ
+cos2θ
+- cos θ sin θ
+-2 cos θ sin θ
+2 cos θ sin θ
+cos2θ- sin2θ
+3
+75
+Step 6: Determine the Jacobian for FRP-confined concrete in the
+x, y direction
+½Exy ¼ ½Ecxy þ ½Efrp
+yy  ¼
+2
+664
+Ecxx
+Ecxy
+Ecxγ
+Ecyx
+Ecyy þ Efrp
+yy
+Ecyγ
+Ecτx
+Ecτy
+Ecτγ
+3
+775
+Step 7: Update stress and strain
+σiþ1 ¼ σi þ Exydεi
+Step 8: Check the convergence at the current load step. If it is
+satisfied, go to the next load step. Otherwise, go to Step 2. If load-
+ing is completed or the limit state criteria are reached, stop the
+computation.
+Acknowledgments
+The research leading to these results has received funding from
+the European Union Seventh Framework Programme [FP7/2007–
+2013] under Grant Agreement No. 603722. The first author is sup-
+ported by a scholarship from the China Scholarship Council (CSC)
+under Grant CSC No. 201608060059.
+Notation
+The following symbols are used in this paper:
+Ac = total area of concrete;
+Ae = effective confinement area;
+Ag = gross area of column section with rounded corner;
+A0 = facture surface area;
+a = distance between applied load and support;
+b = width of rectangular section;
+D = diameter of cylinder;
+Deq = diameter of equivalent circular section;
+d = depth of specimen;
+dt = damage variable;
+Ec = elastic modulus of RuC;
+Ef = tensile elastic modulus of FRP;
+E2 = slope of straight second portion;
+f 0c;max = strength of inclined concrete strut;
+f 0cc = ultimate compressive strength of CRuC;
+f 0co = uniaxial cylindrical compressive strength of RuC;
+fct = tensile strength of RuC;
+ffrp = tensile strength of FRP;
+fl;a = actual lateral confinement pressure;
+GF = fracture energy;
+Gp = secant shear modulus at shear strength;
+Gt = tangent shear modulus;
+G0;CRuC = initial shear modulus of CRuC;
+G0;RuC = initial shear modulus of RuC;
+G2 = gradient of shear hardening of CRuC;
+h = depth of rectangular section;
+I1 = first deviatoric;
+J2 = second deviatoric;
+ks1 = shape factor for strength enhancement;
+ks2 = shape factor for strain enhancement;
+kε = FRP efficiency factor;
+nf = number of FRP layers;
+Rc = size of round corner of rectangular section;
+tf = thickness of one layer of carbon −FRP jacket;
+Us = total fracture work in three-point bending tests;
+Ws = energy per unit volume;
+w = crack width;
+wcb = crack band width;
+wult = ultimate crack mouth opening;
+α = rotating angle between d-axis and l-axis;
+α2 = fixed angle between 2-axis and l-axis;
+β = deviating angle between principal 2-axis and d-axis;
+γcr;CRuC = cracking shear strain of CRuC;
+γcr;RuC = cracking shear strain of RuC;
+γcu = ultimate shar strain of CRuC;
+γlt = average shear strain in l-t coordinate;
+γnm = average shear strain in n-m coordinate;
+γp = shear strain at peak load;
+© ASCE
+04019039-14
+J. Compos. Constr.
+ J. Compos. Constr., 2019, 23(5): 04019039 
+Downloaded from ascelibrary.org by University of Leeds on 01/02/24. Copyright ASCE. For personal use only; all rights reserved.
+
+γt = transition shear strain of CRuC;
+εc = uniaxial compressive strain;
+εco = compressive strain at peak load of RuC;
+εcr = cracking strain in tension;
+εct = uniaxial tensile strain;
+εcu = ultimate compressive strain of CRuC;
+εd, εr = average normal strains in d- and r-directions,
+respectively;
+εf = direct uniaxial tensile strain of FRP;
+εh;rup = actual hoop rupture strain of FRP;
+εl, εt = average normal strains in l- and t-directions,
+respectively;
+εn, εm = average normal strains in n- and m-directions,
+respectively;
+εtr = uniaxial compressive strain at transition point;
+εult = ultimate tensile strain;
+ε2, ε1 = average normal strains in 2- and 1-directions,
+respectively;
+ε1p, ε2p = principal compressive and tensile strains in
+asymmetric shear tests, respectively;
+ζ = compressive capacity reduction factor;
+θc = angle between d-axis and l-axis;
+θf = angle of inclined strut;
+θp = principal angle between 2-axis and l-axis;
+ρsc = reinforcement ratio;
+ρt = FRP ratio in t-direction;
+σc = uniaxial compressive stress;
+σct = uniaxial tensile stress;
+σd, σr = average normal stresses of concrete in the d- and
+r-directions, respectively;
+σl, σt = average normal stresses in l- and t-directions,
+respectively;
+σcn, σcm = average normal stresses of concrete in the n- and
+m-directions, respectively;
+σc
+2, σc
+1 = average normal stresses of concrete in 2- and
+1-directions, respectively;
+τcc = shear strength of CRuC;
+τcr;CRuC = cracking shear strength of CRuC;
+τcr;RuC = cracking shear strength of RuC;
+τlt = applied shear stress in l, t-coordinate;
+τcnm = average shear stress in n, m-coordinate;
+τ p = shear strength of RuC;
+τt = transition shear stress of CRuC;
+φ = loading stress ratio;
+ΓCRuC = energy dissipated per unit volume of CRuC during
+shearing; and
+ΓRuC = energy dissipated per unit volume of RuC during
+shearing.
+References
+Abaqus. 2014. Abaqus analysis user’s manual: Version 6.14. Waltham,
+MA: Dassault Systèmes.
+ACI (American Concrete Institute). 2002. Building code requirements for
+structural concrete. ACI Committee 318. Farmington Hills, MI: ACI.
+Alecci, V., S. Briccoli Bati, and G. Ranocchiai. 2014. “Concrete columns
+confined with CFRP wraps.” Mater. Struct. 47 (3): 397–410. https://doi
+.org/10.1617/s11527-013-0068-7.
+Bažant, Z. P., and B. H. Oh. 1983. “Crack band theory for fracture of con-
+crete.” Matériaux et construction 16 (3): 155–177. https://doi.org/10
+.1007/BF02486267.
+Birrcher, D., R. Tuchscherer, M. Huizinga, O. Bayrak, S. L. Wood,
+and J. O. Jirsa. 2009. Strength and serviceability design of rein-
+forced concrete deep beams. Austin, TX: Center for Transportation
+Research.
+Bompa, D. V., A. Y. Elghazouli, B. Xu, P. J. Stafford, and A. M.
+Ruiz-Teran. 2017. “Experimental assessment and constitutive model-
+ling of rubberised concrete materials.” Constr. Build. Mater. 137 (Apr):
+246–260. https://doi.org/10.1016/j.conbuildmat.2017.01.086.
+Collins, M. P. 1973. “Torque-twist characteristics of reinforced concrete
+beams.” In Inelastically and nonlinearity in structural concrete,
+211–231. Waterloo, Canada: University of Waterloo Press.
+Eldin, N. N., and A. B. Senouci. 1993. “Rubber-tire particles as concrete
+aggregate.” J. Mater. Civ. Eng. 5 (4): 478–496. https://doi.org/10.1061
+/(ASCE)0899-1561(1993)5:4(478).
+Freakley, P. K., and A. R. Payne. 1978. Theory and practice of engineering
+with rubber. London: Applied Science.
+Guo, Z. 2014. Principles of reinforced concrete. Oxford, UK: Butterworth-
+Heinemann.
+Hsu, T. T. 1988. “Softened truss model theory for shear and torsion.”
+ACI Struct. J. 85 (6): 624–635.
+Kani, G. N. 1979. Kani on shear in reinforced concrete, 225. Toronto:
+University of Toronto Press.
+Khatib, Z. K., and F. M. Bayomy. 1999. “Rubberized portland cement
+concrete.” J. Mater. Civ. Eng. 11 (3): 206–213. https://doi.org/10.1061
+/(ASCE)0899-1561(1999)11:3(206).
+Lam, L., and J. G. Teng. 2003a. “Design-oriented stress-strain model for
+FRP-confined concrete.” Constr. Build. Mater. 17 (6–7): 471–489.
+https://doi.org/10.1016/S0950-0618(03)00045-X.
+Lam, L., and J. G. Teng. 2003b. “Design-oriented stress-strain model
+for FRP-confined concrete in rectangular columns.” J. Reinf. Plast.
+Compos. 22 (13): 1149–1186. https://doi.org/10.1177/07316844030
+35429.
+Lam, L., J. G. Teng, C. H. Cheung, and Y. Xiao. 2006. “FRP-confined con-
+crete under axial cyclic compression.” Cem. Concr. Compos. 28 (10):
+949–958. https://doi.org/10.1016/j.cemconcomp.2006.07.007.
+Li, G., D. Maricherla, K. Singh, S. S. Pang, and M. John. 2006. “Effect of
+fiber orientation on the structural behavior of FRP wrapped concrete
+cylinders.” Compos. Struct. 74 (4): 475–483. https://doi.org/10.1016/j
+.compstruct.2005.05.001.
+Medina, N. F., R. Garcia, I. Hajirasouliha, K. Pilakoutas, M. Guadagnini, and
+S. Raffoul. 2018. “Composites with recycled rubber aggregates: Proper-
+ties and opportunities in construction.” Constr. Build. Mater. 188 (Nov):
+884–897. https://doi.org/10.1016/j.conbuildmat.2018.08.069.
+Naito, C., J. States, C. Jackson, and B. Bewick. 2014. “Assessment
+of crumb rubber concrete for flexural structural members.” J. Mater.
+Civ. Eng. 26 (10): 04014075. https://doi.org/10.1061/(ASCE)MT.1943
+-5533.0000986.
+Ozbakkaloglu, T., and E. Akin. 2012. “Behavior of FRP-confined normal-
+and high-strength concrete under cyclic axial compression.” J. Compos.
+Constr. 16 (4): 451–463. https://doi.org/10.1061/(ASCE)CC.1943
+-5614.0000273.
+Pang, X. B. D., and T. T. Hsu. 1995. “Behavior of reinforced concrete
+membrane elements in shear.” ACI Struct. J. 92 (6): 665–679.
+Pang, X. B. D., and T. T. Hsu. 1996. “Fixed angle softened truss model for
+reinforced concrete.” ACI Struct. J. 93 (2): 196–208.
+Pessiki, S., K. A. Harries, J. T. Kestner, R. Sause, and J. M. Ricles. 2001.
+“Axial behavior of reinforced concrete columns confined with FRP
+jackets.” J. Compos. Constr. 5 (4): 237–245. https://doi.org/10.1061
+/(ASCE)1090-0268(2001)5:4(237).
+Pilakoutas, K. 2017. “Anagennisi: Innovative reuse of all tyre components
+in concrete.” Accessed July 04, 2019. https://cordis.europa.eu/project
+/rcn/111538.
+Pilakoutas, K., S. Raffoul, P. Papastergiou, R. Garcia, M. Guadagnini,
+and I. Hajirasouliha. 2015. “Innovative reuse of all tyre components
+in concrete: The Anagennisi project.” In Proc., Int. Conf. on Sustainable
+Structural Concrete, 259–268. La Plata, Argentina.
+Raffoul,
+S.,
+R.
+Garcia,
+D.
+Escolano-Margarit,
+M.
+Guadagnini,
+I.
+Hajirasouliha, and K. Pilakoutas. 2017. “Behaviour of unconfined and
+FRP-confined rubberised concrete in axial compression.” Constr. Build.
+© ASCE
+04019039-15
+J. Compos. Constr.
+ J. Compos. Constr., 2019, 23(5): 04019039 
+Downloaded from ascelibrary.org by University of Leeds on 01/02/24. Copyright ASCE. For personal use only; all rights reserved.
+
+Mater. 147 (Aug): 388–397. https://doi.org/10.1016/j.conbuildmat.2017
+.04.175.
+Raffoul, S., R. Garcia, K. Pilakoutas, M. Guadagnini, and N. F. Medina.
+2016. “Optimisation of rubberised concrete with high rubber content:
+An experimental investigation.” Constr. Build. Mater. 124 (Oct):
+391–404. https://doi.org/10.1016/j.conbuildmat.2016.07.054.
+Robinson, J. R., and J. M. Demorieux. 1968. “Essais de traction-
+compression sur modèles d’âme de poutre en béton armé.” In
+Compte rendu des recherches effectuées en 1968, Annales ITBTP,
+980–982. Paris, France: Institut de recherches appliquées du béton
+armé.
+Saadatmanesh, H., M. R. Ehsani, and M. W. Li. 1994. “Strength and
+ductility of concrete columns externally reinforced with fiber composite
+straps.” ACI Struct. J. 91 (4): 434–447.
+Sienkiewicz, M., J. Kucinska-Lipka, H. Janik, and A. Balas. 2012.
+“Progress in used tyres management in the European Union: A review.”
+Waste Manage. 32 (10): 1742–1751. https://doi.org/10.1016/j.wasman
+.2012.05.0.
+Teng, J. G., T. Jiang, L. Lam, and Y. Z. Luo. 2009. “Refinement of a design-
+oriented stress-strain model for FRP-confined concrete.” J. Compos.
+Constr. 13 (4): 269–278. https://doi.org/10.1061/(ASCE)CC.1943
+-5614.0000012.
+Vecchio, F. J., and M. P. Collins. 1986. “The modified compression-
+field theory for reinforced concrete elements subjected to shear.”
+ACI Struct. J. 83 (2): 219–231.
+Zhu, R. R., T. T. Hsu, and J. Y. Lee. 2001. “Rational shear modulus for
+smeared-crack analysis of reinforced concrete.” ACI Struct. J. 98 (4):
+443–450.
+© ASCE
+04019039-16
+J. Compos. Constr.
+ J. Compos. Constr., 2019, 23(5): 04019039 
+Downloaded from ascelibrary.org by University of Leeds on 01/02/24. Copyright ASCE. For personal use only; all rights reserved.

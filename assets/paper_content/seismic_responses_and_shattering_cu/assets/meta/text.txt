@@ -1,0 +1,1923 @@
+Full Length Article
+Seismic responses and shattering cumulative effects of bedding
+parallel stepped rock slope: Model test and numerical simulation
+Chunlei Xin a, b, *, Fei Yang c, Wenkai Feng a, b, **, Zhao Wang d, Wenhui Li b
+a State Key Laboratory of Geohazard Prevention and Geoenvironment Protection, Chengdu University of Technology, Chengdu, China
+b College of Environment and Civil Engineering, Chengdu University of Technology, Chengdu, China
+c Institute of Mountain Hazards and Environment, Chinese Academy of Sciences (CAS), Chengdu, China
+d Institute for Transport Studies, University of Leeds, 34-40 University Rd, Leeds, LS2 9JT, UK
+a r t i c l e
+i n f o
+Article history:
+Received 5 January 2024
+Received in revised form
+29 January 2024
+Accepted 17 March 2024
+Available online 10 July 2024
+Keywords:
+Rock slope stability
+Shaking table test
+Numerical simulation
+Permanent displacement
+Acceleration ampliﬁcation factor
+a b s t r a c t
+Bedding parallel stepped rock slopes exist widely in nature and are used in slope engineering. They are
+characterized by complex topography and geological structure and are vulnerable to shattering under
+strong earthquakes. However, no previous studies have assessed the mechanisms underlying seismic
+failure in rock slopes. In this study, large-scale shaking table tests and numerical simulations were
+conducted to delineate the seismic failure mechanism in terms of acceleration, displacement, and earth
+pressure responses combined with shattering failure phenomena. The results reveal that acceleration
+response mutations usually occur within weak interlayers owing to their inferior performance, and these
+mutations may transform into potential sliding surfaces, thereby intensifying the nonlinear seismic
+response characteristics. Cumulative permanent displacements at the internal corners of the berms can
+induce quasi-rigid displacements at the external corners, leading to greater permanent displacements at
+the internal corners. Therefore, the internal corners are identiﬁed as the most susceptible parts of the
+slope. In addition, the concept of baseline offset was utilized to explain the mechanism of earth pressure
+responses, and the result indicates that residual earth pressures at the internal corners play a dominant
+role in causing deformation or shattering damage. Four evolutionary deformation phases characterize
+the processes of seismic responses and shattering failure of the bedding parallel stepped rock slope, i.e.
+the formation of tensile cracks at the internal corners of the berm, expansion of tensile cracks and
+bedding surface dislocation, development of vertical tensile cracks at the rear edge, and rock mass
+slipping leading to slope instability. Overall, this study provides a scientiﬁc basis for the seismic design of
+engineering slopes and offers valuable insights for further studies on preventing seismic disasters in
+bedding parallel stepped rock slopes.
+© 2025 Institute of Rock and Soil Mechanics, Chinese Academy of Sciences. Published by Elsevier B.V. This
+is an open access article under the CC BY-NC-ND license (http://creativecommons.org/licenses/by-nc-nd/
+4.0/).
+1. Introduction
+Owing to the regional dynamics associated with the complex
+geology, the high-intensity seismic zone of southwest China
+frequently experiences a fundamental phenomenon known as su-
+perﬁcial cracking of rock masses at the Earth's surface. This
+phenomenon creates a geologically vulnerable environment for the
+slopes in the region. Generally, shattered slopes are the product of
+earthquakes. The structural planes in the rock mass are damaged
+and developed due to strong earthquakes; however, there is no
+obvious macroscopic deformation (He et al., 2020). Under multi-
+stage earthquakes, these cracks further extend and expand, causing
+additional damage to the integrity of the rock mass structures on
+slopes (Ning et al., 2019; Song et al., 2019). For example, after the
+2008 Ms 8.0 Wenchuan earthquake, severely affected areas expe-
+rienced widespread shattering of deformable rock masses on the
+slope surfaces and within the slopes (Dong et al., 2020). Shattered
+deformable slopes in the high-intensity seismic zone of southwest
+China are characterized by numerous seismically induced cracks
+* Corresponding author.
+** Corresponding author.
+E-mail
+addresses:
+xinchunlei@cdut.edu.cn
+(C.
+Xin),
+fengwenkai@cdut.cn
+(W. Feng).
+Peer review under responsibility of Institute of Rock and Soil Mechanics, Chi-
+nese Academy of Sciences.
+Contents lists available at ScienceDirect
+Journal of Rock Mechanics and
+Geotechnical Engineering
+journal homepage: www.jrmge.cn
+https://doi.org/10.1016/j.jrmge.2024.03.031
+1674-7755/© 2025 Institute of Rock and Soil Mechanics, Chinese Academy of Sciences. Published by Elsevier B.V. This is an open access article under the CC BY-NC-ND license
+(http://creativecommons.org/licenses/by-nc-nd/4.0/).
+Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 2009e2030
+
+that propagate along the surface and within rock masses. These
+cracks exhibit a distinctive morphology, extending along different
+slope aspects and varying degrees of expansion over signiﬁcant
+distances. Generally, seismically induced shattering cracks propa-
+gate through the internal and external corners on the slope surfaces
+or the contact surfaces between different lithologies on slopes.
+They can also propagate inside the rock mass. During aftershocks,
+the slope deforms continuously in the gravitational ﬁeld because of
+the existing shattering cracks until it reaches the instability or
+failure stage, signiﬁcantly affecting the post-seismic stability of
+engineering slopes (Xiao et al., 2010; Song et al., 2021a). During the
+Wenchuan earthquake, the Chediguan slope shattered and dis-
+integrated and generated a massive rock of 5  104 kg, which
+collided with several bridge piers. This collision led to the cata-
+strophic collapse of the bridge deck by more than 100 m, causing
+six casualties. A similar catastrophic event occurred in Sanxi village
+near Dujiangyan City during the Wenchuan earthquake. The
+seismic activity caused instability and triggered the failure of the
+shattering slope, causing 48 casualties, with 11 individuals missing.
+Investigations of geological disasters reveal that there are 588
+seismically induced unstable shattering slopes in Qingchuan
+County after the Wenchuan earthquake, accounting for almost half
+of the total geological hazards (Xin et al., 2019; Pu et al., 2020).
+The behavior of rocks under dynamic loadings signiﬁcantly
+differs from static loadings due to rate-dependent mechanical
+properties, resulting in distinct cracking modes at different loading
+rates. The dynamic response of brittle materials, including rocks, is
+inﬂuenced by several factors. These factors include the loading rate
+or strain rate, the duration of the loading event, the conﬁning
+pressure, and the inherent properties of the material (Meyers,1994;
+Wang et al., 2013). One key dynamic effect is wave propagation,
+where elastic waves transmit energy through the material. Lak et al.
+(2019) derived a general Green's function solution for elastic wave
+propagation and determined the associated strain and stress ﬁelds
+using the theory of elasticity. Understanding the transition of
+cracking modes relies on the introduction to the concept of a rate-
+dependent strength ﬁeld. To examine the impact of structural
+planes on slope dynamics, Xu et al. (2023) employed the combined
+ﬁnite-discrete element method (FDEM). Their study demonstrated
+that the enhanced FDEM approach accurately reproduced dynamic
+evolution processes and failure patterns in jointed rock slopes
+subjected to seismic loads. Moreover, it provided a quantitative
+assessment of the dynamic stability of such slopes. Theoretically,
+slope shattering represents a type of cracking without sliding,
+caused by strong earthquakes, and it is a widespread potential
+geological hazard. The slope shattering has generally been over-
+looked during the evaluation of geological disasters or seismic
+precaution intensity research owing to its inherent characteristics.
+It is crucial to investigate the stability of seismically induced slope
+shattering as it can contribute to the development of improved
+prediction methods and prevention strategies for post-earthquake
+slope hazards, mitigating the risk effects (Shinoda et al., 2015; Feng
+et al., 2021). Normally, the seismically induced shattering of slopes
+with different lithologic characteristics generates different seismic
+responses and failure patterns. During the 1999 Chi-Chi earth-
+quake,
+the
+clustering
+of
+earthquake-induced
+landslides
+that
+occurred near ridgetops is mainly attributed to the topographic
+ampliﬁcation of ground shaking. The intense ground shaking led to
+shattering and landslide erosions, particularly in areas with
+elevated topography. This phenomenon resulted in further insta-
+bility and led to the erosion of ridgetops. In contrast, the shattering
+phenomenon randomly appears on slope surfaces beside sloping
+ridges after an earthquake (Che et al., 2016). An analysis of seismic
+energy transmission ratios in the weak zones of the slope reveals
+that shattering failure is generally developed ﬁrst at the slope crest
+and slope toe of the sliding mass owing to resonance effects (Fan
+et al., 2017). The shattering of the rock mass induced by ground
+shaking reduces the frictional strength of the substrate, thereby
+causing shear failure of the toe of a large-scale landslide (Huang
+et al., 2012). Furthermore, earthquakes induce additional stress
+within the slopes, particularly when the stress is horizontally ori-
+ented and perpendicular to the normal direction of the slope. This
+increased stress often results in an excessive occurrence of land-
+slides. The geological structure of a slope is prone to destruction
+under seismic excitation and results in the formation of numerous
+joints and ﬁssures. These joints and ﬁssures act as preferential
+pathways for surface water inﬁltration, further exacerbating the
+slope instability (Peng et al., 2019; Dong et al., 2020). Earthquake-
+induced landslides tend to be concentrated in speciﬁc zones such
+as reliefs, slopes, and topographic roughness (Yin et al., 2010). The
+post-earthquake shattering of slopes is widely acknowledged as
+one of the primary causes of collapse and landslides. Ten years after
+the Wenchuan earthquake, shattered and induced failure was
+observed on hillslopes located 250 km NE of the mainshock
+epicenter (Fan et al., 2019). A study by Del Gaudio et al. (2018)
+suggested that the resonance phenomenon of the slopes is
+strongly inﬂuenced by shattered Precambrian limestone. The red-
+bed landslide exhibits a seismic failure mechanism characterized
+by tension, crushing, shattering, and sliding. Furthermore, owing to
+the steep slope gradient, presence of well-developed tensile frac-
+tures, and frequent occurrence of aftershocks and rainstorms,
+toppling and small collapses can occur at the back scarp of the
+remaining slopes (Li et al., 2019). Furthermore, originally intact
+slopes may eventually develop into shattered slopes, facilitating
+postseismic
+rockfalls.
+Additionally,
+earthquake-induced
+local
+landslides often initiate the failure of shattered rock masses or
+regoliths near the ridge of a high and steep slope, resulting in
+destruction owing to the large momentum and entrainment po-
+tential of the moving mass. Slope ridges are particularly vulnerable
+to the topographic ampliﬁcation of seismic shaking, which can lead
+them to aggravate weathering and rain-triggered failure years or
+decades after the mainshock (Wu et al., 2020; Wang et al., 2022).
+Previous studies on seismically induced shattering slopes have
+primarily focused on analyzing dynamic responses and failure
+patterns. However, the dynamic response mechanisms and cumu-
+lative shattering effects of bedding parallel stepped rock slopes
+remain unclear. Two scientiﬁc issues need to be addressed: (1)
+propagation mechanisms of seismic motion in complex rock
+masses of the slope, and (2) seismically induced evolution mech-
+anisms of shattering slopes (Xin et al., 2020; Qi et al., 2022).
+Resolving these issues will be beneﬁcial for evaluating and pre-
+dicting slope shattering. Thus, we conducted a series of shaking
+table model tests and numerical simulations, as they can capture
+the entire process of slope shattering, not only on slope surfaces but
+also on slope bodies with different berm patterns (Xin et al., 2018;
+Su et al., 2021). The study area and the preparations for the shaking
+table model tests are described in Sections 2 and 3, respectively.
+The experimental ﬁndings focus on bedding parallel stepped rock
+slopes that consist of weak interlayers and are subjected to
+increasing intensities of Wolong seismic motions. This study
+compare the failure patterns and topographic changes in slope
+models with varying berm widths, based on the measured accel-
+eration, displacement, and earth pressure data, during seismic ex-
+citations. Finally, based on the results, the seismic response
+mechanisms
+and
+cumulative
+effects
+of
+slope
+shattering
+are
+discussed.
+2. Study area
+For the shaking table model tests, a cut slope along the
+C. Xin, F. Yang, W. Feng et al.
+Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 2009e2030
+2010
+
+SanbaoeQingshui Expressway (located between Qujing City and
+Kunming City) was selected as the prototype. This expressway
+traverses a mountainous region with varying slopes. Initially, the
+natural slope had an inclination of approximately 30. However,
+following excavation, a stepped slope surface was created, with an
+average slope angle of approximately 41. The selected site provides
+a representative model for studying the behavior and response of
+slopes under seismic conditions. Fig. 1a shows the topographical
+characteristics of the prototype slope, which was designed in a
+stepped shape to maintain a relatively stable state under the force
+of gravity. The typical geological proﬁle of the slope is shown in
+Fig. 1b. The lithology of the cut slope is mainly composed of silty
+sandstone and sandstone characterized by arenaceous structures
+and stratiﬁed formations with many joints. The geological structure
+of the formation is a monocline, with a dip direction and a dip angle
+of 138 and 35, respectively. The slope contains multiple weak
+interlayers composed of clay with a dip angle of 35, and the
+thickness of the weak interlayer ranges from 0.1 m to 0.2 m. The
+prototype slope exhibits multiple bedding planes oriented parallel
+to the slope face, which can serve as potential slip surfaces, facili-
+tating slope movement and instability. Speciﬁcally, the peak ground
+acceleration in the study area is 3 m/s2, and the earthquake forti-
+ﬁcation intensity is VIII degree, according to the seismic ground
+motion parameter zonation map of China. A series of physico-
+mechanical tests were conducted on the cut slope to obtain pre-
+cise mechanical parameters for the rock mass behavior, speciﬁcally
+focusing on silty sandstone and weak interlayers. Direct shear tests
+and triaxial compression tests were performed to obtain the
+cohesion (c) and internal friction angle (f). Uniaxial compression
+tests were performed to obtain the elasticity modulus (E) and
+Poisson's ratio (m). The physico-mechanical parameters of the
+prototype slope are listed in Table 1.
+3. Materials and methods
+3.1. Laboratory equipment
+The system consists of a 4 m  6 m (length  width) platform
+operated by eight hydraulic actuators that can produce excitations
+in three directions with six degrees of freedom (Fig. 2). The system
+is equipped with a response signal collection and analysis system,
+which is controlled by a servo controller via a controlling software
+installed on a computer. The actuators positioned in the horizontal
+and vertical directions have different dynamic capacities, allowing
+the platform to attain a maximum horizontal acceleration of 15 m/
+s2 and a maximum vertical acceleration of 10 m/s2, corresponding
+to maximum strokes of 300 mm and 150 mm, respectively. Addi-
+tionally, the maximum payload of this shaking table system is
+4  104 kg, and an operational frequency range of 0e60 Hz.
+Therefore, either a single signal with a certain amplitude and fre-
+quency (i.e. sine wave) or a ﬁeld seismic wave with complex fre-
+quency components can be selected as the input waveforms to
+investigate the dynamic response of the research objects.
+A large-scale rigid model container was fabricated to contain the
+model slopes. It has dimensions of 3.6 m  1.5 m  2.1 m
+(length  width  height) and is rigidly ﬁxed on the shaking table
+by high shearing strength bolts for the tests. To minimize the
+reﬂection and refraction effects of the input seismic wave on the
+boundaries of the model container, two polystyrene foams with a
+thickness of 20 cm were steeply lined at the gaps between the
+model container ends and the model slopes. The foam board also
+serves to absorb the energy of the reﬂected wave from the side wall
+of the rigid model container and simulate the dissipation effect of
+the seismic wave across the inﬁnite ﬁeld. The elastic modulus,
+thickness, Poisson's ratio and density of ﬂexible materials are
+carefully considered. To further enhance the accuracy of the tests,
+the following measures were taken to mitigate the effects of friction
+between the model container and model slopes: plexiglass boards
+were carefully cleaned and coated with Vaseline before being ﬁxed
+to the model container. Then, a transparent friction-reduce ﬁlm was
+pasted onto the inner sides of the model container and Vaseline
+was also coated on the surface of the ﬁlm. By means of these
+measures, the effects of friction between the model container and
+the model slopes could be effectively mitigated.
+3.2. Similitude relations and parameters
+The shaking table model test should utilize similitude relations
+to replicate the dynamic response phenomena of the prototype in
+terms of geometric dimensions, time, mass, boundary conditions,
+and initial conditions. The acceleration was rationally selected as a
+controlling parameter because it had an evident impact on the
+dynamic response of the model slope in the shaking table test. The
+similarity ratio of the acceleration was determined to be one for the
+shaking model test because it differs from the centrifuge model
+test, which can change the acceleration, considerably (Sun et al.,
+2020; Zhu et al., 2021). The geometric size of the model slope
+with a scaling factor of 25 was also selected as a controlling
+parameter, which was limited by the geometric size of the shaking
+table and model container. According to the Buckingham p theo-
+rem and dimensional analysis, geometric dimension (L), density (r),
+and acceleration (a) were chosen as the three fundamental con-
+trolling parameters. This section allows for the derivation of the
+similitude relation of other physical variables from the three
+fundamental controlling parameters. In this study, a total of 13
+parameters were considered, and these parameters satisfy the
+Fig. 1. The topography characteristics of geological section of the study area: (a) The
+topography characteristics, and (b) The geological cross-section.
+C. Xin, F. Yang, W. Feng et al.
+Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 2009e2030
+2011
+
+physical function described by Eq. (1). [M], [L], and [T] are regarded
+as fundamental dimensions, and based on dimensional consistency,
+each parameter can be represented by Eqs. (2) and (3). Further-
+more, the similarity criterion function can be expressed as Eq. (4),
+which represents the dimensionless similarity criterion. Conse-
+quently, the general similarity criterion can be written as Eq. (5).
+The similarity criteria and ratios of all 13 parameters were deter-
+mined using the matrix method (Fan et al., 2016; He et al., 2021), as
+listed in Table 2.
+f ðl; a; r; E; m; c; f; s; ε; t; d; v; xÞ ¼ 0
+(1)
+M0L0T0 ¼ La1 ,
+
+LT2a2 ,
+
+ML3a3 ,
+
+ML1T2a4 , ð1Þa5
+,
+
+ML1T2a6,ð1Þa7 ,
+
+ML1T2a8 , ð1Þa9 , ðTÞa10 , ðLÞa11
+,
+
+LT1a12 , ð1Þa13
+(2)
+a1 þ a2  3a3  a4  a6  a8 þ a11 þ a12 ¼ 0
+2a2  2a4  2a6  2a8 þ a10  a12 ¼ 0
+a3 þ a4 þ a6 þ a8 ¼ 0
+a5 þ a7 þ a9 þ a13 ¼ constant
+9
+>
+>
+=
+>
+>
+;
+(3)
+Fðp1; p2; p3…p10Þ ¼ 0
+(4)
+pi ¼ ½la1 , ½aa2 , ½ra3 , ½Ea4 , ½ma5 , ½ca6
+,½fa7 , ½sa8 , ½εa9 , ½ta10 , ½da11 , ½va12 , ½xa13
+(5)
+An appropriate mixture ratio of model materials is crucial for
+simulating the physical-mechanical properties of the prototype
+slope and replicating its dynamic phenomena during the shaking
+table test. In this series of tests, barite, gypsum, quartz sand, clay,
+glycerol, and water were selected as the similarity materials for
+constructing the model slopes and weak interlayers. Speciﬁcally,
+quartz sand served as the coarse aggregate, barite as the ﬁne
+aggregate, gypsum as cement, and water and glycerol as accessory
+materials. Various tests were conducted to determine the optimal
+mixture ratio of the rock mass and weak interlayer with physico-
+mechanical parameters satisfying the similarity relationships. We
+conducted direct shear tests, uniaxial compression tests, triaxial
+compression tests, and ring-knife tests and obtained the physico-
+mechanical parameters of similarity materials with different ra-
+tios (Fig. 3). The optimal mixture ratio for the rock mass consisting
+of barite, quartz sand, gypsum, glycerol, and water was determined
+to be 35:25:10:2:14. The weak interlayer consisted of barite, clay,
+and glycerol at a ratio of 25:10:1. The physico-mechanical param-
+eters of the model slopes determined are as follows: for rock mass,
+density ¼ 2.52 g/cm3, shear strength parameters c ¼ 0.115 MPa,
+f
+¼
+25,
+elastic
+modulus
+¼
+0.19
+GPa,
+and
+tensile
+strength ¼ 0.05 MPa; for the weak interlayer, the density ¼ 1.86 g/
+cm3, shear strength parameters c ¼ 0.032 MPa, f ¼ 22, elastic
+modulus ¼ 0.026 GPa, and tensile strength ¼ 0.01 MPa.
+3.3. Monitoring arrangement
+We conducted a series of shaking table tests with two different
+slope surface patterns to compare the dynamic response mecha-
+nisms under multistage earthquake conditions. The key difference
+between the two slopes lies in the width of the second berm. In
+Table 1
+The physico-mechanical parameters of prototype slope.
+Material
+Density, r (kg/m3)
+Elastic modulus, E (GPa)
+Cohesion, c (MPa)
+Internal friction angle, f ()
+Poisson's ratio, m
+Silty sandstone
+2680
+5.23
+2.56
+28
+0.22
+Weak interlayer
+1910
+0.78
+0.68
+25
+0.36
+Fig. 2. The shaking table system: (a) Shaking table device, (b) Servo-controlled hydraulic actuators, (c) Hydraulic oil source system, and (d) Model container.
+C. Xin, F. Yang, W. Feng et al.
+Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 2009e2030
+2012
+
+scheme 1, all berms had a width of 8 cm, while in scheme 2, the
+width of the second berm was 32 cm, and the widths of the other
+berms remained at 8 cm. According to the similarity ratios, the
+berm widths of the prototype slope were 2 m and 8 m, and the
+berm widths met the requirements of the design code for highway
+subgrades (JTGD30-2015) in China. A total of 22 accelerometers and
+8 earth pressure cells were strategically placed at the internal and
+external corners of each berm, as well as at the rear edge along the
+central cross-section of the model slopes for measuring the dy-
+namic responses in the interior and at the surface of the slopes. A
+schematic of the model slope and monitoring points is shown in
+Fig. 4. Additionally, a three-dimensional (3D) optical deformation
+measurement technique with high precision, fast speed, and an
+easy operational feature was utilized in the tests to record the
+displacements at the slope surfaces and analyze the shattering
+accumulative effect (Song et al., 2021b). Displacement data acqui-
+sition was conducted using non-contact photography technology to
+ensure minimal interference from the input seismic excitations.
+The slope surfaces were equipped with multiple speckles spaced at
+intervals of 10 cm. A digital image correlation algorithm was
+employed to match the deformation points on the slope surface,
+reconstructing the 3D coordinates of these points based on the
+disparity data. By analyzing this information, the displacements of
+the slope surface were accurately calculated. This approach allowed
+for precise measurement of the slope deformation without directly
+contacting the surface, providing reliable data for analyzing the
+dynamic behavior of the slopes during the shaking table tests.
+3.4. Construction processes
+Before constructing the model slope, the acrylic plates were
+carefully
+labeled
+with
+the
+necessary geometric
+information,
+including the slope proﬁle, dip directions of the weak interlayers,
+and foundation positions. The labeled plates were securely attached
+to the sidewalls of the model container using bolts. Speciﬁcally, two
+foundations with their surface dip angles corresponding to the rock
+strata were fabricated with M5-grade cement mortar and bricks
+before the construction of the model slopes. The foundation set in
+the test model was convenient for controlling the inclination of the
+rock strata during the construction of the slope model. The dip
+Fig. 3. The mechanical performance tests: (a) Specimens of physico-mechanical tests, (b) Direct shear test, (c) Triaxial compression test, and (d) Uniaxial compression test.
+Table 2
+The similarity criterion based on the matrix method and similarity ratios.
+p
+E
+m
+c
+f
+s
+ε
+t
+d
+v
+x
+l
+a
+r
+Equation
+Similarity criterion
+Similarity ratio
+a4
+a5
+a6
+a7
+a8
+a9
+a10
+a11
+a12
+a13
+a1
+a2
+a3
+p1
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+1
+1
+p1 ¼ E=ðlraÞ
+CE ¼ ClCrCa
+CE ¼ 25
+p2
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+p2 ¼ m
+1
+Cm ¼ 1
+p3
+1
+0
+0
+0
+0
+0
+0
+0
+1
+1
+1
+p3 ¼ c=ðlraÞ
+Cc ¼ ClCrCa
+Cc ¼ 25
+p4
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+p4 ¼ f
+1
+Cf ¼ 1
+p5
+1
+0
+0
+0
+0
+0
+1
+1
+1
+p5 ¼ s=ðlraÞ
+Cs ¼ ClCrCa
+Cs ¼ 25
+p6
+1
+0
+0
+0
+0
+0
+0
+0
+p6 ¼ ε
+1
+Cε ¼ 1
+p7
+1
+0
+0
+0
+1/2
+1/2
+0
+p7 ¼ t=ða=lÞ1=2
+Ct ¼ Cl
+1=2Ca1=2
+Ct ¼ 5
+p8
+1
+0
+0
+1
+0
+0
+p8 ¼ d=l
+Cd ¼ Cl
+Cd ¼ 25
+p9
+1
+0
+1/2
+1/2
+0
+p9 ¼ v=ðalÞ1=2
+Cv ¼ Cl
+1=2Ca1=2
+Cv ¼ 5
+p10
+1
+0
+0
+0
+p10 ¼ x
+1
+Cx ¼ 1
+C. Xin, F. Yang, W. Feng et al.
+Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 2009e2030
+2013
+
+angle of the rock strata was strictly consistent with the designed
+dip angle to ensure the reliability of the experimental data. There
+was a relatively large distance between the foundation and each
+berm; therefore, the dynamic response of each berm was unaf-
+fected by the foundation. Subsequently, barite, quartz sand, gyp-
+sum, clay, glycerol, and water were prepared based on the optimal
+mix proportions and stirred evenly using a handheld mixer to
+fabricate the upper rock mass and weak interlayer. These materials
+were then laid layer-by-layer, each with a thickness of 5 cm. During
+the fabrication process, accelerometers and earth pressure cells
+were embedded at the designated positions. Upon completion of
+the entire construction process, the surfaces of the two slopes were
+divided vertically and horizontally using reference lines spaced
+100 mm apart. Reﬂecting plates were ﬁxed at the intersections of
+the reference lines, and several marked points were pasted on the
+lateral sides of the model container at a distance of 50 mm. The
+construction process for the two model slopes is shown in Fig. 5.
+3.5. Test cases
+The Wolong seismic wave, belonging to the near-ﬁeld motion,
+was employed as the input motion, which was recorded at the
+Wolong seismograph station during the Wenchuan earthquake in
+China on May 12, 2008. This study used the E-W component of the
+Wolong seismic wave as the input motion, and the original wave
+was compressed and retained the effective seismic energy. The
+time history and Fourier spectra of the input wave are shown in
+Fig. 6. Fig. 6a shows that the Wolong wave has the characteristics of
+two energy releases, and the peak value appears at 12 s. The natural
+frequency of the Wolong wave is 2.97 Hz (Fig. 6b). The input seismic
+motion was strategically imposed as horizontal excitation to
+simulate the shear wave. The peak accelerations of the input
+waveform were scaled to 0.1g, 0.2g, 0.4g, 0.6g, 0.8g, and 1g to
+simulate slopes undergoing multi-stage seismic action, and the
+cumulative failure effects were investigated. Before each working
+condition, the Gaussian white noise with a root mean square
+Fig. 4. The schematic diagram and the monitoring points of the slope with identical berm widths and the slope with different berm widths.
+Fig. 5. Construction process of the model slopes: (a) The outline labeled on the acrylic plates, (b) Construction of the foundation, (c) Construction of the weak interlayer, (d)
+Smoothing the weak interlayer surface, (e) The marked points pasted onto the acrylic plate, and (f) The surface divided vertically and horizontally by reference lines.
+C. Xin, F. Yang, W. Feng et al.
+Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 2009e2030
+2014
+
+amplitude of 0.05g was input to identify the natural frequency and
+damping ratio of the model slope, which were two signiﬁcant in-
+dicators reﬂecting the dynamic response characteristics in the
+shaking table test. The loading sequence of the shaking table test is
+listed in Table 3.
+4. Analysis of the test results
+4.1. The seismic responses of accelerations
+The inclinations of weak interlayers and the patterns of the
+slope surface play a crucial role in determining the propagation and
+reﬂection paths of seismic waves within the slope. This, in turn,
+inﬂuences the response laws of accelerations in slope bodies and on
+slope surfaces. Understanding the variation laws of the acceleration
+ampliﬁcation coefﬁcient (AAC) can provide valuable insights into
+the seismic response characteristics at different positions in the
+slope interiors and on the surfaces. Furthermore, it can reveal how
+weak interlayers and slope-surface patterns affect the seismic re-
+sponses of the entire slope body. In this study, the AAC was deﬁned
+as the absolute value ratio of the peak value difference (i.e. the
+difference between positive and negative values on the time history
+curve) at each monitoring point to that of the monitoring point at
+the bedrock of the slope model.
+The AAC gradually increased from the bottom to the top of the
+slope and reached the maximum value at the top of the slope
+(Fig. 7). This pattern characterizes the elevation ampliﬁcation ef-
+fects (EAEs) of the seismically induced acceleration responses in
+bedding parallel rock slopes. Seismic waves were reﬂected and
+diffracted in the slope interior with increasing elevation and
+generated the EAE of the acceleration responses both in the slope
+interior and on the slope surface. The AAC exhibited a nonlinear
+increasing trend from the slope interior to the shallow surfaces of
+the slope, reaching its maximum values at the slope surfaces. This
+represents the surface ampliﬁcation effects (SAEs) of the seismi-
+cally induced acceleration responses in bedding rock slopes.
+Consequently, seismic waves are reﬂected and transmitted chaot-
+ically at slope surfaces with a free-face approximation of slopes,
+thereby producing the SAE of acceleration responses. In addition,
+there is no constraint but a particular topography on the slope
+surface compared to the slope interior, thereby making the slope
+surfaces more sensitive to seismic excitations and hence causing
+loosening and collapse. In the severe disaster areas of the 2008
+Wenchuan earthquake and the 2013 Lushan earthquake, there
+were numerous seismic hazards around the slope surfaces of
+bedding rock slopes containing weak interlayers than within the
+slope interiors. Among the monitoring positions at slope surfaces,
+owing to the combined actions of the EAE and SAE, seismic waves
+experienced complex reﬂection and superposition at the intersec-
+tion between the slope surface and the slope top, giving the
+intersection the highest freedom, leading to the conspicuous
+ampliﬁcation effect of the seismic waves. Similar AACs were
+observed at the external corners of the berms on slope surfaces.
+Therefore, the maximum AACs were at the intersections of the
+slope surfaces and slope tops, regardless of the berm width, fol-
+lowed by the external corners at the third berms, second berms,
+and ﬁrst berms (Fig. 7a and b).
+The AACs at the internal corners of the berms were lower than
+those at the external corner, even though the AACs at the internal
+corners increased with the increasing input peak accelerations. This
+phenomenon can be attributed to the variations in slope gradients,
+which induce a conspicuous stress concentration, that is, the
+topography of the slope surface can directly change the seismic
+responses of the AACs (Fig. 7c and d). In addition, the seismic re-
+sponses of the AACs at the rear edges also reﬂected the EAE and SAE
+compared with the AACs at the internal corners of the slopes. It is
+worth noting that AACs exhibited nonlinear seismic responses
+when the input peak acceleration exceeded 0.6g, especially at the
+rear edges of the slopes (Fig. 7e and f). During seismic excitation,
+mutations in the acceleration response usually occur at weak in-
+terlayers owing to their weaker physical and mechanical proper-
+ties. This transforms the weak interlayers into potential sliding
+surfaces, thereby intensifying the nonlinear seismic response
+characteristics of the entire slope.
+The differences in AACs between the external corners of the
+slope berm and the internal corners, as well as the differences
+between the internal corners of the slope berm and the rear edge,
+were calculated. The results indicated that the AACs at the external
+corners of the slope berm were consistently larger than those at the
+Fig. 6. The time history (a) and Fourier spectra (b) of the Wolong seismic wave.
+Table 3
+The loading sequence of the shaking table test.
+No.
+Waveform
+Amplitude (m/s2)
+Remarks
+1
+White noise
+0.5
+2
+Wolong
+1
+Sensible earthquakes
+3
+White noise
+0.5
+4
+Wolong
+2
+Small earthquakes
+5
+White noise
+0.5
+6
+Wolong
+4
+Moderate earthquakes
+7
+White noise
+0.5
+8
+Wolong
+6
+Strong earthquakes
+9
+White noise
+0.5
+10
+Wolong
+8
+Large earthquakes
+11
+White noise
+0.5
+12
+Wolong
+10
+Giant earthquakes
+C. Xin, F. Yang, W. Feng et al.
+Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 2009e2030
+2015
+
+internal corners of the slope berm, with differences ranging from
+0 to 0.6g (Fig. 7g and h). In most cases, the AACs at the internal
+corners of the slope berm were higher than those at the rear edge.
+However, under certain loading conditions, the AACs at the internal
+corners of the slope berm were smaller than those at the rear edge,
+but the differences were small, ranging from 0 to 0.15g, which is
+much smaller than the differences between AACs at the external
+corners of the slope berm and the internal corners of the slope
+berm (Fig. 7i and j). This is because the model slope in the shaking
+table test, based on the similarity ratio, had smaller geometric di-
+mensions and higher stiffness. Therefore, the AACs at the rear edge
+and internal corners of the slope berm were relatively close.
+Fig. 7. The AAC in slopes against the relative elevations: (a) The external corners of slope with identical berm widths, (b) The external corners of slope with different berm widths,
+(c) The internal corners of slope with identical berm widths, (d) The internal corners of slope with different berm widths, (e) The rear edge of slope with identical berm widths, (f)
+The rear edge of slope with different berm widths, (g) The differences of AACs between external corners and internal corners of the slope berm for the slope with identical berm
+widths, (h) The differences of AACs between internal corners of the slope berm and rear edge for the slope with identical berm widths, (i) The differences of AACs between external
+corners and internal corners of the slope berm for the slope with different berm widths, and (j) The differences of AACs between internal corners of the slope berm and rear edge for
+the slope with different berm widths.
+C. Xin, F. Yang, W. Feng et al.
+Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 2009e2030
+2016
+
+Overall, the AACs increased from the slope interior (rear edge) to
+the exterior (external corners of the slope berm), producing SAE on
+the slope surface.
+The increasing assignment of AACs at the surface and the inte-
+rior of the slope with identical berm widths gradually decreased
+with increasing input peak accelerations, especially beyond 0.6g.
+Similar phenomena also occurred for slope with different berm
+widths, especially beyond 0.4g. In pace with the increasing input
+peak accelerations, the seismically induced shattering damage
+cumulated, forming nonlinear seismic responses in the rock mass
+and weak interlayers, which further inﬂuenced the seismic re-
+sponses of the slope interior and the slope surface. In addition, the
+seismic excitations reduced the dynamic physical and mechanical
+parameters and enhanced the damping ratios of the slope bodies,
+which weakened the EAE and SAE. After the secondary joints were
+expanded, extended, and interpenetrated in the rock mass and
+weak interlayers, visible shattering damages were observed in the
+slope interior and on the slope surface, which reduced the natural
+frequencies of the slopes and changed the propagation paths of the
+seismic waves in the slopes. After multistage seismic excitation,
+massive cracks were generated, fracturing the rock mass of the
+slope body and increasing the wave ﬁltering effects of the slope
+body. Owing to the differences in the damage development char-
+acteristics and damage cumulative velocities between slopes, the
+attenuations of the AACs in bedding rock slope with identical berm
+widths were lower than those in slope with different berm widths.
+These discrepancies in the AAC response between the two slope
+types are due to the differences in the seismically induced per-
+manent displacements and shattering phenomenon between the
+two slopes.
+4.2. The seismic responses of displacements at slope surfaces
+Analyzing the seismically induced permanent displacements in
+the slope interior and on the slope surface is crucial for under-
+standing the seismic response mechanisms and the macro-
+shattering phenomena that occur throughout the entire slope.
+The cumulative permanent displacements were plotted against
+input peak accelerations based on the displacement response laws
+of the bedding parallel stepped rock slopes (Fig. 8). These diagrams
+in Fig. 8 provide a visual representation of the progressive accu-
+mulation of permanent displacements caused by multiple seismic
+excitations.
+Generally, the amplitudes of permanent displacements of slopes
+increase signiﬁcantly with increasing seismic excitations and rela-
+tive elevations, which causes the maximum permanent displace-
+ment to occur at the slope top, and the minimum permanent
+displacement to occur at the slope toe. However, in this series of
+shaking
+table
+tests,
+the
+maximum
+permanent
+displacement
+occurred at the internal corner of the ﬁrst berm of the bedding rock
+slope at different berm widths. In addition, the mean permanent
+displacements of slope with different berm widths were signiﬁ-
+cantly higher than those with identical berm widths under the
+combined effects of seismic excitations and weak interlayers. In a
+bedding parallel stepped rock slope that contains multiple weak
+interlayers, the dynamic response is inﬂuenced not only by the
+topography of the stepped slope surface but also by the properties
+of the weak interlayers. The deteriorating physical and mechanical
+parameters of different rock masses can determine the position of
+the ﬁrst seismically induced shattering crack. Different berm
+widths lead to complex reﬂections and diffractions of seismic
+waves with high energies, which causes cracks in tension at the
+internal corners of the berms, leading to shattering damage or even
+collapse of the entire slope.
+Generally, the permanent displacements of bedding rock slope
+with identical berm widths linearly increase and cumulate with
+increasing input peak accelerations, especially when excited by
+seismic motions ranging from 0.2g to 0.6g (Fig. 8a and b). When the
+input peak acceleration was greater than 0.6g, the apparent per-
+manent displacements increased at the internal corners of the
+berms on the slope surface. Especially, the increase in cumulative
+permanent displacement was greater than 160% at the rear edge of
+the slope top, and it exceeded 180% at the external corner of the
+slope top. Seismic excitations with high energies push the slopes
+away from the absorbing boundaries, generating tensile cracks at
+the rear edge of the slope and increasing its degrees of freedom.
+This process invariably incurs seismic failure to the slope, although
+it does not cause collapse at this stage. As shown in Fig. 8c and d,
+the cumulative permanent displacements increased on the bedding
+rock slope surface with different berm widths when the input peak
+acceleration was greater than 0.4g. To analyze the growth trend of
+the permanent displacement for slope with different berm widths,
+the ratios of the permanent displacement for input peak accelera-
+tions of 0.4g, 0.6g, 0.8g, and 1g to the permanent displacement for
+an input peak acceleration of 0.2g were calculated. The results
+indicate that the increase in permanent displacement of the slope
+was slow when the input peak acceleration increased from 0.2g to
+0.4g. However, when the input peak acceleration further increased
+from 0.4g to 1g, the permanent displacement of the slope increased
+rapidly (Fig. 8e and f). This indicates that the seismic stability of
+bedding rock slope with different berm widths is more vulnerable
+than that with identical berm widths. When the input peak accel-
+eration reached 1g, the cracks in the slope continuously expanded,
+and the cracks in the ﬁrst berm deepened and widened. Ultimately,
+the ﬁrst berm was peeled off by strong seismic inertial forces at a
+distance of 20 cm, resulting in larger displacements in the ﬁrst and
+second berms than those at the slope top. However, because the
+cumulative permanent displacements at the internal corners of the
+berms can push the external corners into quasi-rigid displace-
+ments, it is common for the cumulative permanent displacements
+at the internal corners to be larger than those at the external cor-
+ners regardless of the berm widths of the bedding rock slopes. Thus,
+the internal corners are the most vulnerable parts of the entire
+slope. For bedding rock slope with identical berm widths, the dy-
+namic response of the rock mass above the third berm is stronger,
+making it the key area of the seismic instability failure of the slope.
+However, for bedding rock slope with different berm widths, the
+seismic inertial forces are stronger on the second berm because of
+the wider berm and larger rock mass. This force converges to
+become a resultant force in the forward and downward directions,
+leading to shattering cracks or even the collapse of the entire slope.
+Therefore, the top of the slope and wider berm are the seismic
+fortiﬁcation zones for the two slope types with different slope
+surface patterns.
+4.3. Seismic responses of earth pressures
+Seismically induced variations in earth pressures, along with the
+corresponding post-seismic earth pressure distributions in slopes,
+play a crucial role in determining the dynamic deformation
+mechanisms and seismic damage modes. These factors are vital for
+evaluating the post-earthquake stability of engineering slopes.
+During the seismic excitation, signiﬁcant deformation occurred in
+both the rock mass and weak interlayers of the slope, particularly
+under high-amplitude input accelerations. These deformation
+generated residual earth pressure, which was measured using earth
+pressure cells. The recorded data exhibit a baseline drift, as shown
+in Fig. 9, indicating a gradual and persistent change in the earth
+pressure over time. The baseline drift value in the time-history
+diagram of the earth pressure response can characterize the post-
+C. Xin, F. Yang, W. Feng et al.
+Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 2009e2030
+2017
+
+seismic residual earth pressure. The difference between the base-
+line and peak values can determine the dynamic earth pressure.
+The dynamic earth pressure dissipates after seismic excitation,
+while the residual earth pressure continues to act inside the slope,
+potentially triggering new deformation until seismic shattering
+occurs. The residual earth pressure, which is generated during
+seismic excitation, drives the entire slope into either an elasto-
+plastic state or a pure plastic state. This pressure persists inside
+the slope after the excitation, contributing to the overall seismically
+induced shattering of the bedding rock slope. Thus, the physical and
+mechanical degradation of the rock mass is induced by the com-
+bination of the dynamic earth pressure during excitation and the
+residual earth pressure after excitation.
+Fig. 9 shows the time histories of the earth pressure responses
+before the visible shattering phenomena occurred, with a peak
+acceleration of 0.6g. The ratios of the dynamic earth pressure to the
+residual earth pressure at the internal corners of the ﬁrst berm
+were 97.8% and 53.7% for slope with identical and different berm
+widths, respectively (Fig. 9a). These ratios highlight the dominant
+role of the residual earth pressures in causing deformation or even
+shattering damage at the internal corners of the ﬁrst berm. In
+addition, both the residual and peak earth pressures on slope with
+identical berm widths were lower than those with different berm
+widths because seismic inertial forces were applied to the wider
+berm to push the ﬁrst berm and produce a higher and more durable
+earth pressure at the internal corner of the ﬁrst berm. By contrast,
+as shown in Fig. 9b, the ratios of the dynamic earth pressure to the
+residual earth pressure at the external corners of the ﬁrst berm of
+the slopes with identical and different berm widths were 110.2%
+and 126.1%, respectively. These ratios imply that the dynamic earth
+Fig. 8. The displacement responses of slope against input peak ground acceleration (PGA): (a) The displacement responses at the internal corner of slope with identical berm
+widths, (b) The displacement responses at the external corner of slope with identical berm widths, (c) The displacement responses at the internal corner of slope with different
+berm widths, (d) The displacement responses at the external corner of slope with different berm widths, (e) The ratios of the permanent displacement at the internal corner of slope
+with different berm widths, and (f) The ratios of the permanent displacement at the external corner of slope with different berm widths.
+C. Xin, F. Yang, W. Feng et al.
+Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 2009e2030
+2018
+
+pressure can easily affect the external corners of the ﬁrst berm.
+Furthermore, both the residual and peak earth pressures on slope
+with identical berm widths remained lower than those with
+different berm widths, indicating that identical berm widths can be
+beneﬁcial to the post-seismic stability of slopes. For slope with
+identical berm widths, the residual earth pressures at the internal
+corners of the second berm were more signiﬁcant than those at the
+internal corners of the ﬁrst berm, as illustrated in Fig. 9c. The re-
+sidual earth pressure and peak earth pressure at the internal cor-
+ners of the second berm were 1.24 times and 1.06 times those at the
+internal corner of the ﬁrst berm, respectively. However, for slope
+with different berm widths, the residual earth pressure at the in-
+ternal corners of the second berm was 0.74 times that at the in-
+ternal corner of the ﬁrst berm because of the earliest initial seismic
+shattering cracks at the internal corner of the second berm. These
+initial cracks ensue seismic energy dissipation and prevent the
+accumulation of residual earth pressure or even induce earth
+pressure nonlinear responses. Because seismic energies can be
+transformed into deformable potential energies of the slope inte-
+rior before the occurrence of seismic shattering, the initial residual
+earth pressure at the internal corner of the second berm was higher
+than that at the internal corner of the ﬁrst berm, regardless of the
+berm width. The two slope types had the same patterns of third
+berms and slope tops. Therefore, the forward and downward
+seismic inertial forces of the third berm can push the external
+corners of the second berm and generate two similar time-history
+curves of earth pressures, as shown in Fig. 9d. The ratios of dynamic
+earth pressure to residual earth pressure at the external corners of
+the second berm were 134% and 228% for slopes with identical and
+different berm widths, respectively, suggesting the signiﬁcant
+impact of dynamic earth pressures at the external corners of the
+second berm. In conclusion, regardless of the slope pattern, it
+cannot be neglected that the ﬁrst seismic energy release created
+much higher residual earth pressures than the second when slopes
+were struck by the Wolong seismic motion. Therefore, it is neces-
+sary to give importance to the accumulation of seismically induced
+earth pressure and uncover the mechanisms of the increased earth
+pressure. To verify the response mechanisms of the earth pressure,
+we conducted the following analysis of the seismic shattering
+phenomena of bedding parallel stepped rock slopes.
+4.4. The damage phenomena of shattering slope
+As shown in Fig.10, the seismic shattering phenomena observed
+in this series of shaking table model tests can precisely replicate the
+post-earthquake shattering phenomena in practical slope engi-
+neering. The seismic motion with high energies gradually pushed
+the slope with different berm widths away from the absorbing
+boundary, yielding an approximately 8 cm tensile crack and
+destroying the integrity and stability of the entire slope (Fig. 10a).
+The rock mass in front of this tensile crack successively squeezed
+the lower berms during seismic excitation, which was combined
+with the seismic inertial forces of the wider berm, creating tensile
+cracks at the internal corner of the wider berm. Subsequently, the
+wider berm tended to move forward and downward, allowing the
+ﬁrst berm to spall from the lower part of the slope (Fig. 10b).
+Generally, seismic excitation with high energy can increase the
+stress concentration at the internal corner of the berm, generating
+tensile cracks perpendicular to the excitation direction, which then
+propagate to numerous secondary cracks within the rock mass and
+weak interlayers (Fig. 10c). These seismic shattering phenomena
+are often observed in practical bedding rock slope engineering with
+ﬂuctuating slope surfaces, such as the post-earthquake Dongjia-
+liang landslide in Qingchuan County, China. The shattering cracks
+propagated following the slope surface pattern over a long distance
+and were accompanied by many secondary cracks (Fig. 10d). The
+combined effects of the platform moving forward above the
+external corner and the slope deformation below the external
+corner increased the stress concentration at the external corner of
+the second berm, which induced tensile-shearing cracks. Moreover,
+the ﬁrst berm constrained the slope deformation below the
+external corner of the second berm, and the slope surface was
+peeled off by the strong seismic inertial forces (Fig. 10e). These
+shattering cracks appearing on slope surfaces and in external cor-
+ners have been widely reported by post-earthquake surveys for
+bedding rock slope engineering (e.g. the similar phenomena to the
+Feishaguan landslide in Wenchuan County (Fig. 10f). Seismic shat-
+tering cracks initiate at the bulge positions of the slope surface,
+subsequently leading to signiﬁcant collapse. It is important to
+highlight the cyclic tensile-shearing effects induced by seismic
+activity on the entire slope. These effects result in deformation and,
+Fig. 9. The time history of earth pressure responses on slope surfaces with identical and different berm widths: (a) The internal corner at ﬁrst berm, (b) The external corner at ﬁrst
+berm, (c) The internal corner at second berm, and (d) The external corner at second berm.
+C. Xin, F. Yang, W. Feng et al.
+Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 2009e2030
+2019
+
+in some cases, crack formation. These cracks potentially create
+spaces that allow the accumulation and containment of falling
+rocks within the slope (Fig. 10g). On the one hand, the rock stuck in
+the crack can produce a wedge-cleaving effect on the slope and
+further promote downward crack extension. On the other hand, the
+stuck rock in the crack can also act as a pivot lever during seismic
+excitation to engender a shearing effect at the pointed end of the
+crack and generate a potential shearing-sliding surface. These
+seismically induced effects can effectively reduce the stability of the
+entire slope, especially for practical engineering slopes triggered
+after the Wenchuan earthquake. Shattering cracks occurred during
+the evolution of the Sanxicun landslide in Dujiangyan City, which
+formed channels for potential rock blocks and rainfall seepage to
+create wedge-cleaving and leverage effects under the aftershock
+sequence (Fig. 10h).
+For the stepped slope with identical berm widths, only slight
+seismic shattering damage occurred, which was characterized by
+tensile cracks at the internal corners of berms (Fig. 10i). This in-
+dicates that the seismic responses of the stepped slope surface are
+much stronger than those of the weak interlayer inside the slope,
+which can be deemed as the basic seismic shattering damage
+mechanism of the stepped slope. Therefore, it is crucial to prevent
+the occurrence of initial seismic shattering cracks at the internal
+corners of berms to maintain the post-earthquake stability of the
+entire stepped slope. In addition, the seismic shattering damage
+observed on the lateral side of the bedding rock slope with identical
+berm widths did not propagate toward the slope surface. This
+suggests that the lateral side of the slope exhibits a certain level of
+resistance to seismically induced shattering damage, potentially
+contributing to the overall stability of the slope surface. Despite
+increasing the input peak acceleration to 1g, tensile cracks were
+generated and propagated only at the internal corner of each berm,
+instead of the overall failure of the entire slope. In addition, the
+stepped landform of the cut slope is an environmentally friendly
+artiﬁcial reinforcement method, and the post-seismic phenomena
+prove its stability even during rare earthquakes.
+At an input peak acceleration of 0.6g, a tensile crack was
+generated at the internal corner of the third berm, along with a
+simultaneous tensile-shearing crack at the weak interlayer at the
+same height. The latter then propagated downward following the
+interlayer strike (Fig. 11a). As the input peak acceleration increased
+to 0.8g, tensile cracks were generated at the internal corners of the
+ﬁrst, second, and third berms and were gradually expanded
+(Fig. 11b). Subsequently, more tensile-shearing cracks, all sharing
+the same direction of sliding tendency, were generated at the upper
+and lower boundaries of the weak interlayer near the slope surface,
+and similar occurrences were later observed at another weak
+interlayer (Fig. 11c). When the input peak acceleration reached 1g,
+numerous tensile-shearing cracks emerged around the weak in-
+terlayers and propagated along the strike of the interlayers at a
+lower relative elevation. This shaking table test suggests that the
+shearing effects of seismic excitations can signiﬁcantly affect the
+weak interlayers at the lower part of the slope and promote a
+sliding tendency along the strike of the weak interlayers. Despite
+these clear seismically induced shattering cracks in the rock mass
+near the weak interlayers, the slope with identical berm widths did
+not experience any noticeable collapse (Fig.11d). This is because the
+existing tensile cracks at the internal corner of the berms dissipated
+seismic energy during excitation, thereby preventing the genera-
+tion and propagation of new tensile cracks at the internal corners of
+the berms.
+For the bedding parallel stepped rock slope with different berm
+widths, severe seismic shattering damage occurred on the slope
+surface and slope interior. During low-amplitude seismic excita-
+tions, the internal corner of the second berm with a wider width
+was a tensileecompression stress concentration zone. When
+excited by 0.6g of input peak acceleration, cracks were suddenly
+generated by instantaneous soaring tensile stress, simultaneously
+creating secondary cracks on the platform of the second berm.
+Meanwhile, the strong earthquake impelled apparent tensile-
+shearing cracks on the lateral side of the slope and increased the
+sliding tendency along the weak interlayer strike (Fig. 11e). Because
+the primary difference between these two slope types was the
+Fig. 10. The seismic induced ﬁnal damage patterns of berm-like bedding rock slope:
+(a) The destructive phenomenon at the rear edge of slope with different berm widths,
+(b) The destructive phenomenon at the surface of slope with different berm widths, (c)
+The tensile cracks at the internal corner of slope with different berm widths, (d) The
+destructive phenomenon of Dongjialiang landslide in Qingchuan County, (e) The
+tensile cracks at the external corner of slope with different berm widths, (f) The rock
+avalanche of Feishaguan landslide at Wenchuan, (g) The wedge splitting effect in
+shaking table test, (h) The wedge splitting effect in Sanxicun Landslide at Dujiangyan,
+and (i) The predominant seismic induced shattering phenomena of slope with iden-
+tical berm widths.
+C. Xin, F. Yang, W. Feng et al.
+Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 2009e2030
+2020
+
+shapes and masses of the second berms, the wider berm attained a
+higher seismic inertial force and pushed the lower part below the
+second berm forward and downward when the seismic excitation
+reached 0.8g, shattering the second berm (Fig. 11f). Alternatively,
+the increase in seismic inertial force makes the external corner of
+the second berm a tensile stress concentration zone and triggers
+tensile cracks perpendicular to the excitation direction, which
+causes these cracks to be wider and deeper and then penetrate the
+weak interlayer. The propagation of cracks causes the lower part of
+the second berm to become a potential deformable block and slide
+along with a weak interlayer strike (Fig. 11g). Finally, when the
+seismic excitation reached 1g, the potential deformable block
+loosened, fell off, and was separated from the internal corner of the
+ﬁrst berm, transforming into a sliding block and banking up at the
+slope toe. In addition, the strong reciprocating excitations pushed
+the rear edge away from the absorbing boundaries and caused
+apparent settlement at the top of the slope (Fig. 11h).
+5. Numerical simulation
+5.1. Numerical modeling
+Flac3D was employed to study the dynamic response mecha-
+nisms and the cumulative shattering effects of the full-scale
+bedding parallel stepped rock slope. To simulate seismic wave
+propagation in a continuous medium, the maximum mesh size
+should be less than or equal to 1/8 to 1/10 of the minimum length of
+the seismic wave. Therefore, in this study, the maximum mesh size
+of the elements was set to 0.8 m. Ten slope models, cases 1e10,
+were designed to investigate the effects of different sliding surface
+locations, sliding surface inclination angles (SSIA), and berm widths
+on the seismic response of the slopes. For different sliding surface
+locations, the sliding surface was designed to expose the internal
+and external corners of the second berm. Models having different
+sliding surfaces with inclination angles of 5, 35, and 60 and berm
+widths of 2 m, 4 m, and 6 m were designed. Additionally, a single-
+surface slope scheme was designed to compare the changes in
+slope stability after excavation into the berms. The numerical
+calculation model and dynamic boundary settings are shown in
+Fig. 12. A free-ﬁeld boundary was established around the model to
+simulate an inﬁnite ﬁeld and minimize the reﬂections and energy
+radiation at the model boundary, and there were Rayleigh dampers
+between the slope model and the free-ﬁeld boundary. In addition,
+local dampers were installed to reduce the computation time. The
+Rayleigh damping with a minimum critical damping ratio of
+xmin ¼ 5%, a minimum central frequency of umin ¼ 5 Hz, and a local
+damping value of 0.157 (equivalent to 5% of critical damping) was
+applied to the numerical simulation model (Itasca, 2014; Lin et al.,
+2017; Ling et al., 2023). To compare with the results of the shaking
+table model tests, the same monitoring points were employed in
+both the numerical simulation models and physical slope models,
+which can monitor and record real-time data.
+5.2. Comparative analysis of experimental and simulation results
+Seismic waves can be classiﬁed as primary and secondary waves
+based on their direction of propagation and vibration. When these
+waves reach the slope surface, surface waves are generated, which
+cause slope failure. Vertical compressional waves alter the gravi-
+tational force acting on the rock mass, providing favorable condi-
+tions for slope deformation and movement. This leads to the
+opening and closing of vertical structural planes, causing stress
+concentration at the end of cracks and promoting crack propaga-
+tion
+and
+expansion.
+The
+rock
+mass
+produces
+a
+relative
+Fig. 11. The seismic induced progressive shattering damage patterns of bedding parallel stepped rock slope: (a) Initial destructive phase of slope with identical berm widths, (b)
+Slow destructive phase of slope with identical berm widths, (c) Accelerated ﬁnal destruction phase of slope with identical berm widths, (d) Final destruction phase of slope with
+identical berm widths, (e) Initial destructive phase of slope with different berm widths, (f) Slow destruction phase of slope with different berm widths, (g) Accelerated destruction
+phase of slope with different berm widths, and (h) Final destruction phase of slope with different berm widths.
+C. Xin, F. Yang, W. Feng et al.
+Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 2009e2030
+2021
+
+displacement under shear waves, causing expansion and tension on
+both sides of the structural plane, which leads to rock fracturing.
+Under
+multistage
+seismic
+excitation,
+the
+cumulative
+shear
+displacement of the rock mass eventually leads to the instability
+and failure of the slope.
+Fig. 13 shows the displacement vectors of the slope with
+different berm widths under multistage seismic excitation. At
+t ¼ 1.2 s, the seismic wave is minimal, and the slope shows a
+downward trend under the combined action of the seismic wave
+and gravity with increasing displacement as the elevation in-
+creases, which indicates an EAE. Above the ﬁrst weak interlayer, a
+large displacement response is observed, while below the weak
+interlayer, the displacement response is small. This indicates the
+presence of friction between different rock layers, which increases
+the shear stress and makes the sliding surface at this location highly
+susceptible to cracking. This weakens the overall stiffness of the
+sliding surface, making it more prone to deformation. Therefore,
+the differential displacement response between different rock
+layers can directly lead to crack generation, as shown in Fig. 13a. In
+the shaking table test, after the seismic excitations, the weak in-
+terlayers of the rock mass were peeled off layer-by-layer to study
+the relative dislocations between the rock masses. Five cracks are
+observed in the upper half of the second interlayer, indicating
+inconsistent displacement responses and friction between the up-
+per and lower halves of the interlayer, as shown in Fig. 13b. At
+t ¼ 6 s, the initial seismic energy release from the Wenchuan
+earthquake
+induces
+a
+reciprocal
+tensionecompression
+effect,
+causing an opposite movement trend within the slope. From the
+displacement vector map, it can be observed that above the weak
+interlayer, the rock mass moves downward, whereas, below the
+weak interlayer, the rock mass moves upward, increasing friction
+between the rocks on both sides of the sliding surface. The frictional
+energy dissipation mechanisms may differ between the upper and
+lower parts of the sliding surface. Under seismic excitation, the rock
+mass on the upper part of the sliding surface may experience a
+higher frictional energy dissipation than the rock mass on the lower
+part of the sliding surface owing to the large shear stresses. This
+difference causes the displacement to be in the downward direc-
+tion in the upper part of the sliding surface and the upward di-
+rection in the lower part. Therefore, cracks can also occur on the
+sliding surface, thereby reducing the integrity and stiffness of the
+slope, as shown in Fig. 13c. Differential deformation within a slope
+under seismic excitation is a key factor leading to slope instability
+and failure. The opposite trend in the upper and lower parts of the
+weak layer directly leads to an increase in shear stress, causing the
+expansion of cracks at the interlayer (Fig. 13d). Under continuous
+seismic excitations, the different displacement responses in the
+slope accumulate near the internal corner of the second berm, and
+the internal corner of the berm becomes a location of stress con-
+centration, which is highly susceptible to cracking under seismic
+excitation. Therefore, the inconsistent displacement responses and
+signiﬁcant stress concentrations at the internal corner of the sec-
+ond berm result in shattering failure. The internal corner of the ﬁrst
+berm also experiences inconsistent displacement responses and
+Fig. 12. The numerical simulation model and dynamic boundary setting.
+C. Xin, F. Yang, W. Feng et al.
+Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 2009e2030
+2022
+
+Fig. 13. The dynamic displacement vectors of the slope at different times and comparison of displacement responses between shaking table test and numerical simulation results:
+(a) Displacement vectors distribution when t ¼ 1.2 s, (b) Cracks in the second weak interlayer in shaking table test, (c) Displacement vectors distribution when t ¼ 6 s, (d) Cracks in
+rock mass in shaking table test, (e) Displacement vectors distribution when t ¼ 36 s, (f) The shattering failure of the model slope in shaking table test, (g) Comparison of
+displacement responses at the external corners of the berm slope, and (h) Comparison of displacement responses at the internal corners of the berm slope. The unit of the
+displacement vectors in (a), (c) and (e) is m.
+C. Xin, F. Yang, W. Feng et al.
+Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 2009e2030
+2023
+
+stress concentrations. Moreover, the internal corner of the ﬁrst
+berm is located near a weak interlayer. After the internal corner of
+the berm cracks, the ﬁssures continue to widen due to continuous
+seismic waves, connecting with the interlayer. Owing to the poor
+shear strength of the weak interlayer, the internal corner of the ﬁrst
+berm collapses under multistage seismic events, as shown in
+Fig. 13e. In the shaking table test, the crack ﬁrst appeared in the
+internal corner of the widest berm; subsequently, the internal
+corner of the ﬁrst berm was peeled off by a strong inertial force, as
+shown in Fig. 13f.
+A comparison of the displacement responses between the
+shaking table test and numerical simulation results is shown in
+Fig. 13g and h. At the elastic stage, the displacement responses of
+the shaking table test and numerical simulation are in good
+agreement, indicating a strong consistency between the two
+methods in simulating the dynamic responses of the stepped slope.
+However, at the plastic stage, the disparity in the displacement
+response gradually increases. In the shaking table test, owing to the
+nonlinear behavior of similarity materials, the ﬁrst berm of the
+slope underwent signiﬁcant deformation and detached from the
+slope body, resulting in a notable increase in displacement. How-
+ever, such large deformation was not observed in the numerical
+simulation. The actual similarity material used in the shaking table
+test exhibited nonlinear characteristics and signiﬁcant deformation
+in the plastic stage. However, FLAC3D did not accurately capture the
+nonlinear behavior of the rock mass; therefore, the simulation re-
+sults showed a smaller deformation.
+The distribution of plastic zones of the slope obtained via nu-
+merical simulation and a comparison with the shaking table test
+under seismic excitation are shown in Fig. 14. In the ﬁgure, shear
+means that the yield shear stress of the rock material exceeds the
+shear strength, and shear failure occurs in the rock mass; tension
+means that the tensile stress of the rock material exceeds the yield
+tensile strength; N indicates that the rock material is in the process
+of failure; P indicates that failure has occurred; None indicates that
+the rock has not failed. At t ¼ 5 s, due to the poor mechanical
+performance of the weak interlayer, the tensile stress below the
+second berm of the slope exceeds the yield tensile strength, and
+tensile failure occurs in the weak interlayer. Meanwhile, the dy-
+namic response is determined not only by the properties of the
+weak interlayers but also by the topography of the stepped slope
+surface. The different berm widths lead to complicated reﬂections
+and diffractions of seismic waves, and the ﬁrst cracking in tension
+occurs at the internal corners of the second berm (Fig.14a and b). At
+t ¼ 20 s, under continuous seismic excitation, the rear edge of the
+slope is pulled apart, and the plastic zone develops along the weak
+interlayer and penetrates the internal corner of the second berm,
+becoming the sliding surface of the slope. This is consistent with
+the shattering phenomenon of the slope in the shaking table test, in
+which the rear edge of the slope was pulled apart at a distance of
+8 cm, and the sliding surface was the second weakest interlayer
+(Fig. 14c and d). At t ¼ 36 s, the internal corners of the second and
+ﬁrst berms of the slope and the middle and lower parts of the rock
+mass experience tensile failure, and the failure zone is developed.
+The development process of the plastic zone is consistent with the
+shattering process of the slope in the shaking table test, demon-
+strating the seismic shattering failure mechanism of bedding par-
+allel stepped rock slopes (Fig. 14e and f).
+5.3. Expansion analysis of factors
+From the distribution of the plastic zone, it can be observed that
+as the berm width increases, the area of the plastic zone gradually
+decreases and is primarily distributed at the slope crest and inter-
+nal corner of the berm (Fig. 15aec). Therefore, as the berm width
+increases, the slope stability is enhanced. Under seismic excitation,
+the slope exhibits the characteristic of an EAE. The horizontal
+displacement and inertial forces generated at the slope crest are
+more likely to cause the expansion and extension of cracks, leading
+to shattering damages to the stepped slope. The internal corner of
+the berm is a weak as well as a stress concentration zone of the
+slope. Under seismic excitation, the stress at the internal corner of
+the berm exceeds the shear strength of the slope, resulting in the
+initial failure of the stepped slope occurring at the internal corner of
+the berm. The failure process of the stepped slope in the shaking
+table test series demonstrates that the internal corner of the berm
+is a weak zone and is susceptible to cracking and failure under
+seismic excitation. For the single-surface slope, the distribution of
+the plastic zone is larger than that of the stepped slope, indicating
+that the stability of the single-surface slope is poorer under seismic
+excitation (Fig. 15d). The plastic zone almost extends through the
+weak interlayer, which indicates that the rock material near the
+structural plane has exceeded its yield strength, exhibiting an
+overall failure phenomenon. Thus, stepped landforms and their
+geological settings can signiﬁcantly control the local seismic
+response. This method is an environmentally friendly artiﬁcial
+reinforcement technique that can transform the internal failure of a
+slope into a superﬁcial failure.
+The numerical simulation results show that when the SSIA is
+35, the slope stability is the worst, and plastic failure occurs at the
+crest and internal corner of the berm (Fig.15f). At an SSIA of 35, the
+SSIA and the slope angle are nearly identical, indicating that there is
+only a small angle between the sliding surface and the overall slope
+surface, which reduces the resistance of the slope to sliding. The
+smaller the angle, the greater the sliding force component along the
+slope surface, thereby increasing the probability of slope sliding.
+Under seismic excitations, the shear stress between the sliding
+surface and the overall slope surface becomes the highest, pro-
+moting the sliding of the rock mass. Conversely, when the SSIA is 5,
+the slope is less prone to failure, as shown in Fig. 15e. At a small
+SSIA, the component of the sliding force is nearly perpendicular to
+the slope surface, resulting in a smaller sliding force acting on the
+slope. Therefore, the slope stability is better in this case. When the
+SSIA is 60, the SSIA is signiﬁcantly larger than the slope angle, and
+the slope is less likely to experience sliding failure (Fig. 15g). A
+greater SSIA leads to a larger sliding force component perpendic-
+ular to the slope surface, enhancing the resistance of the slope to
+sliding and improving its stability.
+When the sliding surface is exposed at the internal corner of the
+second berm, it leads to a more pronounced seismic response
+because of the stress concentration in that area (Fig. 15h). This
+causes a larger portion of the rock mass to exceed its yield strength,
+resulting in irreversible deformation. The stability of the slope is
+inﬂuenced by the position of the sliding surface. When the sliding
+surface is located at the internal corner of the second berm, the
+internal corner is the ﬁrst to crack when subjected to seismic
+excitation. As the peak ground motion increases, the cracks pro-
+gressively expand, creating favorable conditions for slope sliding.
+The cracking of the internal corner triggers stress redistribution and
+shear sliding along the sliding surface, ultimately resulting in
+shattering failure and slope instability. In contrast, when the sliding
+surface is exposed at the external corner of the second berm, the
+seismic damage is milder. An analysis of the plastic zone distribu-
+tion reveals that when the sliding surface is exposed at the second
+berm, the plastic zone primarily occurs above the second berm and
+at the rear edge of the slope, covering a smaller area (Fig.15i). When
+the inclination angle of the sliding surface is modiﬁed, it can be
+exposed at the external corner of the second berm. By signiﬁcantly
+increasing the SSIA compared with the slope angle, the shear stress
+along the sliding surface becomes relatively small and insufﬁcient
+C. Xin, F. Yang, W. Feng et al.
+Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 2009e2030
+2024
+
+to overcome the shear strength of the rock mass. Consequently, the
+stability of the slope is improved when the sliding surface is
+exposed at the external corner of the second berm, particularly
+when the inclination angle is considerably larger than the overall
+slope angle (Fig. 15j).
+The displacements and earth pressure responses obtained from
+numerical simulations are shown in Fig. 16. Cases 7, 8, and 9 have
+identical berm widths of 2 m, 4 m, and 6 m, respectively. The dif-
+ferences among the three slopes lie in their different berm widths.
+The displacement responses of different berm widths were
+compared, and it can be observed that as the berm width increases,
+the displacements of the internal and external corners of the berm
+gradually decrease, especially at the crest of the slope. Thus,
+increasing the berm width can effectively reduce the displacement
+response and enhance the safety of the slope (Fig. 16a). For moni-
+toring point A5 located on the external corner of the third berm, the
+displacement responses in cases 8 and 9 were reduced by 36% and
+86%, respectively, compared to that in case 7. Wider berms can
+distribute seismic forces more uniformly, reducing the localized
+stress concentration and thereby decreasing the displacement
+response. When the berm width is small, seismic forces may be
+concentrated at the top or in localized areas, leading to larger
+displacements.
+For cases 7, 8, and 9, the earth pressures at the internal corners
+of the slope are greater than those at the external corners (Fig. 16b).
+The distribution of the earth pressure exhibits an M-shaped
+pattern. Slope deformation typically occurs downward the slope;
+therefore, at the internal corners of the berm, the movement di-
+rection of the rock mass is towards the external corners of the
+berm. The internal corners of the berm experience greater con-
+straints, resulting in a higher earth pressure than at the external
+corners. For cases 7, 8, and 9, the earth pressures at the internal
+corners of the ﬁrst berm are 3.22, 3.18, and 1.99 times higher than
+those at the internal corners of the third berm, respectively. This
+Fig. 14. The distribution of plastic zones of the slope under seismic excitation and comparison with shattering phenomenon in shaking table test: (a) The distribution of plastic
+zones of the slope when t ¼ 5 s, (b) The internal corner of the second berm was shattered in shaking table test, (c) The distribution of plastic zones of the slope when t ¼ 20 s, (d) The
+rear edge is pulled apart and sliding along the second weak interlayer, (e) The distribution of plastic zones of the slope when t ¼ 36 s, and (f) The tensile cracks at the rear edge and
+the internal corners of the second berm.
+C. Xin, F. Yang, W. Feng et al.
+Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 2009e2030
+2025
+
+indicates that increasing the berm width effectively reduces the
+earth pressure at the internal corners of the berm, thus reducing
+the stress concentration and enhancing the stability of the slope.
+The stability coefﬁcients for cases 1e10 are presented in Table 4.
+For cases 1e3, the differences in slope stability mainly lie in the
+inclination angles of the sliding surface. When the inclination angle
+of the sliding surface is 5, the slope is nearly horizontal, resulting
+in a smaller sliding force and higher stability. However, as the
+inclination angle of the sliding surface increases to 35, the sliding
+force of the slope increases, leading to a decrease in the safety
+Fig. 15. The distribution of plastic zones of the slope under seismic excitation: (a) Berm width of 2 m, (b) Berm width of 4 m, (c) Berm width of 6 m, (d) Single surface slope scheme,
+(e) SSIA of 5, (f) SSIA of 35, (g) SSIA of 60, (h) The sliding surface is exposed at the internal second berm, (i) The sliding surface is exposed at the second berm, and (j) The sliding
+surface is exposed at the external second berm.
+C. Xin, F. Yang, W. Feng et al.
+Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 2009e2030
+2026
+
+coefﬁcient. When the inclination angle of the sliding surface ex-
+ceeds the overall slope angle of the slope, the overlying rock mass
+possesses conditions for sliding, but the sliding surface is not
+exposed, resulting in resistance to sliding. This causes the toe of the
+slope to bear signiﬁcant compressive stresses, leading to bending
+deformations under certain conditions, thereby increasing the
+safety coefﬁcient. For cases 4e6, the differences in slope stability
+mainly lie in the different locations of the sliding surface. When the
+sliding surface is located at the internal corners of the berm, the
+safety coefﬁcient of the slope is the lowest. Since the internal cor-
+ners of the berm are areas of stress concentration where cracks are
+prone to form under seismic actions. When the sliding surface
+passes through these locations, the slope is highly susceptible to
+sliding. For cases 7e10, the differences in slope stability mainly lie
+in the berm width. As the width of the berm increases, the overall
+slope angle of the slope increases, reducing the slope's inclination.
+Consequently, the safety coefﬁcient increases.
+6. Discussion
+According to the principle of controlling variables, two different
+slope terrains of bedding parallel stepped rock slope were selected
+to study the seismic response mechanisms and shattering cumu-
+lative effects using shaking table tests and numerical simulations.
+In the shaking table tests, the acceleration, displacement, and earth
+pressure distribution patterns were analyzed to elucidate the
+shattering failure mechanisms of the bedding parallel stepped rock
+slope. By observing the progressive failure process of the slope, the
+shattering failure mechanisms were explained. The shaking table
+tests provided valuable insights into the response patterns of the
+slope under seismic excitations. In the numerical simulations, the
+displacement and earth pressure responses were analyzed to vali-
+date the displacement and failure modes of the slope. Furthermore,
+an expansion analysis was performed to investigate the effects of
+different variables such as sliding surface locations, sliding surface
+inclination angles, and berm widths. This analysis aimed to un-
+derstand how these variables inﬂuenced the behavior of the slope,
+including its stability and failure mechanisms. By combining the
+results from the shaking table tests and numerical simulations, a
+comprehensive understanding of the seismic response mecha-
+nisms and shattering cumulative effects of the bedding parallel
+stepped rock slope was obtained. This research contributes to the
+knowledge of slope engineering and provides insights for designing
+and mitigating the seismic risks associated with such slope terrains.
+The results of the shaking table tests reveal that the slope ex-
+hibits an acceleration ampliﬁcation effect. As the input seismic
+acceleration gradually increases, the slope experiences a nonlinear
+growth in acceleration ampliﬁcation. The stepped shape of the
+slope surface contributes to this behavior. The external corners of
+the berm have relatively less constraint compared to the internal
+corners, allowing for greater freedom of movement. Consequently,
+these external corners are more prone to signiﬁcant dynamic
+displacement responses under seismic excitation. Conversely, the
+internal corners of the berm experience greater constraints,
+resulting in larger earth pressure responses. As the accumulated
+residual earth pressure reaches a critical threshold surpassing the
+shear strength of the rock mass, cracks begin to form in the slope.
+With further increases in the peak input acceleration, these cracks
+propagate and new ones emerge. This leads to the shattering failure
+of the slope, triggering a nonlinear dynamic response.
+The progressive failure process and failure modes of the bedding
+parallel stepped rock slope are closely related to the geometric
+shape of the slope, the mechanical properties of the rock mass, and
+the seismic dynamic characteristics. The study of the progressive
+failure process of the slope under seismic action can provide
+valuable guidance for engineering practice. By delving into the
+progressive failure process, weaknesses and potential hazardous
+areas of the slope can be identiﬁed and evaluated, thus providing
+accurate recommendations and strategies for the design, con-
+struction, and maintenance of the slope. For this series of experi-
+ments, the progressive failure process of the slope can be divided
+into four stages: stage 1, the formation of tensile cracks at the in-
+ternal corners of the berm, stage 2, the expansion of tensile cracks
+and dislocation of the bedding surface, stage 3, the development of
+vertical tensile cracks at the rear edge, and stage 4, the slipping of
+the rock mass and loss of slope stability (Fig. 17a). In the case of the
+slope with different berm widths, when the peak input acceleration
+reaches 0.6g, tensile cracks ﬁrst appear at the internal corners of the
+second berm due to its larger width. With the continued increase in
+peak input acceleration, these tensile cracks extend downward and
+reach near the sliding surface. At this point, the slope is divided into
+blocks due to the downward propagation of the cracks. The upper
+Fig. 16. The displacements and earth pressure responses obtained by the numerical simulation results for cases 7, 8 and 9: (a) The displacements responses, and (b) The earth
+pressure responses.
+Table 4
+The stability coefﬁcient for cases 1e10.
+Case No.
+Stability coefﬁcient
+1
+3.52
+2
+1.98
+3
+2.66
+4
+2.18
+5
+2.17
+6
+2.97
+7
+1.97
+8
+2.21
+9
+2.23
+10
+2.41
+C. Xin, F. Yang, W. Feng et al.
+Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 2009e2030
+2027
+
+rock mass is more prone to sliding at the sliding surface due to its
+poorer physical and mechanical properties, resulting in the
+macroscopic phenomenon of tensile cracking at rear edge of the
+slope. Under continuous seismic excitations, as the deformation
+accumulates to a certain extent, the rock mass slides along the
+structural planes, causing interlayer displacement and ultimately
+leading to the overall instability of the slope.
+Under repeated seismic activity, the stress state of the rock mass
+in the slope undergoes continuous changes, leading to different
+types of slope failure. At the internal corners of the berm, once the
+tensile stress induced by seismic forces exceeds the tensile strength
+of the rock mass, it directly results in tensile failure of the rock
+mass, forming tensile cracks or failure planes. Near the sliding
+surface of the slope, the shear stress caused by seismic forces may
+exceed the shear strength of the rock mass, leading to sliding failure
+of the rock layers on the sliding surface. This means that the
+structural planes between the rock layers undergo shear and form
+distinct sliding surfaces. Regarding the rear edge of the slope, under
+the inﬂuence of strong seismic inertial forces, both tensile and
+shear stresses can occur simultaneously. The rock mass at the rear
+edge may experience simultaneous tensile and sliding failure,
+forming steep tensile cracks at the rear edge. This phenomenon is
+commonly
+observed
+in
+landslides
+triggered
+by
+Wenchuan
+earthquakes, such as the Donghekou landslide in Qingchuan
+County and the Pingxi village landslide in Pingwu County. At the
+external corners of the berm and where the slope protrudes, the
+rock mass experiences both compressive and shear stresses. This
+can cause crushing and shear failure of the rock mass at the
+external corners, resulting in fragmented blocks and shear surfaces.
+This failure process can be illustrated using Fig. 17b.
+For future research, it is scientiﬁcally signiﬁcant to analyze the
+seismic response mechanisms and focus on the shattering cumu-
+lative effects. This exploration will involve establishing the rela-
+tionship between physical mechanical parameters and shattering
+evolutionary processes by changing the geological structures of
+slopes, the terrain morphology of slopes and the dynamic me-
+chanical parameter performances.
+7. Conclusions
+This study aimed to gain a deeper understanding of the dynamic
+response mechanisms and the shattering cumulative effects in
+bedding parallel stepped rock slopes through large-scale shaking
+table tests. The research involved comprehensive analysis of test
+data, including measurements of seismic responses such as accel-
+erations,
+displacements,
+and
+earth
+pressure
+obtained
+from
+Fig. 17. The progressive failure process and failure modes of the bedding parallel stepped rock slope: (a) The progressive failure process, and (b) Different stress states during
+progressive failure process.
+C. Xin, F. Yang, W. Feng et al.
+Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 2009e2030
+2028
+
+transducers. Additionally, the progressive failure process in the
+model slopes was thoroughly examined. To validate the shaking
+table test results, numerical simulations were conducted, providing
+insights into dynamic displacement responses and the distribution
+of plastic zones within the slopes. Based on the comprehensive
+analysis of the test results and numerical simulations, the following
+key ﬁndings are summarized:
+(1) The internal corners of the berms exhibited lower AACs
+compared to the external corners, even though the AACs at
+the internal corners increased with increasing input peak
+accelerations. This phenomenon can be attributed to varia-
+tions in slope gradients, which create distinct stress con-
+centrations. The topography of the slope surface directly
+inﬂuences the seismic responses of the AACs.
+(2) Multiple stages of seismic excitation led to the generation of
+extensive cracks, fracturing the rock mass and increasing the
+wave ﬁltering effects within the slope body. The attenuations
+of the AACs in bedding rock slopes with identical berm
+widths were lower than those in slopes with different berm
+widths, due to differences in damage development charac-
+teristics and cumulative velocities.
+(3) Cumulative permanent displacements at the internal corners
+of the berms induced quasi-rigid displacements at the
+external corners, resulting in larger cumulative permanent
+displacements at the internal corners regardless of the berm
+widths of the bedding rock slopes. Thus, the internal corners
+were identiﬁed as the most vulnerable parts of the entire
+slope.
+(4) Initial cracks facilitated seismic energy dissipation and hin-
+dered the accumulation of residual earth pressure, poten-
+tially leading to nonlinear responses in earth pressure.
+Seismic energies were transformed into deformable poten-
+tial energies within the slope interior before seismic shat-
+tering occurred. Consequently, the initial residual earth
+pressure at the internal corner of the second berm was
+higher than that at the internal corner of the ﬁrst berm,
+regardless of the berm width.
+(5) Seismic excitation with high energy intensiﬁed stress con-
+centration at the internal corner of the berm, resulting in
+tensile cracks perpendicular to the excitation direction.
+These cracks propagated to numerous secondary cracks
+within the rock mass and weak interlayers, exhibiting
+seismic shattering phenomena frequently observed in prac-
+tical bedding rock slope engineering with ﬂuctuating slope
+surfaces, such as the post-earthquake Dongjialiang landslide
+in Qingchuan County, China.
+Declaration of competing interest
+The authors declare that they have no known competing
+ﬁnancial interests or personal relationships that could have
+appeared to inﬂuence the work reported in this paper.
+Acknowledgments
+This research was supported by the National Natural Science
+Foundation of China (Grant No. 52108361), the Sichuan Science and
+Technology Program of China (Grant No. 2023YFS0436), and the
+State Key Laboratory of Geohazard Prevention and Geoenviron-
+ment
+Protection
+Independent
+Research
+Project
+(Grant
+No.
+SKLGP2022Z015). All authors acknowledge the anonymous re-
+viewers for their valuable comments.
+List of symbols
+References
+Che, A.L., Yang, H.K., Wang, B., Ge, X.R., 2016. Wave propagations through jointed
+rock masses and their effects on the stability of slopes. Eng. Geol. 201, 45e56.
+Del Gaudio, V., Luo, Y.H., Wang, Y.S., Wasowski, J., 2018. Using ambient noise to
+characterise seismic slope response: the case of Qiaozhuang peri-urban hill-
+slopes (Sichuan, China). Eng. Geol. 246, 374e390.
+Dong, S., Feng, W.K., Yin, Y.B., Hu, W., Dai, H.C., Zhang, G.Q., 2020. Calculating the
+permanent displacement of a rock slope based on the shear characteristics of a
+structural plane under cyclic loading. Rock Mech. Rock. Eng 53, 4583e4598.
+Fan, G., Zhang, J.J., Wu, J.B., Yan, K.M., 2016. Dynamic response and dynamic failure
+mode of a weak Intercalated rock slope using a shaking table. Rock Mech. Rock
+Eng. 49 (8), 3243e3256.
+Fan, G., Zhang, L.M., Zhang, J.J., Ouyang, F., 2017. Energy-based analysis of mecha-
+nisms of earthquake-induced landslide using Hilbertehuang transform and
+marginal spectrum. Rock mech. Rock. Eng 50 (9), 2425e2441.
+Fan, G., Zhang, L.M., Zhang, J.J., Yang, C.W., 2019. Analysis of seismic stability of an
+obsequent rock slope using timeefrequency method. Rock mech. Rock. Eng. 52
+(10), 3809e3823.
+Feng, X.X., Jiang, Q.H., Zhang, H.C., Zhang, X.B., 2021. Study on the dynamic response
+of dip bedded rock slope using discontinuous deformation analysis (DDA) and
+shaking table tests. Int. J. Numer. Anal. Methods GeoMech. 45 (3), 411e427.
+He, K., Li, Y.J., Ma, G.T., et al., 2020. Failure mode analysis of post-seismic rockfall in
+shattered mountains exempliﬁed by detailed investigation and numerical
+modelling. Landslides 18 (1), 425e446.
+He, J.X., Qi, S.W., Zhan, Z.F., et al., 2021. Seismic response characteristics and
+deformation evolution of the bedding rock slope using a large-scale shaking
+table. Landslides 18 (8), 2835e2853.
+Huang, R.Q., Pei, X.J., Fan, X.M., Zhang, W.F., Shi, G., Li, B., 2012. The characteristics
+and failure mechanism of the largest landslide triggered by the Wenchuan
+earthquake, May 12, 2008, China. Landslides 9 (1), 131e142.
+Itasca, 2014. Software Manual of FLAC3D. Itasca Consulting Group, Inc., Minneap-
+olis, MN.
+Lak, M., Fatehi Marji, M., Yarahmadi, BafghiA., Abdollahipour, A., 2019. Analytical
+and numerical modeling of rock blasting operations using a two-dimensional
+elasto-dynamic Green's function. Int. J. Rock Mech. Min. 114, 208e217.
+Li, H.B., Li, X.W., Ning, Y., Jiang, S.F., Zhou, J.W., 2019. Dynamical process of the
+Hongshiyan landslide induced by the 2014 Ludian earthquake and stability
+evaluation of the back scarp of the remnant slope. Bull. Eng. Geol. Environ. 78
+(3), 2081e2092.
+Lin, Y.L., Li, Y.X., Yang, G.L., Li, Y., 2017. Experimental and numerical study on the
+seismic behavior of anchoring frame beam supporting soil slope on rock mass.
+Soil Dyn. Earthq. Eng. 98, 12e23.
+Ling, W.Y., Xu, C.S., Dou, P.F., et al., 2023. Effects of kinematic and inertial interaction
+on seismic responses of pile-structure system in liqueﬁable and non-liqueﬁable
+deposits. Comput. Geotech. 164.
+Meyers, M.A., 1994. Dynamic Behaviors of Materials. Wiley.
+Ning, Y.B., Zhang, G.C., Tang, H.M., Shen, W.C., Shen, P.W., 2019. Process analysis of
+toppling failure on anti-dip rock slopes under seismic load in southwest China.
+Rock Mech. Rock Eng. 52 (11), 4439e4455.
+Pu, X.W., Wang, L.M., Wang, P., Chai, S.F., 2020. Study of shaking table test of seismic
+subsidence loess landslides induced by the coupling effect of earthquakes and
+rainfall. Nat. Hazards 103 (1), 923e945.
+Peng, J.B., Wang, S.K., Wang, Q.Y., et al., 2019. Distribution and genetic types of loess
+landslides in China. J. Asian Earth Sci. 170, 329e350.
+Qi, S.W., He, J.X., Zhan, Z.F., 2022. A single surface slope effects on seismic response
+based on shaking table test and numerical simulation. Eng. Geol. 306.
+Shinoda, M., Watanabe, K., Sanagawa, T., et al., 2015. Dynamic behavior of slope
+models with various slope inclinations. Soils Found. 55 (1), 127e142.
+Song, D.Q., Che, A.L., Zhu, R.J., Ge, X.R., 2019. Natural frequency characteristics of
+rock masses containing a complex geological structure and their effects on the
+dynamic stability of slopes. Rock Mech. Rock Eng. 52 (11), 4457e4473.
+L
+Geometric dimension
+a
+Acceleration
+r
+Density
+E
+Elastic modulus
+m
+Poisson's ratio
+c
+Cohesion
+f
+Internal friction angle
+s
+Stress
+ε
+Strain
+t
+Time
+d
+Displacement
+v
+Velocity
+z
+Damping ratio
+C. Xin, F. Yang, W. Feng et al.
+Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 2009e2030
+2029
+
+Song, D.Q., Liu, X.L., Huang, J., Zhang, J.M., 2021a. Energy-based analysis of seismic
+failure mechanism of a rock slope with discontinuities using Hilbert-Huang
+transform and marginal spectrum in the time-frequency domain. Landslides
+18 (1), 105e123.
+Song, D.Q., Liu, X.L., Huang, J., Zhang, Y.F., Zhang, J.M., Nkwenti, B.N., 2021b. Seismic
+cumulative failure effects on a reservoir bank slope with a complex geological
+structure considering plastic deformation characteristics using shaking table
+tests. Eng. Geol. 286, 106085.
+Su, L.J., Li, C., Zhang, C.L., 2021. Large-scale shaking table tests on the seismic re-
+sponses of soil slopes with various natural densities. Soil Dyn. Earthq. Eng. 140,
+106409, 2021.
+Sun, Z.L., Kong, L.W., Guo, A.G., Alam, M., 2020. Centrifuge model test and numerical
+interpretation of seismic responses of a partially submerged deposit slope.
+J. Rock Mech. Geotech. Eng. 12 (2), 381e394.
+Wang, D.P., Li, Y.Z., Wang, Z.W., Yang, W.B., Quyang, C.J., Zhu, X., 2022. Threat from
+above! Assessing the risk from the Tonghua high-locality landslide in Sichuan,
+China. Landslides 19 (3), 731e746.
+Wang, S.Y., Sun, L., Yang, C., Yang, S.Q., Tang, C.A., 2013. Numerical study on static
+and dynamic fracture evolution around rock cavities. J. Rock Mech. Geotech.
+Eng. 5 (4), 262e276.
+Wu, Z.J., Zhang, D., Wang, S., Liang, C., Zhao, D., 2020. Dynamic-response charac-
+teristics and deformation evolution of loess slopes under seismic loads. Eng.
+Geol. 267, 105507.
+Xiao, S., Feng, W.K., Zhang, J.J., 2010. Analysis of the effects of slope geometry on the
+dynamic response of a near-ﬁeld mountain from the Wenchuan Earthquake.
+J. Mt. Sci. 7, 353e360.
+Xin, C.L., Wang, Z.Z., Gao, B., 2018. Shaking table tests on seismic response and
+damage mode of tunnel linings in diverse tunnel-void interaction states. Tunn.
+Undergr. Space Technol. 77, 295e304.
+Xin, C.L., Wang, Z.Z., Yu, J., 2020. The evaluation on shock absorption performance of
+buffer layer around the cross section of tunnel lining. Soil Dyn. Earthq. Eng. 131,
+106032.
+Xin, C.L., Wang, Z.Z., Zhou, J.M., Gao, B., 2019. Shaking table tests on seismic
+behavior of polypropylene ﬁber reinforced concrete tunnel lining. Tunn.
+Undergr. Space Technol. 88, 1e15.
+Xu, C., Liu, Q., Tang, X., Sun, L., Deng, P., Liu, H., 2023. Dynamic stability analysis of
+jointed rock slopes using the combined ﬁnite-discrete element method (FDEM).
+Comput. Geotech. 160, 105556.
+Zhu, T., Hu, J., Zhang, Z.T., Zhang, J.M., Wang, R., 2021. Centrifuge shaking table tests
+on precast underground structureesuperstructure system in liqueﬁable ground.
+J. Rock Mech. Geotech. Eng. 147 (8), 04021055.
+Yin, J.H., Chen, J., Xu, X.W., Wang, X.L., Zheng, Y.G., 2010. The characteristics of the
+landslides triggered by the Wenchuan Ms 8.0 earthquake from Anxian to Bei-
+chuan. J. Asian Earth Sci. 37 (5), 452e459.
+Chunlei Xin has been engaged in teaching and research in
+the ﬁeld of seismic interaction in geotechnical engineering
+and underground structural engineering. He obtained his
+Master degree and PhD in Bridge and Tunnel Engineering
+from Southwest Jiaotong University in 2011 and 2016,
+respectively. He pursued joint PhD studies at Rensselaer
+Polytechnic Institute from 2013 to 2014. Since 2022, he
+has been working as a researcher at the State Key Labo-
+ratory of Geological Hazard Prevention and Geological
+Environment Protection. He was recognized as a high-
+level talent in overseas studies from Sichuan Province
+and the transportation industry. He was also regarded as
+a key teacher at Chengdu University of Technology.
+Throughout his career, he has successfully led and partic-
+ipated in over 10 research projects funded by the National
+Natural Science Foundation of China and provincial-level
+research programs. He has published more than 20 SCI-
+indexed papers as the ﬁrst author or corresponding
+author. His contributions have been acknowledged with
+a second-class prize for scientiﬁc and technological prog-
+ress at the provincial and ministerial levels.
+C. Xin, F. Yang, W. Feng et al.
+Journal of Rock Mechanics and Geotechnical Engineering 17 (2025) 2009e2030
+2030

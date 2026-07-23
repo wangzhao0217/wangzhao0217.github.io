@@ -1,0 +1,2023 @@
+Soil Dynamics and Earthquake Engineering 162 (2022) 107440
+Available online 1 August 2022
+0267-7261/© 2022 Elsevier Ltd. All rights reserved.
+Seismic response mechanisms of casing-shape composite tunnel lining: 
+Theoretical analysis and shaking table test verification 
+C.L. Xin a,b, Z. Wang c,*, I. Hajirasouliha c, F. Yang b, W.H. Li b, T. Chen d, B. Gao e,f 
+a State Key Laboratory of Geohazard Prevention and Geoenvironment Protection, Chengdu University of Technology, Chengdu, PR China 
+b College of Environment and Civil Engineering, Chengdu University of Technology, Chengdu, PR China 
+c Department of Civil and Structural Engineering, The University of Sheffield, Sir Frederick Mappin Building, Mappin Street, Sheffield, S1 3JD, UK 
+d China Railway Construction South China Regional Headquarters, Guangzhou, PR China 
+e School of Civil Engineering, Southwest Jiaotong University, Chengdu, PR China 
+f National Engineering Laboratory for Technology of Geological Disaster Prevention in Land Transportation, Southwest Jiaotong University, Chengdu, PR China   
+A R T I C L E I N F O  
+Keywords: 
+Casing-shape tunnel lining 
+Rock-structure seismic interaction 
+Theoretical analysis 
+Shaking table test 
+Fault slippage 
+A B S T R A C T  
+In high-intensity seismic zones tunnel lining is generally utilized to provide efficient protection against tunnel 
+collapse by withstanding pressure under strong earthquake events. However, this can be a challenging task in the 
+case of fault-crossing tunnels, since tunnel lining follows the deformation of surrounding rock. To address this 
+issue, the casing-shape tunnel lining system is proposed to reduce the constraint effects of surrounding rock on 
+the lining structure by using an internal and external lining with a buffer layer employed in between. This 
+research aims to investigate the rock-structure interaction and seismic response mechanism of casing-shape 
+tunnels, both theoretically and experimentally, to facilitate the adoption of the proposed system. To develop a 
+practical mechanical model for parametric study, the casing-shape tunnel lining is simplified as a Timoshenko 
+composite beam. The theoretical analysis results indicate that the external lining and buffer layer can effectively 
+reduce the earthquake-induced internal forces on the internal lining and there is an optimal length of casing- 
+shape lining to balance cost-effectiveness with seismic resistance protection. To validate the proposed simpli­
+fied model of casing-shape tunnel lining, a series of shaking table model tests are then performed on large-scale 
+casing-shape lining models with earthquake-induced fault slippage under incremental input intensity excitations. 
+The results demonstrate that: (i) the inclined angle of fault considerably affects the adopted length of casing- 
+shape tunnel lining, (ii) the fault slippage shears the external lining directly leading to severe seismic damage 
+at arch springing and invert, and (iii) the upper part of external lining and the whole internal lining generally 
+exhibit a satisfying level of protection. This highlights the need to select appropriate cross-section shapes and 
+structural materials for the construction of casing-shape tunnel lining systems. The outcomes of this study can 
+provide theoretical foundation and experimental evidence for the seismic response mechanisms of casing-shape 
+tunnel lining in practical applications.   
+1. Introduction 
+Although tunnel structures generally demonstrate good seismic 
+performance, devastating tunnel lining damage may occur during strong 
+earthquake events [1]. This is particularly prevalent in fault-crossing 
+tunnels as the fault increases the exhibited deformations, and hence 
+causes damage to the tunnel lining even if the transient displacement 
+does not fully destroy the tunnel during a strong earthquake event [2–4]. 
+This can be explained, since the occurrence of slippage and displacement 
+along the fault is inevitable while the geological substance suffers 
+earthquake effect, accompanied by intensive shear break. It is not al­
+ways possible to avoid using tunnels in high-risk areas with existing 
+secondary faults or miniature shattered fault zones, since straight lines 
+or long sweeping curves are usually adopted in high-speed railways or 
+highways, presenting severe security risks for the tunnel engineering 
+constructed in high-intensity areas [5]. 
+The seismic damage to tunnels can significantly affect their func­
+tionality and the rescue operation after an earthquake event [6]. Espe­
+cially traffic tunnels are the essential infrastructure for rescuing 
+operations in disaster areas, and their failure not only hinders the post 
+* Corresponding author. 
+E-mail address: wangzhao0217@gmail.com (Z. Wang).  
+Contents lists available at ScienceDirect 
+Soil Dynamics and Earthquake Engineering 
+journal homepage: www.elsevier.com/locate/soildyn 
+https://doi.org/10.1016/j.soildyn.2022.107440 
+Received 6 April 2022; Received in revised form 15 June 2022; Accepted 9 July 2022   
+
+Soil Dynamics and Earthquake Engineering 162 (2022) 107440
+2
+disaster mitigation operations but also presents a huge difficulty for the 
+work if there are security risks during reconversion [7,8]. The occur­
+rence of accidents will also raise huge concerns from all sectors of so­
+ciety, having an immeasurable impact on tunnel engineering [9,10]. 
+During the 2008 Wenchuan Great earthquake in China, up to 110 tun­
+nels exhibited earthquake damage, while most of the serious damage 
+was observed in the areas where the condition of surrounding rock was 
+poor and the displacement of shattered fault zone was very large [11]. 
+Besides, the secondary fault influenced by the earthquake-induced fault 
+was quite active, resulting in severe damage to a number of tunnels. 
+As explained above, the damage to tunnels crossing fault or hard and 
+soft rocks is more prominent due to excessive displacement as discussed 
+above. In such cases, the interface between the fault and the surrounding 
+rock plays a key role to ensure the seismic safety of long-line tunnels. 
+Several researchers have conducted experimental studies aiming to 
+investigate the effect of the inhomogeneity stratum on the dynamic re­
+sponses of tunnels. For instance, Ref. [12] found that fault influences the 
+seismic stability of underground caverns through a tendency in 
+extending the plastic zones and increasing displacements as well as 
+asymmetric stress distribution in rock medium. Ref. [13] investigated 
+the location of shear zones and propagation of subsurface rupture traces 
+through overlying sand. They concluded that the tunnel location, tunnel 
+rigidity and soil relative density affect the rotation and displacement of 
+the tunnel. In another relevant study, the non-linear responses of the 
+tunnels within surface normal fault ground under obliquely incident P 
+waves were investigated by Ref. [14]. The outcomes showed that the 
+tunnels across the fault generally suffer the most from serious plastic 
+damage. Similarly, Ref. [15] investigated the seismic stability of tunnel 
+structures controlled by a large fault and showed that the dominant 
+failure mode of the tunnel under earthquake excitations is generally due 
+to shear slip at the intersection of the tunnel ceiling and fault. In another 
+relevant study, Ref. [16] conducted shaking table model tests to validate 
+the feasibility of adopting closed-cell aluminum foam layer and 
+concluded that the layer weakens the dynamic response of the tunnel 
+lining, while the shock absorption varied with the loading conditions. 
+Ref. [17] investigated the complex mechanical properties of the fault 
+using 3D dynamic finite element models. The results of their study 
+showed that the most unstable state occurs when the fault strike is 
+parallel to the longitudinal axis of the cavern and the intersection angle 
+between the fault and the vertical axis in the cavern cross-section is 
+approximately 40◦. In another study, Ref. [18] proposed two quantita­
+tive damage indices for tunnels in fault fracture zones subjected to 
+multiple strike-slip fault movements. Their numerical results indicated 
+that the cross-sectional damage of the tunnels primarily concentrates in 
+the vicinities of the fault planes, and the boundaries between the fault 
+and the competent rock. Similarly, [19] showed that the internal forces 
+and the residual earth pressures generally remain on the tunnel after an 
+earthquake event, which may lead to accumulated damage to the tunnel 
+system. Ref. [20] also investigated the seismic response of a segmental 
+tunnel in the sand under near-fault and far-fault excitations and showed 
+that near-fault motions can significantly aggravate the seismic response 
+of both the sand ground and the segmental tunnel compared to far-field 
+motions. In a more recent study, Ref. [21] introduced a method to 
+simulate the fault slippage for the physical model of buried continuous 
+pipelines crossing reverse faults, and demonstrated its efficiency to 
+investigate the behavior of buried pipelines subjected to seismic 
+hazards. 
+Although several studies focused on the seismic dynamic responses 
+of fault-crossing underground structures (e.g. Refs. [22,23], the 
+earthquake-induced soil-structural interaction mechanisms between the 
+slippage of fault and underground structures still remain an uncertain 
+problem. Therefore, it is necessary to develop accurate analytical models 
+to study the mechanical behavior of tunnel lining experiencing an 
+earthquake-induced fault displacement [24]. To this end, conducting 
+systematic shaking table tests to validate the adopted models and pro­
+vide a better understanding of the seismic performance and damage 
+mechanism of fault-crossing tunnel lining structure would be a key step 
+[25,26]. 
+This research aims to provide the necessary theoretical basis and the 
+technical tools for seismic fortification of fault-crossing tunnel engi­
+neering in high-intensity earthquake areas. In this paper, a casing-shape 
+composite tunnel lining has been proposed, which is a new sort of tunnel 
+lining structures composed of internal and external lining structures, 
+overlapping with each other. Ordinarily, there is a buffer layer installed 
+at this overlap and between the internal and external lining structure to 
+avoid unnecessary collision during the seismic excitations. To bridge the 
+above mentions research gaps, a fault-crossing casing-shape composite 
+tunnel lining mechanical model is developed. The model is then used to 
+investigate the effects of key design parameters including the foundation 
+resistance coefficient for casing-shaped tunnel lining, the resistance 
+coefficient for buffer layer, and the longitudinal adopted length. 
+Furthermore, a set of shaking table tests are conducted on large-scale 
+casing-shape lining models with earthquake-induced fault slippage 
+under incremental input intensity excitations. The results are used to 
+validate the developed mechanical model and assess the maximum ac­
+celeration and strain values as well as the overall damage patterns of 
+casing-shape tunnel linings under different earthquake intensity levels. 
+2. Theoretical analyses and application 
+2.1. Governing equation for dynamic response of casing-shape lining 
+structure 
+In the semi-infinite surrounding rock, tunnel lining structure can be 
+deemed as a Timoshenko beam on the elastic foundation. Both of the P 
+wave and S wave can lead to tension-compression and shearing de­
+formations of lining structure during the seismic excitation, that is, the 
+seismic motions cause complex responses of Timoshenko beam with 
+constant axial forces. Thus, it is necessary to research the seismic 
+response mechanisms of Timoshenko beam before investigating the 
+seismic induced responses of tunnel lining along longitudinal direction. 
+A Timoshenko beam is considered in the Cartesian coordinate system 
+Oxy with the length L. The beam is subjected to a constant axial force FN 
+and an excitation load w1(x, t) in the axial and transverse directions, 
+respectively (see Fig. 1(a)). Since the P wave can cause tension and 
+compression in surrounding rock along the longitudinal direction of 
+tunnel lining during the seismic excitation, the P wave can apply the 
+axial forces FN at the both ends of Timoshenko beam (i.e. tunnel lining) 
+in equivalent. Thus, the seismic induced axial forces FN would promote 
+the deformation of casing-shape composite tunnel lining in longitudinal 
+direction in a narrow range, which cannot affect the mechanical model 
+of casing-shape composite tunnel lining but make the mechanical model 
+suitable for practical tunnel engineering. 
+To avoid the unnecessary seismic induced collision between internal 
+and external tunnel linings, it is necessary to install a buffer layer be­
+tween internal and external tunnel linings. Thus, since the material of 
+buffer layer was rubber sponge according to the similarity relations, it 
+can only act as a spring between internal and external tunnel linings to 
+generate the elastic stiffness coefficient of kb, but cannot provide support 
+forces. Therefore, a buffer layer was assumed to be employed between 
+the casing-shape lining of the tunnel, which constitutes a casing-shape 
+composite tunnel lining structure (see Fig. 1(b)). The mechanical 
+model of this composite lining structure is graphically illustrated in 
+Fig. 1(c). Due to the high damping characteristics of the buffer layer, it 
+can be simplified as a spring model with an elastic stiffness coefficient of 
+kb. Both the internal and external lining can be regarded as Timoshenko 
+beams using the same material. The external lining is connected to the 
+surrounding rock and can be regarded as a Timoshenko beam on an 
+elastic foundation. The elastic foundation resistance coefficient of the 
+surrounding rock is kr. 
+Based on the response analysis of [27] for Timoshenko beam under 
+dynamic excitation, the governing equation of dynamic response 
+C.L. Xin et al.                                                                                                                                                                                                                                    
+
+Soil Dynamics and Earthquake Engineering 162 (2022) 107440
+3
+amplitude of the internal lining of the tunnel can be expressed by 
+Equations (1) and (2): 
+w
+′′′′
+1 ⋅EI1⋅a1i
+a2i
+−
+¨w′′
+1 ⋅
+(EI1
+a2i
+μ1 + γ1 ⋅a1i
+a2i
+)
++ w1 ⋅b1kb + w′′
+1 ⋅
+(
+FN1 −EI1⋅b1kb
+a2i
+)
++ ¨w1 ⋅
+(
+μ1 + b1kb⋅γ1
+a2i
+)
++ ¨w1 ⋅γ1μ1
+a2i
+= f1(x, t)
+(1)  
+f1(x, t) = ¨w2 ⋅γ1⋅b1kb
+a2i
++ w2 ⋅b1kb −w′′
+2⋅EI1⋅b1kb
+a2i
+(2)  
+where, EI1 denotes the longitudinal bending stiffness of the internal 
+lining; a1i = κGA1 −
+FN1(1 −
+α); a2i = κGA1 + αFN1 κ is the correction 
+coefficient of the shearing force; G is the shear modulus of the lining 
+material; A1 is the cross-sectional area of the internal lining; μ1 is the 
+mass of internal lining per unit length; γ1 is rotational inertia of the 
+internal lining; b1 is the width of the internal lining; and α is a dimen­
+sionless coefficient ranging from 0 to 1. α = 0 indicates that the axial 
+force FN1 is tangent to the axis of the internal lining; while α = 1 rep­
+resents the case that axial force FN1 is perpendicular to the cross section 
+of the internal lining. 
+Since the harmonic dynamic motions with different amplitudes and 
+frequencies can composite any real seismic motions, it is reasonable for 
+adopting the harmonic dynamic motions to excite the Timoshenko 
+beam. Moreover, the harmonic dynamic motions have several wave 
+crests that make the mechanical model be in relative dangerous cir­
+cumstances, which can provide the theoretical seismic responses evi­
+dence for practical tunnel lining. Assuming that the casing-shape 
+composite lining of the tunnel is excited by harmonic seismic loads w1(x,
+t), the harmonic modes of the dynamic displacement response w2(x, t)
+and the dynamic rotation angle response ψ1(x, t) can be expressed by 
+Equation (3): 
+⎧
+⎨
+⎩
+w1(x, t) = W1(x)eiΩt
+w2(x, t) = W2(x)eiΩt
+ψ1(x, t) = Ψ 1(x)eiΩt
+(3)  
+where, W1(x)， W2(x) and Ψ1(x) are the amplitude of the harmonic 
+seismic load, the amplitude of the displacement response and the 
+amplitude of the rotation angle of lining cross-section, respectively; and 
+Ω denotes the frequency of the seismic load. 
+Substituting Equation (3) into Equations (1) and (2) yields the gov­
+erning equation for the seismic response of the internal lining, as shown 
+in Equation (4): 
+W2
+′′′′ + λ1iW2
+′′ + λ2iW2 = λ3iW1
+′′ −λ4iW1
+(4)  
+where, λ1i, λ2i, λ3i and λ4i denote the constant coefficients of the gov­
+erning equation respectively, which can be expressed by Equation (5):  
+⎧
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎨
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎩
+λ1i = EI1⋅μ1Ω2 + γ1Ω2a1i + FN1a2i −EI1⋅b1kb
+EI1⋅a1i
+λ2i = γ1μ1⋅Ω4 −μ1Ω2a2i +
+(
+γ1Ω2 + a2i
+)
+⋅b1kb
+EI1⋅a1i
+λ3i = −b1kb
+a1i
+λ4i = a2i −γ1Ω2
+EI1⋅a1i
+⋅b1kb
+(5) 
+Similarly, the external lining is subjected to the mutual effect of the 
+surrounding rock and the buffer layer during the process of seismic 
+excitation. The governing equations for the dynamic response amplitude 
+in this case can be expressed by Equations (6) and (7):  
+Fig. 1. The mechanical model of casing-shape lining: (a) schematic of Timoshenko beam; (b) casing-shape tunnel lining in the surrounding rock; (c) simplified 
+mechanical model for casing-shape tunnel lining; (d) the numerical simulation model for validating; (e) the casing-shape composite tunnel lining in finite 
+element method. 
+C.L. Xin et al.                                                                                                                                                                                                                                    
+
+Soil Dynamics and Earthquake Engineering 162 (2022) 107440
+4
+w
+′′′′
+2 ⋅EI2⋅a1o
+a2o
+−
+¨w′′
+2 ⋅
+(EI2
+a2o
+μ2 +γ2 ⋅a1o
+a2o
+)
++w2 ⋅b2
+(
+kb +kr
+)
++w′′
+2 ⋅
+(
+FN2 −EI2⋅b2(kb +kr)
+a2o
+)
++ ¨w2 ⋅
+(
+μ2 +b2(kb +kr)⋅γ2
+a2o
+)
++ ¨w2 ⋅γ2μ2
+a2o
+=f2(x,t)
+(6)  
+f2(x, t) =
+(
+¨w1kb + ¨wrkr
+)
+⋅γ2b2
+a2o
++ (w1kb + wrkr) ⋅b2 −
+(
+w′′
+1kb + w′′
+r kr
+)
+⋅EI2⋅b2
+a2o
+(7)  
+where, EI2 is the longitudinal bending stiffness of the external lining; 
+a1o = κGA2 −FN2(1 −α); a2o = κGA2 + αFN2 wr is the seismic excitation 
+induced displacement responses of surrounding rock; A2 is the cross- 
+sectional area of the external lining; μ2 is the mass per unit length of 
+external lining; γ2 is the rotational inertia of the external lining; and b2 is 
+the width of the external lining. 
+By assuming that the external lining is equally excited by the har­
+monic seismic load w1(x, t) seen in Equation (3), the governing equation 
+of the seismic response of the external lining can be expressed by 
+Equation (8): 
+W2
+′′′′ + λ1oW2
+′′ + λ2oW2 = λ3oW1
+′′ + λ4oW1 + λ5oWr
+′′ + λ6oWr
+(8)  
+where, λ1o, λ2o, λ3o, λ4o, λ5o and λ6o are the constant coefficients of the 
+governing equation, respectively, which can be expressed by Equation 
+(9): 
+⎧
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎨
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎩
+λ1o = EI2⋅μ2Ω2 + γ2Ω2a1o + FN2a2o −EI2⋅b2(kb + kr)
+EI2⋅a1o
+λ2o = γ2μ2⋅Ω4 −μ2Ω2a2o +
+(
+γ2Ω2 + a2o
+)
+⋅b2(kb + kr)
+EI1⋅a1o
+λ3o = −b2kb
+a1o
+λ4o = a2o −γ2Ω2
+EI2⋅a1o
+⋅b2kb
+λ5o = −b2kr
+a1o
+λ6o = a2o −γ2Ω2
+EI2⋅a1o
+⋅b2kr
+(9) 
+Integrating Equations (4) and (8) yields coupling differential equa­
+tions, which can be reduced into vector matrix form as expressed in 
+Equation (10): 
+I
+[
+W1
+W2
+]’’’’
++ J
+[
+W1
+W2
+]’’
++ K
+[
+W1
+W2
+]
+= F
+(10)  
+where, I is the unit matrix, and vector matrix J, K and F can be expressed 
+by Equation (11): 
+⎧
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎨
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎩
+J =
+( λ1i
+−λ3i
+−λ3o
+λ1o
+)
+K =
+( λ2i
+−λ4i
+−λ4o
+λ2o
+)
+F =
+(
+0
+λ5oW′′
+r + λ6oWr
+)
+(11)  
+2.2. Green’s function solution for dynamic response of casing-shape lining 
+structure 
+According to the mathematical definition and physical sense of 
+Green’s function, the solution of Green’s function of casing-shape lining 
+structure is consistent with the solution of the following differential 
+equation: 
+I
+[
+W1
+W2
+]’’’’
++ J
+[
+W1
+W2
+]’’
++ K
+[
+W1
+W2
+]
+= λ5o
+[
+δ(x −ξ1)
+δ(x −ξ2)
+]’’
++ λ6o
+[
+δ(x −ξ1)
+δ(x −ξ2)
+]
+(12) 
+According to Laplace transform and its derivative theorem and by 
+performing the positive and inverse Laplace transform for Equation (12), 
+the analytical solution of Equation (12) can be obtained as expressed in 
+Equation (13): 
+[
+G1(x; ξ1)
+G2(x; ξ2)
+]
+= Φ1(x −ξ)H(x −ξ) + Φ2(x)
+[
+W1(0)
+W2(0)
+]
++ Φ3(x)
+[
+W1
+’(0)
+W2
+’(0)
+]
++ Φ4(x)
+[
+W1
+’’(0)
+W2
+’’(0)
+]
++ Φ5(x)
+[
+W1
+’’’(0)
+W2
+’’’(0)
+]
+(13)  
+where, ξ = [ ξ1
+ξ2 ]; The functions relevant to Φ(x) and their n-order 
+derivatives can be expressed by Equation (14): 
+⎧
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎨
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎩
+Φ1(x) =
+∑
+8
+m=1
+Wm(x)G(fm)
+(
+λ5of 2 −λ6o
+)
+fm
+n
+Φ2(x) =
+∑
+8
+m=1
+Wm(x)G(fm)
+(
+Ifm
+3 + Jfm
+)
+fm
+n
+Φ3(x) =
+∑
+8
+m=1
+Wm(x)G(fm)
+(
+Ifm
+2 + J
+)
+fm
+n
+Φ4(x) =
+∑
+8
+m=1
+Wm(x)G(fm)fm
+n+1
+Φ5(x) =
+∑
+8
+m=1
+Wm(x)G(fm)fm
+n
+H(x −ξ) = [H(x −ξ1) H(x −ξ2)]T
+(14)  
+where, Wm(x) = efmx/ ∏
+i∕=m
+(fm −
+fi) n i ∈[1, 8]. 
+The direct constraint of the internal lining is mainly from the buffer 
+layer, while the outside of the external lining is protected by the initial 
+support. There is also a gap between the external lining and the initial 
+support regardless of the materials properties of the employed buffer 
+layer and the connection type of the casing-shape composite lining. 
+Generally, there was a gap approximate 20–30 cm between primary 
+support structures and secondary linings due to the current construction 
+methods for mountain tunnel engineering. Moreover, there were con­
+struction joints at the ends of tunnel lining segments [28]. Thus, the 
+seismic motions can lead to the responses at the ends of tunnel lining 
+segments as free ends. Thereby, despite of several end restraint condi­
+tions for Timoshenko beam, the free ends were the most suitable ones for 
+Timoshenko beam suffering high intensity seismic excitations. Addi­
+tionally, it is beneficial for application and transmission of axial forces 
+while adopting the free ends. Consequently, the boundary conditions at 
+the end of the casing-shape composite lining can be assumed to be free 
+end constraints as expressed by Equation (15): 
+W1
+’’(0) = W1
+’’’(0) = W2
+’’(0) = W2
+’’’(0) = W1
+’’(L) = W1
+’’’(L) = W2
+’’(L)
+= W2
+’’’(L) = 0
+(15) 
+Equation (13) can be degenerated to the form of Green’s function 
+with free boundary conditions at both ends, as shown in Equations (16) 
+and (17): 
+[
+G1(x; ξ1)
+G2(x; ξ2)
+]
+= Φ1(x −ξ)H(x −ξ) + Φ2(x)
+[
+W1(0)
+W2(0)
+]
++ Φ3(x)
+[
+W1
+′(0)
+W2
+′(0)
+]
+(16)  
+C.L. Xin et al.                                                                                                                                                                                                                                    
+
+Soil Dynamics and Earthquake Engineering 162 (2022) 107440
+5
+(
+Φ2
+’’(L)
+Φ3
+’’(L)
+Φ2
+’’’(L)
+Φ3
+’’’(L)
+)[
+W(0)
+W’(0)
+]
+= −
+⎡
+⎢⎣
+Φ1
+’’(L −ξ1)H ( L −ξ1)
+Φ1
+’’(L −ξ2)H (L −ξ2)
+Φ1
+’’’(L −ξ1)H (L −ξ1)
+Φ1
+’’’(L −ξ2)H (L −ξ2)
+⎤
+⎥⎦
+(17) 
+To determine the Green’s function of the dynamic response of casing- 
+shape lining under free boundary conditions at both ends, the W(0) and 
+W
+′(0) are obtained using Equation (18): 
+[
+W(0)
+W’(0)
+]
+= −
+(
+Φ2
+’’(L)
+Φ3
+’’(L)
+Φ2
+’’’(L)
+Φ3
+’’’(L)
+)−1
+⎡
+⎢⎣
+Φ1
+’’(L −ξ1)H ( L −ξ1)
+Φ1
+’’(L −ξ2)H ( L −ξ2)
+Φ1
+’’’(L −ξ1)H ( L −ξ1)
+Φ1
+’’’(L −ξ2)H (L −ξ2)
+⎤
+⎥⎦
+(18) 
+Finally, according to the superposition principle, the dynamic 
+steady-stated response of the casing-shape lining structure under the 
+effect of seismic dynamic F is obtained, as follows: 
+W(x) =
+∫L
+0
+F(ξ)⋅
+[
+G1(x; ξ1)
+G2(x; ξ2)
+]
+dξ
+(19)  
+2.3. Dynamic response verification of casing-shape lining 
+Considering the actual construction process of tunnel engineering, it 
+is assumed that the length of the casing-shape composite lining of a 
+typical example tunnel is 3–12 m, the buffer layer is employed between 
+the internal and external lining of the casing-shape lining. Based on the 
+general design drawing of existing tunnel structure, the calculated area 
+of the internal and external lining is 19.88 m2 and 25.06 m2, respec­
+tively, and the rotational inertia of the internal and external lining is 
+479.81 m4 and 562.35 m4, respectively. Static and dynamic parameters 
+of surrounding rock, fault, lining and buffer layer for this example case 
+are tabulated in Table 1. The corresponding numerical simulation model 
+for validating this mechanical model are illustrated in Fig. 1 (d) and (e). 
+As shown in Fig. 2(a), in general, the displacement response of the 
+internal lining in the selected typical example is much smaller than that 
+of the external lining. It can be seen that the analytical solution derived 
+in this section compares very well with the results of finite element so­
+lution, which indicates the validity of the proposed method. In addition, 
+the bending moment response of the internal lining shown in Fig. 2(b) is 
+much smaller than the dynamic response of the external lining, indi­
+cating that the external lining and the buffer layer can effectively reduce 
+the additional bending moment caused by seismic excitations. Further­
+more, the displacement response of the casing-shape lining decreases 
+gradually and converges to a stable value with the increase of the ratio k 
+(which is the resistance coefficient ratio of the surrounding rock to the 
+fault). Meanwhile, with the increase of k, the bending moment response 
+of the casing-shape lining gradually becomes more significant. In this 
+case, the earthquake-induced main additional bending moment is un­
+dertaken by the external lining, while the bending moment response of 
+the internal lining can be neglected, which demonstrates that the 
+external lining and the buffer layer can provide effective protection for 
+the internal lining. 
+As shown in Fig. 3(a), in general, the displacement response of tunnel 
+lining gradually increases with the increase of the length of casing-shape 
+lining. Meanwhile, as shown in Fig. 3(b), the shear response of casing- 
+shape lining is gradually becoming more significant with the increase 
+of the length of casing-shape lining. This indicates that a major part of 
+the earthquake-induced additional internal force is undertaken by the 
+external lining and the buffer layer, thus reducing the response of the 
+internal lining. To this end, there is an optimal value for the length of the 
+casing-shape lining structure to maximize the seismic performance of 
+the casing-shape lining structure considering the cost. 
+As shown in Fig. 4(a), when the buffer layer vanishes, the elastic 
+stiffness coefficient kb trends to 0 MPa. In general, the absolute values of 
+the displacements of casing-shape lining are smaller when no buffer 
+layer is set between the casing-shape lining, which indicates that the 
+surrounding rock has stronger constraints on the external lining while 
+the external lining also has stronger constraints on the internal lining. 
+However, the absolute value of displacement of casing-shape lining with 
+buffer layer is larger than that of the condition without buffer layer. It 
+can be seen that in the case of setting buffer layer with kb = 0.05 MPa, 
+the displacement response of the casing-shape lining reaches its 
+maximum. With the gradual increase of kb, the absolute value of 
+displacement of casing-shape lining all shows a decreasing trend. Since 
+the foundation resistance coefficient of the surrounding rock is much 
+larger than the elastic stiffness coefficient of the buffer layer, the abso­
+lute value of the displacement of the internal lining is larger than that of 
+the external lining. 
+As shown in Fig. 4(b), when the buffer layer vanishes, the bending 
+moment value is greater than the condition when a buffer layer is 
+employed between the casing-shape tunnel lining. Under the protection 
+of the external lining and buffer layer, the bending moment value of the 
+internal lining is much smaller than that of the external lining. Addi­
+tionally, the earthquake-induced bending moment is mainly transferred 
+by the external lining, and hence the bending moment of the internal 
+lining under the protection of the buffer layer is small and negligible. In 
+addition, the increase of kb has little influence on the force of external 
+lining, while the force of internal lining gradually increases with the 
+increase of kb, but the cardinal number is still small compared with 
+external lining. Therefore, the casing-shape tunnel lining can effectively 
+reduce the internal force of the internal lining and improve the overall 
+seismic performance of the tunnel lining by reducing its vibration 
+amplitude. 
+Table 1 
+Physical and mechanical parameters used in numerical calculations and theoretical analytical method.  
+Statics parameters of 
+surrounding rock 
+Shear modulus 
+G/MPa 
+Density 
+ρ/kg⋅m−3 
+Cohesion c/MPa 
+Internal friction angle 
+φ/◦
+Poisson’s ratio μ 
+Resistance coefficient of 
+elastic foundation kr/MPa 
+12600 
+2100 
+0.025 
+32 
+0.26 
+10–50 
+Dynamics parameters of 
+surrounding rock 
+Natural 
+frequency fr/Hz 
+Shear wave 
+velocity v/m⋅s−1 
+Incidence Angle of 
+seismic waves θ/◦
+Velocity spectrum of 
+surrounding rock 
+Horizontal seismic 
+coefficient 
+Seismic wavelength l/m 
+0.625 
+220 
+45 
+0.235 
+0.32 
+158 
+Physical and mechanical 
+parameters of faults 
+Shear modulus 
+G/MPa 
+Density 
+ρ/kg⋅m−3 
+Cohesion c/MPa 
+Internal friction angle 
+φ/◦
+Poisson’s ratio μ 
+Resistance coefficient of 
+elastic foundation kf/MPa 
+3250 
+1800 
+0.017 
+23 
+0.38 
+0.5 
+Physical and mechanical 
+parameters of lining 
+Shear modulus 
+G/MPa 
+Density 
+ρ/kg⋅m−3 
+Poisson’s ratio μ 
+correction factor of 
+shear force κ 
+Calculated width of 
+internal lining b1/m 
+Calculated width of 
+external lining b2/m 
+13300 
+2500 
+0.25 
+0.52 
+13.80 
+14.40 
+Physical and mechanical 
+parameters of buffer layer 
+Shear modulus 
+G/MP 
+Density 
+ρ/kg⋅m−3 
+Poisson’s ratio μ 
+Compression yield 
+stress ratio r 
+uniaxial compressive 
+strength Rc/MPa 
+elastic stiffness kb/MPa 
+252 
+1200 
+0.18 
+0.30 
+6.23 
+0–0.177  
+C.L. Xin et al.                                                                                                                                                                                                                                    
+
+Soil Dynamics and Earthquake Engineering 162 (2022) 107440
+6
+3. Experimental setup 
+3.1. Prototype description 
+In this study, two groups of test schemes were considered for per­
+forming a series of shaking table tests based on the severe earthquake 
+event that emerged in the 2008 Wenchuan Great earthquake corre­
+sponding to the fault-crossing segments of the Longdongzi tunnel and 
+Longxi tunnel, respectively [29]. In total, four faults crossed by the 
+Longdongzi tunnel, in which the strike of fault F3 and F4 was perpen­
+dicular to the axis of the tunnel, and the surfaces were smooth and 
+straight along with scratches on them, while the inclined angle and 
+width of the fault was 82◦and 2–5 m, respectively. Therefore, the 
+inclined angle and width of the simulated fault in the first group of the 
+shaking table experiments were taken as 90◦and 2.5 m respectively, 
+along with fault strike perpendicular to the tunnel axis. It should be 
+mentioned that there were a number of cracks on the fault-crossing 
+segments of the Longdongzi tunnel, with cracking widths of 5–20 mm, 
+in which the longitudinal and inclined cracks were distinct. Besides, the 
+damage to the invert, teemed with longitudinal cracking, uplift and 
+displacement, and devastating cracks up to 20 m in length. The fault 
+slippage induced shearing damage to the arch shoulder was also sig­
+nificant (see Fig. 5(a) and (b)) [30]. 
+The Longxi tunnel was simulated in the second group of the exper­
+iment, which only crossed the fault F8 where the surrounding rock was 
+class V. The fault strike was E-W, with the inclination of north and the 
+Fig. 2. Seismic responses of casing-shape tunnel lining with different resistance coefficient ratios of elastic foundation from outputs of analytical method and nu­
+merical calculation: (a) displacements; (b) bending moments. 
+Fig. 3. Seismic responses of casing-shape tunnel lining with different lengths from outputs of analytical method: (a) displacements; (b) shearing forces.  
+Fig. 4. Seismic responses of casing-shape tunnel lining with different elastic stiffness coefficients of buffer layer from outputs of analytical method: (a) displacements; 
+(b) bending moments. 
+C.L. Xin et al.                                                                                                                                                                                                                                    
+
+Soil Dynamics and Earthquake Engineering 162 (2022) 107440
+7
+inclined angle of 62◦, while the intersection angle of the fault with the 
+tunnel axis was 30◦. Besides, the width of the fault influenced range was 
+3–10 m, where the rock formation was crushed intensively. The 
+properties of surrounding rock and fault have been listed in Table 3, 
+which were based on the site and indoor experiments from the geolog­
+ical exploration [31]. The fault is composed of intensively fractured 
+rock, mostly sandstone and mudstone. The engineering properties of the 
+fault zone are very poor, as indicated in Table 3, with values of strength 
+and stiffness well below those of rock class II, with the possibility of large 
+seepage through the fault zone, which could compromise the stability of 
+the tunnel. In addition, The fault perpendicular the longitudinal direc­
+tion of Longdongzi tunnel is a reverse strike-slip fault, which is located at 
+northwest 
+of 
+Baiyan 
+mountain 
+anticline 
+and 
+comprised 
+of 
+semi-cementation to fragmentation gravels. This fault has the 
+60◦obliquity, 3–5 m width and strikes north by east 60◦. Herein, the 
+width and inclined angle of the simulated fault, whose fault strike was 
+perpendicular to the tunnel axis in the experiment, was 3 m and 60◦, 
+respectively. This was employed based on not only the practical influ­
+enced area of the fault, but also on the consideration of constraint from 
+the experiment field. The Longxi tunnel near the fault F8 in the earth­
+quake was developed with longitudinal, transverse and inclined cracks, 
+along with concrete scaling at the crown and arch shoulder, as well as 
+Fig. 5. Seismic damage phenomena in Longdongzi tunnel and Longxi tunnel: (a) cracked pavement and sidewall; (b) fault slippage induced shearing deformation of 
+lining structure; (c) longitudinal cracks propagation on lining structure; (d) the uplifted pavement after earthquake. 
+Table 2 
+Scaling laws and similarity ratios of shaking table model tests.  
+Properties 
+Parameters 
+Dimensional 
+analysis 
+Similarity 
+ratios 
+Dominating 
+parameters 
+Geometry 
+[L] 
+Cl = 1/25.0 
+Density 
+[M][L]−3 
+Cρ = 1/1.3 
+Elasticity 
+modulus 
+[M][L]−1[T]−2 
+CE = 1/32.5 
+Deriving parameters 
+Acceleration 
+[L][T]−2 
+Ca = 1/1.0 
+Strain 
+– 
+Cε = 1/1.0 
+Stress 
+[M][L]−1[T]−2 
+Cσ = 1/32.5 
+Cohesive 
+strength 
+[M][L]−1[T]−2 
+Cc = 1/32.5 
+Damping ratio 
+– 
+Ca = 1/1.0 
+Time 
+[T] 
+Ct = 1/5.0  
+Table 3 
+The dynamic characteristics of prototype and model materials.  
+Items 
+Comparative Parameters 
+Density/kg⋅m−3 
+Elasticity Modulus/GPa 
+Poisson’s Ratio/μ 
+Cohesion Force/MPa 
+Frictional Angle/◦
+Surrounding Rock 
+Prototype value 
+1700–2000 
+1.3–6.0 
+0.25 
+0.526–0.923 
+20–28 
+Require Value 
+1310–1530 
+0.04–0.185 
+0.25 
+0.016–0.028 
+20–28 
+Measured Value 
+1300 
+0.108 
+0.23 
+0.021 
+26 
+Similarity 
+98.5% 
+96.0% 
+92.0% 
+93.50% 
+92.3% 
+Fault 
+Prototype value 
+1800 
+0.875 
+– 
+0.186 
+25 
+Require Value 
+1385 
+0.027 
+– 
+0.0057 
+25 
+Measured Value 
+1300 
+0.025 
+– 
+0.0062 
+25.5 
+Similarity 
+93.86% 
+92.59% 
+– 
+91.94% 
+98.04% 
+Tunnel Lining 
+Prototype value 
+2500 
+28 
+0.20 
+– 
+– 
+Require Value 
+1923 
+0.86 
+0.20 
+– 
+– 
+Measured Value 
+1940 
+0.88 
+0.21 
+– 
+– 
+Similarity 
+99.1% 
+97.7% 
+95.2% 
+– 
+–  
+C.L. Xin et al.                                                                                                                                                                                                                                    
+
+Soil Dynamics and Earthquake Engineering 162 (2022) 107440
+8
+longitudinal cracking and uplift at the invert, in which the uplift height 
+was up to 1 m (see Fig. 5 (c) and (d)) [32]. 
+3.2. Scaling laws 
+The scaling laws between prototypes and models contain similar 
+relationships of geometries, materials, and mechanics, which can affect 
+the seismic responses of the tunnel prototypes in these series of shaking 
+table model tests. In general, the scaling laws for such tests can be ob­
+tained based on the Buckingham-π theorem [33,34]. Herein, the simi­
+larity ratio of geometries, density and elasticity modulus (Young’s 
+modulus) were characterized as the dominating parameters, which were 
+based on the boundary constraints and size of the shaking table appa­
+ratus adopted in the experiment [35]. The remaining deriving parame­
+ters obtained from the three dominating parameters are tabulated in 
+Table 2. 
+3.3. Model preparation 
+The internal dimension of the model container was 3.7 m×1.5 m ×
+1.8 m (corresponding to length × width × height). There was a perspex 
+sheet employed on the long side of the model container for observing the 
+damage and structural response of the system through the experiment at 
+any time. Additionally, both the long and short sides inside of the model 
+container were installed with polystyrene membranes and polystyrene 
+foams, respectively, to avoid the boundary effect from the model 
+container as much as possible, whereas the mortar layer was filled on the 
+bottom of the model container to ensure the high consistency of exci­
+tation effect between the model container and the fabricated model 
+system (shown in Fig. 6(a)). 
+The materials used for fabricating the surrounding rock in this study 
+included river sand (aggregate), engine oil (cement) and fly ash 
+(accessory materials) using the mixture mass ratio of 31:12:57. This 
+design was obtained via the repeating comparative selection of the 
+orthogonal blend test, which was based on not only the surrounding rock 
+class of the prototype but also on the similitude relationship used in this 
+research. The obtained cohesive strength (c) and friction angle (φ) of the 
+surrounding rock model was 3.01 kPa and 21◦respectively. The corre­
+sponding dynamic characteristics of surrounding rock, faults and tunnel 
+lining are listed in Table 3. Additionally, gravel with diameter ranging 
+from 1.0 cm to 1.5 cm was utilized in the fault simulation according to 
+the practical parameters of the fault obtained from the geological pro­
+specting report of the selected prototype (shown in Fig. 6(b)). 
+The mix ratio of the cement and medium sand was determined as 1:6, 
+and the water-cement ratio was 1:1 based on the compressive strength 
+test results of 70.7 mm3 cubic specimen and prisma specimens. The peak 
+strain of the micro-concrete was determined as 300 με based on the 
+compression tests as shown in Fig. 6(c). Formed steel wire mesh with 
+1.06 mm diameter and 25.4 mm spacing in both longitudinal and 
+transverse directions was employed to simulate steel bars. The length for 
+the conventional tunnel model and internal lining model was 80 cm and 
+120 cm, respectively. Fig. 6(d) shows the adopted test setup of the tunnel 
+models. Herein, the casing-shape composite tunnel model consists of 
+two casing-shape linings of different sizes, in which the internal diam­
+eter of the external lining was 2 cm greater than the external diameter of 
+the internal lining, while the spacing between them was filled with 
+rubber plastic sponge to avoid occurring of adverse damage due to the 
+direct collision between them during excitation. The epoxy resin glue 
+was applied to connect the three tunnel lining models in the second 
+group of the experiment. 
+3.4. Instrumentation schemes 
+The vertical fault and inclined fault were designed for the two groups 
+of the shaking table tests (shown in Fig. 7(a) and (b)), while the con­
+ventional tunnel model (without employment of aseismic measure) was 
+set for comparative analysis to investigate the seismic effect on the 
+casing-shape composite lining and to study the damage mechanism for 
+more efficient protection and strengthening of these systems in practical 
+applications. 
+The simulation of the fault was restrained by the single shaking table 
+apparatus and model container. To provide an ideal condition for the 
+simulation of the fault, nonconforming seismic excitations are required 
+at the two sides of the fault for restoring the character of the fault. 
+Fig. 6. Preparation processes for testing models: (a) model container; (b) fault model; (c) strength test for lining model material; (d) construction of surrounding rock 
+and casing-shape lining. 
+C.L. Xin et al.                                                                                                                                                                                                                                    
+
+Soil Dynamics and Earthquake Engineering 162 (2022) 107440
+9
+Therefore, an exclusive fault slippage device was designed in this 
+research for simulating the fault to achieve nonconforming seismic ex­
+citations (shown in Fig. 7(c) and (d)). The adopted device could restore 
+both the characters and dislocation effect of the practical fault suffi­
+ciently. The device was employed below the bottom of both the fault and 
+surrounding rock between the two faults in the first test group. The 
+configuration of the device consisted of a blockboard underlying the 
+model container, along with rollers and isolation set on top of it for 
+enabling rolling and forbidding dislocation of the rollers respectively. A 
+steel plate was also employed on the rollers to undertake the weight 
+from the above surrounding rock. The rubber plastic sponges were used 
+along the long side of the slippage area of the model container. The fault 
+slippage was sufficiently achieved approximate 2.78–3.52 m amounted 
+to the practical fault dislocation according to the observation results 
+from the tests. Furthermore, the polyethylene membranes were 
+employed as the interfaces between fault and surrounding rock to co­
+ordinate the dislocation of fault slippage device. 
+The test data were mainly obtained by accelerometers and strain 
+gauges installed on the specimens. Before conducting the tests, the crack 
+developing tendency and damage patterns of the fault-crossing tunnel 
+structure in and after the earthquake were estimated using the results 
+from numerical simulations and analyses of a number of practical 
+earthquake damage instances in tunnel engineering. The sensors were 
+then employed according to the test purpose, by avoiding the redundant 
+employment of the sensors to minimize their adverse effect on the test 
+Fig. 7. Schematic of experimental setup: (a) vertical fault model in the first test group; (b) inclined fault model in the second test group; (c) configuration of the fault 
+slippage device; (d) employment of the fault slippage device; (e) cross-section of the tunnel model. 
+Table 4 
+Identifier and functions of sensors in the first test group.  
+Sensor 
+numbering 
+function 
+A1andA2 
+Analyzing the influence of boundary effect from the model 
+container 
+A3 
+Acquiring the acceleration of the conventional lining at the fault 
+A3, A4 andA5 
+Analyzing the influence range of the fault on the tunnel 
+structure during seismic excitation 
+A5 and A6 
+Acquiring the acceleration of the external lining 
+A7 and A8 
+Acquiring the acceleration of the internal lining 
+A9 
+Acquiring the acceleration of the surrounding rock between the 
+fault 
+A10 
+Acquiring the acceleration inside of the fault 
+A11 
+Acquiring the acceleration of the model container during 
+seismic excitation 
+S1, S2 and S3 
+section 
+Analyzing the fault induced deformation and damage area of 
+the tunnel during and after seismic excitation 
+S3 and S4 section 
+Analyzing the seismic strain and damage patterns of the 
+external lining 
+S5 and S6 section 
+Analyzing the seismic strain and damage patterns of the internal 
+lining 
+D1 and D2 
+Analyzing the relative displacement at both sides of upright 
+fault  
+C.L. Xin et al.                                                                                                                                                                                                                                    
+
+Soil Dynamics and Earthquake Engineering 162 (2022) 107440
+10
+results as much as possible. The letters “A” and “D” illustrated in Fig. 7 
+(a) and (b) represent the location of the utilized accelerometers and 
+displacement meters, respectively, while the monitoring direction of 
+accelerometers and displacement meters was consistent with that of the 
+seismic excitation. The letter “S” and the dashed line also denote the 
+strain gauges and the location of the sections attached with strain 
+gauges, respectively. The identifiers and functions of each sensor 
+adopted in the first and second groups of the tests are tabulated in Ta­
+bles 4 and 5. 
+3.5. Seismic excitation protocol 
+Generally, the real earthquake motions can be recorded in three di­
+rections as N–S, E-W, and U-D. Thus, considering the positions of pro­
+totype tunnels and the earthquake epicentre, the E-W components of 
+Wolong seismic motions was selected as the input motions for these 
+series of shaking table model tests to investigate the seismic response 
+mechanisms of casing-shape composite tunnel lining and compare the 
+seismic damage phenomena in model tests as well as in the prototypes. 
+The E-W component of the 2008 Wolong seismic motion was selected as 
+the input seismic excitation in the test. The transverse exciting direction 
+was horizontally perpendicular to the tunnel axis, which was deter­
+mined based on the trend of the tunnel and its location in relation to the 
+epicenter of the Wenchuan Great earthquake. Additionally, the peak 
+acceleration and duration of the seismic motion were adjusted according 
+to those of the actual record and the seismicity of the area of the pro­
+totype [36]. The acceleration time history and its corresponding Fourier 
+spectrum of the selected seismic motion are illustrated in Fig. 8(a) and 
+(b), respectively. 
+Regarding the earthquake excitation protocol, the peak ground 
+acceleration (PGA) of the input seismic excitation was initially set as 0.2 
+g, and was then gradually increased with equal 0.2 g steps until reached 
+the PGA of 1.0 g. The deformation demands and damage mechanism of 
+the tunnel model were measured under each PGA level. The exciting 
+protocol was set not only based on the seismic precautionary intensity at 
+the area of the prototype, but also to ensure the tunnel model can 
+demonstrate clearly its damage patterns without integral collapse. 
+Furthermore, the free field shaking table test was conducted before the 
+experiment to obtain the acceleration responses of the surrounding rock 
+inside of the model container, which was to validate the configuration 
+rationality of the model container. 
+4. Results of the analyses 
+4.1. Validation of fault slippage device 
+The performance of the slippage device was validated via a com­
+parison between the displacement response of the surrounding rock at 
+both sides of the fault. The results illustrated in Fig. 9s (a) and (b) show 
+that there is an apparent displacement difference between the two sides 
+of the fault regardless of the variance of the fault inclined angle. This 
+phenomenon appeared more evident with the increase of the input peak 
+ground acceleration, indicated using the statistic of peak relative 
+displacement between the two sides of the fault in the two test groups 
+(see Fig. 9 (c)). The data illustrated in Fig. 9(c) confirm that the fault 
+slippage device could simulate the earthquake-induced fault slippage 
+sufficiently since it achieved the practical displacement of the fault in 
+the experiment. The vertical fault slippage and the fault slippage with 
+the inclined angle of 60◦were equal to the practical displacement of 
+2.78 m and 3.52 m, respectively when the input PGA is was 1.0 g. These 
+results indicate that the displacement difference between the two lining 
+segments, induced by the shearing effect of earthquake in practical 
+tunnel engineering, could be well simulated by the adopted fault slip­
+page device. For example, in the San Francisco earthquake 1906, the 
+maximum horizontal displacement of the Wright tunnel crossing San 
+Andreas Fault was 1.37 m, while the maximum horizontal displacement 
+of a fault-crossing water-conveying tunnel was 3.0 m approximately in 
+the Chi-Chi Earthquake 1999. 
+4.2. The acceleration response of casing-shape composite lining 
+The seismic effect coefficient Ra obtained based on the acceleration 
+time history data from A2, A5 and A6 accelerometers (see Fig. 7), is a 
+seismic measure parameter that is defined as the ratio of peak ground 
+acceleration from casing-shape composite lining PGAm to that of the 
+conventional lining PGAn. Here, the coefficient for external and internal 
+lining is denoted as Race and Raci, respectively. The seismic performance 
+of the casing-shape composite lining can be evaluated via the quanti­
+tative analysis of acceleration responses under different input seismic 
+waves. Compared to the conventional system, the effect of the seismic 
+action is reduced when Ra < 1, while Ra ≥1 implying that the seismic 
+Table 5 
+Identifier and functions of sensors in the second test group.  
+Sensor 
+numbering 
+function 
+A1 
+Acquiring the acceleration at the footwall of the fault 
+A2 
+Analyzing the acceleration of the tunnel where not crossing the 
+fault 
+A3 and A4 
+Analyzing the influence of boundary effect from the model 
+container 
+A5 
+Acquiring the acceleration inside of the fault 
+A6 and A7 
+Acquiring the acceleration of the internal lining 
+A8 and A9 
+Acquiring the acceleration of the external lining 
+A10 
+Acquiring the acceleration inside of the fault 
+A11 
+Acquiring the acceleration at the hanging wall of the fault 
+S1, S2 and S3 
+section 
+Analyzing the fault induced deformation and damage area of 
+the tunnel during and after seismic excitation 
+S2 and S3 section 
+Analyzing the seismic strain and damage patterns of the 
+external lining at the footwall of the fault 
+S4 and S5 section 
+Analyzing the seismic strain and damage patterns of the internal 
+lining at the hanging wall of the fault 
+D3 and D4 
+Analyzing the relative displacement at both sides of oblique 
+fault  
+Fig. 8. The input seismic excitations for shaking table model tests: (a) E-W component of Wolong seismic motion; (b) the corresponding Fourier spectrum.  
+C.L. Xin et al.                                                                                                                                                                                                                                    
+
+Soil Dynamics and Earthquake Engineering 162 (2022) 107440
+11
+effects are amplified by the casing-shape composite lining. 
+The Raci and Race values under different input intensity excitations 
+are demonstrated in Fig. 10. Herein, there are two quite large acceler­
+ation responses of the casing-shape composite lining since the adopted 
+Wolong seismic wave has two wave crests. It can be seen that the seismic 
+effect coefficient of the external lining is greater than 1.0 regardless of 
+the input intensity excitation, while the coefficient for the internal lining 
+is always lower than 1.0, indicating the seismic response intensity is 
+orderly diminishing from the external lining (and conventional lining) to 
+the internal lining. This can be justified since the shearing effect from the 
+fault is directly undertaken by the external lining, the acceleration 
+response of the external lining is greater than the conventional lining. 
+Besides, considering the larger sectional area of the external lining and 
+the fact that similar material is used for the internal and external lining, 
+the external lining receives higher inertia forces, which also contributes 
+to the foresaid test results. In contrast, the seismic response of the in­
+ternal lining is smaller than the conventional lining since the adjacent 
+tunnel structure is disconnected from the internal lining and the 
+constraint force from the tunnel structure is also small due to the 
+employment of the buffer layer. This can considerably reduce the input 
+intensity excitation transferred to the internal lining as discussed before. 
+Nevertheless, with the increasing PGA, the external lining is prone to a 
+less intense seismic response after the input PGA is greater than 0.4 g, 
+whereas the internal lining is more intense. 
+The external lining aims to protect the internal lining, while the Ra 
+results indicate that the external lining is more vulnerable to seismic 
+effects. Therefore, the casing-shape composite lining can be constructed 
+in the areas where the fault is less active, which can prolong the service 
+life of the structure as much as possible, or chose to construct the 
+interface of the internal and external lining at the fault to avoid the 
+direct connection of the external lining and the fault. Moreover, the 
+adopted length of the casing-shape composite lining can be determined 
+depending on the inclined angle of the fault, while the material for the 
+internal and external lining can be different to make the stiffness of the 
+external lining greater than the internal lining to avoid the interaction 
+damage under earthquake events. 
+4.3. The strain response of casing-shape composite lining 
+The peak strain response (maximum absolute value) of the external 
+Fig. 9. The differences analysis of time histories and peak ground displacements in both sides of fault slippage device: (a) the vertical fault at 1.0 g; (b) the inclined 
+fault at 1.0 g; (c) the responses of relative peak ground displacement. 
+Fig. 10. The comparison of aseismic effects coefficients of casing-shape composite lining against the peak ground accelerations: (a) the vertical fault test scheme; (b) 
+the inclined fault test scheme. 
+C.L. Xin et al.                                                                                                                                                                                                                                    
+
+Soil Dynamics and Earthquake Engineering 162 (2022) 107440
+12
+Fig. 11. The time history of strain responses on arch shoulder of casing-shape composite lining: (a) the external lining of casing-shape lining; (b) the internal lining of 
+casing-shape lining. 
+Fig. 12. The statistics and analyses of strain responses for no measures versus casing-shape composite lining with vertical fault slippage: (a) conventional lining at 
+crown; (b) casing-shape lining at crown; (c) conventional lining at arch shoulder; (d) casing-shape lining at arch shoulder; (e) conventional lining at side wall; (f) 
+casing-shape lining at side wall; (g) conventional lining at arch springing; (h) casing-shape lining at arch springing; (i) conventional lining at invert; (j) casing-shape 
+lining at invert. 
+C.L. Xin et al.                                                                                                                                                                                                                                    
+
+Soil Dynamics and Earthquake Engineering 162 (2022) 107440
+13
+lining and internal lining of the considered casing-shape lining system is 
+illustrated in Fig. 11. The deviation baseline from beginning to the end is 
+permanent strain, while the difference between the deviation baseline 
+and its corresponding peak strain value is seismic strain. The strain time 
+histories show excursions of strain data to various extents. The perma­
+nent strain is residual strain on casing-shape composite tunnel lining, 
+that is, the unrehabilitated strain on tunnel lining regardless of the ex­
+istence of stress. In this research, the seismic excitation can successively 
+cause permanent strains on tunnel lining, but the seismic induced stress 
+on tunnel lining cannot dissipate immediately, which can be recorded by 
+strain gauges to illustrate in Fig. 11 as the baseline deviation. The strain 
+value at the beginning and end between the two adjacent input intensity 
+excitations completely coincide with each other, indicating that per­
+manent strain of the lining structure occurs after each input intensity 
+excitation, and the permanent strain changes continuously with the 
+increasing of input intensity excitation. Nonetheless, it is ordinary that 
+the permanent strain induced by the lower intensity input excitation can 
+be ignored, which indicates the damage to the lining system was limited. 
+Herein, the deformation of surrounding rock in the process of excitation, 
+especially the effect of large deformation occurring at the peak accel­
+eration acts on the lining structure, which is the main reason for the 
+generation of permanent strain. Accordingly, it can be determined that 
+the peak strain leading to the ultimate damage of the lining structure is 
+owing to the mutual effect of the permanent strain and seismic strain. 
+Therefore, the effect of the surrounding rock deformation during the 
+earthquake on the lining structure is still considered even if the casing- 
+shape composite lining is adopted. 
+As illustrated in Fig. 12(a) and (b), the conventional lining reaches 
+the peak strain of compressive cracking at the crown when the PGA of 
+input seismic excitation is 0.8 g, while both the internal and external 
+lining is not cracked through the loading process. This indicates that the 
+seismic performance of the casing-shape composite lining at the crown is 
+better than the conventional lining. Besides, in general, the permanent 
+strain values are always greater than the seismic strain, which indicates 
+that the damage at the crown is mainly caused by the permanent strain 
+due to the large deformation effect as discussed before. The seismic ef­
+fect is still evident since the strain at the crown of the external lining is 
+sufficiently reduced, which is due to the fact that the external lining is 
+supported by the buffer layer and internal lining, whereas the internal 
+lining is protected by the external lining from the surrounding rock. 
+Furthermore, both the peak strain and permanent strain of the external 
+lining under the inclined fault are quite large since the influence range of 
+the inclined fault slippage is greater than the vertical fault. It can be 
+noted that the internal lining strain highly coincides in the two groups of 
+experiments (shown in Fig. 13(a)). 
+Compared to the crown, the strain response at arch shoulder was 
+Fig. 13. The statistics and analyses of strain responses for casing-shape composite lining with inclined fault slippage: (a) casing-shape lining at crown; (b) casing- 
+shape lining at arch shoulder; (c) casing-shape lining at sidewall; (d) casing-shape lining at arch springing; (e) casing-shape lining at invert. 
+C.L. Xin et al.                                                                                                                                                                                                                                    
+
+Soil Dynamics and Earthquake Engineering 162 (2022) 107440
+14
+always larger under the input seismic actions. The arch shoulder of the 
+conventional lining cracked when loaded to PGA = 0.4 g, while the 
+external lining remained uncracked until the loading reached PGA = 1.0 
+g. However, the internal lining did not crack regardless of the intensity 
+of the input seismic excitation (illustrated in Fig. 12 (c) and (d)), indi­
+cating the seismic performance at the arch shoulder of the casing-shape 
+composite lining is much better than the conventional lining. Addi­
+tionally, the arch shoulder of all three cases suffered from the cyclic 
+effect of alternative tension-and-compression, while the seismic strain 
+was always larger than the permanent strain, indicating the damage to 
+the arch shoulder was mainly caused by the seismic strain. Furthermore, 
+both the conventional lining and external lining exhibited tension-and- 
+compression destruction at the arch shoulder, while only tension 
+destruction occurred in the position of the internal lining. As a result, the 
+internal lining was well protected by the buffer layer and external lining. 
+However, the strain response of the internal lining was always large 
+under the inclined fault (shown in Fig. 13(b)), thus the earthquake- 
+induced fault slippage had a great effect on the internal lining. 
+The strain at the sidewall of the conventional lining remains under 
+the peak strain for compression cracking, which is the same as the in­
+ternal lining, while the external lining is cracked when loaded to PGA =
+0.8 g (shown in Fig. 12 (e) and (f)). Additionally, the seismic strain of the 
+conventional lining is greater than the permanent one before loading to 
+PGA = 0.8 g, while the permanent strain is more dominant whereafter, 
+which demonstrates that the constraint from the surrounding rock is 
+gradually increased. Besides, the strain of the external lining is always 
+dominated by the permanent strain, and the alternative effect of tension- 
+and-compression does not occur, indicating that the constraint effect 
+from the surrounding rock is obvious on the external part of the external 
+lining, while the support effect from the internal lining to the internal 
+part is distinct as well. However, the alternative effect of tension-and- 
+compression appears on the conventional lining and internal lining, 
+while the seismic strain of the internal lining is greater than the per­
+manent strain. This indicates the well seismic performance of the 
+external lining and buffer layer. Moreover, the strain at the sidewall of 
+the external lining reaches the destruction threshold under the inclined 
+fault (shown in Fig. 13(c)). 
+The arch springing and invert, which both belong to the lower 
+structure of the tunnel lining, are significantly different from the upper 
+structure including the crown, arch shoulders and sidewalls. Herein, the 
+arch springing for the conventional lining and external lining was 
+cracked when loaded to PGA = 0.4 g and 0.6 g respectively, while the 
+arch springing strain of the internal lining remained below the peak 
+strain for tension cracking (illustrated in Fig. 12 (g) and (h)). Once 
+again, this demonstrates the good seismic performance of the casing- 
+shape composite lining compared to the conventional solutions. In 
+addition, the seismic strain of the external lining was always greater 
+than the permanent strain, and the damage to the arch springing was 
+under the mutual effect of tension-and-compression, which is different 
+from the conventional lining. The arch springing strain of the internal 
+lining was dominated by the seismic strain after loading to PGA = 0.6 g, 
+indicating that the constraint to the internal lining was transformed 
+from the surrounding rock to the seismic strain. However, the arch 
+springing of the external lining immediately cracked when loaded to 
+PGA = 0.2 g under the inclined fault, while the arch springing for the 
+internal lining did not exhibit cracking until loading to PGA = 0.8 g 
+(shown in Fig. 13(d)). This highlights the effects of seismic action on the 
+external lining. It should be noted that the arch springing of the external 
+lining is also vulnerable due to the comprehensive effect of self-weight, 
+as well as the surrounding rock and the internal lining. Meanwhile, there 
+is a slight increase in the peak strain of the internal lining under the 
+inclined fault. 
+The compression cracking at the invert of the external lining occurs 
+when loaded to PGA = 0.4 g, which is earlier than the conventional 
+lining cracks that onset at the loading of PGA = 0.6 g, and the invert 
+compression cracking of the internal lining that does not occur until 
+loaded to PGA = 0.8 g (illustrated in Fig. 12 (i) and (j)). This can be 
+explained since the external lining not only undertakes the weight from 
+the surrounding rock and itself, but also from the internal lining, which 
+contributes to the earlier damage observed. Additionally, the invert 
+permanent strain values are always larger than the seismic strains, 
+demonstrating that the damage at the invert is mainly due to the 
+earthquake-induced permanent deformation of the tunnel structure and 
+the static force effect. Whereas the invert seismic strain of the internal 
+lining is very close to the permanent strain since the weight undertaken 
+by the invert is quite small and the protection from the buffer layer and 
+external lining to the internal lining fortifies its performance as well. 
+Furthermore, the invert of the external and internal lining is compres­
+sion cracked, respectively, at the loading PGA = 0.2 g and 0.6 g under 
+the inclined fault, indicating the invert is the most vulnerable part of the 
+lining cross-section (shown in Fig. 13(e)). Meanwhile, the damage to the 
+invert of the external lining is more severe under the inclined fault. 
+4.4. The damage phenomena of the casing-shape composite lining 
+The final damage patterns of the casing-shape composite lining are 
+illustrated in Figs. 14 and 15. The free end of the internal lining under 
+the vertical fault is demonstrated in Fig. 14(a), there was only the invert 
+appearing with penetrated longitudinal cracks, while the damage to the 
+free end was lighter than the fault-crossing end (shown in Fig. 14(b)). 
+There was no obvious damage to the internal lining under the strong 
+earthquake-induced shearing effect, due to its smaller cross-section and 
+larger stiffness along with the protection from the external lining. 
+However, the damage to the invert of the internal lining was still 
+noticeable. It should be noted that the invert cracking is mainly due to 
+the weight from the upper structure of the tunnel lining as well as its 
+large curvature radius. However, the slight cracking at the invert is 
+negligible since the filling construction is generally adopted in the 
+fabrication of the invert in practical engineering. Note that there was 
+approximately no crack emerging at the arch springing of the internal 
+lining, indicating the seismic protection is sufficiently achieved. These 
+observations are consistent with the results of the theoretical analysis 
+presented before. 
+The final damage pattern of the external lining is demonstrated in 
+Fig. 14(c). It can be seen that there was no apparent severe damage to 
+the upper structure of the external lining since it was supported by both 
+the buffer layer and internal lining. However, the cracking at the arch 
+shoulders was distinct, which indicates the earthquake-induced sur­
+rounding rock deformation determines the damage pattern of the lining 
+structure. It is apparent that the damage to the lower structure of the 
+external lining was more severe (shown in Fig. 14(d)), among which the 
+arch springing was the most seriously suffered resulting in the 
+outcropping of the steel bar, leading to the loss of its basic supporting 
+effect. Furthermore, the strong earthquake separated the external lining 
+from its upper structure and lower structure via the damage to the arch 
+springing. Whereas the invert of the external lining was ruptured into 
+plane formed due to the weight from the internal lining and upper 
+structure adding with its large curvature radius. This indicates that the 
+employment of steel bars is necessary since they can connect the upper 
+structure and the lower structure of the external lining damaged by 
+strong earthquake events. Moreover, the casing-shape composite lining 
+structure, if the clearance between its internal and external lining is 
+filled with buffer layer rather than soil, can sufficiently avoid the 
+earthquake-induced pavement uplifting and preserve the upper struc­
+ture of the lining structure in practical engineering. 
+As expected, the damage pattern of the casing-shape composite lin­
+ing was more severe under the inclined fault, even the damage at the two 
+ends of the internal lining was more distinct than that of the vertical 
+fault (shown in Fig. 15 (a) and (b)). The damage pattern of the internal 
+lining emerged from the arch springing and invert, which indicates the 
+shearing effect from the seismic effect is more evident under the inclined 
+fault. Although the upper structure of the internal lining was still under 
+C.L. Xin et al.                                                                                                                                                                                                                                    
+
+Soil Dynamics and Earthquake Engineering 162 (2022) 107440
+15
+the protection of the external lining, the cracking at the arch springing 
+and invert extended along the longitudinal axis of the tunnel and 
+gradually converged into the penetrated crack. This confirms that the 
+seismic fortification for the arch springing and invert of the internal 
+lining is necessary. It is worth noting that the damage to the upper 
+structure of the external lining was slight as well due to the support 
+effect from the buffer layer and internal lining. However, severe damage 
+has occurred on the lower structure of the external lining, in which the 
+arch springing and invert were the most damaged. The concrete at the 
+arch springing was completely collapsed and only connected by the steel 
+bar, while the invert was cracked into the plane form along with 
+penetrated cracks on it (shown in Fig. 15 (c) and (d)). Therefore, the 
+fortification at the lower structure of the casing-shape composite lining 
+is most important. Moreover, the damage at the connection end between 
+the external lining and the fixed constraint end was much more severe 
+than the free end, which indicates it is highly necessary for rendering a 
+certain freedom-degree to the tunnel lining constructed in high-intensity 
+areas. In this case, the seismic effect and fault slippage undertaken by 
+the external lining can sufficiently preserve the internal lining. 
+Fig. 14. The final damage patterns of casing-shape composite lining structures in vertical fault test scheme: (a) free end of internal lining; (b) end of internal lining in 
+external lining; (c) free end of external lining; (d) fixed constraint end of external lining. 
+Fig. 15. The final damage patterns of casing-shape composite lining structures in inclined fault test scheme: (a) free end of internal lining; (b) end of internal lining in 
+external lining; (c) free end of external lining; (d) fixed constraint end of external lining. 
+C.L. Xin et al.                                                                                                                                                                                                                                    
+
+Soil Dynamics and Earthquake Engineering 162 (2022) 107440
+16
+5. Discussion 
+The damage of strong earthquakes exceeding MW 6.0 to the under­
+ground tunnel is devastating even though the underground structures 
+generally possess some levels of seismic protection due to the constraint 
+effects of surrounding rock [37,38]. Generally, tunnel lining is unable to 
+yield the imperative deformation and resistance force to adequate the 
+new balance state induced by the deformation and stress adjustment of 
+the surrounding rock under strong earthquakes, which is the main 
+reason for the earthquake damage to tunnel structures [39,40]. There­
+fore, the dynamic action and evolution mechanism of rock-structural 
+seismic interaction under strong earthquakes is the basis for lining 
+structure design [41]. Additionally, the requirement for the integrity of 
+the tunnel structure is strict since the earthquake-induced cumulative 
+deformation of the surrounding rock can change the interaction between 
+the lining structure and the surrounding rock. The deterioration and 
+aging of the tunnel structure within its life cycle also affect its structural 
+performance. As discussed before, the casing-shape lining structure of­
+fers some seismic protections attributed to the interaction between the 
+external lining and surrounding rock. The results of theoretical analysis 
+and shaking table model tests in this study showed that the internal force 
+and displacement demands of the internal lining were reduced 
+compared to the conventional system, since the strong constraint of 
+surrounding rock and earthquake-induced internal forces were mainly 
+undertaken by the external lining. However, pressure on the internal 
+lining increases with increasing the adopted length of the casing-shape 
+lining structure, indicating that there is an optimal value for practical 
+applications. It was also shown that the dynamic response of the internal 
+lining under earthquake excitations can be sufficiently reduced by the 
+buffer layer employed between the internal and external lining. 
+The results of the shaking table model tests on selected casing-shape 
+tunnel linings confirmed that the proposed theoretical analysis is cred­
+ible, while it was shown that the principle for the adopted length of 
+casing-shape tunnel lining depends on the inclined angle and influence 
+range of the fault. Additionally, it is not favorable for applying the same 
+material for the external and internal lining since they have different 
+performances under the shearing effect and the constraint from the fault 
+and surrounding rock correspondingly. The seismic performance of the 
+casing-shape tunnel lining can be sufficiently improved under the 
+displacement of the fault induced by strong earthquake events, when the 
+stiffness of the external lining is greater than the internal lining. How­
+ever, the casing-shape tunnel lining, within the tunnel systems and 
+cross-sections used in this study, had an adverse effect on the protection 
+of invert and arch springing of the external lining. These effects can be 
+reduced by fortification of the external lining, changing the cross-section 
+form of the tunnel to achieve a more reasonable force distribution at the 
+lower structure, adopting different materials for the upper structure and 
+the lower structure, and changing the geometry and material properties 
+of the buffer layer, lastly, balancing the geometry and material param­
+eters of fault and casing-shape tunnel lining. Investigating the effects of 
+these parameters is a good area for further research. 
+6. Summary and conclusions 
+This research proposed a new seismic resistant casing-shape com­
+posite tunnel lining system, which consists of the internal and external 
+lining along with a buffer layer employed between them. The mechan­
+ical model of this system was first established through theoretical ana­
+lyses by considering the casing-shape tunnel lining as a Timoshenko 
+composite beam on an elastic foundation. A series of shaking table tests 
+were then conducted to validate the proposed theoretical approach and 
+to provide a better understanding of the seismic response mechanism of 
+the casing-shape composite lining and its ultimate damage patterns. The 
+acceleration response and different strain responses of the tunnel models 
+were analyzed for two groups of tests under earthquake-induced slip­
+page considering vertical fault and the inclined fault subjected to in­
+cremental input intensity excitations. Furthermore, a conventional 
+tunnel lining was used as the benchmark to evaluate the efficiency of the 
+casing-shape composite tunnel lining in improving the seismic perfor­
+mance of the tunnel structure. The results of the theoretical analyses and 
+shaking table tests were consistent with each other and verified the 
+excellent structural performance of casing-shape composite tunnel lin­
+ing in high-intensity areas. Some key findings are concluded as follows:  
+(1) Based on the proposed theoretical analyses, the displacement 
+response of the casing-shape lining decreases gradually (and 
+converges to a constant value) with the increase of the resistance 
+coefficient ratio k. The bending moment response of the internal 
+lining is much smaller than the external lining since the addi­
+tional earthquake-induced bending moment is mainly under­
+taken by the external lining.  
+(2) It was shown that the additional earthquake-induced internal 
+force can be transferred to the external lining and the buffer layer 
+to protect the internal lining. However, the displacement 
+response and shear response of the casing-shape lining would 
+gradually increase with the increase of the adopted length of the 
+casing-shape lining. Thus, there is an optimal value for the length 
+of the casing-shape lining structure to maximize the seismic 
+performance considering the cost.  
+(3) The seismic effect coefficient Ra was proposed to analyze the 
+performance of the casing-shape composite lining under earth­
+quake excitations using the results from the shaking table model 
+tests. It was shown that the external lining is more vulnerable 
+under seismic effect, while the seismic response intensity is 
+orderly diminished from the external lining and conventional 
+lining to the internal lining.  
+(4) The results from the shaking table model tests indicated that, in 
+general, the upper structure of the tunnel lining exhibits better 
+seismic performance, among which the crown is the best pro­
+tected position. However, the lower structure of the tunnel lining 
+is quite vulnerable to strong earthquake excitation, where the 
+arch springing and invert are generally the most severely 
+damaged positions.  
+(5) The ultimate damage of the lining structure is due to the mutual 
+effect of the permanent strain and seismic strain, while the final 
+damage pattern of the casing-shape lining is more distinct under 
+the inclined fault condition. The damage pattern of the lower 
+structure of the external lining can be significant, in which the 
+arch springing and invert are the most damaged positions due to 
+the weight of the internal lining and upper structure. 
+Data availability statement 
+The original data supporting the conclusions of this article will be 
+made available by the authors, without undue reservation. 
+Author statement 
+Thank you so much to the editor, associate editor and reviewers for 
+your important suggestions and constructive comments. We have 
+modified the proposed issues and addressed the relevant recommenda­
+tions. Firstly, we have revised the highlights to be more concise as 
+requested by the reviewer. Then, we have improved the abstract of the 
+paper by explaining the origination of casing-shape composite tunnel 
+lining and their key advantages in the case of fault-crossing tunnels, and 
+each modification in our manuscript has been marked with scarlet letter. 
+Furthermore, we have rearranged and revised the “Introduction” section 
+of the paper to provide a more logical structure. We have also provided 
+more information to clarify the research gaps and highlight the necessity 
+and innovative aspects of this research. The specific revised schemes of 
+our manuscript are expounded in Response to Reviewers file. 
+I have made substantial contributions to the conception and design 
+C.L. Xin et al.                                                                                                                                                                                                                                    
+
+Soil Dynamics and Earthquake Engineering 162 (2022) 107440
+17
+of this research, as well as the writing-reviewing; 
+C. L. Xin conducted the shaking table model tests and wrote the 
+original draft preparation; 
+I. Hajirasouliha carried out the theoretical analyses of manuscript; 
+F. Yang and W.H. Li carried out the numerical simulation and 
+visualization; 
+T. Chen and B. Gao validated all the test results and edited this 
+manuscript. 
+All authors have seen and approved the manuscript and have 
+contributed significantly for the paper. The research meets all applicable 
+standards with regard to the ethics of experimentation and research 
+integrity, and the following is being certified true. As an expert scientist 
+and along with co-authors of concerned field, the paper has been sub­
+mitted with full responsibility, following due ethical procedure, and 
+there is no duplication publication, fraud or plagiarism. 
+None of the authors of this paper has a financial or personal rela­
+tionship with other people or organizations that could inappropriately 
+influence or bias the contents of the paper. It is to specifically state that 
+“No Competing interests are at stake and there is No Conflict of Interest” 
+with other people or organizations that could inappropriately influence 
+or bias the contents of this paper. 
+Declaration of competing interest 
+The authors declare that they have no known competing financial 
+interests or personal relationships that could have appeared to influence 
+the work reported in this paper. 
+Acknowledgements 
+This research was supported by the National Natural Science Foun­
+dation of China (Grant No. 52108361); the State Key Laboratory of 
+Geohazard Prevention and Geoenvironment Protection (China) Open 
+Fund (Grant No. SKLGP2020K018); the Miaozi Engineering Key Project 
+from Science and Technology Department of Sichuan Province (Grant 
+No. 2020JDRC0078). 
+References 
+[1] Chen JT, Yu HT, Bobet A, Yuan Y. Shaking table tests of transition tunnel 
+connecting TBM and drill-and-blast tunnels. Tunn Undergr Space Technol 2020;96: 
+103197. https://doi.org/10.1016/j.tust.2019.103197. 
+[2] Ma J, Dong LJ, Zhao GY, Li XB. Qualitative method and case study for ground 
+vibration of tunnels induced by fault-slip in underground mine. Rock Mech Rock 
+Eng 2019;52(6):1887–901. https://doi.org/10.1007/s00603-018-1631-x. 
+[3] Ding XM, Feng L, Wang CL, Chen ZX, Han L. Shaking table tests of the seismic 
+response of a utility tunnel with a joint connection. Soil Dynam Earthq Eng 2020; 
+133:106133. https://doi.org/10.1016/j.soildyn.2020.106133. 
+[4] Zhang SH, Yuan Y, Li C, Yang YS, Yu HT, Mang HA. Effects of interior structure as 
+double deck lanes on seismic performance of segmental linings. Tunn Undergr 
+Space Technol 2020;103:103441. https://doi.org/10.1016/j.tust.2020.103441. 
+[5] Tang BZ, Li XJ, Chen S, Zhuang HY, Chen HP. Investigations of seismic response to 
+an irregular-section subway station structure located in a soft clay site. Eng Struct 
+2020;217:110799. https://doi.org/10.1016/j.engstruct.2020.110799. 
+[6] Zhuang HY, Zhao C, Chen S, Fu JS, Zhao K, Chen GX. Seismic performance of 
+underground subway station with sliding between column and longitudinal beam. 
+Tunn Undergr Space Technol 2020;102:103439. https://doi.org/10.1016/j. 
+tust.2020.103439. 
+[7] Qu LM, Ding XM, Zheng CJ, Wu CR, Cao GW. Numerical and test study on vertical 
+vibration characteristics of pile group in slope soil topography. Earthq Eng Eng Vib 
+2021;20(2):377–90. https://doi.org/10.1007/S11803-021-2026-7. 
+[8] Yang J, Zhuang HY, Wang W, Zhou ZH, Chen GX. Seismic performance and 
+effective isolation of a large multilayered underground subway station. Soil Dynam 
+Earthq Eng 2021;142:106560. https://doi.org/10.1016/J.SOILDYN.2020.106560. 
+[9] Dong LJ, Sun DY, Li XB, Ma J, Zhang LY, Tong XJ. Interval non-probabilistic 
+reliability of surrounding jointed rockmass considering microseismic loads in 
+mining tunnels. Tunn Undergr Space Technol 2018;81:326–35. https://doi.org/ 
+10.1016/j.tust.2018.06.034. 
+[10] Xin CL, Wang ZZ, Yu J. The evaluation on shock absorption performance of buffer 
+layer around the cross section of tunnel lining. Soil Dynam Earthq Eng 2020;131: 
+106032. https://doi.org/10.1016/j.soildyn.2020.106032. 
+[11] Yu HT, Chen JT, Bobet A, Yuan Y. Damage observation and assessment of the 
+Longxi tunnel during the Wenchuan earthquake. Tunn Undergr Space Technol 
+2016;54:102–16. https://doi.org/10.1016/j.tust.2016.02.008. 
+[12] Ardeshiri-Lajimi S, Yazdani M, Assadi Langroudi A. Control of fault lay-out on 
+seismic design of large underground caverns. Tunn Undergr Space Technol 2015; 
+50:305–16. https://doi.org/10.1016/j.tust.2015.07.002. 
+[13] Baziar MH, Nabizadeh A, Mehrabi R, Lee CJ, Hung WY. Evaluation of underground 
+tunnel response to reverse fault rupture using numerical approach. Soil Dynam 
+Earthq Eng 2016;83:1–17. https://doi.org/10.1016/j.soildyn.2015.11.005. 
+[14] Huang JQ, Zhao M, Du XL. Non-linear seismic responses of tunnels within normal 
+fault ground under obliquely incident P waves. Tunn Undergr Space Technol 2017; 
+61:26–39. https://doi.org/10.1016/j.tust.2016.09.006. 
+[15] Cui Z, Sheng Q, Leng XL, Ma YLN. Analysis of the seismic performance of a rock 
+joint with a modified continuously yielding model. Rock Mech Rock Eng 2017;50 
+(10):2695–707. https://doi.org/10.1007/s00603-017-1265-4. 
+[16] Su LJ, Liu HQ, Yao GC, Zhang JL. Experimental study on the closed-cell aluminum 
+foam shock absorption layer of a high-speed railway tunnel. Soil Dynam Earthq 
+Eng 2019;119:331–45. https://doi.org/10.1016/j.soildyn.2019.01.012. 
+[17] Wang XW, Xiong QR, Zhou H, Chen JT, Xiao M. Three-dimensional (3D) dynamic 
+finite element modeling of the effects of a geological fault on the seismic response 
+of underground caverns. Tunn Undergr Space Technol 2020;96:103210. https:// 
+doi.org/10.1016/j.tust.2019.103210. 
+[18] Zhong ZL, Wang Z, Zhao M, Du XL. Structural damage assessment of mountain 
+tunnels in fault fracture zone subjected to multiple strike-slip fault movement. 
+Tunn Undergr Space Technol 2020;104:103527. https://doi.org/10.1016/j. 
+tust.2020.103527. 
+[19] Wang T, Kwok OA, Jeng F. Seismic response of tunnels revealed in two decades 
+following the 1999 Chi-Chi earthquake (Mw 7.6) in Taiwan: a review. Eng Geol 
+2021;287:106090. https://doi.org/10.1016/j.enggeo.2021.106090. 
+[20] Yang YS, Yu HT, Yuan Y, Sun J. 1 g Shaking table test of segmental tunnel in sand 
+under near-fault motions. Tunn Undergr Space Technol 2021;115:104080. https:// 
+doi.org/10.1016/j.tust.2021.104080. 
+[21] Bhattacharya S, Demirci HE, Nikitas G, Prakhya GKV, Lombardi D, Alexander NA, 
+Aleem M, Amani S, Mylonakis G. Physical modeling of interaction problems in 
+geotechnical engineering. Model. Geotech. Eng. 2021:205–56. https://doi.org/ 
+10.1016/B978-0-12-821205-9.00017-4. 
+[22] Wang ZZ, Jiang L, Gao Y. Shaking table test of seismic response of immersed 
+tunnels under effect of water. Soil Dynam Earthq Eng 2019;116:436–45. https:// 
+doi.org/10.1016/j.soildyn.2018.10.039. 
+[23] Shen YS, Wang ZZ, Yu J, Zhang X, Gao B. Shaking table test on flexible joints of 
+mountain tunnels passing through normal fault. Tunn Undergr Space Technol 
+2020;98:103299. https://doi.org/10.1016/j.tust.2020.103299. 
+[24] Zhang JH, Yuan Y, Bao Z, Yu HT, Bilotta E. Shaking table tests on the intersection 
+of cross passage and twin tunnels. Soil Dynam Earthq Eng 2019;124:136–50. 
+https://doi.org/10.1016/j.soildyn.2019.05.035. 
+[25] Chen S, Tang BZ, Zhao K, Li XJ, Zhuang HY. Seismic response of irregular 
+underground structures under adverse soil conditions using shaking table tests. 
+Tunn Undergr Space Technol 2020;95:103145. https://doi.org/10.1016/j. 
+tust.2019.103145. 
+[26] Ding XM, Qu LM, Yang JC, Wang CL. Experimental study on the pile group-soil 
+vibration induced by railway traffic under the inclined bedrock condition. Acta 
+Geotechnica 2020;15:3613–20. https://doi.org/10.1007/s11440-020-00990-0. 
+[27] Chen T, Su GY, Shen YS, Gao B, Li XY, Müller R. Unified Green’s functions of forced 
+vibration of axially loaded Timoshenko beam: transition parameter. Int J Mech Sci 
+2016;113:211–20. https://doi.org/10.1016/j.ijmecsci.2016.05.003. 
+[28] Han L, Liu HL, Zhang WG, Ding XM, Chen ZX, Feng L, Wang ZY. Seismic behaviors 
+of utility tunnel-soil system: with and without joint connections. Undergr Space 
+2021. https://doi.org/10.1016/j.undsp.2021.08.001. 
+[29] Yu HT, Chen XZ, Sun YQ. A generalized bond-based peridynamic model for quasi- 
+brittle materials enriched with bond tension–rotation–shear coupling effects. 
+Comput Methods Appl Mech Eng 2020;372:113405. https://doi.org/10.1016/j. 
+cma.2020.113405. 
+[30] Li TB. Damage to mountain tunnels related to the Wenchuan earthquake and some 
+suggestions for aseismic tunnel construction. Bull Eng Geol Environ 2012;71: 
+297–308. https://doi.org/10.1007/s10064-011-0367-6. 
+[31] Geological Exploration Report of the Longxi Tunnel. Highway survey design & 
+research institute of the sichuan provincial communications department. 2003. 
+Chengdu (in Chinese). 
+[32] Wang ZZ, Gao B, Jiang YJ, Yuan S. Investigation and assessment on mountain 
+tunnels and geotechnical damage after the Wenchuan earthquake. Sci China E 
+2009;52(2):546–58. https://doi.org/10.1007/s11431-009-0054-z. 
+[33] Xin CL, Wang ZZ, Gao B. Shaking table tests on seismic response and damage mode 
+of tunnel linings in diverse tunnel-void interaction states. Tunn Undergr Space 
+Technol 2018;77:295–304. https://doi.org/10.1016/j.tust.2018.03.010. 
+[34] Chen S, Zhuang HY, Quan DZ, Yuan J, Zhao K, Ruan B. Shaking table test on the 
+seismic response of large-scale subway station in a loess site: a case study. Soil 
+Dynam Earthq Eng 2019;123:173–84. https://doi.org/10.1016/j. 
+soildyn.2019.04.023. 
+[35] Han L, Wang L, Ding XM, Wen HJ, Yuan XZ, Zhang WG. Similarity quantification of 
+soil parametric data and sites using confidence ellipses. Geosci Front 2022;13: 
+101280. https://doi.org/10.1016/j.gsf.2021.101280. 
+[36] Zhang WG, Han L, Feng L, Ding XM, Wang L, Chen ZX, Liu HL, Aljarmouzi A, 
+Sun WX. Study on seismic behaviors of a double box utility tunnel with joint 
+connections using shaking table model tests. Soil Dynam Earthq Eng 2020;136: 
+106118. https://doi.org/10.1016/j.soildyn.2020.106118. 
+[37] Wen YM, Xin CL, Shen YS, Huang ZM, Gao B. The seismic response mechanisms of 
+segmental lining structures applied in fault-crossing mountain tunnel: the 
+numerical investigation and experimental validation. Soil Dynam Earthq Eng 2021; 
+151. https://doi.org/10.1016/J.SOILDYN.2021.107001. 
+C.L. Xin et al.                                                                                                                                                                                                                                    
+
+Soil Dynamics and Earthquake Engineering 162 (2022) 107440
+18
+[38] Zheng Q, Xin CL, Shen YS, Huang ZM, Gao B. Seismic damage prediction method 
+for lining structures based on the SEDR principle. 2021 Shock Vib 2021:1–13. 
+https://doi.org/10.1155/2021/6637909. 
+[39] Wu Q, Ding XM, Chen ZX, Zhang YL. Shaking table tests on seismic responses of 
+pile-soil-superstructure in coral sand. J Earthq Eng 2020:1–27. https://doi.org/ 
+10.1080/13632469.2020.1803160. 
+[40] Xin CL, Wang ZZ, Zhou JM, Gao B. Shaking table tests on seismic behavior of 
+polypropylene fiber reinforced concrete tunnel lining. Tunn Undergr Space 
+Technol 2019;88:1–15. https://doi.org/10.1016/j.tust.2019.02.019. 
+[41] Yu J, Wang ZZ. The dynamic interaction of the Soil-Tunnel-Building system under 
+seismic waves. Soil Dynam Earthq Eng 2021;144:106686. https://doi.org/ 
+10.1016/J.SOILDYN.2021.106686. 
+C.L. Xin et al.                                                                                                                                                                                                                                    

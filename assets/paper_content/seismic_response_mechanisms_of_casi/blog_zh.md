@@ -1,23 +1,53 @@
-# Seismic response mechanisms of casing-shape composite tunnel lining Theoretical analysis and shaking table test verification — 研究成果与技术解读
+# Seismic response mechanisms of casing-shape composite tunnel lining: theoretical analysis and shaking table test verification
 
-**作者**: 王曌 等  
-**DOI**: 10.1016/j.soildyn.2022.107440
+**Xin, C.L., Wang, Z., Hajirasouliha, I., Chen, T., Gao, B.**  
+*Soil Dynamics and Earthquake Engineering, 162, 107440 (2022)*  
+DOI: [10.1016/j.soildyn.2022.107440](https://doi.org/10.1016/j.soildyn.2022.107440)
 
-### 研究背景与核心问题
-本研究针对交通网络建模、结构动力学及地理空间基础设施分析中的核心难题，提出了具备强可复现性的数学模型与实证方法。
+`tunnel lining` | `casing-shape` | `seismic response` | `composite lining` | `shaking table`
 
-### 主要贡献与创新点
-- 从论文 PDF 中提取并验证了 20 组重要图表与实证数据。
-- 为交通数据科学与基础设施韧性评估建立了高效率的解决方案。
+---
 
-### 论文摘要精要
-Soil Dynamics and Earthquake Engineering 162 (2022) 107440
-Available online 1 August 2022
-0267-7261/© 2022 Elsevier Ltd. All rights reserved.
-Seismic response mechanisms of casing-shape composite tunnel lining: 
-Theoretical analysis and shaking table test verification 
-C.L. Xin a,b, Z. Wang c,*, I. Hajirasouliha c, F. Yang b, W.H. Li b, T. Chen d, B. Gao e,f 
-a State Key Laboratory of Geohazard Prevention and Geoenvironment Protection, Chengdu University of Technology, Chengdu, PR China 
-b College of Environment and Civil Engineering, Chengdu University of Technology, Chengdu, PR China 
-c Department of Civil and Structural Engineering, The University of Sheffield, Sir Frederick Mappin Building, Mappin Street, Sheffield, S1 3JD, UK 
-d China Railway Construction South China Regional Headquar
+## 研究概述
+
+In high-intensity seismic zones tunnel lining is generally utilized to provide efficient protection against tunnel collapse by withstanding pressure under strong earthquake events. However, this can be a challenging task in the case of fault-crossing tunnels, since tunnel lining follows the deformation of surrounding rock. To address this issue, the casing-shape tunnel lining system is proposed to reduce the constraint effects of surrounding rock on the lining structure by using an internal and external lining with a buffer layer employed in between. This research aims to investigate the rock-structure interaction and seismic response mechanism of casing-shape tunnels, both theoretically and experimentally, to facilitate the adoption of the proposed system.
+
+---
+
+## 研究背景与动机
+
+地震荷载下的岩土工程破坏是全球基础设施倒塌和伤亡的主要原因之一，需要深入研究。
+
+深入理解tunnel lining/casing-shape/seismic response对于推进安全可持续的岩土工程系统具有重要意义。
+
+---
+
+## 研究方法
+
+研究采用系统性方法，将分析建模与实证验证相结合。
+
+该方法具有良好的可重复性和适应性，可应用于不同情境。
+
+---
+
+## 主要发现
+
+(a) and (b) represent the location of the utilized accelerometers and displacement meters, respectively, while the monitoring direction of accelerometers and displacement meters was consistent with that of the seismic excitation. The letter “S” and the dashed line also denote the strain gauges and the location of the sections attached with strain gauges, respectively. The identifiers and functions of each sensor adopted in the first and second groups of the tests are tabulated in Ta­ bles 4 and 5. 3.5.
+
+**核心数据：**
+
+- 详见论文中的定量分析结果。
+
+---
+
+## 研究启示与结论
+
+The damage of strong earthquakes exceeding MW 6.0 to the under­ ground tunnel is devastating even though the underground structures generally possess some levels of seismic protection due to the constraint effects of surrounding rock [37,38]. Generally, tunnel lining is unable to yield the imperative deformation and resistance force to adequate the new balance state induced by the deformation and stress adjustment of the surrounding rock under strong earthquakes, which is the main reason for the
+
+本文对geotechnical hazards, seismic stability, and underground structure safety领域作出了重要贡献，研究方法与成果可直接为政策制定、设计标准或实际操作提供参考。
+
+---
+
+## 阅读全文
+
+完整论文：[https://doi.org/10.1016/j.soildyn.2022.107440](https://doi.org/10.1016/j.soildyn.2022.107440)

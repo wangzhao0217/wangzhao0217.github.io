@@ -1,0 +1,3162 @@
+eprints@whiterose.ac.uk
+https://eprints.whiterose.ac.uk
+Universities of Leeds, Sheffield and York
+Deposited via The University of Leeds.
+White Rose Research Online URL for this paper:
+https://eprints.whiterose.ac.uk/id/eprint/236312/
+Version: Accepted Version
+Article:
+Cui, D., Chen, H., Watling, D. et al. (2026) Understanding Electric Vehicle Refueling 
+Demand and Parking Patterns in Forecasting, Planning, and Scheduling: A Literature 
+Review. IEEE Transactions on Intelligent Transportation Systems, 27 (5). 4967 -4985. 
+ISSN: 1524-9050 
+https://doi.org/10.1109/TITS.2026.3652333
+This is an author produced version of an article published in IEEE Transactions on 
+Intelligent Transportation Systems, made available via the University of Leeds Research 
+Outputs Policy under the terms of the Creative Commons Attribution License (CC-BY), 
+which permits unrestricted use, distribution and reproduction in any medium, provided the 
+original work is properly cited.
+Reuse 
+This article is distributed under the terms of the Creative Commons Attribution (CC BY) licence. This licence 
+allows you to distribute, remix, tweak, and build upon the work, even commercially, as long as you credit the 
+authors for the original work. More information and the full terms of the licence here: 
+https://creativecommons.org/licenses/ 
+Takedown 
+If you consider content in White Rose Research Online to be in breach of UK law, please notify us by 
+emailing eprints@whiterose.ac.uk including the URL of the record and the reason for the withdrawal request. 
+
+1 
+IEEE TRANSACTIONS ON INTELLIGENT TRANSPORTATION SYSTEMS 
+ 
+Understanding Electric Vehicle Refuelling Demand 
+and Parking Patterns in Forecasting, Planning and 
+Scheduling: A Literature Review 
+Dingsong Cui, Haibo Chen, David Watling, Wen-Long Shang, IEEE Senior Member, Ye Liu, Chenxi Wang, Ondrej 
+Havran, Zhao Wang, Shuo Wang, IEEE Member, Zhenpo Wang, IEEE Senior Member
+ 
+ Abstract— Vehicle electrification presents challenges and oppor-
+tunities across multiple sectors, including the automotive, energy 
+and infrastructure domains. Battery charging and swapping are 
+the two primary technologies for refuelling electric vehicles (EVs). 
+However, the involvement of multiple participants and various 
+factors makes EV refuelling a complex and multi-domain issue. 
+Since conventional conductive charging requires vehicles to re-
+main stationary for a period of time, parking naturally provides 
+opportunities for EV charging. Therefore, parking and EV charg-
+ing are intrinsically connected in how they are organised and 
+planned. This paper presents a comprehensive literature review on 
+the features of EV refuelling demand and its relation to parking 
+patterns. The review focuses on key study issues related to the in-
+teraction between EVs and the power grid, namely forecasting, 
+planning, and scheduling. These issues are examined at three dif-
+ferent scales: the individual, station, and regional levels. Based on 
+the findings from the literature, an integrated framework is pro-
+vided to capture the features and linkages between refuelling de-
+mand and parking patterns across the different study issues and 
+scales. Finally, the paper proposes several open issues that could 
+be explored in future studies from the perspective of integrating 
+parking and refuelling analysis. 
+ 
+Index Terms—Electric vehicle; Refuelling demand; Parking pat-
+tern; Review 
+I. INTRODUCTION 
+LECTRIC vehicles (EVs) are rapidly growing in their use 
+around the world, but the success of EV technology is 
+partially reliant on the development of charging and bat-
+tery swapping facilities [1], [2], [3]. This development needs to 
+ 
+ 
+fit with the refuelling demands of EV users while considering 
+the impacts of load on the electricity grid [4]. The integration 
+of EVs with the grid raises questions about how, when, and 
+where users choose to recharge [5]. Meanwhile, refuelling cost 
+and experiences of EV users might affect their (and other us-
+ers’) future purchase decisions [6], [7], [8], [9]. Therefore, 
+deeply understanding EV refuelling demand is crucial for the 
+development of the EV industry.  
+The elements included in EV refuelling demand are complex, 
+involving transportation studies [10], electrical studies, and be-
+haviouristics [11], among other factors. Diverse understandings 
+of the EV refuelling demand can be found according to different 
+stakeholders in the refuelling process. For example, EV users 
+focus more on the quality of service (QoS) and costs, while EV 
+charging station operators are more concerned with profitability 
+and construction costs [12], [13]. The involvement of multiple 
+stakeholders and diverse considerations in the issues of fore-
+casting, planning and scheduling, which are the three main fo-
+cuses in the field of the interaction between EVs and the grid, 
+makes EV refuelling demand a multi-domain integration chal-
+lenge.  
+Prior published reviews have adopted several concepts to un-
+derstand EV refuelling demand, which can be mainly catego-
+rised into the macro perspective [14], [15], [16], [17] and micro 
+perspective [1], [18], [19]. Macro reviews consider the need for 
+more EV facility construction and more power capacity, as the 
+deployment of EVs increases. Energy policy, economic devel-
+opment and zero-carbon electricity are the main factors identi-
+fied as affecting EV refuelling demand in previous reviews. Re-
+fuelling demand considered from the macro-perspective is rel-
+atively broad and generalised, focusing on large-scale trends 
+and infrastructure needs, rather than individual charging behav-
+iours. In contrast, the micro perspective on refuelling demand 
+concentrates on specific issues, such as facility planning [20], 
+[21], [22], [23], trend forecasting [1], [15], [24], [25], [26], [27], 
+and operational strategy optimisation [14], [21], [28], [29], [30], 
+[31]. The original contributions of this review paper, relative to 
+existing review papers, are twofold. First, unlike prior reviews 
+that have typically focused on individual aspects, this paper in-
+tegrates forecasting, planning, and scheduling and explores the 
+interrelationships among them, thereby providing a comprehen-
+sive framework for analysing EV–grid interactions. Second, we 
+systematically review and clarify the role and conceptual 
+boundaries of EV refuelling demand across these study issues, 
+E
+This work was part of the ePowerMove and ZEV-UP projects co-funded by
+ the European Union under Grant agreement ID: 101192753 and 10113872
+1. This work was also jointly supported by National Key Research and Dev
+elopment Program of China under Grant 2022YFE0103000 and Beijing No
+va Program under Grant 20220484105. (Corresponding authors: Haibo Che
+n and David Watling).  
+Dingsong Cui, Haibo Chen, David Watling, Ye Liu, Chenxi Wang, Ond
+rej Havran and Zhao Wang are with the Institute for Transport Studies, Fac
+ulty of Environment, University of Leeds, LS2 9JT Leeds, U.K. (e-mail: d.
+cui@leeds.ac.uk, h.chen@leeds.ac.uk, d.p.watling@its.leeds.ac.uk, Y.Liu8
+@leeds.ac.uk, C.Wang2@leeds.ac.uk, O.Havran@leeds.ac.uk, Z.Wang13
+@leeds.ac.uk). 
+Wen-Long Shang is with the Institute for Transport Studies, Faculty of 
+Environment, University of Leeds, LS2 9JT Leeds, U.K and Department of
+ Civil and Environmental Engineering, Imperial College London, London S
+W7 2AZ, United Kingdom (wenlong.shang12@imperial.ac.uk). 
+Shuo Wang and Zhenpo Wang is with the Collaborative Innovation Cen
+tre for Electric Vehicles, Beijing, China, and National Engineering Researc
+h Centre for Electric Vehicles, Beijing Institute of Technology, Beijing 100
+081, China (e-mail: Shuo.Wang@bit.edu.cn, wangzhenpo@bit.edu.cn) 
+
+2 
+IEEE TRANSACTIONS ON INTELLIGENT TRANSPORTATION SYSTEMS 
+ 
+as these conceptual definitions have been relatively ambiguous 
+in previous studies and often are inconsistent across multiple 
+fields. 
+Specifically, integrated with some recent reviews of charging 
+technologies [21], [29], [30] and battery swapping technologies 
+[23], [31], some key issues that emerge may be summarised as 
+follows:  
+1) The classification and management of EV refuelling de-
+mand.  
+2) The association between refuelling demand and activity-
+based travel behaviour. 
+3) The prediction of parking duration and energy require-
+ments during a charging event. 
+4) The optimal charging strategies from the EV user’s per-
+spective. 
+5) The impact of charging load on the power distribution net-
+work. 
+These five issues are inherently connected. The classification 
+of EV refuelling demand and its linkage with travel behaviour 
+lays the foundation for predicting parking duration and energy 
+requirements. These predictions inform user-oriented charging 
+strategies, whose aggregated outcomes ultimately shape the im-
+pact on the power distribution network. 
+It can be noted that there are multiple perspectives on EV 
+refuelling demand depending on the study issues and study 
+scales [32]. For example, in terms of different study issues, the 
+EV refuelling demand focuses on power demand in some oper-
+ation optimisation studies, while the focus is on user charging 
+willingness in the context of facility planning. The charging de-
+mand at an individual level is concerned more with a user’s hab-
+its and preferences, while the regional-level charging demand 
+focuses on results aggregated into spatial-temporal distributions 
+rather than focusing on one single charging event. Therefore, a 
+gap exists in the differing conceptualisations and considerations 
+of EV refuelling demand across different issues and study 
+scales. It motivates us to provide a comprehensive review paper 
+that bridges these perspectives, offering a more integrated un-
+derstanding of EV refuelling demand.  
+Parking is a particularly important activity in this context. 
+Considering conventional conductive power transmission, the 
+parking time and location of EVs provides an opportunity to 
+recharge a vehicle. The connection time between EVs and the 
+grid is limited by the arrival- and departure time, while the 
+charging power may be constrained by technical parameters 
+(e.g., voltage bias, power loss) of the power distribution net-
+work where the parking site is located [29], [33]. More im-
+portantly, EV parking provides an opportunity for conducting 
+an EV charging power profile optimisation, such as designing a 
+delay charging scheme or utilising vehicle-to-grid (V2G) tech-
+nologies to reduce the impact of the charging load on the power 
+distribution network, based on the parking time after a complete 
+charging process [34], [35], [36], [37]. Therefore, exploring EV 
+parking patterns may help in analysing EV charging demand, 
+as parking is a pre-condition of charging. Understanding the re-
+lation between refuelling demand and parking patterns may 
+therefore support future grid operations (e.g., potential EV 
+charging load in different regions), facility planning (e.g., ap-
+propriate construction locations) and policymaking (e.g., de-
+mand-driven subsidies for the construction of parking lot 
+chargers). 
+As mentioned above, this paper aims to provide an integrated 
+review of EV refuelling demand and parking patterns across 
+forecasting, scheduling and planning issues, particularly related 
+to the interaction between EVs and the grid. This review fo-
+cuses on the systematic description of the above three issues 
+and the considerations of the EV refuelling demand and parking 
+patterns, rather than the detailed technical developments in one 
+issue. The key questions addressed in this paper include the fol-
+lowing aspects: 
+(1) What features, issues and study scales have been consid-
+ered in previous studies of EV refuelling demand?  
+(2) What features, issues and study scales have been consid-
+ered in previous studies of EV parking patterns? 
+(3) How have previous studies incorporated EV parking pat-
+terns into the analysis of EV refuelling demand? 
+Based on these questions, the present paper provides insights 
+into to the extant literature in the following ways:  
+(1) A survey of EV refuelling demand and parking patterns 
+from the micro-perspective level is provided based on different 
+study scales (i.e., individual-, station- and regional levels). EV 
+refuelling demand is characterised by time, location, power and 
+energy; while parking pattern modelling is classified into statis-
+tical, activity-based and scenario-based methods based on time, 
+location and intention features.  
+(2) Previous methods related to EV refuelling demand fore-
+casting issues are critically reviewed. The planning issue is cat-
+egorised into siting and sizing and reviewed based on the main 
+optimisation objectives and solutions. The scheduling issue is 
+also examined according to the main optimisation objectives 
+and solutions, while considering the charging technologies 
+(e.g., V2G, fast charging). The study scales, refuelling demand 
+features and parking pattern modelling methods are labelled for 
+each study.  
+(3) An integrated framework incorporating the issues of fore-
+casting, planning and scheduling is proposed, with the aim to 
+link the relations between and features of refuelling demand and 
+parking patterns. Open research issues are presented at the end 
+of this review.  
+The structure of this paper is as follows: Section II firstly 
+provides the key terms used in this paper and their definitions. 
+Section III provides a classification of the study scales related 
+to EV refuelling demand in the context of forecasting, planning 
+and scheduling. Section IV focuses on a literature review of EV 
+refuelling demand features. Section V summarises the model-
+ling methods adopted in previous studies of EV parking pat-
+terns. The models and solution methods considered for forecast-
+ing, planning and scheduling are reviewed in Section VI, with 
+a particular focus on the consideration of EV refuelling demand 
+and parking patterns. Section VII provides a framework inte-
+grating the above three issues, highlighting features related to 
+refuelling demand and parking patterns, followed by a discus-
+sion of some open issues. Finally, Section VIII concludes this 
+
+3 
+IEEE TRANSACTIONS ON INTELLIGENT TRANSPORTATION SYSTEMS 
+ 
+review paper.  
+II. KEY TERMS AND THEIR DEFINITIONS 
+We firstly summarised the key terms used in this paper and 
+proposed their definitions as some of them have different mean-
+ings in multiple fields. Before delving into the detailed discus-
+sions, clarifying these terms ensures a common understanding 
+and provides a consistent framework for the subsequent analy-
+sis. These key terms are generally divided into three main parts: 
+(1) Key terms related to study issue. Previous studies identify 
+forecasting, planning, and scheduling as the three main 
+study issues in the interaction between EVs and the power 
+grid. Forecasting refers to predicting EV refuelling demand 
+and charging behaviours. Planning involves designing and 
+allocating infrastructure and resources, such as charging 
+stations and energy capacity, to meet anticipated demand 
+efficiently. Scheduling concerns the real-time coordination 
+of charging activities, including the assignment of charging 
+power and timing to individual EVs, in order to optimise 
+objectives such as cost, grid stability, or user satisfaction. 
+In these study issues, the study scale can be classified ac-
+cording to the scope considered: individual level (focusing 
+on EV users), station level (considering users and charging 
+stations), and region level (encompassing users, stations, 
+and the wider power grid). These issues and related scales 
+provide the main benchmarks and features for reviewing 
+current publications in this paper. 
+(2) Key terms related to EV refuelling demand. EV refuelling 
+demand encompasses both battery charging demand and 
+battery swapping demand, which are currently the two pri-
+mary pathways for replenishing electricity in EVs. From 
+the perspective of the refuelling process, these demands 
+can be further characterised in terms of energy, time, loca-
+tion, and power requirements. Energy demand captures the 
+quantity of electricity consumed over time, whereas power 
+demand describes the rate at which electricity is delivered 
+at a specific instant. Across the current publications, the 
+definition of EV refuelling demand is relatively ambigu-
+ous, as it often represents one or more of these four char-
+acteristics. Therefore, in this paper, we sought to investi-
+gate the clarify the conceptual boundaries of EV refuelling 
+demand in previous literature. 
+(3) Terms related to EV parking patterns. Parking patterns de-
+scribe the behaviours of EVs while parked and can be char-
+acterised by time (e.g., plug-in and unplug times, duration 
+of parking), location (e.g., charging station or regional con-
+text), and intention (e.g., charging purpose or general park-
+ing). Across the literature, the representation of parking 
+patterns varies depending on the research scale and focus, 
+highlighting the need for a consistent description.  
+III. STUDY SCALES  
+EV users are the fundamental unit for generating refuelling 
+demand. Stations or regions do not generate the EV refuelling 
+demand, which is aggregated from users in those stations or re-
+gions. The problem of forecasting on larger scales is essentially 
+one of aggregation of individuals. It should also be emphasised 
+that the core driver to achieve scheduling or planning remains 
+satisfying the refuelling demand of individual EV users in dif-
+ferent ways, such as utilising the Time-of-Use (ToU) pricing to 
+guide users’ charging behaviours to reach the goal of the grid 
+management. However, considerations of EV refuelling de-
+mand and the modelling of EV parking patterns are different 
+across different study scales. In this paper, the study scale of the 
+EV refuelling demand and parking pattern problem is catego-
+rised into the individual-, station- and regional levels (as shown 
+in Fig.1). For an individual charging process, plug-in time, un-
+plug time, charging power, and the corresponding charging en-
+ergy are four key factors (see ‘individual-level’ in Fig.1). From 
+the station perspective, these factors are aggregated across all 
+charging EVs, and the analysis extends beyond single charging 
+sessions to include their temporal distributions (see ‘station-
+level’ in Fig.1). At the regional level, however, demand should 
+be assessed jointly in both temporal and spatial dimensions, 
+with the time horizon extending well beyond individual ses-
+sions to long-term projections over the next several years (see 
+‘region level’ in Fig. 1). 
+The classification of the study scale primarily considers the 
+focus of the study issue being addressed. For example, in terms 
+of a charging scheduling issue in a charging station, when the 
+optimisation objective is to reduce the charging cost of individ-
+ual users, the study scale is on the individual level, which means 
+the focus is on an EV user rather than the operator of the charg-
+ing station [38]. It should be noted that the charging power of 
+the charging station is limited to the power distribution net-
+work. Therefore, the maximum charging power of all EV users 
+simultaneously should be less than the limit from the power dis-
+tribution network, which means the objective of reducing the 
+charging cost of individual users is constrained by the power 
+limit of the charging station, especially when there are many 
+users in a station simultaneously. The most typical case is the 
+bi-level framework with an upper-level consideration in keep-
+ing the safety of the power distribution network and a lower-
+level optimisation objective at an individual scale [39], [40], 
+[41]. The output of the upper-level is the constraint of the lower-
+level. In contrast, if the objective is to minimise the energy cost 
+of a charging station while still scheduling the charging 
+schemes of EV users, the study scale should be classified at the 
+station level, as the focus is centred on the charging station ra-
+ther than individual EV users [42]. The charging demand of an 
+individual user is the constraint to achieving the optimisation 
+objective. Moreover, the multiple objectives of an optimisation 
+model, including both maximising the charging demand of in-
+dividual users and maximising the total revenue of the charging 
+station, should be defined as two study scales [43].  
+The classification of study scales can be found in the tables 
+in the Appendix. Specifically, at the individual level, the focus 
+is primarily on the trade-offs between travel mileage, refuelling 
+
+4 
+IEEE TRANSACTIONS ON INTELLIGENT TRANSPORTATION SYSTEMS 
+ 
+time and price [44], [45]. Individuals are more  concerned with 
+how to refuel enough electricity to satisfy their next trip within 
+the limited parking time available. At the station level, the re-
+fuelling demand of a station or a limited area (e.g., parking lot, 
+residential site) is formed from the integration of individual user 
+demands. Therefore, one of the primary objectives for station 
+operators is to maximise the number of EVs fulfilling their re-
+charging requirements. Additionally, optimising the manage-
+ment of parking space and charger operation is highly benefi-
+cial, as both efforts contribute to increasing operational profits 
+for station operators. From an economic perspective, reducing 
+operational costs and initial construction costs are two other key 
+objectives explored in previous studies. When station operators 
+also function as aggregators (an entity that coordinates distrib-
+uted energy resources, such as EVs, to collectively provide ser-
+vices to the electricity grid [46]) or establish protocols with lo-
+cal grid operators, they can generate additional revenue through 
+V2G (for charging stations), battery-to-grid (B2G) (for battery 
+swapping stations), or coordination with the power distribution 
+network. Grid-side indicators such as minimising power loss, 
+reducing peak charging power, and stabilising load fluctuations 
+are prioritised to ensure the safety and reliability of the power 
+distribution network. Consequently, the objectives at the station 
+level can be categorised into three fundamental areas: QoS for 
+EV charging, economic objectives, and grid-side objectives. 
+When considering the regional-level demand, the objectives are 
+still based on these three aspects. However, the matching and 
+scheduling among refuelling demand, facility supply, and grid 
+operation are considered more in the spatial-temporal dimen-
+sions [47], which highlights the importance of planning issues 
+in regional-level research.  
+IV. FEATURES OF EV REFUELLING DEMAND 
+With the growth in EV usage, EV refuelling demand has be-
+come a critical factor influencing the stability and sustainability 
+of the electricity grid. EV refuelling refers to the process of re-
+charging the battery of an EV with electricity at specific loca-
+tions, such as homes, workplaces, shopping malls, charging sta-
+tions or battery swapping stations. This process involves con-
+necting vehicles or batteries to the electricity grid, factoring in 
+plug-in and unplug times, locations, electricity requirements, 
+and charging power. Based on previous studies, the features of 
+EV refuelling demand include four aspects: time, location, 
++ -
++ -
++ -
++ -
+Plug-in
+Unplug
+Energy
+Power
+Time
++ - + -
++ - + -
++ - + -
++ - + -
+Stations/Aggregators
+Power/Energy
+Time
+Number of vehicles
+Grid
+Individual-level
+Station-level
+C
+C
+C
+P
+P
+P
+C
+C
+P
+C
+C
+P
+P
+P
+C
+P
+P
+P
+C C C C C
+C
+C
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+C
+C
+C
+P
+P
+P
+C
+C
+P
+C
+C
+P
+C
+C
+C
+P
+P
+C
+C C C C C
+C C C C C
+C C C C C
+2010s
+2020s
+2030s
+Hour
+0
+6
+12
+18
+24
+4000
+1500
+3500
+3000
+2500
+2000
+1000
+500
+Charging Load/kW
+Basic Load
+Slow-charging Load
+Fast-charging Load
+Hour
+0
+6
+12
+18
+24
+4000
+1500
+3500
+3000
+2500
+2000
+1000
+500
+Charging Load/kW
+Basic Load
+Slow-charging Load
+Fast-charging Load
+Hour
+0
+6
+12
+18
+24
+4000
+3000
+2000
+1000
+5000
+6000
+Charging Load/kW
+Basic Load
+Slow-charging Load
+Fast-charging Load
+Region-level
+Low-voltage distribution
+ 
+Fig.1 The study scales and features of EV refuelling demand and parking pattern. 
+Note: The simulation is based on the IEEE 33-bus system with 10,000 vehicles. The slow-charging and fast-charging load 
+are determined by the market share in different years. The EV charging behaviours are collected from [41] and the basic grid 
+load is a typical shape in a residential area. 
+
+5 
+IEEE TRANSACTIONS ON INTELLIGENT TRANSPORTATION SYSTEMS 
+ 
+power and energy. The features of EV refuelling demand can 
+be found in the tables in the Appendix.  
+A. Time Demand 
+‘Time demand’ is a term used to represent when EV users 
+would like to charge a vehicle or swap a depleted battery, which 
+is a part of a user’s electricity refuelling willingness [10], [48], 
+[49], [50]. It mostly includes vehicle plug-in time/battery swap-
+ping time, connection duration, unplug time and electricity re-
+fuelling frequency. In some cases, time demand can be de-
+scribed as the number of charged EVs at a given point in time 
+[43], [51], [52], [53], [54], [55], [56]. The time demand distri-
+butions might be affected by usage behaviours [35], battery 
+state-of-charge (SOC) [57], ToU [58], availability of chargers 
+[59] and even the electricity refuelling methods [60].  
+At the individual level, understanding time demand helps us-
+ers reduce refuelling costs, whilst providing insights into the 
+times of the connection between different EVs and the grid. 
+This is crucial for optimising resources in charging stations or 
+battery swapping stations. At the station level, time demand ag-
+gregated from individual users can be used to coordinate the 
+scheduling of power distribution networks. The overlap be-
+tween charging time demand of EV users and peak electricity 
+demand periods may lead to stress on the power quality and op-
+erational safety of the electricity grid [61]. At the larger regional 
+level, time demand (as incorporated into spatial-temporal de-
+mand distributions) may be used to support grid operation and 
+facility deployment.  
+B. Location Demand 
+Location demand is another basic information aspect of EV 
+refuelling demand. It is also a key component of refuelling will-
+ingness, representing where EV users prefer to recharge their 
+vehicles. In general, it represents the EV refuelling demand in 
+a specific site (i.e., a description of the location type) at the in-
+dividual- and station levels, while the spatial distribution and 
+patterns of change are the focus of the regional-level studies.  
+The considerations of location demand mainly include refuel-
+ling location types, spatial distributions and mobility patterns. 
+Typically, refuelling location types involve home charging, 
+work charging, public charging stations or battery swapping 
+stations, among others. EV parking location can provide poten-
+tial candidate sites. Therefore, the spatial distribution of loca-
+tion demand has significant implications for the planning and 
+management of EV facilities, particularly in the siting and siz-
+ing issue [48], [54], [62], [63], [64], [65]. In addition, location 
+demand is often coupled with the power distribution network, 
+as power limitations are a critical factor in EV refuelling facility 
+construction [66]. Aligning EV refuelling demand with charger 
+availability and power supply can enhance facility efficiency 
+and improve operational profitability [67]. Identifying the low 
+refuelling demand locations and guiding users to refuel their 
+vehicles can also be beneficial to the EV charging service.  
+C. Energy Demand 
+Energy demand is defined as the total electricity (usually 
+with a unit of kWh) required by a vehicle from the power grid 
+or through swapping a battery at a station (e.g., per charging 
+session, daily, weekly) [43], [68], [69], [70]. Satisfying individ-
+ual EV energy demand is a key metric for assessing the perfor-
+mance of any charging scheduling scheme, i.e., for assessing 
+the QoS experienced by EV users [41]. A better understanding 
+of energy demand at a station level could support EV charging 
+load analysis and forecasting, enabling optimisation of the bal-
+ance between energy supply and consumption, such as shifting 
+charging energy to off-peak hours to reduce grid strain and 
+maximising the use of renewable energy resources [35], [50], 
+[58], [71], [72], [73], [74], [75]. When this information is com-
+bined with knowledge of location demand at a regional level, 
+charging stations or BSSs can be strategically placed to meet 
+both energy and location demand of EVs. This facilitates better 
+planning and optimisation of infrastructure, ensuring efficient 
+energy distribution that aligns with EV usage patterns. Such 
+measures not only improve service quality but also contribute 
+to a more resilient and sustainable energy system by reducing 
+grid stress and increasing the integration of renewable energy 
+sources. 
+D. Power Demand 
+Power demand is defined as the instantaneous power con-
+sumption (usually with a unit of kW) of a vehicle or battery as 
+it accesses the electricity grid at any time during the charging 
+process, representing the charging rate [48], [76], [77]. Differ-
+ent from focusing on a continuous period, the instantaneous EV 
+power demand reflects the real-time power required at a spe-
+cific moment. Power levels, fluctuations and the impact on the 
+electricity grid are the main concerns at the individual, station 
+and regional levels. Higher power demand can lead to a rapid 
+increase in stress on the electricity grid, affecting the power 
+quality and even the operational security. Charging power is the 
+direct object scheduled when designing an optimal charging 
+scheme. For EVs with swappable batteries, battery swapping is 
+a more suitable option when users have an urgent refuelling de-
+mand. Different from grid-connected charging, there has more 
+flexible charging time for the batteries swapped the EVs, as it 
+doesn’t serve for the vehicle’s next trip immediately. Therefore, 
+the impact of charging power of these swapped batteries may 
+not work on the power distribution network immediately, which 
+means the battery swapping stations have more advantages in 
+optimising the power system load and reducing the pressure on 
+the grid. Moreover, when considering facility planning, power 
+demand serves as a critical indicator for determining the grid 
+configuration of a node [10], [35], [49], [50], [63], [72], [78], 
+[79], [80], [81]. In general, different charging technologies, 
+such as direct current (DC) fast charging, alternating current 
+(AC) slow charging, V2G in charging stations, vehicle-to-vehi-
+cle (V2V), and even battery swapping technology are the main 
+approaches to satisfy EV power demand.  
+V. PARKING PATTERN MODELLING  
+Referring to the parking behaviours of internal combustion 
+engine vehicles, three dimensions of the EV parking pattern are 
+identified: time, location, and intention [82], which share some 
+similarities with EV refuelling demand. Time refers to the du-
+ration of parking, which influences the potential charging 
+
+6 
+IEEE TRANSACTIONS ON INTELLIGENT TRANSPORTATION SYSTEMS 
+ 
+window—longer parking times (e.g., at home or work) are con-
+ducive to slow, overnight, or daytime charging, while shorter 
+stays (e.g., at shopping centres) often align with fast-charging 
+needs. Location indicates where the vehicle is parked, which 
+supports the construction of charging facilities. Unlike internal 
+combustion engine vehicles that refuel at centralised fuel sta-
+tions, EVs charge at a variety of locations, including residential 
+areas, workplaces, and public parking lots, while battery swap-
+ping has a similarity with traditional gas stations. Finally, inten-
+tion describes the purpose behind parking, which affects the 
+likelihood and necessity of charging. For instance, drivers park-
+ing with the intention of running errands may seek a quick top-
+up, while those parking at home overnight may aim for a full 
+charge.  
+A. Parking Time Pattern 
+Parking time primarily encompasses vehicle arrival time, de-
+parture time and parking duration. These three indicators are 
+combined to formulate the EV parking time pattern, which sub-
+sequently supports power allocation, energy scheduling, and 
+grid impact assessment. There are four main approaches used 
+to establish parking time patterns: scenario-based methods, sta-
+tistical methods, aggregation-based methods, and activity-
+based models (as shown in Table.1). 
+i) Scenario-based method: This method defines parking time 
+patterns by constructing a set of fixed, context-specific situa-
+tions (scenarios, such as residential buildings, workplace park-
+ing lots, and shopping centres), typically based on location type 
+or user group. Each scenario reflects relatively stable behaviour 
+patterns in a specific place. For example, residential areas typi-
+cally exhibit long-duration, overnight parking, as most users 
+leave their vehicles parked from evening until the next morning. 
+Workplace locations are characterised by medium- to long-du-
+ration parking during daytime working hours, with vehicles ar-
+riving in the morning and departing in the late afternoon. For 
+instance, Sánchez-Martín et al. [83] used scenarios based on a 
+household mobility pattern (morning departure and evening ar-
+rival-parking pattern) and commercial mobility pattern (morn-
+ing arrivals and evening departures). Kumar et al. [84] consid-
+ered the combination between EVs and metro railways, utilising 
+15-minute and 30-minute parking duration patterns. Wu et al. 
+[85] used scenarios based on some extracted, typical patterns of 
+public usage vehicles such as day-long stops, morning peak-
+time stops, daytime stops, afternoon peak-time stops, and 
+nighttime stops. Nevertheless, the parking time pattern of this 
+method is determined by predefined parameters rather than by 
+sampling or stochastic simulation. Thus, the modelling is suita-
+ble for a specific scenario, while the differences between EV 
+users cannot be reflected well.  
+ii) Statistical method: This method is another fundamental 
+and widely used approach for establishing EV parking time pat-
+terns. It characterises parking behaviour by assuming that key 
+variables (arrival time, departure time, and parking duration) 
+follow given statistical distributions and generates parking 
+events through probabilistic sampling from these distributions. 
+Two of the above three distributions are assumed to generate 
+parking events. It is typically assumed that these variables fol-
+low a standard statistical distribution, such as the uniform dis-
+tribution [55], Poisson distribution [56], [61], [72], [73], Gauss-
+ian distribution [86], Gamma distribution [70], generalized ex-
+treme value distribution [87], exponential distribution [70] or 
+even empirical distributions [62], [80], [88], [89], [90], [91], 
+[92], [93]. Monte Carlo (MC) methods are commonly em-
+ployed to simulate EV parking behaviour. Different from the 
+fixed patterns in scenario-based methods, parking behaviours 
+are extracted from feature distributions, which means that 
+user’s behaviours are not fixed but follow some specific statis-
+tical rules. Therefore, more potential parking patterns can be 
+considered in this modelling, which could support more accu-
+rate demand forecasting, infrastructure planning, and evalua-
+tion of different operational scenarios. 
+ 
+Fig.2. A typical activity-based model with driving, parking and 
+charging [29]. 
+iii) Activity-based model: This method is commonly used to 
+TABLE I 
+DEFINITIONS AND LINKS BETWEEN THREE KINDS OF PARKING PATTERN MODELLING METHODS. 
+Method 
+Core idea 
+Pattern source 
+Focus 
+Relations to others 
+Scenario-based 
+Fixed patterns for spe-
+cific contexts 
+Predefined parameters / 
+typical cases 
+Popula-
+tion 
+ Can be derived from Statistical data 
+ Can be combined with Activity-based methods 
+to capture individual differences. 
+Statistical 
+Macro-level patterns 
+from historical data 
+Fitted distributions / 
+empirical data 
+Popula-
+tion 
+ Can provide macro-level distributions for Ac-
+tivity-based methods 
+ Can validate the reasonableness of Scenario-
+based parameters  
+Activity-based 
+Parking as part of in-
+dividual travel chains 
+Daily activity se-
+quences 
+Individ-
+ual 
+ Can be aggregated into statistical distributions 
+ Can be combined with Scenario-based methods 
+to reflect individual differences. 
+
+7 
+IEEE TRANSACTIONS ON INTELLIGENT TRANSPORTATION SYSTEMS 
+ 
+simulate the individual daily travel behaviour of EV users. It 
+integrates driving patterns, charging patterns, and parking pat-
+terns, making parking time patterns just one component of the 
+overall chain. An activity-based model includes both a statisti-
+cal process and a scenario-based process, and both contribute to 
+deriving individual-level features from aggregate behavioural 
+characteristics in a simulation process. For example, statistical 
+methods can estimate the probability of individuals’ travel time, 
+location or stop duration [29], [65], [94], while scenario-based 
+methods help summarise usage patterns and to classify users 
+into categories (such as ‘Scenario 1—After-work trip’ and 
+‘Scenario 2—Work trip’ in Fig.2). This approach is more appli-
+cable to users with regular travel habits, such as commuting 
+passenger EVs and franchised buses. In contrast, establishing pat-
+terns for users with highly variable behaviour can be more chal-
+lenging than for those with regular routines. Sometimes, to al-
+leviate these kinds of irregular features, cluster algorithms are 
+used to identify and extract activity categories. For example, 
+Cui et al. [95] applied a Gaussian Mixture Model (GMM) and 
+a Light Gradient Boosting Machine (LightGBM) model based 
+on charging time, dwelling duration after charging, charging 
+duration and charging power to cluster and recognise the charg-
+ing and parking patterns. This was used to enhance the forecast 
+accuracy of individual charging behaviour and to schedule the 
+charging scheme to maintain security the power quality in an 
+IEEE-33 bus system. Zhang et al. [94] used a k-means model to 
+recognise six types of EV users with different parking propor-
+tions during the daytime (6 a.m.-6 p.m.) and night (6 p.m.-6 
+a.m.). These results supported the development of trip chain 
+models and the siting of charging facilities. These results sup-
+ported the development of trip chain models and the siting of 
+charging facilities. Nevertheless, parking time pattern modelled 
+by the activity-based methods is function of the user preference, 
+like charging habits, willingness to wait, and user type. Differ-
+ent users exhibit variations in travel purposes, temporal flexi-
+bility, and preferences for fast or slow charging. This heteroge-
+neity directly affects individual parking time distributions and 
+charging behaviours. This heterogeneity needs to be accounted 
+for in activity-based models to improve the accuracy of charg-
+ing demand forecasts and provide more reliable guidance for 
+the planning and scheduling of charging infrastructure. 
+B. Parking Location Pattern 
+The location of EV parking is closely related to EV refuelling 
+choices, parking duration, and power supply availability. Gen-
+erally, large-scale GPS data are utilised to analyse and establish 
+EV parking location patterns. Understanding these patterns is a 
+key consideration in the planning of charging facilities.  
+i) Scenario-based method: Residential, workplace and com-
+mercial parking patterns are commonly extracted to forecast 
+and schedule EV refuelling demand. Parking time patterns vary 
+significantly across different locations; for instance, parking 
+durations at residences tend to be longer and more stable, 
+whereas workplace and commercial parking durations are gen-
+erally shorter and more variable. Some previous studies have 
+considered shifts in parking locations, such as Needell et al. 
+[96] who considered the combination of home parking and 
+workplace parking. Nevertheless, a fixed parking location pat-
+tern is assumed in most existing studies, mostly included in EV 
+demand forecasting and EV charging schedules.  
+ii) Statistical method: The objective of this method is to rec-
+ognise the location distribution of current EV parking so as to 
+support the construction of charging facilities or battery swap-
+ping stations. Therefore, several studies have used statistical 
+methods to identify aggregate parking locations, such as square-
+shaped [97], [98], hexagon-shaped (i.e., Hierarchical Hexago-
+nal Grid [94]) and multiple shapes (i.e. Voronoi diagrams [99]). 
+Cluster algorithms are another suitable class of methods to 
+solve this issue. For example, Zhang et al. [94] and Zhang et al. 
+[65] both applied Density-Based Spatial Clustering of Applica-
+tions with Noise (DBSCAN) model to aggregate parking and 
+charging locations based on GPS data.  
+iii) Activity-based method: Parking behaviour of EVs plays a 
+crucial role in refuelling demand, especially when analysed 
+through parking location patterns. The activity-based method 
+considers how different parking locations—such as residential 
+areas, workplaces, public lots, and on-street parking—affect 
+charging behaviours. For instance, residential parking supports 
+overnight charging, workplace parking enables long-duration 
+daytime charging, while public and on-street parking requires 
+fast-charging solutions due to high turnover. By integrating 
+traffic flow and parking data, activity-based methods help opti-
+mise charging station planning and utilisation. However, chal-
+lenges such as limited parking availability and regulatory con-
+straints remain significant obstacles. In the simulation of an in-
+dividual activity, scenario-based and statistical methods are ap-
+plied in a manner similar to parking time pattern modelling. 
+These approaches allow for more precise estimation of charging 
+demand by capturing the variability of user schedules, trip pur-
+poses, and parking durations. Scenario-based methods enable 
+researchers to assess refuelling and parking demand under dif-
+ferent assumptions, such as increased EV adoption rates or 
+shifts in workplace policies, while statistical approaches draw 
+on historical data to reflect actual behavioural distributions. By 
+combining these methods, researchers can achieve a more ro-
+bust representation of real-world parking and charging loca-
+tions. 
+C. Parking Intention Pattern 
+The EV parking intention pattern describes the motivation 
+and activity for parking, including the purpose of parking and 
+associated behaviours. When combined with EV parking loca-
+tion patterns—such as home, workplace parking, etc. [100]—it 
+provides a comprehensive representation of parking intentions. 
+However, for multi-functional locations such as commercial 
+and industrial parking, parking intentions may be less predicta-
+ble and harder to recognise. Matching parking intentions with 
+parking locations can help obtain more accurate information to 
+support EV electricity refuelling management. Several studies 
+have explored the definition of EV parking intention patterns. 
+For example, Pasaoglu et al. [101] defined the concept of ‘ac-
+tive parking’, which means the car is parked after a trip that is 
+not the last trip of the day, while if the car is parked before the 
+first trip of the day or after the last trip of the day, it should be 
+
+8 
+IEEE TRANSACTIONS ON INTELLIGENT TRANSPORTATION SYSTEMS 
+ 
+recognised as an inactive parking. These two parking patterns 
+may be integrated into the charging scheduling process, exploit-
+ing the fact that active parking may have more flexibility. Fur-
+thermore, EV users’ willingness to wait exhibits considerable 
+heterogeneity across various parking contexts. Differences in 
+the purpose of the stop, temporal flexibility, and perceived ur-
+gency can significantly shape waiting tolerance, introducing ad-
+ditional uncertainty when linking parking intentions to charg-
+ing-scheduling decisions. 
+VI. ISSUES AND SOLUTIONS 
+A. Forecasting 
+Refuelling demand forecasting refers to predicting the power 
+demand [81], energy demand [102], and the number of vehicles 
+[52], which can be classified into time demand by Section III, 
+for specific locations in future periods. The forecasting results 
+can provide valuable insights for grid operation, charging facil-
+ity planning, and energy management, helping to optimise re-
+source allocation and reduce the operational risks of the power 
+distribution network caused by EV charging load. Parking pat-
+terns help predict when, where, and for how long vehicles will 
+remain parked, which directly influences the timing and fre-
+quency of charging behaviour. A better understanding of park-
+ing patterns leads to more accurate estimates of refuelling de-
+mand, particularly in relation to charging facility layout and op-
+timisation of EV charging schemes. Incorporating users’ heter-
+ogeneous charging preferences, such as preferred charging pe-
+riods, charging power choices, and willingness to wait, can fur-
+ther improve the accuracy of forecasting models, as these be-
+havioural differences significantly influence when and how EV 
+users decide to charge under different parking scenarios. Addi-
+tionally, forecasting the parking patterns of EVs with battery-
+swapping capability can help coordinate battery charging 
+schemes at battery swapping stations. Battery swapping opera-
+tors only need to prepare enough fully charged batteries, while 
+using other batteries for B2G. A forecasting-related literature 
+review is provided in Table A I in the Appendix.  
+From the perspective of the forecasting period, it can be cat-
+egorised into short-term [103], [104], [105], medium-term 
+[106] and long-term forecasting [107], which correspond re-
+spectively to the issues of power scheduling, facility construc-
+tion, and policy decisions. In terms of long-term forecasting, 
+time series models, deep learning (DL) and scenario establish-
+ment are the main approaches. This is commonly a more macro 
+issue, excluding the specific behavioural analysis of individual 
+EV users or the operation of individual charging facilities. Con-
+sidering the other two sorts of periods, two approaches exist for 
+EV charging demand forecasting: model-based and data-driven 
+[25]. In terms of model-based methods, trip chain model and 
+agent-based model (ABM) combined with MC algorithm are 
+the most popular methods to forecast EV electricity refuelling 
+demand [65], [94], [108], [109], [110]. In general, the driving-
+charging-parking behaviour of individual EV users are simu-
+lated and then aggregated into the refuelling demand of the re-
+gion. Regarding data-driven methods, time series models (i.e., 
+AutoRegressive Integrated Moving Average [52], [111]), ma-
+chine learning (ML) (e.g., Support Vector Machine [74]), DL 
+(i.e., Convolutional Neural Network, Recurrent Neural Net-
+work, Multilayer Perceptron [25], [37], [102] and Long Short-
+Term Memory [103], [104], [105]) and ensemble learning (i.e., 
+Extreme Gradient Boosting [112], [113], LightGBM [95]) have 
+been widely used in previous studies [25]. With the advent of 
+the era of big data, increased attention has been paid to intelli-
+gent prediction methods based on data, especially multiple-
+source data collection and integration (vehicle data, station 
+data, traffic data and grid data).  
+B. Planning 
+EV refuelling facility planning, which can also be described 
+as siting and sizing, is one of the most important factors in de-
+termining EV development. The issue of siting is typically con-
+sidered at the regional level, while the issue of sizing is usually 
+addressed at the station level. The parking pattern is a key factor 
+in the siting and sizing issue. For example, parking duration in 
+residential areas is usually over 8 hours, making such locations 
+suitable for slow-AC chargers [114]. In contrast, parking dura-
+tions along major highways are much shorter, making these lo-
+cations more suitable for fast-DC chargers or battery swapping 
+stations. Parking facilities, such as parking lots and on-street 
+parking zones, are considered ideal locations for charging sta-
+tions, especially in government districts, commercial centres, 
+and along major highways [109]. Urban building regulations 
+often mandate a certain percentage of parking spaces to be 
+equipped with charging facilities. For example, in the U.S., 
+commercial areas are required to allocate 5% of their parking 
+spaces for charging stations, whereas in the U.K., a 10% re-
+quirement was proposed in 2022. As a result, the space of a 
+parking lot largely determines the amount of chargers [115], 
+[116]. See Appendix for detailed literature review results. 
+TABLE II 
+BI-LEVEL FRAMEWORK USED IN EV REFUELLING FACILITY PLANNING AND BATTERY CHARGING SCHEME SCHEDULING 
+Secondary issue 
+Highlights 
+Primary issue 
+Highlights 
+Leader 
+Siting 
+ Sizing depends on selected sites; site selection 
+considers capacity feasibility.  
+ The issue is a combination between region-
+level and station-level.  
+ Upper  Plan-
+ning 
+ Upper-level decisions constrain op-
+eration; lower-level feedback refines 
+planning. 
+ Bidirectional effects and coordi-
+nated optimisation of long-term 
+planning and short-term scheduling. 
+Fol-
+lower 
+Sizing 
+Leader 
+Grid/Station 
+operation 
+ Captures the two-way interaction between sys-
+tem operation and user behaviour; forms an in-
+ternal bi-level structure within scheduling 
+ The issue is a combination between station/re-
+gion-level and individual-level. 
+ Lower  Sched-
+uling 
+Fol-
+lower 
+Charging 
+scheme 
+
+9 
+IEEE TRANSACTIONS ON INTELLIGENT TRANSPORTATION SYSTEMS 
+ 
+In terms of the siting issue, node, path, and activity-based ap-
+proaches are the basic considerations in previous studies [117]. 
+The node-based approach is the most used method for the loca-
+tion problem. The objective is to place charging stations at can-
+didate locations (nodes) to meet demand, though this problem 
+is NP-hard, meaning exact solutions are impractical within a 
+reasonable time due to exponential growth in computational 
+complexity with problem size. As a result, heuristic methods 
+are often employed to provide approximate solutions within 
+feasible timeframes. A second approach, the path-based ap-
+proach, focuses on a flow-capturing model. Here, the goal is to 
+position charging stations along paths with the highest vehicle 
+flows, considering origin-destination trips, to maximise user 
+coverage. Unlike the node-based approach, it responds dynam-
+ically to vehicle flows rather than a static view of demand. 
+Lastly, the activity-based approach takes a broader view by 
+considering the entire activity of an agent and their vehicle over 
+a period, including origins, destinations, distances, paths, and 
+parking duration. This approach aims to determine optimal lo-
+cations for charging infrastructure based on user behaviour and 
+activity patterns.  
+In terms of the sizing issue, determining the appropriate num-
+ber and type of chargers or battery swapping facilities at a sta-
+tion involves balancing demand, power availability, and eco-
+nomic feasibility. Key factors include anticipated vehicle arri-
+vals, charging or swapping duration, and station throughput, of-
+ten modelled using queuing theory to minimise the charger in-
+vestment cost or maximise the total profits constrained by sat-
+isfying EV user refuelling demand and reducing wait times 
+[86], [118]. The combination of the parking pattern and sizing 
+issue may be illustrated by the core function in queuing theory. 
+Taking M/M/c/N as an example [12], representing a scenario of 
+a charging station with c chargers and N parking spaces, the first 
+M represents the vehicle arrival time distribution, while the sec-
+ond M represents the charging duration except for EVs that do 
+not leave the site immediately. The parking time pattern can re-
+flect the capacity of the station directly, which stresses the im-
+portance of the parking pattern in the issue of siting and sizing.  
+The combination of siting and sizing is a common approach 
+in planning. Facility siting is always the first layer, while the 
+number of chargers and their power are determined in the sub-
+sequent step. At the upper level (the leader layer in Table. II), 
+siting determines candidate locations at the regional or macro 
+scale, considering traffic flow [119], parking patterns [12], land 
+availability [120], and grid access to meet overall charging de-
+mand and coverage targets. At the lower level (the follower 
+layer in Table. II), sizing specifies the number of chargers [12], 
+their power ratings, and possible battery swapping capacities 
+[121] at each site, taking into account users’ parking duration 
+and local load constraints. The upper-level siting results provide 
+constraints and candidate positions for the lower-level sizing, 
+while the sizing outcomes can feedback to influence siting de-
+cisions, e.g., some candidate sites may be adjusted or discarded 
+due to insufficient capacity or economic infeasibility. This cou-
+pling can be implemented through bi-level optimisation, with 
+the upper-level objective typically aiming to maximise regional 
+coverage or user satisfaction, and the lower-level objective fo-
+cusing on minimising investment cost [122] or user waiting 
+time [123]. From a parking modelling perspective, the upper 
+level mainly considers parking locations, whereas the lower 
+level emphasises parking duration for capacity allocation.  
+C. Scheduling 
+The issue of scheduling here is mainly oriented towards 
+charging technology, while battery charging optimisation is the 
+concern of a BSS, which is an internal inventory management 
+issue with less consideration necessary for the EV parking pat-
+tern. Information on parking patterns is a useful input to support 
+offline or day-ahead planning, and real-time planning when 
+considering scheduling issues [54]. Economy-related objectives 
+(e.g., minimising charging cost [51], minimising charging cost, 
+maximising total profit [69]), grid-related objectives (e.g., min-
+imising deviation of the transformer load profile [71], minimis-
+ing load fluctuation [35] and minimising peak demand of the 
+power system [96]) and operation-related objectives (e.g., max-
+imising QoS of EV users [41], minimising battery ageing [124]) 
+have been the main optimisation considerations in previous 
+studies, relevant to different participants in the system. 
+Planning
+Parking pattern
+Energy
+Power
+Refuelling demand
+Location
+Intention
+Time
+Time
+Location
+Individual
+Station
+Region
+Forecast
+Siting
+Sizing
+Scheduling
+Orderly charging
+V2G
+B2G
+V2V
+Considerations to Forecast
+Considerations to Planning
+Considerations to Scheduling
+Scale from forecast to planning
+Scale from forecast to scheduling
+ 
+Fig.3. The integrated framework for the issues of forecasting, planning and scheduling, including the main considerations and 
+the links in refuelling demand and parking pattern.  
+
+10 
+IEEE TRANSACTIONS ON INTELLIGENT TRANSPORTATION SYSTEMS 
+ 
+Adjusting the EV or battery charging scheme is the key method 
+to achieve these optimal objectives, such as delay charging, 
+V2G and V2V technology. In terms of delay charging technol-
+ogy, Cui et al. [41] defined three kinds of charging priority 
+based on the dwelling duration after the completion of the 
+charging process, using historical charging records. Charging 
+power may then be determined dynamically based on this pri-
+ority. Yu et al. [80] considered both regular charging behaviour 
+and two kinds of irregular charging behaviour (with long and 
+short parking duration) to allocate the charging power to im-
+prove the revenue of the charging pole. With a higher penetra-
+tion of EVs, a strategy of first-come-first-served may put undue 
+stress on the electricity grid. In that situation, knowledge of the 
+parking time pattern in different locations provides the potential 
+to design alternative charging strategies incorporating such de-
+lays. In terms of V2G technology, Zeng et al. [125] proposed 
+the use of parking patterns with charging and discharging la-
+bels; time-oriented constraints were the main consideration in 
+the optimisation model. Makeen et al. [124] also used a dura-
+tion-based parking pattern (i.e., 1-hour and 2-hour) to design a 
+V2G scheme. In summary, the time pattern of EV users is the 
+basic requirement to design an efficient EV charging scheme. 
+From Table A III in the Appendix, it can also be found that lo-
+cation-specific parking patterns (i.e., Residential [71], [78], 
+Workplace [108]) and intentions (i.e., Commuting [58]) are also 
+key dimensions used to address the scheduling issue. These pat-
+terns, when properly analysed and incorporated, can enable 
+smoother and more sustainable scheduling strategies that align 
+better with grid demands, economic goals, and user satisfaction.  
+There are also studies that consider bi-level optimisation ap-
+proaches for scheduling problems. In most cases, the operation 
+of the grid or the charging station is considered as the upper 
+level (see Table. II), while individual EV users or aggregators 
+constitute the lower level. Upper-level decisions, such as avail-
+able capacity and load allocation, typically define the feasible 
+actions of lower-level actors. Conversely, the responses of 
+lower-level actors, including user charging behaviour and tim-
+ing choices, determine and constrain the operational strategies 
+of the upper-level system. This leader–follower structure within 
+scheduling effectively captures the two-way interaction be-
+tween system operation and user behaviour. In this kind of bi-
+level framework, the parking/charging pattern analysis are used 
+in the lower level to determine the potential of the scheduling 
+options for an EV user.  
+VII. DISCUSSIONS 
+Fig.3 provides a framework integrating the EV refuelling de-
+mand features, parking patterns, study scales and main foci in 
+forecasting, planning and scheduling, three important issues 
+studied when considering the interaction between EVs and the 
+grid. EV refuelling demand and parking patterns are the inputs 
+to these problems. In general, forecasting plays a pivotal role in 
+supporting planning decisions (like the rows in Fig.3), such as 
+siting and sizing, as well as scheduling strategies, including or-
+derly charging and V2G integration, while planning and sched-
+uling can be constraints or considerations for each other.  
+In practice, as the basis for scheduling and planning, fore-
+casting errors in EV refuelling demand or parking behaviour 
+can propagate into planning decisions, leading to inappropriate 
+site selection or capacity allocation. These planning decisions 
+then constrain the flexibility of short-term scheduling, poten-
+tially causing local overloads or underutilisation of charging re-
+sources. Furthermore, once siting and sizing decisions are im-
+plemented based on forecasted data, they are difficult to adjust 
+later, amplifying the long-term impact of initial forecasting er-
+rors. 
+From the perspective of the combination of planning and 
+scheduling, these two kinds of issues can also be used in a bi-
+level framework. Such an optimisation formulation is able to 
+recognise the hierarchical dependence between the two sub-
+problems, where planning issues are at the upper level and 
+charging scheduling issues are at the lower level [126], [127]. 
+This bi-level framework is more complex than those addressing 
+the planning or scheduling issue alone, as more complicated in-
+formation is considered, and more complex inter-dependencies 
+arise. For example, such a framework can simultaneously ac-
+count for factors such as battery state, charging station loca-
+tions, and operational constraints, rather than treating them sep-
+arately. Therefore, several key challenges arise in this context 
+and need to be considered carefully in future modelling. 
+(1) The siting and sizing problem is an NP-hard optimisation 
+task. When incorporating scheduling issues such as charg-
+ing power allocation and dispatch, the computational time 
+and resources required for the solution procedure must be 
+carefully considered. 
+(2) The decision in the upper level is a long-term optimisation, 
+while it is a short-term or even real-time decision that is 
+made at the lower level. This kind of temporal scale differ-
+ence may lead the results of a long-term decision to be in-
+compatible with the requirements of a short-term schedul-
+ing task. Thus, a dynamic feedback and coordination 
+should be considered from the lower level to the upper, 
+over the different time-scales. 
+(3) There are many sources of data uncertainty in the optimi-
+sation, for example, travel demand for EV users, parking 
+time and duration, load fluctuations and renewable energy 
+generation. Due to the nested structure and inter-level de-
+pendency of the bi-level framework, these uncertainties 
+can propagate between levels and significantly affect the 
+stability and optimality of the overall solution. 
+Therefore, future studies should focus on a more integrated 
+approach that simultaneously optimises forecasting, planning, 
+and scheduling, ultimately improving the synergy between EV 
+refuelling demand and grid stability.  
+Some open issues that can be identified are: 
+1) Parking pattern forecasting in EV scheduling.  
+Focusing on the issue analysed in Section V, the question of 
+parking duration after the completion of the charging process 
+plays a crucial role in scheduling the charging scheme [35], 
+[73], [95]. However, unlike forecasting charging behaviour, ac-
+curately predicting departure time remains a challenge. While 
+information such as plug-in time, charger power, and battery 
+
+11 
+IEEE TRANSACTIONS ON INTELLIGENT TRANSPORTATION SYSTEMS 
+ 
+SOC allows for precise forecasting of the charging end time, 
+departure time—an essential component of parking patterns—
+remains difficult to predict, regardless of whether the focus is 
+on an individual, a station, or a region. As a result, some studies 
+have only provided a range of potential parking durations after 
+the completion of the charging process, rather than a precise 
+duration or departure time. If it is not clear how much time is 
+available for scheduling, the EV will likely leave without 
+enough energy to the satisfaction of the user. 
+User profiles and usage behaviours play a key role in fore-
+casting parking patterns User behaviour regularity significantly 
+impacts the scheduling system. In general, users can generally 
+be categorised into two groups: regular and irregular users. 
+Regular users typically charge and park at fixed times and loca-
+tions, making their behaviour highly predictable. Based on a 
+small amount of information, such as commuter users spending 
+relatively regular time at home and work, the charging scheme 
+can be optimised to satisfy both the grid and the user. In con-
+trast, irregular users display more random charging behaviour, 
+such as the EVs in a public parking lot. For these users, prefer-
+ences such as desired charging speed or willingness to partici-
+pate in partial charging can greatly influence departure times 
+and scheduling flexibility. It may not be possible to get an ac-
+curate departure time only by regularity analysis, which may 
+result in an underperforming scheduling strategy and inefficient 
+utilisation of charging resources. Parking pattern forecasting 
+models can be included in this scheduling process. More infor-
+mation, such as historical parking duration, and user-specific 
+mobility patterns should be considered to enhance the accuracy 
+of the forecast.  
+2) Diversity of spatially varying parking patterns and re-
+fuelling demand.  
+The EV travel pattern is closely linked to the urban spatial 
+structure, leading to spatial heterogeneity in EV refuelling de-
+mand. As illustrated in the above sections, public parking lots 
+might be the most suitable candidates to construct a charging 
+station, while installing an EV charger at an on-street parking 
+lot or residential parking area is another viable option. How-
+ever, user parking patterns vary significantly across these dif-
+ferent parking spaces, and hence not all candidates have the po-
+tential to be a charge location. Moreover, heterogeneity among 
+EV users further complicates infrastructure planning. Differ-
+ences in travel frequency, trip purpose, vehicle type, charging 
+preferences, and willingness to wait can lead to varying charg-
+ing demand and parking durations, even at the same location. 
+Existing literature lacks considerations of randomness and var-
+iability, both of which are essential for accurately capturing 
+spatial and temporal variations in refuelling demand [128]. For 
+instance, many studies predominantly focus on personal EVs, 
+which exhibit relatively regular travel and charging patterns 
+[12], [89], [107]. In contrast, research on public usage EVs, 
+which demonstrate greater randomness in their usage behav-
+iours, often relies on predefined candidate locations for infra-
+structure planning [91], [129]. Therefore, future research 
+should prioritise developing more comprehensive models that 
+better incorporate spatial and temporal dynamics, as well as 
+user heterogeneity. Considering the parking intention may also 
+be a good option for the planning of charging facilities. For one 
+parking location, different parking intentions may result in dif-
+ferent durations. However, the visit must be of a certain dura-
+tion before it is beneficial, in terms of received energy, for the 
+EV owner to make the effort of plugging in [117]. This may 
+affect the utilisation rate of the chargers installed in a parking 
+lot.  
+3) Parking-lot charging mandates and feasibility 
+In this review paper, we highlighted the combination of park-
+ing lots with the installation of chargers. This is one potential 
+way to quickly employ chargers and expand the EV charging 
+network. Indeed, several countries have already proposed re-
+quirements to promote the construction of such facilities. For 
+example, the local government in Orlando requires that EV 
+charging stations must be installed at a certain percentage of 
+parking spots [130]. In Germany, owners of non-residential 
+buildings with more than 20 parking spaces are required to in-
+stall the mandated EV charging points [131]. However, there 
+are still remaining issues to be resolved in terms of charger de-
+ployment in parking lots. First, the high installation and mainte-
+nance costs may discourage property owners, particularly when 
+the expected utilisation rate of the chargers is uncertain. Sec-
+ond, the additional demand on the local electricity grid can pose 
+capacity and stability issues, requiring costly upgrades or smart 
+energy management systems. Third, the allocation and manage-
+ment of charging spaces raises practical concerns, such as how 
+to prevent long-term occupation of chargers by fully charged 
+vehicles. Finally, ensuring equitable access to charging infra-
+structure, both geographically and across different user groups, 
+remains a significant policy and planning challenge [132], 
+[133], [134]. 
+4) V2G potential by integrating charging and parking 
+sessions 
+With the development of vehicle electrification, V2G and 
+B2G technologies have become increasingly important for the 
+coordinated operation of EVs and the grid. However, the large-
+scale integration of V2G services faces challenges across three 
+main dimensions: technical feasibility, adoption barriers, and 
+regulatory constraints. Addressing these issues is essential for 
+robust, flexible, and effective deployment of V2G in urban en-
+vironments.  
+(1) Technical feasibility 
+The potential of V2G is primarily determined by battery ca-
+pacity and charging/discharging limits, which directly interact 
+with EV charging demand. For instance, vehicles with larger 
+batteries or higher charging/discharging rates can provide 
+greater flexibility for grid services while still meeting the own-
+ers’ mobility requirements. Conversely, if battery constraints or 
+charging schedules limit energy availability, the capacity to par-
+ticipate in V2G is reduced. Additional technical challenges in-
+clude battery degradation [135], interoperability issues between 
+vehicles and chargers, and the absence of standardised commu-
+nication protocols [136], [137]. To address these issues, policy 
+measures should focus on developing durable high-capacity 
+batteries, establishing interoperability standards, integrating 
+
+12 
+IEEE TRANSACTIONS ON INTELLIGENT TRANSPORTATION SYSTEMS 
+ 
+real-world charging patterns into V2G scheduling, and deploy-
+ing bidirectional chargers at strategic parking locations. 
+(2) Adoption barriers 
+User behaviour and parking characteristics greatly influence 
+V2G participation. Constraints include limited parking dura-
+tion, user concerns over battery degradation or potential mobil-
+ity restrictions, and heterogeneity in travel habits, parking 
+times, and charging requirements. In many cases, drivers prior-
+itise maintaining sufficient charge for subsequent journeys, 
+which reduces their willingness to allow energy to be dis-
+charged back to the grid. Variations in access to suitable park-
+ing facilities and the uneven availability of bidirectional 
+chargers further restrict participation. Together, these behav-
+ioural and spatial factors introduce significant uncertainty into 
+the number, timing, and duration of vehicles that can be relied 
+upon for V2G services. Potential measures to overcome these 
+barriers include providing financial incentives or reduced 
+charging fees, implementing user education and engagement 
+programmes to raise awareness of V2G benefits and to explain 
+participation requirements, and offering reserved or priority 
+parking for V2G-enabled vehicles to increase accessibility and 
+utilisation [138]. 
+(3) Regulatory constraints 
+The deployment of V2G infrastructure and its effective utili-
+sation can be limited by policy and regulatory factors. Chal-
+lenges include insufficient availability and uneven distribution 
+of bidirectional chargers, a lack of coordinated planning for 
+charger locations, and the absence of flexible parking or opera-
+tional policies that support V2G. Furthermore, complex permit-
+ting procedures to obtain the necessary permits, differing local 
+regulations, and the lack of clear standards for V2G operations 
+can slow deployment and increase costs. The regulatory frame-
+work may also fail to provide adequate incentives for operators 
+or users to participate in V2G schemes [137]. Policy measures 
+to address these constraints include deploying bidirectional 
+chargers at strategic locations, such as workplaces, residential 
+areas, and commercial zones, and introducing flexible parking 
+and EV management regulations to facilitate priority access for 
+V2G vehicles. 
+4) Behaviour changes in future scenario analysis and as-
+sessment 
+In terms of EV refuelling demand and parking patterns, there 
+are many highly subjective features involved. Most previous 
+studies have modelled the future using previous or current EV 
+refuelling demand features, however, there may be many 
+changes with improvements in technology (e.g., higher battery 
+energy density, battery swapping technology commercialisa-
+tion), major events (e.g., COVID-19), and due to the influence 
+of policymaking (e.g., subsidy reduction). For example, Lin et 
+al. [139] noted that in the period 2019-23, with advances in bat-
+tery technology and increased use of EVs, the charging habits 
+of EV users have shifted, with a greater preference for nighttime 
+charging and therefore new preferences for charging times, re-
+sulting issues, charging prices, and distance of charging infra-
+structures from home locations. Cui et al. [140] found that be-
+tween 2018 and 2021 there had been a 15 % rise in daily 
+distances travelled by electric taxis, alongside a 26.5 % increase 
+in all-electric driving range and a 29.9 % increase in charging 
+power. In contrast, personal EV travel distance showed little 
+change, despite a 50.8 % increase in AER and a 13.9 % increase 
+in charging power. Nevertheless, it is essential to assess 
+whether behavioural features derived from small sample sizes 
+or early-stage EV adopters remain valid in future high-penetra-
+tion EV scenarios [141].  
+Early adopters often exhibit distinct usage patterns, such as 
+higher technological enthusiasm, greater willingness to pay for 
+charging services, and different mobility habits compared to the 
+mainstream market [142]. As EV adoption scales up, new user 
+groups with varying socio-economic backgrounds, driving de-
+mands, and charging preferences will emerge, potentially lead-
+ing to significant shifts in refuelling demand and parking be-
+haviours, key factors within the user behaviour layer. There-
+fore, future scenario assessments should incorporate longitudi-
+nal studies and diverse user datasets to ensure robustness in pre-
+dicting large-scale EV adoption impacts. Longitudinal studies 
+can track the same users or groups over time, capturing changes 
+in travel behaviour, charging habits, and parking preferences, 
+which are critical for understanding evolving patterns [141]. In-
+corporating diverse user datasets, including different geo-
+graphic regions, socioeconomic groups, vehicle types, and us-
+age profiles, can help account for heterogeneity in user behav-
+iour and improve the generalisability of the predictions. These 
+approaches enhance robustness by reducing reliance on any sin-
+gle sample or location, ensuring that the findings remain stable 
+and applicable across different contexts and making the rele-
+vant models more transferable to other datasets and tasks (e.g., 
+forecasting charging demand at new locations). 
+VIII. CONCLUSION 
+With the development of the interaction between EVs and the 
+grid, forecasting, planning and scheduling have emerged as key 
+study issues. From an integrated perspective, these issues are 
+interrelated. Therefore, this paper provides a comprehensive re-
+view of all three aspects. Firstly, study scales are categorised 
+into three levels: individual, station, and regional. Secondly, re-
+fuelling demand characteristics in previous studies are classi-
+fied based on four dimensions—time, location, power, and en-
+ergy—across different study scales and issues. Parking patterns 
+are also reviewed in terms of modelling approaches along three 
+dimensions: time, location, and intention. Finally, for each re-
+search issue, the considerations of refuelling demand and park-
+ing demand are examined in detail. The main solutions pro-
+posed to address each issue are also reviewed. In future studies, 
+clarifying refuelling demand across different study scales, inte-
+grating more comprehensive parking patterns, and strengthen-
+ing the interconnections among forecasting, planning, and 
+scheduling can enhance the construction and operation of EV 
+facilities and promote the interaction between EVs and the grid.  
+REFERENCES 
+[1]  S. Hardman et al., ‘A review of consumer preferences of and interactions 
+with electric vehicle charging infrastructure’, Transp. Res. Part Transp. 
+Environ., vol. 62, pp. 508–523, July 2018, doi: 10.1016/j.trd.2018.04.002. 
+
+13 
+IEEE TRANSACTIONS ON INTELLIGENT TRANSPORTATION SYSTEMS 
+ 
+[2] N. K. Saxena and D. W. Gao, ‘Power quality enhancement by mitigating 
+load imbalance from random electric vehicle fleet at electric vehicle charg-
+ing stations’, Green Energy Intell. Transp., vol. 4, no. 4, p. 100222, Aug. 
+2025, doi: 10.1016/j.geits.2024.100222. 
+[3] B. Kutela et al., ‘Understanding spatial–temporal attributes influencing 
+electric vehicle’s charging stations utilization: A multi-city study’, Green 
+Energy Intell. Transp., vol. 4, no. 5, p. 100255, Oct. 2025, doi: 
+10.1016/j.geits.2025.100255. 
+[4] Y. Zhao, Z. Wang, Z.-J. M. Shen, and F. Sun, ‘Assessment of battery uti-
+lization and energy consumption in the large-scale development of urban 
+electric vehicles’, Proc. Natl. Acad. Sci., vol. 118, no. 17, p. e2017318118, 
+Apr. 2021, doi: 10.1073/pnas.2017318118. 
+[5] S. Powell, G. V. Cezar, L. Min, I. M. L. Azevedo, and R. Rajagopal, 
+‘Charging infrastructure access and operation to reduce the grid impacts of 
+deep electric vehicle adoption’, Nat. Energy, vol. 7, no. 10, pp. 932–945, 
+Sept. 2022, doi: 10.1038/s41560-022-01105-7. 
+[6] Q. Qiao et al., ‘Life cycle cost and GHG emission benefits of electric ve-
+hicles in China’, Transp. Res. Part Transp. Environ., vol. 86, p. 102418, 
+Sept. 2020, doi: 10.1016/j.trd.2020.102418. 
+[7] B. Cox, C. Bauer, A. Mendoza Beltran, D. P. Van Vuuren, and C. L. Mutel, 
+‘Life cycle environmental and cost comparison of current and future pas-
+senger cars under different energy scenarios’, Appl. Energy, vol. 269, p. 
+115021, July 2020, doi: 10.1016/j.apenergy.2020.115021. 
+[8] B. Borlaug, S. Salisbury, M. Gerdes, and M. Muratori, ‘Levelized cost of 
+charging electric vehicles in the United States’, Joule, vol. 4, no. 7, pp. 
+1470–1485, July 2020, doi: 10.1016/j.joule.2020.05.013. 
+[9] N. Horesh, D. A. Trinko, and J. C. Quinn, ‘Comparing costs and climate 
+impacts of various electric vehicle charging systems across the United 
+States’, Nat. Commun., vol. 15, no. 1, p. 4680, June 2024, doi: 
+10.1038/s41467-024-49157-5. 
+[10] M. B. Arias and S. Bae, ‘Electric vehicle charging demand forecasting 
+model based on big data technologies’, Appl. Energy, vol. 183, pp. 327–
+339, Dec. 2016, doi: 10.1016/j.apenergy.2016.08.080. 
+[11] C.-C. Carbon and F. Gebauer, ‘The Safe-Range-Inventory (SRI): An assis-
+tance tool for optimizing the charging infrastructure for electric vehicles’, 
+Transp. Res. Part F Traffic Psychol. Behav., vol. 47, pp. 101–113, May 
+2017, doi: 10.1016/j.trf.2017.04.011. 
+[12] J. Zhang et al., ‘Multi-period planning of locations and capacities of public 
+charging stations’, J. Energy Storage, vol. 72, p. 108565, Nov. 2023, doi: 
+10.1016/j.est.2023.108565. 
+[13] H. Chen, Z. Hu, H. Luo, J. Qin, R. Rajagopal, and H. Zhang, ‘Design and 
+planning of a multiple-charger multiple-port charging system for PEV 
+charging station’, IEEE Trans. Smart Grid, vol. 10, no. 1, pp. 173–183, 
+Jan. 2019, doi: 10.1109/TSG.2017.2735636. 
+[14] W. Zou, Y. Sun, D. Gao, X. Zhang, and J. Liu, ‘A review on integration of 
+surging plug-in electric vehicles charging in energy-flexible buildings: Im-
+pacts analysis, collaborative management technologies, and future perspec-
+tive’, Appl. Energy, vol. 331, p. 120393, Feb. 2023, doi: 10.1016/j.apen-
+ergy.2022.120393. 
+[15] W. Zhou, C. J. Cleaver, C. F. Dunant, J. M. Allwood, and J. Lin, ‘Cost, 
+range anxiety and future electricity supply: A review of how today’s tech-
+nology trends may influence the future uptake of BEVs’, Renew. Sustain. 
+Energy 
+Rev., 
+vol. 
+173, 
+p. 
+113074, 
+Mar. 
+2023, 
+doi: 
+10.1016/j.rser.2022.113074. 
+[16] K. Taghizad-Tavana, A. Alizadeh, M. Ghanbari-Ghalehjoughi, and S. No-
+javan, ‘A comprehensive review of electric vehicles in energy systems: in-
+tegration with renewable energy sources, charging levels, different types, 
+and standards’, Energies, vol. 16, no. 2, p. 630, Jan. 2023, doi: 
+10.3390/en16020630. 
+[17] A. Desai, Kanika, and C. R. Patel, ‘The impact of electric vehicle charging 
+infrastructure on the energy demand of a city’, Energy Rep., vol. 9, pp. 
+814–823, Oct. 2023, doi: 10.1016/j.egyr.2023.05.177. 
+[18] W. Gu, H. Yu, W. Liu, J. Zhu, and X. Xu, ‘Demand response and economic 
+dispatch of power systems considering large-scale plug-in hybrid electric 
+vehicles/electric vehicles (PHEVs/EVs): A Review’, Energies, vol. 6, no. 
+9, pp. 4394–4417, Aug. 2013, doi: 10.3390/en6094394. 
+[19] L. Zhang et al., ‘Multi-objective charging scheduling for electric vehicles 
+at charging stations with renewable energy generation’, Green Energy In-
+tell. Transp., p. 100283, Mar. 2025, doi: 10.1016/j.geits.2025.100283. 
+[20] R. Pagany, L. Ramirez Camargo, and W. Dorner, ‘A review of spatial lo-
+calization methodologies for the electric vehicle charging infrastructure’, 
+Int. J. Sustain. Transp., vol. 13, no. 6, pp. 433–449, July 2019, doi: 
+10.1080/15568318.2018.1481243. 
+[21] P. Patil, K. Kazemzadeh, and P. Bansal, ‘Integration of charging behavior 
+into infrastructure planning and management of electric vehicles: A sys-
+tematic review and framework’, Sustain. Cities Soc., vol. 88, p. 104265, 
+Jan. 2023, doi: 10.1016/j.scs.2022.104265. 
+[22] P. Barman and L. Dutta, ‘Charging infrastructure planning for transporta-
+tion electrification in India: A review’, Renew. Sustain. Energy Rev., vol. 
+192, p. 114265, Mar. 2024, doi: 10.1016/j.rser.2023.114265. 
+[23] W. Zhan, Z. Wang, L. Zhang, P. Liu, D. Cui, and D. G. Dorrell, ‘A review 
+of siting, sizing, optimal scheduling, and cost-benefit analysis for battery 
+swapping stations’, Energy, vol. 258, p. 124723, Nov. 2022, doi: 
+10.1016/j.energy.2022.124723. 
+[24] M. Rashid, T. Elfouly, and N. Chen, ‘A comprehensive survey of electric 
+vehicle charging demand forecasting techniques’, IEEE Open J. Veh. Tech-
+nol., vol. 5, pp. 1348–1373, 2024, doi: 10.1109/OJVT.2024.3457499. 
+[25] E. Yaghoubi, E. Yaghoubi, A. Khamees, D. Razmi, and T. Lu, ‘A system-
+atic review and meta-analysis of machine learning, deep learning, and en-
+semble learning approaches in predicting EV charging behavior’, Eng. 
+Appl. Artif. Intell., vol. 135, p. 108789, Sept. 2024, doi: 10.1016/j.en-
+gappai.2024.108789. 
+[26] A. S. Al-Ogaili et al., ‘Review on scheduling, clustering, and forecasting 
+strategies for controlling electric vehicle charging: Challenges and recom-
+mendations’, IEEE Access, vol. 7, pp. 128353–128371, 2019, doi: 
+10.1109/ACCESS.2019.2939595. 
+[27] R. Zaino, V. Ahmed, A. M. Alhammadi, and M. Alghoush, ‘Electric vehi-
+cle adoption: A comprehensive systematic review of technological, envi-
+ronmental, organizational and policy impacts’, World Electr. Veh. J., vol. 
+15, no. 8, p. 375, Aug. 2024, doi: 10.3390/wevj15080375. 
+[28] R. Kakkar, S. Agrawal, and S. Tanwar, ‘A systematic survey on demand 
+response management schemes for electric vehicles’, Renew. Sustain. En-
+ergy Rev., vol. 203, p. 114748, Oct. 2024, doi: 10.1016/j.rser.2024.114748. 
+[29] X. Li et al., ‘Electric vehicle behavior modeling and applications in vehi-
+cle-grid integration: An overview’, Energy, vol. 268, p. 126647, Apr. 2023, 
+doi: 10.1016/j.energy.2023.126647. 
+[30] O. Sadeghian, A. Oshnoei, B. Mohammadi-ivatloo, V. Vahidinasab, and 
+A. Anvari-Moghaddam, ‘A comprehensive review on electric vehicles 
+smart charging: Solutions, strategies, technologies, and challenges’, J. En-
+ergy 
+Storage, 
+vol. 
+54, 
+p. 
+105241, 
+Oct. 
+2022, 
+doi: 
+10.1016/j.est.2022.105241. 
+[31] D. Cui et al., ‘Operation optimization approaches of electric vehicle battery 
+swapping and charging station: A literature review’, Energy, vol. 263, p. 
+126095, Jan. 2023, doi: 10.1016/j.energy.2022.126095. 
+[32] M. Li, Y. Wang, P. Peng, and Z. Chen, ‘Toward efficient smart manage-
+ment: A review of modeling and optimization approaches in electric vehi-
+cle-transportation network-grid integration’, Green Energy Intell. Transp., 
+vol. 3, no. 6, p. 100181, Dec. 2024, doi: 10.1016/j.geits.2024.100181. 
+[33] M. K. Daryabari, R. Keypour, and H. Golmohamadi, ‘Robust self-sched-
+uling of parking lot microgrids leveraging responsive electric vehicles’, 
+Appl. Energy, vol. 290, p. 116802, May 2021, doi: 10.1016/j.apen-
+ergy.2021.116802. 
+[34] A. Heider, F. Moors, and G. Hug, ‘Impact of smart charging and vehicle-
+to-grid technologies on flexibility and grid expansion requirements in Ger-
+man distribution networks’, IEEE Trans. Ind. Appl., pp. 1–11, 2025, doi: 
+10.1109/TIA.2025.3532914. 
+[35] X. Li et al., ‘Electric vehicle charging flexibility assessment for load shift-
+ing based on real-world charging pattern identification’, eTransportation, 
+vol. 23, p. 100367, Jan. 2025, doi: 10.1016/j.etran.2024.100367. 
+[36] S. Lokhande, Y. Bichpuriya, and V. Sarangan, ‘Real-time management of 
+deviations in the demand of electric vehicle charging stations by utilizing 
+EV flexibility’, J. Energy Storage, vol. 97, p. 112719, Sept. 2024, doi: 
+10.1016/j.est.2024.112719. 
+[29] J. Huber, D. Dann, and C. Weinhardt, ‘Probabilistic forecasts of time and 
+energy flexibility in battery electric vehicle charging’, Appl. Energy, vol. 
+262, p. 114525, Mar. 2020, doi: 10.1016/j.apenergy.2020.114525. 
+[38] J. Wu, H. Su, J. Meng, and M. Lin, ‘Electric vehicle charging scheduling 
+considering infrastructure constraints’, Energy, vol. 278, p. 127806, Sept. 
+2023, doi: 10.1016/j.energy.2023.127806. 
+[39] X. Liu, ‘Bi-level planning method of urban electric vehicle charging station 
+considering multiple demand scenarios and multi-type charging piles’, J. 
+Energy 
+Storage, 
+vol. 
+48, 
+p. 
+104012, 
+Apr. 
+2022, 
+doi: 
+10.1016/j.est.2022.104012. 
+[40] T. Long and Q.-S. Jia, ‘Matching uncertain renewable supply with electric 
+vehicle charging demand—A bi-level event-based optimization method’, 
+Complex Syst. Model. Simul., vol. 1, no. 1, pp. 33–44, Mar. 2021, doi: 
+10.23919/CSMS.2021.0001. 
+
+14 
+IEEE TRANSACTIONS ON INTELLIGENT TRANSPORTATION SYSTEMS 
+ 
+[41] D. Cui et al., ‘Coordinated charging scheme for electric vehicle fast-charg-
+ing station with demand-based priority’, IEEE Trans. Transp. Electrifica-
+tion, 
+vol. 
+10, 
+no. 
+3, 
+pp. 
+6449–6459, 
+Sept. 
+2024, 
+doi: 
+10.1109/TTE.2023.3334809. 
+[42] G. G. Zanvettor, M. Fochesato, M. Casini, J. Lygeros, and A. Vicino, ‘A 
+stochastic approach for EV charging stations in demand response pro-
+grams’, Appl. Energy, vol. 373, p. 123862, Nov. 2024, doi: 10.1016/j.apen-
+ergy.2024.123862. 
+[43] M. S. Kuran, A. C. Viana, L. Iannone, D. Kofman, G. Mermoud, and J. P. 
+Vasseur, ‘A smart parking lot management system for scheduling the re-
+charging of electric vehicles’, IEEE Trans. Smart Grid, vol. 6, no. 6, pp. 
+2942–2953, Nov. 2015, doi: 10.1109/TSG.2015.2403287. 
+[44] Q. Jiang, N. Zhang, B. Yueshuai He, C. Lee, and J. Ma, ‘Large-scale public 
+charging demand prediction with a scenario- and activity-based approach’, 
+Transp. Res. Part Policy Pract., vol. 179, p. 103935, Jan. 2024, doi: 
+10.1016/j.tra.2023.103935. 
+[45] N. Daina, A. Sivakumar, and J. W. Polak, ‘Electric vehicle charging 
+choices: Modelling and implications for smart charging services’, Transp. 
+Res. Part C Emerg. Technol., vol. 81, pp. 36–56, Aug. 2017, doi: 
+10.1016/j.trc.2017.05.006. 
+[46] M. Firouzi, M. S. Nazar, M. Shafie-khah, and J. P. S. Catalao, ‘Integrated 
+framework for modeling the interactions of plug-in hybrid electric vehicles 
+aggregators, parking lots and distributed generation facilities in electricity 
+markets’, Appl. Energy, vol. 334, p. 120703, Mar. 2023, doi: 
+10.1016/j.apenergy.2023.120703. 
+[47] X. Luo, M. J. Kuby, Y. Honma, M. Kchaou-Boujelben, and X. S. Zhou, 
+‘Innovation diffusion in EV charging location decisions: Integrating de-
+mand & supply through market dynamics’, Transp. Res. Part C Emerg. 
+Technol., vol. 165, p. 104733, Aug. 2024, doi: 10.1016/j.trc.2024.104733. 
+[48] M. B. Arias, M. Kim, and S. Bae, ‘Prediction of electric vehicle charging-
+power demand in realistic urban traffic networks’, Appl. Energy, vol. 195, 
+pp. 738–753, June 2017, doi: 10.1016/j.apenergy.2017.02.021. 
+[35] P. Grahn, K. Alvehag, and L. Soder, ‘PHEV utilization model considering 
+type-of-trip and recharging flexibility’, IEEE Trans. Smart Grid, vol. 5, no. 
+1, pp. 139–148, Jan. 2014, doi: 10.1109/TSG.2013.2279022. 
+[50] E. Xydas, C. Marmaras, L. M. Cipcigan, N. Jenkins, S. Carroll, and M. 
+Barker, ‘A data-driven approach for characterising the charging demand of 
+electric vehicles: A UK case study’, Appl. Energy, vol. 162, pp. 763–771, 
+Jan. 2016, doi: 10.1016/j.apenergy.2015.10.151. 
+[51] S. S. Mohammed, T. P. I. Ahamed, S. H. E. A. Aleem, and A. I. Omar, 
+‘Interruptible charge scheduling of plug-in electric vehicle to minimize 
+charging cost using heuristic algorithm’, Electr. Eng., vol. 104, no. 3, pp. 
+1425–1440, June 2022, doi: 10.1007/s00202-021-01398-z. 
+[52] C. Yang, H. Zhou, X. Chen, and J. Huang, ‘Demand time series prediction 
+of stacked long short-term memory electric vehicle charging stations based 
+on fused attention mechanism’, Energies, vol. 17, no. 9, p. 2041, Apr. 2024, 
+doi: 10.3390/en17092041. 
+[53] D. Kim, D. Kwon, J. Han, S. M. Lee, S. Elkosantini, and W. Suh, ‘Data-
+driven model for identifying factors influencing electric vehicle charging 
+demand: A comparative analysis of early- and maturity-phases of electric 
+vehicle programs in Korea’, Appl. Sci., vol. 13, no. 6, p. 3760, Mar. 2023, 
+doi: 10.3390/app13063760. 
+[54] H. Qu, H. Kuang, Q. Wang, J. Li, and L. You, ‘A physics-informed and 
+attention-based graph learning approach for regional electric vehicle charg-
+ing demand prediction’, IEEE Trans. Intell. Transp. Syst., vol. 25, no. 10, 
+pp. 14284–14297, Oct. 2024, doi: 10.1109/TITS.2024.3401850. 
+[55] S. P. Sone, J. J. Lehtomäki, Z. Khan, K. Umebayashi, and K. S. Kim, ‘Ro-
+bust EV scheduling in charging stations under uncertain demands and 
+deadlines’, IEEE Trans. Intell. Transp. Syst., vol. 25, no. 12, pp. 21484–
+21499, Dec. 2024, doi: 10.1109/TITS.2024.3466514. 
+[43] M. Xie, H. Wang, Y. Gao, and Y. Wang, ‘A rolling-horizon framework for 
+managing shared parking and electric vehicle charging’, Sustain. Cities. 
+Soc., vol. 98, p. 104810, Nov. 2023, doi: 10.1016/j.scs.2023.104810. 
+[57] D. Cui et al., ‘Battery electric vehicle usage pattern analysis driven by mas-
+sive real-world data’, Energy, vol. 250, p. 123837, July 2022, doi: 
+10.1016/j.energy.2022.123837. 
+[58] A. Mehrabi and K. Kim, ‘Low-complexity charging/discharging schedul-
+ing for electric vehicles at home and common lots for smart households 
+prosumers’, IEEE Trans. Consum. Electron., vol. 64, no. 3, pp. 348–355, 
+Aug. 2018, doi: 10.1109/TCE.2018.2864548. 
+[59] J. H. Lee, D. Chakraborty, S. J. Hardman, and G. Tal, ‘Exploring electric 
+vehicle charging patterns: Mixed usage of charging infrastructure’, Transp. 
+Res. Part Transp. Environ., vol. 79, p. 102249, Feb. 2020, doi: 
+10.1016/j.trd.2020.102249. 
+[60] D. Cui et al., ‘An empirical understanding of usage for battery swapping 
+electric taxis in Beijing’, in 2023 IEEE International Future Energy Elec-
+tronics Conference (IFEEC), Sydney, Australia: IEEE, Nov. 2023, pp. 1–
+4. doi: 10.1109/IFEEC58486.2023.10458601. 
+[61] Z. Wei, Y. Geng, H. Tang, Y. Zhao, and B. Lin, ‘Cost-effective sizing 
+method of Vehicle-to-Building chargers and energy storage systems during 
+the planning stage of smart micro-grid’, eTransportation, vol. 21, p. 
+100343, Sept. 2024, doi: 10.1016/j.etran.2024.100343. 
+[62] J. Yang, J. Dong, and L. Hu, ‘A data-driven optimization-based approach 
+for siting and sizing of electric taxi charging stations’, Transp. Res. PART 
+C-Emerg. 
+Technol., 
+vol. 
+77, 
+pp. 
+462–477, 
+Apr. 
+2017, 
+doi: 
+10.1016/j.trc.2017.02.014. 
+[63] T. Yang, X. Xu, Q. Guo, L. Zhang, and H. Sun, ‘EV charging behaviour 
+analysis and modelling based on mobile crowdsensing data’, IET Gener. 
+Transm. Distrib., vol. 11, no. 7, pp. 1683–1691, May 2017, doi: 
+10.1049/iet-gtd.2016.1200. 
+[64] J. Zhu, F. Chen, S. Liu, Y. An, N. Wu, and X. Zhao, ‘Multi-Objective plan-
+ning optimization of electric vehicle charging stations with coordinated 
+spatiotemporal charging demand’, IEEE Trans. Intell. Transp. Syst., pp. 1–
+15, 2024, doi: 10.1109/TITS.2024.3498917. 
+[65] L. Zhang, Z. Huang, Z. Wang, X. Li, and F. Sun, ‘An urban charging load 
+forecasting model based on trip chain model for private passenger electric 
+vehicles: A case study in Beijing’, Energy, vol. 299, p. 130844, July 2024, 
+doi: 10.1016/j.energy.2024.130844. 
+[66] M. W. Mudiyanselage et al., ‘A multiagent framework for electric vehicles 
+charging power forecast and smart planning of urban parking lots’, IEEE 
+Trans. Transp. Electrification, vol. 10, no. 2, pp. 2844–2857, June 2024, 
+doi: 10.1109/TTE.2023.3289196. 
+[67] Y. Li and A. Jenn, ‘Impact of electric vehicle charging demand on power 
+distribution grid congestion’, Proc. Natl. Acad. Sci., vol. 121, no. 18, p. 
+e2317599121, Apr. 2024, doi: 10.1073/pnas.2317599121. 
+[68] M. De Gennaro, E. Paffumi, H. Scholz, and G. Martini, ‘GIS-driven anal-
+ysis of e-mobility in urban areas: An evaluation of the impact on the elec-
+tric energy grid’, Appl. Energy, vol. 124, pp. 94–116, July 2014, doi: 
+10.1016/j.apenergy.2014.03.003. 
+[69] M. Yazdani-Damavandi, M. P. Moghaddam, M.-R. Haghifam, M. Shafie-
+khah, and J. P. S. Catalao, ‘Modeling operational behavior of plug-in elec-
+tric vehicles’ Parking Lot in Multienergy Systems’, IEEE Trans. Smart 
+Grid, 
+vol. 
+7, 
+no. 
+1, 
+pp. 
+124–135, 
+Jan. 
+2016, 
+doi: 
+10.1109/TSG.2015.2404892. 
+[70] Z. Yi and P. H. Bauer, ‘Spatiotemporal energy demand models for electric 
+vehicles’, IEEE Trans. Veh. Technol., vol. 65, no. 3, pp. 1030–1042, Mar. 
+2016, doi: 10.1109/TVT.2015.2502249. 
+[71] M. Alonso, H. Amaris, J. Gardy Germain, and J. Manuel Galan, ‘Optimal 
+Charging Scheduling of Electric Vehicles in Smart Grids by Heuristic Al-
+gorithms’, Energies, vol. 7, no. 4, pp. 2449–2475, Apr. 2014, doi: 
+10.3390/en7042449. 
+[72] M. H. Amini, A. Kargarian, and O. Karabasoglu, ‘ARIMA-based decou-
+pled time series forecasting of electric vehicle charging demand for sto-
+chastic power system operation’, Electr. Power Syst. Res., vol. 140, pp. 
+378–390, Nov. 2016, doi: 10.1016/j.epsr.2016.06.003. 
+[73] R. Zhang and E. Kontou, ‘Revenue-maximizing shared parking and electric 
+vehicle charging management in multi-unit dwellings’, Transp. Res. Rec. 
+J. Transp. Res. Board, p. 03611981241289413, Jan. 2025, doi: 
+10.1177/03611981241289413. 
+[74] M. Shariatzadeh, C. Henggeler Antunes, and M. A. R. Lopes, ‘Charging 
+scheduling in a workplace parking lot: Bi-objective optimization ap-
+proaches through predictive analytics of electric vehicle users’ charging 
+behavior’, Sustain. Energy Grids Netw., vol. 39, p. 101463, Sept. 2024, doi: 
+10.1016/j.segan.2024.101463. 
+[75] H. Lin, Y. Liu, Q. Sun, R. Xiong, H. Li, and R. Wennersten, ‘The impact 
+of electric vehicle penetration and charging patterns on the management of 
+energy hub – A multi-agent system simulation’, Appl. Energy, vol. 230, pp. 
+189–206, Nov. 2018, doi: 10.1016/j.apenergy.2018.08.083. 
+[76] J. Brady and M. O’Mahony, ‘Modelling charging profiles of electric vehi-
+cles based on real-world electric vehicle charging data’, Sustain. Cities 
+Soc., vol. 26, pp. 203–216, Oct. 2016, doi: 10.1016/j.scs.2016.06.014. 
+[77] M. Majidpour, C. Qiu, P. Chu, H. R. Pota, and R. Gadh, ‘Forecasting the 
+EV charging load based on customer profile or station measurement?’, 
+Appl. Energy, vol. 163, pp. 134–141, Feb. 2016, doi: 10.1016/j.apen-
+ergy.2015.10.184. 
+[78] J. Tu, H. Yu, J. Zhong, and L. Jian, ‘User-needs-oriented shared DC charg-
+ing resources optimal configuration and operation for improving EV 
+
+15 
+IEEE TRANSACTIONS ON INTELLIGENT TRANSPORTATION SYSTEMS 
+ 
+penetration in old residential communities’, Sustain. Cities Soc., vol. 114, 
+p. 105796, Nov. 2024, doi: 10.1016/j.scs.2024.105796. 
+[79] E. Xydas, C. Marmaras, and L. M. Cipcigan, ‘A multi-agent based sched-
+uling algorithm for adaptive electric vehicles charging’, Appl. Energy, vol. 
+177, pp. 354–365, Sept. 2016, doi: 10.1016/j.apenergy.2016.05.034. 
+[80] G. Yu, X. Ye, D. Gong, and X. Xia, ‘Stochastic planning for transition from 
+shopping mall parking lots to electric vehicle charging stations’, Appl. En-
+ergy, 
+vol. 
+379, 
+p. 
+124894, 
+Feb. 
+2025, 
+doi: 
+10.1016/j.apen-
+ergy.2024.124894. 
+[81] H. Guo, L. Chen, Z. Wang, and L. Li, ‘Day-ahead prediction of electric 
+vehicle charging demand based on quadratic decomposition and dual atten-
+tion mechanisms’, Appl. Energy, vol. 381, p. 125198, Mar. 2025, doi: 
+10.1016/j.apenergy.2024.125198. 
+[33] S. Saki and T. Hagen, ‘Parking search identification in vehicle GPS traces’, 
+J. Urban Mobil., vol. 6, p. 100083, Dec. 2024, doi: 10.1016/j.ur-
+bmob.2024.100083. 
+[83] P. Sanchez-Martin, S. Lumbreras, and A. Alberdi-Alen, ‘Stochastic pro-
+gramming applied to EV charging points for energy and reserve service 
+markets’, IEEE Trans. Power Syst., vol. 31, no. 1, pp. 198–205, Jan. 2016, 
+doi: 10.1109/TPWRS.2015.2405755. 
+[84] G. M. S. Kumar and S. Cao, ‘Conversion of metro railway into smart charg-
+ing zero-emission transportation hub for supporting electric train, shuttle 
+bus, cars and public EV charging station’, Energy Convers. Manag.-X, vol. 
+22, p. 100552, Apr. 2024, doi: 10.1016/j.ecmx.2024.100552. 
+[85] J. Wu, T. Feng, P. Jia, and G. Li, ‘Spatial allocation of heavy commercial 
+vehicles parking areas through geo-fencing’, J. Transp. Geogr., vol. 117, 
+p. 103876, May 2024, doi: 10.1016/j.jtrangeo.2024.103876. 
+[86] M. J. Mirzaei, A. Kazemi, and O. Homaee, ‘A probabilistic approach to 
+determine optimal capacity and location of electric vehicles parking lots in 
+distribution networks’, IEEE Trans. Ind. Inform., vol. 12, no. 5, pp. 1963–
+1972, Oct. 2016, doi: 10.1109/TII.2015.2482919. 
+[87] M. A. Baherifard, R. Kazemzadeh, A. S. Yazdankhah, and M. Marzband, 
+‘Intelligent charging planning for electric vehicle commercial parking lots 
+and its impact on distribution network’s imbalance indices’, Sustain. En-
+ergy Grids Netw., vol. 30, p. 100620, June 2022, doi: 10.1016/j.se-
+gan.2022.100620. 
+[88] N. S. Pearre, W. Kempton, R. L. Guensler, and V. V. Elango, ‘Electric 
+vehicles: How much range is required for a day’s driving?’, Transp. Res. 
+Part C-Emerg. Technol., vol. 19, no. 6, pp. 1171–1184, Dec. 2011, doi: 
+10.1016/j.trc.2010.12.010. 
+[89] X. Yang, Z. Peng, P. Wang, and C. Zhuge, ‘Seasonal variance in electric 
+vehicle charging demand and its impacts on infrastructure deployment: A 
+big data approach’, Energy, vol. 280, p. 128230, Oct. 2023, doi: 
+10.1016/j.energy.2023.128230. 
+[90] N. Mounir, H. Ouadi, I. Jrhilifa, S. El Bakkali, and S. Gheouany, ‘EV 
+charging management: A forecasting model development for parking time 
+and arrival state of charge’, IFAC-Pap., vol. 58, no. 13, pp. 386–391, 2024, 
+doi: 10.1016/j.ifacol.2024.07.513. 
+[91] J. Yang, J. Dong, and L. Hu, ‘A data-driven optimization-based approach 
+for siting and sizing of electric taxi charging stations’, Transp. Res. Part C 
+Emerg. 
+Technol., 
+vol. 
+77, 
+pp. 
+462–477, 
+Apr. 
+2017, 
+doi: 
+10.1016/j.trc.2017.02.014. 
+[92] C.-Y. Chen, I.-H. Hong, R.-C. Chen, W. T. Chang, and C.-C. Chang, ‘A 
+robust Pareto model for electric vehicle charging station deployment in ur-
+ban areas considering psychology effects of drivers’, Int. J. Prod. Res., pp. 
+1–25, Nov. 2024, doi: 10.1080/00207543.2024.2424975. 
+[93] Y. Wu, S. M. Aziz, and M. H. Haque, ‘Techno-economic modelling for 
+energy cost minimisation of a university campus to support electric vehicle 
+charging with photovoltaic capacity optimisation’, Renew. Energy, vol. 
+219, p. 119427, Dec. 2023, doi: 10.1016/j.renene.2023.119427. 
+[94] J. Zhang, Z. Wang, E. J. Miller, D. Cui, P. Liu, and Z. Zhang, ‘Charging 
+demand prediction in Beijing based on real-world electric vehicle data’, J. 
+Energy 
+Storage, 
+vol. 
+57, 
+p. 
+106294, 
+Jan. 
+2023, 
+doi: 
+10.1016/j.est.2022.106294. 
+[95] D. Cui, Z. Wang, P. Liu, S. Wang, Y. Zhao, and W. Zhan, ‘Stacking re-
+gression technology with event profile for electric vehicle fast charging be-
+havior prediction’, Appl. Energy, vol. 336, p. 120798, Apr. 2023, doi: 
+10.1016/j.apenergy.2023.120798. 
+[96] Z. Needell, W. Wei, and J. E. Trancik, ‘Strategies for beneficial electric 
+vehicle charging to reduce peak electricity demand and store solar energy’, 
+Cell Rep. Phys. Sci., vol. 4, no. 3, p. 101287, Mar. 2023, doi: 
+10.1016/j.xcrp.2023.101287. 
+[97] G. Dong, ‘Electric vehicle charging point placement optimisation by ex-
+ploiting spatial statistics and maximal coverage location models’, Transp. 
+Res. Part D, vol. 67, pp. 77–88, 2019. 
+[98] Z. Yi, X. C. Liu, and R. Wei, ‘Electric vehicle demand estimation and 
+charging station allocation using urban informatics’, Transp. Res. Part 
+Transp. 
+Environ., 
+vol. 
+106, 
+p. 
+103264, 
+May 
+2022, 
+doi: 
+10.1016/j.trd.2022.103264. 
+[99] C. Shuai, X. Zhang, X. Ouyang, K. Liu, and Y. Yang, ‘Research on charg-
+ing demands of commercial electric vehicles based on Voronoi diagram 
+and spatial econometrics model: An empirical study in Chongqing China’, 
+Sustain. Cities Soc., vol. 105, p. 105335, June 2024, doi: 
+10.1016/j.scs.2024.105335. 
+[100] L.-H. Bjornsson and S. Karlsson, ‘Plug-in hybrid electric vehicles: How 
+individual movement patterns affect battery requirements, the potential to 
+replace conventional fuels, and economic viability’, Appl. Energy, vol. 
+143, pp. 336–347, Apr. 2015, doi: 10.1016/j.apenergy.2015.01.041. 
+[101] G. Pasaoglu, D. Fiorello, A. Martino, L. Zani, A. Zubaryeva, and C. 
+Thiel, ‘Travel patterns and the potential use of electric cars - Results from 
+a direct survey in six European countries’, Technol. Forecast. Soc. Change, 
+vol. 87, pp. 51–59, Sept. 2014, doi: 10.1016/j.techfore.2013.10.018. 
+[102] K. Zheng, H. Xu, Z. Long, Y. Wang, and Q. Chen, ‘Coherent hierar-
+chical probabilistic forecasting of electric vehicle charging demand’, IEEE 
+Trans. Ind. Appl., vol. 61, no. 1, pp. 1329–1340, Jan. 2025, doi: 
+10.1109/TIA.2023.3344544. 
+[103] S. Wang, C. Zhuge, C. Shao, P. Wang, X. Yang, and S. Wang, ‘Short-
+term electric vehicle charging demand prediction: A deep learning ap-
+proach’, Appl. Energy, vol. 340, p. 121032, June 2023, doi: 10.1016/j.apen-
+ergy.2023.121032. 
+[104] S. Wang, A. Chen, P. Wang, and C. Zhuge, ‘Short-term electric vehicle 
+battery swapping demand prediction: Deep learning methods’, Transp. 
+Res. Part Transp. Environ., vol. 119, p. 103746, June 2023, doi: 
+10.1016/j.trd.2023.103746. 
+[105] S. Wang, A. Chen, P. Wang, and C. Zhuge, ‘Predicting electric vehicle 
+charging demand using a heterogeneous spatio-temporal graph convolu-
+tional network’, Transp. Res. Part C Emerg. Technol., vol. 153, p. 104205, 
+Aug. 2023, doi: 10.1016/j.trc.2023.104205. 
+[106] A. Orzechowski, L. Lugosch, H. Shu, R. Yang, W. Li, and B. H. Meyer, 
+‘A data-driven framework for medium-term electric vehicle charging de-
+mand forecasting’, Energy AI, vol. 14, p. 100267, Oct. 2023, doi: 
+10.1016/j.egyai.2023.100267. 
+[107] N. Jeannin, A. Pena-Bello, C. Ballif, and N. Wyrsch, ‘Mapping the 
+charging demand for electric vehicles in 2050 from mobility habits’, Sus-
+tain. Energy Grids Netw., vol. 39, p. 101468, Sept. 2024, doi: 10.1016/j.se-
+gan.2024.101468. 
+[108] B. Zhou and E. Li, ‘Multi-regional integrated energy economic dispatch 
+considering renewable energy uncertainty and electric vehicle charging de-
+mand based on dynamic robust optimization’, Energies, vol. 17, no. 11, p. 
+2453, May 2024, doi: 10.3390/en17112453. 
+[109] K. Liu and Y. Liu, ‘Stochastic user equilibrium based spatial-temporal 
+distribution prediction of electric vehicle charging load’, Appl. Energy, 
+vol. 339, p. 120943, June 2023, doi: 10.1016/j.apenergy.2023.120943. 
+[110] Y. Zhang, X. Luo, Y. Qiu, and Y. Fu, ‘Understanding the generation 
+mechanism of BEV drivers’ charging demand: An exploration of the rela-
+tionship between charging choice and complexity of trip chaining patterns’, 
+Transp. Res. Part -Policy Pract., vol. 158, pp. 110–126, Apr. 2022, doi: 
+10.1016/j.tra.2022.02.007. 
+[111] K. C. Akshay, G. H. Grace, K. Gunasekaran, and R. Samikannu, ‘Power 
+consumption prediction for electric vehicle charging stations and forecast-
+ing income’, Sci. Rep., vol. 14, no. 1, p. 6497, Mar. 2024, doi: 
+10.1038/s41598-024-56507-2. 
+[112] Y.-W. Chung, B. Khaki, T. Li, C. Chu, and R. Gadh, ‘Ensemble machine 
+learning-based algorithm for electric vehicle user behavior prediction’, 
+Appl. Energy, vol. 254, p. 113732, Nov. 2019, doi: 10.1016/j.apen-
+ergy.2019.113732. 
+[113] B. A. Kumar, B. Jyothi, A. R. Singh, and M. Bajaj, ‘Enhancing EV 
+charging predictions: a comprehensive analysis using K-nearest neigh-
+bours and ensemble stack generalization’, Multiscale Multidiscip. Model. 
+Exp. Des., vol. 7, no. 4, pp. 4011–4037, Sept. 2024, doi: 10.1007/s41939-
+024-00457-9. 
+[114] A. Torkey and H. Abdelgawad, ‘Framework for planning of EV charg-
+ing infrastructure: Where should cities start?’, Transp. Policy, vol. 128, pp. 
+193–208, Nov. 2022, doi: 10.1016/j.tranpol.2022.09.015. 
+[115] S. Habib, F. Ahmad, M. M. Gulzar, E. M. Ahmed, and M. Bilal, ‘Elec-
+tric vehicle charging infrastructure planning model with energy 
+
+16 
+IEEE TRANSACTIONS ON INTELLIGENT TRANSPORTATION SYSTEMS 
+ 
+management strategies considering EV parking behavior’, Energy, vol. 
+316, p. 134421, Feb. 2025, doi: 10.1016/j.energy.2025.134421. 
+[116] S. Mishra, A. Mondal, and S. Mondal, ‘Charging station siting and siz-
+ing considering uncertainty in electric vehicle charging demand distribu-
+tion’, IEEE Trans. Intell. Transp. Syst., vol. 25, no. 9, pp. 12709–12721, 
+Sept. 2024, doi: 10.1109/TITS.2024.3384537. 
+[117] M. O. Metais, O. Jouini, Y. Perez, J. Berrada, and E. Suomalainen, ‘Too 
+much or not enough? Planning electric vehicle charging infrastructure: A 
+review of modeling options’, Renew. Sustain. Energy Rev., vol. 153, p. 
+111719, Jan. 2022, doi: 10.1016/j.rser.2021.111719. 
+[118] Q. Bao, M. Gao, J. Chen, and X. Tan, ‘Location and size planning of 
+charging parking lots based on EV charging demand prediction and fuzzy 
+bi-objective optimization’, Mathematics, vol. 12, no. 19, p. 3143, Oct. 
+2024, doi: 10.3390/math12193143. 
+[119] J. Li, C. Liu, Y. Wang, R. Chen, and X. Xu, ‘Bi-level programming 
+model approach for electric vehicle charging stations considering user 
+charging costs’, Electr. Power Syst. Res., vol. 214, p. 108889, Jan. 2023, 
+doi: 10.1016/j.epsr.2022.108889. 
+[120] Z. Wu et al., ‘Bi-level planning of multi-functional vehicle charging sta-
+tions considering land use types’, Energies, vol. 13, no. 5, p. 1283, Mar. 
+2020, doi: 10.3390/en13051283. 
+[121] M. Zeng, Y. Pan, D. Zhang, Z. Lu, and Y. Li, ‘Data-driven location se-
+lection for battery swapping stations’, IEEE Access, vol. 7, pp. 133760–
+133771, 2019, doi: 10.1109/ACCESS.2019.2941901. 
+[122] Z. Sun, Y. He, H. Wu, and A. Y. Wu, ‘Bi-level planning of electric ve-
+hicle charging stations considering charging demand: A Nash bargaining 
+game approach’, Energy, vol. 332, p. 137137, Sept. 2025, doi: 
+10.1016/j.energy.2025.137137. 
+[123] B. Chen, J. Chen, and H. Feng, ‘Systematic planning of electric vehicle 
+battery swapping and charging station location and driver routing with bi-
+level optimization’, World Electr. Veh. J., vol. 16, no. 9, p. 499, Sept. 2025, 
+doi: 10.3390/wevj16090499. 
+[124] P. Makeen, H. A. Ghali, S. Memon, and F. Duan, ‘Insightful electric 
+vehicle utility grid aggregator methodology based on the G2V and V2G 
+technologies in Egypt’, Sustainability, vol. 15, no. 2, p. 1283, Jan. 2023, 
+doi: 10.3390/su15021283. 
+[125] M. Zeng, S. Leng, Y. Zhang, and J. He, ‘QoE-aware power management 
+in vehicle-to-grid networks: A matching-theoretic approach’, IEEE Trans. 
+Smart Grid, vol. 9, no. 4, pp. 2468–2477, July 2018, doi: 
+10.1109/TSG.2016.2613546. 
+[126] D. Xiao, ‘An optimization model for electric vehicle charging infra-
+structure planning considering queuing behavior with finite queue length’, 
+J. Energy Storage, vol. 29, p. 101317, 2020. 
+[127] N. Wang, C. Wang, Y. Niu, M. Yang, and Y. Yu, ‘A two-stage charging 
+facilities planning method for electric vehicle sharing systems’, IEEE 
+Trans. Ind. Appl., vol. 57, no. 1, pp. 149–157, Jan. 2021, doi: 
+10.1109/TIA.2020.3034557. 
+[128] T. Unterluggauer, J. Rich, P. B. Andersen, and S. Hashemi, ‘Electric 
+vehicle charging infrastructure planning for integrated transportation and 
+power distribution networks: A review’, eTransportation, vol. 12, p. 
+100163, May 2022, doi: 10.1016/j.etran.2022.100163. 
+[129] A. Thingvad, P. B. Andersen, T. Unterluggauer, C. Træholt, and M. 
+Marinelli, ‘Electrification of personal vehicle travels in cities - Quantifying 
+the public charging demand’, eTransportation, vol. 9, p. 100125, Aug. 
+2021, doi: 10.1016/j.etran.2021.100125. 
+[130] ‘EV Readiness Ordinance Case Studies’. [Online]. Available: 
+https://electrificationcoalition.org/resource/ev-readiness-ordinance-case-
+study/ 
+[131] ‘Charging points in parking areas: 105 days left to install them and avoid 
+€10,000 fines’. [Online]. Available: https://mobilityportal.eu/charging-
+points-parking-areas/ 
+[132] D. Lopez-Behar, M. Tran, T. Froese, J. R. Mayaud, O. E. Herrera, and 
+W. Merida, ‘Charging infrastructure for electric vehicles in multi-unit res-
+idential buildings: Mapping feedbacks and policy recommendations’, En-
+ergy Policy, vol. 126, pp. 444–451, Mar. 2019, doi: 10.1016/j.en-
+pol.2018.10.030. 
+[133] T.-Y. Ma and S. Faye, ‘Multistep electric vehicle charging station occu-
+pancy prediction using hybrid LSTM neural networks’, Energy, vol. 244, 
+p. 123217, Apr. 2022, doi: 10.1016/j.energy.2022.123217. 
+[134] M. Zhao, D. Wang, and W. Li, ‘Idle occupancy and dead piles: new 
+challenges in public charging station promotion’, Ann. GIS, vol. 31, no. 2, 
+pp. 251–271, Apr. 2025, doi: 10.1080/19475683.2025.2472781. 
+[135] Y. Zhao et al., ‘Bridging battery degradation and safety: Challenges and 
+opportunities’, eTransportation, vol. 26, p. 100497, Dec. 2025, doi: 
+10.1016/j.etran.2025.100497. 
+[136] A. Comi and E. Elnour, ‘Challenges for implementing vehicle-to-grid 
+services in parking lots: A state of the art’, Energies, vol. 17, no. 24, p. 
+6240, Dec. 2024, doi: 10.3390/en17246240. 
+[137] M. S. Eltohamy et al., ‘A comprehensive review of vehicle-to-grid V2G 
+technology: Technical, economic, regulatory, and social perspectives’, En-
+ergy Convers. Manag. X, vol. 27, p. 101138, July 2025, doi: 
+10.1016/j.ecmx.2025.101138. 
+[138] A. A. Al-obaidi and H. E. Z. Farag, ‘Optimal design of V2G incentives 
+and V2G-capable electric vehicles parking lots considering cost-benefit fi-
+nancial analysis and user participation’, IEEE Trans. Sustain. Energy, vol. 
+15, no. 1, pp. 454–465, Jan. 2024, doi: 10.1109/TSTE.2023.3307633. 
+[139] B. Lin and M. Yang, ‘Changes in consumer satisfaction with electric 
+vehicle charging infrastructure: Evidence from two cross-sectional surveys 
+in 2019 and 2023’, Energy Policy, vol. 185, p. 113924, Feb. 2024, doi: 
+10.1016/j.enpol.2023.113924. 
+[140] D. Cui, P. Liu, and Z. Wang, ‘Assess changes in electric vehicle usage 
+behaviour: Comparison between 2018 and 2021’, Transp. Res. Part 
+Transp. 
+Environ., 
+vol. 
+141, 
+p. 
+104661, 
+Apr. 
+2025, 
+doi: 
+10.1016/j.trd.2025.104661. 
+[141] L. Calearo, M. Marinelli, and C. Ziras, ‘A review of data sources for 
+electric vehicle integration studies’, Renew. Sustain. Energy Rev., vol. 151, 
+p. 111518, Nov. 2021, doi: 10.1016/j.rser.2021.111518. 
+[142] A. Namdeo, A. Tiwary, and R. Dziurla, ‘Spatial planning of public 
+charging points using multi-dimensional analysis of early adopters of elec-
+tric vehicles for a city region’, Technol. Forecast. Soc. Change, vol. 89, pp. 
+188–200, Nov. 2014, doi: 10.1016/j.techfore.2013.08.032. 
+[143] P. Macaluso, A. Carboni, C. Botta, P. Lazzeroni, F. Deflorio, and M. 
+Arnone, ‘Estimating charging demand by modelling EV drivers’ parking 
+patterns and habits’, Eur. Transp.-Trasp. Eur., no. 90, Feb. 2023, doi: 
+10.48295/ET.2023.90.5. 
+[144 
+Y. S. Liu, M. Tayarani, and H. O. Gao, ‘An activity-based travel and 
+charging behavior model for simulating battery electric vehicle charging 
+demand’, Energy, vol. 258, p. 124938, Nov. 2022, doi: 10.1016/j.en-
+ergy.2022.124938. 
+[145] Z. N. Bampos, V. M. Laitsos, K. D. Afentoulis, S. I. Vagropoulos, and 
+P. N. Biskas, ‘Electric vehicles load forecasting for day-ahead market par-
+ticipation using machine and deep learning methods’, Appl. Energy, vol. 
+360, p. 122801, Apr. 2024, doi: 10.1016/j.apenergy.2024.122801. 
+[146] Z. Guo and Y. Wang, ‘Anticipatory planning for equitable and produc-
+tive curbside electric vehicle charging stations’, Sustain. Cities Soc., vol. 
+99, p. 104962, Dec. 2023, doi: 10.1016/j.scs.2023.104962. 
+[147] S. Suganya, S. C. Raja, and P. Venkatesh, ‘Simultaneous coordination 
+of distinct plug-in hybrid electric vehicle charging stations: A modified 
+particle swarm optimization approach’, Energy, vol. 138, pp. 92–102, Nov. 
+2017, doi: 10.1016/j.energy.2017.07.036. 
+[148] S. Y. He, Y.-H. Kuo, and K. K. Sun, ‘The spatial planning of public 
+electric vehicle charging infrastructure in a high-density city using a con-
+textualised location-allocation model’, Transp. Res. Part Policy Pract., 
+vol. 160, pp. 21–44, June 2022, doi: 10.1016/j.tra.2022.02.012. 
+[149] S. de la Torre, J. A. Aguado, and E. Sauma, ‘Optimal scheduling of an-
+cillary services provided by an electric vehicle aggregator’, Energy, vol. 
+265, p. 126147, Feb. 2023, doi: 10.1016/j.energy.2022.126147. 
+[150] M. A. Gharai, R.-A. Hooshmand, and S. M. Nosratabadi, ‘Eco-environ-
+mental uncertain management of various energy hubs within a microgrid 
+concentrated on demand response, intelligent parking lots, and power-to-
+gas unit effects’, Int. J. Energy Res., vol. 2023, p. 3173099, Feb. 2023, doi: 
+10.1155/2023/3173099. 
+[151] X. Liu, ‘Building-centric investigation into electric vehicle behavior: A 
+survey-based simulation method for charging system design’, Energy, 
+2023. 
+[152] M.-W. Tian and P. Talebizadehsardari, ‘Energy cost and efficiency anal-
+ysis of building resilience against power outage by shared parking station 
+for electric vehicles and demand response program’, Energy, vol. 215, p. 
+119058, Jan. 2021, doi: 10.1016/j.energy.2020.119058. 
+[153] L. Zhang, C. Sun, G. Cai, and L. H. Koh, ‘Charging and discharging 
+optimization strategy for electric vehicles considering elasticity demand re-
+sponse’, eTransportation, vol. 18, p. 100262, Oct. 2023, doi: 
+10.1016/j.etran.2023.100262. 
+[154] N. Nezamoddini and Y. Wang, ‘Risk management and participation 
+planning of electric vehicles in smart grids for demand response’, Energy, 
+vol. 116, pp. 836–850, Dec. 2016, doi: 10.1016/j.energy.2016.10.002. 
+
+17 
+IEEE TRANSACTIONS ON INTELLIGENT TRANSPORTATION SYSTEMS 
+ 
+[155] N. G. Paterakis and M. Gibescu, ‘A methodology to generate power pro-
+files of electric vehicle parking lots under different operational strategies’, 
+Appl. Energy, vol. 173, pp. 111–123, July 2016, doi: 10.1016/j.apen-
+ergy.2016.04.024. 
+[156] A. Dupont, J.-B. Breal, Y. Hayel, and P. Andrianesis, ‘Optimal price 
+menu design of electric vehicle charging stations providing demand re-
+sponse’, Electr. Power Syst. Res., vol. 235, p. 110798, Oct. 2024, doi: 
+10.1016/j.epsr.2024.110798. 
+[157] K. Kouka, A. Masmoudi, A. Abdelkafi, and L. Krichen, ‘Dynamic en-
+ergy management of an electric vehicle charging station using photovoltaic 
+power’, Sustain. Energy Grids Netw., vol. 24, p. 100402, Dec. 2020, doi: 
+10.1016/j.segan.2020.100402. 
+ 
+Dingsong Cui received his B.S., M.S., and 
+Ph.D. degrees from Beijing Institute of 
+Technology, Beijing, China. He is cur-
+rently a Research Fellow of spatial model-
+ling and dynamics with the Institute for 
+Transport Studies, University of Leeds, 
+Leeds, U.K. His primary interests include 
+understanding EV mobility, optimising 
+EV charging schemes, and assessing vehi-
+cle electrification benefits.  
+ 
+ Haibo Chen received B.E. degree in 
+mechanical engineering from Central 
+South University, China, and Ph.D. de-
+gree in mechatronics from the University 
+of Dundee, U.K. He is currently a pro-
+fessor in Intelligent Transport Systems 
+with the University of Leeds, U.K. Much 
+of his work involves the development of 
+innovative solutions to reduce congestion and environmental 
+impacts. In recent years, he has led a large team at Leeds to 
+participate in 10+ EU-funded projects of more than 100 mil-
+lion euros, focusing on e-mobility, optimisation of energy 
+consumption from both EVs and ICE vehicles, big data and 
+digital twins in transport, autonomic road transport support 
+systems, and automated driving. 
+ 
+David Watling’s primary research focus 
+is the development of mathematical 
+models and methods for analysing, mod-
+elling or optimizing transport systems, 
+on which he has published widely. He 
+has held the post of Centenary Chair of 
+Transport Analysis at the University of 
+Leeds since its instigation in 2004, where 
+he is co-leader of the Spatial Modelling and Dynamics group 
+in the Institute for Transport Studies. 
+ 
+Wen-Long Shang (Senior Member, IEEE) is an Honorary 
+Senior Research Fellow at Imperial College London and a 
+Research Fellow at the University of Leeds. He is an IEEE 
+Senior Member and has been consecutively listed among 
+Stanford’s Global Top 2% Scientists. He received his Ph.D 
+from the Centre for Transport Studies, Department of Civil 
+and Environmental Engineering, Imperial College London. 
+His research focuses on intelligent transportation systems, 
+transportation network resilience, sustainable transportation 
+systems, and transportation big data. To date, he has pub-
+lished more than 120 peer-reviewed papers in leading inter-
+national journals and conferences. He serves as an Associate 
+Editor and Editorial Board Member for multiple international 
+journals and has acted as a Guest Editor for several top-tier 
+journals. He is currently leading and participating in more 
+than ten research projects, including EU Horizon projects and 
+grants from the National Natural Science Foundation of 
+China. 
+ 
+Ye Liu received the Ph.D. degree from 
+the Tianjin University, Tianjin, China, in 
+2019. He is currently a Senior Research 
+Fellow of sustainable transport and the 
+environment with the Institute for 
+Transport Studies, University of Leeds, 
+Leeds, U.K. His research interests in-
+clude the formation mechanisms and 
+control of vehicle exhaust and non-exhaust emissions (e.g. 
+brake and tyre wear), together with the associated impacts on 
+the environment and human health. 
+ 
+Chenxi Wang received the M.S. and 
+Ph.D. degrees from the School of Me-
+chanical Engineering, Tianjin University, 
+Tianjin, China, in 2019 and 2024, respec-
+tively. He is currently a Research Fellow 
+with the Institute for Transport Studies, 
+University of Leeds. His current research 
+interests include the application of low-
+carbon fuels in internal combustion engines, vehicle non-ex-
+haust particulate emissions, and the modelling and simula-
+tion of innovative vehicle powertrains and their environmen-
+tal impacts. 
+ 
+Ondrej Havran was born in Prague, 
+Czech Republic, on May 14, 1998. He 
+received the BA degree in business 
+management and marketing from the 
+University of the West of England, Bris-
+tol, U.K., in 2022, and the MSc degree 
+in consumer analytics and marketing 
+strategy from the University of Leeds, 
+Leeds, U.K., in 2023. He is currently a Research Assistant 
+with the University of Leeds, Leeds, U.K. His research fo-
+cuses on the intersection of social perceptions and public ac-
+ceptance regarding transportation and energy innovations. 
+ 
+Zhao Wang received the Ph.D. degree 
+in civil engineering from the University 
+of Sheffield, Sheffield, U.K., in 2019. 
+His research focus is on machine learn-
+ing and geo-computation for transport 
+systems. He is currently a Research Fel-
+low with the Leeds Institute for 
+Transport Studies (ITS), University of 
+
+18 
+IEEE TRANSACTIONS ON INTELLIGENT TRANSPORTATION SYSTEMS 
+ 
+Leeds, Leeds, U.K. His work focuses on the application of 
+machine learning, data science, and geo-computation to 
+transport planning and engineering. Dr. Wang is a member 
+of the Institution of Civil Engineers (ICE). 
+ 
+Shuo Wang (Member, IEEE) received 
+the B.S. from Shandong University of 
+Science and Technology, Qingdao, 
+China, M.S. from China University of 
+Mining and Technology, Beijing, China, 
+and Ph.D degree in engineering from the 
+faculty of engineering and information 
+technology (FEIT), University of Tech-
+nology Sydney in 2017. He is an Assis-
+tant Professor at Beijing Institute of Technology, Beijing. He 
+was a Postdoctoral Research Fellow with the Beijing Institute 
+of Technology (2017-2021). His research interests include 
+wireless charging, electric vehicle and its big data analysis. 
+ 
+Zhenpo Wang (Senior Member, IEEE) received the Ph.D. 
+degree in automotive engineering from Beijing Institute of 
+Technology, Beijing, China, in 2005. His current research in-
+terests include battery electric vehicle integration, packaging 
+and energy management of battery systems, and charging sta-
+tion design. 
+ 
+  
+
+19 
+IEEE TRANSACTIONS ON INTELLIGENT TRANSPORTATION SYSTEMS 
+ 
+TABLE A I 
+FORECASTING-RELATED LITERATURE REVIEW. 
+Ref. 
+Scale 
+Parking Pattern 
+Demand 
+Solutions 
+I 
+S 
+R 
+T 
+L 
+E 
+P 
+[10] 
+ 
+ 
+√ 
+Scenario-based: Residential; Commercial 
+√ 
+√ 
+ 
+√ 
+ML 
+[50] 
+ 
+√ 
+ 
+Scenario-based: Private; Public car park; Public on-street 
+√ 
+ 
+√ 
+√ 
+ML; Fuzzy model 
+[53] 
+ 
+√ 
+ 
+Scenario-based: Paid; Free 
+√ 
+ 
+ 
+ 
+ML 
+[55] 
+ 
+√ 
+ 
+Statistical: Uniform distribution 
+√ 
+ 
+√ 
+ 
+DL 
+[65] 
+√ 
+ 
+ 
+Activity-based 
+√ 
+√ 
+ 
+√ 
+ML; Trip chain 
+[66] 
+ 
+ 
+√ 
+Scenario-based: Residential; Workplace; Food centre; Shopping mall; Public Park 
+√ 
+ 
+√ 
+√ 
+ABM 
+[70] 
+ 
+ 
+√ 
+Scenario-based: Workplace; Statistical: Gamma and exponential distributions 
+√ 
+√ 
+√ 
+ 
+MC 
+[72] 
+ 
+√ 
+ 
+Statistical: Gaussian distribution 
+√ 
+ 
+ 
+√ 
+MC 
+[74] 
+ 
+√ 
+ 
+Scenario-based: Workplace 
+√ 
+ 
+√ 
+√ 
+ML; DL 
+[75] 
+ 
+√ 
+ 
+Activity-based 
+√ 
+ 
+√ 
+√ 
+ABM 
+[76] 
+√ 
+ 
+√ 
+Activity-based: Bynes Inference 
+√ 
+√ 
+√ 
+√ 
+Trip chain 
+[77] 
+ 
+ 
+√ 
+Scenario-based: Campus 
+√ 
+ 
+√ 
+ 
+ML 
+[90] 
+√ 
+ 
+ 
+Statistical: Empirical distribution 
+√ 
+ 
+√ 
+ 
+DL 
+[94] 
+ 
+ 
+√ 
+Activity-based 
+ 
+√ 
+ 
+√ 
+Trip chain 
+[143] 
+√ 
+ 
+√ 
+Scenario-based: Home(night) parking; Workplace (daytime) parking; Other location parking 
+√ 
+√ 
+√ 
+√ 
+ABM 
+[144] 
+√ 
+ 
+√ 
+Activity-based 
+√ 
+√ 
+√ 
+√ 
+ABM 
+[145] 
+ 
+√ 
+ 
+Intention-based: ‘Park to Charge’; ‘Park to Home’; ‘Park to Work’  
+√ 
+ 
+√ 
+√ 
+ML; DL 
+Note: I, S, R, T, L, E, and P represent Individual, Station, Region, Time, Location, Energy and Power, respectively.  
+ 
+TABLE A II 
+PLANNING -RELATED LITERATURE REVIEW. 
+Ref. 
+Issue 
+Scale 
+Parking pattern 
+Main Objectives 
+Demand 
+Problem 
+formulation 
+S 
+R 
+T 
+L 
+E 
+P 
+[91] 
+Siting 
+ 
+√ 
+Statistical: Empirical data 
+Minimise investment of charging facilities 
+√ 
+√ 
+ 
+√ 
+MILP 
+[80] 
+Scheduling 
+Sizing 
+√ 
+ 
+Statistical: Empirical data 
+Maximise n-year net present value of charging pole investment and daily profit of charging 
+station 
+√ 
+ 
+√ 
+ 
+SP; LP 
+[146] 
+Siting 
+ 
+√ 
+Intention-based: Residential; Guest 
+Maximise utilisation rate and equity of charging station 
+√ 
+√ 
+ 
+ 
+- 
+[86] 
+Siting 
+Sizing 
+ 
+√ 
+Statistical: Gaussian distribution 
+Maximise profit of parking lot 
+√ 
+√ 
+√ 
+ 
+MINLP 
+[92] 
+Siting 
+ 
+√ 
+Statistical: Empirical data 
+Minimise total construction cost and total benefit reduction 
+√ 
+√ 
+ 
+ 
+MINLP 
+[62] 
+Siting 
+Sizing 
+ 
+√ 
+Statistical: Empirical data 
+Minimise total investment of charging facility 
+√ 
+√ 
+ 
+√ 
+MILP 
+[93] 
+Sizing 
+ 
+√ 
+Statistical: Empirical data 
+Minimise net annual energy cost and installed PV capacity 
+√ 
+ 
+ 
+√ 
+MOP 
+[89] 
+Siting 
+ 
+√ 
+Statistical: Empirical data 
+Minimise sum of distances from locations of all charging events to their closest charging sta-
+tions 
+√ 
+√ 
+ 
+ 
+CO 
+[118] 
+Siting 
+Sizing 
+ 
+√ 
+Activity-based 
+Minimise sum of the extra travel time and waiting time of EVs; Maximise profit of charging 
+parking lots 
+√ 
+√ 
+ 
+√ 
+Bi-level 
+
+20 
+IEEE TRANSACTIONS ON INTELLIGENT TRANSPORTATION SYSTEMS 
+ 
+[61] 
+Sizing 
+√ 
+ 
+Statistical: Poisson distribution 
+Scenario-based: Long-term workplace; Long-
+term residential 
+Minimise daily operating cost; Maximise dynamic payback period and investment profits 
+√ 
+ 
+ 
+√ 
+MILP 
+[147] 
+Siting 
+ 
+√ 
+Scenario-based: Residential; Commercial 
+Minimise power loss, voltage deviation and total cost of the system 
+√ 
+√ 
+ 
+√ 
+Bi-level 
+[39] 
+Siting 
+Sizing 
+ 
+√ 
+Activity-based 
+Maximise annual profits of charging station; Minimise holistic charging cost of EV users 
+√ 
+√ 
+√ 
+√ 
+Bi-level; 
+MINLP 
+[64] 
+Siting 
+ 
+√ 
+Statistical: Double-peak distributions 
+Minimise total annual construction cost, operation cost of EVCSs, maintenance cost of EVCSs 
+and annual detour time for EV users 
+√ 
+√ 
+√ 
+ 
+DP 
+[148] 
+Siting 
+ 
+√ 
+Scenario-based: Residential; Commercial; 
+Government Park; Transportation hub 
+Minimise both the penalty for EV charging demand shortfall and the time required to travel to 
+charging facilities 
+√ 
+√ 
+ 
+ 
+MILP 
+[66] 
+Siting 
+ 
+√ 
+Scenario-based: 
+Residential; 
+Workplace; 
+Food centre; Shopping mall; Public Park 
+Maximise profit of all stakeholders and utilisation of the park lots 
+√ 
+√ 
+ 
+√ 
+NLP 
+Note: 1. I, S, R, T, L, E, and P represent Individual, Station, Region, Time, Location, Energy and Power, respectively.  
+          2. Mixed-Integer Linear Programming (MILP); Mixed-Integer Nonlinear Linear Programming (MINLP); Stochastic Programming (SP); Linear Programming (LP); Dynamic Programming (DP); Nonlinear 
+Programming (NLP); Multi-objective programming (MOP); Combinatorial Optimisation (CO) 
+ 
+ 
+TABLE A III 
+SCHEDULING -RELATED LITERATURE REVIEW. 
+Ref. 
+Charging tech-
+nologies 
+Scale 
+Parking pattern 
+Main Objectives 
+Demand 
+Problem 
+formula-
+tion  
+I 
+S 
+R 
+T 
+L 
+E 
+P 
+[69] 
+V2G 
+ 
+ 
+√ 
+Statistical: Traffic pattern data 
+Maximise profits of multi-energy operator  
+√ 
+ 
+√ 
+ 
+MILP 
+[73] 
+L2 
+ 
+√ 
+ 
+Statistical: Poisson and exponential distributions 
+Maximise revenue of multi-department charging hubs 
+√ 
+ 
+√ 
+ 
+BMILP 
+[55] 
+FC 
+ 
+√ 
+ 
+Statistical: Empirical data  
+Minimise maximum number of simultaneous charging ses-
+sions 
+√ 
+ 
+ 
+ 
+MILP 
+[74] 
+V2G 
+ 
+√ 
+ 
+Scenario-based: Workplace 
+Minimise charging cost and deviation from desired SOC 
+√ 
+ 
+√ 
+√ 
+MILP 
+[36] 
+V2G; V2V 
+ 
+√ 
+ 
+Statistical: Empirical data 
+Minimise cost of power procurement 
+√ 
+ 
+ 
+√ 
+LP 
+[71] 
+SC; V2G 
+ 
+ 
+√ 
+Scenario-based: Residential 
+Statistical: Survey data 
+Minimise deviation of the transformer load profile 
+√ 
+ 
+√ 
+ 
+QP 
+[38] 
+Limited 
+√ 
+ 
+ 
+Statistical: Empirical data 
+Minimise charging cost of all users 
+√ 
+ 
+√ 
+√ 
+NLP 
+[149] 
+3.7 kW; V2G 
+ 
+√ 
+√ 
+Scenario-based 
+Maximise aggregator profits 
+√ 
+√ 
+√ 
+ 
+MILP 
+[58] 
+15 kW G2V; 10 
+kW V2G 
+√ 
+ 
+ 
+Statistical: Commuting pattern 
+Maximise profit of consumers 
+√ 
+ 
+ 
+√ 
+MINLP 
+[42] 
+11 kW 
+ 
+√ 
+ 
+Statistical: Empirical data 
+Minimise operating costs of the charging station 
+√ 
+ 
+√ 
+ 
+MILP 
+[125] 
+V2G; V2V 
+ 
+√ 
+ 
+Scenario-based: Charging EV; Discharging EV 
+Maximise the trading volume of electricity 
+√ 
+ 
+√ 
+ 
+MILP 
+[56] 
+Limited 
+ 
+√ 
+ 
+Sharing parking between 8:00–18:00 
+Statistical: Poisson and exponential distributions 
+Maximise utilisation of parking and charging resources 
+and profitability of the parking platform. 
+√ 
+ 
+ 
+ 
+BMILP 
+[150] 
+V2G 
+ 
+ 
+√ 
+Scenario-based: Residential (from 6 p.m. to 7 a.m.); Workplace 
+(from 6 a.m. to 6 p.m.) 
+Maximise profits of multi-energy hubs 
+√ 
+ 
+√ 
+ 
+MILP 
+
+21 
+IEEE TRANSACTIONS ON INTELLIGENT TRANSPORTATION SYSTEMS 
+ 
+[51] 
+AC SC 
+ 
+√ 
+ 
+Scenario-based: Residential; Commercial 
+Statistical: Survey data  
+Minimise charging costs 
+√ 
+ 
+ 
+ 
+- 
+[80] 
+1.9 kW; 19.2 
+kW; 50 kW 
+ 
+√ 
+ 
+Scenario-based: Shopping mall 
+Statistical: Empirical data 
+Maximise net present value of charging pole investment 
+√ 
+ 
+ 
+√ 
+Bi-level 
+SP 
+[43] 
+1.8 kW/30min 
+√ 
+√ 
+ 
+Scenario-based: Regular users; Irregular users with long parking 
+lot occupancies; Irregular users with short parking lot occupancies 
+Maximise number of EVs fulfilling their recharging re-
+quirements and total revenue of the parking lot 
+√ 
+ 
+ 
+ 
+LP 
+[78] 
+60 kW 
+√ 
+√ 
+ 
+Scenario-based: Residential 
+Minimise charging station spaces, charging infrastructure 
+investment and purchasing costs from grid 
+√ 
+ 
+ 
+√ 
+LP 
+[124] 
+V2G; V2V 
+ 
+ 
+√ 
+Scenario-based: 1-hour continuous; 2-hour continuous; Random  
+Minimise battery aging cost; Maximise V2G profits of EV 
+users 
+√ 
+ 
+√ 
+√ 
+MILP 
+[151] 
+Fast and slow 
+charging 
+ 
+ 
+√ 
+Scenario-based: Residential; Workplace; Other location  
+Maximise QoS of charging service 
+√ 
+ 
+ 
+√ 
+- 
+[152] 
+Limited 
+ 
+√ 
+ 
+Scenario-based: Residential (from 5 p.m. to 12 p.m.); Workplace 
+parking pattern (from 9 a.m. to 1 p.m. and 6 p.m. to 11 p.m.) 
+Minimise energy costs; Maximise energy elasticity 
+√ 
+ 
+√ 
+√ 
+MILP 
+[153] 
+V2G; 3.3 kW; 
+19.2 kW 
+ 
+ 
+√ 
+Scenario-based: Short parking duration pattern with higher power; 
+Long parking duration pattern with lower power 
+Maximise amount of electricity charged by EV; Demand 
+response 
+√ 
+ 
+ 
+ 
+MOP 
+[154] 
+V2G; V2V 
+ 
+ 
+√ 
+Scenario-based: Residential; Workplace; Industrial 
+Minimise operation costs 
+√ 
+ 
+ 
+√ 
+MINLP 
+[155] 
+3.3 kW; 6.6 kW; 
+10 kW; V2G 
+ 
+√ 
+√ 
+Statistical: Empirical data 
+Minimise daily operational charging cost and charging 
+peak power 
+√ 
+ 
+ 
+√ 
+MILP 
+[34] 
+Flex; Flex+; 
+Flex++; V2G 
+ 
+ 
+√ 
+Scenario-based: Residential; Workplace; Public charging station 
+Statistical: Survey data 
+Minimise necessary curtailment to stay within allowed 
+grid bounds and squared component loading; Maximise 
+charging flexibility potential 
+√ 
+√ 
+√ 
+ 
+MILP 
+[108] 
+V2G 
+ 
+ 
+√ 
+Scenario-based: Residential; Workplace; Industrial; Commercial 
+Minimise daily operation cost of a multi-regional inte-
+grated energy system 
+√ 
+√ 
+ 
+√ 
+RO 
+[96] 
+L1; L2 
+ 
+ 
+√ 
+Scenario-based: Home; Home (delayed); Home + Work; Home 
+(delayed) + Work  
+Minimise peak demand of power system; Maximise utili-
+sation of PV power generation 
+√ 
+ 
+ 
+√ 
+MILP 
+[156] 
+2.5 kw; 5 kw; 
+7.5 kw; 10 kw 
+ 
+√ 
+ 
+Scenario-based: 1-hour duration; 2-hour duration; 3-hour duration; 
+4-hour duration 
+Maximise profits and social welfare 
+√ 
+ 
+√ 
+√ 
+MILP 
+[157] 
+Limited 
+ 
+√ 
+ 
+Scenario-based: Residential 
+Minimise grid dependency; Maximise user satisfaction, 
+PV power utilisation and operational costs 
+√ 
+ 
+√ 
+√ 
+DP 
+[154] 
+V2G 
+ 
+√ 
+ 
+Scenario-based: Typical parking pattern 
+Minimise operation costs, charging costs; Maximise utili-
+sation rate of renewable energy 
+√ 
+ 
+√ 
+√ 
+MILP 
+[41] 
+FC 
+ 
+√ 
+ 
+Scenario-based: Short-duration with high-priority charging de-
+mand; Medium-duration with medium-priority charging demand; 
+Long-duration with low-priority charging demand 
+Maximise QoS of EV users 
+√ 
+ 
+ 
+√ 
+Bi-level 
+[35] 
+FC; SC 
+√ 
+√ 
+ 
+Activity-based: Driving-Charging-Driving pattern; Driving-Park-
+ing-Charging-Driving pattern; Driving-Parking-Charging-Parking-
+Driving pattern; Driving-Charging-Parking-Driving pattern; Driv-
+ing-Charging-Parking-Charging-Driving pattern 
+Minimise individual charging cost and load fluctuation of 
+the residential area 
+√ 
+ 
+ 
+√ 
+MILP 
+Note: 1. I, S, R, T, L, E and P represent Individual, Station, Region, Time, Location, Energy and Power, respectively.  
+          2. Flex, Flex+, and Flex++ denote different levels of flexibility in smart charging systems. Each level represents an increasing ability to adjust the timing, rate, or location of vehicle charging in response to 
+system needs, such as grid constraints, renewable energy availability, or electricity pricing. Specifically, Flex corresponds to basic flexibility, allowing minor adjustments in charging schedules; Flex+ indicates 
+moderate flexibility, enabling more substantial shifts in charging times or rates; and Flex++ represents the highest level of flexibility, allowing highly dynamic optimization, such as shifting charging across multi-
+ple time periods or locations to maximize efficiency, reduce costs, or support grid stability. 
+          3.Limited means there is a constraint on the charging power which defines the limits in terms of the maximum and minimum bounds in the optimisation models.  
+          4. Mixed-Integer Linear Programming (MILP); Binary and Mixed-Integer Linear Programming (BMILP); Mixed-Integer Nonlinear Linear Programming (MINLP); Stochastic Programming (SP); Robust 
+Optimisation (RO); Linear Programming (LP); Multi-objective programming (MOP); Nonlinear Programming (NLP); Dynamic Programming (DP) 

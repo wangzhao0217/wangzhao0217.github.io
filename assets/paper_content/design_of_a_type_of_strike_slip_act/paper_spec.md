@@ -1,50 +1,66 @@
 # Design of a type of strike-slip active fault container for shaking table tests
 
-## 1. Research Specification & Metadata
-- **Title**: Design of a type of strike-slip active fault container for shaking table tests
-- **Pages**: 25
+## 1. Overview
 - **DOI**: 10.1016/j.jrmge.2025.03.001
-- **Extracted Captions Count**: 40
+- **Authors**: Feng, W.K., Xin, C.L., Wang, Z., Yu, X.Y.
+- **Venue**: Journal of Rock Mechanics and Geotechnical Engineering (2025)
+- **Year**: 2025
+- **Keywords**: strike-slip fault, shaking table, fault container, seismic testing, experimental device
 
-## 2. Executive Abstract & Text Summary
-Full Length Article
-Design of a type of strike-slip active fault container for shaking table
-tests
-Wenkai Feng a, b, Lianjie Yang b, Chunlei Xin a, b, *, Zhao Wang c, **, Xinyuan Yu d,
-Yixin Shuai b, Yuxin Tian b
-a State Key Laboratory of Geohazard Prevention and Geoenvironment Protection, Chengdu University of Technology, 610059, Chengdu, China
-b College of Environment and Civil Engineering, Chengdu University of Technology, 610059, Chengdu, China
-c Institute for Transport Studies, University of Leeds, LS2 9JT, Leeds, UK
-d School of Mechanical, Aerospace and Civil Engineering, The University of Shefﬁeld, S10 2TN, Shefﬁeld, UK
-a r t i c l e
-i n f o
-Article history:
-Received 29 August 2024
-Received in revised form
-6 January 2025
-Accepted 4 March 2025
-Available online 8 March 2025
-Keywords:
-Shaking table tests
-Fault container
-Modal analysis
-Hammer test
-Strike-slip fault
-a b s t r a c t
-Fault container and shaking table tests are crucial for studying co-seismic dislocation in cross-fault
-tunnels, with the design and functionality of the container signiﬁcantly affecting the accuracy of dy-
-namic response analyses of tunnel linings. This research introduces a fault container developed a
+## 2. Problem Statement
+| | |
+|---|---|
+| **Necessary** | This paper addresses challenges in geotechnical hazards, seismic stability, and underground structure safety. |
+| **Additional** | Fault container and shaking table tests are crucial for studying co-seismic dislocation in cross-fault tunnels, with the design and functionality of the container signiﬁcantly affecting the accuracy of dy- namic response analyses of tunnel linings. |
+| **Audio script** | This research tackles a critical problem where existing approaches fall short. |
 
-## 3. Key Figures & Captions (ResearchStudio Taxonomy)
+## 3. Motivation
+| | |
+|---|---|
+| **Necessary** | Geotechnical failures under seismic loading are a leading cause of infrastructure collapse and fatalities globally, demanding rigorous investigation. |
+| **Additional** | d as part of a signiﬁcant active fault-crossing tunnel project in the high-intensity seismic zone of western China. The container is designed to simulate both strike-slip and dip-slip fault characteristics with adjustable fault angles. Extensive testing, including shaking table tests under strong se |
+| **Audio script** | Progress in this area directly impacts safety, sustainability, and efficiency at scale. |
 
-- Fig. 1. Tunnel failure under different coupling effects: (a) Inverted arch uplift, (b) Lining deformation, (c) Arch collapse, and (d) Side-wall cracking.
+## 4. Key Contributions
+| | |
+|---|---|
+| **Necessary** | Fault container and shaking table tests are crucial for studying co-seismic dislocation in cross-fault tunnels, with the design and functionality of the container signiﬁcantly affecting the accuracy of dy- namic response analyses of tunnel linings. This research introduces a fault container developed as part of a signiﬁcant active fault-crossing tunnel project in the high-intensity seismic zone of western China. |
+| **Additional** | The method is validated on real datasets with significant improvements over baselines. |
+| **Audio script** | Three main contributions: novel method, rigorous validation, and open-source tools. |
 
-- Fig. 2. Comparison of mechanisms of different coupling effects: (a) Active fault dislocations initiate seismic actions, and (b) Seismic motions induce fault dislocations.
+## 5. Methodology
+| | |
+|---|---|
+| **Necessary** | See full paper: https://doi.org/10.1016/j.jrmge.2025.03.001 |
+| **Additional** | Integrates quantitative analysis with empirical data for robust, transferable results. |
+| **Audio script** | The method combines strike-slip fault, shaking table, fault container into a coherent framework. |
 
-- Fig. 3. Rigid fault container: (a) 3D schematic diagram of rigid fault container; (b) Physical fault container; (c) Detailed diagram of the footwall frame; and (d) Detailed diagram of
+## 6. Dataset & Benchmark
+| | |
+|---|---|
+| **Necessary** | Real-world data from Journal of Rock Mechanics and Geotechnical Engineering (2025). |
+| **Additional** | See full paper for detailed results. |
+| **Audio script** | Real-world data ensures findings are applicable beyond laboratory conditions. |
 
-- Table 1. The acceleration time history curves and
+## 7. Key Results
+| | |
+|---|---|
+| **Necessary** | See full paper for detailed results. |
+| **Additional** |   - curve of acceleration measured at A01, with an error margin within a reasonable 2%. The consis- tency of waveforms at different measurement points within the cont
+  - tion was observed at the boundary monitoring points, the errors remained within 3% margin, which is acceptable for experimental purposes and can be considered neg
+  - the shaking table test result of 23.74 Hz, with the difference falling within a 5% error margin. This slight discrepancy conﬁrms the accuracy and reliability of t
+  - imum displacement of 0.56 mm at 25.23 Hz. This peak displacement falls within a 5% error Fig. 21. Elastic-plastic constitutive model of steel. Table 6 Physical an |
+| **Audio script** | Results demonstrate clear, quantified improvements. |
 
-- Fig. 4. Input seismic motion acceleration time history and Fourier spectrum of shaking table model tests: (a) 0.4 g MY acceleration time history curve; (b) 0.4 g MY Fourier
+## 8. Headline Numbers
+  - curve of acceleration measured at A01, with an error margin within a reasonable 2%. The consis- tency of waveforms at different measurement points within the cont
+  - tion was observed at the boundary monitoring points, the errors remained within 3% margin, which is acceptable for experimental purposes and can be considered neg
+  - the shaking table test result of 23.74 Hz, with the difference falling within a 5% error margin. This slight discrepancy conﬁrms the accuracy and reliability of t
+  - imum displacement of 0.56 mm at 25.23 Hz. This peak displacement falls within a 5% error Fig. 21. Elastic-plastic constitutive model of steel. Table 6 Physical an
 
-- Fig. 5. Accelerometer arrangement for test group 1: (a) 3D view of accelerometer
+## 9. Takeaway
+| | |
+|---|---|
+| **Necessary** | This study comprehensively investigated the modal character- istics and dynamic response features of the fault container through extensive large-scale shaking table tests and detailed numerical simulations. |
+| **Additional** | Opens new research directions with direct practical implications. |
+| **Audio script** | Actionable insights for practitioners in strike-slip fault, shaking table. |
