@@ -48,7 +48,7 @@ function Hero() {
           <div style={{ display: "flex", flexWrap: "wrap", gap: "0.75rem", marginTop: "1.4rem" }}>
             <Button variant="primary" size="lg" href="#work" iconRight={<Icon name="arrow-right" />}>{t(S.ui.hero.seeWork)}</Button>
             <Button variant="secondary" size="lg" href={p.links.github} icon={<Icon name="github" />}>GitHub</Button>
-            <Button variant="secondary" size="lg" href={p.links.scholar} icon={<Icon name="mortarboard-fill" />}>{t(S.ui.hero.scholar)}</Button>
+            <Button variant="secondary" size="lg" href={p.links.researchgate || p.links.scholar} icon={<Icon name="journal-bookmark-fill" />}>{t(S.ui.hero.scholar)}</Button>
             <Button variant="secondary" size="lg" href={p.links.linkedin} icon={<Icon name="linkedin" />}>LinkedIn</Button>
           </div>
         </div>

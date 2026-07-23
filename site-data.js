@@ -19,7 +19,7 @@ window.SITE = {
     hero: {
       status:  { en: "Open to collaboration", zh: "欢迎合作交流" },
       seeWork: { en: "See my work",            zh: "查看工作经历" },
-      scholar: { en: "Scholar",                zh: "学术主页" },
+      scholar: { en: "ResearchGate",           zh: "ResearchGate" },
     },
     sections: {
       aboutEyebrow:  "cat about.md",
@@ -32,7 +32,7 @@ window.SITE = {
       talksIntro:    { en: "How satellite imagery and machine learning can map road conditions where survey data doesn't exist.", zh: "如何用卫星影像与机器学习，在缺乏实地调查的地区评估路况。" },
       pubsEyebrow:   "grep -ri 'paper' ./publications",
       pubsTitle:     { en: "Publications", zh: "论文发表" },
-      pubsIntro:     { en: "22 peer-reviewed journal papers and selected conference papers. Full citations on Google Scholar.", zh: "22 篇同行评审期刊论文及代表性会议论文，完整引用见 Google Scholar。" },
+      pubsIntro:     { en: "22 peer-reviewed journal papers and selected conference papers. Full citations on ResearchGate.", zh: "22 篇同行评审期刊论文及代表性会议论文，完整引用见 ResearchGate。" },
       eduTitle:      { en: "Education", zh: "教育背景" },
       rolesLabel:    { en: "Roles", zh: "职位" },
     },
@@ -61,7 +61,8 @@ window.SITE = {
     location: { en: "Leeds, UK", zh: "英国 · 利兹" },
     links: {
       github: "https://github.com/wangzhao0217",
-      scholar: "https://scholar.google.com/scholar?q=Zhao+Wang+transport+network+rubberised+concrete",
+      scholar: "https://www.researchgate.net/profile/Zhao-Wang-54?ev=hdr_xprf",
+      researchgate: "https://www.researchgate.net/profile/Zhao-Wang-54?ev=hdr_xprf",
       linkedin: "https://www.linkedin.com/feed/",
     },
   },

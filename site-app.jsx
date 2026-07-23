@@ -16,7 +16,7 @@ function Contact() {
         <div style={{ display: "flex", flexWrap: "wrap", gap: "0.75rem", justifyContent: "center" }}>
           <Button variant="primary" size="lg" href={`mailto:${p.email}`} icon={<Icon name="envelope-fill" />}>{p.email}</Button>
           <Button variant="onDark" size="lg" href={p.links.github} icon={<Icon name="github" />}>GitHub</Button>
-          <Button variant="onDark" size="lg" href={p.links.scholar} icon={<Icon name="mortarboard-fill" />}>{t(S.ui.hero.scholar)}</Button>
+          <Button variant="onDark" size="lg" href={p.links.researchgate || p.links.scholar} icon={<Icon name="journal-bookmark-fill" />}>{t(S.ui.hero.scholar)}</Button>
           <Button variant="onDark" size="lg" href={p.links.linkedin} icon={<Icon name="linkedin" />}>LinkedIn</Button>
         </div>
       </div>

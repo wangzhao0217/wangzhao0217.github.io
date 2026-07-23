@@ -83,7 +83,7 @@ function Publications() {
         {list.map((p, i) => {
           const links = p.doi
             ? [{ label: t(S.ui.pubs.doi), href: `https://doi.org/${p.doi}`, icon: <Icon name="link-45deg" /> }]
-            : [{ label: t(S.ui.pubs.find), href: `https://scholar.google.com/scholar?q=${encodeURIComponent(p.title)}`, icon: <Icon name="search" /> }];
+            : [{ label: t(S.ui.pubs.find), href: `https://www.researchgate.net/search/publication?q=${encodeURIComponent(p.title)}`, icon: <Icon name="search" /> }];
           const typeLabel = p.type === "Conference" ? t(S.ui.pubs.conference) : t(S.ui.pubs.journal);
           return (
             <PublicationItem key={i} year={p.year} authors={p.authors} title={p.title} venue={p.venue}
