@@ -6,7 +6,7 @@ data scientist & GIS researcher at the Institute for Transport Studies, Universi
 - Warm, Claude-inspired palette (ivory + clay/coral); editorial serif headings.
 - Career presented in **three parts** (Civil & Structural Engineering → National Highways
   & TRL → University of Leeds / Horizon Europe).
-- 18 journal + 5 conference publications with DOIs, filterable by type.
+- 22 journal + 5 conference publications with DOIs, filterable by type.
 - EN / 中 language toggle (persists across reloads).
 
 ## Run locally

@@ -32,7 +32,7 @@ window.SITE = {
       talksIntro:    { en: "How satellite imagery and machine learning can map road conditions where survey data doesn't exist.", zh: "如何用卫星影像与机器学习，在缺乏实地调查的地区评估路况。" },
       pubsEyebrow:   "grep -ri 'paper' ./publications",
       pubsTitle:     { en: "Publications", zh: "论文发表" },
-      pubsIntro:     { en: "19 peer-reviewed journal papers and selected conference papers. Full citations on Google Scholar.", zh: "19 篇同行评审期刊论文及代表性会议论文，完整引用见 Google Scholar。" },
+      pubsIntro:     { en: "22 peer-reviewed journal papers and selected conference papers. Full citations on Google Scholar.", zh: "22 篇同行评审期刊论文及代表性会议论文，完整引用见 Google Scholar。" },
       eduTitle:      { en: "Education", zh: "教育背景" },
       rolesLabel:    { en: "Roles", zh: "职位" },
     },
@@ -67,7 +67,7 @@ window.SITE = {
   },
 
   stats: [
-    { value: "19",   label: { en: "Journal articles",     zh: "期刊论文" },   sublabel: { en: "peer-reviewed",     zh: "同行评审" } },
+    { value: "22",   label: { en: "Journal articles",     zh: "期刊论文" },   sublabel: { en: "peer-reviewed",     zh: "同行评审" } },
     { value: "6",    label: { en: "Open-source packages", zh: "开源软件包" }, sublabel: { en: "R · Python", zh: "R · Python" } },
     { value: "5",    label: { en: "Conference papers",    zh: "会议论文" },   sublabel: { en: "incl. Best Paper",  zh: "含最佳论文奖" } },
     { value: "10yr", label: { en: "Research & practice",  zh: "科研与实践" }, sublabel: { en: "UK · EU",           zh: "英国 · 欧盟" } },
@@ -433,6 +433,9 @@ window.SITE = {
 
   // Academic titles/venues stay in English (papers are published in English).
   publications: [
+    { year: "2026", type: "Journal", authors: "Shang, W.L., Chen, H., Cui, D., Wang, Z., Watling, D., Ochieng, W.", title: "Bi-directional charging of electric vehicles for sustainable energy management with distributed solar generation", venue: "Applied Energy, 424, 128478", doi: "10.1016/j.apenergy.2026.128478" },
+    { year: "2026", type: "Journal", authors: "Cui, D., Chen, H., Watling, D., Shang, W.L., Liu, Y., Wang, C., Havran, O., Wang, Z., Wang, S., Wang, Z.", title: "Understanding Electric Vehicle Refueling Demand and Parking Patterns in Forecasting, Planning, and Scheduling: A Literature Review", venue: "IEEE Transactions on Intelligent Transportation Systems, 27(5), 4967–4985", doi: "10.1109/TITS.2026.3652333" },
+    { year: "2026", type: "Journal", authors: "Wang, Z., Havran, O., Shang, W.L., Chen, H., Watling, D.", title: "What Technologically Proficient Communities Want from V2X: Transport–Environment Implications from Online Discussions", venue: "Travel Behaviour and Society, 44", doi: "10.1016/j.tbs.2026" },
     { year: "2026", type: "Journal", authors: "Hu, Y., Xin, C.L., Wang, Z., Yu, X.Y., Feng, W.K., Hajirasouliha, I.", title: "Dynamic response and performance enhancement mechanisms of tunnel buffer layers under mainshock-aftershock sequences", venue: "Tunnelling and Underground Space Technology, 176, 107874", doi: "10.1016/j.tust.2026.107874" },
     { year: "2026", type: "Journal", authors: "Wang, Z., Hu, H., Mahfouz, H., Fonseca-Zamora, J.P., Lucas-Smith, M., Carlino, D., Calder, A., Hu, C., Davis, M., Talbot, J., Lovelace, R.", title: "Corenet: a flexible framework for generating and prioritising core cycle network designs", venue: "Journal of Transport Geography, 131, 104549", doi: "10.1016/j.jtrangeo.2025.104549" },
     { year: "2026", type: "Journal", authors: "Wang, Z., Xin, C., Workman, R., Hu, H., Yu, X., Tian, Y., Lovelace, R., Zhang, J., Chen, H.", title: "Advancing unpaved road assessment in Africa: leveraging multimodal machine learning and large language-and-vision assistants across satellite imagery resolutions", venue: "Journal of Transport Geography, 131, 104525", doi: "10.1016/j.jtrangeo.2025.104525" },
