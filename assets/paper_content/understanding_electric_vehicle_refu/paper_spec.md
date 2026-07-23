@@ -2,7 +2,7 @@
 
 ## 1. Overview
 - **DOI**: 10.1109/TITS.2026.3652333
-- **Authors**: Cui, D., Chen, H., Watling, D., Shang, W.L., Liu, Y., Wang, C., Havran, O., Wang, Z., Wang, S., Wang, Z.
+- **Authors**: Cui, D., Chen, H., Watling, D., Shang, W.L., Liu, Y., Wang, C., Havran, O., Wang, Z., Wang, S.
 - **Venue**: IEEE Transactions on Intelligent Transportation Systems, 27(5), 4967–4985 (2026)
 - **Year**: 2026
 - **Keywords**: electric vehicles, charging demand, parking patterns, forecasting, literature review

@@ -1,6 +1,6 @@
 # Understanding Electric Vehicle Refueling Demand and Parking Patterns in Forecasting, Planning, and Scheduling: A Literature Review
 
-**Cui, D., Chen, H., Watling, D., Shang, W.L., Liu, Y., Wang, C., Havran, O., Wang, Z., Wang, S., Wang, Z.**  
+**Cui, D., Chen, H., Watling, D., Shang, W.L., Liu, Y., Wang, C., Havran, O., Wang, Z., Wang, S.**  
 *IEEE Transactions on Intelligent Transportation Systems, 27(5), 4967–4985 (2026)*  
 DOI: [10.1109/TITS.2026.3652333](https://doi.org/10.1109/TITS.2026.3652333)
 
