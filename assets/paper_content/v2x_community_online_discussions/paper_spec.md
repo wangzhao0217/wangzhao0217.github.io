@@ -2,7 +2,7 @@
 
 ## 1. Overview
 - **DOI**: 10.1016/j.tbs.2026
-- **Authors**: Wang, Z., Havran, O., Shang, W.L., Chen, H., Watling, D.
+- **Authors**: Havran, O., Watling, D., Chen, H., Shang, W.L., Liu, Y., Wang, C., Wang, Z., Cui, D., Jia, D.
 - **Venue**: Travel Behaviour and Society, 44 (2026)
 - **Year**: 2026
 - **Keywords**: V2X, vehicle-to-everything, online communities, transport environment, public opinion

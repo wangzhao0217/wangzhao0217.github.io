@@ -25,7 +25,7 @@ new_papers = [
         'slug': 'v2x_community_online_discussions',
         'doi': '10.1016/j.tbs.2026',
         'title': 'What Technologically Proficient Communities Want from V2X: Transport-Environment Implications from Online Discussions',
-        'authors': 'Wang, Z., Havran, O., Shang, W.L., Chen, H., Watling, D.',
+        'authors': 'Havran, O., Watling, D., Chen, H., Shang, W.L., Liu, Y., Wang, C., Wang, Z., Cui, D., Jia, D.',
         'venue': 'Travel Behaviour and Society, 44 (2026)',
         'year': '2026',
         'keywords': ['V2X', 'vehicle-to-everything', 'online communities', 'transport environment', 'public opinion'],
