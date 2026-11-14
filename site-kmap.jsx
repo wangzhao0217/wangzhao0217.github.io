@@ -70,9 +70,10 @@ function KnowledgeMapSection() {
       bgSoft: "rgba(2, 132, 199, 0.12)",
       cx: 440, cy: 155, r: 98,
       paperDois: [
+        "10.1016/j.apenergy.2026.128746", // Two-seater electric microcars
         "10.1016/j.apenergy.2026.128478", // Bi-directional charging
         "10.1109/TITS.2026.3652333",       // EV refueling review
-        "10.1016/j.tbs.2026",              // V2X discussions
+        "10.1016/j.tbs.2026.101362",              // V2X discussions
       ],
     },
     {
@@ -84,6 +85,7 @@ function KnowledgeMapSection() {
       bgSoft: "rgba(99, 102, 241, 0.12)",
       cx: 480, cy: 360, r: 125,
       paperDois: [
+        "10.1016/j.enggeo.2026.109017", // Seasonally frozen slopes
         "10.1016/j.tust.2026.107874", // Tunnel buffer layers
         "10.1016/j.jrmge.2025.03.001", // Fault container
         "10.1007/s00603-024-04346-y", // Anti-dip slope

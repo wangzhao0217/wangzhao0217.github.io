@@ -1,9 +1,9 @@
 # What Technologically Proficient Communities Want from V2X: Transport-Environment Implications from Online Discussions
 
 ## 1. Overview
-- **DOI**: 10.1016/j.tbs.2026
+- **DOI**: 10.1016/j.tbs.2026.101362
 - **Authors**: Havran, O., Watling, D., Chen, H., Shang, W.L., Liu, Y., Wang, C., Wang, Z., Cui, D., Jia, D.
-- **Venue**: Travel Behaviour and Society, 44 (2026)
+- **Venue**: Travel Behaviour and Society, 45, 101362 (2026)
 - **Year**: 2026
 - **Keywords**: V2X, vehicle-to-everything, online communities, transport environment, public opinion
 
@@ -14,4 +14,4 @@ This paper addresses challenges in transport-energy systems integration.
 Evidence-based transport planning is essential for reducing carbon emissions, improving safety, and enabling sustainable mobility at scale.
 
 ## 9. Takeaway
-See full paper: https://doi.org/10.1016/j.tbs.2026
+See full paper: https://doi.org/10.1016/j.tbs.2026.101362
